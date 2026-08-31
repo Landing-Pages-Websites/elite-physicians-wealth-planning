@@ -1,0 +1,140 @@
+{
+  "version": 1,
+  "tokens": {
+    "ink": {
+      "hex": "#0B1F3A",
+      "source": "brand-locked",
+      "role": "Dominant deep navy field, primary text on light surfaces, and closing/opening authority.",
+      "rationale": "This is the brand-locked navy and the main weight of Direction A; it prevents the site from drifting into generic light finance templates."
+    },
+    "action": {
+      "hex": "#C8A65A",
+      "source": "brand-locked",
+      "role": "Restrained gold coordination route, fine rules, CTA fill, focus state, and small emphasis.",
+      "rationale": "Gold is a thin signal for decisions and actions, never a broad luxury fill or casino palette."
+    },
+    "mist": {
+      "hex": "#DCE8F2",
+      "source": "reference-derived",
+      "role": "Clinical bridge field used once for the white-coat pathway index and occasional quiet sub-band tint.",
+      "rationale": "Mist blue brings medical context into the system without creating a purple-blue SaaS gradient."
+    },
+    "surface": {
+      "hex": "#F6F2E8",
+      "source": "reference-derived",
+      "role": "Warm ivory editorial paper for explanatory diagrams, process, and portrait essay.",
+      "rationale": "Ivory gives the site a consultative paper quality and creates relief between the navy fields."
+    },
+    "white": {
+      "hex": "#FFFFFF",
+      "source": "art-director-selected",
+      "role": "Quiet ledger surface, proof canvas, and high-contrast type on navy fields.",
+      "rationale": "White is reserved for clarity and ledger breathing room rather than becoming the whole homepage."
+    },
+    "charcoal": {
+      "hex": "#38373E",
+      "source": "reference-derived",
+      "role": "Body copy and secondary explanatory text on light surfaces.",
+      "rationale": "Charcoal softens long-form reading while preserving contrast and avoiding pure-black harshness."
+    }
+  },
+  "distribution": {
+    "ink": 39,
+    "action": 3,
+    "mist": 9,
+    "surface": 25,
+    "white": 16,
+    "charcoal": 8
+  },
+  "relationships": [
+    {
+      "foreground": "white",
+      "background": "ink",
+      "context": "Hero and closing navy fields",
+      "intent": "Primary headlines and body copy remain legible on the dominant navy.",
+      "min_contrast": 7
+    },
+    {
+      "foreground": "ink",
+      "background": "surface",
+      "context": "Ivory explanatory and portrait sections",
+      "intent": "Editorial display and role labels retain high authority on warm paper.",
+      "min_contrast": 7
+    },
+    {
+      "foreground": "ink",
+      "background": "action",
+      "context": "Gold CTA fill",
+      "intent": "CTA labels remain readable when gold is used as a measured action surface.",
+      "min_contrast": 7
+    },
+    {
+      "foreground": "action",
+      "background": "ink",
+      "context": "Hairline route on navy",
+      "intent": "The continuous coordination line is visible without becoming a broad decorative fill.",
+      "min_contrast": 4.5
+    },
+    {
+      "foreground": "charcoal",
+      "background": "white",
+      "context": "Five Decisions ledger summaries",
+      "intent": "Longer summary copy reads clearly in quiet ledger entries.",
+      "min_contrast": 7
+    },
+    {
+      "foreground": "ink",
+      "background": "mist",
+      "context": "White-Coat Pathways index",
+      "intent": "Audience labels stay crisp over the clinical bridge color.",
+      "min_contrast": 7
+    }
+  ],
+  "image_evidence": [
+    {
+      "asset": "refs/01-one-plan.png",
+      "dominant_materials": ["deep navy consultation-room grade", "ivory portrait placeholder", "restrained gold route", "white display type"],
+      "influence": "Establishes the navy-dominant opening field and demonstrates that gold functions as a route and CTA signal."
+    },
+    {
+      "asset": "refs/05-five-decisions.png",
+      "dominant_materials": ["white ledger field", "warm ivory bands", "navy discipline labels", "charcoal summaries"],
+      "influence": "Proves the quiet ledger can rely on white and charcoal without becoming generic finance stock."
+    },
+    {
+      "asset": "refs/06-white-coat-paths.png",
+      "dominant_materials": ["mist blue clinical field", "documentary medical crops", "gold indexing rail", "navy labels"],
+      "influence": "Shows mist blue used as a single clinical bridge rather than as a repeated SaaS palette."
+    }
+  ],
+  "states": {
+    "action_default": "action",
+    "action_hover": "ink",
+    "focus": "action"
+  },
+  "proof": {
+    "desktop": "palette-proofs/palette-1440.png",
+    "mobile": "palette-proofs/palette-390.png",
+    "context_checks": [
+      "Reserved logo and brand field are tested against navy and ivory without redesigning the mark.",
+      "Generated imagery is shown beside the exact mist and navy tokens to prove palette discipline.",
+      "Gold appears as action and route signal only, not a broad decorative luxury fill.",
+      "White, ivory, and charcoal are tested as quiet ledger and long-copy relationships.",
+      "CTA and focus relationships preserve high contrast."
+    ],
+    "verdict": "APPROVED"
+  },
+  "brand_constraints": [
+    "Navy #0B1F3A is brand-locked and dominates opening and closing fields.",
+    "Gold #C8A65A is restrained and structural; do not oversaturate or use black-and-gold casino styling.",
+    "Mist #DCE8F2 appears once as the clinical bridge and should not become the dominant palette.",
+    "Use ivory #F6F2E8, white, and charcoal #38373E only in role-based contexts.",
+    "Avoid purple-blue SaaS gradients, invented accent hues, coins, handshakes, market-chart decoration, and badge-like gold seals."
+  ],
+  "art_director_rationale": "The palette works as a guided consultation: navy creates authority, ivory and white create editorial legibility, mist blue provides one clinical bridge, charcoal supports longer reading, and gold is limited to decisions, action, and route continuity.",
+  "builder_freedom": [
+    "The builder may add opacity layers or image overlays using approved tokens if contrast and edge-color contracts are preserved.",
+    "The builder may vary surface proportions by responsive viewport while keeping the overall distribution intent.",
+    "The builder may use gold for focus rings, hairlines, and CTA states, but must avoid broad gold backgrounds except intentional CTA fills."
+  ]
+}

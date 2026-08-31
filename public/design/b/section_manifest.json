@@ -1,0 +1,334 @@
+{
+  "version": 3,
+  "profile": "website-homepage",
+  "brand": {
+    "name": "Elite Physicians Wealth Planning",
+    "wordmark": "Elite Physicians Wealth Planning™ — Powered by Fiscal Vision Financial",
+    "location": "Southern Maryland; public address must remain gated until White Plains versus Waldorf is authoritatively confirmed",
+    "phone": "301-242-3929",
+    "email": "info@fiscalvisionfinancial.com",
+    "hours": "Monday–Friday, 9:00 AM–5:00 PM",
+    "since": null,
+    "brand_color_from_logo": "#0B1F3A",
+    "palette_guidance": "Refined navy #0B1F3A, restrained gold #C8A65A, clinical mist blue #DCE8F2, warm ivory #F6F2E8, white, and charcoal #38373E. Gold is a measured coordination/accent signal, never casino styling. Preserve high contrast and avoid purple-blue SaaS gradients.",
+    "voice": "Professional, calm, precise, and physician-literate. Explain complex planning in plain language without sounding simplistic. Confident and coordinated rather than salesy, trendy, or alarmist.",
+    "identity_belief": "A physician’s financial life should work as one coordinated system rather than a set of isolated professional conversations.",
+    "visual_metaphor": "A single precise coordination line connects decisions that are usually handled in separate rooms.",
+    "taglines": [
+      "Helping Physicians Keep More, Grow More, and Retire Better",
+      "One clear strategy across five planning disciplines"
+    ],
+    "typography": {
+      "display": "Cormorant Garamond",
+      "body": "Inter",
+      "source": "customer brand guide",
+      "rule": "These brand-specified families are fixed. Directional distinction must come from scale, case, weight, rhythm, and composition rather than substituting other families."
+    },
+    "imagery": {
+      "real_person": "Michael A. Epps, ChFC®, RICP®",
+      "real_person_rule": "NEUTRAL PLACEHOLDER ONLY in generated frames. The verified client portrait is placed at build time and must never be generated or face-swapped.",
+      "contextual_rule": "Non-identifiable editorial scenes may show credible physicians or medical professionals in authentic workplace and planning contexts; they must not be presented as named staff.",
+      "avoid": "No coins, handshakes, anonymous skyscrapers, generic market charts, fake staff, uncanny AI doctors, invented seals, or credential theater."
+    }
+  },
+  "required_sections": [
+    {
+      "id": "01-one-plan",
+      "name": "One Plan Hero",
+      "job": "hook",
+      "narrative_job": "Make the physician-specific coordination promise immediately credible and open the strategy-call path.",
+      "weight": "loud",
+      "content": {
+        "orientation": "Wealth planning for physicians and medical professionals",
+        "headline": "Helping Physicians Keep More, Grow More, and Retire Better",
+        "body": "Elite Physicians Wealth Planning helps physicians and medical professionals coordinate tax planning, retirement planning, wealth management, practice planning, and legacy planning into one clear financial strategy.",
+        "primary_cta": "Schedule a strategy call",
+        "secondary_cta": "Explore the Wealth Blueprint™",
+        "proof_line": "Coordinated strategy • Physician-focused • Ongoing review",
+        "identity_line": "Powered by Fiscal Vision Financial",
+        "disclaimer": "Educational information only. Not individualized tax, legal, or investment advice.",
+        "portrait_slot": "REAL MICHAEL A. EPPS PORTRAIT — BUILD-TIME CLIENT ASSET; NEUTRAL PLACEHOLDER IN FRAME"
+      },
+      "functional_elements": [
+        {
+          "element": "Schedule a strategy call",
+          "outcome": "Navigate to the Google Calendar scheduling experience"
+        },
+        {
+          "element": "Explore the Wealth Blueprint™",
+          "outcome": "Navigate to /our-process"
+        }
+      ],
+      "composition_intent": "The physician-focused promise and real-planner portrait slot must read together; the viewer should not mistake this for a generic asset-management landing page."
+    },
+    {
+      "id": "02-career-signal",
+      "name": "Physician Career Signal",
+      "job": "proof",
+      "narrative_job": "Continue the hero promise with four factual signals that show the planning relationship follows a medical career, not a product catalog.",
+      "weight": "strip",
+      "content": {
+        "signals": [
+          "Resident to established physician",
+          "Employed to practice owner",
+          "Peak earning years to retirement",
+          "One strategy, reviewed as life changes"
+        ],
+        "identity_line": "Physician-focused planning across career stages"
+      },
+      "functional_elements": [],
+      "composition_intent": "A short navigational pulse, not a wall of badges or invented statistics."
+    },
+    {
+      "id": "03-separate-rooms",
+      "name": "The Separate Rooms Problem",
+      "job": "educate",
+      "narrative_job": "Visualize how fragmented advice creates planning gaps without implying that Michael personally holds every professional credential.",
+      "weight": "loud",
+      "content": {
+        "orientation": "The coordination gap",
+        "headline": "Your financial life is too important to be managed in separate pieces.",
+        "body": "Many physicians make decisions about taxes, retirement plans, investments, insurance, estate planning, student loans, and practice ownership in separate conversations with separate professionals. Our role is to help bring the strategy together.",
+        "separate_roles": [
+          "CPA",
+          "Attorney",
+          "TPA",
+          "Insurance professional",
+          "Financial advisor"
+        ],
+        "center_label": "Your priorities",
+        "boundary_note": "Coordination does not mean one person performs every professional service."
+      },
+      "functional_elements": [],
+      "composition_intent": "A visual coordination map should reveal the gap between separate professional rooms and one set of physician priorities; it must be explanatory, not decorative."
+    },
+    {
+      "id": "04-blueprint-rounds",
+      "name": "The Wealth Blueprint™",
+      "job": "educate",
+      "narrative_job": "Turn the named six-phase planning process into a memorable mechanism that feels continuous rather than a generic six-card grid.",
+      "weight": "loud",
+      "content": {
+        "orientation": "The Elite Physician Wealth Blueprint™",
+        "headline": "A planning system built to move with your career.",
+        "body": "A structured process designed to help busy medical professionals identify planning gaps, prioritize action steps, coordinate advisors, and update the plan as career, family, income, and tax laws change.",
+        "phases": [
+          {"number": "01", "name": "Discover", "summary": "Learn your goals, priorities, income structure, benefits, and current decisions."},
+          {"number": "02", "name": "Assess", "summary": "Evaluate how the financial pieces interact and where gaps remain."},
+          {"number": "03", "name": "Strategize", "summary": "Build one connected plan across the decisions that matter."},
+          {"number": "04", "name": "Implement", "summary": "Organize action steps and coordinate the appropriate professionals."},
+          {"number": "05", "name": "Optimize", "summary": "Monitor changes in income, family, practice, markets, and tax rules."},
+          {"number": "06", "name": "Review", "summary": "Keep the plan aligned, current, and actionable over time."}
+        ],
+        "cta": "See the full process"
+      },
+      "functional_elements": [
+        {
+          "element": "See the full process",
+          "outcome": "Navigate to /our-process"
+        }
+      ],
+      "composition_intent": "One continuous route carries the eye through all six phases; the process must not collapse into six equal floating cards."
+    },
+    {
+      "id": "05-five-decisions",
+      "name": "Five Decisions Ledger",
+      "job": "educate",
+      "narrative_job": "Make the five disciplines scannable while preserving their interdependence and professional boundaries.",
+      "weight": "quiet",
+      "content": {
+        "orientation": "Five planning disciplines",
+        "headline": "Every recommendation is organized around the same life.",
+        "disciplines": [
+          {"name": "Tax strategy", "summary": "Forward-looking, multi-year tax planning coordinated with your CPA."},
+          {"name": "Wealth management", "summary": "Investment decisions structured to support your wider income strategy."},
+          {"name": "Retirement strategy", "summary": "Retirement readiness and income design for physician households."},
+          {"name": "Practice & business planning", "summary": "Ownership, benefit, and retirement-plan decisions for practice owners."},
+          {"name": "Legacy planning", "summary": "Estate coordination organized around family and long-term goals."}
+        ],
+        "boundary_note": "Elite Physicians Wealth Planning coordinates strategy and related professionals; it does not claim unverified tax preparation, legal drafting, or CPA services."
+      },
+      "functional_elements": [],
+      "composition_intent": "A refined ledger or interlocking field, with varied scale and rhythm; never five identical icon cards."
+    },
+    {
+      "id": "06-white-coat-paths",
+      "name": "White-Coat Pathways",
+      "job": "qualify",
+      "narrative_job": "Help medical professionals recognize their own decision context without using keyword-swapped cards.",
+      "weight": "loud",
+      "content": {
+        "orientation": "Who we serve",
+        "headline": "Built for the financial decisions behind a demanding medical career.",
+        "body": "Planning paths reflect different compensation structures, ownership responsibilities, career stages, and retirement horizons.",
+        "pathways": [
+          {"audience": "Physicians & specialists", "decision": "Coordinate compensation, benefits, investments, protection, and family priorities."},
+          {"audience": "Surgeons", "decision": "Connect high-income years, risk, time constraints, and long-term independence."},
+          {"audience": "Dentists & dental specialists", "decision": "Align personal wealth with practice ownership, equipment, benefits, and transition choices."},
+          {"audience": "Practice owners & partners", "decision": "Join business cash flow, retirement-plan design, succession, and personal wealth."},
+          {"audience": "CRNAs, NPs, PAs & healthcare executives", "decision": "Build a coordinated strategy around complex income and benefits."}
+        ],
+        "cta": "Find your planning path"
+      },
+      "functional_elements": [
+        {
+          "element": "Find your planning path",
+          "outcome": "Navigate to /who-we-serve"
+        }
+      ],
+      "composition_intent": "Documentary medical imagery and an editorial index must create distinct pathways; avoid a repeated grid of generic audience cards."
+    },
+    {
+      "id": "07-accountable-planner",
+      "name": "An Accountable Planner",
+      "job": "proof",
+      "narrative_job": "Connect the method to the verified professional responsible for coordinating the planning relationship.",
+      "weight": "quiet",
+      "content": {
+        "orientation": "Meet the planner",
+        "headline": "One planning relationship. A shared strategy across your professional team.",
+        "name": "Michael A. Epps, ChFC®, RICP®",
+        "body": "Michael helps organize the questions, priorities, and action steps that sit across a physician’s financial life, coordinating with the appropriate CPA, attorney, TPA, insurance professionals, and other advisors.",
+        "credential_note": "Use only ChFC® and RICP®. Do not add badges, awards, fiduciary claims, licenses, or other credentials.",
+        "cta": "Meet Michael",
+        "portrait_slot": "REAL MICHAEL A. EPPS PORTRAIT — BUILD-TIME CLIENT ASSET; NEUTRAL PLACEHOLDER IN FRAME"
+      },
+      "functional_elements": [
+        {
+          "element": "Meet Michael",
+          "outcome": "Navigate to /meet-michael-epps"
+        }
+      ],
+      "composition_intent": "Quiet accountability with the real portrait slot and verified credentials, not personality-brand spectacle or trust-badge theater."
+    },
+    {
+      "id": "08-next-decision",
+      "name": "Choose the Next Decision",
+      "job": "convert",
+      "narrative_job": "Close with two honest paths: a direct strategy conversation or a gated guide that remains contingent on the final customer file.",
+      "weight": "loud",
+      "content": {
+        "headline": "Choose the next step that fits where you are.",
+        "strategy_call": {
+          "label": "Schedule a strategy call",
+          "summary": "A confidential introductory conversation about your priorities, current planning concerns, and whether a coordinated relationship may fit.",
+          "expectation": "The first conversation is not a product pitch."
+        },
+        "guide": {
+          "label": "Physician Tax & Retirement Planning Guide",
+          "summary": "A lower-commitment way to start organizing the questions that connect tax and retirement planning.",
+          "cta": "Request the guide",
+          "availability": "CUSTOMER INPUT REQUIRED: the final guide file and approved delivery workflow must be supplied before delivery is represented as available."
+        },
+        "contact": "info@fiscalvisionfinancial.com",
+        "identity_line": "Elite Physicians Wealth Planning™ — Powered by Fiscal Vision Financial",
+        "disclaimer": "Educational information only. Not individualized tax, legal, or investment advice."
+      },
+      "functional_elements": [
+        {
+          "element": "Schedule a strategy call",
+          "outcome": "Navigate to the Google Calendar scheduling experience"
+        },
+        {
+          "element": "Request the guide",
+          "outcome": "Navigate to the gated lead-capture experience; do not imply delivery before the final customer file exists"
+        }
+      ],
+      "composition_intent": "Two clearly different commitment levels, presented as calm decisions rather than urgency-driven conversion cards."
+    }
+  ],
+  "customer_asks": [
+    {"ask": "Use a refined gold, blue, and white palette as the explicit brand direction", "source": "build_context.designDos", "honored_by": "hard_rules and all sections"},
+    {"ask": "Create a cleaner, more professional visual system than the reference site", "source": "build_context.designDos", "honored_by": "all sections"},
+    {"ask": "Use credible physician and medical-professional imagery with authentic workplace context", "source": "build_context.designDos", "honored_by": "01-one-plan, 06-white-coat-paths, 07-accountable-planner"},
+    {"ask": "Use polished, useful infographics to explain coordinated planning and the Elite Physician Wealth Blueprint™", "source": "build_context.designDos", "honored_by": "03-separate-rooms, 04-blueprint-rounds, 05-five-decisions"},
+    {"ask": "Place conversion CTAs strategically through substantive pages rather than only in the header", "source": "build_context.designDos", "honored_by": "01-one-plan, 04-blueprint-rounds, 06-white-coat-paths, 08-next-decision"},
+    {"ask": "Show Michael Epps as the coordinating financial planner and make the planning relationship legible", "source": "build_context.designDos", "honored_by": "01-one-plan, 03-separate-rooms, 07-accountable-planner"},
+    {"ask": "Design audience pages for physicians, surgeons, and dentists as genuinely useful destinations, not keyword swaps", "source": "build_context.designDos", "honored_by": "06-white-coat-paths"},
+    {"ask": "Do not clone the Lovable site’s code or preserve its thin, bare-bones page structures", "source": "build_context.designDonts", "honored_by": "hard_rules"},
+    {"ask": "Do not use visibly artificial, uncanny, or low-quality AI people imagery", "source": "build_context.designDonts", "honored_by": "hard_rules"},
+    {"ask": "Do not create generic stock-finance visuals dominated by charts, coins, handshakes, or anonymous skyscrapers", "source": "build_context.designDonts", "honored_by": "hard_rules"},
+    {"ask": "Do not imply unverified professional credentials through badges, seals, or iconography", "source": "build_context.designDonts", "honored_by": "hard_rules"},
+    {"ask": "Do not make every section a generic card grid or centered text stack", "source": "build_context.designDonts", "honored_by": "hard_rules and page_flow.rhythm_rules"},
+    {"ask": "Do not use the outdated Fiscal Vision logo as the final Elite Physicians Wealth Planning identity without explicit approval", "source": "build_context.designDonts", "honored_by": "hard_rules"},
+    {"ask": "Financial planning built around the complexity of a physician’s career and financial life", "source": "build_context.keyMessaging", "honored_by": "01-one-plan, 02-career-signal, 06-white-coat-paths"},
+    {"ask": "One clear strategy across tax, wealth, retirement, practice, and legacy decisions", "source": "build_context.keyMessaging", "honored_by": "01-one-plan, 03-separate-rooms, 05-five-decisions"},
+    {"ask": "The Elite Physician Wealth Blueprint™ as the organizing planning process", "source": "build_context.keyMessaging", "honored_by": "04-blueprint-rounds"},
+    {"ask": "A strategy call as the primary next step, with a gated tax-planning guide as a lower-commitment conversion", "source": "build_context.keyMessaging", "honored_by": "08-next-decision"},
+    {"ask": "Build a new website from the ground up, using the current site only as a reference", "source": "build_context.explicitCustomerPromises", "honored_by": "hard_rules"},
+    {"ask": "Preserve accurate, compliance-reviewed source information while improving structure and expanding thin pages", "source": "build_context.explicitCustomerPromises", "honored_by": "all sections and hard_rules"},
+    {"ask": "Use the intentional new domain elitephysicianswealthplanning.com", "source": "build_context.explicitCustomerPromises", "honored_by": "hard_rules"},
+    {"ask": "Include direct Google Calendar scheduling using the supplied embed", "source": "build_context.explicitCustomerPromises", "honored_by": "01-one-plan, 08-next-decision"},
+    {"ask": "Gate the tax-planning guide behind lead capture", "source": "build_context.explicitCustomerPromises", "honored_by": "08-next-decision"},
+    {"ask": "Add bios for the full team and the new employee when the customer supplies them", "source": "build_context.explicitCustomerPromises", "honored_by": "hard_rules"},
+    {"ask": "Use AI-assisted production while keeping customer calls and meetings human-led", "source": "build_context.explicitCustomerPromises", "honored_by": "hard_rules"}
+  ],
+  "page_flow": {
+    "viewport_contract": {
+      "design_frame": "1536x864 (native 16:9 primary composition)",
+      "target_viewports": ["1440x900", "1536x1024", "390x844"],
+      "rule": "Primary content fits the design frame; supporting closure may continue below the browser fold; section entry and exit space stays outside primary content groups."
+    },
+    "section_weights": {
+      "01-one-plan": "loud",
+      "02-career-signal": "strip",
+      "03-separate-rooms": "loud",
+      "04-blueprint-rounds": "loud",
+      "05-five-decisions": "quiet",
+      "06-white-coat-paths": "loud",
+      "07-accountable-planner": "quiet",
+      "08-next-decision": "loud"
+    },
+    "background_progression": [
+      {"sections": ["01-one-plan", "02-career-signal"], "band": "#0B1F3A"},
+      {"sections": ["03-separate-rooms", "04-blueprint-rounds"], "band": "#F6F2E8"},
+      {"sections": ["05-five-decisions"], "band": "#FFFFFF"},
+      {"sections": ["06-white-coat-paths"], "band": "#DCE8F2"},
+      {"sections": ["07-accountable-planner"], "band": "#F6F2E8"},
+      {"sections": ["08-next-decision"], "band": "#0B1F3A"}
+    ],
+    "motif_continuity": [
+      "A precise gold coordination line exits 01-one-plan at the lower right and crosses into 02-career-signal at the same position.",
+      "The line exits 02-career-signal at lower center and enters 03-separate-rooms as a restrained transition marker rather than restarting.",
+      "The line enters 03-separate-rooms at upper center, separates into the professional-role paths, and reunites at the bottom-left seam into 04-blueprint-rounds.",
+      "The line traverses 04-blueprint-rounds as the six-phase route and ends at the lower-right edge; 05-five-decisions begins with the same endpoint as a ledger rule.",
+      "The ledger rule leaves 05-five-decisions at lower left and becomes the indexing rail at the upper-left of 06-white-coat-paths.",
+      "The indexing rail exits 06-white-coat-paths at lower right and enters 07-accountable-planner behind the portrait placeholder as a quiet accountability line.",
+      "The line exits 07-accountable-planner at lower center and divides into the two honest next-step paths in 08-next-decision."
+    ],
+    "rhythm_rules": [
+      "Use at least five materially different composition anchors across the eight sections.",
+      "At most two sections may use an eyebrow, oversized headline, then cards silhouette.",
+      "02-career-signal is a short 1536x512 strip, never a full-height section.",
+      "05-five-decisions and 07-accountable-planner are quiet sections with conspicuous negative space and smaller headline scale.",
+      "03-separate-rooms and 04-blueprint-rounds may be diagram-forward, but their diagrams must use different geometries and reading directions.",
+      "Only one section may use a conventional left-text/right-image split, and 06-white-coat-paths must not be a uniform card grid.",
+      "Use no decorative folio numbering beyond the functional six-phase process numbers in 04-blueprint-rounds.",
+      "The final page must feel like one guided consultation, not eight self-contained presentation slides."
+    ]
+  },
+  "hard_rules": [
+    "The existing logo and wordmark are fixed assets and are never redesigned, restyled, re-lettered, or reinterpreted. Generated frames use plain type or a neutral reserved logo area; the real approved logo is placed at build time.",
+    "Do not use the outdated Fiscal Vision logo as the final Elite Physicians Wealth Planning identity without explicit approval.",
+    "Use only the brand-specified Cormorant Garamond and Inter families; direction variation may change typographic voice through scale, case, weight, rhythm, and placement, not family substitution.",
+    "Use refined navy, restrained gold, mist blue, warm ivory, white, and charcoal. No purple-blue SaaS gradients, oversaturated gold, black-and-gold casino styling, or invented accent hues.",
+    "Michael A. Epps and all named staff are never generated. Reserve neutral placeholders for the real build-time client portraits.",
+    "Non-identifiable contextual medical professionals may be generated only when the scene is credible, documentary, and clearly not presented as named staff. Reject uncanny faces, impossible anatomy, or fake clinical detail.",
+    "Do not invent testimonials, ratings, performance results, fees, AUM, licenses, fiduciary status, professional designations, badges, awards, regulatory claims, team biographies, or credentials.",
+    "Michael A. Epps may be identified only with the verified ChFC® and RICP® designations. Do not imply he is a CPA, attorney, tax-return preparer, or estate-document drafter.",
+    "Elite Physicians Wealth Planning coordinates strategy and professional resources; it does not claim to perform unverified tax preparation, legal drafting, or CPA services.",
+    "The tax-planning guide remains gated and contingent on the customer supplying the final guide and approved delivery workflow; never show it as immediately downloadable.",
+    "Use info@fiscalvisionfinancial.com as the public contact email. Do not reproduce the incorrect reference-site email.",
+    "The intended launch domain is elitephysicianswealthplanning.com with the added s; the singular domain is reference-only.",
+    "Do not show a public street address until the White Plains versus Waldorf discrepancy is authoritatively resolved.",
+    "Do not clone the current Lovable site, preserve its thin structure, or treat its generated visuals as immutable art direction.",
+    "No generic finance visuals dominated by coins, handshakes, anonymous skyscrapers, market charts, laptop dashboards, or decorative numbers that could be mistaken for financial data.",
+    "Do not make every section a generic card grid, rounded-card collection, or centered text stack.",
+    "Any control-like element must have an explicit useful outcome in functional_elements; otherwise render it as static content.",
+    "Use the continuous coordination line as a structural motif with the exact seam behavior in page_flow; it must not restart independently inside every frame.",
+    "Functional process numbers 01–06 are allowed only in 04-blueprint-rounds; decorative folio numbers are prohibited elsewhere.",
+    "All primary content groups and complete focal subjects must fit inside the 1536x864 composition target; the coded section may extend only with intentional entry or exit space outside those groups.",
+    "Educational information only. Not individualized tax, legal, or investment advice.",
+    "Customer calls and meetings remain human-led; do not depict or imply automated advisory conversations."
+  ]
+}

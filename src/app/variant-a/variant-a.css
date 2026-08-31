@@ -1,0 +1,389 @@
+/*
+ * Direction A — The Consult Ledger.
+ * Variant-scoped surfaces: reconstructed photo plates, navy/ivory veils,
+ * paper grain, and small recipe classes from the extraction NOTES,
+ * remapped onto the exact brand tokens (ink / gold / mist / ivory / charcoal).
+ */
+
+/* ---------- 01 one-plan: full-bleed dark office hero ---------- */
+
+.va-hero {
+  background: #061527;
+}
+
+.va-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("/images/design/a/01-one-plan/hero-office-reconstructed.jpg");
+  background-size: cover;
+  background-position: 58% center;
+  background-repeat: no-repeat;
+}
+
+.va-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(4, 14, 27, 0.9) 0%,
+      rgba(4, 14, 27, 0.66) 42%,
+      rgba(4, 14, 27, 0.28) 100%
+    ),
+    radial-gradient(
+      70% 80% at 36% 55%,
+      rgba(255, 255, 255, 0.03),
+      rgba(4, 14, 27, 0.22)
+    );
+}
+
+/* Ivory paper portrait card surface (kept as CSS, not an image). */
+.va-card-paper {
+  background:
+    radial-gradient(
+      120% 90% at 30% 18%,
+      #ffffff 0%,
+      var(--color-ivory) 62%,
+      rgba(220, 208, 178, 0.55) 100%
+    ),
+    var(--color-ivory);
+}
+
+/* ---------- 02 career-signal: subdued navy office strip ---------- */
+
+.va-career {
+  background-color: #04101f;
+  background-image: url("/images/design/a/02-career-signal/office-background-reconstructed.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.va-career::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 12% 45%, rgba(5, 20, 40, 0.58), transparent 32%),
+    linear-gradient(
+      90deg,
+      rgba(4, 15, 31, 0.92),
+      rgba(6, 20, 41, 0.76) 52%,
+      rgba(4, 16, 35, 0.88)
+    ),
+    rgba(4, 13, 28, 0.42);
+}
+
+.va-career::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.08;
+  pointer-events: none;
+  background-image:
+    radial-gradient(
+      circle at 25% 30%,
+      rgba(255, 255, 255, 0.25) 0 1px,
+      transparent 1.5px
+    ),
+    radial-gradient(
+      circle at 70% 65%,
+      rgba(255, 255, 255, 0.18) 0 1px,
+      transparent 1.5px
+    );
+  background-size: 9px 9px, 13px 13px;
+  mix-blend-mode: soft-light;
+}
+
+/* ---------- 03 separate-rooms: warm paper field ---------- */
+
+.va-rooms {
+  background: var(--color-ivory);
+}
+
+.va-rooms::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(
+    120% 110% at 50% 40%,
+    rgba(255, 255, 255, 0.55) 0%,
+    rgba(255, 255, 255, 0) 48%,
+    rgba(200, 166, 90, 0.14) 100%
+  );
+}
+
+.va-rooms::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.05;
+  background-image:
+    radial-gradient(
+      circle at 20% 10%,
+      rgba(11, 31, 58, 0.35) 0 1px,
+      transparent 1px
+    ),
+    radial-gradient(
+      circle at 70% 60%,
+      rgba(200, 166, 90, 0.3) 0 1px,
+      transparent 1px
+    );
+  background-size: 5px 5px, 7px 7px;
+}
+
+/* Notched navy masthead tab. */
+.va-notch {
+  clip-path: polygon(0 0, 100% 0, calc(100% - 26px) 100%, 0 100%);
+}
+
+/* ---------- 04 blueprint-rounds: desk still life on ivory ---------- */
+
+.va-blueprint {
+  background: var(--color-ivory);
+}
+
+.va-blueprint::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("/images/design/a/04-blueprint-rounds/desk-still-life-background.jpg");
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+
+.va-blueprint::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(246, 242, 232, 0.94) 0%,
+      rgba(246, 242, 232, 0.72) 39%,
+      rgba(246, 242, 232, 0.18) 64%,
+      rgba(246, 242, 232, 0) 82%
+    ),
+    linear-gradient(
+      0deg,
+      rgba(246, 242, 232, 0.92) 0%,
+      rgba(246, 242, 232, 0.42) 27%,
+      rgba(246, 242, 232, 0) 55%
+    );
+}
+
+/* On narrow screens the copy stacks over the still life, so the wash
+   must carry almost the whole field for contrast. */
+@media (max-width: 1023px) {
+  .va-blueprint::after {
+    background: linear-gradient(
+      0deg,
+      rgba(246, 242, 232, 0.97) 0%,
+      rgba(246, 242, 232, 0.95) 72%,
+      rgba(246, 242, 232, 0.66) 100%
+    );
+  }
+}
+
+/* Navy step medallion with a double gold ring. */
+.va-medallion {
+  background: var(--color-ink);
+  box-shadow:
+    0 0 0 2px var(--color-ivory),
+    0 0 0 3.5px var(--color-gold);
+}
+
+/* ---------- 06 white-coat-paths: mist clinical field ---------- */
+
+.va-mist {
+  background:
+    radial-gradient(
+      circle at 70% 20%,
+      rgba(255, 255, 255, 0.8),
+      transparent 36rem
+    ),
+    radial-gradient(
+      circle at 34% 55%,
+      rgba(255, 255, 255, 0.5),
+      transparent 42rem
+    ),
+    linear-gradient(135deg, #ffffff 0%, var(--color-mist) 72%, #d3e2ef 100%);
+}
+
+.va-mist::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.07;
+  background-image: radial-gradient(
+    rgba(11, 31, 58, 0.65) 0.45px,
+    transparent 0.45px
+  );
+  background-size: 3px 3px;
+}
+
+/* Diagonal photo masks from the extraction NOTES. */
+.va-clip-consult {
+  clip-path: polygon(17% 0, 100% 0, 87% 100%, 0 100%);
+}
+.va-clip-surgeons {
+  clip-path: polygon(7% 0, 100% 0, 84% 100%, 0 100%);
+}
+.va-clip-dental {
+  clip-path: polygon(16% 0, 100% 0, 87% 100%, 0 100%);
+}
+.va-clip-practice {
+  clip-path: polygon(10% 0, 100% 0, 91% 100%, 0 100%);
+}
+.va-clip-executive {
+  clip-path: polygon(8% 0, 100% 0, 86% 100%, 0 100%);
+}
+.va-clip-mobile {
+  clip-path: polygon(0 7%, 100% 0, 100% 100%, 0 100%);
+}
+
+/* ---------- 07 accountable-planner: portrait essay ---------- */
+
+.va-planner {
+  background: var(--color-ivory);
+}
+
+.va-planner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("/images/design/a/07-accountable-planner/background-desk-fullscene.jpg");
+  background-size: cover;
+  background-position: left center;
+  background-repeat: no-repeat;
+}
+
+.va-planner::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 63% 43%, rgba(255, 255, 255, 0.26), transparent 34%),
+    linear-gradient(
+      90deg,
+      rgba(246, 242, 232, 0.08) 0%,
+      rgba(246, 242, 232, 0.78) 26%,
+      rgba(246, 242, 232, 0.94) 46%,
+      rgba(246, 242, 232, 0.9) 100%
+    );
+}
+
+/* On narrow screens the narrative stacks over the desk photo, so the
+   ivory wash must stay near-opaque behind all copy. */
+@media (max-width: 1023px) {
+  .va-planner::after {
+    background: linear-gradient(
+      0deg,
+      rgba(246, 242, 232, 0.96) 0%,
+      rgba(246, 242, 232, 0.94) 70%,
+      rgba(246, 242, 232, 0.7) 100%
+    );
+  }
+}
+
+/* Thin double border for the portrait plate. */
+.va-planner-card {
+  border: 1px solid color-mix(in srgb, var(--color-ivory), var(--color-charcoal) 30%);
+  outline: 1px solid color-mix(in srgb, var(--color-ivory), var(--color-charcoal) 12%);
+  outline-offset: -7px;
+  background: rgba(236, 232, 224, 0.72);
+}
+
+/* ---------- 08 next-decision: dark closing fork ---------- */
+
+.va-decision {
+  background: #04101f;
+}
+
+.va-decision::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("/images/design/a/08-next-decision/office-background-reconstructed.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.va-decision::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 50% 36%, rgba(6, 24, 46, 0.2), transparent 34%),
+    linear-gradient(
+      90deg,
+      rgba(4, 12, 25, 0.76),
+      rgba(6, 20, 41, 0.55) 50%,
+      rgba(4, 12, 25, 0.78)
+    );
+}
+
+/* Gold gradient action built from the gold token + light/dark overlays. */
+.va-gold-btn {
+  background-color: var(--color-gold);
+  background-image: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.3),
+    rgba(255, 255, 255, 0) 45%,
+    rgba(11, 31, 58, 0.24)
+  );
+  box-shadow:
+    inset 0 1px rgba(255, 255, 255, 0.35),
+    0 10px 24px rgba(4, 14, 27, 0.28);
+  transition:
+    filter 0.2s ease,
+    transform 0.2s ease;
+}
+
+.va-gold-btn:hover {
+  filter: brightness(1.08);
+  transform: translateY(-1px);
+}
+
+.va-gold-btn:active {
+  filter: brightness(0.96);
+  transform: translateY(0);
+}
+
+/* ---------- Shared: subtle scroll reveal (CSS-only) ---------- */
+
+@supports (animation-timeline: view()) {
+  .va-reveal {
+    animation: va-rise 0.7s ease-out both;
+    animation-timeline: view();
+    animation-range: entry 0% entry 38%;
+  }
+}
+
+@keyframes va-rise {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .va-reveal {
+    animation: none;
+  }
+}

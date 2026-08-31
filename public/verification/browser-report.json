@@ -1,0 +1,170 @@
+[
+  {
+    "route": "/",
+    "viewport": "1536",
+    "overflowX": false,
+    "scrollWidth": 1536,
+    "clientWidth": 1536,
+    "scrollHeight": 864,
+    "brokenImages": [],
+    "h1Count": 1,
+    "anchors": [
+      "chooser"
+    ],
+    "bridgeCount": 1
+  },
+  {
+    "route": "/",
+    "viewport": "1440",
+    "overflowX": false,
+    "scrollWidth": 1440,
+    "clientWidth": 1440,
+    "scrollHeight": 900,
+    "brokenImages": [],
+    "h1Count": 1,
+    "anchors": [
+      "chooser"
+    ],
+    "bridgeCount": 1
+  },
+  {
+    "route": "/",
+    "viewport": "390",
+    "overflowX": false,
+    "scrollWidth": 390,
+    "clientWidth": 390,
+    "scrollHeight": 1190,
+    "brokenImages": [],
+    "h1Count": 1,
+    "anchors": [
+      "chooser"
+    ],
+    "bridgeCount": 1
+  },
+  {
+    "route": "/variant-a",
+    "viewport": "1536",
+    "overflowX": false,
+    "scrollWidth": 1536,
+    "clientWidth": 1536,
+    "scrollHeight": 7112,
+    "brokenImages": [],
+    "h1Count": 1,
+    "anchors": [
+      "one-plan",
+      "career-signal",
+      "separate-rooms",
+      "blueprint-rounds",
+      "five-decisions",
+      "white-coat-paths",
+      "accountable-planner",
+      "next-decision"
+    ],
+    "bridgeCount": 1
+  },
+  {
+    "route": "/variant-a",
+    "viewport": "1440",
+    "overflowX": false,
+    "scrollWidth": 1440,
+    "clientWidth": 1440,
+    "scrollHeight": 6910,
+    "brokenImages": [],
+    "h1Count": 1,
+    "anchors": [
+      "one-plan",
+      "career-signal",
+      "separate-rooms",
+      "blueprint-rounds",
+      "five-decisions",
+      "white-coat-paths",
+      "accountable-planner",
+      "next-decision"
+    ],
+    "bridgeCount": 1
+  },
+  {
+    "route": "/variant-a",
+    "viewport": "390",
+    "overflowX": false,
+    "scrollWidth": 390,
+    "clientWidth": 390,
+    "scrollHeight": 10736,
+    "brokenImages": [],
+    "h1Count": 1,
+    "anchors": [
+      "one-plan",
+      "career-signal",
+      "separate-rooms",
+      "blueprint-rounds",
+      "five-decisions",
+      "white-coat-paths",
+      "accountable-planner",
+      "next-decision"
+    ],
+    "bridgeCount": 1
+  },
+  {
+    "route": "/variant-b",
+    "viewport": "1536",
+    "overflowX": false,
+    "scrollWidth": 1536,
+    "clientWidth": 1536,
+    "scrollHeight": 6928,
+    "brokenImages": [],
+    "h1Count": 1,
+    "anchors": [
+      "one-plan",
+      "career-signal",
+      "separate-rooms",
+      "blueprint-rounds",
+      "five-decisions",
+      "white-coat-paths",
+      "accountable-planner",
+      "next-decision"
+    ],
+    "bridgeCount": 1
+  },
+  {
+    "route": "/variant-b",
+    "viewport": "1440",
+    "overflowX": false,
+    "scrollWidth": 1440,
+    "clientWidth": 1440,
+    "scrollHeight": 6857,
+    "brokenImages": [],
+    "h1Count": 1,
+    "anchors": [
+      "one-plan",
+      "career-signal",
+      "separate-rooms",
+      "blueprint-rounds",
+      "five-decisions",
+      "white-coat-paths",
+      "accountable-planner",
+      "next-decision"
+    ],
+    "bridgeCount": 1
+  },
+  {
+    "route": "/variant-b",
+    "viewport": "390",
+    "overflowX": false,
+    "scrollWidth": 390,
+    "clientWidth": 390,
+    "scrollHeight": 11335,
+    "brokenImages": [],
+    "h1Count": 1,
+    "anchors": [
+      "one-plan",
+      "career-signal",
+      "separate-rooms",
+      "blueprint-rounds",
+      "five-decisions",
+      "white-coat-paths",
+      "accountable-planner",
+      "next-decision"
+    ],
+    "bridgeCount": 1
+  }
+]
