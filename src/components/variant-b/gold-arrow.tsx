@@ -1,0 +1,23 @@
+const DEFAULT_CLASS = "h-4 w-4";
+
+export default function GoldArrow({
+  className = DEFAULT_CLASS,
+}: {
+  className?: string;
+}): React.JSX.Element {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+      className={`text-gold ${className}`}
+    >
+      <path d="M5 12h14" />
+      <path d="m13 6 6 6-6 6" />
+    </svg>
+  );
+}

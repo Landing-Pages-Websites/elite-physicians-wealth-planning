@@ -1,0 +1,878 @@
+{
+  "direction": "b",
+  "frames": [
+    {
+      "frame": "01-one-plan",
+      "viewport_context": {
+        "reference_kind": "section-frame",
+        "bitmap_dimensions": { "width": 1536, "height": 864 },
+        "primary_css_viewport": { "width": 1536, "height": 864 },
+        "device_pixel_ratio": 1
+      },
+      "slot_contract": {
+        "container": "asymmetric hero with an upper-right clinical-workspace media field and a lower-right planner portrait inset",
+        "width_share": "the clinical media owns roughly the right third while the portrait occupies a smaller lower-right inset; both remain subordinate to the left headline block as a combined field",
+        "target_aspect_ratio": "wide landscape for the clinical scene and approximately portrait orientation for the planner inset",
+        "intended_crop": "retain the diagnostic monitors, writing hand, and white coat in the clinical scene; retain the planner's complete head and upper torso in the portrait",
+        "fold_requirement": "headline, both primary actions, clinical scene, floating strategy plaque, and planner portrait must read together in the first viewport",
+        "layout_authority": "the hero grid, polygonal media frames, and overlap anchors set section geometry; intrinsic image dimensions must not determine row height or widen either slot"
+      },
+      "focal_point": {
+        "what": "the oversized three-line physician outcome headline held in tension with the clinical scene and the floating coordinated-strategy plaque",
+        "where": "headline across the left half, clinical scene in the upper-right, and the plaque bridging their shared boundary",
+        "region_ids": [1, 2, 3, 4]
+      },
+      "dominance": "headline first, clinical photography second, with the dark strategy plaque acting as the hinge; the lower portrait is a supporting identity anchor rather than a co-equal hero",
+      "eye_path": [
+        "brand line at the top",
+        "large physician outcome headline",
+        "primary and secondary actions beneath the promise",
+        "floating coordinated-strategy plaque",
+        "clinical workspace and writing hand",
+        "planner portrait and supporting attribution"
+      ],
+      "overlaps": [
+        "the strategy plaque straddles the boundary between the copy field and clinical media",
+        "the portrait inset overlaps the pale lower-right field beneath the clinical scene",
+        "topographic linework rises behind the actions and toward the portrait without competing with live copy",
+        "technical rulers and corner marks frame the composition rather than forming separate content rows"
+      ],
+      "quiet_zones": [
+        "breathing room around the headline's right edge keeps the plaque legible as a bridge",
+        "the pale field between the action notes and portrait leaves the lower half from becoming a continuous wall of content",
+        "the area around the clinical scene's left notch stays open enough to preserve its clipped silhouette"
+      ],
+      "tension": "a dense editorial headline on the left is counterweighted by two vertically staggered image objects on the right, while the plaque pulls the halves together across an intentionally unresolved central seam",
+      "image_copy_relation": "copy and imagery interlock rather than form two polite columns; the plaque visually translates the headline's promise into three planning principles before the eye reaches the human portrait",
+      "assembly": {
+        "profile": "hybrid-layered",
+        "score": 3,
+        "signals": [
+          "multiple polygonal media layers",
+          "bridge object crossing the copy-media boundary",
+          "technical topographic motif and edge instrumentation"
+        ],
+        "surface": "CSS off-white hero field enclosed by shared navy edge bands and pale-blue technical/topographic accents",
+        "layer_stack": [
+          "CSS off-white and navy section surfaces",
+          "responsive SVG rulers, corner marks, and topographic contours",
+          "clinical landscape raster in a clipped media slot",
+          "planner portrait raster in its own clipped inset",
+          "live hero copy and actions",
+          "live dark strategy plaque above the media-copy seam"
+        ],
+        "connector_relationships": [
+          "the plaque aligns the left promise with the right clinical context",
+          "the lower technical route line leads from proof and disclaimer content toward the portrait field"
+        ],
+        "seam_contract": [
+          "the strategy plaque must continue to bridge copy and clinical media",
+          "the portrait remains visually tucked beneath the clinical scene rather than floating as an unrelated card",
+          "top and bottom navy bands bookend the light hero field"
+        ],
+        "responsive_contract": "recompose into copy, clinical scene, strategy plaque, then planner portrait while keeping the plaque attached to the relationship between promise and evidence; redraw technical connectors and never scale the desktop scene as one bitmap"
+      },
+      "content_groups": [
+        "audience line + outcome headline + explanatory paragraph",
+        "primary action + its outcome note",
+        "secondary action + its route note",
+        "clinical workspace + coordinated-strategy plaque",
+        "planner portrait + identity annotation",
+        "powered-by line + educational disclaimer"
+      ],
+      "space_roles": {
+        "internal_grouping": "headline and supporting paragraph are close; each action stays closest to its own outcome note; the three plaque statements read as one compact sequence",
+        "quiet_space": "open pale areas around the hero copy and between lower action notes and portrait preserve an editorial, measured rhythm",
+        "section_transition": "the navy edge bands and ruler lines own entry and exit spacing; transition space must not be inserted between an action and its note"
+      },
+      "viewport_intent": {
+        "desktop_composition": "native 1536x864 section frame at DPR 1",
+        "must_be_simultaneously_visible": [
+          "full outcome headline",
+          "both hero actions",
+          "clinical scene",
+          "coordinated-strategy plaque",
+          "planner portrait"
+        ],
+        "may_continue_below_fold": [
+          "expanded compliance copy or secondary route explanation"
+        ],
+        "crop_invariants": [
+          "diagnostic monitors and writing hand remain visible together",
+          "planner face, shoulders, and portrait-frame silhouette remain complete",
+          "the strategy plaque is never clipped or detached from the media-copy seam"
+        ]
+      },
+      "invariants": [
+        "headline remains the largest and first-reading object",
+        "clinical scene and portrait stay vertically staggered on the right",
+        "strategy plaque bridges copy and media",
+        "technical framing remains peripheral and does not become a content grid",
+        "primary and secondary actions keep distinct outcomes and hierarchy"
+      ],
+      "free": [
+        "exact typography sizes and line leading",
+        "precise ruler tick density and topographic contour detail",
+        "minor clipping angles on media frames",
+        "mobile stacking order provided headline dominance, bridge logic, and complete focal crops remain"
+      ]
+    },
+    {
+      "frame": "02-career-signal",
+      "viewport_context": {
+        "reference_kind": "section-frame-strip",
+        "bitmap_dimensions": { "width": 1536, "height": 512 },
+        "primary_css_viewport": { "width": 1536, "height": 512 },
+        "device_pixel_ratio": 1
+      },
+      "slot_contract": {
+        "container": "full-width lifecycle signal band",
+        "width_share": "the sloping career rail spans nearly the full width while the heading occupies the upper-left portion",
+        "target_aspect_ratio": "wide strip, approximately three times wider than tall",
+        "intended_crop": "no raster crop; preserve the complete lifecycle rail and all labeled milestones",
+        "fold_requirement": "heading and all four career-stage milestones are visible together as one comparative band",
+        "layout_authority": "the strip's CSS block size and responsive SVG rail set geometry; labels and decoration must not expand the band through intrinsic content sizing"
+      },
+      "focal_point": {
+        "what": "the descending career-stage rail with four gold milestones",
+        "where": "a shallow diagonal sweeping from the left middle toward the lower-right",
+        "region_ids": [4, 5, 6, 7, 8, 9]
+      },
+      "dominance": "typography strip; the heading introduces the idea and the long diagonal signal is the sole visual mechanism",
+      "eye_path": [
+        "upper-left heading",
+        "first career-stage milestone",
+        "successive milestones along the descending rail",
+        "final one-strategy statement at the right"
+      ],
+      "overlaps": [],
+      "quiet_zones": [
+        "the broad white field above and below the diagonal keeps the rail readable as one continuous timeline",
+        "the pale technical circles in the upper-right remain atmospheric and low contrast"
+      ],
+      "tension": "the rail descends while the career narrative advances, creating restrained directional energy without added cards or imagery",
+      "image_copy_relation": "there is no dominant image; copy is attached directly to milestones on the diagram rather than separated into a text block and illustration",
+      "assembly": {
+        "profile": "code-first",
+        "score": 0,
+        "signals": [
+          "simple responsive lifecycle diagram",
+          "quiet strip with no material imagery"
+        ],
+        "surface": "CSS white field with navy edge band and faint technical/topographic accents",
+        "layer_stack": [
+          "CSS strip surface",
+          "low-contrast SVG background instrumentation",
+          "responsive SVG diagonal rail, ticks, stems, and milestone dots",
+          "live heading and milestone labels"
+        ],
+        "connector_relationships": [
+          "each milestone stem binds its label to one point on the continuous career rail"
+        ],
+        "seam_contract": [
+          "the top navy band stays a thin entry edge rather than becoming a separate section",
+          "the rail exits toward the lower-right to carry momentum into the next section"
+        ],
+        "responsive_contract": "convert the diagonal into a vertical or gently stepped timeline on narrow screens while preserving milestone order, one continuous connector, and the final one-strategy conclusion"
+      },
+      "content_groups": [
+        "section heading",
+        "continuous rail + four milestone dots + attached labels"
+      ],
+      "space_roles": {
+        "internal_grouping": "each stage label remains nearest its own marker and stem",
+        "quiet_space": "unoccupied white field is intentional and prevents the strip from becoming a dense process chart",
+        "section_transition": "edge bands and the rail's entry and exit own transition rhythm; do not add large gaps inside the timeline"
+      },
+      "viewport_intent": {
+        "desktop_composition": "native 1536x512 strip at DPR 1",
+        "must_be_simultaneously_visible": [
+          "heading",
+          "continuous lifecycle rail",
+          "all four stage labels"
+        ],
+        "may_continue_below_fold": [],
+        "crop_invariants": [
+          "first and last milestones remain present",
+          "no stage label is detached from its marker"
+        ]
+      },
+      "invariants": [
+        "one unbroken directional rail",
+        "four ordered milestones",
+        "large quiet white field",
+        "restrained technical accents remain subordinate"
+      ],
+      "free": [
+        "exact diagonal angle",
+        "tick frequency",
+        "precise label wrapping",
+        "mobile conversion from diagonal to vertical while retaining sequence"
+      ]
+    },
+    {
+      "frame": "03-separate-rooms",
+      "viewport_context": {
+        "reference_kind": "section-frame",
+        "bitmap_dimensions": { "width": 1536, "height": 864 },
+        "primary_css_viewport": { "width": 1536, "height": 864 },
+        "device_pixel_ratio": 1
+      },
+      "slot_contract": {
+        "container": "right-weighted coordination map opposite a left editorial problem statement",
+        "width_share": "the map cluster owns roughly two-thirds of the frame and the copy occupies the narrower left third",
+        "target_aspect_ratio": "broad landscape map with a dominant central island and smaller surrounding islands",
+        "intended_crop": "keep the complete central priorities island, all four professional islands, and enough connector path to make every relationship explicit",
+        "fold_requirement": "problem statement, central priorities island, all four professional roles, and the coordination note must appear together",
+        "layout_authority": "the CSS split and map-stage aspect ratio control section height; individual island artwork or the connector SVG must not dictate the grid dimensions"
+      },
+      "focal_point": {
+        "what": "the large pale-blue Your priorities island encircled by four separate professional islands",
+        "where": "center-right, with satellites distributed above, right, and below around it",
+        "region_ids": [1, 6, 7, 9, 10, 11]
+      },
+      "dominance": "the central priorities island is dominant, the large left headline is a strong secondary anchor, and the four satellite islands form a supporting orbit",
+      "eye_path": [
+        "coordination-gap eyebrow and left headline",
+        "central Your priorities island",
+        "dotted paths outward to CPA and Attorney",
+        "paths around to TPA, Financial advisor, and Insurance professional",
+        "lower-right coordination note"
+      ],
+      "overlaps": [
+        "irregular islands sit above a shared topographic field and cast layered paper-like shadows",
+        "dotted connectors weave between islands and behind their silhouettes",
+        "the map field approaches the copy column but does not cover the headline",
+        "top and bottom topographic bands intrude into the cream field as terrain edges"
+      ],
+      "quiet_zones": [
+        "the cream gap between the left copy and central island keeps problem and solution distinct",
+        "space between satellite islands allows each professional role to remain separately legible",
+        "the lower-right note sits in its own clear pocket outside the connector tangle"
+      ],
+      "tension": "the left copy describes fragmentation while the right scene visually pulls separate islands toward one center, using asymmetry and looping paths to make coordination feel active rather than resolved into a static grid",
+      "image_copy_relation": "the map is a direct visual argument for the adjacent headline; the central priorities island answers the problem while the surrounding roles embody the separate pieces named in the copy",
+      "assembly": {
+        "profile": "hybrid-layered",
+        "score": 4,
+        "signals": [
+          "custom irregular island illustration",
+          "multiple responsive connector paths",
+          "layered paper and topographic materiality",
+          "approval depends on preserving the authored map atmosphere"
+        ],
+        "surface": "shared CSS warm-cream field with pale-blue topographic terrain entering at the top and bottom edges",
+        "layer_stack": [
+          "CSS cream and pale-blue terrain surfaces",
+          "responsive SVG contour accents and dotted coordination paths",
+          "high-fidelity irregular island art objects with shadows",
+          "live role labels and central priorities label",
+          "live left problem copy and lower-right coordination note"
+        ],
+        "connector_relationships": [
+          "each professional island connects toward Your priorities rather than primarily to another professional",
+          "gold nodes punctuate route changes and keep the central relationship visible"
+        ],
+        "seam_contract": [
+          "top and bottom pale-blue terrain may cross into the cream field as irregular edges",
+          "island shadows remain over the contour field",
+          "no island crosses into or obscures the left headline group"
+        ],
+        "responsive_contract": "recompose the satellites around or below the central priorities island and redraw every connector; never shrink the entire desktop map, and keep the central island visibly larger than each professional island"
+      },
+      "content_groups": [
+        "compass eyebrow + headline + explanatory paragraph",
+        "central priorities island + four professional islands + connecting routes",
+        "coordination note"
+      ],
+      "space_roles": {
+        "internal_grouping": "the left explanatory copy stays compact under its headline; labels stay centered within their own islands; routes stay visually attached to their nodes",
+        "quiet_space": "gaps between islands and the clear divide beside the headline are structural negative space, not unused room",
+        "section_transition": "irregular terrain bands own the top and bottom transition; their space must not split labels from their islands"
+      },
+      "viewport_intent": {
+        "desktop_composition": "native 1536x864 section frame at DPR 1",
+        "must_be_simultaneously_visible": [
+          "full left problem statement",
+          "Your priorities island",
+          "CPA, Attorney, TPA, Financial advisor, and Insurance professional labels",
+          "coordination note"
+        ],
+        "may_continue_below_fold": [
+          "expanded explanation of advisor coordination"
+        ],
+        "crop_invariants": [
+          "complete silhouette of the central island",
+          "all satellite labels remain inside complete island silhouettes",
+          "enough of every dotted route remains visible to identify its destination"
+        ]
+      },
+      "invariants": [
+        "central priorities island remains largest and central to the professional network",
+        "satellites are irregular, separate objects rather than uniform cards",
+        "connector paths remain independent and visibly relational",
+        "left problem copy and right map remain in deliberate asymmetry",
+        "quiet pockets between islands are preserved"
+      ],
+      "free": [
+        "exact contour density",
+        "minor satellite rotation and spacing",
+        "precise path curvature and gold-node placement",
+        "mobile satellite order provided central-priority dominance and all relationships survive"
+      ]
+    },
+    {
+      "frame": "04-blueprint-rounds",
+      "viewport_context": {
+        "reference_kind": "section-frame",
+        "bitmap_dimensions": { "width": 1536, "height": 864 },
+        "primary_css_viewport": { "width": 1536, "height": 864 },
+        "device_pixel_ratio": 1
+      },
+      "slot_contract": {
+        "container": "left editorial introduction paired with a large right radial blueprint stage",
+        "width_share": "the radial system owns slightly more than half the frame; the introduction occupies the left third with a narrow breathing seam between",
+        "target_aspect_ratio": "approximately square radial mechanism inside a landscape section",
+        "intended_crop": "retain the full center compass, all six numbered process panels, and every spoke attachment",
+        "fold_requirement": "introductory promise, six-step process, center mechanism, and process CTA must read in one viewport",
+        "layout_authority": "the section grid and a bounded square diagram stage set geometry; neither the radial SVG nor panel content may enlarge the row through intrinsic media sizing"
+      },
+      "focal_point": {
+        "what": "the technical radial blueprint with six numbered decision rounds orbiting a central compass",
+        "where": "center-right, large enough that the complete ring and all six cards form one mechanism",
+        "region_ids": [1]
+      },
+      "dominance": "the radial blueprint mechanism dominates by area and detail; the large left promise is secondary, while the CTA acts as a terminal action at the lower-right",
+      "eye_path": [
+        "blueprint name and large left promise",
+        "central compass of the radial mechanism",
+        "01 Discover and clockwise sequence through 06 Review",
+        "supporting process copy at the left",
+        "full-process action at the lower-right"
+      ],
+      "overlaps": [
+        "numbered panels sit above the radial instrument and overlap its outer rings",
+        "spokes pass from the center toward panel anchor nodes without entering panel text",
+        "the lower-right CTA occupies the technical frame edge without covering the mechanism",
+        "technical rulers and calibration marks frame the whole section as one blueprint sheet"
+      ],
+      "quiet_zones": [
+        "the seam between left copy and radial mechanism prevents the dense diagram from swallowing the promise",
+        "open corners around the circular mechanism keep its outer ring legible",
+        "space above the CTA separates action from the 04 and 05 process panels"
+      ],
+      "tension": "a dense, precise circular system counterbalances a broad, blunt left headline; orbiting panels create controlled complexity while the center axis keeps the scene stable",
+      "image_copy_relation": "the radial diagram operationalizes the promise of a planning system; its six live panels carry the substantive process while the left copy frames why the system matters",
+      "assembly": {
+        "profile": "hybrid-layered",
+        "score": 4,
+        "signals": [
+          "signature technical blueprint illustration",
+          "many panel-to-center connector relationships",
+          "overlapping cards on a radial instrument",
+          "visual hierarchy is difficult to preserve with ordinary grid language"
+        ],
+        "surface": "CSS ice-blue blueprint sheet with navy and gold calibration accents",
+        "layer_stack": [
+          "CSS blueprint surface",
+          "responsive SVG radial rings, axes, arrows, rulers, and spokes",
+          "live six numbered process panels above the instrument",
+          "live left editorial copy and process note",
+          "live lower-right CTA"
+        ],
+        "connector_relationships": [
+          "each numbered panel has one explicit anchor to the radial system",
+          "clockwise ordering communicates a repeatable cycle rather than six independent features",
+          "the center compass remains the shared origin of all steps"
+        ],
+        "seam_contract": [
+          "process panels overlap the radial instrument but never one another",
+          "the left copy remains outside the dense ring field",
+          "the CTA may touch the technical perimeter but must not occlude a process node"
+        ],
+        "responsive_contract": "recompose the six steps as an ordered vertical or stepped sequence with a simplified live connector; preserve the central-system idea and clockwise order, never shrink the desktop blueprint until labels become unreadable"
+      },
+      "content_groups": [
+        "blueprint title + aligned-life note + large planning-system promise",
+        "supporting process paragraph + three-line process maxim",
+        "central compass + six numbered steps + spokes",
+        "full-process CTA + route note"
+      ],
+      "space_roles": {
+        "internal_grouping": "each step number, title, and explanation stays inside one panel; left support text remains under the promise; CTA and route note stay attached",
+        "quiet_space": "the copy-diagram seam and outer corners are deliberate relief around the most information-dense frame",
+        "section_transition": "technical perimeter rulers own entry and exit rhythm and must not introduce gaps inside the six-step cycle"
+      },
+      "viewport_intent": {
+        "desktop_composition": "native 1536x864 section frame at DPR 1",
+        "must_be_simultaneously_visible": [
+          "planning-system promise",
+          "complete radial center",
+          "all six numbered process panels",
+          "full-process CTA"
+        ],
+        "may_continue_below_fold": [
+          "expanded descriptions for individual steps"
+        ],
+        "crop_invariants": [
+          "complete outer ring and center compass",
+          "all six panels remain fully legible",
+          "spoke anchors remain visibly attached to their intended panels"
+        ]
+      },
+      "invariants": [
+        "radial mechanism remains larger than the left copy block",
+        "six steps orbit one shared center in an ordered cycle",
+        "panels overlap the diagram layer rather than sitting in a detached grid",
+        "CTA remains terminal and separate from process-node content",
+        "technical framing stays coherent around the full sheet"
+      ],
+      "free": [
+        "exact ring and tick density",
+        "minor panel silhouette details",
+        "precise arrowhead placement",
+        "mobile transformation to a vertical sequence provided ordering, connectedness, and process-system meaning remain"
+      ]
+    },
+    {
+      "frame": "05-five-decisions",
+      "viewport_context": {
+        "reference_kind": "section-frame",
+        "bitmap_dimensions": { "width": 1536, "height": 864 },
+        "primary_css_viewport": { "width": 1536, "height": 864 },
+        "device_pixel_ratio": 1
+      },
+      "slot_contract": {
+        "container": "left manifesto column beside a five-column descending discipline skyline",
+        "width_share": "the manifesto owns about one third and the five disciplines share the remaining width",
+        "target_aspect_ratio": "five tall narrow panels whose top edges step downward from left to right",
+        "intended_crop": "no dominant raster crop; preserve the full stepped silhouette and the legible content area of every discipline panel",
+        "fold_requirement": "manifesto, all five discipline names, and their short explanations must read together",
+        "layout_authority": "the CSS section grid and stepped panel tracks establish height; subtle panel texture or content length must not control section geometry"
+      },
+      "focal_point": {
+        "what": "the five descending planning-discipline columns acting as one organized system",
+        "where": "across the right two-thirds, beginning tallest beside the manifesto and stepping down toward the right edge",
+        "region_ids": [2, 3, 4, 6, 7]
+      },
+      "dominance": "the stepped five-column silhouette dominates by rhythm, with the oversized left manifesto providing the conceptual headline and visual counterweight",
+      "eye_path": [
+        "five-disciplines eyebrow",
+        "large left manifesto",
+        "first and tallest Tax strategy column",
+        "successive column titles descending across the frame",
+        "small scope disclaimer at the lower-left"
+      ],
+      "overlaps": [
+        "adjacent discipline panels visually interlock through stepped top shoulders but retain separate content columns",
+        "gold vertical rules sit inside each panel as alignment spines rather than dividers between panels"
+      ],
+      "quiet_zones": [
+        "open white space beneath the manifesto's italic maxim separates the conceptual statement from the legal scope note",
+        "the upper-right white field above shorter columns makes the descending rhythm visible",
+        "each panel preserves breathing room below its copy instead of filling its full height"
+      ],
+      "tension": "a very large, blunt statement on the left meets a precise descending skyline on the right; the unequal heights create movement while repeated panel widths signal coordination",
+      "image_copy_relation": "there is no dominant image; translucent paper-like columns are the structural container for live discipline copy, turning organization itself into the visual metaphor",
+      "assembly": {
+        "profile": "code-first",
+        "score": 0,
+        "signals": [
+          "semantic five-column content system",
+          "simple stepped geometry",
+          "no material illustration or connector network"
+        ],
+        "surface": "CSS white field with pale ice-blue translucent panel fills and restrained navy-gold instrumentation",
+        "layer_stack": [
+          "CSS white surface",
+          "responsive CSS stepped discipline panels with subtle texture treatment",
+          "live manifesto and discipline copy",
+          "simple SVG or CSS ruler ornaments and gold alignment rules"
+        ],
+        "connector_relationships": [],
+        "seam_contract": [
+          "adjacent panels meet as one stepped skyline without collapsing into a flat equal-height card row",
+          "the left manifesto remains visually separate from the panel field"
+        ],
+        "responsive_contract": "stack disciplines in their original left-to-right order with a retained stepped or numbered cue; keep the manifesto distinct and do not preserve desktop empty height by adding gaps inside panel copy groups"
+      },
+      "content_groups": [
+        "eyebrow + manifesto + italic maxim",
+        "scope disclaimer",
+        "Tax strategy + Wealth management + Retirement strategy + Practice and business planning + Legacy planning"
+      ],
+      "space_roles": {
+        "internal_grouping": "each discipline heading stays closest to its own explanation and gold rule; the manifesto maxim stays attached to the main statement",
+        "quiet_space": "unused portions within and above the descending panels reveal the skyline and keep the system calm",
+        "section_transition": "peripheral ruler marks own section entry and exit; no transition gap belongs between a discipline title and its explanation"
+      },
+      "viewport_intent": {
+        "desktop_composition": "native 1536x864 section frame at DPR 1",
+        "must_be_simultaneously_visible": [
+          "manifesto",
+          "all five panel titles",
+          "the complete descending skyline"
+        ],
+        "may_continue_below_fold": [
+          "expanded service explanations"
+        ],
+        "crop_invariants": [
+          "first and last panel tops remain visibly different in height",
+          "no discipline title is separated from its panel"
+        ]
+      },
+      "invariants": [
+        "five disciplines read as one coordinated stepped system",
+        "descending top-edge rhythm remains visible",
+        "left manifesto stays oversized relative to panel copy",
+        "scope note remains subordinate",
+        "panels are not converted to generic equal cards"
+      ],
+      "free": [
+        "exact texture intensity",
+        "precise step increments",
+        "line wrapping within descriptions",
+        "mobile use of a compact ordered stack while preserving sequence and collective-system meaning"
+      ]
+    },
+    {
+      "frame": "06-white-coat-paths",
+      "viewport_context": {
+        "reference_kind": "section-frame",
+        "bitmap_dimensions": { "width": 1536, "height": 864 },
+        "primary_css_viewport": { "width": 1536, "height": 864 },
+        "device_pixel_ratio": 1
+      },
+      "slot_contract": {
+        "container": "editorial audience introduction at left integrated with a five-card medical-career photo mosaic",
+        "width_share": "the photo mosaic owns roughly two-thirds of the frame, with one smaller dental card extending beneath the left introduction",
+        "target_aspect_ratio": "mixed wide landscape cards arranged in two rows, with no square crops",
+        "intended_crop": "preserve hands and consultation context for physicians and practice owners, the complete surgeon tie at the back of the head, recognizable dental equipment, and the full walking clinician silhouette",
+        "fold_requirement": "audience promise, all five career-path cards, and the primary planning-path action must be visible together",
+        "layout_authority": "the CSS mosaic tracks and assigned media aspect ratios control dimensions; source photographs must use cover cropping and may never expand rows or equalize the cards by intrinsic size"
+      },
+      "focal_point": {
+        "what": "the large upper consultation and surgeon photo pair, supported by three smaller career-path cards below",
+        "where": "across the upper-right and lower field, counterweighted by the left audience headline",
+        "region_ids": [1, 2]
+      },
+      "dominance": "medical photography dominates as a connected mosaic; the left headline is the primary copy anchor and the lower action is a clear but subordinate exit",
+      "eye_path": [
+        "who-we-serve eyebrow and audience headline",
+        "physician consultation image",
+        "surgeon image",
+        "lower practice-owner and healthcare-executive cards",
+        "dental-specialist card beneath the intro",
+        "planning-path CTA"
+      ],
+      "overlaps": [
+        "the dental card extends below the left text block, integrating the intro into the mosaic rather than leaving it as a separate column",
+        "diagonal technical rails enter from opposite corners and visually bracket the card field",
+        "card captions are attached directly beneath their own photo crops"
+      ],
+      "quiet_zones": [
+        "the pale-blue field around the left headline preserves hierarchy before the eye enters the busy mosaic",
+        "consistent white caption bands separate photography from explanatory copy",
+        "space around the CTA keeps it distinct from the nearest card caption"
+      ],
+      "tension": "a stable two-column introduction is disrupted by the dental card dropping beneath it and by the corner-to-corner rail, producing an active editorial mosaic rather than a uniform gallery",
+      "image_copy_relation": "each image is immediately interpreted by its attached career label and planning need; the left promise explains why the heterogeneous medical scenes belong in one coordinated offer",
+      "assembly": {
+        "profile": "code-first",
+        "score": 0,
+        "signals": [
+          "ordinary content photography in a responsive editorial grid",
+          "semantic card captions",
+          "no custom illustrative scene or cross-section artwork"
+        ],
+        "surface": "CSS pale ice-blue field with simple navy-gold diagonal rail ornaments",
+        "layer_stack": [
+          "CSS section surface",
+          "responsive CSS mosaic grid",
+          "five raster photographs in controlled cover slots",
+          "live card labels and descriptions",
+          "live audience introduction and CTA",
+          "responsive SVG corner rails and nodes"
+        ],
+        "connector_relationships": [
+          "the diagonal corner rails bracket the mosaic and point toward its reading flow without connecting individual cards"
+        ],
+        "seam_contract": [
+          "the dental card remains tucked under the left introduction",
+          "caption bands remain attached to their photographs",
+          "the two large upper-right cards stay paired as the mosaic's strongest row"
+        ],
+        "responsive_contract": "stack cards in a deliberate audience sequence with image and caption inseparable; preserve wide crops where possible, keep recognizable clinical actions, and do not reduce the mosaic to anonymous square thumbnails"
+      },
+      "content_groups": [
+        "who-we-serve eyebrow + audience headline + explanatory paragraph",
+        "each photograph + its audience title + planning description",
+        "planning-path CTA + route note"
+      ],
+      "space_roles": {
+        "internal_grouping": "every label and description stays tight to its photo; the audience paragraph stays close to its headline; CTA and route note remain one action group",
+        "quiet_space": "pale-blue margin around the left intro and between mosaic perimeter and technical rails keeps photography from filling every edge",
+        "section_transition": "diagonal rails and pale-blue margins own transition space; card captions must not be separated from their photos to create rhythm"
+      },
+      "viewport_intent": {
+        "desktop_composition": "native 1536x864 section frame at DPR 1",
+        "must_be_simultaneously_visible": [
+          "audience headline",
+          "all five career-path titles",
+          "recognizable content from all five photos",
+          "planning-path CTA"
+        ],
+        "may_continue_below_fold": [
+          "longer audience-specific explanations"
+        ],
+        "crop_invariants": [
+          "surgeon's tied mask and upper body remain readable",
+          "consultation gestures remain visible",
+          "dental equipment remains recognizable",
+          "practice-planning documents and hands remain visible",
+          "walking clinician remains a complete central subject"
+        ]
+      },
+      "invariants": [
+        "five distinct medical-audience scenes remain present",
+        "upper-right photo pair remains dominant",
+        "dental card stays integrated beneath the left introduction",
+        "captions remain attached to their own images",
+        "wide editorial crops are not converted into uniform square cards"
+      ],
+      "free": [
+        "exact card gaps and caption-band depth",
+        "minor photo crop adjustments that retain the named subjects",
+        "rail tick density",
+        "mobile card order provided image-caption grouping and audience breadth remain clear"
+      ]
+    },
+    {
+      "frame": "07-accountable-planner",
+      "viewport_context": {
+        "reference_kind": "section-frame",
+        "bitmap_dimensions": { "width": 1536, "height": 864 },
+        "primary_css_viewport": { "width": 1536, "height": 864 },
+        "device_pixel_ratio": 1
+      },
+      "slot_contract": {
+        "container": "full-surface clinical desk dossier with a large clipped paper panel, portrait inset on the left, and planner narrative on the right",
+        "width_share": "the dossier panel spans most of the frame; the portrait owns about one third of the panel and the narrative owns the larger right portion",
+        "target_aspect_ratio": "wide landscape background plate plus a tall portrait inset",
+        "intended_crop": "retain enough desk photography at the left and lower edges to establish medical context; retain the planner's full head and upper torso within the clipped portrait frame",
+        "fold_requirement": "portrait, planner promise, name and credentials, role explanation, credential caution, and primary CTA must appear together",
+        "layout_authority": "the CSS dossier panel and internal split set section geometry; neither the background plate nor portrait intrinsic ratio may determine panel height or shift the narrative below the fold"
+      },
+      "focal_point": {
+        "what": "the planner portrait paired with the large shared-strategy promise",
+        "where": "portrait in the left third of the dossier and headline beginning in the upper-right half",
+        "region_ids": [2, 4, 6]
+      },
+      "dominance": "the planner promise is the strongest typographic object, the portrait is the strongest human anchor, and the large dossier sheet unifies them as one accountable relationship",
+      "eye_path": [
+        "meet-the-planner eyebrow",
+        "shared-strategy headline",
+        "planner portrait",
+        "name and approved credentials",
+        "role explanation and credential caution",
+        "Meet Michael CTA"
+      ],
+      "overlaps": [
+        "the central clipped dossier sheet floats above a photographed clinical desk and layered paper backing",
+        "the portrait frame sits inside the dossier but overlaps the photographic context visually through shared vertical alignment",
+        "the credential plaque attaches beneath the portrait as its identity base",
+        "the CTA anchors the lower-right of the live content field"
+      ],
+      "quiet_zones": [
+        "the white dossier field around the headline and biography creates authority and legibility over the busier desk scene",
+        "space between portrait and narrative keeps the two anchors from competing",
+        "clear area around the credential caution distinguishes compliance from the main biography"
+      ],
+      "tension": "formal clipped-paper geometry and calibrated marks impose order on an organic medical desk scene; the portrait and headline face each other across the dossier split",
+      "image_copy_relation": "the medical flat lay supplies professional context while the live dossier copy identifies one accountable coordinator; the portrait is embedded in the same document rather than presented as a detached profile card",
+      "assembly": {
+        "profile": "image-canvas",
+        "score": 2,
+        "signals": [
+          "clinical desk photography woven through the exposed surface",
+          "large layered dossier floating above the photo canvas",
+          "portrait and credential plaque form a nested identity assembly"
+        ],
+        "surface": "full-bleed clinical desk raster plate with CSS paper-shadow treatment and an overlaid clipped off-white dossier field",
+        "layer_stack": [
+          "clinical desk image canvas",
+          "CSS layered paper backing and clipped dossier panel",
+          "planner portrait raster in a dedicated inset",
+          "live credential plaque",
+          "live planner headline, biography, caution note, and CTA",
+          "responsive SVG calibration marks and fine rules"
+        ],
+        "connector_relationships": [
+          "the credential plaque remains directly attached to the portrait identity",
+          "the dotted rule separates the promise from planner name and biography without disconnecting them"
+        ],
+        "seam_contract": [
+          "clinical desk photography remains visible along the left and lower perimeter",
+          "the dossier panel stays visibly above its paper backing",
+          "portrait and credential plaque remain inside the dossier system rather than becoming independent cards"
+        ],
+        "responsive_contract": "use a compact contextual photo band or controlled background crop, then stack portrait identity and narrative within one dossier surface; preserve the portrait-credential attachment and never scale the entire document scene as a single image"
+      },
+      "content_groups": [
+        "portrait + approved credential plaque",
+        "meet-the-planner eyebrow + shared-strategy promise",
+        "planner name + credentials + biography",
+        "credential caution note",
+        "Meet Michael CTA"
+      ],
+      "space_roles": {
+        "internal_grouping": "credentials remain closest to the portrait and planner name; biography sits directly beneath the name; caution note stays adjacent to the claims it qualifies",
+        "quiet_space": "white dossier margins isolate the human relationship from photographic desk texture",
+        "section_transition": "exposed desk canvas and perimeter rules own entry and exit spacing; do not add empty rows inside the planner identity group"
+      },
+      "viewport_intent": {
+        "desktop_composition": "native 1536x864 section frame at DPR 1",
+        "must_be_simultaneously_visible": [
+          "complete portrait",
+          "shared-strategy headline",
+          "planner name and approved credentials",
+          "Meet Michael CTA"
+        ],
+        "may_continue_below_fold": [
+          "extended biography or fiduciary explanation"
+        ],
+        "crop_invariants": [
+          "planner face and upper torso remain complete",
+          "recognizable clinical paperwork and instrument context remains at the left edge",
+          "dossier corners and layered-paper depth remain visible"
+        ]
+      },
+      "invariants": [
+        "portrait and promise remain dual anchors within one dossier",
+        "clinical desk imagery remains an exposed full-surface context rather than a separate thumbnail",
+        "credential plaque remains attached beneath the portrait",
+        "dossier layering and clipped silhouette remain visible",
+        "credential caution stays visually subordinate but unmistakably associated"
+      ],
+      "free": [
+        "exact exposed amount of desk photography",
+        "paper-shadow intensity and calibration-mark density",
+        "precise internal column ratio",
+        "mobile stacking provided portrait identity, headline, and shared dossier ownership remain"
+      ]
+    },
+    {
+      "frame": "08-next-decision",
+      "viewport_context": {
+        "reference_kind": "section-frame",
+        "bitmap_dimensions": { "width": 1536, "height": 864 },
+        "primary_css_viewport": { "width": 1536, "height": 864 },
+        "device_pixel_ratio": 1
+      },
+      "slot_contract": {
+        "container": "centered decision heading above a two-branch choice field with supporting outcome notes and a three-part footer",
+        "width_share": "the two choice cards each occupy a substantial side of the middle field with a deliberate central gap beneath the branching node",
+        "target_aspect_ratio": "two wide landscape cards, with the strategy-call card intentionally taller than the guide card",
+        "intended_crop": "no dominant raster crop; preserve complete cards, branch lines, outcome note, customer-input notice, and footer divisions",
+        "fold_requirement": "heading, both choice cards, both qualifying notes, and their actions must read together before the footer",
+        "layout_authority": "the CSS decision grid and assigned unequal card depths establish geometry; copy length, button size, or ornament SVGs must not force equal heights or control the section row"
+      },
+      "focal_point": {
+        "what": "the centered next-step decision branching into two calibrated choice cards",
+        "where": "headline in the upper center, one branch node beneath it, and two cards balanced across the middle",
+        "region_ids": [1, 2, 3]
+      },
+      "dominance": "the large centered heading dominates first; the two choice cards then share attention, with the taller strategy-call path carrying slightly more weight than the guide path",
+      "eye_path": [
+        "centered next-step headline",
+        "calibrated-paths subhead",
+        "gold branch node and dotted fork",
+        "strategy-call card at left",
+        "guide card at right",
+        "outcome and customer-input notes",
+        "contact, brand, and educational footer"
+      ],
+      "overlaps": [
+        "the dotted decision fork descends from the heading and lands on both card tops",
+        "each lower note remains vertically tethered to its corresponding card",
+        "technical side rulers and footer calibration line frame the choice field without entering card content"
+      ],
+      "quiet_zones": [
+        "the dark field around the heading and fork keeps the choice architecture legible",
+        "the central gap between cards belongs to the fork and must not be filled with extra copy",
+        "space above the footer separates decision support from legal and contact information"
+      ],
+      "tension": "near symmetry communicates two legitimate paths, while unequal card depth and different lower notes preserve hierarchy and honesty about the paths' different commitments",
+      "image_copy_relation": "there is no dominant image; the responsive fork is the graphic explanation of how the central decision relates to the two live action cards",
+      "assembly": {
+        "profile": "anchored-art",
+        "score": 1,
+        "signals": [
+          "responsive decision-fork connector is central to the composition"
+        ],
+        "surface": "CSS deep-navy field with white choice cards and restrained gold-white calibration marks",
+        "layer_stack": [
+          "CSS navy section surface",
+          "responsive SVG decision fork, nodes, side rulers, and footer calibration line",
+          "live centered heading and subhead",
+          "live unequal-height choice cards and buttons",
+          "live outcome and customer-input notes",
+          "live three-part footer"
+        ],
+        "connector_relationships": [
+          "one central decision node branches explicitly to the strategy-call card and the guide card",
+          "the left outcome note remains tethered to the strategy-call path",
+          "the right customer-input notice remains tethered to the guide path"
+        ],
+        "seam_contract": [
+          "the footer is separated by one continuous calibrated rule",
+          "choice cards float in the navy field without touching the footer",
+          "the decision fork stays above the cards and lands at their upper edges"
+        ],
+        "responsive_contract": "stack the two paths beneath one central node and redraw the fork as a vertical branching or sequential connector; keep strategy-call prominence, attach each note to its own card, and never preserve desktop symmetry by shrinking cards"
+      },
+      "content_groups": [
+        "decision headline + calibrated-paths subhead + branch node",
+        "strategy-call title + explanation + no-pitch assurance + CTA + outcome note",
+        "guide title + explanation + request CTA + customer-input notice",
+        "email contact + powered-by identity + educational disclaimer"
+      ],
+      "space_roles": {
+        "internal_grouping": "each action button stays inside its card; assurance copy stays with the strategy-call path; each lower note stays closest to the card it qualifies",
+        "quiet_space": "navy gaps around the fork and between card and footer make the two-path decision calm rather than crowded",
+        "section_transition": "top breathing space and the calibrated footer rule own entry and exit rhythm; do not split a card from its qualifying note with arbitrary section spacing"
+      },
+      "viewport_intent": {
+        "desktop_composition": "native 1536x864 section frame at DPR 1",
+        "must_be_simultaneously_visible": [
+          "decision headline",
+          "both complete choice cards",
+          "decision fork",
+          "outcome note",
+          "customer-input notice"
+        ],
+        "may_continue_below_fold": [
+          "footer legal and contact details if the actual browser chrome reduces available height"
+        ],
+        "crop_invariants": [
+          "both branch endpoints remain attached to their intended cards",
+          "both primary actions remain fully visible",
+          "qualifying notes remain visibly associated with their own paths"
+        ]
+      },
+      "invariants": [
+        "one centered decision branches to exactly two paths",
+        "strategy-call path remains slightly more dominant than guide path",
+        "central gap stays open for the branch logic",
+        "each qualifier remains attached to the correct card",
+        "footer remains a separate calibrated support band"
+      ],
+      "free": [
+        "exact card width and vertical offset",
+        "branch curvature and ruler tick density",
+        "footer column wrapping",
+        "mobile stacking order provided the two paths, hierarchy, and qualifier associations remain unambiguous"
+      ]
+    }
+  ]
+}

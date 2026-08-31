@@ -1,0 +1,182 @@
+{
+  "version": 1,
+  "tokens": {
+    "ink": {
+      "hex": "#0B1F3A",
+      "source": "brand-locked",
+      "role": "Primary typography, compact evidence panels, calibration rails, and the required closing navy band.",
+      "rationale": "The brand navy remains authoritative, but Direction B uses it with restraint until the final close so white and mist can dominate the atlas system."
+    },
+    "action": {
+      "hex": "#C8A65A",
+      "source": "brand-locked",
+      "role": "Tiny decision points, selected-path dots, rail ticks, CTA arrows, and focus accents.",
+      "rationale": "Gold is reduced to calibration and action signals, preventing a luxury/casino read and avoiding Direction A's sweeping route line."
+    },
+    "mist": {
+      "hex": "#DCE8F2",
+      "source": "brand-locked",
+      "role": "Clinical atlas fields, contact-sheet backgrounds, blueprint plates, and quiet register panels.",
+      "rationale": "Mist blue is a dominant B material that makes the system bright, medical, and analytical."
+    },
+    "surface": {
+      "hex": "#F6F2E8",
+      "source": "brand-locked",
+      "role": "Nearly absent warm transition material behind the coordination/problem and planner sections.",
+      "rationale": "Ivory is intentionally minimized so B does not collapse back into Direction A's warm editorial paper system."
+    },
+    "white": {
+      "hex": "#FFFFFF",
+      "source": "brand-locked",
+      "role": "Dominant page field, caption plates, clipped dossiers, pathway plates, and high-contrast type on navy.",
+      "rationale": "White is the main atlas ground and creates the clinical clarity requested for Direction B."
+    },
+    "charcoal": {
+      "hex": "#38373E",
+      "source": "brand-locked",
+      "role": "Secondary explanatory copy and compliance notes on white, mist, and ivory surfaces.",
+      "rationale": "Charcoal softens long-form reading without introducing an unapproved black or gray palette."
+    }
+  },
+  "distribution": {
+    "ink": 20,
+    "action": 2,
+    "mist": 27,
+    "surface": 5,
+    "white": 38,
+    "charcoal": 8
+  },
+  "relationships": [
+    {
+      "foreground": "ink",
+      "background": "white",
+      "context": "Inter headlines and labels on the dominant atlas field",
+      "intent": "Large declarative type remains highly legible on the bright B ground.",
+      "min_contrast": 7
+    },
+    {
+      "foreground": "ink",
+      "background": "mist",
+      "context": "Contact-sheet captions, blueprint plates, and register panels",
+      "intent": "Clinical mist panels stay readable without darkening the page into A's navy field.",
+      "min_contrast": 7
+    },
+    {
+      "foreground": "white",
+      "background": "ink",
+      "context": "Required closing navy band and compact evidence panels",
+      "intent": "White type on navy supports the close and evidence panels with strong contrast.",
+      "min_contrast": 7
+    },
+    {
+      "foreground": "charcoal",
+      "background": "white",
+      "context": "Body copy, summaries, and compliance notes",
+      "intent": "Secondary text remains readable while visually subordinate to navy headings.",
+      "min_contrast": 7
+    },
+    {
+      "foreground": "charcoal",
+      "background": "mist",
+      "context": "Long pathway and register summaries on clinical panels",
+      "intent": "Body copy remains accessible on B's clinical mist surfaces.",
+      "min_contrast": 7
+    },
+    {
+      "foreground": "ink",
+      "background": "action",
+      "context": "Rare gold action surfaces or focus accents with text",
+      "intent": "When gold appears as a small action surface, navy labels remain accessible.",
+      "min_contrast": 7
+    },
+    {
+      "foreground": "ink",
+      "background": "surface",
+      "context": "Warm transition sections that still use B's Inter-led hierarchy",
+      "intent": "The minimized ivory surface remains readable and brand-compliant.",
+      "min_contrast": 7
+    }
+  ],
+  "image_evidence": [
+    {
+      "asset": "refs/01-one-plan.png",
+      "dominant_materials": ["white atlas field", "mist contour texture", "compact navy evidence panel", "tiny gold calibration points"],
+      "influence": "Establishes B's bright hero while keeping navy as compact evidence and framing instead of A's full-bleed cinematic field."
+    },
+    {
+      "asset": "refs/02-career-signal.png",
+      "dominant_materials": ["white/mist strip", "navy tick rail", "tiny gold career points"],
+      "influence": "Shows career movement through unlabeled calibration marks rather than a gold timeline."
+    },
+    {
+      "asset": "refs/03-separate-rooms.png",
+      "dominant_materials": ["white topographic islands", "mist contour field", "navy labels", "small gold connectors"],
+      "influence": "Uses bright topographic grammar over the required warm transition instead of literal ivory room plans."
+    },
+    {
+      "asset": "refs/04-blueprint-rounds.png",
+      "dominant_materials": ["white/mist blueprint rings", "navy process typography", "gold phase intersections"],
+      "influence": "Demonstrates B's analytical process instrument and keeps gold as points, not a route line."
+    },
+    {
+      "asset": "refs/05-five-decisions.png",
+      "dominant_materials": ["white negative space", "mist vertical register fields", "navy Inter type", "gold ticks"],
+      "influence": "Proves the quiet section can be B-bright without using A's horizontal ledger table."
+    },
+    {
+      "asset": "refs/06-white-coat-paths.png",
+      "dominant_materials": ["mist field", "white caption plates", "cool documentary contact crops", "navy labels"],
+      "influence": "Defines the clinical contact-sheet imagery system and diagonal index rail."
+    },
+    {
+      "asset": "refs/07-accountable-planner.png",
+      "dominant_materials": ["white clipped dossier", "mist backing plate", "compact navy credential panel", "gold registration marks"],
+      "influence": "Keeps accountability quiet and precise without A's warm portrait essay."
+    },
+    {
+      "asset": "refs/08-next-decision.png",
+      "dominant_materials": ["full navy closing band", "white/mist decision plates", "tiny gold branching points", "white footer rail text"],
+      "influence": "Uses the required navy close while preserving B's atlas plates and dotted decision gateway."
+    }
+  ],
+  "states": {
+    "action_default": "ink",
+    "action_hover": "action",
+    "focus": "action"
+  },
+  "proof": {
+    "desktop": "palette-proofs/palette-1440.png",
+    "mobile": "palette-proofs/palette-390.png",
+    "context_checks": [
+      "All six exact brand colors are swatched with B-specific roles.",
+      "Distribution totals 100 and visibly prioritizes white and mist.",
+      "All eight final B frames appear as image-evidence thumbnails.",
+      "Gold appears as points, ticks, and action accents rather than broad decorative fields.",
+      "The final navy band is represented without turning earlier sections into A-style dark cinema."
+    ],
+    "verdict": "APPROVED"
+  },
+  "brand_constraints": [
+    "Use exact navy #0B1F3A, gold #C8A65A, mist #DCE8F2, ivory #F6F2E8, white #FFFFFF, and charcoal #38373E.",
+    "White and mist must dominate Direction B's page system.",
+    "Ivory remains nearly absent and never becomes the dominant editorial paper material.",
+    "Gold is limited to tiny decision points, selected-path markers, rail ticks, CTA arrows, and focus accents.",
+    "Avoid purple-blue SaaS gradients, invented accent hues, casino gold styling, and generic finance imagery."
+  ],
+  "frame_distribution_notes": [
+    {"frame": "01-one-plan", "dominant_tokens": ["white", "mist"], "navy_role": "compact evidence panel and framing"},
+    {"frame": "02-career-signal", "dominant_tokens": ["white", "mist"], "navy_role": "tick rail and type"},
+    {"frame": "03-separate-rooms", "dominant_tokens": ["white", "mist", "surface"], "navy_role": "role labels and outlines"},
+    {"frame": "04-blueprint-rounds", "dominant_tokens": ["white", "mist"], "navy_role": "instrument rings and process labels"},
+    {"frame": "05-five-decisions", "dominant_tokens": ["white", "mist"], "navy_role": "discipline labels and register ticks"},
+    {"frame": "06-white-coat-paths", "dominant_tokens": ["mist", "white"], "navy_role": "caption typography and CTA"},
+    {"frame": "07-accountable-planner", "dominant_tokens": ["white", "mist", "surface"], "navy_role": "credential panel and headline"},
+    {"frame": "08-next-decision", "dominant_tokens": ["ink", "white"], "navy_role": "required closing band"}
+  ],
+  "art_director_rationale": "Direction B turns the brand palette into a bright clinical atlas: white and mist carry orientation, navy supplies compact authority and the mandated closing band, gold is reduced to calibration, ivory recedes, and charcoal keeps compliance copy readable.",
+  "builder_freedom": [
+    "The builder may vary exact section token proportions responsively if the whole page remains white/mist dominant before the required navy close.",
+    "The builder may increase or reduce tick density, but gold must stay small and structural.",
+    "The builder may use navy for CTA fills and compact panels, but not as a large cinematic field except in the final section and thin opening/transition bands."
+  ]
+}

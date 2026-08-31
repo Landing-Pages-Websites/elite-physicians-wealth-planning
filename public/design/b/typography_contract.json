@@ -1,0 +1,229 @@
+{
+  "version": 1,
+  "families": {
+    "display": {
+      "name": "Cormorant Garamond",
+      "locator": "brand-specified family; local proof files available in ../fonts/CormorantGaramond-400.ttf, ../fonts/CormorantGaramond-500.ttf, and ../fonts/CormorantGaramond-600.ttf",
+      "source": "brand-file",
+      "fallbacks": ["Georgia", "Times New Roman", "serif"],
+      "rationale": "The brand display family is retained but deliberately reduced for Direction B: it appears as compressed editorial interrupts and pull-lines rather than the main section headline voice."
+    },
+    "body": {
+      "name": "Inter",
+      "locator": "brand-specified family; local proof files available in ../fonts/Inter-400.ttf, ../fonts/Inter-500.ttf, ../fonts/Inter-600.ttf, and ../fonts/Inter-700.ttf",
+      "source": "brand-file",
+      "fallbacks": ["Arial", "Helvetica", "sans-serif"],
+      "rationale": "The brand body family becomes Direction B's primary display, index, CTA, and navigation family so the page reads as a clinical decision atlas rather than an editorial consult ledger."
+    }
+  },
+  "roles": {
+    "h1": {
+      "family": "body",
+      "weight": 700,
+      "rationale": "Large Inter headlines create the declarative atlas voice and visibly invert Direction A's Cormorant-led hierarchy."
+    },
+    "h2": {
+      "family": "body",
+      "weight": 700,
+      "rationale": "Section headlines stay analytical and direct, supporting fast physician self-orientation."
+    },
+    "body": {
+      "family": "body",
+      "weight": 400,
+      "rationale": "Explanatory copy needs crisp clinical readability and compliance clarity."
+    },
+    "utility": {
+      "family": "body",
+      "weight": 600,
+      "rationale": "Indices, rail labels, captions, proof labels, and professional-role annotations use Inter for precise scanning."
+    },
+    "cta": {
+      "family": "body",
+      "weight": 700,
+      "rationale": "CTA labels are decisive without urgency and remain the only elements that read as actionable controls."
+    },
+    "editorial_interrupt": {
+      "family": "display",
+      "weight": 500,
+      "rationale": "Cormorant Garamond is reserved for compact pull-lines and brief editorial notes, never the dominant B headline structure."
+    }
+  },
+  "frames": [
+    {
+      "frame": "01-one-plan",
+      "type_scale_relation": "Largest Inter headline on the page; compact Cormorant interrupt only near the evidence panel, with CTAs and proof line in Inter.",
+      "line_break_invariants": [
+        {"role": "headline", "desktop_lines": 3, "mobile_lines": 4},
+        {"role": "body", "desktop_lines": 4, "mobile_lines": 6},
+        {"role": "cta_cluster", "desktop_lines": 1, "mobile_lines": 2}
+      ],
+      "ornaments": [
+        {
+          "id": "hero-calibration-rail",
+          "anchor": "top and bottom navy framing with lower-right decision ticks beside the hero atlas plates",
+          "color": "#C8A65A",
+          "thickness_px": 1.5,
+          "width": {"unit": "container_ratio", "value": 0.78},
+          "responsive": "Reduce to short edge ticks and one lower-right decision point on mobile while preserving CTA hierarchy.",
+          "rationale": "Introduces coordination as atlas calibration rather than a cinematic flowing line."
+        }
+      ]
+    },
+    {
+      "frame": "02-career-signal",
+      "type_scale_relation": "Short strip uses medium Inter headline and compact signal labels; no Cormorant headline or numbered station labels.",
+      "line_break_invariants": [
+        {"role": "identity_line", "desktop_lines": 2, "mobile_lines": 2},
+        {"role": "career_signals", "desktop_lines": 2, "mobile_lines": 8}
+      ],
+      "ornaments": [
+        {
+          "id": "career-coordinate-ticks",
+          "anchor": "sloped tick rail running through four staggered career signals and exiting at lower center",
+          "color": "#C8A65A",
+          "thickness_px": 1.5,
+          "width": {"unit": "container_ratio", "value": 0.86},
+          "responsive": "Stack career signals vertically with unlabeled ticks and tiny gold points; do not introduce decorative numbers.",
+          "rationale": "Shows career movement as calibration, not a product timeline."
+        }
+      ]
+    },
+    {
+      "frame": "03-separate-rooms",
+      "type_scale_relation": "Large Inter explanatory headline balances compact Inter role labels; Cormorant is absent or limited to a small orientation interrupt.",
+      "line_break_invariants": [
+        {"role": "headline", "desktop_lines": 4, "mobile_lines": 5},
+        {"role": "body", "desktop_lines": 7, "mobile_lines": 8},
+        {"role": "role_labels", "desktop_lines": 2, "mobile_lines": 6}
+      ],
+      "ornaments": [
+        {
+          "id": "topographic-role-constellation",
+          "anchor": "central Your priorities island with five irregular role islands and bottom-left rail exit",
+          "color": "#C8A65A",
+          "thickness_px": 1.5,
+          "width": {"unit": "container_ratio", "value": 0.72},
+          "responsive": "Role islands stack around the priorities island with dashed path hints; boundary note remains visible.",
+          "rationale": "Explains fragmentation without literal rooms or credential claims."
+        }
+      ]
+    },
+    {
+      "frame": "04-blueprint-rounds",
+      "type_scale_relation": "Inter headline and phase labels support a radial process instrument; the only large numerals are the functional 01-06 phase numbers.",
+      "line_break_invariants": [
+        {"role": "headline", "desktop_lines": 3, "mobile_lines": 4},
+        {"role": "phase_names", "desktop_lines": 1, "mobile_lines": 6},
+        {"role": "phase_summaries", "desktop_lines": 3, "mobile_lines": 12}
+      ],
+      "ornaments": [
+        {
+          "id": "radial-blueprint-instrument",
+          "anchor": "six clipped phase plates orbiting nested rings, entering from 03 and exiting lower right",
+          "color": "#C8A65A",
+          "thickness_px": 1.5,
+          "width": {"unit": "container_ratio", "value": 0.82},
+          "responsive": "Convert the radial instrument to a compact vertical process while preserving only the six functional phase numbers.",
+          "rationale": "Makes the Wealth Blueprint memorable without using A's horizontal journey line."
+        }
+      ]
+    },
+    {
+      "frame": "05-five-decisions",
+      "type_scale_relation": "Quiet Inter headline and discipline labels sit inside a vertical register with smaller body summaries and one tiny Cormorant pull-line.",
+      "line_break_invariants": [
+        {"role": "headline", "desktop_lines": 5, "mobile_lines": 5},
+        {"role": "discipline_names", "desktop_lines": 2, "mobile_lines": 5},
+        {"role": "boundary_note", "desktop_lines": 5, "mobile_lines": 5}
+      ],
+      "ornaments": [
+        {
+          "id": "vertical-discipline-register",
+          "anchor": "left-edge tick system and stepped mist columns exiting at lower left",
+          "color": "#C8A65A",
+          "thickness_px": 1.5,
+          "width": {"unit": "container_ratio", "value": 0.64},
+          "responsive": "Stack the discipline register as stepped blocks with no decorative numbers or icons.",
+          "rationale": "Preserves interdependence while avoiding a horizontal ledger table."
+        }
+      ]
+    },
+    {
+      "frame": "06-white-coat-paths",
+      "type_scale_relation": "Inter headline and pathway labels pair with caption-like Inter summaries in a hard-edged contact sheet; Cormorant is not needed.",
+      "line_break_invariants": [
+        {"role": "headline", "desktop_lines": 4, "mobile_lines": 5},
+        {"role": "body", "desktop_lines": 4, "mobile_lines": 6},
+        {"role": "pathway_labels", "desktop_lines": 2, "mobile_lines": 5}
+      ],
+      "ornaments": [
+        {
+          "id": "diagonal-contact-sheet-index",
+          "anchor": "upper-left rail through five hard-edged medical crops and out lower right",
+          "color": "#C8A65A",
+          "thickness_px": 1.5,
+          "width": {"unit": "container_ratio", "value": 0.9},
+          "responsive": "Keep the contact-sheet captions attached to crops and use the rail as an index, not a button group.",
+          "rationale": "Lets visitors locate their medical context through evidence panels rather than keyword-swapped cards."
+        }
+      ]
+    },
+    {
+      "frame": "07-accountable-planner",
+      "type_scale_relation": "Medium Inter headline, Inter credential strip, and precise Inter body copy sit in a clipped dossier; Cormorant does not drive the section.",
+      "line_break_invariants": [
+        {"role": "headline", "desktop_lines": 3, "mobile_lines": 4},
+        {"role": "name_credentials", "desktop_lines": 1, "mobile_lines": 2},
+        {"role": "credential_note", "desktop_lines": 2, "mobile_lines": 4}
+      ],
+      "ornaments": [
+        {
+          "id": "planner-dossier-registration",
+          "anchor": "dossier registration marks around neutral portrait slot and credential evidence panel",
+          "color": "#C8A65A",
+          "thickness_px": 1.5,
+          "width": {"unit": "container_ratio", "value": 0.7},
+          "responsive": "Portrait slot remains neutral and credentials stay as text, never badges or seals.",
+          "rationale": "Connects accountability to the verified planner without personality-brand spectacle."
+        }
+      ]
+    },
+    {
+      "frame": "08-next-decision",
+      "type_scale_relation": "Large Inter closing headline and Inter decision labels sit on navy; small Cormorant interrupt is limited to the calibration line under the headline.",
+      "line_break_invariants": [
+        {"role": "headline", "desktop_lines": 2, "mobile_lines": 3},
+        {"role": "strategy_path", "desktop_lines": 5, "mobile_lines": 7},
+        {"role": "guide_path", "desktop_lines": 6, "mobile_lines": 8}
+      ],
+      "ornaments": [
+        {
+          "id": "branching-decision-gateway",
+          "anchor": "upper-center decision point splitting into two dotted calibrated paths and footer rail",
+          "color": "#C8A65A",
+          "thickness_px": 1.5,
+          "width": {"unit": "container_ratio", "value": 0.66},
+          "responsive": "Stack the two decision plates with the guide availability warning directly under the guide path.",
+          "rationale": "Closes with two honest next actions without A's sweeping split line."
+        }
+      ]
+    }
+  ],
+  "proof": {
+    "desktop": "type-proofs/typography-1440.png",
+    "mobile": "type-proofs/typography-390.png",
+    "context_checks": [
+      "Inter carries the large hero, section, CTA, and atlas index roles.",
+      "Cormorant Garamond is visible only as restrained editorial interrupts.",
+      "All eight frames are represented in the proof strip.",
+      "No substitute font families are approved."
+    ],
+    "verdict": "APPROVED"
+  },
+  "art_director_rationale": "Direction B uses the same brand families as Direction A but reverses their hierarchy: Inter becomes the decisive clinical atlas voice, while Cormorant Garamond is held back for small moments of warmth and editorial restraint.",
+  "builder_freedom": [
+    "The builder may tune exact font sizes and clamp values if Inter remains dominant and Cormorant remains sparse.",
+    "The builder may simplify ornament density on mobile while preserving rails, ticks, and decision points.",
+    "The builder must keep the functional phase numbers only in the Blueprint section and avoid decorative folio numbering elsewhere."
+  ]
+}

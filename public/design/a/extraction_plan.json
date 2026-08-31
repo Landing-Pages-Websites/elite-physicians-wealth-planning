@@ -1,0 +1,738 @@
+{
+  "direction": "a",
+  "frames": [
+    {
+      "frame": "01-one-plan",
+      "bg": "#041424",
+      "regions": [
+        {
+          "id": 1,
+          "box": [67, 48, 1523, 751],
+          "verdict": "inpaint",
+          "what": "moody physician consultation-office photography behind the live hero composition",
+          "asset_file": "elements/01-one-plan-office-background.png",
+          "fidelity_drivers": ["low-key photographic lighting", "specific walnut desk and clinical props", "navy tonal depth", "natural reflections and lens falloff"],
+          "section_owner": "01-one-plan hero background layer",
+          "narrative_job": "Establishes physician-specific authority and a private consultation atmosphere without generic finance symbolism.",
+          "inpaint_scope": "Repair only pixels hidden by live website copy and route strokes; exclude the neutral Michael Epps placeholder and do not invent or generate a person.",
+          "excluded_from_asset": {
+            "verdict": "code",
+            "what": "neutral Michael Epps portrait placeholder",
+            "build_note": "Use a bordered surface-token portrait slot with a build-time client-photo img, never extract or generate the placeholder figure."
+          },
+          "group_with_region_ids": [6],
+          "presentation": {
+            "mode": "full-bleed",
+            "alpha_required": false,
+            "intended_background": "ink #0B1F3A",
+            "crop_contract": "Keep the consultation desk, lamp, chair, stethoscope, notebook, and dark shelving visible; reserve the right portrait area for the live client-photo slot.",
+            "minimum_visible_fraction": "At least 75% of the desk still life and the complete lamp remain visible."
+          }
+        },
+        {
+          "id": 2,
+          "box": [69, 208, 418, 436],
+          "verdict": "code",
+          "what": "first half of the four-line hero headline",
+          "build_note": "Render live h1 with typography role h1, Cormorant Garamond 600, white token, preserving the four desktop lines."
+        },
+        {
+          "id": 3,
+          "box": [69, 41, 573, 103],
+          "verdict": "code",
+          "what": "brand wordmark and powered-by utility line",
+          "build_note": "Set live text using display and utility roles, white and action tokens, with precise tracking and trademark superscript."
+        },
+        {
+          "id": 4,
+          "box": [370, 208, 695, 353],
+          "verdict": "code",
+          "what": "middle fragment of the hero headline",
+          "build_note": "Continue the same live h1 element using Cormorant Garamond 600 and contract-defined desktop line breaks."
+        },
+        {
+          "id": 5,
+          "box": [358, 142, 843, 181],
+          "verdict": "code",
+          "what": "physician-focused italic identity line",
+          "build_note": "Render live Inter body text in italic, white at reduced opacity, aligned above ornament hero-consult-route."
+        },
+        {
+          "id": 6,
+          "box": [633, 229, 825, 408],
+          "verdict": "inpaint",
+          "what": "desk-lamp fragment belonging to the continuous hero office photograph",
+          "asset_file": "elements/01-one-plan-office-background.png",
+          "fidelity_drivers": ["warm focused lamp glow", "metal shade reflections", "deep photographic shadow", "continuity with the office scene"],
+          "section_owner": "01-one-plan hero background layer",
+          "narrative_job": "Adds a warm consultation focal point inside the otherwise restrained navy office scene.",
+          "inpaint_scope": "Treat as part of region 1 and repair only live headline or route occlusions; do not make a separate lamp cutout.",
+          "group_with_region_ids": [1],
+          "presentation": {
+            "mode": "full-bleed",
+            "alpha_required": false,
+            "intended_background": "ink #0B1F3A",
+            "crop_contract": "Preserve the lamp in its desk context and never isolate it from the continuous office photograph.",
+            "minimum_visible_fraction": "The full illuminated shade and supporting arm remain visible."
+          }
+        },
+        {
+          "id": 7,
+          "box": [216, 378, 400, 436],
+          "verdict": "code",
+          "what": "third-line hero headline fragment",
+          "build_note": "Keep this text inside the single live h1 with Cormorant Garamond 600 and white token styling."
+        },
+        {
+          "id": 8,
+          "box": [432, 378, 619, 436],
+          "verdict": "code",
+          "what": "final hero headline fragment",
+          "build_note": "Keep this phrase inside the single live h1 and preserve typography-contract line endings without raster text."
+        },
+        {
+          "id": 9,
+          "box": [477, 788, 776, 822],
+          "verdict": "code",
+          "what": "educational-information disclaimer",
+          "build_note": "Render live Inter body copy at compact size with white token opacity and a CSS border-left divider."
+        },
+        {
+          "id": 10,
+          "box": [69, 787, 416, 818],
+          "verdict": "code",
+          "what": "powered-by footer lockup",
+          "build_note": "Use live utility text with action token and a simple inline SVG compass made from stroked circles and rays."
+        },
+        {
+          "id": 11,
+          "box": [67, 699, 283, 733],
+          "verdict": "code",
+          "what": "coordinated-strategy proof item",
+          "build_note": "Build an inline flex proof item with Inter utility text and a simple action-stroked shield SVG icon."
+        },
+        {
+          "id": 12,
+          "box": [346, 701, 568, 733],
+          "verdict": "code",
+          "what": "physician-focused proof item",
+          "build_note": "Build an inline flex proof item with Inter utility text and a simple action-stroked stethoscope SVG icon."
+        }
+      ]
+    },
+    {
+      "frame": "02-career-signal",
+      "bg": "#041434",
+      "regions": [
+        {
+          "id": 1,
+          "box": [97, 78, 543, 171],
+          "verdict": "code",
+          "what": "two-line career-stage identity headline",
+          "build_note": "Render live h2 in Cormorant Garamond 600, mixing action and white spans while preserving two desktop lines."
+        },
+        {
+          "id": 2,
+          "box": [126, 252, 369, 359],
+          "verdict": "code",
+          "what": "resident-to-established career station",
+          "build_note": "Use a live two-line station label with display typography and an action-token first line under ornament career-signal-route."
+        },
+        {
+          "id": 3,
+          "box": [1121, 271, 1398, 358],
+          "verdict": "code",
+          "what": "ongoing-strategy career station",
+          "build_note": "Use a live two-line station label with centered Cormorant typography and contract-preserved wrapping beside the gold route."
+        },
+        {
+          "id": 4,
+          "box": [820, 271, 1042, 350],
+          "verdict": "code",
+          "what": "peak-earning-to-retirement career station",
+          "build_note": "Render live display text centered below a CSS route station, using action then white token line styling."
+        },
+        {
+          "id": 5,
+          "box": [495, 271, 669, 359],
+          "verdict": "code",
+          "what": "employment-to-ownership career station",
+          "build_note": "Render live display text centered below a CSS route station with the approved two-line station treatment."
+        },
+        {
+          "id": 6,
+          "box": [12, 225, 74, 305],
+          "verdict": "inpaint",
+          "what": "left-edge architectural fragment of the continuous dark medical-office background",
+          "asset_file": "elements/02-career-signal-office-background.png",
+          "fidelity_drivers": ["documentary office architecture", "dark navy photographic veil", "faint corridor depth", "continuous consultation-room context"],
+          "section_owner": "02-career-signal background layer",
+          "narrative_job": "Carries the medical-office world through the career-stage bridge without competing with the route diagram.",
+          "inpaint_scope": "Create one copy-stripped full-bleed office plate from the complete frame, repairing only route and live-copy occlusions.",
+          "presentation": {
+            "mode": "full-bleed",
+            "alpha_required": false,
+            "intended_background": "ink #0B1F3A",
+            "crop_contract": "Keep the left stairs, central glass partitions, and right waiting-area furniture as a quiet panoramic context.",
+            "minimum_visible_fraction": "Retain all three architectural depth zones across desktop; mobile may favor the central corridor."
+          }
+        }
+      ]
+    },
+    {
+      "frame": "03-separate-rooms",
+      "bg": "#FCFCF4",
+      "regions": [
+        {
+          "id": 1,
+          "box": [57, 225, 794, 542],
+          "verdict": "inpaint",
+          "what": "TPA room-plan illustration entangled with live explanatory copy",
+          "asset_file": "elements/03-separate-rooms-tpa-plan.png",
+          "fidelity_drivers": ["specific hand-drawn architectural contours", "furniture and plant details", "warm paper shading", "irregular room footprint"],
+          "section_owner": "03-separate-rooms TPA room node",
+          "narrative_job": "Makes the fragmented professional-room metaphor tangible while showing a distinct TPA work context.",
+          "inpaint_scope": "Extract only the lower-right TPA floor-plan artwork and repair gold route or live label occlusions; keep the left headline as HTML.",
+          "presentation": {
+            "mode": "transparent-cutout",
+            "alpha_required": true,
+            "intended_background": "surface #F6F2E8",
+            "crop_contract": "Preserve the entire irregular TPA room perimeter, furniture, plant, and door; exclude all page headline pixels.",
+            "minimum_visible_fraction": "Complete room perimeter and at least 90% of interior furniture details."
+          }
+        },
+        {
+          "id": 2,
+          "box": [58, 532, 449, 708],
+          "verdict": "code",
+          "what": "coordination-gap explanatory body copy",
+          "build_note": "Render live Inter body copy with charcoal token, controlled measure, and typography role body line-height."
+        },
+        {
+          "id": 3,
+          "box": [670, 559, 1039, 819],
+          "verdict": "inpaint",
+          "what": "financial-advisor room-plan illustration",
+          "asset_file": "elements/03-separate-rooms-financial-advisor-plan.png",
+          "fidelity_drivers": ["dense architectural drafting marks", "specific furniture arrangement", "organic potted plants", "subtle paper texture"],
+          "section_owner": "03-separate-rooms financial-advisor room node",
+          "narrative_job": "Shows the advisor as one connected specialist room rather than the sole holder of every credential.",
+          "inpaint_scope": "Repair only gold connector and live role-label occlusions while preserving the original room drawing.",
+          "presentation": {
+            "mode": "transparent-cutout",
+            "alpha_required": true,
+            "intended_background": "surface #F6F2E8",
+            "crop_contract": "Keep the complete room outline, desk, seating, plant, and entry notch with no neighboring route fragments.",
+            "minimum_visible_fraction": "Complete irregular room perimeter and all major furniture groups."
+          }
+        },
+        {
+          "id": 4,
+          "box": [1049, 82, 1486, 328],
+          "verdict": "inpaint",
+          "what": "attorney room-plan illustration",
+          "asset_file": "elements/03-separate-rooms-attorney-plan.png",
+          "fidelity_drivers": ["reference-specific law-office floor plan", "bookcase linework", "desk papers and furniture", "delicate drafted texture"],
+          "section_owner": "03-separate-rooms attorney room node",
+          "narrative_job": "Visually separates legal counsel into its own professional room while keeping it connected to shared priorities.",
+          "inpaint_scope": "Repair only the live attorney label, icon, and gold route where they cover the plan; do not simplify the drawing.",
+          "presentation": {
+            "mode": "transparent-cutout",
+            "alpha_required": true,
+            "intended_background": "surface #F6F2E8",
+            "crop_contract": "Preserve the full room shell, bookcase, desk, chair, and door geometry without adjacent labels.",
+            "minimum_visible_fraction": "Complete room perimeter and at least 90% of internal drafted detail."
+          }
+        },
+        {
+          "id": 5,
+          "box": [532, 83, 897, 320],
+          "verdict": "inpaint",
+          "what": "CPA room-plan illustration",
+          "asset_file": "elements/03-separate-rooms-cpa-plan.png",
+          "fidelity_drivers": ["reference-specific accountant office plan", "specific desk and chair contours", "plant drawing", "subtle paper wash"],
+          "section_owner": "03-separate-rooms CPA room node",
+          "narrative_job": "Positions tax coordination as a distinct professional specialty connected to the physician's priorities.",
+          "inpaint_scope": "Repair only the live CPA label, calculator icon, and gold route occlusions while retaining every drafted contour.",
+          "presentation": {
+            "mode": "transparent-cutout",
+            "alpha_required": true,
+            "intended_background": "surface #F6F2E8",
+            "crop_contract": "Keep the full office boundary, desk, chair, plant, and doorway; exclude page typography and gold route.",
+            "minimum_visible_fraction": "Complete room perimeter and all major furniture details."
+          }
+        },
+        {
+          "id": 6,
+          "box": [12, 12, 738, 81],
+          "verdict": "code",
+          "what": "navy consult-ledger section tab",
+          "build_note": "Build a clipped ink-token banner with CSS border-radius and live tracked utility text in action token."
+        },
+        {
+          "id": 7,
+          "box": [1153, 333, 1487, 541],
+          "verdict": "inpaint",
+          "what": "insurance-professional room-plan illustration",
+          "asset_file": "elements/03-separate-rooms-insurance-plan.png",
+          "fidelity_drivers": ["specific insurance-office drafting", "fine wall and door contours", "desk-paper detail", "organic plant marks"],
+          "section_owner": "03-separate-rooms insurance room node",
+          "narrative_job": "Represents insurance work as a separate specialty coordinated around the same physician priorities.",
+          "inpaint_scope": "Repair only the live role label, umbrella icon, and gold connector occlusions without regenerating the whole plan.",
+          "presentation": {
+            "mode": "transparent-cutout",
+            "alpha_required": true,
+            "intended_background": "surface #F6F2E8",
+            "crop_contract": "Preserve the complete room shell, workstation, chair, plants, and door opening without neighboring text.",
+            "minimum_visible_fraction": "Complete room perimeter and at least 90% of interior detail."
+          }
+        },
+        {
+          "id": 8,
+          "box": [1144, 645, 1447, 723],
+          "verdict": "code",
+          "what": "professional-boundary clarification note",
+          "build_note": "Build a dashed charcoal border panel with live Inter body text and a simple action-stroked exclamation-circle SVG."
+        },
+        {
+          "id": 9,
+          "box": [861, 380, 1074, 480],
+          "verdict": "code",
+          "what": "central Your priorities convergence node",
+          "build_note": "Use concentric CSS circles with action borders, surface fill, and live centered h2 typography inside ornament separate-room-convergence."
+        },
+        {
+          "id": 10,
+          "box": [54, 169, 406, 204],
+          "verdict": "code",
+          "what": "orientation eyebrow label",
+          "build_note": "Render live Inter utility text in ink with tracked uppercase prefix and a short action-token CSS underline."
+        },
+        {
+          "id": 11,
+          "box": [1176, 123, 1296, 263],
+          "verdict": "code",
+          "what": "attorney role label and scales icon",
+          "build_note": "Render live Cormorant role text with a simple action-stroked balance-scales SVG and short horizontal rule."
+        }
+      ]
+    },
+    {
+      "frame": "04-blueprint-rounds",
+      "bg": "#FCF4EC",
+      "regions": [
+        {
+          "id": 1,
+          "box": [823, 12, 1523, 568],
+          "verdict": "inpaint",
+          "what": "medical-planning still life with books, notebook, pen, coffee, and stethoscope",
+          "asset_file": "elements/04-blueprint-medical-planning-still-life.png",
+          "fidelity_drivers": ["soft editorial product photography", "specific navy and ivory book stack", "handwritten notebook marks", "metal and ceramic material reflections", "organic stethoscope coil"],
+          "section_owner": "04-blueprint-rounds upper-right photography layer",
+          "narrative_job": "Connects planning work to a physician's physical tools and turns the process into an editorial working session.",
+          "inpaint_scope": "Repair only live phase-05 route, icon, and copy occlusions; preserve all text physically printed on books and notebook pages.",
+          "presentation": {
+            "mode": "framed-panel",
+            "alpha_required": false,
+            "intended_background": "surface #F6F2E8",
+            "crop_contract": "Keep the coffee rim, complete book stack titles, planning notebook, pen, and recognizably coiled stethoscope visible.",
+            "minimum_visible_fraction": "At least 85% of the still-life arrangement, including all five named objects."
+          }
+        },
+        {
+          "id": 2,
+          "box": [77, 163, 753, 588],
+          "verdict": "code",
+          "what": "blueprint headline, description, and phase-three label group",
+          "build_note": "Render live h2 and body roles with ink and charcoal tokens; build phase text and route icon as separate semantic elements."
+        },
+        {
+          "id": 3,
+          "box": [626, 583, 985, 815],
+          "verdict": "code",
+          "what": "Implement phase and full-process CTA group",
+          "build_note": "Build a live phase node with nested circle SVG checklist icon, Cormorant name, Inter summary, and ink-token CTA button."
+        },
+        {
+          "id": 4,
+          "box": [89, 442, 297, 613],
+          "verdict": "code",
+          "what": "Discover phase node",
+          "build_note": "Use concentric CSS circles with a simple compass SVG, live functional number 01, Cormorant label, and Inter summary."
+        },
+        {
+          "id": 5,
+          "box": [335, 584, 537, 769],
+          "verdict": "code",
+          "what": "Assess phase node",
+          "build_note": "Use concentric CSS circles with a magnifier SVG, live functional number 02, Cormorant label, and Inter summary."
+        },
+        {
+          "id": 6,
+          "box": [1236, 596, 1414, 760],
+          "verdict": "code",
+          "what": "Review phase node",
+          "build_note": "Use concentric CSS circles with a calendar SVG, live functional number 06, Cormorant label, and Inter summary."
+        },
+        {
+          "id": 7,
+          "box": [76, 57, 351, 99],
+          "verdict": "code",
+          "what": "Consult Ledger wordmark",
+          "build_note": "Render live tracked display text in ink with a thin action rule and compact Inter utility subtitle below."
+        }
+      ]
+    },
+    {
+      "frame": "05-five-decisions",
+      "bg": "#FCFCFC",
+      "regions": [
+        {
+          "id": 1,
+          "box": [117, 688, 716, 757],
+          "verdict": "code",
+          "what": "planning-scope boundary note",
+          "build_note": "Render live Inter body text inside a wide surface with action top rule and rounded upper-left CSS corner."
+        },
+        {
+          "id": 2,
+          "box": [124, 109, 599, 199],
+          "verdict": "code",
+          "what": "five-disciplines section headline",
+          "build_note": "Render live h2 with Cormorant Garamond 600, ink token, and contract-preserved two-line desktop wrapping."
+        },
+        {
+          "id": 3,
+          "box": [139, 502, 380, 575],
+          "verdict": "code",
+          "what": "Practice and business planning discipline name",
+          "build_note": "Render live Cormorant discipline text in ink within a mist-tinted CSS ledger row, preserving its two-line wrap."
+        },
+        {
+          "id": 4,
+          "box": [484, 323, 741, 362],
+          "verdict": "code",
+          "what": "wealth-management discipline summary",
+          "build_note": "Render live Inter body text in charcoal with controlled line measure inside the mist-tinted ledger row."
+        },
+        {
+          "id": 5,
+          "box": [484, 522, 771, 557],
+          "verdict": "code",
+          "what": "practice-planning discipline summary",
+          "build_note": "Render live Inter body text in charcoal with controlled line measure inside the mist-tinted ledger row."
+        },
+        {
+          "id": 6,
+          "box": [484, 239, 738, 277],
+          "verdict": "code",
+          "what": "tax-strategy discipline summary",
+          "build_note": "Render live Inter body text in charcoal within a surface-token ledger row and align it to the gold divider."
+        },
+        {
+          "id": 7,
+          "box": [484, 416, 726, 455],
+          "verdict": "code",
+          "what": "retirement-strategy discipline summary",
+          "build_note": "Render live Inter body text in charcoal within a surface-token ledger row and align it to the gold divider."
+        },
+        {
+          "id": 8,
+          "box": [484, 616, 753, 655],
+          "verdict": "code",
+          "what": "legacy-planning discipline summary",
+          "build_note": "Render live Inter body text in charcoal within a surface-token ledger row and align it to the gold divider."
+        },
+        {
+          "id": 9,
+          "box": [140, 322, 394, 360],
+          "verdict": "code",
+          "what": "Wealth management discipline name",
+          "build_note": "Render live Cormorant discipline text in ink on the mist-tinted row, vertically centered beside the route divider."
+        },
+        {
+          "id": 10,
+          "box": [140, 416, 395, 452],
+          "verdict": "code",
+          "what": "Retirement strategy discipline name",
+          "build_note": "Render live Cormorant discipline text in ink on the surface-token row, vertically centered beside the route divider."
+        },
+        {
+          "id": 11,
+          "box": [140, 617, 345, 654],
+          "verdict": "code",
+          "what": "Legacy planning discipline name",
+          "build_note": "Render live Cormorant discipline text in ink on the surface-token row, vertically centered beside the route divider."
+        },
+        {
+          "id": 12,
+          "box": [124, 72, 467, 82],
+          "verdict": "code",
+          "what": "orientation eyebrow",
+          "build_note": "Render live Inter utility text in action token with uppercase tracking and no rasterized letters or substitute ornament."
+        },
+        {
+          "id": 13,
+          "box": [138, 239, 295, 276],
+          "verdict": "code",
+          "what": "Tax strategy discipline name",
+          "build_note": "Render live Cormorant discipline text in ink on the surface-token row, vertically centered beside the route divider."
+        }
+      ]
+    },
+    {
+      "frame": "06-white-coat-paths",
+      "bg": "#DCE4F4",
+      "regions": [
+        {
+          "id": 1,
+          "box": [452, 21, 1490, 851],
+          "verdict": "extract",
+          "what": "five-part documentary medical-career photo cascade",
+          "asset_file": "elements/06-white-coat-photo-cascade.png",
+          "fidelity_drivers": ["specific physician-patient consultation", "authentic operating-room team", "dental treatment setting", "practice-owner office context", "hospital clinician corridor", "coherent cool documentary color grade", "slanted irregular crop silhouettes"],
+          "section_owner": "06-white-coat-paths medical audience index",
+          "narrative_job": "Lets distinct medical professionals recognize themselves through authentic working contexts rather than generic keyword cards.",
+          "extraction_scope": "Extract the five photographic crops as one transparent cascade while removing surrounding live labels and the geometric gold indexing rail; do not extract any website text.",
+          "presentation": {
+            "mode": "transparent-cutout",
+            "alpha_required": true,
+            "intended_background": "mist #DCE8F2",
+            "crop_contract": "Preserve all five slanted photo windows, their exact stagger, and each profession-defining subject; no live labels or route strokes inside the raster.",
+            "minimum_visible_fraction": "All five photo windows remain present; each keeps at least 75% of its defining person-and-work-context content."
+          }
+        },
+        {
+          "id": 2,
+          "box": [57, 190, 607, 396],
+          "verdict": "code",
+          "what": "medical-career section headline",
+          "build_note": "Render live h2 in Cormorant Garamond 600 with ink token and preserve the four-line desktop hierarchy."
+        },
+        {
+          "id": 3,
+          "box": [60, 459, 470, 538],
+          "verdict": "code",
+          "what": "medical-audience explanatory body copy",
+          "build_note": "Render live Inter body copy in ink with a measured width, comfortable line-height, and four contract-defined desktop lines."
+        },
+        {
+          "id": 4,
+          "box": [58, 591, 356, 655],
+          "verdict": "code",
+          "what": "Find your planning path CTA",
+          "build_note": "Build an ink-token rectangular button with live Inter CTA text, action-token label, and simple inline arrow SVG."
+        },
+        {
+          "id": 5,
+          "box": [56, 134, 329, 151],
+          "verdict": "code",
+          "what": "Who we serve orientation eyebrow",
+          "build_note": "Render live Inter utility prefix with action token and Cormorant italic phrase, preserving their single-line relationship."
+        }
+      ]
+    },
+    {
+      "frame": "07-accountable-planner",
+      "bg": "#F4ECE4",
+      "regions": [
+        {
+          "id": 1,
+          "box": [309, 89, 714, 732],
+          "verdict": "code",
+          "what": "neutral Michael Epps portrait placeholder and build-time client-photo slot",
+          "build_note": "Use a bordered surface-token portrait frame with a build-time Michael Epps client-photo img; never extract or generate the neutral placeholder silhouette."
+        },
+        {
+          "id": 2,
+          "box": [12, 12, 235, 851],
+          "verdict": "extract",
+          "what": "left-edge editorial desk still life with books, coffee, notebook, plant, and pen",
+          "asset_file": "elements/07-accountable-planner-desk-still-life.png",
+          "fidelity_drivers": ["soft shallow-focus editorial photography", "specific book and notebook stack", "ceramic cup texture", "organic plant blur", "natural marble surface", "angled pen detail"],
+          "section_owner": "07-accountable-planner left photographic edge layer",
+          "narrative_job": "Frames the planner essay as a thoughtful working session and supplies tactile continuity with the planning system.",
+          "extraction_scope": "Extract only the narrow still-life photograph; physical text printed on the books remains part of the photograph.",
+          "presentation": {
+            "mode": "full-bleed",
+            "alpha_required": false,
+            "intended_background": "surface #F6F2E8",
+            "crop_contract": "Keep the plant hint, coffee cup, three-book stack, open notebook, marble edge, and pen distributed down the full-height strip.",
+            "minimum_visible_fraction": "At least 80% of the tall still-life strip and every named prop remain recognizable."
+          }
+        },
+        {
+          "id": 3,
+          "box": [811, 459, 1365, 648],
+          "verdict": "code",
+          "what": "planner name, credentials, and biographical body copy",
+          "build_note": "Render the name and credentials as live Cormorant text, with the biography in Inter body role and ink token."
+        },
+        {
+          "id": 4,
+          "box": [807, 220, 1431, 432],
+          "verdict": "code",
+          "what": "planner relationship section headline",
+          "build_note": "Render live h2 in Cormorant Garamond 600 with ink token, preserving three desktop lines and the action underline route."
+        },
+        {
+          "id": 5,
+          "box": [811, 677, 1048, 738],
+          "verdict": "code",
+          "what": "Meet Michael CTA",
+          "build_note": "Build an ink-token rectangular button with live white Inter CTA text and a simple action-stroked arrow SVG."
+        },
+        {
+          "id": 6,
+          "box": [809, 157, 1031, 192],
+          "verdict": "code",
+          "what": "Meet the planner eyebrow",
+          "build_note": "Render live uppercase Inter utility text in action token with tracked letters and a short CSS underline."
+        }
+      ]
+    },
+    {
+      "frame": "08-next-decision",
+      "bg": "#04142C",
+      "regions": [
+        {
+          "id": 1,
+          "box": [871, 386, 1326, 687],
+          "verdict": "code",
+          "what": "guide path summary, availability note, placeholder slot, and CTA",
+          "build_note": "Build live Inter copy, dashed action border, code-owned guide-cover placeholder, simple info SVG, and an action-token CTA button."
+        },
+        {
+          "id": 2,
+          "box": [238, 202, 514, 558],
+          "verdict": "code",
+          "what": "strategy-call decision path",
+          "build_note": "Build live Cormorant heading and Inter copy with simple calendar and speech-bubble SVG icons, action rules, and no raster text."
+        },
+        {
+          "id": 3,
+          "box": [464, 63, 1094, 190],
+          "verdict": "code",
+          "what": "closing decision headline",
+          "build_note": "Render live h2 in Cormorant Garamond 600 with white token and preserve the two-line desktop composition."
+        },
+        {
+          "id": 4,
+          "box": [875, 202, 1261, 471],
+          "verdict": "code",
+          "what": "retirement-planning guide decision path heading",
+          "build_note": "Render live Cormorant heading with a simple action-stroked document-and-lock SVG, horizontal rule, and centered route node."
+        },
+        {
+          "id": 5,
+          "box": [469, 684, 1028, 836],
+          "verdict": "code",
+          "what": "contact and legal footer lockup",
+          "build_note": "Build live email, brand, and disclaimer text with Inter and Cormorant roles, action rules, and a simple envelope SVG."
+        },
+        {
+          "id": 6,
+          "box": [12, 76, 151, 240],
+          "verdict": "inpaint",
+          "what": "framed-certificate fragment of the continuous closing office photograph",
+          "asset_file": "elements/08-next-decision-office-background.png",
+          "fidelity_drivers": ["moody navy office photography", "specific framed certificate", "dark shelving and lounge chair", "clinical desk props", "natural low-key falloff"],
+          "section_owner": "08-next-decision closing background layer",
+          "narrative_job": "Returns the visitor to the same private, physician-specific consultation world for the final choice.",
+          "inpaint_scope": "Create one full-bleed office plate shared with regions 8, 9, 10, and 11, repairing only live copy, route, icon, and button occlusions.",
+          "group_with_region_ids": [8, 9, 10, 11],
+          "presentation": {
+            "mode": "full-bleed",
+            "alpha_required": false,
+            "intended_background": "ink #0B1F3A",
+            "crop_contract": "Keep the framed certificate, left books and stethoscope, right shelves and plant, and lower-right chair as quiet edge anchors.",
+            "minimum_visible_fraction": "All four edge anchors remain recognizable while the central navy quiet zone stays available for live decisions."
+          }
+        },
+        {
+          "id": 7,
+          "box": [241, 599, 530, 684],
+          "verdict": "code",
+          "what": "Schedule a strategy call CTA",
+          "build_note": "Build an action-token rectangular button with live ink Inter CTA text, subtle CSS gradient, and inline arrow SVG."
+        },
+        {
+          "id": 8,
+          "box": [12, 557, 169, 726],
+          "verdict": "inpaint",
+          "what": "stethoscope and closed-book fragment of the continuous closing office photograph",
+          "asset_file": "elements/08-next-decision-office-background.png",
+          "fidelity_drivers": ["organic stethoscope coil", "book cloth texture", "pen reflections", "deep photographic shadows"],
+          "section_owner": "08-next-decision closing background layer",
+          "narrative_job": "Provides an unmistakable physician cue at the edge of the final strategy-call path.",
+          "inpaint_scope": "Treat as part of region 6 and repair only live overlay occlusions; never isolate the props as floating cutouts.",
+          "group_with_region_ids": [6, 9, 10, 11],
+          "presentation": {
+            "mode": "full-bleed",
+            "alpha_required": false,
+            "intended_background": "ink #0B1F3A",
+            "crop_contract": "Preserve the stethoscope, book, and pen in their original desk context at the lower-left edge.",
+            "minimum_visible_fraction": "At least 80% of the stethoscope silhouette and full book corner remain visible."
+          }
+        },
+        {
+          "id": 9,
+          "box": [12, 402, 161, 429],
+          "verdict": "inpaint",
+          "what": "left bookshelf fragment of the continuous closing office photograph",
+          "asset_file": "elements/08-next-decision-office-background.png",
+          "fidelity_drivers": ["subdued book-spine texture", "continuous shelf lighting", "navy photographic veil"],
+          "section_owner": "08-next-decision closing background layer",
+          "narrative_job": "Extends the editorial office setting through the otherwise quiet left edge.",
+          "inpaint_scope": "Treat as part of region 6 and repair only live overlay occlusions; do not create a separate shelf asset.",
+          "group_with_region_ids": [6, 8, 10, 11],
+          "presentation": {
+            "mode": "full-bleed",
+            "alpha_required": false,
+            "intended_background": "ink #0B1F3A",
+            "crop_contract": "Keep the shelf fragment aligned to the same continuous left-side office photograph.",
+            "minimum_visible_fraction": "The horizontal shelf and several book spines remain perceptible."
+          }
+        },
+        {
+          "id": 10,
+          "box": [1456, 671, 1523, 749],
+          "verdict": "inpaint",
+          "what": "lounge-chair fragment of the continuous closing office photograph",
+          "asset_file": "elements/08-next-decision-office-background.png",
+          "fidelity_drivers": ["leather upholstery texture", "rounded chair contour", "low-key edge lighting", "continuous office depth"],
+          "section_owner": "08-next-decision closing background layer",
+          "narrative_job": "Balances the lower-right edge and reinforces the private consultation-room atmosphere.",
+          "inpaint_scope": "Treat as part of region 6 and repair only live overlay occlusions; do not isolate or regenerate the chair.",
+          "group_with_region_ids": [6, 8, 9, 11],
+          "presentation": {
+            "mode": "full-bleed",
+            "alpha_required": false,
+            "intended_background": "ink #0B1F3A",
+            "crop_contract": "Retain the chair as a partial edge anchor rather than forcing the whole chair into view.",
+            "minimum_visible_fraction": "Preserve the visible curved arm and leather highlight."
+          }
+        },
+        {
+          "id": 11,
+          "box": [1453, 205, 1494, 267],
+          "verdict": "inpaint",
+          "what": "right bookshelf fragment of the continuous closing office photograph",
+          "asset_file": "elements/08-next-decision-office-background.png",
+          "fidelity_drivers": ["vertical book-spine texture", "soft shelf shadow", "continuous navy office photography"],
+          "section_owner": "08-next-decision closing background layer",
+          "narrative_job": "Closes the right edge with restrained editorial office detail while preserving the central quiet field.",
+          "inpaint_scope": "Treat as part of region 6 and repair only live overlay occlusions; do not make a separate bookshelf asset.",
+          "group_with_region_ids": [6, 8, 9, 10],
+          "presentation": {
+            "mode": "full-bleed",
+            "alpha_required": false,
+            "intended_background": "ink #0B1F3A",
+            "crop_contract": "Keep this fragment registered with the full right-side shelf and plant in the shared plate.",
+            "minimum_visible_fraction": "Several vertical book spines remain visible as a quiet edge texture."
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+/* Variant B — The Decision Atlas. Variant-scoped clip-path and surface recipes. */
+
+/* 01 — clinical workspace media slot (notched upper-left silhouette) */
+.vb-clinical-clip {
+  clip-path: polygon(
+    13.7% 0,
+    58.4% 0,
+    60.3% 2.5%,
+    100% 2.5%,
+    100% 100%,
+    0 100%,
+    0 23.7%
+  );
+}
+
+/* 01 + 07 — planner portrait frame (clipped corners) */
+.vb-portrait-clip {
+  clip-path: polygon(
+    4% 0,
+    88% 0,
+    100% 12%,
+    100% 100%,
+    18% 100%,
+    0 84%,
+    0 4%
+  );
+}
+
+/* 04 — blueprint process panels (single clipped corner) */
+.vb-panel-clip {
+  clip-path: polygon(0 0, calc(100% - 14px) 0, 100% 14px, 100% 100%, 0 100%);
+}
+
+/* 07 — dossier sheet and its mist backing plate (octagon) */
+.vb-dossier-clip {
+  clip-path: polygon(
+    4% 0,
+    96% 0,
+    100% 8%,
+    100% 86%,
+    96% 100%,
+    4% 100%,
+    0 86%,
+    0 8%
+  );
+}
+
+/* 07 — credential plaque with notched ends */
+.vb-plaque-notch {
+  clip-path: polygon(
+    10px 0,
+    calc(100% - 10px) 0,
+    100% 50%,
+    calc(100% - 10px) 100%,
+    10px 100%,
+    0 50%
+  );
+}
+
+/* 03 — island overlay paper shadow */
+.vb-island-shadow {
+  filter: drop-shadow(10px 12px 10px rgba(11, 31, 58, 0.16))
+    drop-shadow(0 3px 0 rgba(11, 31, 58, 0.18));
+}
+
+/* 03 — mobile recomposition: irregular island plates */
+.vb-island-blob {
+  border-radius: 58% 42% 55% 45% / 48% 55% 45% 52%;
+}
+
+.vb-island-blob-sm {
+  border-radius: 45% 55% 48% 52% / 55% 45% 58% 42%;
+}
+
+/* 07 — full-bleed clinical desk plate, left-weighted with ivory legibility wash */
+.vb-desk-bg {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(220, 232, 242, 0) 0 36%,
+      rgba(246, 242, 232, 0.94) 78%
+    ),
+    url("/images/design/b/07-accountable-planner/medical-finance-desk-background.jpg")
+      left center / cover no-repeat;
+}

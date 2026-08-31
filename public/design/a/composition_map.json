@@ -1,0 +1,1004 @@
+{
+  "direction": "a",
+  "frames": [
+    {
+      "frame": "01-one-plan",
+      "viewport_context": {
+        "reference_kind": "section-frame",
+        "bitmap_dimensions": {
+          "width": 1536,
+          "height": 864
+        },
+        "primary_css_viewport": {
+          "width": 1536,
+          "height": 864
+        },
+        "device_pixel_ratio": 1
+      },
+      "slot_contract": {
+        "container": "full-bleed hero scene with a dominant left copy field and a tall portrait card anchored over the right side",
+        "width_share": "the portrait card occupies roughly the right quarter while the headline and actions occupy most of the left half; the office scene spans behind both",
+        "target_aspect_ratio": "full-width landscape image canvas plus a distinctly tall portrait slot around two-thirds as wide as it is high",
+        "intended_crop": "retain the desk, chair, lamp, and medical-office cues around the left copy and beneath the portrait card; do not crop the portrait card into a generic landscape panel",
+        "fold_requirement": "brand, full headline, primary actions, complete portrait card, and the physician-focused proof row remain visible together in the opening composition",
+        "layout_authority": "the hero field and portrait slot define the composition; intrinsic dimensions of either the office image or portrait asset must not expand the section, alter the split, or determine section height"
+      },
+      "focal_point": {
+        "what": "the oversized physician-outcome headline in counterpoint with the luminous portrait card",
+        "where": "headline mass fills the left-center while the portrait card rises as a tall right-side anchor",
+        "region_ids": [1, 2, 4, 6]
+      },
+      "dominance": "dual but ordered: the large serif promise is read first, then the high-contrast portrait card; the office photograph supplies atmosphere rather than competing for attention",
+      "eye_path": [
+        "brand signature at the upper left",
+        "physician-specific strapline crossing the upper middle",
+        "large three-line promise down the left",
+        "supporting paragraph and paired actions",
+        "portrait card on the right",
+        "compact proof row and restrained legal close at the lower left"
+      ],
+      "overlaps": [
+        "a thin gold route enters from the left, bends around the strapline, and terminates against the portrait card",
+        "the portrait card overlays the photographic office rather than occupying a separate flat column",
+        "the desk and medical objects continue behind and below the portrait card, joining copy and image into one scene",
+        "the gold route resumes near the lower right and exits the frame as a continuation cue"
+      ],
+      "quiet_zones": [
+        "dark breathing room above and between the brand and headline",
+        "a clear dark buffer around the headline despite the photographic canvas",
+        "the pale interior of the portrait card stays largely unoccupied so the eventual portrait can read with authority",
+        "the extreme right office field remains subdued and free of secondary copy"
+      ],
+      "tension": "a dense, low-lit office and large left typography are balanced by one bright, nearly empty vertical card on the right; the routed gold line makes the asymmetry feel coordinated rather than split into columns",
+      "image_copy_relation": "copy is embedded in the same office atmosphere as the imagery, while the portrait card interrupts that atmosphere as a human authority anchor; neither image is a polite thumbnail beside a text block",
+      "assembly": {
+        "profile": "image-canvas",
+        "score": 3,
+        "signals": [
+          "photographic office genuinely woven through the full hero surface",
+          "portrait card layered over the scene",
+          "connector path crosses the copy-image axis",
+          "approval depends strongly on atmosphere and scale contrast"
+        ],
+        "surface": "full-bleed dark office photographic plate with a navy tonal treatment; the pale portrait card remains an independently sized foreground slot",
+        "layer_stack": [
+          "full-bleed photographic image canvas",
+          "navy tonal veil and edge falloff",
+          "responsive gold SVG route",
+          "live brand, strapline, hero copy, actions, proof, and disclosures",
+          "tall portrait card with client portrait or explicit placeholder treatment"
+        ],
+        "connector_relationships": [
+          "the upper route visually hands the physician-specific strapline to the portrait card",
+          "the lower route signals continuation beyond the hero without enclosing the card"
+        ],
+        "seam_contract": [
+          "portrait card stays visibly layered over the office image with a crisp gold edge",
+          "the office scene remains continuous behind the copy and card",
+          "the lower-right continuation route may cross the frame edge but must not become a decorative border around the whole hero"
+        ],
+        "responsive_contract": "recompose the headline, portrait, actions, and proof into an intentional sequence while preserving headline-first authority and a tall, fully legible portrait; redraw or simplify the route around those anchors rather than scaling the desktop scene or letting the photo crop control height"
+      },
+      "content_groups": [
+        "brand name + powered-by line",
+        "physician-specific strapline + routed gold line",
+        "headline + supporting paragraph + paired actions",
+        "three proof statements",
+        "portrait card + portrait identity",
+        "powered-by signature + educational disclosure"
+      ],
+      "space_roles": {
+        "internal_grouping": "headline, paragraph, and actions stay close enough to read as one decision unit; each proof icon remains attached to its label; portrait identity stays inside the portrait slot",
+        "quiet_space": "dark open areas isolate the headline and the pale card, while the card's own unfilled field reserves visual importance for the portrait",
+        "section_transition": "the bottom proof and disclosure area closes the hero without opening a large gap inside the headline-action group; the outbound route supplies the transition"
+      },
+      "viewport_intent": {
+        "desktop_composition": "native wide opening scene with copy, portrait card, and office atmosphere visible simultaneously",
+        "must_be_simultaneously_visible": [
+          "brand signature",
+          "complete hero promise",
+          "primary scheduling action",
+          "portrait card and identity",
+          "physician-focused proof row"
+        ],
+        "may_continue_below_fold": [
+          "fine-print educational disclosure may sit at the fold edge on shorter laptop viewports"
+        ],
+        "crop_invariants": [
+          "portrait face and upper body remain fully recognizable when the client asset replaces the placeholder",
+          "desk, lamp or chair, and at least one medical cue remain visible so the setting reads as a physician advisor's office",
+          "portrait card remains tall and complete rather than clipped by the section edge"
+        ]
+      },
+      "invariants": [
+        "oversized left headline and tall right portrait remain the two dominant masses",
+        "the portrait card overlays a continuous office scene",
+        "dark-to-light contrast between atmospheric canvas and portrait card",
+        "gold route connects the strapline axis to the portrait anchor and continues out of the hero",
+        "proof and action rows stay subordinate to the promise rather than becoming equal cards",
+        "the hero height and split are governed by the section contract, never by intrinsic media geometry"
+      ],
+      "free": [
+        "exact typography size, leading, and line breaks may be tuned while retaining the three-line monumental promise",
+        "navigation details and mobile menu treatment",
+        "exact button widths and icon rendering",
+        "mobile stacking order, provided the promise remains first and the portrait remains a strong tall focal anchor",
+        "the route may simplify on narrow screens as long as its handoff and continuation relationships remain clear"
+      ]
+    },
+    {
+      "frame": "02-career-signal",
+      "viewport_context": {
+        "reference_kind": "section-frame-strip",
+        "bitmap_dimensions": {
+          "width": 1536,
+          "height": 512
+        },
+        "primary_css_viewport": {
+          "width": 1536,
+          "height": 512
+        },
+        "device_pixel_ratio": 1
+      },
+      "slot_contract": {
+        "container": "full-width dark career-stage typography band",
+        "width_share": "the heading occupies the upper-left third and four milestones distribute evenly across nearly the full width below",
+        "target_aspect_ratio": "very wide shallow strip",
+        "intended_crop": "preserve the faint architectural background across the strip and keep all four milestone labels complete",
+        "fold_requirement": "heading, continuous route, and all four career-stage milestones read together as one band",
+        "layout_authority": "the strip's content rhythm and shallow band proportions set its height; the background image must cover passively and never make the band taller"
+      },
+      "focal_point": {
+        "what": "the physician-focused career-stage statement followed by the single continuous milestone route",
+        "where": "statement at upper left, with the route spanning horizontally through the band beneath it",
+        "region_ids": [1, 2, 3, 4, 5]
+      },
+      "dominance": "typography strip; the gold-and-ivory heading leads, and the four evenly weighted stage labels form a calm secondary sequence",
+      "eye_path": [
+        "gold italic physician-focused phrase",
+        "ivory continuation of the heading",
+        "left-to-right gold route",
+        "resident milestone",
+        "employed or owner milestone",
+        "peak earning years milestone",
+        "one-strategy review promise"
+      ],
+      "overlaps": [],
+      "quiet_zones": [
+        "broad dark interval between heading and milestone labels",
+        "generous lower field beneath the labels",
+        "faint office imagery stays low contrast and does not occupy the reading lane"
+      ],
+      "tension": "the strict horizontal cadence is softened by a route that rises and exits at the upper right, implying a career that continues beyond a static timeline",
+      "image_copy_relation": "the medical-office image is a subdued atmospheric wash behind live type; the strip works through typography and routing, not through a focal photograph",
+      "assembly": {
+        "profile": "code-first",
+        "score": 0,
+        "signals": [
+          "deliberately quiet typography band",
+          "simple responsive milestone route",
+          "no independent art anchor"
+        ],
+        "surface": "navy CSS field with a restrained, low-contrast architectural image treatment",
+        "layer_stack": [
+          "dark CSS surface and optional subdued background image",
+          "responsive gold SVG route and milestone ticks",
+          "live heading and milestone labels"
+        ],
+        "connector_relationships": [
+          "one uninterrupted route owns all four milestones and exits upward after the review promise"
+        ],
+        "seam_contract": [
+          "the left edge may receive a faint continuation line and the upper-right route may leave the strip",
+          "no milestone becomes an isolated card"
+        ],
+        "responsive_contract": "turn the route into a vertical or gently stepped sequence on narrow screens while preserving career order and one-strategy continuity; do not squeeze four columns until labels collide"
+      },
+      "content_groups": [
+        "two-tone heading",
+        "continuous route + four milestone labels"
+      ],
+      "space_roles": {
+        "internal_grouping": "each milestone stays immediately beneath its tick; paired lines within a milestone remain one phrase",
+        "quiet_space": "the open center and lower field keep the strip editorial and prevent the timeline from feeling like a dense process diagram",
+        "section_transition": "the rising route at the upper right carries the eye onward; band height may adapt without adding gaps inside milestone labels"
+      },
+      "viewport_intent": {
+        "desktop_composition": "native shallow strip viewed as a single horizontal career continuum",
+        "must_be_simultaneously_visible": [
+          "complete heading",
+          "all four career-stage labels",
+          "the shared route"
+        ],
+        "may_continue_below_fold": [],
+        "crop_invariants": [
+          "no milestone label is cut",
+          "the route's right-side upward continuation remains apparent"
+        ]
+      },
+      "invariants": [
+        "shallow band character",
+        "heading stays upper-left rather than centered",
+        "all milestones share one route",
+        "four-part left-to-right career progression",
+        "large quiet intervals and subdued background",
+        "intrinsic background-media geometry never sets strip height"
+      ],
+      "free": [
+        "exact spacing between milestones",
+        "exact line wrapping inside each milestone",
+        "degree of background-image visibility",
+        "mobile route orientation, provided stage order and shared continuity remain intact"
+      ]
+    },
+    {
+      "frame": "03-separate-rooms",
+      "viewport_context": {
+        "reference_kind": "section-frame",
+        "bitmap_dimensions": {
+          "width": 1536,
+          "height": 864
+        },
+        "primary_css_viewport": {
+          "width": 1536,
+          "height": 864
+        },
+        "device_pixel_ratio": 1
+      },
+      "slot_contract": {
+        "container": "editorial problem statement on the left joined to a radial consult-ledger room network across the center and right",
+        "width_share": "copy holds roughly the left third; the priorities hub and five professional rooms use the remaining two-thirds, with rooms distributed above, beside, and below the hub",
+        "target_aspect_ratio": "wide landscape network with individually horizontal room plates and a circular center hub",
+        "intended_crop": "retain each room's complete architectural boundary and identifying furnishings; keep the central priorities hub and every connection endpoint visible",
+        "fold_requirement": "problem statement, priorities hub, all five professional roles, and the coordination caveat read in one composition",
+        "layout_authority": "the section grid, hub, and room slots establish the network footprint; architectural plate dimensions must fit those slots and cannot stretch the section or push a room outside the composition"
+      },
+      "focal_point": {
+        "what": "the circular Your priorities hub coordinating five visibly separate professional rooms",
+        "where": "just right of center, surrounded asymmetrically by CPA, attorney, TPA, insurance, and financial-advisor rooms",
+        "region_ids": [3, 4, 5, 7, 9]
+      },
+      "dominance": "the network mechanism dominates as one connected scene, while the large left headline explains the problem; no single professional room outranks the central priorities hub",
+      "eye_path": [
+        "Consult Ledger tab and coordination-gap eyebrow",
+        "large separate-pieces headline",
+        "left explanation and its rule ending at the network",
+        "central Your priorities hub",
+        "upper CPA and attorney rooms",
+        "side TPA and insurance rooms",
+        "lower financial-advisor room",
+        "coordination caveat at lower right",
+        "outbound route at the lower left"
+      ],
+      "overlaps": [
+        "gold routes leave the hub and physically meet each room boundary",
+        "the upper route rises into the dark ledger tab at the top seam",
+        "the lower financial-advisor route bends into a long arrow that exits left",
+        "the central hub occupies the negative space between room plates rather than sitting in a separate diagram panel",
+        "left headline and network share the central field, preventing a clean conventional column divide"
+      ],
+      "quiet_zones": [
+        "cream breathing space between the left copy and nearest room edges",
+        "open channels around the priorities hub keep five routes legible",
+        "lower-right area around the caveat remains sparse",
+        "inter-room gaps are functional whitespace and must not be filled with extra cards or labels"
+      ],
+      "tension": "the headline says separate pieces while the gold network visibly pulls isolated architectural rooms toward one central priority; irregular room placement keeps the solution active rather than bureaucratically symmetric",
+      "image_copy_relation": "the copy names the fragmentation and the room illustration proves it spatially; the hub is the bridge, so text and image must remain adjacent and simultaneously understandable",
+      "assembly": {
+        "profile": "hybrid-layered",
+        "score": 4,
+        "signals": [
+          "custom architectural room illustrations are central",
+          "composition depends on connector paths and multiple contact points",
+          "route and tab cross section edges",
+          "hierarchy is more scene-like than an ordinary grid",
+          "approval depends on retaining the consult-ledger atmosphere"
+        ],
+        "surface": "warm ivory CSS field with a navy ledger tab at the upper left",
+        "layer_stack": [
+          "ivory CSS surface and navy tab",
+          "high-fidelity architectural room art objects",
+          "live problem copy, role names, central priorities label, and caveat",
+          "responsive gold SVG hub, routes, endpoints, rule, and outbound arrow"
+        ],
+        "connector_relationships": [
+          "every professional room connects independently to Your priorities, never directly to another room",
+          "the left explanatory rule visually approaches the network without replacing a professional connection",
+          "the financial-advisor branch becomes the lower outbound route",
+          "the top branch acknowledges the ledger tab and page sequence"
+        ],
+        "seam_contract": [
+          "the upper connector may cross into the dark ledger tab boundary",
+          "the lower connector may exit the frame to the left",
+          "room art remains discrete from the CSS surface and connector layer",
+          "no connector is baked into a room plate where it needs to reflow"
+        ],
+        "responsive_contract": "recompose the rooms around or below the priorities hub and redraw connectors as a clear vertical network; preserve one central priority owner, all five roles, and discrete room character rather than shrinking the entire desktop diagram into illegibility"
+      },
+      "content_groups": [
+        "ledger tab + coordination-gap eyebrow",
+        "problem headline + gold rule + explanatory paragraph",
+        "central priorities hub + five professional rooms + role labels",
+        "coordination caveat",
+        "lower outbound route"
+      ],
+      "space_roles": {
+        "internal_grouping": "each room image, icon, and role label reads as one unit; headline, rule, and body form one explanatory block; routes stay attached to the hub and their intended room",
+        "quiet_space": "open inter-room channels are reserved for route legibility and make the hub the organizer",
+        "section_transition": "the tab receives the incoming sequence and the lower-left arrow releases it; transition space must not split labels from their rooms"
+      },
+      "viewport_intent": {
+        "desktop_composition": "native wide consult-ledger spread with statement and complete network visible together",
+        "must_be_simultaneously_visible": [
+          "separate-pieces headline",
+          "Your priorities hub",
+          "CPA, attorney, TPA, insurance professional, and financial advisor rooms",
+          "coordination caveat"
+        ],
+        "may_continue_below_fold": [
+          "on shorter laptop viewports, the caveat and outbound arrow may approach the fold edge but should remain discoverable without breaking the network"
+        ],
+        "crop_invariants": [
+          "all room walls and entrances remain recognizable",
+          "central hub remains complete",
+          "route endpoints remain visible and attached to their intended rooms",
+          "fine architectural details may simplify responsively but room identity cannot collapse into generic icons"
+        ]
+      },
+      "invariants": [
+        "one central Your priorities hub owns all five professional connections",
+        "five separate architectural rooms remain visibly distinct",
+        "large left problem statement and network are visible in one scene",
+        "irregular radial placement rather than a uniform card grid",
+        "open connector channels remain unfilled",
+        "upper and lower route continuations preserve page-sequence energy",
+        "slot geometry, not room-image intrinsic dimensions, controls the section"
+      ],
+      "free": [
+        "exact room rotations and spacing may be adjusted to improve route clarity",
+        "exact headline line breaks and paragraph measure",
+        "mobile ordering of the professional rooms",
+        "connector curve shapes, provided all ownership relationships and edge continuations remain intact",
+        "minor simplification of nonessential room drafting detail at small sizes"
+      ]
+    },
+    {
+      "frame": "04-blueprint-rounds",
+      "viewport_context": {
+        "reference_kind": "section-frame",
+        "bitmap_dimensions": {
+          "width": 1536,
+          "height": 864
+        },
+        "primary_css_viewport": {
+          "width": 1536,
+          "height": 864
+        },
+        "device_pixel_ratio": 1
+      },
+      "slot_contract": {
+        "container": "editorial blueprint introduction at upper left, atmospheric planning still life across the upper right, and a six-step routed process spanning the lower field",
+        "width_share": "intro copy holds about the left half of the upper field; the still life owns the upper-right half; six steps stagger across nearly the full width below",
+        "target_aspect_ratio": "wide landscape section with a broad upper photo crop and compact circular step anchors",
+        "intended_crop": "retain notebook priorities, pen, books, coffee, and stethoscope as a coherent planning still life; do not reduce it to one isolated prop",
+        "fold_requirement": "blueprint promise, enough of the still life to establish physician planning, and the complete six-step route remain visible as one process composition",
+        "layout_authority": "the editorial upper split and routed lower process set section proportions; the still-life image covers its assigned upper field and cannot increase process-row height through intrinsic dimensions"
+      },
+      "focal_point": {
+        "what": "the planning-system promise paired with the notebook-and-stethoscope still life",
+        "where": "headline in the upper-left quadrant and photographic evidence sweeping across the upper right",
+        "region_ids": [1, 2]
+      },
+      "dominance": "headline and physician-planning still life share first-order dominance; the six numbered steps form a smaller but continuous second-order mechanism across the lower half",
+      "eye_path": [
+        "Consult Ledger mark",
+        "gold blueprint eyebrow",
+        "large planning-system headline and short explanation",
+        "notebook priorities, pen, books, and stethoscope",
+        "Discover at the lower left",
+        "alternating steps two through five along the gold route",
+        "Review and the outbound arrow at the lower right",
+        "full-process action centered beneath the route"
+      ],
+      "overlaps": [
+        "the still-life photograph enters from the upper edge and occupies the same upper band as the intro copy",
+        "the gold process route passes behind and between alternating step medallions",
+        "step medallions interrupt the route at deliberate nodes rather than floating beside it",
+        "the full-process action sits inside the open basin created by the route"
+      ],
+      "quiet_zones": [
+        "open ivory area between the intro copy and early process steps",
+        "breathing room around each numbered medallion prevents the six steps from becoming a dense timeline",
+        "the lower center is reserved for the full-process action",
+        "photo highlights remain clear enough for notebook writing and stethoscope silhouette to read"
+      ],
+      "tension": "a refined still life suggests calm expertise while the long alternating route implies iterative work; the irregular up-and-down rhythm avoids turning the system into a rigid checklist",
+      "image_copy_relation": "the still life visually substantiates the blueprint language and physician audience, while the coded route converts the promise into a process; photo, promise, and mechanism must read together",
+      "assembly": {
+        "profile": "anchored-art",
+        "score": 2,
+        "signals": [
+          "one dominant atmospheric photo anchor",
+          "composition depends on a route crossing among steps",
+          "approval depends on physician-planning atmosphere"
+        ],
+        "surface": "warm ivory CSS field continuous behind copy and process",
+        "layer_stack": [
+          "ivory CSS surface",
+          "upper-right photographic still-life anchor",
+          "live brand, blueprint copy, six step labels, descriptions, and action",
+          "responsive gold SVG route, nodes, arrows, and simple coded medallion geometry"
+        ],
+        "connector_relationships": [
+          "one route owns Discover through Review in numeric order",
+          "alternating high and low steps remain visibly connected",
+          "the route frames rather than intersects the full-process action",
+          "Review releases the route toward the next section"
+        ],
+        "seam_contract": [
+          "the photo may meet the upper and right frame edges but must fade or crop cleanly into the ivory field",
+          "process connectors remain independent of the photograph and live content",
+          "the route may enter from the left and exit right as a page-continuity motif"
+        ],
+        "responsive_contract": "stack steps into a readable ordered path, redraw the route for the new order, and preserve a meaningful still-life crop near the promise; never proportionally shrink the six-step desktop scene or let the photo force excessive height"
+      },
+      "content_groups": [
+        "Consult Ledger mark",
+        "blueprint eyebrow + headline + explanatory paragraph",
+        "physician-planning still life",
+        "Discover through Review routed process",
+        "full-process action"
+      ],
+      "space_roles": {
+        "internal_grouping": "number, step name, icon, and description stay tightly bound at each node; the eyebrow, headline, and paragraph remain one intro unit",
+        "quiet_space": "ivory gaps distinguish the six steps and reserve the route's bends; the central lower gap belongs to the action",
+        "section_transition": "route entry and exit carry continuity; vertical section padding may adapt without separating a step description from its node"
+      },
+      "viewport_intent": {
+        "desktop_composition": "native wide editorial-process spread with upper promise and complete lower route visible together",
+        "must_be_simultaneously_visible": [
+          "planning-system headline",
+          "physician still-life cues",
+          "all six numbered steps",
+          "full-process action"
+        ],
+        "may_continue_below_fold": [
+          "the route's final outbound arrow may sit at the fold edge on shorter laptop captures"
+        ],
+        "crop_invariants": [
+          "notebook priority list, pen, and stethoscope remain legible as distinct objects",
+          "all six step medallions remain complete",
+          "numeric order remains immediately readable"
+        ]
+      },
+      "invariants": [
+        "upper-left promise and upper-right physician still life balance one another",
+        "six steps alternate along one continuous route",
+        "process spans the width rather than becoming six equal cards",
+        "the central lower opening belongs to the process action",
+        "route nodes physically attach to their step medallions",
+        "section proportions are set before media is fitted"
+      ],
+      "free": [
+        "exact step staggering and connector curvature",
+        "exact copy measures and headline line breaks",
+        "minor still-life crop adjustment while preserving all named physician-planning cues",
+        "mobile route orientation and action placement",
+        "icon drawing details inside the medallions"
+      ]
+    },
+    {
+      "frame": "05-five-decisions",
+      "viewport_context": {
+        "reference_kind": "section-frame",
+        "bitmap_dimensions": {
+          "width": 1536,
+          "height": 864
+        },
+        "primary_css_viewport": {
+          "width": 1536,
+          "height": 864
+        },
+        "device_pixel_ratio": 1
+      },
+      "slot_contract": {
+        "container": "left-anchored editorial discipline matrix on a nearly white full-width field",
+        "width_share": "all substantive content occupies approximately the left half, while the right half remains intentionally empty",
+        "target_aspect_ratio": "wide landscape field with a compact tall matrix rather than a full-width table",
+        "intended_crop": "no dominant raster; preserve the complete five-row matrix, its shared vertical spine, and the bottom coordination note",
+        "fold_requirement": "orientation eyebrow, headline, all five discipline rows, and coordination note remain visible together",
+        "layout_authority": "the live matrix and deliberate right-side quiet field define section dimensions; no decorative line or incidental intrinsic media may widen rows or determine height"
+      },
+      "focal_point": {
+        "what": "the five-row planning-discipline matrix under the same-life headline",
+        "where": "left-center, with a shared vertical gold spine separating discipline names from their explanations",
+        "region_ids": [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13]
+      },
+      "dominance": "typography and structured information dominate; the oversized right-side emptiness is an equal compositional ingredient, not unused space awaiting content",
+      "eye_path": [
+        "small orientation eyebrow",
+        "two-line same-life headline",
+        "top-to-bottom discipline names",
+        "corresponding explanations across the shared spine",
+        "coordination note closing the matrix",
+        "gold route leaving toward the lower-left edge"
+      ],
+      "overlaps": [
+        "a gold route touches the headline's right edge, rises, and travels across the upper field",
+        "the shared vertical spine runs through all five rows and bends into the bottom note boundary",
+        "the lower route exits through the left edge, linking the matrix to the wider page sequence"
+      ],
+      "quiet_zones": [
+        "the entire right half remains open white space",
+        "air above the matrix isolates the orientation statement",
+        "row padding remains generous enough for the alternating pale substrates to read as bands rather than compact table cells",
+        "the note has a clear buffer beneath the fifth row"
+      ],
+      "tension": "a dense, highly ordered left ledger is held against an almost empty right field; the imbalance conveys editorial confidence and makes the five disciplines feel like one coherent system",
+      "image_copy_relation": "there is no focal imagery; the composition relies on live typography, subtle row fields, and the gold route, so adding an illustration or photo to the quiet side would destroy the intended authority",
+      "assembly": {
+        "profile": "code-first",
+        "score": 0,
+        "signals": [
+          "semantic information matrix",
+          "simple geometric route",
+          "no expressive art anchor",
+          "ordinary content grid intentionally constrained to one side"
+        ],
+        "surface": "white CSS field with alternating warm ivory and very pale blue row substrates",
+        "layer_stack": [
+          "white CSS surface",
+          "coded alternating row fields",
+          "live eyebrow, headline, discipline names, descriptions, and coordination note",
+          "responsive gold SVG spine, nodes, bends, and edge continuations"
+        ],
+        "connector_relationships": [
+          "one vertical spine coordinates all five discipline rows",
+          "the spine bends into the bottom coordination note",
+          "the upper headline route and lower edge route imply continuity without filling the quiet right field"
+        ],
+        "seam_contract": [
+          "the upper route may travel through the quiet field but carries no extra content",
+          "the lower route may exit the left edge",
+          "row fields end with the matrix and do not stretch across the full viewport"
+        ],
+        "responsive_contract": "preserve five paired discipline-and-explanation groups with one shared organizing spine; on narrow screens, stack each pair without inserting large gaps inside it and reduce the right quiet field rather than adding visual filler"
+      },
+      "content_groups": [
+        "orientation eyebrow + same-life headline",
+        "five discipline name-and-explanation pairs",
+        "shared spine + row nodes",
+        "coordination note"
+      ],
+      "space_roles": {
+        "internal_grouping": "each discipline remains directly paired with its explanation across the spine; all five rows stay close enough to read as one system",
+        "quiet_space": "the unoccupied right half is deliberate emphasis and must remain free of cards, photos, testimonials, or oversized ornament",
+        "section_transition": "the upper and lower route continuations own the entry and exit; transition spacing must not split the note from the matrix"
+      },
+      "viewport_intent": {
+        "desktop_composition": "native wide asymmetric information section with complete left matrix and empty right field visible together",
+        "must_be_simultaneously_visible": [
+          "headline",
+          "all five discipline names",
+          "all five descriptions",
+          "coordination note",
+          "intentional right-side quiet field"
+        ],
+        "may_continue_below_fold": [],
+        "crop_invariants": [
+          "no row content is clipped",
+          "the full vertical spine and its bend into the note remain visible"
+        ]
+      },
+      "invariants": [
+        "content remains concentrated in the left half",
+        "right half stays intentionally empty",
+        "five rows read as one matrix with one shared spine",
+        "alternating subtle row substrates",
+        "coordination note attaches to the matrix's lower boundary",
+        "no image is introduced to balance the asymmetry"
+      ],
+      "free": [
+        "exact matrix width and row padding",
+        "exact headline and description line breaks",
+        "mobile treatment of the shared spine",
+        "subtle values of alternating row fields",
+        "upper route length and bend depth, provided the quiet field remains quiet"
+      ]
+    },
+    {
+      "frame": "06-white-coat-paths",
+      "viewport_context": {
+        "reference_kind": "section-frame",
+        "bitmap_dimensions": {
+          "width": 1536,
+          "height": 864
+        },
+        "primary_css_viewport": {
+          "width": 1536,
+          "height": 864
+        },
+        "device_pixel_ratio": 1
+      },
+      "slot_contract": {
+        "container": "left editorial introduction and action paired with a cascading right-side ribbon of five physician-audience photo slots and attached labels",
+        "width_share": "copy occupies about the left third; the staggered photo-and-label system begins around the center and fills the right two-thirds, with one lower image extending back toward center",
+        "target_aspect_ratio": "wide landscape section using shallow diagonal-ended photo slots rather than uniform rectangles",
+        "intended_crop": "each photo retains the hands, procedure, workplace, or body orientation needed to identify its audience; diagonal masks may trim backgrounds but not the professional action",
+        "fold_requirement": "headline, planning-path action, and all five audience pathways remain visible together as one connected map",
+        "layout_authority": "the cascading slot system and label lanes set section geometry; source-photo aspect ratios must cover assigned masks and cannot create independent rows or change section height"
+      },
+      "focal_point": {
+        "what": "the cascading white-coat photo ribbon that turns five physician audiences into one connected planning map",
+        "where": "a descending diagonal sequence from the upper middle through the right side, counterweighted by the large headline on the left",
+        "region_ids": [1]
+      },
+      "dominance": "the oversized left promise and the multi-photo ribbon share dominance; gold labels and routes articulate the photographs without turning them into five equivalent cards",
+      "eye_path": [
+        "orientation eyebrow at upper left",
+        "large demanding-career headline",
+        "supporting paragraph and planning-path action",
+        "top physician consultation image and label",
+        "surgeon image and label",
+        "dentist image and label",
+        "practice-owner image and label",
+        "lower advanced-practice clinician image and label",
+        "outbound gold arrow at the lower right"
+      ],
+      "overlaps": [
+        "diagonally clipped image slots interlock visually, with one image beginning before the previous label lane fully ends",
+        "gold routes attach photo edges to their labels and bend around neighboring image slots",
+        "the lower clinician image breaks toward the bottom edge, making the audience map continue beyond a tidy grid",
+        "a line enters from the upper-left edge, turns into the image system, and later exits at the lower right"
+      ],
+      "quiet_zones": [
+        "pale-blue breathing room between the left copy block and the first photo edge",
+        "clear label lanes immediately to the right of each photo",
+        "open gaps between diagonal image ends keep the cascade legible",
+        "the lower-left area beneath the action remains mostly free except for the final image's approach"
+      ],
+      "tension": "large calm copy on the left faces a busy, descending clinical mosaic on the right; the diagonal masks and gold route turn many specialties into one system without flattening their differences",
+      "image_copy_relation": "the headline states the shared financial challenge while each adjacent image-label pair proves a distinct medical context; the audience photos must remain a connected ribbon, not detach into stock-photo cards below the copy",
+      "assembly": {
+        "profile": "hybrid-layered",
+        "score": 3,
+        "signals": [
+          "composition depends on overlapping and irregularly masked photo slots",
+          "responsive connector paths own label relationships",
+          "hierarchy is difficult to preserve with an ordinary card grid",
+          "approval depends on the specific clinical mosaic atmosphere"
+        ],
+        "surface": "soft pale-blue CSS field with restrained edge tonality",
+        "layer_stack": [
+          "pale-blue CSS surface",
+          "five independently cropped photographic slots with diagonal masks",
+          "live orientation copy, headline, description, action, audience names, and audience descriptions",
+          "responsive gold SVG route, nodes, label leaders, and outbound arrow"
+        ],
+        "connector_relationships": [
+          "each label leader terminates at its own photo edge",
+          "the longer route steps through the audience cascade and exits after the final right-side label",
+          "the upper-left entry line feeds into the first image anchor rather than becoming a decorative frame"
+        ],
+        "seam_contract": [
+          "photo masks may visually approach or overlap one another but remain independently crop-controlled",
+          "the lower clinician image may meet the bottom frame edge",
+          "connectors remain separate from photo pixels and live labels",
+          "label leaders may cross open surface but never run over faces or essential medical action"
+        ],
+        "responsive_contract": "recompose the five pathways as an alternating or vertical photo-label sequence, redraw leaders locally, and retain diagonal character on the strongest image edges; do not shrink the desktop mosaic or replace it with uniform cards"
+      },
+      "content_groups": [
+        "orientation eyebrow + headline + short rule",
+        "supporting paragraph + planning-path action",
+        "physicians and specialists photo + label",
+        "surgeons photo + label",
+        "dentists photo + label",
+        "practice owners photo + label",
+        "advanced-practice clinicians photo + label",
+        "continuous route + outbound arrow"
+      ],
+      "space_roles": {
+        "internal_grouping": "each photo stays closest to its own role name and description; left intro copy remains one compact decision block",
+        "quiet_space": "open pale-blue channels separate photo masks and preserve label readability; left space below the action is not a slot for another card",
+        "section_transition": "incoming and outgoing route segments carry continuity; transition spacing may grow only outside the photo-label groups"
+      },
+      "viewport_intent": {
+        "desktop_composition": "native wide audience map with left promise and all five clinical pathways visible at once",
+        "must_be_simultaneously_visible": [
+          "demanding-career headline",
+          "planning-path action",
+          "all five audience images",
+          "all five audience names",
+          "connected route"
+        ],
+        "may_continue_below_fold": [
+          "the lower clinician image may touch the fold edge but its person and attached label must remain recognizable"
+        ],
+        "crop_invariants": [
+          "physician consultation hands remain visible",
+          "surgeons and operating-room context remain visible",
+          "dentist, patient, and dental setting remain visible",
+          "practice-owner consultation context remains visible",
+          "advanced-practice clinician's white coat and hospital corridor remain visible"
+        ]
+      },
+      "invariants": [
+        "large left promise balanced by a descending right-side photo ribbon",
+        "five distinct clinical audiences remain visible",
+        "diagonal slot geometry and staggered placement",
+        "each label remains physically attached to its own photo",
+        "open channels between photo-label groups",
+        "entry-to-exit gold route preserves a connected map",
+        "source imagery covers assigned slots without controlling layout"
+      ],
+      "free": [
+        "exact diagonal angles and overlap amounts",
+        "exact photo crops within the stated subject invariants",
+        "exact headline line breaks and label measures",
+        "mobile ordering of audience groups",
+        "route geometry after responsive recomposition"
+      ]
+    },
+    {
+      "frame": "07-accountable-planner",
+      "viewport_context": {
+        "reference_kind": "section-frame",
+        "bitmap_dimensions": {
+          "width": 1536,
+          "height": 864
+        },
+        "primary_css_viewport": {
+          "width": 1536,
+          "height": 864
+        },
+        "device_pixel_ratio": 1
+      },
+      "slot_contract": {
+        "container": "narrow atmospheric still-life strip at the far left, tall portrait plate in the center-left, and a broad planner narrative on the right",
+        "width_share": "the ambient still-life strip occupies about the left sixth, the portrait plate about the next quarter, and the narrative uses most of the right half",
+        "target_aspect_ratio": "portrait slot around two-thirds as wide as it is high, with a very narrow full-height landscape crop at the far left",
+        "intended_crop": "retain enough books, coffee, notebook, and pen in the left strip to establish the editorial environment; keep the planner portrait complete from head through torso",
+        "fold_requirement": "portrait, relationship promise, planner name and credentials, role description, and meet action remain visible together",
+        "layout_authority": "the three-part composition sizes the ambient strip and portrait slot before images are fitted; intrinsic portrait or still-life dimensions must not alter column shares or section height"
+      },
+      "focal_point": {
+        "what": "the tall planner portrait as the accountable human anchor",
+        "where": "center-left between the cropped still life and the large relationship promise",
+        "region_ids": [1]
+      },
+      "dominance": "portrait and large relationship promise are co-dominant; the left still-life strip is atmospheric, while name, credentials, description, and action step down in a clear editorial hierarchy",
+      "eye_path": [
+        "books and coffee entering at the far left",
+        "tall planner portrait",
+        "Meet the planner eyebrow",
+        "large shared-strategy promise",
+        "Michael A. Epps name and credentials",
+        "coordinating-role description",
+        "Meet Michael action",
+        "gold continuation line dropping beneath the portrait"
+      ],
+      "overlaps": [
+        "the portrait plate sits over the same warm field as the narrative rather than inside a separate card column",
+        "a gold line enters from above, bends toward the portrait, continues behind its horizontal axis, and drops below it",
+        "the far-left photographic strip is cropped by the frame edge and visually meets the portrait's field",
+        "the promise's lower gold rule extends toward a terminal node, tying headline scale to the planner story"
+      ],
+      "quiet_zones": [
+        "warm open space above and around the narrative block",
+        "a clear gutter between portrait and promise",
+        "unoccupied field below the action and to the far right preserves calm authority",
+        "the left still-life crop stays sparse enough not to compete with the face"
+      ],
+      "tension": "the human portrait interrupts an unusually narrow atmospheric strip before a broad, open narrative field; this off-center sequence makes the planner feel like the bridge between physician context and coordinated advice",
+      "image_copy_relation": "the still life establishes the brand world, the portrait establishes accountability, and the copy explains the relationship; the portrait cannot be reduced to a small avatar beside the name",
+      "assembly": {
+        "profile": "anchored-art",
+        "score": 2,
+        "signals": [
+          "two independently cropped photographic anchors",
+          "connector crosses and exits portrait territory",
+          "approval depends on restrained editorial atmosphere"
+        ],
+        "surface": "warm ivory CSS field shared behind portrait and narrative",
+        "layer_stack": [
+          "ivory CSS surface",
+          "far-left photographic still-life strip",
+          "tall client portrait plate",
+          "live planner eyebrow, promise, name, credentials, description, and action",
+          "responsive gold SVG continuation line, headline rule, and nodes"
+        ],
+        "connector_relationships": [
+          "the incoming route bends toward the portrait as the human answer to the prior planning system",
+          "the portrait route drops toward the next section",
+          "the headline rule terminates after the promise instead of underlining every text row"
+        ],
+        "seam_contract": [
+          "the still-life image may be cropped by the left frame edge but not bleed behind the main narrative",
+          "the portrait remains a discrete tall plate over the ivory surface",
+          "connector lines stay independent of both images and may pass behind their layout territory only where named"
+        ],
+        "responsive_contract": "lead with the promise or portrait according to available width, but keep the portrait large enough to establish accountability and keep name, credentials, role, and action together; crop the ambient still life aggressively before shrinking the planner portrait"
+      },
+      "content_groups": [
+        "ambient books + coffee + notebook still life",
+        "planner portrait + portrait identity",
+        "planner eyebrow + relationship promise + headline rule",
+        "name + credentials + coordinating-role description + action"
+      ],
+      "space_roles": {
+        "internal_grouping": "name, credentials, description, and action remain one planner-information block; portrait identity remains attached to the portrait",
+        "quiet_space": "warm open field around the promise and below the action conveys discretion and should not receive badges or extra proof cards",
+        "section_transition": "the incoming and descending gold route carries sequence around the portrait; section padding must not separate the name from its role description"
+      },
+      "viewport_intent": {
+        "desktop_composition": "native wide planner introduction with environmental strip, complete portrait, and narrative visible together",
+        "must_be_simultaneously_visible": [
+          "planner portrait",
+          "shared-strategy promise",
+          "Michael A. Epps name and credentials",
+          "role description",
+          "Meet Michael action"
+        ],
+        "may_continue_below_fold": [
+          "the descending connector may meet the fold edge"
+        ],
+        "crop_invariants": [
+          "planner face, shoulders, and sufficient torso remain visible",
+          "portrait remains recognizably vertical",
+          "left strip retains both professional reading material and a desk object"
+        ]
+      },
+      "invariants": [
+        "tall center-left portrait remains a first-order anchor",
+        "large promise occupies the right rather than stacking below a small image",
+        "narrow ambient still-life strip remains subordinate at the far left",
+        "gold route enters, acknowledges, and exits the portrait territory",
+        "name, credentials, coordinating role, and action stay grouped",
+        "images cover slots whose dimensions are controlled by layout"
+      ],
+      "free": [
+        "exact width of the ambient strip",
+        "exact portrait crop within the stated body invariant",
+        "headline line breaks, text measure, and rule length",
+        "mobile order of promise and portrait",
+        "connector bends after responsive recomposition"
+      ]
+    },
+    {
+      "frame": "08-next-decision",
+      "viewport_context": {
+        "reference_kind": "section-frame",
+        "bitmap_dimensions": {
+          "width": 1536,
+          "height": 864
+        },
+        "primary_css_viewport": {
+          "width": 1536,
+          "height": 864
+        },
+        "device_pixel_ratio": 1
+      },
+      "slot_contract": {
+        "container": "full-bleed dark office decision canvas with a centered headline, two balanced action paths, and a narrow centered brand close",
+        "width_share": "headline spans the middle half; the call path occupies the left inner third and the guide path the right inner third; both join at a central lower spine",
+        "target_aspect_ratio": "wide landscape image canvas with a small portrait-oriented guide-cover slot nested inside the right path",
+        "intended_crop": "retain the left desk and stethoscope, right leather chair, and upper shelving as framing cues while keeping the central navy field calm enough for type; guide-cover art stays fully visible inside its reserved portrait slot",
+        "fold_requirement": "complete headline, both decision paths, both actions, contact line, powered-by close, and disclosure remain visible as one final decision scene",
+        "layout_authority": "the centered split and lower merge define the section; background and guide-cover media must cover their assigned canvas or slot and can never set path height, footer position, or overall section dimensions"
+      },
+      "focal_point": {
+        "what": "the centered Choose the next step headline and the gold fork that divides into two equal decision paths",
+        "where": "headline at upper center, with the fork meeting on the center axis before branching left and right",
+        "region_ids": [2, 3, 4]
+      },
+      "dominance": "the centered headline leads, followed by two deliberately equal decisions; the photographic office frames the scene from the edges and the contact-brand close remains tertiary",
+      "eye_path": [
+        "large centered next-step headline",
+        "central fork junction",
+        "left calendar icon and strategy-call title",
+        "right guide icon and guide title",
+        "left and right explanatory proof",
+        "paired gold actions",
+        "paths returning to the central lower spine",
+        "email contact",
+        "powered-by signature and educational disclosure"
+      ],
+      "overlaps": [
+        "gold routes leave the icon anchors, bend inward to one central fork, then descend and reunite beneath the two actions",
+        "left and right content float directly over the full photographic canvas rather than inside opaque cards",
+        "the guide-cover placeholder occupies reserved space beside the right explanation without breaking the right path",
+        "the lower central spine passes through contact and brand-close territory as a visual closure"
+      ],
+      "quiet_zones": [
+        "dark central field around the headline",
+        "clear breathing room between the two action paths",
+        "space around each icon circle and title",
+        "narrow calm band around the email and brand close",
+        "photographic edge objects remain dark and low contrast so they do not enter the decision lanes"
+      ],
+      "tension": "a perfectly centered headline releases into two balanced but meaningfully different paths, while the asymmetrical office objects at the edges keep the closing scene human and atmospheric rather than diagrammatically sterile",
+      "image_copy_relation": "the office photograph is the canvas and environmental frame; live copy and gold routing create the decision mechanism in its quiet center, so the choices must not become detached white cards or a generic stacked CTA section",
+      "assembly": {
+        "profile": "image-canvas",
+        "score": 3,
+        "signals": [
+          "photographic office is genuinely woven through the full surface",
+          "composition depends on a branching and rejoining connector system",
+          "visual hierarchy is scene-like rather than an ordinary two-card grid",
+          "approval depends on the dark executive atmosphere"
+        ],
+        "surface": "full-bleed dark office photographic plate with a navy center treatment that protects live-copy contrast",
+        "layer_stack": [
+          "full-bleed photographic image canvas",
+          "navy tonal veil and edge vignette",
+          "responsive gold SVG fork, branches, nodes, rules, and lower merge",
+          "live headline, decision titles, descriptions, proof, actions, contact, brand close, and disclosure",
+          "guide-cover client asset or explicit reserved placeholder inside the right decision path"
+        ],
+        "connector_relationships": [
+          "one centered junction gives equal authority to the call and guide paths",
+          "each branch begins at its path icon and returns below its action",
+          "the lower merge hands both choices to one contact and one firm identity",
+          "title rules and information icons support their own paths without becoming separate connectors"
+        ],
+        "seam_contract": [
+          "photographic canvas remains continuous behind both paths and the lower close",
+          "left desk and right chair may be cropped by frame edges but never cover essential live copy",
+          "the guide-cover slot remains independent from the background plate and routing",
+          "gold routing may cross quiet navy field but must not be baked into the photograph"
+        ],
+        "responsive_contract": "stack the two decisions as complete, equal paths, redraw the fork into a clear vertical branch-and-return relationship, and place the shared contact close after both; preserve the dark office atmosphere and do not proportionally shrink the desktop decision tree"
+      },
+      "content_groups": [
+        "centered next-step headline",
+        "strategy-call icon + title + description + trust note + action",
+        "guide icon + title + description + fulfillment note + guide cover + action",
+        "shared fork + lower merge",
+        "email contact",
+        "powered-by signature + educational disclosure"
+      ],
+      "space_roles": {
+        "internal_grouping": "each path's title, proof, visual cue, and action stay close enough to form one choice; email and firm signature stay one shared closing group",
+        "quiet_space": "the central navy field separates paths and protects the headline; edge photography provides atmosphere without becoming extra content",
+        "section_transition": "the lower merge closes the page into one contact and identity; any extra footer spacing belongs after the disclosure, not between a choice and its action"
+      },
+      "viewport_intent": {
+        "desktop_composition": "native wide final decision scene with both paths and their shared close visible simultaneously",
+        "must_be_simultaneously_visible": [
+          "complete next-step headline",
+          "strategy-call path and action",
+          "guide path, cover slot, and action",
+          "shared route junction and lower merge",
+          "email contact and firm signature"
+        ],
+        "may_continue_below_fold": [
+          "the educational disclosure may sit at the fold edge on shorter laptop viewports"
+        ],
+        "crop_invariants": [
+          "left desk and stethoscope remain recognizable as a framing cue",
+          "right leather chair remains recognizable as a framing cue",
+          "guide cover remains fully visible and portrait-oriented",
+          "no background object intrudes into the headline or button text"
+        ]
+      },
+      "invariants": [
+        "centered headline above two equal decision paths",
+        "one gold fork branches and later reunites the paths",
+        "both choices remain visible and equivalent in visual weight",
+        "full-bleed office atmosphere frames rather than competes with content",
+        "guide cover keeps a dedicated portrait slot",
+        "shared contact and powered-by close follow both decisions",
+        "background and guide-cover intrinsic geometry never control layout"
+      ],
+      "free": [
+        "exact line breaks and measures inside each choice",
+        "exact background crop within the named edge-object invariants",
+        "button widths and small icon implementation",
+        "mobile order of the two paths, provided neither is demoted",
+        "responsive fork geometry and contact-close spacing"
+      ]
+    }
+  ]
+}

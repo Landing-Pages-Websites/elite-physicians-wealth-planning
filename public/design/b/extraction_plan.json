@@ -1,0 +1,684 @@
+{
+  "direction": "b",
+  "frames": [
+    {
+      "frame": "01-one-plan",
+      "bg": "#041C44",
+      "bg_token": "ink",
+      "regions": [
+        {
+          "id": 1,
+          "box": [12, 20, 1523, 834],
+          "verdict": "extract",
+          "what": "hybrid hero composition containing one medical workstation photograph, live content, atlas geometry, and a neutral Michael Epps slot",
+          "asset_file": "elements/one-plan-physician-workstation.png",
+          "fidelity_drivers": [
+            "cool documentary hospital lighting and shallow background focus",
+            "specific pairing of radiology monitors, writing hand, keyboard, and white coat",
+            "natural fabric, skin, glass, and screen material texture"
+          ],
+          "section_owner": "hero medical evidence frame",
+          "narrative_job": "Immediately grounds coordinated wealth planning in a credible physician work environment.",
+          "presentation": {
+            "mode": "framed-panel",
+            "alpha_required": false,
+            "intended_background": "white token #FFFFFF",
+            "crop_contract": "Preserve the radiology screens, writing hand, both white-coat forearms, keyboard, and clinical background; apply the clipped upper-left corner with CSS rather than baking it.",
+            "minimum_visible_fraction": "At least 85% of the photographic composition, including all listed medical cues."
+          },
+          "hybrid_layers": [
+            {
+              "verdict": "code",
+              "what": "all hero copy, buttons, evidence panel, rails, topographic contours, and panel clipping",
+              "build_note": "Use live Inter role text, CSS grids, token fields, clip-path polygons, layered SVG contour strokes, and hero-calibration-rail ornament ticks."
+            },
+            {
+              "verdict": "code",
+              "what": "neutral Michael Epps portrait placeholder",
+              "source": "build-time-client-photo",
+              "build_note": "Render a clipped CSS client-photo slot with neutral fallback silhouette, object-fit cover, and no extracted or generated person pixels."
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "box": [823, 337, 971, 355],
+          "verdict": "code",
+          "what": "Coordinated strategy evidence label",
+          "build_note": "Set live editorial_interrupt text in Cormorant Garamond 500 over the ink token panel with centered alignment."
+        },
+        {
+          "id": 3,
+          "box": [828, 413, 963, 429],
+          "verdict": "code",
+          "what": "Physician-focused evidence label",
+          "build_note": "Set live editorial_interrupt text in Cormorant Garamond 500 between two action-token rules and a centered gold dot."
+        },
+        {
+          "id": 4,
+          "box": [832, 486, 959, 505],
+          "verdict": "code",
+          "what": "Ongoing review evidence label",
+          "build_note": "Set live editorial_interrupt text in Cormorant Garamond 500 on the compact ink panel with symmetric CSS spacing."
+        }
+      ]
+    },
+    {
+      "frame": "02-career-signal",
+      "bg": "#FCFCFC",
+      "bg_token": "white",
+      "regions": [
+        {
+          "id": 1,
+          "box": [12, 225, 411, 463],
+          "verdict": "code",
+          "what": "lower-left mist contour field and opening rail segment",
+          "build_note": "Layer mist-token radial gradients with low-opacity inline SVG contour paths beneath the career-coordinate-ticks rail and gold points."
+        },
+        {
+          "id": 2,
+          "box": [101, 78, 650, 168],
+          "verdict": "code",
+          "what": "career stages section heading",
+          "build_note": "Render live h2 Inter 700 ink-token text with the approved two-line desktop and mobile break invariant."
+        },
+        {
+          "id": 3,
+          "box": [12, 12, 1523, 52],
+          "verdict": "code",
+          "what": "thin navy transition band and top calibration rule",
+          "build_note": "Use a full-width ink-token CSS band with a one-pixel mist rule, short ticks, and one action-token decision point."
+        },
+        {
+          "id": 4,
+          "box": [647, 328, 1523, 462],
+          "verdict": "code",
+          "what": "right half of the sloped career calibration rail",
+          "build_note": "Draw career-coordinate-ticks as responsive inline SVG: one ink diagonal stroke, repeated perpendicular ticks, action dots, and vertical label stems."
+        },
+        {
+          "id": 5,
+          "box": [197, 194, 376, 235],
+          "verdict": "code",
+          "what": "resident to established physician signal label",
+          "build_note": "Place live utility Inter 600 ink text above an SVG stem and action dot, preserving the approved two-line label."
+        },
+        {
+          "id": 6,
+          "box": [865, 263, 1021, 301],
+          "verdict": "code",
+          "what": "peak earning years to retirement signal label",
+          "build_note": "Place live utility Inter 600 ink text above an SVG stem and action dot with a strict two-line desktop wrap."
+        },
+        {
+          "id": 7,
+          "box": [1156, 316, 1332, 352],
+          "verdict": "code",
+          "what": "one strategy reviewed as life changes signal label",
+          "build_note": "Place live utility Inter 600 ink text above the final SVG stem and action dot without decorative station numbering."
+        },
+        {
+          "id": 8,
+          "box": [555, 222, 676, 259],
+          "verdict": "code",
+          "what": "employed to practice owner signal label",
+          "build_note": "Place live utility Inter 600 ink text above an SVG stem and action dot, preserving compact centered line spacing."
+        },
+        {
+          "id": 9,
+          "box": [315, 277, 636, 329],
+          "verdict": "code",
+          "what": "middle segment of the sloped career calibration rail",
+          "build_note": "Continue the career-coordinate-ticks inline SVG with an ink stroke, evenly spaced fine ticks, gold node, and longer milestone stem."
+        }
+      ]
+    },
+    {
+      "frame": "03-separate-rooms",
+      "bg": "#FCFCF4",
+      "bg_token": "surface",
+      "regions": [
+        {
+          "id": 1,
+          "box": [506, 12, 1523, 804],
+          "verdict": "inpaint",
+          "what": "topographic role-island constellation artwork behind live professional labels and geometric connector paths",
+          "asset_file": "elements/separate-rooms-topographic-islands.png",
+          "fidelity_drivers": [
+            "five distinct irregular torn-map silhouettes plus the central priority island",
+            "dense nested contour bands with uneven spacing and organic edge rhythm",
+            "precise stacked-paper shadows, pale blue wash, stipple fields, and depth compositing"
+          ],
+          "section_owner": "coordination gap role constellation",
+          "narrative_job": "Makes fragmented professional advice feel physically separate while keeping the physician's priorities visually central.",
+          "presentation": {
+            "mode": "transparent-cutout",
+            "alpha_required": true,
+            "intended_background": "surface token #F6F2E8 transitioning into white token #FFFFFF",
+            "crop_contract": "Keep every island silhouette complete with its contour rings and cast shadow; remove only live labels and crosshair glyphs, repairing only pixels they occlude.",
+            "minimum_visible_fraction": "All six island forms must remain complete; no island may be cropped below 95%."
+          },
+          "hybrid_layers": [
+            {
+              "verdict": "code",
+              "what": "professional names, central priorities label, dashed connectors, action nodes, and crosshair markers",
+              "build_note": "Overlay live Inter utility labels and a responsive SVG topographic-role-constellation path with dashed ink connectors, gold nodes, and simple crosshairs."
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "box": [42, 237, 490, 676],
+          "verdict": "code",
+          "what": "coordination-gap headline and explanatory copy",
+          "build_note": "Render live h2 Inter 700 ink text and body Inter 400 charcoal text with the approved four-line headline relationship."
+        },
+        {
+          "id": 3,
+          "box": [12, 734, 707, 851],
+          "verdict": "extract",
+          "what": "lower topographic contour transition strip beneath the functional calibration rail",
+          "asset_file": "elements/separate-rooms-lower-contour-strip.png",
+          "fidelity_drivers": [
+            "reference-specific organic contour spacing and irregular clipped boundary",
+            "pale mist wash with layered hand-drawn line density",
+            "seam relationship to the central constellation field"
+          ],
+          "section_owner": "coordination gap lower transition",
+          "narrative_job": "Carries the atlas terrain out of the fragmented constellation and into the next section.",
+          "presentation": {
+            "mode": "transparent-cutout",
+            "alpha_required": true,
+            "intended_background": "surface token #F6F2E8",
+            "crop_contract": "Preserve the full irregular upper contour edge and the full-width organic line field; rebuild the straight rail and ticks separately in SVG.",
+            "minimum_visible_fraction": "At least 90% of the strip width and its entire irregular seam."
+          }
+        },
+        {
+          "id": 4,
+          "box": [12, 12, 608, 61],
+          "verdict": "extract",
+          "what": "upper topographic contour transition strip",
+          "asset_file": "elements/separate-rooms-upper-contour-strip.png",
+          "fidelity_drivers": [
+            "many nonuniform pale contour curves",
+            "organic lower shoreline silhouette with small notches",
+            "soft mist-on-white material texture"
+          ],
+          "section_owner": "coordination gap upper transition",
+          "narrative_job": "Introduces the coordination section as a mapped terrain rather than a conventional card grid.",
+          "presentation": {
+            "mode": "full-bleed",
+            "alpha_required": true,
+            "intended_background": "white token #FFFFFF",
+            "crop_contract": "Keep the lower shoreline continuous across the visible strip and retain all contour detail; code the navy boundary rule separately.",
+            "minimum_visible_fraction": "Entire strip width and shoreline must remain visible on desktop; at least 70% width on mobile."
+          }
+        },
+        {
+          "id": 5,
+          "box": [1192, 667, 1471, 748],
+          "verdict": "code",
+          "what": "coordination boundary note panel",
+          "build_note": "Use a white-token CSS rectangle with ink border, tiny corner dots, action compass SVG, divider, and live editorial_interrupt copy."
+        },
+        {
+          "id": 6,
+          "box": [587, 504, 728, 596],
+          "verdict": "code",
+          "what": "insurance professional island label and crosshair",
+          "build_note": "Overlay live utility Inter 600 ink text plus a simple inline SVG crosshair centered within the extracted island artwork."
+        },
+        {
+          "id": 7,
+          "box": [961, 602, 1065, 692],
+          "verdict": "code",
+          "what": "financial advisor island label and crosshair",
+          "build_note": "Overlay live utility Inter 600 ink text plus a simple inline SVG crosshair centered within the extracted island artwork."
+        },
+        {
+          "id": 8,
+          "box": [109, 158, 398, 173],
+          "verdict": "code",
+          "what": "coordination gap eyebrow and gold rule",
+          "build_note": "Set live utility Inter 600 uppercase ink text beside a one-pixel action-token rule terminating in a small gold dot."
+        },
+        {
+          "id": 9,
+          "box": [1341, 366, 1414, 457],
+          "verdict": "code",
+          "what": "TPA island label and crosshair",
+          "build_note": "Overlay live utility Inter 600 ink text plus a simple inline SVG crosshair centered within the extracted island artwork."
+        },
+        {
+          "id": 10,
+          "box": [527, 431, 604, 516],
+          "verdict": "code",
+          "what": "insurance island contour overlap edge",
+          "build_note": "Preserve the extracted irregular island edge; use CSS z-index and transparent padding so adjacent live labels never clip its shadow."
+        },
+        {
+          "id": 11,
+          "box": [737, 24, 798, 96],
+          "verdict": "code",
+          "what": "top-center registration notch and decision point",
+          "build_note": "Draw a downward ink triangle, one action-token circular node, and a fine vertical SVG registration stem over the upper strip."
+        },
+        {
+          "id": 12,
+          "box": [48, 150, 82, 202],
+          "verdict": "code",
+          "what": "coordination compass symbol",
+          "build_note": "Draw the compass as inline SVG using concentric ink strokes, four directional points, and a small action-token center accent."
+        }
+      ]
+    },
+    {
+      "frame": "04-blueprint-rounds",
+      "bg": "#F4F4FC",
+      "bg_token": "mist",
+      "regions": [
+        {
+          "id": 1,
+          "box": [563, 57, 1379, 768],
+          "verdict": "inpaint",
+          "what": "intricate radial blueprint instrument underlying six semantic phase plates",
+          "asset_file": "elements/blueprint-radial-instrument.png",
+          "fidelity_drivers": [
+            "numerous precisely nested circles, polar grid divisions, directional arrows, and uneven technical annotations",
+            "specific layered opacity, dashed construction arcs, blue drafting lines, and tiny gold calibration intersections",
+            "reference-specific optical density and precise radial compositing that a simplified SVG would flatten"
+          ],
+          "section_owner": "wealth blueprint process instrument",
+          "narrative_job": "Turns six planning phases into a rigorous, continuously recalibrated medical-style instrument.",
+          "presentation": {
+            "mode": "transparent-cutout",
+            "alpha_required": true,
+            "intended_background": "mist token #DCE8F2 over white token #FFFFFF",
+            "crop_contract": "Preserve the complete circular instrument, all arrows, ticks, grid lines, and gold nodes; remove the six live phase plates and repair only the ring pixels actually hidden beneath them.",
+            "minimum_visible_fraction": "The full circle and all six phase attachment points must remain visible on desktop; mobile may use a focused crop retaining the center and six nodes."
+          },
+          "hybrid_layers": [
+            {
+              "verdict": "code",
+              "what": "six numbered phase plates and their descriptive copy",
+              "build_note": "Build six clipped CSS plates with mist fills, double ink outlines, shadows, live Inter phase numbers and labels, and SVG connector stems."
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "box": [12, 12, 755, 836],
+          "verdict": "code",
+          "what": "left and bottom blueprint calibration frame",
+          "build_note": "Draw responsive inline SVG frame rails with ink strokes, repeated fine ticks, action nodes, concentric corner target, and lower exit line."
+        },
+        {
+          "id": 3,
+          "box": [75, 457, 367, 625],
+          "verdict": "code",
+          "what": "wealth blueprint explanatory body copy",
+          "build_note": "Render live body Inter 400 charcoal text with controlled line length and the approved three-line phase-summary density relationship."
+        },
+        {
+          "id": 4,
+          "box": [1116, 700, 1507, 836],
+          "verdict": "code",
+          "what": "full process CTA and route outcome rail",
+          "build_note": "Build an ink-token clipped button with action border and arrow, live Inter 700 CTA text, route label, dashed gold line, and target node."
+        },
+        {
+          "id": 5,
+          "box": [76, 176, 538, 239],
+          "verdict": "code",
+          "what": "first line of blueprint h2",
+          "build_note": "Render live h2 Inter 700 ink text as the first approved headline line, maintaining strong left alignment and compact leading."
+        },
+        {
+          "id": 6,
+          "box": [74, 331, 511, 423],
+          "verdict": "code",
+          "what": "third line of blueprint h2",
+          "build_note": "Render live h2 Inter 700 ink text as the third approved headline line with the action endpoint aligned beneath it."
+        },
+        {
+          "id": 7,
+          "box": [76, 252, 415, 303],
+          "verdict": "code",
+          "what": "second line of blueprint h2",
+          "build_note": "Render live h2 Inter 700 ink text as the second approved headline line, preserving the three-line desktop composition."
+        },
+        {
+          "id": 8,
+          "box": [783, 12, 1523, 56],
+          "verdict": "code",
+          "what": "top-right blueprint calibration rail",
+          "build_note": "Use inline SVG for the top rail with an ink baseline, repeated fine ticks, one circular target, and low-opacity mist construction line."
+        },
+        {
+          "id": 9,
+          "box": [1481, 97, 1503, 685],
+          "verdict": "code",
+          "what": "right vertical blueprint calibration rail",
+          "build_note": "Draw a vertical inline SVG ink rail with major and minor ticks, three action dots, and circular endpoint targets."
+        },
+        {
+          "id": 10,
+          "box": [76, 114, 444, 144],
+          "verdict": "code",
+          "what": "wealth blueprint editorial eyebrow",
+          "build_note": "Set live editorial_interrupt Cormorant Garamond 500 ink text, preserving trademark styling without substituting fonts or decorative borders."
+        },
+        {
+          "id": 11,
+          "box": [585, 77, 704, 123],
+          "verdict": "code",
+          "what": "decisions aligned editorial interrupt",
+          "build_note": "Set live editorial_interrupt Cormorant Garamond 500 ink text beside a thin action connector and small gold endpoint."
+        }
+      ]
+    },
+    {
+      "frame": "05-five-decisions",
+      "bg": "#FCFCFC",
+      "bg_token": "white",
+      "regions": [
+        {
+          "id": 1,
+          "box": [107, 146, 465, 440],
+          "verdict": "code",
+          "what": "five decisions section headline",
+          "build_note": "Render live h2 Inter 700 ink text with the approved five-line break pattern and tight analytical leading."
+        },
+        {
+          "id": 2,
+          "box": [1148, 370, 1282, 589],
+          "verdict": "code",
+          "what": "practice and business planning discipline content",
+          "build_note": "Build a stepped mist-token column with layered radial gradients, live utility Inter 600 heading, body Inter 400 copy, and action stem."
+        },
+        {
+          "id": 3,
+          "box": [758, 369, 898, 593],
+          "verdict": "code",
+          "what": "wealth management discipline content",
+          "build_note": "Build a stepped mist-token column with layered radial gradients, live utility Inter 600 heading, body Inter 400 copy, and action stem."
+        },
+        {
+          "id": 4,
+          "box": [955, 370, 1090, 563],
+          "verdict": "code",
+          "what": "retirement strategy discipline content",
+          "build_note": "Build a stepped mist-token column with layered radial gradients, live utility Inter 600 heading, body Inter 400 copy, and action stem."
+        },
+        {
+          "id": 5,
+          "box": [135, 617, 397, 698],
+          "verdict": "code",
+          "what": "regulated-services boundary note",
+          "build_note": "Render live small body Inter 400 charcoal copy beside a one-pixel action-token vertical rule and circular endpoint."
+        },
+        {
+          "id": 6,
+          "box": [522, 368, 654, 568],
+          "verdict": "code",
+          "what": "tax strategy discipline content",
+          "build_note": "Build a stepped mist-token column with layered radial gradients, live utility Inter 600 heading, body Inter 400 copy, and action stem."
+        },
+        {
+          "id": 7,
+          "box": [1333, 370, 1428, 592],
+          "verdict": "code",
+          "what": "legacy planning discipline content",
+          "build_note": "Build a stepped mist-token column with layered radial gradients, live utility Inter 600 heading, body Inter 400 copy, and action stem."
+        },
+        {
+          "id": 8,
+          "box": [109, 501, 307, 552],
+          "verdict": "code",
+          "what": "one life five disciplines editorial interrupt",
+          "build_note": "Set live editorial_interrupt Cormorant Garamond 500 ink text under a short ink rule, preserving its compact three-line cadence."
+        },
+        {
+          "id": 9,
+          "box": [108, 69, 334, 96],
+          "verdict": "code",
+          "what": "five planning disciplines eyebrow",
+          "build_note": "Set live utility Inter 600 uppercase ink text above a one-pixel action-token rule with a small terminal gold dot."
+        }
+      ]
+    },
+    {
+      "frame": "06-white-coat-paths",
+      "bg": "#E4ECF4",
+      "bg_token": "mist",
+      "regions": [
+        {
+          "id": 1,
+          "box": [52, 215, 1507, 729],
+          "verdict": "extract",
+          "what": "hybrid lower contact-sheet composition containing three unobscured medical photographs and live copy panels",
+          "asset_file": "elements/white-coat-lower-contact-sheet-photos.png",
+          "fidelity_drivers": [
+            "three distinct cool documentary scenes: dental equipment, planning conversation, and clinician in a corridor",
+            "specific medical tools, report papers, attire, hand positions, and architectural depth",
+            "consistent desaturated blue lighting and photographic texture across all crops"
+          ],
+          "section_owner": "who-we-serve lower contact sheet",
+          "narrative_job": "Shows that planning adapts to concrete medical roles and ownership contexts instead of generic finance personas.",
+          "presentation": {
+            "mode": "transparent-cutout",
+            "alpha_required": true,
+            "intended_background": "mist token #DCE8F2",
+            "crop_contract": "Extract only the three photographic rectangles in their reference proportions; exclude the headline, body, captions, CTA, white card fields, dots, and rail geometry.",
+            "minimum_visible_fraction": "Each of the three photographs must remain 100% visible inside its card crop on desktop and individually complete when stacked on mobile."
+          },
+          "hybrid_layers": [
+            {
+              "verdict": "code",
+              "what": "section headline, body, three captions, white card surfaces, and index accents",
+              "build_note": "Use live Inter role text, hard-edged white CSS caption plates, action stems and dots, and responsive grid placement over the extracted photo cutouts."
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "box": [576, 57, 1508, 408],
+          "verdict": "extract",
+          "what": "hybrid upper contact-sheet row containing physician consultation and surgeon photographs",
+          "asset_file": "elements/white-coat-upper-contact-sheet-photos.png",
+          "fidelity_drivers": [
+            "natural consultation gestures with white coat and stethoscope",
+            "rear-view surgeon tying a blue cap in a real operating room",
+            "matching cool clinical color grade, fabric detail, skin texture, and shallow-focus equipment"
+          ],
+          "section_owner": "who-we-serve upper contact sheet",
+          "narrative_job": "Establishes immediate role recognition for physicians, specialists, and surgeons.",
+          "presentation": {
+            "mode": "transparent-cutout",
+            "alpha_required": true,
+            "intended_background": "mist token #DCE8F2",
+            "crop_contract": "Extract only both unobscured photographic rectangles in their original wide proportions; keep all labels, summaries, white caption plates, stems, and dots as code.",
+            "minimum_visible_fraction": "Both photographs must remain 100% visible on desktop and each subject's hands, torso, or tied cap must remain visible on mobile."
+          },
+          "hybrid_layers": [
+            {
+              "verdict": "code",
+              "what": "two caption plates and pathway labels",
+              "build_note": "Build hard-edged white caption panels with live utility Inter labels, body copy, action-token stems, and dots beneath each photo."
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "box": [53, 765, 352, 818],
+          "verdict": "code",
+          "what": "find your planning path CTA",
+          "build_note": "Build an ink-token rectangular button with live Inter 700 CTA label, action-token arrow, subtle shadow, and no rounded card treatment."
+        },
+        {
+          "id": 4,
+          "box": [422, 785, 638, 802],
+          "verdict": "code",
+          "what": "who-we-serve route outcome label",
+          "build_note": "Set live body Inter 400 charcoal route text after a dashed action-token line and small circular endpoint."
+        }
+      ]
+    },
+    {
+      "frame": "07-accountable-planner",
+      "bg": "#FCFCF4",
+      "bg_token": "surface",
+      "regions": [
+        {
+          "id": 1,
+          "box": [12, 29, 1487, 845],
+          "verdict": "inpaint",
+          "what": "full-bleed cool clinical desk and document photograph underneath the coded planner dossier",
+          "asset_file": "elements/accountable-planner-clinical-desk-plate.png",
+          "fidelity_drivers": [
+            "specific stethoscope, binder clip, pen, white coat pocket, and blue planning-document details",
+            "layered paper edges, cool daylight, realistic shadows, and tactile photographic surfaces",
+            "precise left-edge collage composition that makes the dossier feel physically placed on a physician's desk"
+          ],
+          "section_owner": "accountable planner background plate",
+          "narrative_job": "Locates the named planner inside the physician's working documents and professional context rather than a personality-brand portrait essay.",
+          "presentation": {
+            "mode": "full-bleed",
+            "alpha_required": false,
+            "intended_background": "surface token #F6F2E8",
+            "crop_contract": "Preserve all visible clinical objects and document edges; remove the overlaid coded dossier and repair only the pixels it occludes so the photographic scene is complete beneath responsive crops.",
+            "minimum_visible_fraction": "Desktop must retain the stethoscope, binder clip, coat pocket, and report fragments; mobile must retain at least two strong medical cues."
+          },
+          "hybrid_layers": [
+            {
+              "verdict": "code",
+              "what": "clipped dossier, mist backing plate, registration marks, credentials panel, live copy, and CTA",
+              "build_note": "Build layered clipped CSS polygons with white and mist token fills, ink outlines, soft shadows, simple SVG registration marks, and live Inter content."
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "box": [323, 170, 727, 658],
+          "verdict": "code",
+          "what": "Michael Epps portrait slot and credential strip",
+          "source": "build-time-client-photo",
+          "build_note": "Create a clipped CSS client-photo slot with object-fit cover and neutral fallback silhouette; never extract or generate Michael Epps, and keep credentials as live text."
+        },
+        {
+          "id": 3,
+          "box": [767, 378, 1303, 569],
+          "verdict": "code",
+          "what": "planner name, credentials, and explanatory copy",
+          "build_note": "Render live Inter h2-style name and credential text above body Inter 400 charcoal copy, preserving exact approved ChFC and RICP wording."
+        },
+        {
+          "id": 4,
+          "box": [765, 181, 1339, 352],
+          "verdict": "code",
+          "what": "accountable planner section headline",
+          "build_note": "Render live h2 Inter 700 ink text with the approved three-line desktop break and dotted ink registration rule beneath."
+        },
+        {
+          "id": 5,
+          "box": [780, 598, 1213, 639],
+          "verdict": "code",
+          "what": "credential limitation note panel",
+          "build_note": "Use a mist-token CSS panel with rounded minimal radius, simple target SVG, and live body Inter text naming only approved credentials."
+        },
+        {
+          "id": 6,
+          "box": [766, 137, 970, 150],
+          "verdict": "code",
+          "what": "meet the planner eyebrow",
+          "build_note": "Set live utility Inter 600 uppercase ink text beside a thin action-token rule ending in a small gold dot."
+        }
+      ]
+    },
+    {
+      "frame": "08-next-decision",
+      "bg": "#041C3C",
+      "bg_token": "ink",
+      "regions": [
+        {
+          "id": 1,
+          "box": [132, 279, 707, 737],
+          "verdict": "code",
+          "what": "strategy-call decision card, CTA, and outcome panel",
+          "build_note": "Build a white-token CSS decision plate with subtle mist gradients, ink rules, live Inter hierarchy, full-width ink CTA, action accents, and separate outcome panel."
+        },
+        {
+          "id": 2,
+          "box": [817, 291, 1388, 685],
+          "verdict": "code",
+          "what": "planning-guide decision card and customer-input notice",
+          "build_note": "Build a white-token CSS guide plate with mist gradients, live Inter copy, ink CTA, dotted action border notice, and simple target icon."
+        },
+        {
+          "id": 3,
+          "box": [446, 76, 1107, 262],
+          "verdict": "code",
+          "what": "closing headline, editorial calibration line, and branching gateway",
+          "build_note": "Render live h2 Inter 700 white text plus editorial_interrupt Cormorant line, then draw branching-decision-gateway as dotted SVG paths with gold nodes."
+        },
+        {
+          "id": 4,
+          "box": [811, 767, 1458, 841],
+          "verdict": "code",
+          "what": "right footer brand and compliance cluster",
+          "build_note": "Use a responsive footer grid with live Inter utility text, action-token vertical divider, and ink-field alignment above the ticked baseline."
+        },
+        {
+          "id": 5,
+          "box": [78, 832, 726, 841],
+          "verdict": "code",
+          "what": "left half of footer tick baseline",
+          "build_note": "Draw a one-pixel mist SVG baseline with repeated fine vertical ticks, one action target at center, and white corner registration marks."
+        },
+        {
+          "id": 6,
+          "box": [77, 769, 390, 804],
+          "verdict": "code",
+          "what": "footer email contact",
+          "build_note": "Render a simple outlined envelope SVG beside live utility Inter 600 white email text with accessible mailto interaction."
+        },
+        {
+          "id": 7,
+          "box": [25, 81, 42, 695],
+          "verdict": "code",
+          "what": "left vertical closing calibration rail",
+          "build_note": "Draw a vertical SVG mist rail with major and minor ticks, action cross-nodes, and white target circles at its endpoints."
+        },
+        {
+          "id": 8,
+          "box": [490, 777, 775, 800],
+          "verdict": "code",
+          "what": "footer Elite Physicians brand line",
+          "build_note": "Set live utility Inter 600 white brand text with trademark styling, preserving the exact approved wording and baseline alignment."
+        },
+        {
+          "id": 9,
+          "box": [802, 781, 1030, 796],
+          "verdict": "code",
+          "what": "Powered by Fiscal Vision Financial footer text",
+          "build_note": "Set live body Inter 400 white attribution text after a short dash, keeping it subordinate to the primary brand line."
+        },
+        {
+          "id": 10,
+          "box": [1496, 82, 1504, 395],
+          "verdict": "code",
+          "what": "upper-right vertical calibration rail",
+          "build_note": "Draw the upper SVG rail with a mist vertical stroke, alternating ticks, action cross-node, and white target cap."
+        },
+        {
+          "id": 11,
+          "box": [1497, 468, 1504, 695],
+          "verdict": "code",
+          "what": "lower-right vertical calibration rail",
+          "build_note": "Continue the right SVG rail with mist vertical stroke, alternating major and minor ticks, and action-token registration point."
+        }
+      ]
+    }
+  ]
+}

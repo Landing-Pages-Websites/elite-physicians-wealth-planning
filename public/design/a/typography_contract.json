@@ -1,0 +1,225 @@
+{
+  "version": 1,
+  "families": {
+    "display": {
+      "name": "Cormorant Garamond",
+      "locator": "next/font/google: Cormorant_Garamond; weights 400, 500, 600, 700; display swap",
+      "source": "web-provider",
+      "fallbacks": ["Georgia", "Times New Roman", "serif"],
+      "rationale": "Brand-specified display family; used generously for editorial authority without substituting another luxury serif."
+    },
+    "body": {
+      "name": "Inter",
+      "locator": "next/font/google: Inter; weights 400, 500, 600, 700; display swap",
+      "source": "web-provider",
+      "fallbacks": ["Arial", "Helvetica", "sans-serif"],
+      "rationale": "Brand-specified body family; used for precise clinical utility copy, actions, disclaimers, and diagram labels."
+    }
+  },
+  "roles": {
+    "h1": {
+      "family": "display",
+      "weight": 600,
+      "rationale": "Large lyrical display headlines carry the premium editorial voice while maintaining clear physician-planning specificity."
+    },
+    "h2": {
+      "family": "display",
+      "weight": 600,
+      "rationale": "Section-level headlines keep the same cultivated voice at quieter scale where the frame is ledger-led or explanatory."
+    },
+    "body": {
+      "family": "body",
+      "weight": 400,
+      "rationale": "Longer explanatory copy needs calm, accurate reading and clear compliance boundaries."
+    },
+    "utility": {
+      "family": "body",
+      "weight": 600,
+      "rationale": "Labels, CTA copy, notes, and professional-role annotations require precise spacing and compact scanning."
+    },
+    "cta": {
+      "family": "body",
+      "weight": 700,
+      "rationale": "Action labels are understated but unmistakable, with Inter providing a button texture distinct from display copy."
+    }
+  },
+  "frames": [
+    {
+      "frame": "01-one-plan",
+      "type_scale_relation": "Largest display scale on the page; Cormorant headline breaks into three to four desktop lines and stays paired with the portrait slot.",
+      "line_break_invariants": [
+        {"role": "headline", "desktop_lines": 4, "mobile_lines": 3},
+        {"role": "body", "desktop_lines": 4, "mobile_lines": 5},
+        {"role": "cta_cluster", "desktop_lines": 1, "mobile_lines": 2}
+      ],
+      "ornaments": [
+        {
+          "id": "hero-consult-route",
+          "anchor": "left headline field to portrait placeholder, exiting lower right",
+          "color": "#C8A65A",
+          "thickness_px": 2,
+          "width": {"unit": "container_ratio", "value": 0.92},
+          "responsive": "Keeps the portrait slot and CTA cluster visible; route may simplify to one bend on mobile.",
+          "rationale": "Introduces the continuous decision route without using broad gold decoration."
+        }
+      ]
+    },
+    {
+      "frame": "02-career-signal",
+      "type_scale_relation": "Short strip; display type is restrained and the four stage signals are utility-supported rather than hero-sized.",
+      "line_break_invariants": [
+        {"role": "identity_line", "desktop_lines": 2, "mobile_lines": 2},
+        {"role": "career_signals", "desktop_lines": 2, "mobile_lines": 8}
+      ],
+      "ornaments": [
+        {
+          "id": "career-signal-route",
+          "anchor": "upper-right entry across four text stations to lower-center exit",
+          "color": "#C8A65A",
+          "thickness_px": 2,
+          "width": {"unit": "container_ratio", "value": 0.84},
+          "responsive": "Converts from horizontal signal strip to stacked route without adding station numbers.",
+          "rationale": "Shows career continuity as a pulse, not a statistic bar."
+        }
+      ]
+    },
+    {
+      "frame": "03-separate-rooms",
+      "type_scale_relation": "Large explanatory display headline on left, compact Inter labels in the professional-role rooms, and a central Cormorant priority label.",
+      "line_break_invariants": [
+        {"role": "headline", "desktop_lines": 4, "mobile_lines": 5},
+        {"role": "body", "desktop_lines": 6, "mobile_lines": 7},
+        {"role": "role_labels", "desktop_lines": 1, "mobile_lines": 5}
+      ],
+      "ornaments": [
+        {
+          "id": "separate-room-convergence",
+          "anchor": "upper-center transition marker into room map, reuniting at Your priorities and exiting bottom left",
+          "color": "#C8A65A",
+          "thickness_px": 2,
+          "width": {"unit": "container_ratio", "value": 0.78},
+          "responsive": "Room map stacks into a vertical convergence diagram while keeping the boundary note visible.",
+          "rationale": "Makes coordination visible without implying one person holds every professional credential."
+        }
+      ]
+    },
+    {
+      "frame": "04-blueprint-rounds",
+      "type_scale_relation": "Display headline remains prominent but the continuous phase route is the primary reading structure; phase names use Cormorant at mid-scale.",
+      "line_break_invariants": [
+        {"role": "headline", "desktop_lines": 2, "mobile_lines": 3},
+        {"role": "phase_names", "desktop_lines": 1, "mobile_lines": 6},
+        {"role": "phase_summaries", "desktop_lines": 3, "mobile_lines": 12}
+      ],
+      "ornaments": [
+        {
+          "id": "wealth-blueprint-route",
+          "anchor": "bottom-left inherited entry through six named phases to lower-right exit",
+          "color": "#C8A65A",
+          "thickness_px": 2,
+          "width": {"unit": "container_ratio", "value": 0.96},
+          "responsive": "Becomes a vertical connected path on mobile, preserving functional 01-06 numbers only in this section.",
+          "rationale": "Turns the process into a memorable mechanism rather than six equal cards."
+        }
+      ]
+    },
+    {
+      "frame": "05-five-decisions",
+      "type_scale_relation": "Quiet ledger scale: smaller display headline, large discipline names, and compact Inter summaries with high negative space.",
+      "line_break_invariants": [
+        {"role": "headline", "desktop_lines": 2, "mobile_lines": 3},
+        {"role": "discipline_names", "desktop_lines": 1, "mobile_lines": 5},
+        {"role": "boundary_note", "desktop_lines": 2, "mobile_lines": 4}
+      ],
+      "ornaments": [
+        {
+          "id": "service-ledger-rule",
+          "anchor": "top-right inherited rule through uneven discipline bands to lower-left exit",
+          "color": "#C8A65A",
+          "thickness_px": 2,
+          "width": {"unit": "container_ratio", "value": 0.74},
+          "responsive": "Keeps the rule as a structural divider beside stacked disciplines; no row numbers are introduced.",
+          "rationale": "Preserves interdependence across disciplines while avoiding icon-card repetition."
+        }
+      ]
+    },
+    {
+      "frame": "06-white-coat-paths",
+      "type_scale_relation": "Loud mist-blue index; headline is substantial while audience labels and decisions remain crisp Inter-supported editorial notes.",
+      "line_break_invariants": [
+        {"role": "headline", "desktop_lines": 4, "mobile_lines": 5},
+        {"role": "body", "desktop_lines": 4, "mobile_lines": 5},
+        {"role": "pathway_labels", "desktop_lines": 1, "mobile_lines": 5}
+      ],
+      "ornaments": [
+        {
+          "id": "medical-index-rail",
+          "anchor": "upper-left entry indexing five varied documentary crops to lower-right exit",
+          "color": "#C8A65A",
+          "thickness_px": 2,
+          "width": {"unit": "container_ratio", "value": 0.9},
+          "responsive": "Rail becomes a left-side mobile index with staggered image crops and no numbered markers.",
+          "rationale": "Lets audiences self-select through context rather than keyword-swapped cards."
+        }
+      ]
+    },
+    {
+      "frame": "07-accountable-planner",
+      "type_scale_relation": "Quiet portrait essay; headline uses a medium display scale, while verified credentials and body copy stay precise and unembellished.",
+      "line_break_invariants": [
+        {"role": "headline", "desktop_lines": 3, "mobile_lines": 4},
+        {"role": "name_credentials", "desktop_lines": 1, "mobile_lines": 2},
+        {"role": "body", "desktop_lines": 4, "mobile_lines": 6}
+      ],
+      "ornaments": [
+        {
+          "id": "accountability-trace",
+          "anchor": "behind neutral portrait placeholder and exiting lower center",
+          "color": "#C8A65A",
+          "thickness_px": 2,
+          "width": {"unit": "container_ratio", "value": 0.72},
+          "responsive": "Trace remains behind the portrait slot and must not become a badge or credential seal.",
+          "rationale": "Connects the method to the accountable planner while reserving the real portrait for build time."
+        }
+      ]
+    },
+    {
+      "frame": "08-next-decision",
+      "type_scale_relation": "Closing display headline is large but calmer than the hero; the two decision paths use strong Cormorant labels and Inter summaries.",
+      "line_break_invariants": [
+        {"role": "headline", "desktop_lines": 2, "mobile_lines": 3},
+        {"role": "strategy_path", "desktop_lines": 5, "mobile_lines": 7},
+        {"role": "guide_path", "desktop_lines": 6, "mobile_lines": 8}
+      ],
+      "ornaments": [
+        {
+          "id": "two-path-decision-line",
+          "anchor": "lower-center entry splitting into strategy call and gated guide paths",
+          "color": "#C8A65A",
+          "thickness_px": 2,
+          "width": {"unit": "container_ratio", "value": 0.7},
+          "responsive": "Splits into two stacked decisions on mobile with the guide availability note always visible.",
+          "rationale": "Makes the conversion choice honest and structural rather than urgency driven."
+        }
+      ]
+    }
+  ],
+  "proof": {
+    "desktop": "type-proofs/typography-1440.png",
+    "mobile": "type-proofs/typography-390.png",
+    "context_checks": [
+      "Neutral reserved logo area appears without redesigning the identity.",
+      "Cormorant Garamond display headline is rendered with controlled desktop and mobile line breaks.",
+      "Inter body copy, utility labels, disclaimer, and CTA labels are rendered with clear contrast.",
+      "Hero/media treatment is shown beside live type to prove scale and overlap constraints."
+    ],
+    "verdict": "APPROVED"
+  },
+  "art_director_rationale": "The fixed brand families are strong enough for Direction A when Cormorant Garamond carries lyrical authority and Inter stays precise, clinical, and restrained. The line-break rules protect the editorial cadence and prevent the builder from turning the design into generic card-led SaaS typography.",
+  "builder_freedom": [
+    "The builder may tune exact clamp values within each approved role if the specified line counts and hierarchy remain intact.",
+    "The builder may simplify gold-line bends responsively as long as the entry and exit behavior remains continuous.",
+    "The builder may use Next.js font optimization or local bundled files, but must keep Cormorant Garamond and Inter as the only approved families."
+  ]
+}
+
