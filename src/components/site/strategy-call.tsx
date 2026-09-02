@@ -1,5 +1,5 @@
 import { StrategyCallForm } from "@/components/shared/strategy-call-form";
-import { BRAND, NEXT_DECISION } from "@/lib/content";
+import { BRAND } from "@/lib/content";
 
 /**
  * Where the closing fork lands. The two paths above merge on the gold route;
@@ -21,12 +21,13 @@ export function StrategyCall(): React.JSX.Element {
           >
             Start with a conversation, not a proposal.
           </h2>
-          <p className="mt-5 max-w-sm font-body text-[15px] leading-relaxed text-ivory/70">
-            {NEXT_DECISION.strategyCall.summary}
-          </p>
-          <p className="mt-6 font-body text-[13px] leading-relaxed text-gold">
-            {NEXT_DECISION.strategyCall.expectation}
-          </p>
+          {/* The summary and the "not a product pitch" line are NOT repeated
+              here: next-decision renders both about 1,100px above this section,
+              and printing them twice read as a template loop rather than
+              emphasis. Nothing replaces them — writing a fresh sentence would
+              be inventing reader-facing copy for a regulated site, which the
+              manifest reserves to the client. The section opens on its
+              headline and goes straight to the form. */}
           <dl className="mt-10 grid gap-4 border-t border-ivory/15 pt-8 font-body text-[13px] text-ivory/70">
             <div className="flex gap-3">
               <dt className="w-16 shrink-0 text-ivory/45">Call</dt>

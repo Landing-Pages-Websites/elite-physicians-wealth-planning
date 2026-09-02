@@ -30,7 +30,32 @@ export const LINKS = {
   meetMichael: "https://elitephysicianwealthplanning.com/",
   guideRequest:
     "mailto:info@fiscalvisionfinancial.com?subject=Physician%20Tax%20%26%20Retirement%20Planning%20Guide%20request",
+
+  /**
+   * On-site destinations, used by every in-content CTA.
+   *
+   * The five links above point at the LEGACY SINGULAR domain, which the
+   * manifest marks reference-only and which sitemap.ts refuses to emit. Every
+   * in-content CTA therefore used to send the visitor off the site, past the
+   * strategy-call form, onto the old build. These anchors keep them here.
+   *
+   * They are stand-ins for the paths section_manifest functional_elements
+   * actually contracts — /our-process, /who-we-serve, /meet-michael-epps, and
+   * the Google Calendar scheduling experience. Swap each one to its contracted
+   * route as that page ships; the scheduling link needs the client's Calendar
+   * embed first (build/CLIENT-GAPS.md 1.3).
+   */
+  scheduleOnsite: "/#form",
+  processOnsite: "/#blueprint-rounds",
+  planningPathOnsite: "/#white-coat-paths",
+  meetMichaelOnsite: "/#accountable-planner",
 } as const;
+
+/** One phone href for the whole site. Strips every non-digit, so it survives
+ *  dashes, spaces or parentheses in the brand constant. */
+export function telHref(phone: string = BRAND.phone): string {
+  return `tel:+1${phone.replace(/\D/g, "")}`;
+}
 
 export const HERO = {
   orientation: "Wealth planning for physicians and medical professionals",

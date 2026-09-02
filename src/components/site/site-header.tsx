@@ -30,13 +30,13 @@ function Wordmark(): React.JSX.Element {
   return (
     <Link
       href="/"
-      className="flex flex-col gap-0.5 rounded-sm transition-opacity duration-200 hover:opacity-90"
+      className="flex shrink-0 flex-col gap-0.5 rounded-sm transition-opacity duration-200 hover:opacity-90"
     >
-      <span className="font-display text-xl font-medium text-white sm:text-[22px]">
+      <span className="font-display text-lg font-medium whitespace-nowrap text-white sm:text-xl lg:text-[22px]">
         {BRAND.name}
         <span className="align-super text-[0.6em]">™</span>
       </span>
-      <span className="font-body text-[9px] font-semibold tracking-[0.32em] text-gold uppercase">
+      <span className="hidden font-body text-[9px] font-semibold tracking-[0.28em] whitespace-nowrap text-gold uppercase sm:block">
         {BRAND.poweredBy}
       </span>
     </Link>
@@ -45,11 +45,17 @@ function Wordmark(): React.JSX.Element {
 
 export function SiteHeader(): React.JSX.Element {
   return (
-    <header className="fixed inset-x-0 top-0 z-50 bg-ink/95 backdrop-blur-sm">
-      <div className="mx-auto flex max-w-[1400px] items-center justify-between gap-8 px-6 py-3 sm:px-10 lg:px-14">
+    <header
+      className="fixed inset-x-0 top-0 z-50 flex items-center bg-ink/95 backdrop-blur-sm"
+      style={{ minHeight: "var(--header-h)" }}
+    >
+      <a href="#main" className="skip-link font-body text-sm">
+        Skip to content
+      </a>
+      <div className="mx-auto flex w-full max-w-[1400px] items-center justify-between gap-6 px-6 py-2 sm:px-10 lg:px-14">
         <Wordmark />
 
-        <nav aria-label="Primary" className="hidden items-center gap-8 lg:flex">
+        <nav aria-label="Primary" className="hidden items-center gap-7 xl:flex">
           {NAV.map((item) => (
             <Link
               key={item.href}
@@ -69,30 +75,39 @@ export function SiteHeader(): React.JSX.Element {
             Schedule a strategy call
           </Link>
 
-          {/* Mobile disclosure — no drawer library, no client JS. */}
-          <details className="group relative lg:hidden">
-            <summary className="flex min-h-11 min-w-11 cursor-pointer list-none items-center justify-center rounded-sm border border-mist/30 px-3 font-body text-[12px] text-mist [&::-webkit-details-marker]:hidden">
-              <span className="group-open:hidden">Menu</span>
-              <span className="hidden group-open:inline">Close</span>
-            </summary>
-            <div className="absolute right-0 mt-3 flex w-64 flex-col gap-1 rounded-sm border border-mist/15 bg-ink p-3 shadow-xl">
-              {NAV.map((item) => (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  className="rounded-sm px-3 py-3 font-body text-sm text-mist/85 transition-colors duration-200 hover:bg-white/5 hover:text-gold"
-                >
-                  {item.label}
-                </Link>
-              ))}
+          {/* Popover API, not <details>. This header lives in the persistent
+              layout, so a <details open> attribute survives same-page hash
+              navigation and the panel stays sitting over the destination.
+              A popover light-dismisses on outside click and on Escape, and
+              closes on navigation — still zero client JS. */}
+          <button
+            type="button"
+            popoverTarget="site-menu"
+            className="flex min-h-11 min-w-11 cursor-pointer items-center justify-center rounded-sm border border-mist/45 px-3 font-body text-[12px] text-mist xl:hidden"
+          >
+            Menu
+          </button>
+          <div
+            id="site-menu"
+            popover="auto"
+            className="mt-2 flex w-64 flex-col gap-1 rounded-sm border border-mist/15 bg-ink p-3 text-mist shadow-xl backdrop:bg-ink/40 [inset-block-start:var(--header-h)] [inset-inline-end:1rem] [inset-inline-start:auto] [margin:0] [position:fixed]"
+          >
+            {NAV.map((item) => (
               <Link
-                href="/#form"
-                className="mt-1 rounded-sm bg-gold px-3 py-3 text-center font-body text-sm font-semibold text-ink"
+                key={item.href}
+                href={item.href}
+                className="rounded-sm px-3 py-3 font-body text-sm text-mist/85 transition-colors duration-200 hover:bg-white/5 hover:text-gold"
               >
-                Schedule a strategy call
+                {item.label}
               </Link>
-            </div>
-          </details>
+            ))}
+            <Link
+              href="/#form"
+              className="mt-1 rounded-sm bg-gold px-3 py-3 text-center font-body text-sm font-semibold text-ink"
+            >
+              Schedule a strategy call
+            </Link>
+          </div>
         </div>
       </div>
     </header>

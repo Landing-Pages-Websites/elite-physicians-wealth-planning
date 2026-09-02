@@ -115,3 +115,20 @@ presented as the planner).
 
 **Not yet moved** — quarantining it is a `public/` change and is bundled into decision 2.4
 above so you rule on the whole scaffolding question at once.
+
+---
+
+## 4. Asset defects found at render scale
+
+### 4.1 Surgeons photograph — malformed hands
+`public/images/design/a/06-white-coat-paths/surgeons-operating-room.jpg`. Inspected at 4x:
+the gloved hands show fused/tapering digits with no resolvable count, a detached thumb
+shape, and an instrument terminating in nothing. `hard_rules` require rejecting
+"uncanny faces, impossible anatomy, or fake clinical detail". Needs a re-crop above the
+hands or a replacement image.
+
+### 4.2 The same portrait twice
+`hero-founder.png` renders in the hero and again in the planner section — same asset, same
+crop, same ivory ring-1 card, on one page. Independent of the provenance question in 1.1:
+when the real photograph arrives, supply or authorise two different crops (tight for the
+hero, environmental for the planner section).

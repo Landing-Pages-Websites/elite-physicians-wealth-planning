@@ -87,7 +87,10 @@ function IndexRail(): React.JSX.Element {
         />
         <path d="M1504 848 L1516 861 L1528 848" vectorEffect="non-scaling-stroke" />
         <path d="M845 734 H826" vectorEffect="non-scaling-stroke" />
-        <path d="M58 421 H135" vectorEffect="non-scaling-stroke" strokeWidth="2" />
+        {/* Sits in the gutter LEFT of the copy block. At its previous
+            y=421/x=58-135 it ran straight through the word "ownership" in the
+            lead paragraph and rendered as a strikethrough on compliance copy. */}
+        <path d="M32 470 H72" vectorEffect="non-scaling-stroke" strokeWidth="2" />
       </g>
       {[
         [974, 100],
@@ -140,7 +143,7 @@ function CopyBlock(): React.JSX.Element {
         {WHITE_COAT_PATHS.body}
       </p>
       <a
-        href={LINKS.planningPath}
+        href={LINKS.planningPathOnsite}
         className="mt-8 inline-flex items-center gap-3 rounded-[4px] bg-ink px-7 py-4 font-body text-sm font-semibold text-gold shadow-[0_10px_24px_rgba(11,31,58,0.28)] transition-all duration-200 hover:gap-4 hover:brightness-125 active:brightness-95"
       >
         {WHITE_COAT_PATHS.cta}

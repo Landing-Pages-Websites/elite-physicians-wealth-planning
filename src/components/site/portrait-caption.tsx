@@ -10,15 +10,28 @@ import { ACCOUNTABLE_PLANNER } from "@/lib/content";
  * marks, so the name takes the letterspaced caps treatment and the
  * designations keep their registered capitalisation.
  */
+/** The single split of "Michael A. Epps, ChFC®, RICP®" used site-wide. */
+export function splitNameCredentials(): {
+  name: string;
+  credentials: string;
+} {
+  const full: string = ACCOUNTABLE_PLANNER.name;
+  const commaIndex = full.indexOf(",");
+  if (commaIndex === -1) {
+    return { name: full, credentials: "" };
+  }
+  return {
+    name: full.slice(0, commaIndex),
+    credentials: full.slice(commaIndex + 1).trim(),
+  };
+}
+
 export function PortraitCaption({
   className = "",
 }: {
   className?: string;
 }): React.JSX.Element {
-  const full: string = ACCOUNTABLE_PLANNER.name;
-  const commaIndex = full.indexOf(",");
-  const name = commaIndex === -1 ? full : full.slice(0, commaIndex);
-  const credentials = commaIndex === -1 ? "" : full.slice(commaIndex + 1).trim();
+  const { name, credentials } = splitNameCredentials();
 
   return (
     <figcaption
@@ -27,7 +40,7 @@ export function PortraitCaption({
       <span className="tracking-[0.18em] uppercase">{name}</span>
       {credentials ? (
         <>
-          <span aria-hidden="true">, </span>
+          <span>, </span>
           <span className="tracking-[0.04em]">{credentials}</span>
         </>
       ) : null}

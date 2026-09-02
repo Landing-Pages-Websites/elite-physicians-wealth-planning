@@ -84,10 +84,14 @@ export function FiveDecisions(): React.JSX.Element {
             keeps a generous right margin for the route while letting the
             entries span the page the way a ledger's actually do. */}
         <div className="relative mt-12 w-full lg:w-[72%]">
-          {/* Shared vertical spine: left rail on mobile, between columns on sm+. */}
+          {/* Shared vertical spine: left rail on mobile, between columns on sm+.
+              z-10 is load-bearing — the rows are `relative` and later in DOM
+              order, so without it the opaque ivory rows erase the spine and the
+              translucent mist rows mute it, leaving the motif as unattached
+              fragments. page_flow requires this route to run continuously. */}
           <span
             aria-hidden="true"
-            className="absolute top-0 -bottom-6 left-0 w-[2px] bg-gold sm:left-[46.5%]"
+            className="absolute top-0 -bottom-6 left-0 z-10 w-[2px] bg-gold sm:left-[46.5%]"
           />
           <ol>
             {FIVE_DECISIONS.disciplines.map((discipline, index) => (

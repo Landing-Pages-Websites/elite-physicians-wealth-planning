@@ -1,19 +1,7 @@
 import Image from "next/image";
 import { ACCOUNTABLE_PLANNER, LINKS, PORTRAIT } from "@/lib/content";
 import { ArrowRightIcon } from "./icons";
-import { PortraitCaption } from "./portrait-caption";
-
-function splitNameCredentials(): { name: string; credentials: string } {
-  const full: string = ACCOUNTABLE_PLANNER.name;
-  const commaIndex = full.indexOf(",");
-  if (commaIndex === -1) {
-    return { name: full, credentials: "" };
-  }
-  return {
-    name: full.slice(0, commaIndex + 1),
-    credentials: full.slice(commaIndex + 1).trim(),
-  };
-}
+import { PortraitCaption, splitNameCredentials } from "./portrait-caption";
 
 /**
  * Quiet accountability trace: enters at the top edge (x=1516, from the
@@ -100,7 +88,7 @@ export function AccountablePlanner(): React.JSX.Element {
             {ACCOUNTABLE_PLANNER.body}
           </p>
           <a
-            href={LINKS.meetMichael}
+            href={LINKS.meetMichaelOnsite}
             className="mt-9 inline-flex items-center gap-3 rounded-[4px] bg-ink px-7 py-4 font-body text-sm font-semibold text-ivory shadow-[0_10px_24px_rgba(11,31,58,0.22)] transition-all duration-200 hover:gap-4 hover:brightness-125 active:brightness-95"
           >
             {ACCOUNTABLE_PLANNER.cta}

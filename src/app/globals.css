@@ -82,8 +82,38 @@
   --font-body: "Inter", Arial, Helvetica, sans-serif;
 }
 
+/* Single source of truth for the fixed header's height. The header sets its
+   min-height from this, the hero spacer reserves exactly this, and anchors
+   offset by exactly this — so the three can never drift apart. */
+:root {
+  --header-h: 70px;
+}
+
 html {
   scroll-behavior: smooth;
+}
+
+/* The header is fixed, so an anchor would otherwise land its target underneath
+   it. Every measured nav target was hidden at 375px before this. */
+section[id],
+main[id] {
+  scroll-margin-top: var(--header-h);
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 100;
+}
+.skip-link:focus-visible {
+  left: 1rem;
+  top: 1rem;
+  padding: 0.75rem 1.25rem;
+  background: var(--color-gold);
+  color: var(--color-ink);
+  font-weight: 600;
+  border-radius: 2px;
 }
 
 body {
@@ -93,9 +123,18 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+/* WCAG 1.4.11 wants 3:1 for a focus indicator. Gold on ivory is 2.07:1 and on
+   white 2.32:1, so navy is the default ring and gold is used only inside the
+   dark bands, where it clears the floor comfortably. */
 :focus-visible {
-  outline: 2px solid var(--color-gold);
+  outline: 2px solid var(--color-ink);
   outline-offset: 3px;
+}
+.va-hero :focus-visible,
+.va-decision :focus-visible,
+header :focus-visible,
+[data-dark-band] :focus-visible {
+  outline-color: var(--color-gold);
 }
 
 @media (prefers-reduced-motion: reduce) {

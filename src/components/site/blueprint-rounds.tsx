@@ -114,7 +114,7 @@ function StepGroup({
 function ProcessCta({ className }: { className?: string }): React.JSX.Element {
   return (
     <a
-      href={LINKS.process}
+      href={LINKS.processOnsite}
       className={`inline-flex items-center gap-4 rounded-md border-2 border-gold bg-gradient-to-b from-ink-lift to-ink px-7 py-3.5 font-display text-xl font-medium text-ivory shadow-[0_10px_24px_rgba(11,31,58,0.25)] transition-all duration-200 hover:brightness-125 active:brightness-95 ${className ?? ""}`}
     >
       {BLUEPRINT.cta}

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { BRAND, HERO, SEPARATE_ROOMS } from "@/lib/content";
+import { BRAND, HERO, SEPARATE_ROOMS, telHref } from "@/lib/content";
 
 /**
  * NEW UNAPPROVED SURFACE. The approved mockup has no footer.
@@ -51,7 +51,7 @@ export function SiteFooter(): React.JSX.Element {
               <li key={item.href}>
                 <Link
                   href={item.href}
-                  className="font-body text-[13px] text-charcoal underline-offset-4 transition-colors duration-200 hover:text-ink hover:underline"
+                  className="-my-2 inline-flex min-h-11 items-center py-2 font-body text-[13px] text-charcoal underline-offset-4 transition-colors duration-200 hover:text-ink hover:underline"
                 >
                   {item.label}
                 </Link>
@@ -68,20 +68,20 @@ export function SiteFooter(): React.JSX.Element {
             <li>
               <a
                 href={`mailto:${BRAND.email}`}
-                className="underline-offset-4 transition-colors duration-200 hover:text-ink hover:underline"
+                className="-my-2 inline-flex min-h-11 items-center py-2 underline-offset-4 transition-colors duration-200 hover:text-ink hover:underline"
               >
                 {BRAND.email}
               </a>
             </li>
             <li>
               <a
-                href={`tel:+1${BRAND.phone.replaceAll("-", "")}`}
-                className="underline-offset-4 transition-colors duration-200 hover:text-ink hover:underline"
+                href={telHref()}
+                className="-my-2 inline-flex min-h-11 items-center py-2 underline-offset-4 transition-colors duration-200 hover:text-ink hover:underline"
               >
                 {BRAND.phone}
               </a>
             </li>
-            <li className="text-charcoal/70">{BRAND.hours}</li>
+            <li className="text-charcoal/80">{BRAND.hours}</li>
           </ul>
           <Link
             href="/#form"
@@ -93,7 +93,7 @@ export function SiteFooter(): React.JSX.Element {
       </div>
 
       <div className="border-t border-ink/10">
-        <div className="mx-auto flex max-w-[1400px] flex-col gap-2 px-6 py-6 font-body text-[11px] leading-relaxed text-charcoal/70 sm:px-10 lg:px-14">
+        <div className="mx-auto flex max-w-[1400px] flex-col gap-2 px-6 py-6 font-body text-[11px] leading-relaxed text-charcoal/80 sm:px-10 lg:px-14">
           {/* Compliance lines belong on every route, not only the homepage. */}
           <p>{HERO.disclaimer}</p>
           <p>{BRAND.wordmark}</p>

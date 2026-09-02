@@ -140,3 +140,87 @@ the built page against `public/design/a/refs/*.png`.
    "unreferenced in `src/`" does not mean unused.
 2. **Sitemap approval** — proposed below, not built.
 3. Everything in `CLIENT-GAPS.md`.
+
+---
+
+## Review round 1 — both ship gates run, 3 Sep 2026
+
+`code-review` and `design-review` both returned **CHANGES_REQUESTED**. Fixed:
+
+**Correctness / layout**
+- Header height was a hardcoded `h-[52px]` spacer duplicating a height it could not
+  see; measured 109px at 375px. Now a single `--header-h` token consumed by the header's
+  `min-height`, the hero spacer and anchor offsets, so the three cannot drift.
+- Wordmark wrapped to two lines under 334px available width, which is what drove the
+  109px. `whitespace-nowrap` + `shrink-0`, and `poweredBy` is hidden below `sm` (it still
+  appears in the hero identity line and the footer).
+- Desktop nav itself wrapped at 1024–1279px; moved to the `xl:` breakpoint.
+- Every anchor landed its target *under* the fixed header. `scroll-margin-top:
+  var(--header-h)` on `section[id]`/`main[id]`.
+- The mobile menu was a `<details>` in the persistent layout, so `open` survived hash
+  navigation and the panel sat over the destination. Now the Popover API — Escape and
+  light-dismiss for free, still zero client JS.
+- `/variant-b` was inheriting Direction A's chrome, covering its own wordmark bar. The
+  homepage moved into a `(site)` route group; variant-b renders bare.
+
+**Rendering defects the mockup review could not see**
+- `white-coat-paths` route stub `M58 421 H135` rendered **as a strikethrough through the
+  word "ownership"** in the lead paragraph. Moved into the gutter at `M32 470 H72`.
+- `five-decisions` spine was painted over by the `relative` rows — the motif rendered as
+  unattached fragments, breaking `page_flow`'s continuous-route rule. `z-10` on the spine.
+- `strategy-call` repeated two paragraphs verbatim from `next-decision` ~1,100px above.
+  Removed. **Nothing replaced them**: writing a fresh sentence would be inventing
+  reader-facing copy on a regulated site.
+
+**Accessibility**
+- Focus ring was gold — 2.07:1 on ivory, below the 3:1 floor of WCAG 1.4.11. Navy is now
+  the default ring; gold only inside the dark bands.
+- Footer links were ~20px tap targets → `min-h-11`.
+- `text-charcoal/70` (4.46:1) and `text-mist/50` (4.43:1) at 11px both missed AA → `/80`, `/70`.
+- Menu button border 2.38:1 → `/45`.
+- Added a skip link and `id="main"`.
+
+**Links** — every in-content CTA pointed at the legacy singular domain that `sitemap.ts`
+declares reference-only, so each one ejected the visitor off-site past the form. All now
+use on-site anchors (`LINKS.*Onsite`), which become the contracted `/our-process`,
+`/who-we-serve` and `/meet-michael-epps` routes as those pages ship.
+
+**Gate hardening** — `check-palette.mjs` passed `#f0f`, `#ff00ffcc` and
+`font-family: "Winterlude"`, mis-reported every line number (comment stripping collapsed
+newlines), stripped `//` inside CSS and inside `https://` URLs, and never checked
+`rgba()`. All fixed, plus a try/catch around the contract read.
+
+**Also deduplicated**: two `splitNameCredentials` implementations, two `tel:` href
+builders (now `telHref()` in `content.ts`), the orphaned `.va-notch` rule, and a dead
+`sitemap.ts` branch.
+
+### Open design findings NOT fixed — operator or client call
+
+- **Surgeons photo has malformed hands** at 4x (fused digits, detached thumb). Asset
+  problem; added to CLIENT-GAPS.
+- **Mobile `white-coat-paths` collapses to five identical rounded cards** — the desktop
+  diagonal collage has no mobile equivalent. Restructuring it changes an approved
+  composition, so it is a `taste` call, not craft.
+- **Two CTA finishes** ship on one page: flat `bg-gold` (header, form) vs the glossy
+  `.va-gold-btn` bevel (hero, next-decision). Unifying means changing the approved hero
+  button. `taste`.
+- **Same portrait, same crop, twice** on one page. Resolve when the real asset lands.
+- **`five-decisions` still leaves ~430px of empty field** at 1440 even after the 46%→72%
+  rebalance.
+- **Mobile hero H1 breaks to a one-word orphan** ("More,") because `headlineLines()`
+  forces the desktop three-line break at every width. Fixing it changes the approved
+  line-break invariant in `typography_contract.json`. `taste`.
+- **Photo bleed shows ghost lettering** behind copy at 390px in `blueprint-rounds` and
+  `accountable-planner`.
+- **Gold at 2.07:1 on ivory** is the manifest's mandated structural motif; on light bands
+  the route is barely perceptible. Darkening it for light grounds departs from the
+  palette contract, so it needs a ruling.
+
+### Verification after fixes
+
+| Gate | Result |
+|---|---|
+| `npm run build` | pass |
+| `npm run lint` | pass, 0 problems |
+| `npm run check:palette` | pass |
+| `npm run verify` 1536/1440/390 | pass on `/` and `/variant-b`: 0 overflow, 0 broken images, 1 `h1`, 10 anchors |

@@ -138,9 +138,6 @@
 }
 
 /* Notched navy masthead tab. */
-.va-notch {
-  clip-path: polygon(0 0, 100% 0, calc(100% - 26px) 100%, 0 100%);
-}
 
 /* ---------- 04 blueprint-rounds: desk still life on ivory ---------- */
 

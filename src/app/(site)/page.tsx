@@ -25,7 +25,7 @@ export const metadata: Metadata = {
  */
 export default function HomePage(): React.JSX.Element {
   return (
-    <main>
+    <main id="main">
       <OnePlan />
       <CareerSignal />
       <SeparateRooms />

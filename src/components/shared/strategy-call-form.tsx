@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef, useState } from "react";
-import { BRAND } from "@/lib/content";
+import { BRAND , telHref } from "@/lib/content";
 
 declare global {
   interface Window {
@@ -142,7 +142,7 @@ export function StrategyCallForm({
       >
         Request received. {BRAND.name} will reply within one business day, usually
         sooner. If it is urgent, call{" "}
-        <a className="underline underline-offset-4" href={`tel:${BRAND.phone.replace(/\D/g, "")}`}>
+        <a className="underline underline-offset-4" href={telHref()}>
           {BRAND.phone}
         </a>
         .
@@ -295,7 +295,7 @@ export function StrategyCallForm({
             {BRAND.email}
           </a>{" "}
           or call{" "}
-          <a className="underline underline-offset-4" href={`tel:${BRAND.phone.replace(/\D/g, "")}`}>
+          <a className="underline underline-offset-4" href={telHref()}>
             {BRAND.phone}
           </a>
           .

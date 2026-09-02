@@ -92,7 +92,7 @@ export function OnePlan(): React.JSX.Element {
             position on every route. Leaving it here as well would stack two
             wordmarks. The spacer below reserves the header's height so the
             hero's internal rhythm and its 1536x864 fold grouping are unchanged. */}
-        <div aria-hidden="true" className="h-[52px] sm:h-[56px]" />
+        <div aria-hidden="true" style={{ height: "var(--header-h)" }} />
 
         <p className="mt-8 self-start rounded-full border border-mist/50 bg-ink/50 px-5 py-2 font-body text-[11px] font-medium tracking-[0.14em] text-mist/90 uppercase backdrop-blur-sm lg:mt-10 lg:self-center lg:-translate-x-16">
           {HERO.orientation}
@@ -115,14 +115,14 @@ export function OnePlan(): React.JSX.Element {
             </p>
             <div className="mt-9 flex flex-wrap items-center gap-4">
               <a
-                href={LINKS.schedule}
+                href={LINKS.scheduleOnsite}
                 className="va-gold-btn inline-flex items-center gap-2.5 rounded-md px-6 py-3.5 font-body text-sm font-bold tracking-wide text-ink"
               >
                 <CalendarIcon className="h-4 w-4" />
                 {HERO.primaryCta}
               </a>
               <a
-                href={LINKS.process}
+                href={LINKS.processOnsite}
                 className="inline-flex items-center gap-2.5 rounded-md border border-mist/70 px-6 py-3.5 font-body text-sm font-semibold tracking-wide text-ivory transition-colors duration-200 hover:border-gold hover:text-gold active:opacity-80"
               >
                 <FileTextIcon className="h-4 w-4" />
@@ -154,7 +154,7 @@ export function OnePlan(): React.JSX.Element {
             <span aria-hidden="true" className="inline-block h-px w-8 bg-gold/70" />
             {HERO.identityLine}
           </p>
-          <p className="font-body text-[11px] text-mist/50">{HERO.disclaimer}</p>
+          <p className="font-body text-[11px] text-mist/70">{HERO.disclaimer}</p>
         </div>
       </div>
     </section>

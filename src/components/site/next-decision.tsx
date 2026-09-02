@@ -1,4 +1,4 @@
-import { BRAND, LINKS, NEXT_DECISION } from "@/lib/content";
+import { BRAND, LINKS, NEXT_DECISION, telHref } from "@/lib/content";
 import {
   CalendarClockIcon,
   FileLockIcon,
@@ -133,7 +133,7 @@ function StrategyPath(): React.JSX.Element {
         {strategyCall.expectation}
       </p>
       <div className="mt-8">
-        <GoldAction href={LINKS.schedule} label={strategyCall.label} />
+        <GoldAction href={LINKS.scheduleOnsite} label={strategyCall.label} />
       </div>
     </article>
   );
@@ -186,7 +186,7 @@ function ContactClose(): React.JSX.Element {
           {NEXT_DECISION.contact}
         </a>
         <a
-          href={`tel:+1${BRAND.phone.replaceAll("-", "")}`}
+          href={telHref()}
           className="inline-flex items-center gap-2 underline-offset-4 transition-colors duration-200 hover:text-gold hover:underline"
         >
           <PhoneIcon className="h-4 w-4 text-gold" />
