@@ -8,6 +8,7 @@ import FiveDecisions from "@/components/variant-b/five-decisions";
 import WhiteCoatPaths from "@/components/variant-b/white-coat-paths";
 import AccountablePlanner from "@/components/variant-b/accountable-planner";
 import NextDecision from "@/components/variant-b/next-decision";
+import StrategyCall from "@/components/variant-b/strategy-call";
 
 export const metadata: Metadata = {
   title: "Direction B — The Decision Atlas",
@@ -26,6 +27,7 @@ export default function VariantBPage(): React.JSX.Element {
       <WhiteCoatPaths />
       <AccountablePlanner />
       <NextDecision />
+      <StrategyCall />
     </main>
   );
 }

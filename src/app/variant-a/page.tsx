@@ -5,6 +5,7 @@ import { CareerSignal } from "@/components/variant-a/career-signal";
 import { FiveDecisions } from "@/components/variant-a/five-decisions";
 import { NextDecision } from "@/components/variant-a/next-decision";
 import { OnePlan } from "@/components/variant-a/one-plan";
+import { StrategyCall } from "@/components/variant-a/strategy-call";
 import { SeparateRooms } from "@/components/variant-a/separate-rooms";
 import { WhiteCoatPaths } from "@/components/variant-a/white-coat-paths";
 import "./variant-a.css";
@@ -26,6 +27,7 @@ export default function VariantAPage(): React.JSX.Element {
       <WhiteCoatPaths />
       <AccountablePlanner />
       <NextDecision />
+      <StrategyCall />
     </main>
   );
 }

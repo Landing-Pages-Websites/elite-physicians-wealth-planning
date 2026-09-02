@@ -46,7 +46,7 @@ function DisciplineRow({
       <h3 className="font-display text-[clamp(1.3rem,1.7vw,1.7rem)] leading-tight font-semibold text-ink">
         {discipline.name}
       </h3>
-      <p className="self-center font-body text-[13px] leading-relaxed text-charcoal">
+      <p className="self-center font-body text-sm leading-relaxed text-charcoal">
         {discipline.summary}
       </p>
       {/* Node on the shared spine. */}
@@ -77,8 +77,13 @@ export function FiveDecisions(): React.JSX.Element {
           {FIVE_DECISIONS.headline}
         </h2>
 
-        {/* Left half only — the right half stays intentionally empty. */}
-        <div className="relative mt-12 w-full lg:w-[46%]">
+        {/* The ledger spans the measure. It previously sat at 46% with the
+            right half left empty as a "quiet field" for the route to cross,
+            but at 1440 that read as an unbalanced column rather than calm
+            space, and squeezed the summaries into a cramped measure. 72%
+            keeps a generous right margin for the route while letting the
+            entries span the page the way a ledger's actually do. */}
+        <div className="relative mt-12 w-full lg:w-[72%]">
           {/* Shared vertical spine: left rail on mobile, between columns on sm+. */}
           <span
             aria-hidden="true"
