@@ -21,6 +21,12 @@ A. Epps and all named staff are never generated."*
 At full resolution the image's background contains a **framed diploma and an award plaque** —
 credential theater, which `hard_rules` ban outright regardless of who the subject is.
 
+Confirmed at render scale on the built page (1536×864): the desk in frame carries a
+**nameplate reading "PLANNING / PROTECTING / PROVIDING / PEACE OF MIND"**. That tagline
+appears nowhere in the build — not in `brand`, not in `content.ts`, not in any manifest.
+It is invented brand copy baked into a raster image: uneditable, invisible to screen
+readers and to search, and sitting beside a named individual's likeness.
+
 Three ways out; the choice is yours, and the image is untouched until you make it:
 - **(a)** Confirm it is a genuine client photo and send provenance — the diploma and plaque
   still need addressing.

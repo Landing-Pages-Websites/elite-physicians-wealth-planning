@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { ACCOUNTABLE_PLANNER, LINKS, PORTRAIT } from "@/lib/content";
 import { ArrowRightIcon } from "./icons";
+import { PortraitCaption } from "./portrait-caption";
 
 function splitNameCredentials(): { name: string; credentials: string } {
   const full: string = ACCOUNTABLE_PLANNER.name;
@@ -87,9 +88,7 @@ export function AccountablePlanner(): React.JSX.Element {
               className="object-cover"
             />
           </div>
-          <figcaption className="px-2 pt-3 pb-1 text-center font-body text-[10px] font-semibold tracking-[0.2em] text-ink uppercase">
-            {ACCOUNTABLE_PLANNER.name}
-          </figcaption>
+          <PortraitCaption className="text-[10px]" />
         </figure>
 
         <div className="order-3 lg:col-start-2 lg:row-start-2 lg:self-start">

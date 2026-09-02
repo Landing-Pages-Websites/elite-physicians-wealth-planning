@@ -1,5 +1,6 @@
 import Image from "next/image";
-import { ACCOUNTABLE_PLANNER, HERO, LINKS, PORTRAIT } from "@/lib/content";
+import { HERO, LINKS, PORTRAIT } from "@/lib/content";
+import { PortraitCaption } from "./portrait-caption";
 import {
   CalendarIcon,
   FileTextIcon,
@@ -71,9 +72,7 @@ function PortraitCard(): React.JSX.Element {
           className="object-cover"
         />
       </div>
-      <figcaption className="px-2 pt-3 pb-1 text-center font-body text-[11px] font-semibold tracking-[0.18em] text-ink uppercase">
-        {ACCOUNTABLE_PLANNER.name}
-      </figcaption>
+      <PortraitCaption className="text-[11px]" />
     </figure>
   );
 }
