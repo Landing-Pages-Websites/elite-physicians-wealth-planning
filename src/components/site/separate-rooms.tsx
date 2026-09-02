@@ -137,11 +137,10 @@ function RoomFigure({
         className="h-auto w-full"
       />
       <figcaption className="absolute inset-0 flex flex-col items-center justify-center gap-1">
-        <room.Icon className="h-7 w-7 text-gold" />
+        <room.Icon className="h-7 w-7 text-ink/55" />
         <span className="font-display text-lg leading-none font-semibold text-ink lg:text-[clamp(1rem,1.4vw,1.4rem)]">
           {room.role}
         </span>
-        <span aria-hidden="true" className="h-px w-10 bg-gold" />
       </figcaption>
     </figure>
   );
@@ -164,17 +163,17 @@ function BoundaryNote({ className }: { className?: string }): React.JSX.Element 
 
 function CopyBlock(): React.JSX.Element {
   return (
-    <div className="max-w-md px-6 pt-10 sm:px-10 lg:absolute lg:top-[19%] lg:left-[4%] lg:z-20 lg:w-[26%] lg:max-w-none lg:p-0">
+    <div className="max-w-md px-6 pt-10 sm:px-10 lg:absolute lg:top-[19%] lg:left-[max(1.5rem,calc((100vw-var(--page-max))/2+var(--page-pad)))] lg:z-20 lg:w-[26%] lg:max-w-none lg:px-0 lg:pt-0">
       <p className="font-body text-[11px] font-semibold tracking-[0.22em] text-ink uppercase">
         {SEPARATE_ROOMS.orientation}
       </p>
       <h2
         id="separate-rooms-heading"
-        className="va-reveal mt-4 font-display text-[clamp(1.9rem,2.9vw,2.8rem)] leading-[1.12] font-semibold text-ink"
+        className="va-reveal mt-5 text-display-m font-display leading-[1.08] font-medium tracking-[-0.02em] text-balance text-ink"
       >
         {SEPARATE_ROOMS.headline}
       </h2>
-      <p className="mt-5 font-body text-[13.5px] leading-relaxed text-charcoal">
+      <p className="mt-5 max-w-[52ch] font-body text-body-m leading-[1.65] text-charcoal text-pretty">
         {SEPARATE_ROOMS.body}
       </p>
       <span aria-hidden="true" className="mt-6 block h-[2px] w-20 bg-gold lg:hidden" />

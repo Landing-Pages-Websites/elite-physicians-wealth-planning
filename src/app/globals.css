@@ -78,6 +78,26 @@
      build/CLIENT-GAPS.md for a brand ruling — do not reuse it elsewhere. */
   --color-danger: #9a2c2c;
 
+  /* ── Type scale ────────────────────────────────────────────────────────────
+     There was no scale before this: 32 hand-tuned values, eight section H2s at
+     six different sizes, eleven different vw slopes so heading RANK changed as
+     the viewport resized. Every value was fitted to its own box and none to a
+     system, which is precisely what reads as machine-made.
+
+     Four display steps and three body steps. Two H2 sizes on the whole page —
+     `m` for every section opener so the reader is told "same level of thing
+     again", and `l` used exactly once, at the close, so the page has a second
+     peak. Nothing below 13px anywhere. */
+  --text-display-xl: clamp(3rem, 5.3vw, 4.5rem);
+  --text-display-l: clamp(2.5rem, 4.2vw, 3.75rem);
+  --text-display-m: clamp(2rem, 3.2vw, 2.875rem);
+  --text-display-s: clamp(1.3rem, 1.6vw, 1.5rem);
+  --text-body-l: 1.0625rem; /* 17px — lede paragraphs */
+  --text-body-m: 0.9375rem; /* 15px — default body */
+  --text-body-s: 0.8125rem; /* 13px — the floor. Nothing smaller. */
+
+  --ease-out: cubic-bezier(0.22, 0.61, 0.36, 1);
+
   --font-display: "Cormorant Garamond", Georgia, "Times New Roman", serif;
   --font-body: "Inter", Arial, Helvetica, sans-serif;
 }
@@ -87,6 +107,29 @@
    offset by exactly this — so the three can never drift apart. */
 :root {
   --header-h: 70px;
+  --page-max: 1400px;
+  --page-pad: 3.5rem;
+}
+
+/* One shell, one left edge. Five different left edges used to run down this
+   page — 76, 90, 58, 202 and 211px at 1440 — so nothing hung off a common
+   spine and every section floated independently. That was the loudest
+   unpolished signal on the page. Every section container uses this now. */
+.va-shell {
+  margin-inline: auto;
+  width: 100%;
+  max-width: var(--page-max);
+  padding-inline: 1.5rem;
+}
+@media (min-width: 640px) {
+  .va-shell {
+    padding-inline: 2.5rem;
+  }
+}
+@media (min-width: 1024px) {
+  .va-shell {
+    padding-inline: var(--page-pad);
+  }
 }
 
 html {

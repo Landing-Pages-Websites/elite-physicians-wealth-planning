@@ -46,7 +46,7 @@ function DisciplineRow({
       <h3 className="font-display text-[clamp(1.3rem,1.7vw,1.7rem)] leading-tight font-semibold text-ink">
         {discipline.name}
       </h3>
-      <p className="self-center font-body text-sm leading-relaxed text-charcoal">
+      <p className="self-center max-w-[62ch] font-body text-body-m leading-[1.6] text-charcoal">
         {discipline.summary}
       </p>
       {/* Node on the shared spine. */}
@@ -66,24 +66,27 @@ export function FiveDecisions(): React.JSX.Element {
       className="relative overflow-hidden bg-white"
     >
       <LedgerRoute />
-      <div className="relative z-10 mx-auto max-w-[1536px] px-6 pt-16 pb-20 sm:px-10 lg:px-[4%] lg:pt-24 lg:pb-28">
+      <div className="relative z-10 va-shell pt-16 pb-20 lg:pt-24 lg:pb-28">
+        <div className="lg:grid lg:grid-cols-[minmax(0,26%)_minmax(0,1fr)] lg:items-start lg:gap-x-16">
+        <div className="lg:sticky lg:top-[calc(var(--header-h)+4rem)]">
         <p className="font-body text-[11px] font-semibold tracking-[0.22em] text-ink uppercase">
           {FIVE_DECISIONS.orientation}
         </p>
         <h2
           id="five-decisions-heading"
-          className="va-reveal mt-4 max-w-xl font-display text-[clamp(1.8rem,2.6vw,2.5rem)] leading-[1.15] font-semibold text-ink"
+          className="va-reveal mt-5 max-w-[20ch] text-display-m font-display leading-[1.08] font-medium tracking-[-0.02em] text-balance text-ink"
         >
           {FIVE_DECISIONS.headline}
         </h2>
 
+        </div>
         {/* The ledger spans the measure. It previously sat at 46% with the
             right half left empty as a "quiet field" for the route to cross,
             but at 1440 that read as an unbalanced column rather than calm
             space, and squeezed the summaries into a cramped measure. 72%
             keeps a generous right margin for the route while letting the
             entries span the page the way a ledger's actually do. */}
-        <div className="relative mt-12 w-full lg:w-[72%]">
+        <div className="relative mt-12 w-full lg:mt-0">
           {/* Shared vertical spine: left rail on mobile, between columns on sm+.
               z-10 is load-bearing — the rows are `relative` and later in DOM
               order, so without it the opaque ivory rows erase the spine and the
@@ -108,10 +111,11 @@ export function FiveDecisions(): React.JSX.Element {
               aria-hidden="true"
               className="absolute top-[13px] left-0 h-[2px] w-5 bg-gold sm:hidden"
             />
-            <p className="max-w-md border-l-2 border-gold pt-1.5 pl-4 font-body text-xs leading-relaxed text-charcoal/90">
+            <p className="max-w-[52ch] border-l-2 border-gold pt-1.5 pl-4 font-body text-body-s leading-[1.6] text-charcoal/90">
               {FIVE_DECISIONS.boundaryNote}
             </p>
           </div>
+        </div>
         </div>
       </div>
     </section>

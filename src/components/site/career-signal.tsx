@@ -75,7 +75,7 @@ export function CareerSignal(): React.JSX.Element {
       <div className="relative z-10 md:min-h-[clamp(400px,33.3vw,512px)]">
         <h2
           id="career-signal-heading"
-          className="va-reveal px-6 pt-12 font-display text-[clamp(1.9rem,3.2vw,3rem)] leading-[1.05] font-medium sm:px-10 md:px-[6.2%] md:pt-[4.6%]"
+          className="va-reveal va-shell pt-12 text-display-m font-display leading-[1.08] font-medium tracking-[-0.02em] text-balance md:pt-[4.6%]"
         >
           <span className="block text-gold">{italicizeFocused(lead)}</span>
           <span className="block text-ivory-warm">{rest}</span>

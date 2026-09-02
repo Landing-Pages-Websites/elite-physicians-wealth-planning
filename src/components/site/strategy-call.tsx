@@ -13,11 +13,11 @@ export function StrategyCall(): React.JSX.Element {
       aria-labelledby="form-heading"
       className="relative overflow-hidden bg-ink"
     >
-      <div className="relative z-10 mx-auto grid max-w-[1100px] gap-12 px-6 py-20 sm:px-10 lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1fr)] lg:gap-16 lg:py-28">
+      <div className="relative z-10 va-shell grid gap-12 py-20 lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1fr)] lg:gap-16 lg:py-28">
         <div>
           <h2
             id="form-heading"
-            className="max-w-md font-display text-[clamp(1.8rem,2.6vw,2.5rem)] leading-[1.15] font-semibold text-ivory"
+            className="max-w-[18ch] text-display-m font-display leading-[1.08] font-medium tracking-[-0.02em] text-balance text-ivory"
           >
             Start with a conversation, not a proposal.
           </h2>

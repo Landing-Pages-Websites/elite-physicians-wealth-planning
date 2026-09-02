@@ -107,7 +107,7 @@ function GoldAction({
   return (
     <a
       href={href}
-      className="va-gold-btn inline-flex items-center justify-center rounded-md px-8 py-4 font-body text-xs font-bold tracking-[0.08em] text-ink uppercase"
+      className="va-btn va-btn-gold justify-center"
     >
       {label}
     </a>
@@ -125,7 +125,7 @@ function StrategyPath(): React.JSX.Element {
         {strategyCall.label}
       </h3>
       <span aria-hidden="true" className="mt-4 h-px w-16 bg-gold" />
-      <p className="mt-5 max-w-sm font-body text-[13px] leading-relaxed text-mist/80">
+      <p className="mt-5 max-w-[46ch] font-body text-body-m leading-[1.6] text-mist/80 text-pretty">
         {strategyCall.summary}
       </p>
       <p className="mt-5 flex max-w-sm items-start gap-2 font-body text-xs text-gold/90">
@@ -150,7 +150,7 @@ function GuidePath(): React.JSX.Element {
         {guide.label}
       </h3>
       <span aria-hidden="true" className="mt-4 h-px w-16 bg-gold" />
-      <p className="mt-5 max-w-sm font-body text-[13px] leading-relaxed text-mist/80">
+      <p className="mt-5 max-w-[46ch] font-body text-body-m leading-[1.6] text-mist/80 text-pretty">
         {guide.summary}
       </p>
       {/* The approved frame reserves a dashed guide-cover slot here and fills
@@ -217,7 +217,7 @@ export function NextDecision(): React.JSX.Element {
         <div className="relative mx-auto flex min-h-[min(864px,100svh)] max-w-5xl flex-col justify-center px-6 py-20 sm:px-10 lg:py-24">
           <h2
             id="next-decision-heading"
-            className="va-reveal text-center font-display text-[clamp(2.1rem,3.9vw,3.7rem)] leading-[1.1] font-semibold text-white"
+            className="va-reveal text-center text-display-l font-display leading-[1.06] font-medium tracking-[-0.02em] text-balance text-white"
           >
             <span className="block">{first}</span>
             <span className="block">{second}</span>

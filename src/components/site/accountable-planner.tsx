@@ -45,7 +45,7 @@ export function AccountablePlanner(): React.JSX.Element {
       className="va-planner relative overflow-hidden"
     >
       <AccountabilityTrace />
-      <div className="relative z-10 mx-auto grid min-h-[min(864px,100svh)] max-w-[1536px] grid-cols-1 content-center gap-x-20 gap-y-10 px-6 py-16 sm:px-10 lg:grid-cols-[minmax(280px,26%)_minmax(0,1fr)] lg:py-24 lg:pr-[7%] lg:pl-[14%]">
+      <div className="relative z-10 va-shell grid min-h-[min(864px,100svh)] grid-cols-1 content-center gap-x-20 gap-y-10 py-16 lg:grid-cols-[minmax(280px,24rem)_minmax(0,1fr)] lg:py-24">
         {/* Promise leads on mobile; portrait sits center-left on desktop. */}
         <div className="order-1 lg:col-start-2 lg:row-start-1 lg:self-end">
           {/* Gold #C8A65A on ivory #F6F2E8 measures 2.07:1 — an AA failure at
@@ -56,7 +56,7 @@ export function AccountablePlanner(): React.JSX.Element {
           </p>
           <h2
             id="accountable-planner-heading"
-            className="va-reveal mt-5 max-w-2xl font-display text-[clamp(1.9rem,3vw,2.9rem)] leading-[1.16] font-semibold text-ink"
+            className="va-reveal mt-5 max-w-[22ch] text-display-m font-display leading-[1.08] font-medium tracking-[-0.02em] text-balance text-ink"
           >
             {ACCOUNTABLE_PLANNER.headline}
           </h2>
@@ -84,12 +84,12 @@ export function AccountablePlanner(): React.JSX.Element {
             {name}{" "}
             <span className="text-xl font-medium text-charcoal">{credentials}</span>
           </p>
-          <p className="mt-4 max-w-xl font-body text-[14px] leading-relaxed text-charcoal">
+          <p className="mt-4 max-w-[58ch] font-body text-body-l leading-[1.6] text-charcoal text-pretty">
             {ACCOUNTABLE_PLANNER.body}
           </p>
           <a
             href={LINKS.meetMichaelOnsite}
-            className="mt-9 inline-flex items-center gap-3 rounded-[4px] bg-ink px-7 py-4 font-body text-sm font-semibold text-ivory shadow-[0_10px_24px_rgba(11,31,58,0.22)] transition-all duration-200 hover:gap-4 hover:brightness-125 active:brightness-95"
+            className="va-btn va-btn-navy mt-9"
           >
             {ACCOUNTABLE_PLANNER.cta}
             <ArrowRightIcon className="h-4 w-4 text-gold" />

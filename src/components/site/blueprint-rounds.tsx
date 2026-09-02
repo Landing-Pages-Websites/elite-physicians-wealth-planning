@@ -97,13 +97,13 @@ function StepGroup({
         <Icon className="h-5.5 w-5.5 text-gold" />
       </span>
       <div>
-        <p className="font-display text-2xl leading-none font-semibold text-gold">
+        <p className="font-display text-2xl leading-none font-semibold text-ink/45">
           {phase.number}
         </p>
         <h3 className="mt-1 font-display text-xl leading-none font-semibold text-ink">
           {phase.name}
         </h3>
-        <p className="mt-2 font-body text-xs leading-relaxed text-charcoal">
+        <p className="mt-2 font-body text-body-s leading-[1.55] text-charcoal">
           {phase.summary}
         </p>
       </div>
@@ -115,7 +115,7 @@ function ProcessCta({ className }: { className?: string }): React.JSX.Element {
   return (
     <a
       href={LINKS.processOnsite}
-      className={`inline-flex items-center gap-4 rounded-md border-2 border-gold bg-gradient-to-b from-ink-lift to-ink px-7 py-3.5 font-display text-xl font-medium text-ivory shadow-[0_10px_24px_rgba(11,31,58,0.25)] transition-all duration-200 hover:brightness-125 active:brightness-95 ${className ?? ""}`}
+      className={`va-btn va-btn-navy ${className ?? ""}`}
     >
       {BLUEPRINT.cta}
       <ArrowRightIcon className="h-5 w-5 text-gold" />
@@ -130,7 +130,7 @@ export function BlueprintRounds(): React.JSX.Element {
       aria-labelledby="blueprint-rounds-heading"
       className="va-blueprint relative overflow-hidden"
     >
-      <div className="relative z-10 mx-auto max-w-[1536px] px-6 pt-14 pb-14 sm:px-10 lg:px-[4%] lg:pb-6">
+      <div className="relative z-10 va-shell pt-14 pb-14 lg:pb-6">
         {/* Same removal as separate-rooms: the approved frame sets the internal
             codename "The Consult Ledger" here as a logo lockup over an invented
             "PHYSICIAN WEALTH ADVISORY" tagline. Both are build artifacts and
@@ -140,15 +140,17 @@ export function BlueprintRounds(): React.JSX.Element {
           {BLUEPRINT.orientation}
           <span aria-hidden="true" className="h-px w-full bg-gold" />
         </p>
+        <div className="lg:grid lg:grid-cols-[minmax(0,1fr)_minmax(0,34ch)] lg:items-end lg:gap-x-16">
         <h2
           id="blueprint-rounds-heading"
-          className="va-reveal mt-4 max-w-2xl font-display text-[clamp(2.1rem,3.9vw,3.9rem)] leading-[1.05] font-semibold text-ink"
+          className="va-reveal mt-5 max-w-[18ch] text-display-m font-display leading-[1.08] font-medium tracking-[-0.02em] text-balance text-ink"
         >
           {BLUEPRINT.headline}
         </h2>
-        <p className="mt-5 max-w-xl font-body text-[14px] leading-relaxed text-charcoal">
+        <p className="mt-5 max-w-[56ch] font-body text-body-l leading-[1.6] text-charcoal text-pretty lg:mt-0 lg:pb-2">
           {BLUEPRINT.body}
         </p>
+        </div>
 
         {/* Mobile: vertical connected path, 01 through 06. */}
         <ol className="mt-10 flex flex-col lg:hidden">

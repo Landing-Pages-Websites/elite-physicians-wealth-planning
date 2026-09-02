@@ -111,7 +111,7 @@ function PathwayLabel({
   pathway: PathwaySpec;
 }): React.JSX.Element {
   return (
-    <div className="max-w-md lg:w-52">
+    <div className="max-w-md lg:w-[14rem]">
       <h3 className="flex items-start gap-2 font-display text-[clamp(1.15rem,1.5vw,1.45rem)] leading-none font-semibold text-ink">
         <span
           aria-hidden="true"
@@ -119,7 +119,7 @@ function PathwayLabel({
         />
         {pathway.audience}
       </h3>
-      <p className="mt-2 font-body text-[11.5px] leading-snug text-charcoal">
+      <p className="mt-2 font-body text-body-s leading-[1.55] text-charcoal">
         {pathway.decision}
       </p>
     </div>
@@ -128,23 +128,23 @@ function PathwayLabel({
 
 function CopyBlock(): React.JSX.Element {
   return (
-    <div className="max-w-md lg:absolute lg:top-[13%] lg:left-[4%] lg:z-20 lg:w-[29%] lg:max-w-none">
+    <div className="max-w-md lg:absolute lg:top-[13%] lg:left-[max(1.5rem,calc((100vw-var(--page-max))/2+var(--page-pad)))] lg:z-20 lg:w-[29%] lg:max-w-none">
       <p className="font-display text-sm font-medium text-ink italic">
         {WHITE_COAT_PATHS.orientation}
       </p>
       <h2
         id="white-coat-paths-heading"
-        className="va-reveal mt-4 font-display text-[clamp(2rem,3.4vw,3.3rem)] leading-[1.02] font-semibold text-ink"
+        className="va-reveal mt-5 text-display-m font-display leading-[1.08] font-medium tracking-[-0.02em] text-balance text-ink"
       >
         {WHITE_COAT_PATHS.headline}
       </h2>
       <span aria-hidden="true" className="mt-5 block h-[2px] w-20 bg-gold lg:hidden" />
-      <p className="mt-5 max-w-sm font-body text-[13.5px] leading-relaxed text-charcoal">
+      <p className="mt-5 max-w-[50ch] font-body text-body-m leading-[1.65] text-charcoal text-pretty">
         {WHITE_COAT_PATHS.body}
       </p>
       <a
         href={LINKS.planningPathOnsite}
-        className="mt-8 inline-flex items-center gap-3 rounded-[4px] bg-ink px-7 py-4 font-body text-sm font-semibold text-gold shadow-[0_10px_24px_rgba(11,31,58,0.28)] transition-all duration-200 hover:gap-4 hover:brightness-125 active:brightness-95"
+        className="va-btn va-btn-navy mt-8"
       >
         {WHITE_COAT_PATHS.cta}
         <ArrowRightIcon className="h-4 w-4" />
