@@ -51,6 +51,12 @@ async function auditPage(route, vp) {
       const bridge = document.querySelectorAll(
         'script[src="https://app.gomega.ai/review-bridge/v7/review-bridge.js"]'
       ).length;
+      // A closed popover must not paint. Tailwind's `flex` overrides the UA
+      // rule that hides one, which shipped an always-open nav panel over the
+      // page at every viewport. Cheap to assert, invisible to every other check.
+      const openPopovers = [...document.querySelectorAll("[popover]")]
+        .filter((el) => el.getClientRects().length > 0 && !el.matches(":popover-open"))
+        .map((el) => el.id || el.className);
       return {
         scrollWidth: doc.scrollWidth,
         clientWidth: doc.clientWidth,
@@ -59,6 +65,7 @@ async function auditPage(route, vp) {
         h1s,
         anchors,
         bridge,
+        openPopovers,
       };
     });
     const slug = route === "/" ? "home" : route.slice(1);
@@ -77,6 +84,7 @@ async function auditPage(route, vp) {
       h1Count: metrics.h1s,
       anchors: metrics.anchors,
       bridgeCount: metrics.bridge,
+      leakedPopovers: metrics.openPopovers,
     };
   } finally {
     await page.close();

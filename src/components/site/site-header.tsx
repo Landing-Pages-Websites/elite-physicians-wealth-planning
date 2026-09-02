@@ -87,10 +87,14 @@ export function SiteHeader(): React.JSX.Element {
           >
             Menu
           </button>
+          {/* `flex` must NOT be unconditional here: display:flex overrides the
+              UA rule [popover]:not(:popover-open){display:none}, which left this
+              panel permanently open over the page at every viewport. Hidden by
+              default; flex only while the popover is genuinely open. */}
           <div
             id="site-menu"
             popover="auto"
-            className="mt-2 flex w-64 flex-col gap-1 rounded-sm border border-mist/15 bg-ink p-3 text-mist shadow-xl backdrop:bg-ink/40 [inset-block-start:var(--header-h)] [inset-inline-end:1rem] [inset-inline-start:auto] [margin:0] [position:fixed]"
+            className="hidden w-64 flex-col gap-1 rounded-sm border border-mist/15 bg-ink p-3 text-mist shadow-xl backdrop:bg-ink/40 [inset-block-start:var(--header-h)] [inset-inline-end:1rem] [inset-inline-start:auto] [margin:0] [position:fixed] [&:popover-open]:flex"
           >
             {NAV.map((item) => (
               <Link
