@@ -153,10 +153,16 @@ function GuidePath(): React.JSX.Element {
       <p className="mt-5 max-w-sm font-body text-[13px] leading-relaxed text-mist/80">
         {guide.summary}
       </p>
-      {/* Honest reserved guide-cover slot — no cover art exists yet. */}
-      <p className="mt-5 flex w-36 items-center justify-center border border-dashed border-gold/70 p-3 text-center font-body text-[9px] leading-relaxed tracking-wide text-mist/70 uppercase [aspect-ratio:3/4]">
-        {guide.availability}
-      </p>
+      {/* The approved frame reserves a dashed guide-cover slot here and fills
+          it with `guide.availability` — a build instruction ("CUSTOMER INPUT
+          REQUIRED: the final guide file...") set at 9px inside a wireframe
+          dashed border. Three defects in one element: build spec as reader-
+          facing copy, design-tool chrome shipped as UI, and sub-legible type.
+          The slot is removed; `guide.requestNote` below already tells the
+          reader the truth — the guide arrives by email, there is no instant
+          download — which is what the hard rule actually requires. The
+          availability string stays in content.ts as a build constraint and is
+          deliberately not rendered. */}
       <p className="mt-5 flex max-w-sm items-start gap-2 font-body text-xs text-mist/70">
         <MessageIcon className="mt-0.5 h-4 w-4 shrink-0 text-gold/90" />
         {guide.requestNote}

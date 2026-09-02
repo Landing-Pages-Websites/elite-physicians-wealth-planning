@@ -78,7 +78,7 @@ export function CareerSignal(): React.JSX.Element {
           className="va-reveal px-6 pt-12 font-display text-[clamp(1.9rem,3.2vw,3rem)] leading-[1.05] font-medium sm:px-10 md:px-[6.2%] md:pt-[4.6%]"
         >
           <span className="block text-gold">{italicizeFocused(lead)}</span>
-          <span className="block text-[#f7f3ec]">{rest}</span>
+          <span className="block text-ivory-warm">{rest}</span>
         </h2>
 
         {/* Desktop: labels beneath their route stations. */}

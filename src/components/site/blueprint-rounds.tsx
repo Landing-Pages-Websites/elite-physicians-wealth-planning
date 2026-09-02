@@ -115,7 +115,7 @@ function ProcessCta({ className }: { className?: string }): React.JSX.Element {
   return (
     <a
       href={LINKS.process}
-      className={`inline-flex items-center gap-4 rounded-md border-2 border-gold bg-gradient-to-b from-[#12335e] to-ink px-7 py-3.5 font-display text-xl font-medium text-ivory shadow-[0_10px_24px_rgba(11,31,58,0.25)] transition-all duration-200 hover:brightness-125 active:brightness-95 ${className ?? ""}`}
+      className={`inline-flex items-center gap-4 rounded-md border-2 border-gold bg-gradient-to-b from-ink-lift to-ink px-7 py-3.5 font-display text-xl font-medium text-ivory shadow-[0_10px_24px_rgba(11,31,58,0.25)] transition-all duration-200 hover:brightness-125 active:brightness-95 ${className ?? ""}`}
     >
       {BLUEPRINT.cta}
       <ArrowRightIcon className="h-5 w-5 text-gold" />
@@ -131,12 +131,14 @@ export function BlueprintRounds(): React.JSX.Element {
       className="va-blueprint relative overflow-hidden"
     >
       <div className="relative z-10 mx-auto max-w-[1536px] px-6 pt-14 pb-14 sm:px-10 lg:px-[4%] lg:pb-6">
-        <p className="inline-flex flex-col gap-1.5 font-display text-sm font-semibold tracking-[0.34em] text-ink uppercase">
-          The Consult Ledger
-          <span aria-hidden="true" className="h-px w-full bg-gold" />
-        </p>
-        <p className="mt-8 font-body text-[11px] font-semibold tracking-[0.22em] text-gold uppercase">
+        {/* Same removal as separate-rooms: the approved frame sets the internal
+            codename "The Consult Ledger" here as a logo lockup over an invented
+            "PHYSICIAN WEALTH ADVISORY" tagline. Both are build artifacts and
+            neither is client brand copy, so the lockup goes and the section's
+            own orientation line opens it. The gold rule is kept as the opener. */}
+        <p className="inline-flex flex-col gap-1.5 font-body text-[11px] font-semibold tracking-[0.22em] text-ink uppercase">
           {BLUEPRINT.orientation}
+          <span aria-hidden="true" className="h-px w-full bg-gold" />
         </p>
         <h2
           id="blueprint-rounds-heading"

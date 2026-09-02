@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { ACCOUNTABLE_PLANNER, BRAND, HERO, LINKS, PORTRAIT } from "@/lib/content";
+import { ACCOUNTABLE_PLANNER, HERO, LINKS, PORTRAIT } from "@/lib/content";
 import {
   CalendarIcon,
   FileTextIcon,
@@ -87,15 +87,13 @@ export function OnePlan(): React.JSX.Element {
     >
       <HeroRoute />
       <div className="relative z-10 mx-auto flex min-h-[min(864px,100svh)] max-w-[1400px] flex-col px-6 py-8 sm:px-10 lg:px-14">
-        <header className="flex flex-col gap-1">
-          <p className="font-display text-2xl font-medium text-white sm:text-[28px]">
-            {BRAND.name}
-            <span className="align-super text-sm">™</span>
-          </p>
-          <p className="font-body text-[10px] font-semibold tracking-[0.32em] text-gold uppercase">
-            {BRAND.poweredBy}
-          </p>
-        </header>
+        {/* The masthead that sat here has been LIFTED into the global
+            SiteHeader — not copied. The approved frame shows this lockup at the
+            hero's top-left; the fixed header now renders it in that same
+            position on every route. Leaving it here as well would stack two
+            wordmarks. The spacer below reserves the header's height so the
+            hero's internal rhythm and its 1536x864 fold grouping are unchanged. */}
+        <div aria-hidden="true" className="h-[52px] sm:h-[56px]" />
 
         <p className="mt-8 self-start rounded-full border border-mist/50 bg-ink/50 px-5 py-2 font-body text-[11px] font-medium tracking-[0.14em] text-mist/90 uppercase backdrop-blur-sm lg:mt-10 lg:self-center lg:-translate-x-16">
           {HERO.orientation}
@@ -105,7 +103,7 @@ export function OnePlan(): React.JSX.Element {
           <div className="max-w-2xl">
             <h1
               id="one-plan-heading"
-              className="va-reveal font-display text-[clamp(2.5rem,5.3vw,4.5rem)] leading-[1.02] font-semibold tracking-tight text-[#f5f0e8]"
+              className="va-reveal font-display text-[clamp(2.5rem,5.3vw,4.5rem)] leading-[1.02] font-semibold tracking-tight text-ivory-bright"
             >
               {headlineLines().map((line) => (
                 <span key={line} className="block">

@@ -59,7 +59,10 @@ export function AccountablePlanner(): React.JSX.Element {
       <div className="relative z-10 mx-auto grid min-h-[min(864px,100svh)] max-w-[1536px] grid-cols-1 content-center gap-x-20 gap-y-10 px-6 py-16 sm:px-10 lg:grid-cols-[minmax(280px,26%)_minmax(0,1fr)] lg:py-24 lg:pr-[7%] lg:pl-[14%]">
         {/* Promise leads on mobile; portrait sits center-left on desktop. */}
         <div className="order-1 lg:col-start-2 lg:row-start-1 lg:self-end">
-          <p className="font-body text-[11px] font-semibold tracking-[0.24em] text-gold uppercase">
+          {/* Gold #C8A65A on ivory #F6F2E8 measures 2.07:1 — an AA failure at
+              any size. Gold stays the accent for rules, nodes and CTA fills;
+              eyebrow text on light bands is navy. */}
+          <p className="font-body text-[11px] font-semibold tracking-[0.24em] text-ink uppercase">
             {ACCOUNTABLE_PLANNER.orientation}
           </p>
           <h2

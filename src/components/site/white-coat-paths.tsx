@@ -126,11 +126,8 @@ function PathwayLabel({
 function CopyBlock(): React.JSX.Element {
   return (
     <div className="max-w-md lg:absolute lg:top-[13%] lg:left-[4%] lg:z-20 lg:w-[29%] lg:max-w-none">
-      <p className="font-body text-[11px] font-semibold tracking-[0.22em] text-gold uppercase">
-        Orientation:{" "}
-        <em className="font-display text-sm font-medium normal-case italic">
-          {WHITE_COAT_PATHS.orientation}
-        </em>
+      <p className="font-display text-sm font-medium text-ink italic">
+        {WHITE_COAT_PATHS.orientation}
       </p>
       <h2
         id="white-coat-paths-heading"

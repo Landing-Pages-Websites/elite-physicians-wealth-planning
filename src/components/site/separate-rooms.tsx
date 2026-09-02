@@ -165,8 +165,8 @@ function BoundaryNote({ className }: { className?: string }): React.JSX.Element 
 function CopyBlock(): React.JSX.Element {
   return (
     <div className="max-w-md px-6 pt-10 sm:px-10 lg:absolute lg:top-[19%] lg:left-[4%] lg:z-20 lg:w-[26%] lg:max-w-none lg:p-0">
-      <p className="font-body text-[11px] font-semibold tracking-[0.22em] text-gold uppercase">
-        Orientation: {SEPARATE_ROOMS.orientation}
+      <p className="font-body text-[11px] font-semibold tracking-[0.22em] text-ink uppercase">
+        {SEPARATE_ROOMS.orientation}
       </p>
       <h2
         id="separate-rooms-heading"
@@ -200,10 +200,13 @@ export function SeparateRooms(): React.JSX.Element {
       className="va-rooms relative overflow-hidden"
     >
       <div className="relative z-10">
-        <p className="va-notch inline-block bg-ink py-3 pr-14 pl-8 font-display text-xs font-semibold tracking-[0.34em] text-gold uppercase lg:ml-[3%]">
-          The Consult Ledger
-        </p>
-
+        {/* The approved frame carries a navy notch tab here reading "The
+            Consult Ledger" — the internal A/B direction codename, not the
+            client's brand. Publishing it would ship a build artifact as the
+            practice's identity, so the tab is removed rather than refilled:
+            inventing replacement brand furniture is not ours to do. The
+            orientation eyebrow and headline below now open the section, which
+            is how every other section on the page opens. */}
         <CopyBlock />
 
         {/* Desktop: radial network on the native 1536x864 canvas. */}

@@ -1,10 +1,14 @@
 import puppeteer from "puppeteer-core";
 import { mkdirSync } from "node:fs";
 
-const CHROMIUM = "/var/lib/megaclaw/user-tools/apt/usr/lib/chromium/chromium";
+// Playwright's bundled headless shell. NEVER the user's real Chrome install
+// and never the "chrome" channel — that is their live browser.
+const CHROMIUM =
+  process.env.CHROMIUM_PATH ??
+  `${process.env.HOME}/Library/Caches/ms-playwright/chromium_headless_shell-1234/chrome-headless-shell-mac-arm64/chrome-headless-shell`;
 const BASE = "http://localhost:3100";
 const OUT = "/tmp/verify";
-const ROUTES = ["/", "/variant-a", "/variant-b"];
+const ROUTES = ["/", "/variant-b"];
 const VIEWPORTS = [
   { name: "1536", width: 1536, height: 864 },
   { name: "1440", width: 1440, height: 900 },
@@ -16,11 +20,6 @@ mkdirSync(OUT, { recursive: true });
 const browser = await puppeteer.launch({
   executablePath: CHROMIUM,
   args: ["--no-sandbox", "--disable-gpu", "--hide-scrollbars"],
-  env: {
-    ...process.env,
-    LD_LIBRARY_PATH:
-      "/var/lib/megaclaw/user-tools/apt/usr/lib/x86_64-linux-gnu:/var/lib/megaclaw/user-tools/apt/usr/lib",
-  },
 });
 
 async function auditPage(route, vp) {

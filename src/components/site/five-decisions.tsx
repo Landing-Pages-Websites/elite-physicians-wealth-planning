@@ -67,8 +67,8 @@ export function FiveDecisions(): React.JSX.Element {
     >
       <LedgerRoute />
       <div className="relative z-10 mx-auto max-w-[1536px] px-6 pt-16 pb-20 sm:px-10 lg:px-[4%] lg:pt-24 lg:pb-28">
-        <p className="font-body text-[11px] font-semibold tracking-[0.22em] text-gold uppercase">
-          Orientation: {FIVE_DECISIONS.orientation}
+        <p className="font-body text-[11px] font-semibold tracking-[0.22em] text-ink uppercase">
+          {FIVE_DECISIONS.orientation}
         </p>
         <h2
           id="five-decisions-heading"

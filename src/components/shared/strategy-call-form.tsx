@@ -84,7 +84,7 @@ export function StrategyCallForm({
     isLedger ? "text-ivory/80" : "text-charcoal"
   }`;
   const errorText = `mt-1.5 block font-body text-[12px] ${
-    isLedger ? "text-gold" : "text-[#9a2c2c]"
+    isLedger ? "text-gold" : "text-danger"
   }`;
 
   function update<K extends keyof Fields>(key: K, value: string): void {
@@ -260,8 +260,8 @@ export function StrategyCallForm({
           disabled={status === "sending"}
           className={`inline-flex shrink-0 items-center justify-center whitespace-nowrap rounded-sm px-6 py-3 font-body text-[15px] font-semibold transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-60 ${
             isLedger
-              ? "bg-gold text-ink hover:bg-[#d8b976] focus-visible:ring-gold focus-visible:ring-offset-ink"
-              : "bg-ink text-ivory hover:bg-[#132a4d] focus-visible:ring-ink focus-visible:ring-offset-white"
+              ? "bg-gold text-ink hover:bg-gold-hover focus-visible:ring-gold focus-visible:ring-offset-ink"
+              : "bg-ink text-ivory hover:bg-ink-hover focus-visible:ring-ink focus-visible:ring-offset-white"
           }`}
         >
           {status === "sending" ? "Sending…" : "Request a strategy call"}

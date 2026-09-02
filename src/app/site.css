@@ -8,7 +8,7 @@
 /* ---------- 01 one-plan: full-bleed dark office hero ---------- */
 
 .va-hero {
-  background: #061527;
+  background: var(--color-ink-deep);
 }
 
 .va-hero::before {
@@ -55,7 +55,7 @@
 /* ---------- 02 career-signal: subdued navy office strip ---------- */
 
 .va-career {
-  background-color: #04101f;
+  background-color: var(--color-ink-deeper);
   background-image: url("/images/design/a/02-career-signal/office-background-reconstructed.jpg");
   background-size: cover;
   background-position: center;
@@ -214,7 +214,7 @@
       rgba(255, 255, 255, 0.5),
       transparent 42rem
     ),
-    linear-gradient(135deg, #ffffff 0%, var(--color-mist) 72%, #d3e2ef 100%);
+    linear-gradient(135deg, #ffffff 0%, var(--color-mist) 72%, var(--color-mist-deep) 100%);
 }
 
 .va-mist::before {
@@ -306,7 +306,7 @@
 /* ---------- 08 next-decision: dark closing fork ---------- */
 
 .va-decision {
-  background: #04101f;
+  background: var(--color-ink-deeper);
 }
 
 .va-decision::before {

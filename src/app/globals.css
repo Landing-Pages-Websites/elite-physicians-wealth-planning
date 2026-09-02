@@ -52,11 +52,31 @@
 }
 
 @theme {
+  /* Contract tokens — public/design/a/palette_contract.json. Do not add hues. */
   --color-ink: #0b1f3a;
   --color-gold: #c8a65a;
   --color-mist: #dce8f2;
   --color-ivory: #f6f2e8;
   --color-charcoal: #38373e;
+
+  /* Derived shades. Not new hues: each is a tint/shade of a contract token,
+     needed because six flat colours cannot express depth, gradients or
+     interactive states. They were already scattered through the approved build
+     as bare hex literals; naming them here makes the palette gate meaningful —
+     a literal in a component is now a defect, a token is auditable. */
+  --color-ink-deep: #061527; /* hero ground, below ink */
+  --color-ink-deeper: #04101f; /* deepest ground + scrim */
+  --color-ink-lift: #12335e; /* raised navy, gradient top */
+  --color-ink-hover: #132a4d; /* navy interactive hover */
+  --color-gold-hover: #d8b976; /* gold interactive hover */
+  --color-mist-deep: #d3e2ef; /* mist gradient end stop */
+  --color-ivory-bright: #f5f0e8; /* display type on navy */
+  --color-ivory-warm: #f7f3ec; /* display type, warmer band */
+
+  /* NOT a contract colour and NOT a derived shade. The palette contract defines
+     no error/validation state, but the strategy-call form needs one. Flagged in
+     build/CLIENT-GAPS.md for a brand ruling — do not reuse it elsewhere. */
+  --color-danger: #9a2c2c;
 
   --font-display: "Cormorant Garamond", Georgia, "Times New Roman", serif;
   --font-body: "Inter", Arial, Helvetica, sans-serif;
