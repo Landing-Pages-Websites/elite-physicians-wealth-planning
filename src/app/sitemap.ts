@@ -8,12 +8,12 @@ import type { MetadataRoute } from "next";
 const BASE_URL = "https://elitephysicianswealthplanning.com";
 
 /** Only routes that actually exist. Interior routes are added as they ship. */
-const ROUTES = ["/"] as const;
+const ROUTES = ["/", "/consult-ledger", "/decision-atlas"] as const;
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return ROUTES.map((route) => ({
     url: `${BASE_URL}${route === "/" ? "" : route}`,
     changeFrequency: "weekly",
-    priority: 1,
+    priority: route === "/" ? 1 : 0.8,
   }));
 }

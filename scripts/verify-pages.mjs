@@ -8,7 +8,7 @@ const CHROMIUM =
   `${process.env.HOME}/Library/Caches/ms-playwright/chromium_headless_shell-1234/chrome-headless-shell-mac-arm64/chrome-headless-shell`;
 const BASE = "http://localhost:3100";
 const OUT = "/tmp/verify";
-const ROUTES = ["/", "/variant-b"];
+const ROUTES = ["/", "/consult-ledger", "/decision-atlas"];
 const VIEWPORTS = [
   { name: "1536", width: 1536, height: 864 },
   { name: "1440", width: 1440, height: 900 },

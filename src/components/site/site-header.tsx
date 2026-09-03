@@ -20,10 +20,10 @@ import { BRAND } from "@/lib/content";
  * ship. Never point navigation at a route that 404s.
  */
 const NAV = [
-  { href: "/#separate-rooms", label: "The coordination gap" },
-  { href: "/#blueprint-rounds", label: "The Blueprint" },
-  { href: "/#white-coat-paths", label: "Who we serve" },
-  { href: "/#accountable-planner", label: "Meet Michael" },
+  { href: "/consult-ledger#separate-rooms", label: "The coordination gap" },
+  { href: "/consult-ledger#blueprint-rounds", label: "The Blueprint" },
+  { href: "/consult-ledger#white-coat-paths", label: "Who we serve" },
+  { href: "/consult-ledger#accountable-planner", label: "Meet Michael" },
 ] as const;
 
 function Wordmark(): React.JSX.Element {
@@ -69,7 +69,7 @@ export function SiteHeader(): React.JSX.Element {
 
         <div className="flex items-center gap-3">
           <Link
-            href="/#form"
+            href="/consult-ledger#form"
             className="hidden min-h-11 items-center rounded-sm bg-gold px-5 font-body text-[13px] font-semibold text-ink transition-colors duration-200 hover:bg-gold/90 sm:inline-flex"
           >
             Schedule a strategy call
@@ -106,7 +106,7 @@ export function SiteHeader(): React.JSX.Element {
               </Link>
             ))}
             <Link
-              href="/#form"
+              href="/consult-ledger#form"
               className="mt-1 rounded-sm bg-gold px-3 py-3 text-center font-body text-sm font-semibold text-ink"
             >
               Schedule a strategy call

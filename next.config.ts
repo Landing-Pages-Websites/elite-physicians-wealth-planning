@@ -11,9 +11,10 @@ const nextConfig: NextConfig = {
   distDir: process.env.NEXT_DIST_DIR || ".next",
   async redirects() {
     return [
-      // /variant-a was the review URL for the approved direction and may
-      // already be shared; it is now the homepage. In-app redirect, not a 404.
-      { source: "/variant-a", destination: "/", permanent: true },
+      // The old review URLs may already be shared. Both directions now live at
+      // named routes off the root, so redirect rather than 404.
+      { source: "/variant-a", destination: "/consult-ledger", permanent: true },
+      { source: "/variant-b", destination: "/decision-atlas", permanent: true },
     ];
   },
 };

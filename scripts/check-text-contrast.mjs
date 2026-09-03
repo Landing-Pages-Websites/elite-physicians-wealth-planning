@@ -25,7 +25,7 @@ const CHROMIUM =
 const BASE = process.env.BASE ?? "http://localhost:3100";
 // Both directions. B was never covered until it was brought up to the same
 // standard, so its failures were invisible.
-const ROUTES = (process.env.ROUTES ?? "/,/variant-b").split(",");
+const ROUTES = (process.env.ROUTES ?? "/,/consult-ledger,/decision-atlas").split(",");
 const OUT = "/tmp/contrast";
 const VIEWPORTS = [
   { name: "1440", width: 1440, height: 900 },

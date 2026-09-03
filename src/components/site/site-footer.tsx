@@ -17,11 +17,11 @@ import { BRAND, HERO, SEPARATE_ROOMS, telHref } from "@/lib/content";
  * Linking to routes that do not exist is worse than omitting them.
  */
 const SECTIONS = [
-  { href: "/#separate-rooms", label: "The coordination gap" },
-  { href: "/#blueprint-rounds", label: "The Wealth Blueprint" },
-  { href: "/#five-decisions", label: "Five planning disciplines" },
-  { href: "/#white-coat-paths", label: "Who we serve" },
-  { href: "/#accountable-planner", label: "Meet the planner" },
+  { href: "/consult-ledger#separate-rooms", label: "The coordination gap" },
+  { href: "/consult-ledger#blueprint-rounds", label: "The Wealth Blueprint" },
+  { href: "/consult-ledger#five-decisions", label: "Five planning disciplines" },
+  { href: "/consult-ledger#white-coat-paths", label: "Who we serve" },
+  { href: "/consult-ledger#accountable-planner", label: "Meet the planner" },
 ] as const;
 
 export function SiteFooter(): React.JSX.Element {
@@ -84,7 +84,7 @@ export function SiteFooter(): React.JSX.Element {
             <li className="text-charcoal/80">{BRAND.hours}</li>
           </ul>
           <Link
-            href="/#form"
+            href="/consult-ledger#form"
             className="mt-6 inline-flex min-h-11 items-center rounded-sm bg-ink px-5 font-body text-[13px] font-semibold text-ivory transition-colors duration-200 hover:bg-ink/90"
           >
             Schedule a strategy call

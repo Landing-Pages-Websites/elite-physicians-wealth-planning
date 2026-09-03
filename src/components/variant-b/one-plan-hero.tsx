@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { BRAND, HERO, LINKS, PORTRAIT } from "@/lib/content";
+import { HERO, LINKS, PORTRAIT } from "@/lib/content";
 import { PortraitCaption } from "@/components/site/portrait-caption";
 import GoldArrow from "./gold-arrow";
 
@@ -128,11 +128,10 @@ function HeroActions(): React.JSX.Element {
 export default function OnePlanHero(): React.JSX.Element {
   return (
     <section id="one-plan" aria-labelledby="one-plan-heading" className="relative overflow-hidden bg-white">
-      <div className="bg-ink px-6 py-3">
-        <p className="mx-auto max-w-[96rem] text-body-s font-semibold tracking-[0.08em] text-white/90">
-          {BRAND.wordmark}
-        </p>
-      </div>
+      {/* The navy wordmark bar that sat here is now the global SiteHeader —
+          lifted, not duplicated, exactly as on the Consult Ledger. The spacer
+          reserves the fixed header's height so the hero keeps its rhythm. */}
+      <div aria-hidden="true" style={{ height: "var(--header-h)" }} />
 
       <div className="relative bg-gradient-to-b from-white via-white to-mist/40">
         <HeroFieldOrnaments />
