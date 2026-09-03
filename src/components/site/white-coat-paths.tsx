@@ -12,6 +12,8 @@ type PathwaySpec = {
   label: React.CSSProperties;
   /** Which way the 12px gold tie points at this label's photo. Default: left. */
   tie?: "up";
+  /** Labels sitting in a narrow slot between two photos get a tighter measure. */
+  narrow?: true;
 };
 
 const PHOTO_DIR = "/images/design/a/06-white-coat-paths";
@@ -57,6 +59,7 @@ const PATHWAYS: readonly PathwaySpec[] = [
     clip: "va-clip-executive",
     photo: { left: "33.8%", top: "68%", width: "21.5%", aspectRatio: "1.09" },
     label: { left: "56%", top: "72%" },
+    narrow: true,
   },
 ] as const;
 
@@ -96,23 +99,25 @@ function PathwayLabel({
   pathway: PathwaySpec;
 }): React.JSX.Element {
   return (
-    <div className="relative max-w-md pl-7 lg:w-[15.75rem]">
+    <div
+      className={`relative max-w-md pl-7 ${pathway.narrow ? "xl:w-[13.25rem]" : "xl:w-[15.75rem]"}`}
+    >
       {pathway.tie === "up" ? (
         <span
           aria-hidden="true"
-          className="absolute -top-4 left-[14px] hidden h-3 w-px bg-gold lg:block"
+          className="absolute -top-4 left-[14px] hidden h-3 w-px bg-gold xl:block"
         />
       ) : null}
       <h3 className="relative font-display text-display-s leading-[1.15] font-semibold text-ink">
         {pathway.tie === "up" ? null : (
           <span
             aria-hidden="true"
-            className="absolute -left-7 top-[0.62em] hidden h-px w-3 bg-gold lg:block"
+            className="absolute -left-7 top-[0.62em] hidden h-px w-3 bg-gold xl:block"
           />
         )}
         <span
           aria-hidden="true"
-          className="absolute -left-12 top-[0.42em] h-2 w-2 rounded-full bg-gold lg:-left-[18px]"
+          className="absolute -left-12 top-[0.42em] h-2 w-2 rounded-full bg-gold xl:-left-[18px]"
         />
         {pathway.audience}
       </h3>
@@ -125,7 +130,7 @@ function PathwayLabel({
 
 function CopyBlock(): React.JSX.Element {
   return (
-    <div className="max-w-md lg:absolute lg:top-[13%] lg:bottom-[9%] lg:left-[max(1.5rem,calc((100vw-var(--page-max))/2+var(--page-pad)))] lg:z-20 lg:flex lg:w-[29%] lg:max-w-none lg:flex-col">
+    <div className="max-w-md xl:absolute xl:top-[13%] xl:bottom-[9%] xl:left-0 xl:z-20 xl:flex xl:w-[30%] xl:max-w-none xl:flex-col">
       <p className="font-display text-sm font-medium text-ink italic">
         {WHITE_COAT_PATHS.orientation}
       </p>
@@ -135,13 +140,13 @@ function CopyBlock(): React.JSX.Element {
       >
         {WHITE_COAT_PATHS.headline}
       </h2>
-      <span aria-hidden="true" className="mt-5 block h-[2px] w-20 bg-gold lg:hidden" />
+      <span aria-hidden="true" className="mt-5 block h-[2px] w-20 bg-gold xl:hidden" />
       <p className="mt-5 max-w-[50ch] font-body text-body-m leading-[1.65] text-charcoal text-pretty">
         {WHITE_COAT_PATHS.body}
       </p>
       <a
         href={LINKS.planningPathOnsite}
-        className="va-btn va-btn-navy mt-8 lg:mt-auto"
+        className="va-btn va-btn-navy mt-8 xl:mt-auto"
       >
         {WHITE_COAT_PATHS.cta}
         <ArrowRightIcon className="h-4 w-4" />
@@ -157,11 +162,13 @@ export function WhiteCoatPaths(): React.JSX.Element {
       aria-labelledby="white-coat-paths-heading"
       className="va-mist relative overflow-hidden"
     >
-      <div className="relative z-10 px-6 pt-14 sm:px-10 lg:p-0">
+      <div className="va-shell relative z-10 pt-14 xl:pt-0">
         <CopyBlock />
 
-        {/* Desktop: cascading diagonal ribbon on the 1536x1010 canvas. */}
-        <div className="relative hidden aspect-[1536/1010] w-full lg:block">
+        {/* Desktop: cascading diagonal ribbon. The canvas sits INSIDE the page
+            shell, so the copy column and the photo percentages share one
+            coordinate system and their clearance is the same at every width. */}
+        <div className="relative hidden aspect-[1536/1010] w-full xl:block">
           <IndexRail />
           {PATHWAYS.map((pathway) => (
             <figure
