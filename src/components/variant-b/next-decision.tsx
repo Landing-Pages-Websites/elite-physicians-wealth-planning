@@ -4,119 +4,97 @@ import GoldArrow from "./gold-arrow";
 const SUBHEAD = "Two calibrated paths. One clear decision.";
 const PHONE_HREF = `tel:+1${BRAND.phone.replace(/-/g, "")}`;
 
-function SideRuler({ side }: { side: "left-4" | "right-4" }): React.JSX.Element {
-  return (
-    <svg
-      viewBox="0 0 16 600"
-      preserveAspectRatio="none"
-      aria-hidden="true"
-      fill="none"
-      className={`pointer-events-none absolute inset-y-12 hidden w-3 text-white/10 lg:block ${side}`}
-    >
-      <line x1="8" y1="0" x2="8" y2="600" stroke="currentColor" />
-      {Array.from({ length: 21 }, (_, index) => index * 30).map((y) => (
-        <line key={y} x1="3" y1={y} x2="13" y2={y} stroke="currentColor" />
-      ))}
-    </svg>
-  );
-}
-
+/**
+ * The fork spans the same 1104px box as the card grid, so each branch lands
+ * on the centre of the card it opens into (260 / 844) and dies on the card's
+ * top edge rather than in a floating dot. Stacked cards need no fork, so
+ * there is no mobile variant.
+ */
 function DecisionFork(): React.JSX.Element {
   return (
-    <>
-      <svg
-        viewBox="0 0 640 110"
-        aria-hidden="true"
-        fill="none"
-        className="mx-auto mt-8 hidden h-24 w-full max-w-2xl lg:block"
-      >
-        <circle cx="320" cy="12" r="5" className="fill-gold" />
-        <circle cx="320" cy="12" r="10" stroke="currentColor" className="text-gold/50" />
-        <path
-          d="M320 22 C 320 60, 180 62, 168 104"
-          stroke="currentColor"
-          strokeWidth="1.5"
-          strokeLinecap="round"
-          strokeDasharray="2 7"
-          className="text-gold/80"
-        />
-        <path
-          d="M320 22 C 320 60, 460 62, 472 104"
-          stroke="currentColor"
-          strokeWidth="1.5"
-          strokeLinecap="round"
-          strokeDasharray="2 7"
-          className="text-gold/80"
-        />
-        <circle cx="168" cy="104" r="3" className="fill-gold" />
-        <circle cx="472" cy="104" r="3" className="fill-gold" />
-      </svg>
-      <div aria-hidden="true" className="mx-auto mt-6 flex flex-col items-center lg:hidden">
-        <span className="h-2.5 w-2.5 rounded-full bg-gold" />
-        <span className="h-10 w-px border-l border-dashed border-gold/70" />
-      </div>
-    </>
+    <svg
+      viewBox="0 0 1104 110"
+      aria-hidden="true"
+      fill="none"
+      className="mx-auto mt-8 hidden h-[110px] w-full lg:block"
+    >
+      <circle cx="552" cy="12" r="5" className="fill-gold" />
+      <circle cx="552" cy="12" r="10" stroke="currentColor" className="text-gold/50" />
+      <path
+        d="M552 22 C552 70, 260 62, 260 110"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeDasharray="2 7"
+        className="text-gold/80"
+      />
+      <path
+        d="M552 22 C552 70, 844 62, 844 110"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeDasharray="2 7"
+        className="text-gold/80"
+      />
+    </svg>
   );
 }
 
 function StrategyCallPath(): React.JSX.Element {
   return (
-    <div className="text-left">
-      <div className="border border-white/40 bg-white p-7 sm:p-9 lg:min-h-[21rem]">
-        <h3 className="text-xl font-bold text-ink">{NEXT_DECISION.strategyCall.label}</h3>
-        <p className="mt-3 text-sm leading-relaxed text-charcoal">
-          {NEXT_DECISION.strategyCall.summary}
-        </p>
-        <p className="mt-4 text-sm font-bold text-ink">{NEXT_DECISION.strategyCall.expectation}</p>
+    <div className="flex h-full flex-col border border-white/40 bg-white p-7 text-left sm:p-9">
+      <h3 className="text-xl font-bold text-ink">{NEXT_DECISION.strategyCall.label}</h3>
+      <p className="mt-3 text-sm leading-relaxed text-charcoal">
+        {NEXT_DECISION.strategyCall.summary}
+      </p>
+      <p className="mt-4 text-sm font-bold text-ink">{NEXT_DECISION.strategyCall.expectation}</p>
+      <div className="mt-auto pt-6">
         <a
           href={LINKS.schedule}
-          className="group mt-6 inline-flex items-center gap-2.5 bg-ink px-6 py-3.5 text-sm font-bold text-white transition-colors duration-200 hover:bg-ink/85 active:bg-ink"
+          className="group inline-flex items-center gap-2.5 bg-ink px-6 py-3.5 text-sm font-bold text-white transition-colors duration-200 hover:bg-ink/85 active:bg-ink"
         >
           {NEXT_DECISION.strategyCall.label}
           <GoldArrow className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5" />
         </a>
       </div>
-      <span aria-hidden="true" className="ml-10 block h-4 w-px border-l border-dashed border-white/40" />
     </div>
   );
 }
 
 function GuidePath(): React.JSX.Element {
   return (
-    <div className="text-left">
-      <div className="border border-white/40 bg-white p-7 sm:p-9">
-        <h3 className="text-xl font-bold text-ink">{NEXT_DECISION.guide.label}</h3>
-        <p className="mt-3 text-sm leading-relaxed text-charcoal">{NEXT_DECISION.guide.summary}</p>
-        <a
-          href={LINKS.guideRequest}
-          className="group mt-6 inline-flex items-center gap-2.5 border border-ink px-6 py-3.5 text-sm font-bold text-ink transition-colors duration-200 hover:bg-ink hover:text-white active:bg-ink/90"
-        >
-          {NEXT_DECISION.guide.cta}
-          <GoldArrow className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5" />
-        </a>
-      </div>
-      <span aria-hidden="true" className="ml-10 block h-4 w-px border-l border-dashed border-white/40" />
-      <div className="flex items-start gap-3 border border-white/30 p-3">
+    <div className="flex h-full flex-col border border-white/40 bg-white p-7 text-left sm:p-9">
+      <h3 className="text-xl font-bold text-ink">{NEXT_DECISION.guide.label}</h3>
+      <p className="mt-3 text-sm leading-relaxed text-charcoal">{NEXT_DECISION.guide.summary}</p>
+      <a
+        href={LINKS.guideRequest}
+        className="group mt-6 inline-flex items-center gap-2.5 self-start border border-ink px-6 py-3.5 text-sm font-bold text-ink transition-colors duration-200 hover:bg-ink hover:text-white active:bg-ink/90"
+      >
+        {NEXT_DECISION.guide.cta}
+        <GoldArrow className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5" />
+      </a>
+      {/* The delivery note belongs to the guide, so it lives in the guide's
+          card — not in a second container on the dark ground. */}
+      <p className="mt-6 flex items-start gap-2.5 border-t border-ink/10 pt-4 text-body-s leading-relaxed text-charcoal/85">
         <svg
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"
           aria-hidden="true"
-          className="mt-0.5 h-4 w-4 shrink-0 text-gold"
+          className="mt-0.5 h-4 w-4 shrink-0 text-ink/45"
         >
-          <path d="M12 2v20M2 12h20M5 5l14 14M19 5 5 19" strokeLinecap="round" />
+          <rect x="2" y="5" width="20" height="14" rx="1" />
+          <path d="m2 7 10 7 10-7" />
         </svg>
-        <div className="text-xs leading-relaxed">
-          <p className="mt-1.5 text-white/60">{NEXT_DECISION.guide.requestNote}</p>
-        </div>
-      </div>
+        {NEXT_DECISION.guide.requestNote}
+      </p>
     </div>
   );
 }
 
 function CalibratedFooter(): React.JSX.Element {
   return (
-    <footer className="mt-20">
+    <footer className="mt-20 text-left">
       <svg
         viewBox="0 0 1536 16"
         preserveAspectRatio="none"
@@ -129,30 +107,30 @@ function CalibratedFooter(): React.JSX.Element {
           <line key={x} x1={x} y1="3" x2={x} y2="13" stroke="currentColor" />
         ))}
       </svg>
-      <div className="mt-6 grid gap-6 text-xs leading-relaxed text-white/70 sm:grid-cols-3">
-        <div className="text-left">
+      <div className="mt-6 grid gap-6 text-xs leading-[1.6] text-white/70 sm:grid-cols-3 sm:items-start">
+        <div>
           <p className="flex items-center gap-2">
             <svg
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
               aria-hidden="true"
-              className="h-4 w-4 shrink-0 text-gold"
+              className="h-3.5 w-3.5 shrink-0 text-gold"
             >
               <rect x="2" y="5" width="20" height="14" rx="1" />
               <path d="m2 7 10 7 10-7" />
             </svg>
             <a
               href={`mailto:${NEXT_DECISION.contact}`}
-              className="underline decoration-white/30 underline-offset-2 transition-colors duration-200 hover:text-white"
+              className="inline-flex min-h-11 items-center py-2 text-body-s underline decoration-white/30 underline-offset-2 transition-colors duration-200 hover:text-white"
             >
               {NEXT_DECISION.contact}
             </a>
           </p>
-          <p className="mt-2">
+          <p>
             <a
               href={PHONE_HREF}
-              className="underline decoration-white/30 underline-offset-2 transition-colors duration-200 hover:text-white"
+              className="inline-flex min-h-11 items-center py-2 text-body-s underline decoration-white/30 underline-offset-2 transition-colors duration-200 hover:text-white"
             >
               {BRAND.phone}
             </a>
@@ -162,10 +140,10 @@ function CalibratedFooter(): React.JSX.Element {
             {BRAND.hours}
           </p>
         </div>
-        <p className="self-center text-center font-semibold text-white/80">
+        <p className="text-balance font-semibold text-white/80 sm:text-center">
           {NEXT_DECISION.identityLine}
         </p>
-        <p className="self-center sm:text-right">{NEXT_DECISION.disclaimer}</p>
+        <p className="text-balance sm:text-right">{NEXT_DECISION.disclaimer}</p>
       </div>
     </footer>
   );
@@ -178,8 +156,6 @@ export default function NextDecision(): React.JSX.Element {
       aria-labelledby="next-decision-heading"
       className="relative overflow-hidden bg-ink"
     >
-      <SideRuler side="left-4" />
-      <SideRuler side="right-4" />
       <svg
         aria-hidden="true"
         viewBox="0 0 24 24"
@@ -201,17 +177,17 @@ export default function NextDecision(): React.JSX.Element {
       <div className="relative mx-auto max-w-6xl px-6 py-20 text-center lg:py-24">
         <h2
           id="next-decision-heading"
-          className="mx-auto max-w-[24ch] text-display-l tracking-[-0.02em] font-bold leading-[1.15] tracking-tight text-white"
+          className="mx-auto max-w-[24ch] text-display-l font-bold leading-[1.15] tracking-[-0.02em] text-balance text-white"
         >
           {NEXT_DECISION.headline}
         </h2>
         <p className="mt-5 flex items-center justify-center gap-3 text-body-s font-semibold uppercase tracking-[0.3em] text-white/85">
-          <span aria-hidden="true" className="h-1.5 w-1.5 rounded-full bg-gold" />
+          <span aria-hidden="true" className="hidden h-1.5 w-1.5 rounded-full bg-gold lg:inline-block" />
           {SUBHEAD}
-          <span aria-hidden="true" className="h-1.5 w-1.5 rounded-full bg-gold" />
+          <span aria-hidden="true" className="hidden h-1.5 w-1.5 rounded-full bg-gold lg:inline-block" />
         </p>
         <DecisionFork />
-        <div className="mt-6 grid items-start gap-10 lg:mt-2 lg:grid-cols-2 lg:gap-16">
+        <div className="mt-6 grid items-start gap-10 lg:mt-0 lg:grid-cols-2 lg:items-stretch lg:gap-16">
           <StrategyCallPath />
           <GuidePath />
         </div>

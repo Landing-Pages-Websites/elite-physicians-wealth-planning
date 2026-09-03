@@ -1,13 +1,6 @@
 import Image from "next/image";
 import { SEPARATE_ROOMS } from "@/lib/content";
-import {
-  AlertIcon,
-  CalculatorIcon,
-  ChartBarIcon,
-  ScalesIcon,
-  ShieldPlusIcon,
-  UmbrellaIcon,
-} from "./icons";
+import { AlertIcon } from "./icons";
 
 type RoomSpec = {
   role: (typeof SEPARATE_ROOMS.roles)[number];
@@ -15,7 +8,6 @@ type RoomSpec = {
   alt: string;
   width: number;
   height: number;
-  Icon: (props: { className?: string }) => React.JSX.Element;
   /** Desktop placement on the 1536x864 canvas. */
   desktop: { left: string; top: string; width: string };
 };
@@ -29,7 +21,6 @@ const ROOMS: readonly RoomSpec[] = [
     alt: "Hand-drawn floor plan of a CPA’s separate office",
     width: 422,
     height: 278,
-    Icon: CalculatorIcon,
     desktop: { left: "37.5%", top: "6%", width: "25%" },
   },
   {
@@ -38,7 +29,6 @@ const ROOMS: readonly RoomSpec[] = [
     alt: "Hand-drawn floor plan of an attorney’s separate office",
     width: 494,
     height: 278,
-    Icon: ScalesIcon,
     desktop: { left: "66.5%", top: "5%", width: "27%" },
   },
   {
@@ -47,8 +37,7 @@ const ROOMS: readonly RoomSpec[] = [
     alt: "Hand-drawn floor plan of a third-party administrator’s separate office",
     width: 316,
     height: 260,
-    Icon: ShieldPlusIcon,
-    desktop: { left: "29.5%", top: "44%", width: "19%" },
+    desktop: { left: "33.5%", top: "44%", width: "19%" },
   },
   {
     role: "Insurance professional",
@@ -56,7 +45,6 @@ const ROOMS: readonly RoomSpec[] = [
     alt: "Hand-drawn floor plan of an insurance professional’s separate office",
     width: 388,
     height: 261,
-    Icon: UmbrellaIcon,
     desktop: { left: "75.5%", top: "42%", width: "22.5%" },
   },
   {
@@ -65,15 +53,22 @@ const ROOMS: readonly RoomSpec[] = [
     alt: "Hand-drawn floor plan of a financial advisor’s separate office",
     width: 411,
     height: 278,
-    Icon: ChartBarIcon,
-    desktop: { left: "44.5%", top: "70.5%", width: "24%" },
+    desktop: { left: "44.5%", top: "67%", width: "24%" },
   },
 ] as const;
 
 /**
- * Gold network: enters top-center (x=768, from the 02 seam), reaches the
- * hub, connects each room to the hub only, and the financial-advisor
- * branch bends into the long arrow exiting at the lower left (seam to 04).
+ * Gold network on the 1536x864 canvas.
+ *
+ * Two solid routes only: the arrival from 02, which enters top-centre and runs
+ * an orthogonal corridor down the gutter between the CPA and Attorney plans
+ * (it used to cut diagonally through the CPA's walls), and the exit to 04,
+ * which now leaves the hub it arrived at and clears every plan's box on its
+ * way to the left edge.
+ *
+ * The five spokes are drawn BROKEN, and each one lands on its room's outer
+ * wall. The section is titled "the coordination gap" — a solid, fully wired
+ * hub drew the state the firm sells, not the problem the copy describes.
  */
 function NetworkRoute(): React.JSX.Element {
   const node = (cx: number, cy: number): React.JSX.Element => (
@@ -96,23 +91,29 @@ function NetworkRoute(): React.JSX.Element {
         strokeLinecap="round"
         strokeLinejoin="round"
       >
-        <path d="M768 0 V44 Q768 90 806 128 Q882 204 920 302 Q934 344 940 368" vectorEffect="non-scaling-stroke" />
-        <path d="M918 382 Q868 360 812 336" vectorEffect="non-scaling-stroke" />
-        <path d="M1006 390 Q1030 350 1050 306" vectorEffect="non-scaling-stroke" />
-        <path d="M877 446 H790" vectorEffect="non-scaling-stroke" />
-        <path d="M1033 452 Q1090 462 1140 481" vectorEffect="non-scaling-stroke" />
-        <path d="M950 523 Q940 570 906 611" vectorEffect="non-scaling-stroke" />
-        <path d="M683 780 C520 806 300 828 96 846 Q56 850 30 864" vectorEffect="non-scaling-stroke" />
-        <path d="M118 830 L96 846 L120 856" vectorEffect="non-scaling-stroke" />
-        <path d="M60 598 H330 Q362 598 382 584" vectorEffect="non-scaling-stroke" />
+        <path
+          d="M768 0 V22 Q768 40 786 40 H970 Q988 40 988 58 V300 Q988 344 975 370"
+          vectorEffect="non-scaling-stroke"
+        />
+        <path
+          d="M955 523 V545 Q955 566 976 566 H1060 Q1082 566 1082 588 V822 Q1082 844 1060 844 H0"
+          vectorEffect="non-scaling-stroke"
+        />
+        <g strokeDasharray="2 10">
+          <path d="M918 382 Q866 350 806 276" vectorEffect="non-scaling-stroke" />
+          <path d="M1006 390 Q1036 330 1053 251" vectorEffect="non-scaling-stroke" />
+          <path d="M877 446 H781" vectorEffect="non-scaling-stroke" />
+          <path d="M1033 452 Q1112 466 1184 487" vectorEffect="non-scaling-stroke" />
+          <path d="M950 523 Q936 556 903 583" vectorEffect="non-scaling-stroke" />
+        </g>
       </g>
       <circle cx="955" cy="445" r="78" fill="var(--color-ivory)" stroke="var(--color-gold)" strokeWidth="2" />
       <circle cx="955" cy="445" r="68" fill="none" stroke="var(--color-gold)" strokeWidth="1" />
-      {node(806, 333)}
-      {node(1053, 301)}
-      {node(784, 446)}
-      {node(1146, 483)}
-      {node(903, 615)}
+      {node(806, 276)}
+      {node(1053, 251)}
+      {node(781, 446)}
+      {node(1184, 487)}
+      {node(903, 583)}
     </svg>
   );
 }
@@ -133,12 +134,14 @@ function RoomFigure({
         alt={room.alt}
         width={room.width}
         height={room.height}
-        sizes="(min-width: 1024px) 26vw, 288px"
+        sizes="(min-width: 1024px) 26vw, 256px"
         className="h-auto w-full"
       />
-      <figcaption className="absolute inset-0 flex flex-col items-center justify-center gap-1">
-        <room.Icon className="h-7 w-7 text-ink/55" />
-        <span className="font-display text-lg leading-none font-semibold text-ink lg:text-[clamp(1rem,1.4vw,1.4rem)]">
+      {/* Drafting-style room callout pinned to the plan's empty top-left
+          quadrant. Centred, it sat on the drawn furniture; the ivory plate
+          knocks it out of the hatching so both drawing and label survive. */}
+      <figcaption className="absolute top-[9%] left-[7%]">
+        <span className="inline-block bg-ivory px-1.5 py-0.5 font-display text-body-s font-medium tracking-[0.16em] text-ink uppercase">
           {room.role}
         </span>
       </figcaption>
@@ -154,7 +157,7 @@ function BoundaryNote({ className }: { className?: string }): React.JSX.Element 
       <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full border-2 border-gold text-gold">
         <AlertIcon className="h-4 w-4" />
       </span>
-      <p className="font-body text-xs leading-relaxed text-charcoal">
+      <p className="font-body text-body-s leading-[1.55] text-charcoal">
         {SEPARATE_ROOMS.boundaryNote}
       </p>
     </aside>
@@ -163,7 +166,7 @@ function BoundaryNote({ className }: { className?: string }): React.JSX.Element 
 
 function CopyBlock(): React.JSX.Element {
   return (
-    <div className="max-w-md px-6 pt-10 sm:px-10 lg:absolute lg:top-[19%] lg:left-[max(1.5rem,calc((100vw-var(--page-max))/2+var(--page-pad)))] lg:z-20 lg:w-[26%] lg:max-w-none lg:px-0 lg:pt-0">
+    <div className="max-w-md px-6 pt-10 sm:px-10 lg:absolute lg:top-[9%] lg:left-[max(1.5rem,calc((100vw-var(--page-max))/2+var(--page-pad)))] lg:z-20 lg:w-[26%] lg:max-w-none lg:px-0 lg:pt-0">
       <p className="font-body text-[11px] font-semibold tracking-[0.22em] text-ink uppercase">
         {SEPARATE_ROOMS.orientation}
       </p>
@@ -176,7 +179,6 @@ function CopyBlock(): React.JSX.Element {
       <p className="mt-5 max-w-[52ch] font-body text-body-m leading-[1.65] text-charcoal text-pretty">
         {SEPARATE_ROOMS.body}
       </p>
-      <span aria-hidden="true" className="mt-6 block h-[2px] w-20 bg-gold lg:hidden" />
     </div>
   );
 }
@@ -209,7 +211,7 @@ export function SeparateRooms(): React.JSX.Element {
         <CopyBlock />
 
         {/* Desktop: radial network on the native 1536x864 canvas. */}
-        <div className="relative -mt-4 hidden aspect-[1536/864] w-full lg:block">
+        <div className="relative hidden aspect-[1536/864] w-full lg:block">
           <NetworkRoute />
           {ROOMS.map((room) => (
             <RoomFigure
@@ -220,13 +222,14 @@ export function SeparateRooms(): React.JSX.Element {
             />
           ))}
           <HubCircle className="absolute top-[51.5%] left-[62.2%] h-[17%] w-[9.6%] -translate-x-1/2 -translate-y-1/2 px-3 text-[clamp(1rem,1.5vw,1.45rem)] leading-tight" />
-          <BoundaryNote className="absolute right-[3%] bottom-[5%] w-[300px]" />
+          <BoundaryNote className="absolute bottom-[9%] left-[max(1.5rem,calc((100vw-var(--page-max))/2+var(--page-pad)))] w-[26%] max-w-none" />
         </div>
 
-        {/* Mobile: vertical convergence — hub first, rooms stacked. */}
+        {/* Mobile: the desktop topology rotated — one trunk off the hub with
+            five branches. The old stack chained room to room, which read as a
+            referral pipeline, i.e. the opposite of what the copy claims. */}
         <div className="px-6 pb-14 sm:px-10 lg:hidden">
           <div className="mt-10 flex flex-col items-center">
-            <span aria-hidden="true" className="h-10 w-[2px] bg-gold" />
             <div className="relative flex h-40 w-40 items-center justify-center rounded-full border-2 border-gold bg-ivory">
               <span
                 aria-hidden="true"
@@ -234,16 +237,25 @@ export function SeparateRooms(): React.JSX.Element {
               />
               <HubCircle className="h-full w-full px-6 text-xl leading-tight" />
             </div>
-            {ROOMS.map((room) => (
-              <div key={room.role} className="flex w-full flex-col items-center">
-                <span aria-hidden="true" className="h-10 w-[2px] bg-gold" />
-                <span
-                  aria-hidden="true"
-                  className="h-3 w-3 rounded-full border-2 border-gold bg-ivory"
-                />
-                <RoomFigure room={room} className="relative w-72 max-w-full" />
-              </div>
-            ))}
+            <div className="relative mt-8 w-full pl-10">
+              <span
+                aria-hidden="true"
+                className="absolute top-0 bottom-10 left-[19px] w-[2px] bg-gold"
+              />
+              {ROOMS.map((room) => (
+                <div key={room.role} className="relative flex w-full items-center py-4">
+                  <RoomFigure room={room} className="relative w-full max-w-[16rem]" />
+                  <span
+                    aria-hidden="true"
+                    className="absolute top-1/2 left-[-21px] h-[2px] w-10 -translate-y-1/2 bg-gold"
+                  />
+                  <span
+                    aria-hidden="true"
+                    className="absolute top-1/2 left-[-27px] h-3 w-3 -translate-y-1/2 rounded-full border-2 border-gold bg-ivory"
+                  />
+                </div>
+              ))}
+            </div>
             <BoundaryNote className="mt-10 w-full max-w-sm" />
           </div>
         </div>

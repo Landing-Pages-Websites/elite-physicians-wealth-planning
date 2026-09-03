@@ -29,9 +29,9 @@
   background:
     linear-gradient(
       90deg,
-      rgba(4, 14, 27, 0.9) 0%,
-      rgba(4, 14, 27, 0.66) 42%,
-      rgba(4, 14, 27, 0.28) 100%
+      rgba(4, 14, 27, 0.95) 0%,
+      rgba(4, 14, 27, 0.88) 42%,
+      rgba(4, 14, 27, 0.78) 100%
     ),
     radial-gradient(
       70% 80% at 36% 55%,
@@ -41,24 +41,18 @@
 }
 
 /* Ivory paper portrait card surface (kept as CSS, not an image). */
-.va-card-paper {
-  background:
-    radial-gradient(
-      120% 90% at 30% 18%,
-      #ffffff 0%,
-      var(--color-ivory) 62%,
-      rgba(220, 208, 178, 0.55) 100%
-    ),
-    var(--color-ivory);
-}
 
 /* ---------- 02 career-signal: subdued navy office strip ---------- */
 
 .va-career {
-  background-color: var(--color-ink-deeper);
-  background-image: url("/images/design/a/02-career-signal/office-background-reconstructed.jpg");
-  background-size: cover;
-  background-position: center;
+  /* Photo removed: under its own scrim only 5-8% survived, as value
+     blotches sitting exactly where the gold route passes. A photograph you
+     cannot read is noise, not imagery. */
+  background: linear-gradient(
+    180deg,
+    var(--color-ink-deep) 0%,
+    var(--color-ink-deeper) 62%
+  );
 }
 
 .va-career::before {
@@ -94,7 +88,9 @@
       rgba(255, 255, 255, 0.18) 0 1px,
       transparent 1.5px
     );
-  background-size: 9px 9px, 13px 13px;
+  background-size:
+    9px 9px,
+    13px 13px;
   mix-blend-mode: soft-light;
 }
 
@@ -134,7 +130,9 @@
       rgba(200, 166, 90, 0.3) 0 1px,
       transparent 1px
     );
-  background-size: 5px 5px, 7px 7px;
+  background-size:
+    5px 5px,
+    7px 7px;
 }
 
 /* Notched navy masthead tab. */
@@ -149,10 +147,12 @@
   content: "";
   position: absolute;
   inset: 0;
-  background-image: url("/images/design/a/04-blueprint-rounds/desk-still-life-background.jpg");
-  background-size: cover;
-  background-position: center top;
-  background-repeat: no-repeat;
+  /* Background image removed: its only legible content was three
+     fabricated book titles and an invented handwritten checklist (one
+     misspelled "Tax Efficency"), baked into raster pixels. hard_rules bar
+     inventing publications or client artefacts, and a scrim cannot launder
+     one. The band keeps its ivory ground. */
+  background: none;
 }
 
 /* The scrim used to fade left-to-right, reaching 0% opacity by x=82% — it was
@@ -212,7 +212,12 @@
       rgba(255, 255, 255, 0.5),
       transparent 42rem
     ),
-    linear-gradient(135deg, #ffffff 0%, var(--color-mist) 72%, var(--color-mist-deep) 100%);
+    linear-gradient(
+      135deg,
+      #ffffff 0%,
+      var(--color-mist) 72%,
+      var(--color-mist-deep) 100%
+    );
 }
 
 .va-mist::before {
@@ -270,7 +275,11 @@
   inset: 0;
   pointer-events: none;
   background:
-    radial-gradient(circle at 63% 43%, rgba(255, 255, 255, 0.26), transparent 34%),
+    radial-gradient(
+      circle at 63% 43%,
+      rgba(255, 255, 255, 0.26),
+      transparent 34%
+    ),
     linear-gradient(
       90deg,
       rgba(246, 242, 232, 0.08) 0%,
@@ -283,6 +292,12 @@
 /* On narrow screens the narrative stacks over the desk photo, so the
    ivory wash must stay near-opaque behind all copy. */
 @media (max-width: 1023px) {
+  /* The desk plate ghosts through at 390 as unreadable fragments of the
+     fabricated book spines. Nothing survives that is worth the request. */
+  .va-planner::before {
+    display: none;
+  }
+
   .va-planner::after {
     background: linear-gradient(
       0deg,
@@ -295,10 +310,12 @@
 
 /* Thin double border for the portrait plate. */
 .va-planner-card {
-  border: 1px solid color-mix(in srgb, var(--color-ivory), var(--color-charcoal) 30%);
-  outline: 1px solid color-mix(in srgb, var(--color-ivory), var(--color-charcoal) 12%);
+  border: 1px solid
+    color-mix(in srgb, var(--color-ivory), var(--color-charcoal) 30%);
+  outline: 1px solid
+    color-mix(in srgb, var(--color-ivory), var(--color-charcoal) 12%);
   outline-offset: -7px;
-  background: rgba(236, 232, 224, 0.72);
+  background: var(--color-ivory-bright);
 }
 
 /* ---------- 08 next-decision: dark closing fork ---------- */
@@ -322,14 +339,11 @@
   position: absolute;
   inset: 0;
   pointer-events: none;
-  background:
-    radial-gradient(circle at 50% 36%, rgba(6, 24, 46, 0.2), transparent 34%),
-    linear-gradient(
-      90deg,
-      rgba(4, 12, 25, 0.76),
-      rgba(6, 20, 41, 0.55) 50%,
-      rgba(4, 12, 25, 0.78)
-    );
+  background: radial-gradient(
+    120% 95% at 50% 42%,
+    rgba(6, 20, 41, 0.34),
+    rgba(4, 12, 25, 0.92) 74%
+  );
 }
 
 /* Gold gradient action built from the gold token + light/dark overlays. */
@@ -385,4 +399,3 @@
     animation: none;
   }
 }
-

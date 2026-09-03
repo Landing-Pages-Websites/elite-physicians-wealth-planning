@@ -24,26 +24,18 @@ function splitHeadline(): { first: string; second: string } {
 
 /**
  * Closing fork, drawn as flow elements so the gold route can never strike
- * live copy: the route enters at the top edge (x≈686/1536, from the 07
- * exit), a junction splits beneath the headline toward the two column
- * centers, and a merge rejoins them beneath the actions.
+ * live copy: a junction splits beneath the headline toward the two column
+ * centers and the two branches land on the icon rings. The branches do not
+ * merge again — the two paths are alternatives, not a loop, and the route
+ * continues below the primary (schedule) action only.
  */
-function ForkEntry(): React.JSX.Element {
-  return (
-    <span
-      aria-hidden="true"
-      className="pointer-events-none absolute top-0 left-[44.66%] hidden h-14 w-[2px] bg-gold/80 md:block"
-    />
-  );
-}
-
 function ForkSplit(): React.JSX.Element {
   return (
     <svg
       viewBox="0 0 1000 120"
       preserveAspectRatio="none"
       aria-hidden="true"
-      className="pointer-events-none mx-auto mt-10 hidden h-24 w-full max-w-4xl md:block"
+      className="pointer-events-none mx-auto mt-10 hidden h-24 w-full md:block"
     >
       <g
         fill="none"
@@ -53,34 +45,10 @@ function ForkSplit(): React.JSX.Element {
         strokeLinejoin="round"
       >
         <path d="M500 0 V38" vectorEffect="non-scaling-stroke" />
-        <path d="M500 38 C500 82 250 66 250 120" vectorEffect="non-scaling-stroke" />
-        <path d="M500 38 C500 82 750 66 750 120" vectorEffect="non-scaling-stroke" />
+        <path d="M500 38 C500 82 229 66 229 120" vectorEffect="non-scaling-stroke" />
+        <path d="M500 38 C500 82 771 66 771 120" vectorEffect="non-scaling-stroke" />
       </g>
       <circle cx="500" cy="38" r="5" fill="var(--color-gold)" />
-    </svg>
-  );
-}
-
-function ForkMerge(): React.JSX.Element {
-  return (
-    <svg
-      viewBox="0 0 1000 100"
-      preserveAspectRatio="none"
-      aria-hidden="true"
-      className="pointer-events-none mx-auto mt-8 hidden h-20 w-full max-w-4xl md:block"
-    >
-      <g
-        fill="none"
-        stroke="var(--color-gold)"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      >
-        <path d="M250 0 C250 52 500 40 500 66" vectorEffect="non-scaling-stroke" />
-        <path d="M750 0 C750 52 500 40 500 66" vectorEffect="non-scaling-stroke" />
-        <path d="M500 66 V100" vectorEffect="non-scaling-stroke" />
-      </g>
-      <circle cx="500" cy="66" r="4" fill="var(--color-gold)" />
     </svg>
   );
 }
@@ -107,7 +75,7 @@ function GoldAction({
   return (
     <a
       href={href}
-      className="va-btn va-btn-gold justify-center"
+      className="va-btn va-btn-gold w-full max-w-[19rem] justify-center sm:w-auto"
     >
       {label}
     </a>
@@ -117,7 +85,7 @@ function GoldAction({
 function StrategyPath(): React.JSX.Element {
   const { strategyCall } = NEXT_DECISION;
   return (
-    <article className="flex flex-col items-center text-center">
+    <article className="flex flex-col items-center text-center md:grid md:row-span-6 md:grid-rows-subgrid md:items-start md:justify-items-center">
       <PathIcon>
         <CalendarClockIcon className="h-7 w-7" />
       </PathIcon>
@@ -125,15 +93,22 @@ function StrategyPath(): React.JSX.Element {
         {strategyCall.label}
       </h3>
       <span aria-hidden="true" className="mt-4 h-px w-16 bg-gold" />
-      <p className="mt-5 max-w-[46ch] font-body text-body-m leading-[1.6] text-mist/80 text-pretty">
+      <p className="mt-5 max-w-[40ch] font-body text-body-m leading-[1.6] text-mist/80 text-pretty">
         {strategyCall.summary}
       </p>
       <p className="mt-5 flex max-w-sm items-start gap-2 font-body text-xs text-gold/90">
         <InfoIcon className="mt-0.5 h-4 w-4 shrink-0" />
         {strategyCall.expectation}
       </p>
-      <div className="mt-8">
+      <div className="mt-8 flex flex-col items-center">
         <GoldAction href={LINKS.scheduleOnsite} label={strategyCall.label} />
+        {/* The route leaves the primary action and continues to the booking
+            form below; the guide path is a terminus, so nothing is drawn
+            under it. */}
+        <span
+          aria-hidden="true"
+          className="mt-10 hidden h-14 w-[2px] bg-gold/70 md:block"
+        />
       </div>
     </article>
   );
@@ -142,15 +117,15 @@ function StrategyPath(): React.JSX.Element {
 function GuidePath(): React.JSX.Element {
   const { guide } = NEXT_DECISION;
   return (
-    <article className="flex flex-col items-center text-center">
+    <article className="flex flex-col items-center text-center md:grid md:row-span-6 md:grid-rows-subgrid md:items-start md:justify-items-center">
       <PathIcon>
         <FileLockIcon className="h-7 w-7" />
       </PathIcon>
-      <h3 className="mt-6 max-w-xs font-display text-[clamp(1.6rem,2.2vw,2.1rem)] leading-tight font-semibold text-white">
+      <h3 className="mt-6 max-w-[23rem] font-display text-[clamp(1.6rem,2.2vw,2.1rem)] leading-tight font-semibold text-balance text-white">
         {guide.label}
       </h3>
       <span aria-hidden="true" className="mt-4 h-px w-16 bg-gold" />
-      <p className="mt-5 max-w-[46ch] font-body text-body-m leading-[1.6] text-mist/80 text-pretty">
+      <p className="mt-5 max-w-[40ch] font-body text-body-m leading-[1.6] text-mist/80 text-pretty">
         {guide.summary}
       </p>
       {/* The approved frame reserves a dashed guide-cover slot here and fills
@@ -168,7 +143,14 @@ function GuidePath(): React.JSX.Element {
         {guide.requestNote}
       </p>
       <div className="mt-8">
-        <GoldAction href={LINKS.guideRequest} label={guide.cta} />
+        {/* Secondary action: a text link, never a second gold fill. The copy
+            ranks this path as the lower-commitment one. */}
+        <a
+          href={LINKS.guideRequest}
+          className="va-link min-h-11 text-mist"
+        >
+          {guide.cta}
+        </a>
       </div>
     </article>
   );
@@ -176,18 +158,18 @@ function GuidePath(): React.JSX.Element {
 
 function ContactClose(): React.JSX.Element {
   return (
-    <div className="mt-12 flex flex-col items-center gap-4 text-center md:mt-4">
+    <div className="mt-12 flex flex-col items-center gap-4 text-center md:mt-16">
       <p className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 font-body text-sm text-mist/85">
         <a
           href={`mailto:${NEXT_DECISION.contact}`}
-          className="inline-flex items-center gap-2 underline-offset-4 transition-colors duration-200 hover:text-gold hover:underline"
+          className="inline-flex min-h-11 items-center gap-2 py-2 underline-offset-4 transition-colors duration-200 hover:text-gold hover:underline"
         >
           <MailIcon className="h-4 w-4 text-gold" />
           {NEXT_DECISION.contact}
         </a>
         <a
           href={telHref()}
-          className="inline-flex items-center gap-2 underline-offset-4 transition-colors duration-200 hover:text-gold hover:underline"
+          className="inline-flex min-h-11 items-center gap-2 py-2 underline-offset-4 transition-colors duration-200 hover:text-gold hover:underline"
         >
           <PhoneIcon className="h-4 w-4 text-gold" />
           {BRAND.phone}
@@ -213,7 +195,6 @@ export function NextDecision(): React.JSX.Element {
       className="va-decision relative overflow-hidden text-ivory"
     >
       <div className="relative z-10">
-        <ForkEntry />
         <div className="relative mx-auto flex min-h-[min(864px,100svh)] max-w-5xl flex-col justify-center px-6 py-20 sm:px-10 lg:py-24">
           <h2
             id="next-decision-heading"
@@ -225,17 +206,17 @@ export function NextDecision(): React.JSX.Element {
 
           <ForkSplit />
 
-          <div className="mt-6 grid grid-cols-1 gap-14 md:grid-cols-2 md:gap-10">
+          <div className="mt-6 grid grid-cols-1 gap-10 md:mt-0 md:grid-cols-2 md:grid-rows-[auto_auto_auto_auto_auto_auto] md:gap-x-20 md:gap-y-0">
             <StrategyPath />
-            {/* Mobile fork: vertical connector between the stacked paths. */}
+            {/* Two alternatives, not a sequence: a rule separates the stacked
+                paths on mobile — nothing connects them. */}
             <span
               aria-hidden="true"
-              className="mx-auto -my-4 h-12 w-[2px] bg-gold/70 md:hidden"
+              className="mx-auto block h-px w-full max-w-[18rem] bg-white/12 md:hidden"
             />
             <GuidePath />
           </div>
 
-          <ForkMerge />
           <ContactClose />
         </div>
       </div>

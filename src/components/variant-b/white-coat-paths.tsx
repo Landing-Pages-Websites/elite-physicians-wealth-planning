@@ -10,63 +10,33 @@ const CARDS = [
     pathway: WHITE_COAT_PATHS.pathways[0],
     src: `${IMAGE_ROOT}/physicians-specialists.jpg`,
     alt: "Physician in a white coat reviewing paperwork with a patient during a consultation",
-    aspect: "aspect-[478/272]",
   },
   {
     pathway: WHITE_COAT_PATHS.pathways[1],
     src: `${IMAGE_ROOT}/surgeons.jpg`,
     alt: "Surgeon tying a surgical cap in an operating room",
-    aspect: "aspect-[445/272]",
   },
   {
     pathway: WHITE_COAT_PATHS.pathways[2],
     src: `${IMAGE_ROOT}/dentists-dental-specialists.jpg`,
     alt: "Dental treatment chair and overhead equipment in a modern dental operatory",
-    aspect: "aspect-[448/149] max-lg:aspect-[448/200]",
   },
   {
     pathway: WHITE_COAT_PATHS.pathways[3],
     src: `${IMAGE_ROOT}/practice-owners-partners.jpg`,
     alt: "Hands reviewing financial planning paperwork spread across a meeting table",
-    aspect: "aspect-[545/213]",
   },
   {
     pathway: WHITE_COAT_PATHS.pathways[4],
     src: `${IMAGE_ROOT}/healthcare-executives.jpg`,
     alt: "White-coated healthcare professional walking down a clinical office corridor, seen from behind",
-    aspect: "aspect-[445/213]",
   },
 ] as const;
 
-function DiagonalRail({ className, flip }: { className: string; flip?: boolean }): React.JSX.Element {
-  return (
-    <svg
-      viewBox="0 0 320 160"
-      aria-hidden="true"
-      fill="none"
-      className={`pointer-events-none absolute text-ink/40 ${className} ${flip ? "rotate-180" : ""}`}
-    >
-      <line x1="0" y1="10" x2="320" y2="150" stroke="currentColor" strokeWidth="1.5" />
-      {[0.2, 0.45, 0.7].map((t) => (
-        <line
-          key={t}
-          x1={320 * t - 4}
-          y1={10 + 140 * t + 6}
-          x2={320 * t + 4}
-          y2={10 + 140 * t - 6}
-          stroke="currentColor"
-        />
-      ))}
-      <circle cx={320 * 0.32} cy={10 + 140 * 0.32} r="4" className="fill-gold stroke-white" />
-      <circle cx={320 * 0.85} cy={10 + 140 * 0.85} r="4" className="fill-gold stroke-white" />
-    </svg>
-  );
-}
-
 function AudienceCard({ card }: { card: (typeof CARDS)[number] }): React.JSX.Element {
   return (
-    <figure className="self-start border border-white/90 bg-white shadow-[0_14px_36px_rgba(11,31,58,0.08)]">
-      <div className={`relative overflow-hidden bg-mist ${card.aspect}`}>
+    <figure className="flex h-full flex-col border border-white/90 bg-white shadow-[0_14px_36px_rgba(11,31,58,0.08)]">
+      <div className="relative aspect-[16/9] w-full overflow-hidden bg-mist">
         <Image
           src={card.src}
           alt={card.alt}
@@ -96,17 +66,15 @@ export default function WhiteCoatPaths(): React.JSX.Element {
         aria-hidden="true"
         className="absolute inset-0 bg-gradient-to-br from-white/70 via-transparent to-white/40"
       />
-      <DiagonalRail className="-left-10 -top-6 h-40 w-80" />
-      <DiagonalRail className="-bottom-6 -right-10 h-40 w-80" flip />
       <div className="relative mx-auto max-w-[92rem] px-6 py-16 lg:py-20">
-        <div className="grid gap-5 lg:grid-cols-3">
-          <div className="lg:pr-6">
+        <div className="grid items-stretch gap-5 lg:grid-cols-3">
+          <div className="lg:pb-8 lg:pr-6">
             <p className="text-xs font-bold uppercase tracking-[0.22em] text-ink">
               {WHITE_COAT_PATHS.orientation}
             </p>
             <h2
               id="white-coat-paths-heading"
-              className="mt-4 max-w-[18ch] text-display-m tracking-[-0.02em] font-bold leading-[1.12] tracking-tight text-ink"
+              className="mt-4 text-display-m font-bold leading-[1.12] tracking-[-0.02em] text-balance text-ink"
             >
               {WHITE_COAT_PATHS.headline}
             </h2>
@@ -120,7 +88,7 @@ export default function WhiteCoatPaths(): React.JSX.Element {
           <AudienceCard card={CARDS[3]} />
           <AudienceCard card={CARDS[4]} />
         </div>
-        <div className="mt-12">
+        <div className="mt-10">
           <a
             href={LINKS.planningPath}
             className="group va-btn va-btn-navy whitespace-nowrap"
@@ -128,8 +96,6 @@ export default function WhiteCoatPaths(): React.JSX.Element {
             {WHITE_COAT_PATHS.cta}
             <GoldArrow className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5" />
           </a>
-          <p className="mt-2 text-body-s font-semibold text-charcoal/70">
-          </p>
         </div>
       </div>
     </section>

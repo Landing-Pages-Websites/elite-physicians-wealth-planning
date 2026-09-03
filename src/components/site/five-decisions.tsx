@@ -1,14 +1,17 @@
 import { FIVE_DECISIONS } from "@/lib/content";
 
 /**
- * Route continuity: enters at the top edge (x=1510, from the 04 exit),
- * travels across the quiet upper field to the headline's right edge;
- * a lower-left stub exits through the bottom edge at x=37 (seam to 06).
+ * Route continuity. The viewBox is 1:1 with the 1440 layout (it used to be
+ * 1536x864 under preserveAspectRatio="none", which scaled y by 0.86, turned
+ * every Q corner into an ellipse and made it impossible to aim a coordinate at
+ * a DOM element). The entry drops from the 04 exit onto the ledger spine at
+ * x=943 and overruns behind the opaque first row on purpose; the exit leaves
+ * the spine's foot and crosses to x=34, where 06's `M37 0` entry picks it up.
  */
 function LedgerRoute(): React.JSX.Element {
   return (
     <svg
-      viewBox="0 0 1536 864"
+      viewBox="0 0 1440 740"
       preserveAspectRatio="none"
       aria-hidden="true"
       className="pointer-events-none absolute inset-0 hidden h-full w-full lg:block"
@@ -21,38 +24,37 @@ function LedgerRoute(): React.JSX.Element {
         strokeLinejoin="round"
       >
         <path
-          d="M1510 0 V56 Q1510 88 1478 88 H740 Q716 88 716 112 V150"
+          d="M1415 0 V48 Q1415 76 1387 76 H971 Q943 76 943 104 V150"
           vectorEffect="non-scaling-stroke"
         />
-        <path d="M37 740 V864" vectorEffect="non-scaling-stroke" />
+        <path
+          d="M943 536 V572 Q943 600 915 600 H62 Q34 600 34 628 V740"
+          vectorEffect="non-scaling-stroke"
+        />
       </g>
-      <circle cx="716" cy="154" r="4" fill="var(--color-gold)" />
     </svg>
   );
 }
 
 function DisciplineRow({
   discipline,
-  index,
 }: {
   discipline: (typeof FIVE_DECISIONS.disciplines)[number];
-  index: number;
 }): React.JSX.Element {
-  const band = index % 2 === 0 ? "bg-ivory" : "bg-mist/45";
   return (
-    <li
-      className={`relative grid grid-cols-1 gap-2 py-5 pr-6 pl-5 sm:grid-cols-[minmax(0,44%)_minmax(0,1fr)] sm:gap-8 sm:pl-7 ${band}`}
-    >
-      <h3 className="font-display text-[clamp(1.3rem,1.7vw,1.7rem)] leading-tight font-semibold text-ink">
+    <li className="relative grid grid-cols-1 gap-2 border-t border-ink/10 py-5 pr-6 pl-5 first:border-t-0 sm:grid-cols-[minmax(0,44%)_minmax(0,1fr)] sm:gap-8 sm:pl-7">
+      <h3 className="font-display text-display-s leading-tight font-semibold tracking-[-0.01em] text-ink">
         {discipline.name}
       </h3>
-      <p className="self-center max-w-[62ch] font-body text-body-m leading-[1.6] text-charcoal">
+      <p className="self-center max-w-[44ch] font-body text-body-m leading-[1.6] text-pretty text-charcoal">
         {discipline.summary}
       </p>
-      {/* Node on the shared spine. */}
+      {/* Node on the shared spine. z-20 is load-bearing: the rail carries z-10
+          against the opaque rows, so without it the 2px gold bar paints through
+          the node's white fill and every stop reads as crossed out. */}
       <span
         aria-hidden="true"
-        className="absolute top-1/2 left-0 h-2.5 w-2.5 -translate-x-[5px] -translate-y-1/2 rounded-full border-2 border-gold bg-white sm:left-[46.5%]"
+        className="absolute top-1/2 left-0 z-20 h-2.5 w-2.5 -translate-x-[5px] -translate-y-1/2 rounded-full border-2 border-gold bg-white sm:left-[46.5%]"
       />
     </li>
   );
@@ -67,55 +69,46 @@ export function FiveDecisions(): React.JSX.Element {
     >
       <LedgerRoute />
       <div className="relative z-10 va-shell pt-16 pb-20 lg:pt-24 lg:pb-28">
-        <div className="lg:grid lg:grid-cols-[minmax(0,26%)_minmax(0,1fr)] lg:items-start lg:gap-x-16">
-        <div className="lg:sticky lg:top-[calc(var(--header-h)+4rem)]">
-        <p className="font-body text-[11px] font-semibold tracking-[0.22em] text-ink uppercase">
-          {FIVE_DECISIONS.orientation}
-        </p>
-        <h2
-          id="five-decisions-heading"
-          className="va-reveal mt-5 max-w-[20ch] text-display-m font-display leading-[1.08] font-medium tracking-[-0.02em] text-balance text-ink"
-        >
-          {FIVE_DECISIONS.headline}
-        </h2>
-
-        </div>
-        {/* The ledger spans the measure. It previously sat at 46% with the
-            right half left empty as a "quiet field" for the route to cross,
-            but at 1440 that read as an unbalanced column rather than calm
-            space, and squeezed the summaries into a cramped measure. 72%
-            keeps a generous right margin for the route while letting the
-            entries span the page the way a ledger's actually do. */}
-        <div className="relative mt-12 w-full lg:mt-0">
-          {/* Shared vertical spine: left rail on mobile, between columns on sm+.
-              z-10 is load-bearing — the rows are `relative` and later in DOM
-              order, so without it the opaque ivory rows erase the spine and the
-              translucent mist rows mute it, leaving the motif as unattached
-              fragments. page_flow requires this route to run continuously. */}
-          <span
-            aria-hidden="true"
-            className="absolute top-0 -bottom-6 left-0 z-10 w-[2px] bg-gold sm:left-[46.5%]"
-          />
-          <ol>
-            {FIVE_DECISIONS.disciplines.map((discipline, index) => (
-              <DisciplineRow
-                key={discipline.name}
-                discipline={discipline}
-                index={index}
-              />
-            ))}
-          </ol>
-          {/* The spine bends into the boundary note beneath the matrix. */}
-          <div className="relative mt-6 pl-5 sm:pl-[46.5%]">
-            <span
-              aria-hidden="true"
-              className="absolute top-[13px] left-0 h-[2px] w-5 bg-gold sm:hidden"
-            />
-            <p className="max-w-[52ch] border-l-2 border-gold pt-1.5 pl-4 font-body text-body-s leading-[1.6] text-charcoal/90">
+        {/* 34% gives the headline a 438px measure — exactly enough to set
+            "Every recommendation" on one line, so the block is three lines with
+            no one-word orphan. items-center kills the 400x365 void that opened
+            under a top-aligned sticky heading beside a 560px ledger. */}
+        <div className="lg:grid lg:grid-cols-[minmax(0,34%)_minmax(0,1fr)] lg:items-center lg:gap-x-16">
+          <div>
+            <p className="font-body text-[11px] font-semibold tracking-[0.22em] text-ink uppercase">
+              {FIVE_DECISIONS.orientation}
+            </p>
+            <h2
+              id="five-decisions-heading"
+              className="va-reveal mt-5 max-w-[20ch] text-display-m font-display leading-[1.08] font-medium tracking-[-0.02em] text-balance text-ink"
+            >
+              {FIVE_DECISIONS.headline}
+            </h2>
+            {/* The boundary note used to hang off the end of the spine behind a
+                2px gold border, which made the disclaimer a sixth stop on the
+                route. It is small print: plain text, in the header column. */}
+            <p className="mt-10 max-w-[38ch] font-body text-body-s leading-[1.6] text-charcoal/90">
               {FIVE_DECISIONS.boundaryNote}
             </p>
           </div>
-        </div>
+          <div className="relative mt-12 w-full lg:mt-0">
+            {/* Shared vertical spine: left rail on mobile, in the column gutter
+                on sm+. z-10 is load-bearing — the ledger is opaque ivory and
+                later in DOM order, so without it the rows erase the spine and
+                the motif becomes unattached fragments. */}
+            <span
+              aria-hidden="true"
+              className="absolute inset-y-0 left-0 z-10 w-[2px] bg-gold sm:left-[46.5%]"
+            />
+            {/* One continuous tinted field. The alternating ivory/mist zebra
+                was a third separator on top of the spine and the nodes, and it
+                is what made the ledger read as a generated data table. */}
+            <ol className="bg-ivory">
+              {FIVE_DECISIONS.disciplines.map((discipline) => (
+                <DisciplineRow key={discipline.name} discipline={discipline} />
+              ))}
+            </ol>
+          </div>
         </div>
       </div>
     </section>

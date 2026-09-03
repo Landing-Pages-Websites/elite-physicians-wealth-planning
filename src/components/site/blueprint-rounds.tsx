@@ -20,30 +20,26 @@ const STEP_ICONS: readonly StepIcon[] = [
   CalendarIcon,
 ] as const;
 
-/** Desktop placement of each step group on the 1536x484 process field. */
-const STEP_POSITIONS = [
-  { left: "4%", top: "16%" },
-  { left: "20.5%", top: "54%" },
-  { left: "34.5%", top: "8%" },
-  { left: "49.5%", top: "50%" },
-  { left: "63%", top: "2%" },
-  { left: "81.5%", top: "40%" },
-] as const;
+/**
+ * Desktop x-placement of each step, as a percentage of the .va-shell content
+ * box (not the viewport) so 01 starts on the same left edge as the eyebrow and
+ * the headline. Every step shares one `top`, so all six medallion centres sit
+ * on the single corridor the route draws at y=237 in the 1536x484 viewBox.
+ */
+const STEP_LEFTS = ["0%", "18.5%", "31.5%", "46%", "59.5%", "79%"] as const;
+
+/** Medallion centreline, as a percentage of the process field's height. */
+const STEP_TOP = "42%";
 
 /**
- * The six-phase route on the lower field (y offset 380 from the NOTES
- * 1536x864 frame): enters at the left edge near the bottom-left seam
- * from 03 and exits through the bottom edge at x=1510 (seam to 05).
+ * One continuous route across the lower field (y offset 380 from the NOTES
+ * 1536x864 frame): it enters at the left edge near the bottom-left seam from
+ * 03, rises into the corridor that threads all six medallions, and exits
+ * through the bottom edge at x=1510 (seam to 05). The medallions paint over
+ * it, so each navy disc reads as a joint on the line rather than a badge
+ * floating beside it.
  */
 function ProcessRoute(): React.JSX.Element {
-  const nodes: ReadonlyArray<readonly [number, number]> = [
-    [132, 176],
-    [342, 240],
-    [572, 125],
-    [762, 240],
-    [1023, 125],
-    [1274, 295],
-  ];
   return (
     <svg
       viewBox="0 0 1536 484"
@@ -58,26 +54,12 @@ function ProcessRoute(): React.JSX.Element {
         strokeLinecap="round"
         strokeLinejoin="round"
       >
-        <path d="M0 336 H104 Q132 336 132 308 V176" vectorEffect="non-scaling-stroke" />
-        <path d="M342 270 V240 Q342 202 380 202 H572 V125" vectorEffect="non-scaling-stroke" />
-        <path d="M762 275 V240 Q762 202 800 202 H1023 V125" vectorEffect="non-scaling-stroke" />
         <path
-          d="M1274 295 V354 Q1274 379 1300 379 H1488 Q1510 379 1510 402 V472"
+          d="M0 336 H71 Q105 336 105 302 V237 H1476 Q1510 237 1510 271 V472"
           vectorEffect="non-scaling-stroke"
         />
         <path d="M1498 460 L1510 473 L1522 460" vectorEffect="non-scaling-stroke" />
       </g>
-      {nodes.map(([cx, cy]) => (
-        <circle
-          key={`${cx}-${cy}`}
-          cx={cx}
-          cy={cy}
-          r="6"
-          fill="var(--color-ivory)"
-          stroke="var(--color-gold)"
-          strokeWidth="2"
-        />
-      ))}
     </svg>
   );
 }
@@ -86,18 +68,31 @@ function StepGroup({
   phase,
   Icon,
   compact,
+  above,
+  isFirst,
 }: {
   phase: (typeof BLUEPRINT.phases)[number];
   Icon: StepIcon;
   compact?: boolean;
+  above?: boolean;
+  isFirst?: boolean;
 }): React.JSX.Element {
   return (
-    <div className={`flex items-start gap-4 ${compact ? "" : "w-56"}`}>
-      <span className="va-medallion mt-1 flex h-14 w-14 shrink-0 items-center justify-center rounded-full">
-        <Icon className="h-5.5 w-5.5 text-gold" />
+    <div
+      className={
+        compact
+          ? "flex items-start gap-4"
+          : `flex w-56 gap-3 ${above ? "flex-col-reverse" : "flex-col"}`
+      }
+    >
+      <span
+        className={`va-medallion flex h-14 w-14 shrink-0 items-center justify-center rounded-full ${compact ? "mt-1" : ""}`}
+        style={isFirst ? { background: "var(--color-gold)" } : undefined}
+      >
+        <Icon className={`h-5.5 w-5.5 ${isFirst ? "text-ink" : "text-gold"}`} />
       </span>
       <div>
-        <p className="font-display text-2xl leading-none font-semibold text-ink/45">
+        <p className="font-body text-body-s leading-none font-semibold tracking-[0.16em] text-ink/70">
           {phase.number}
         </p>
         <h3 className="mt-1 font-display text-xl leading-none font-semibold text-ink">
@@ -140,14 +135,14 @@ export function BlueprintRounds(): React.JSX.Element {
           {BLUEPRINT.orientation}
           <span aria-hidden="true" className="h-px w-full bg-gold" />
         </p>
-        <div className="lg:grid lg:grid-cols-[minmax(0,1fr)_minmax(0,34ch)] lg:items-end lg:gap-x-16">
+        <div className="lg:grid lg:grid-cols-[minmax(0,1fr)_minmax(0,42ch)] lg:items-end lg:gap-x-16">
         <h2
           id="blueprint-rounds-heading"
           className="va-reveal mt-5 max-w-[18ch] text-display-m font-display leading-[1.08] font-medium tracking-[-0.02em] text-balance text-ink"
         >
           {BLUEPRINT.headline}
         </h2>
-        <p className="mt-5 max-w-[56ch] font-body text-body-l leading-[1.6] text-charcoal text-pretty lg:mt-0 lg:pb-2">
+        <p className="mt-5 max-w-[42ch] font-body text-body-l leading-[1.6] text-charcoal text-pretty lg:mt-0 lg:pb-[0.22em]">
           {BLUEPRINT.body}
         </p>
         </div>
@@ -162,25 +157,52 @@ export function BlueprintRounds(): React.JSX.Element {
                   className="absolute top-16 bottom-0 left-7 w-[2px] bg-gold/70"
                 />
               )}
-              <StepGroup phase={phase} Icon={STEP_ICONS[index]} compact />
+              <StepGroup
+                phase={phase}
+                Icon={STEP_ICONS[index]}
+                compact
+                isFirst={index === 0}
+              />
             </li>
           ))}
         </ol>
-        <div className="mt-10 text-center lg:hidden">
+        <div className="mt-10 lg:hidden">
           <ProcessCta />
         </div>
       </div>
 
-      {/* Desktop: staggered medallions along one continuous route. */}
+      {/* Desktop: six medallions threaded on one continuous route. The SVG stays
+          full-bleed so the route can reach both section seams; the step groups
+          are held inside the shell so 01 hangs off the page's one left edge. */}
       <div className="relative z-10 hidden aspect-[1536/484] w-full lg:block">
         <ProcessRoute />
-        {BLUEPRINT.phases.map((phase, index) => (
-          <div key={phase.number} className="absolute" style={STEP_POSITIONS[index]}>
-            <StepGroup phase={phase} Icon={STEP_ICONS[index]} />
+        <div className="va-shell absolute inset-0">
+          <div className="relative h-full">
+            {BLUEPRINT.phases.map((phase, index) => (
+              <div
+                key={phase.number}
+                className="absolute"
+                style={{
+                  left: STEP_LEFTS[index],
+                  top: STEP_TOP,
+                  // 01/03/05 sit above the corridor, 02/04/06 below it, so the
+                  // route runs through a clear 56px channel the whole way.
+                  transform:
+                    index % 2 === 0 ? "translateY(calc(3.5rem - 100%))" : undefined,
+                }}
+              >
+                <StepGroup
+                  phase={phase}
+                  Icon={STEP_ICONS[index]}
+                  above={index % 2 === 0}
+                  isFirst={index === 0}
+                />
+              </div>
+            ))}
+            <div className="absolute bottom-[6%] left-[59.5%]">
+              <ProcessCta />
+            </div>
           </div>
-        ))}
-        <div className="absolute bottom-[4%] left-1/2 -translate-x-1/2">
-          <ProcessCta />
         </div>
       </div>
     </section>
