@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "eslint .",
     "check:palette": "node scripts/check-palette.mjs",
-    "verify": "node scripts/verify-pages.mjs"
+    "verify": "node scripts/verify-pages.mjs",
+    "check:contrast": "node scripts/check-text-contrast.mjs && python3 scripts/score-text-contrast.py"
   },
   "dependencies": {
     "next": "^15.5.4",

@@ -155,25 +155,26 @@
   background-repeat: no-repeat;
 }
 
+/* The scrim used to fade left-to-right, reaching 0% opacity by x=82% — it was
+   built for a layout where all copy sat in the left column. Copy now spans the
+   measure, so a horizontal fade leaves text sitting on bare photography: the
+   lede ran straight across the book spines and was unreadable.
+
+   One radial release instead. The desk still-life is treated as a GROUND, not
+   a subject: it stays faint everywhere copy sits and opens up only toward the
+   bottom-right corner, where the stethoscope and books are and no text goes. */
 .va-blueprint::after {
   content: "";
   position: absolute;
   inset: 0;
   pointer-events: none;
-  background:
-    linear-gradient(
-      90deg,
-      rgba(246, 242, 232, 0.94) 0%,
-      rgba(246, 242, 232, 0.72) 39%,
-      rgba(246, 242, 232, 0.18) 64%,
-      rgba(246, 242, 232, 0) 82%
-    ),
-    linear-gradient(
-      0deg,
-      rgba(246, 242, 232, 0.92) 0%,
-      rgba(246, 242, 232, 0.42) 27%,
-      rgba(246, 242, 232, 0) 55%
-    );
+  background: radial-gradient(
+    130% 100% at 92% 88%,
+    rgba(246, 242, 232, 0.44) 0%,
+    rgba(246, 242, 232, 0.74) 38%,
+    rgba(246, 242, 232, 0.9) 68%,
+    rgba(246, 242, 232, 0.95) 100%
+  );
 }
 
 /* On narrow screens the copy stacks over the still life, so the wash
