@@ -11,7 +11,8 @@ import NextDecision from "@/components/variant-b/next-decision";
 import StrategyCall from "@/components/variant-b/strategy-call";
 
 export const metadata: Metadata = {
-  title: "Direction B — The Decision Atlas",
+  alternates: { canonical: "/decision-atlas" },
+  title: "The Decision Atlas",
   description:
     "Direction B homepage for Elite Physicians Wealth Planning: a bright clinical decision atlas with Inter-led declarations, navy calibration rails, and small gold decision points.",
 };

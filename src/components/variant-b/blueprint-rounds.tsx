@@ -3,18 +3,20 @@ import GoldArrow from "./gold-arrow";
 
 const MAXIM_LINES = ["A structured process.", "A coordinated plan.", "A life of purpose."];
 
-/** Panel placement (percent of the square stage) and its spoke anchor in ring space. */
+/**
+ * One circuit, read clockwise from 12 o'clock. `node` is the phase's point on
+ * the r=120 ring (exact 60 degree steps) and `leader` is where its connector
+ * lands inside the panel, so no line or dot in this instrument terminates in
+ * open space. `position` places the panel on the square stage.
+ */
 const PANEL_SLOTS = [
-  { position: "left-0 top-[15%]", spoke: { x: 190, y: 236 } },
-  { position: "left-[35%] top-0", spoke: { x: 300, y: 130 } },
-  { position: "right-0 top-[20%]", spoke: { x: 412, y: 244 } },
-  { position: "right-0 top-[58%]", spoke: { x: 420, y: 368 } },
-  { position: "left-[35%] bottom-0", spoke: { x: 300, y: 470 } },
-  { position: "left-0 top-[56%]", spoke: { x: 186, y: 360 } },
+  { position: "left-[35.5%] top-0", node: { x: 300, y: 180 }, leader: { x: 300, y: 70 } },
+  { position: "right-0 top-[20%]", node: { x: 404, y: 240 }, leader: { x: 440, y: 219 } },
+  { position: "right-0 top-[58%]", node: { x: 404, y: 360 }, leader: { x: 440, y: 381 } },
+  { position: "left-[35.5%] bottom-0", node: { x: 300, y: 420 }, leader: { x: 300, y: 530 } },
+  { position: "left-0 top-[56%]", node: { x: 196, y: 360 }, leader: { x: 160, y: 381 } },
+  { position: "left-0 top-[19%]", node: { x: 196, y: 240 }, leader: { x: 160, y: 219 } },
 ] as const;
-
-const RING_RADII = [80, 128, 176, 224, 264];
-const OUTER_TICKS = Array.from({ length: 48 }, (_, index) => (index * 360) / 48);
 
 function RadialInstrument(): React.JSX.Element {
   return (
@@ -24,48 +26,52 @@ function RadialInstrument(): React.JSX.Element {
       className="absolute inset-0 h-full w-full"
       fill="none"
     >
-      {RING_RADII.map((radius, index) => (
-        <circle
-          key={radius}
-          cx="300"
-          cy="300"
-          r={radius}
-          stroke="currentColor"
-          strokeDasharray={index === 2 ? "3 6" : undefined}
-          className={index % 2 === 0 ? "text-ink/25" : "text-ink/15"}
-        />
-      ))}
-      <path d="M300 20v560M20 300h560" stroke="currentColor" className="text-ink/15" />
-      {OUTER_TICKS.map((angle) => (
-        <line
-          key={angle}
-          x1="300"
-          y1="42"
-          x2="300"
-          y2="50"
-          stroke="currentColor"
-          className="text-ink/30"
-          transform={`rotate(${angle} 300 300)`}
-        />
-      ))}
-      <circle cx="300" cy="300" r="4" className="fill-gold" />
+      <circle cx="300" cy="300" r="120" stroke="currentColor" className="text-ink/20" />
       <circle cx="300" cy="300" r="14" stroke="currentColor" className="text-ink/40" />
-      <circle cx="300" cy="172" r="3" className="fill-gold" />
-      <circle cx="428" cy="300" r="3" className="fill-gold" />
-      <circle cx="300" cy="428" r="3" className="fill-gold" />
-      <circle cx="172" cy="300" r="3" className="fill-gold" />
       {PANEL_SLOTS.map((slot) => (
-        <g key={`${slot.spoke.x}-${slot.spoke.y}`}>
+        <g key={`${slot.node.x}-${slot.node.y}`}>
           <line
             x1="300"
             y1="300"
-            x2={slot.spoke.x}
-            y2={slot.spoke.y}
+            x2={slot.node.x}
+            y2={slot.node.y}
             stroke="currentColor"
-            className="text-ink/30"
+            className="text-ink/25"
           />
-          <circle cx={slot.spoke.x} cy={slot.spoke.y} r="3.5" className="fill-gold" />
+          <line
+            x1={slot.node.x}
+            y1={slot.node.y}
+            x2={slot.leader.x}
+            y2={slot.leader.y}
+            stroke="var(--color-gold)"
+            strokeWidth="1.5"
+            opacity="0.55"
+          />
         </g>
+      ))}
+      {/* 01 to 06 clockwise: the arc states where the sequence starts, which
+          way it runs, and that the last 60 degrees is not part of the route. */}
+      <path
+        d="M300 180 A120 120 0 1 1 196 240"
+        stroke="var(--color-gold)"
+        strokeWidth="2"
+        strokeLinecap="round"
+      />
+      <path
+        d="M196 255 L196 240 L183 247"
+        stroke="var(--color-gold)"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      {PANEL_SLOTS.map((slot) => (
+        <circle
+          key={`n-${slot.node.x}-${slot.node.y}`}
+          cx={slot.node.x}
+          cy={slot.node.y}
+          r="4"
+          className="fill-gold"
+        />
       ))}
     </svg>
   );
@@ -73,16 +79,22 @@ function RadialInstrument(): React.JSX.Element {
 
 function PhasePanel({
   phase,
+  bare,
   className,
 }: {
   phase: (typeof BLUEPRINT.phases)[number];
+  bare?: boolean;
   className?: string;
 }): React.JSX.Element {
   return (
-    <article className={`vb-panel-clip bg-white p-4 shadow-[0_14px_30px_rgba(11,31,58,0.14)] ${className ?? ""}`}>
-      <p className="text-lg font-bold leading-none text-gold">{phase.number}</p>
-      <h3 className="mt-1.5 text-sm font-bold text-ink">{phase.name}</h3>
-      <p className="mt-1.5 text-xs leading-relaxed text-charcoal">{phase.summary}</p>
+    <article
+      className={`${bare ? "" : "vb-panel-clip bg-white p-4 shadow-[0_14px_30px_rgba(11,31,58,0.14)]"} ${className ?? ""}`}
+    >
+      <p className="font-body text-body-s leading-none font-semibold tracking-[0.14em] text-ink/70">
+        {phase.number}
+      </p>
+      <h3 className="mt-2 font-body text-body-m font-semibold text-ink">{phase.name}</h3>
+      <p className="mt-1.5 font-body text-body-s leading-[1.55] text-charcoal">{phase.summary}</p>
     </article>
   );
 }
@@ -114,12 +126,11 @@ function ProcessCta({ className }: { className: string }): React.JSX.Element {
     <div className={className}>
       <a
         href={LINKS.process}
-        className="group inline-flex items-center gap-2.5 bg-ink px-6 py-3.5 text-sm font-bold text-white transition-colors duration-200 hover:bg-ink/85 active:bg-ink"
+        className="group va-btn va-btn-navy whitespace-nowrap"
       >
         {BLUEPRINT.cta}
         <GoldArrow className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5" />
       </a>
-      <p className="mt-2 text-[10px] font-semibold text-charcoal/70">Navigate to /our-process</p>
     </div>
   );
 }
@@ -141,14 +152,20 @@ function DesktopInstrumentStage(): React.JSX.Element {
 
 function MobileProcessSpine(): React.JSX.Element {
   return (
-    <ol className="relative mt-10 space-y-5 border-l border-dashed border-ink/40 pl-6 lg:hidden">
-      {BLUEPRINT.phases.map((phase) => (
-        <li key={phase.number} className="relative">
+    <ol className="relative mt-10 space-y-4 lg:hidden">
+      {BLUEPRINT.phases.map((phase, index) => (
+        <li key={phase.number} className="relative pl-7">
+          {index < BLUEPRINT.phases.length - 1 && (
+            <span
+              aria-hidden="true"
+              className="absolute top-6 bottom-[-1rem] left-[3px] w-px bg-gold/60"
+            />
+          )}
           <span
             aria-hidden="true"
-            className="absolute -left-6 top-5 h-2 w-2 -translate-x-1/2 rounded-full bg-gold"
+            className="absolute top-[0.45rem] left-0 h-2 w-2 rounded-full bg-gold"
           />
-          <PhasePanel phase={phase} />
+          <PhasePanel phase={phase} bare />
         </li>
       ))}
     </ol>
@@ -163,23 +180,12 @@ export default function BlueprintRounds(): React.JSX.Element {
       className="relative overflow-hidden bg-gradient-to-br from-mist/70 via-mist/40 to-mist/80"
     >
       <PerimeterRulers />
-      <div className="relative mx-auto max-w-[92rem] px-6 py-16 lg:grid lg:min-h-[52rem] lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] lg:items-center lg:gap-12 lg:py-20">
-        <div className="relative">
-          <svg
-            aria-hidden="true"
-            viewBox="0 0 120 120"
-            fill="none"
-            stroke="currentColor"
-            className="absolute -top-6 left-0 h-24 w-24 text-ink/15 lg:hidden"
-          >
-            <circle cx="60" cy="60" r="56" />
-            <circle cx="60" cy="60" r="34" />
-            <path d="M60 4v112M4 60h112" />
-          </svg>
+      <div className="relative mx-auto max-w-[92rem] px-6 py-16 lg:grid lg:min-h-[52rem] lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] lg:items-start lg:gap-12 lg:py-20">
+        <div className="relative lg:pt-4">
           <p className="relative font-display text-xl italic text-ink/90">{BLUEPRINT.orientation}</p>
           <h2
             id="blueprint-rounds-heading"
-            className="relative mt-5 max-w-[13ch] text-[clamp(2.3rem,3.8vw,3.6rem)] font-bold leading-[1.08] tracking-tight text-ink"
+            className="relative mt-5 max-w-[13ch] font-display text-display-m leading-[1.08] font-medium tracking-[-0.015em] text-ink"
           >
             {BLUEPRINT.headline}
           </h2>
@@ -191,12 +197,13 @@ export default function BlueprintRounds(): React.JSX.Element {
               </span>
             ))}
           </p>
-        </div>
-        <div>
-          <DesktopInstrumentStage />
+          {/* Mobile only: the phase spine reads here, between the argument and
+              the action, so the CTA still closes the section at 390px while it
+              sits directly under the maxims on desktop. */}
           <MobileProcessSpine />
-          <ProcessCta className="mt-10 lg:mt-4 lg:text-right" />
+          <ProcessCta className="mt-10" />
         </div>
+        <DesktopInstrumentStage />
       </div>
     </section>
   );

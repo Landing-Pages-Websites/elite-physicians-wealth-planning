@@ -1,8 +1,8 @@
 import { CAREER_SIGNAL } from "@/lib/content";
 
-const RAIL = { x1: 0, y1: 72, x2: 1440, y2: 244 } as const;
-const RAIL_TICK_STEP = 30;
-const RAIL_TICKS = Array.from({ length: 49 }, (_, index) => index * RAIL_TICK_STEP);
+/** Flat datum: a career axis that falls reads as decline, so the rail is level
+    and every milestone label shares one baseline. */
+const RAIL = { x1: 0, y1: 120, x2: 1440, y2: 120 } as const;
 
 function railY(x: number): number {
   return RAIL.y1 + ((RAIL.y2 - RAIL.y1) * x) / RAIL.x2;
@@ -18,11 +18,11 @@ const MILESTONES = CAREER_SIGNAL.signals.map((label, index) => ({
 }));
 
 const STEM_HEIGHT = 58;
-const STAGE_HEIGHT = 300;
+const STAGE_HEIGHT = 200;
 
 function DesktopRail(): React.JSX.Element {
   return (
-    <div className="relative mt-4 hidden h-72 lg:block">
+    <div className="relative mt-8 hidden h-48 lg:block lg:-mr-6">
       <svg
         aria-hidden="true"
         viewBox={`0 0 1440 ${STAGE_HEIGHT}`}
@@ -39,18 +39,7 @@ function DesktopRail(): React.JSX.Element {
           strokeWidth="1.5"
           className="text-ink/50"
         />
-        {RAIL_TICKS.map((x) => (
-          <line
-            key={x}
-            x1={x}
-            y1={railY(x) - 5}
-            x2={x}
-            y2={railY(x) + 5}
-            stroke="currentColor"
-            className="text-ink/30"
-          />
-        ))}
-        {MILESTONES.map((milestone) => (
+        {MILESTONES.map((milestone, index) => (
           <g key={milestone.label}>
             <line
               x1={milestone.x}
@@ -61,20 +50,26 @@ function DesktopRail(): React.JSX.Element {
               className="text-ink/45"
             />
             <circle cx={milestone.x} cy={milestone.y} r="5" className="fill-gold" />
-            <circle
-              cx={milestone.x}
-              cy={milestone.y}
-              r="9"
-              stroke="currentColor"
-              className="text-gold/50"
-            />
+            {index === MILESTONES.length - 1 && (
+              <circle
+                cx={milestone.x}
+                cy={milestone.y}
+                r="9"
+                stroke="currentColor"
+                className="text-gold/50"
+              />
+            )}
           </g>
         ))}
       </svg>
-      {MILESTONES.map((milestone) => (
+      {MILESTONES.map((milestone, index) => (
         <p
           key={milestone.label}
-          className="absolute w-40 -translate-x-1/2 -translate-y-full text-center text-sm font-semibold leading-snug text-ink"
+          className={`absolute w-[12.5rem] -translate-x-1/2 -translate-y-full text-center leading-snug text-balance ${
+            index === MILESTONES.length - 1
+              ? "text-body-m font-semibold text-ink"
+              : "text-body-s font-semibold text-ink/75"
+          }`}
           style={{
             left: `${(milestone.x / 1440) * 100}%`,
             top: `${((milestone.y - STEM_HEIGHT - 8) / STAGE_HEIGHT) * 100}%`,
@@ -89,17 +84,33 @@ function DesktopRail(): React.JSX.Element {
 
 function MobileRail(): React.JSX.Element {
   return (
-    <ol className="relative mt-10 space-y-8 border-l border-ink/40 pl-8 lg:hidden">
-      {CAREER_SIGNAL.signals.map((signal) => (
-        <li key={signal} className="relative">
-          <span
-            aria-hidden="true"
-            className="absolute -left-8 top-1.5 h-2.5 w-2.5 -translate-x-1/2 rounded-full bg-gold ring-4 ring-white"
-          />
-          <p className="text-sm font-semibold leading-snug text-ink">{signal}</p>
-        </li>
-      ))}
-    </ol>
+    <div className="relative mt-10 lg:hidden">
+      {/* Rail drawn dot-centre to dot-centre: no butt ends past the sequence,
+          and the dots paint over it instead of punching holes in it. */}
+      <span
+        aria-hidden="true"
+        className="absolute left-0 top-[0.688rem] h-[calc(100%-1.375rem)] w-px bg-ink/40"
+      />
+      <ol className="space-y-8 pl-8">
+        {CAREER_SIGNAL.signals.map((signal, index) => (
+          <li key={signal} className="relative">
+            <span
+              aria-hidden="true"
+              className="absolute -left-8 top-1.5 h-2.5 w-2.5 -translate-x-1/2 rounded-full bg-gold"
+            />
+            <p
+              className={`leading-snug ${
+                index === CAREER_SIGNAL.signals.length - 1
+                  ? "text-body-m font-semibold text-ink"
+                  : "text-body-s font-semibold text-ink/75"
+              }`}
+            >
+              {signal}
+            </p>
+          </li>
+        ))}
+      </ol>
+    </div>
   );
 }
 
@@ -112,21 +123,9 @@ export default function CareerSignal(): React.JSX.Element {
     >
       <div aria-hidden="true" className="h-1.5 bg-ink" />
       <div className="relative mx-auto max-w-[96rem] px-6 py-14 lg:pb-8">
-        <svg
-          aria-hidden="true"
-          viewBox="0 0 200 200"
-          fill="none"
-          stroke="currentColor"
-          className="pointer-events-none absolute -top-10 right-10 h-52 w-52 text-ink/10"
-        >
-          <circle cx="100" cy="100" r="96" />
-          <circle cx="100" cy="100" r="64" />
-          <circle cx="100" cy="100" r="32" />
-          <path d="M100 0v200M0 100h200" />
-        </svg>
         <h2
           id="career-signal-heading"
-          className="relative max-w-md text-[clamp(1.6rem,2.6vw,2.35rem)] font-bold leading-tight tracking-tight text-ink"
+          className="relative max-w-[19ch] text-display-m font-bold leading-[1.08] tracking-[-0.02em] text-balance text-ink"
         >
           {CAREER_SIGNAL.identityLine}
         </h2>

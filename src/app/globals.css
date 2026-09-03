@@ -52,18 +52,119 @@
 }
 
 @theme {
+  /* Contract tokens — public/design/a/palette_contract.json. Do not add hues. */
   --color-ink: #0b1f3a;
   --color-gold: #c8a65a;
   --color-mist: #dce8f2;
   --color-ivory: #f6f2e8;
   --color-charcoal: #38373e;
 
+  /* Derived shades. Not new hues: each is a tint/shade of a contract token,
+     needed because six flat colours cannot express depth, gradients or
+     interactive states. They were already scattered through the approved build
+     as bare hex literals; naming them here makes the palette gate meaningful —
+     a literal in a component is now a defect, a token is auditable. */
+  --color-ink-deep: #061527; /* hero ground, below ink */
+  --color-ink-deeper: #04101f; /* deepest ground + scrim */
+  --color-ink-lift: #12335e; /* raised navy, gradient top */
+  --color-ink-hover: #132a4d; /* navy interactive hover */
+  --color-gold-hover: #d8b976; /* gold interactive hover */
+  --color-mist-deep: #d3e2ef; /* mist gradient end stop */
+  --color-ivory-bright: #f5f0e8; /* display type on navy */
+  --color-ivory-warm: #f7f3ec; /* display type, warmer band */
+
+  /* NOT a contract colour and NOT a derived shade. The palette contract defines
+     no error/validation state, but the strategy-call form needs one. Flagged in
+     build/CLIENT-GAPS.md for a brand ruling — do not reuse it elsewhere. */
+  --color-danger: #9a2c2c;
+
+
+
   --font-display: "Cormorant Garamond", Georgia, "Times New Roman", serif;
   --font-body: "Inter", Arial, Helvetica, sans-serif;
 }
 
+/* Single source of truth for the fixed header's height. The header sets its
+   min-height from this, the hero spacer reserves exactly this, and anchors
+   offset by exactly this — so the three can never drift apart. */
+:root {
+  --ease-out: cubic-bezier(0.22, 0.61, 0.36, 1);
+
+  /* ── Type scale ───────────────────────────────────────────────────────────
+     Four display steps, three body steps. Every section opener uses the same
+     step so the reader is told "same level of thing again"; `l` is used exactly
+     once, at the close, so the page has a second peak. Nothing below 13px.
+
+     Declared here as ordinary custom properties, NOT in Tailwind's @theme.
+     In @theme they compiled into `@layer theme` and failed to resolve at
+     runtime, which silently killed every heading size on both directions. */
+  --text-display-xl: clamp(3rem, 5.3vw, 4.5rem);
+  --text-display-l: clamp(2.5rem, 4.2vw, 3.75rem);
+  --text-display-m: clamp(2rem, 3.2vw, 2.875rem);
+  --text-display-s: clamp(1.3rem, 1.6vw, 1.5rem);
+  --text-body-l: 1.0625rem;
+  --text-body-m: 0.9375rem;
+  --text-body-s: 0.8125rem;
+
+  --header-h: 70px;
+  --page-max: 1400px;
+  --page-pad: 3.5rem;
+}
+
+/* One shell, one left edge. Five different left edges used to run down this
+   page — 76, 90, 58, 202 and 211px at 1440 — so nothing hung off a common
+   spine and every section floated independently. That was the loudest
+   unpolished signal on the page. Every section container uses this now. */
+.va-shell {
+  margin-inline: auto;
+  width: 100%;
+  max-width: var(--page-max);
+  padding-inline: 1.5rem;
+}
+@media (min-width: 640px) {
+  .va-shell {
+    padding-inline: 2.5rem;
+  }
+}
+@media (min-width: 1024px) {
+  .va-shell {
+    padding-inline: var(--page-pad);
+  }
+}
+
+.text-display-xl { font-size: var(--text-display-xl); }
+.text-display-l  { font-size: var(--text-display-l); }
+.text-display-m  { font-size: var(--text-display-m); }
+.text-display-s  { font-size: var(--text-display-s); }
+.text-body-l     { font-size: var(--text-body-l); }
+.text-body-m     { font-size: var(--text-body-m); }
+.text-body-s     { font-size: var(--text-body-s); }
+
 html {
   scroll-behavior: smooth;
+}
+
+/* The header is fixed, so an anchor would otherwise land its target underneath
+   it. Every measured nav target was hidden at 375px before this. */
+section[id],
+main[id] {
+  scroll-margin-top: var(--header-h);
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 100;
+}
+.skip-link:focus-visible {
+  left: 1rem;
+  top: 1rem;
+  padding: 0.75rem 1.25rem;
+  background: var(--color-gold);
+  color: var(--color-ink);
+  font-weight: 600;
+  border-radius: 2px;
 }
 
 body {
@@ -73,9 +174,18 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+/* WCAG 1.4.11 wants 3:1 for a focus indicator. Gold on ivory is 2.07:1 and on
+   white 2.32:1, so navy is the default ring and gold is used only inside the
+   dark bands, where it clears the floor comfortably. */
 :focus-visible {
-  outline: 2px solid var(--color-gold);
+  outline: 2px solid var(--color-ink);
   outline-offset: 3px;
+}
+.va-hero :focus-visible,
+.va-decision :focus-visible,
+header :focus-visible,
+[data-dark-band] :focus-visible {
+  outline-color: var(--color-gold);
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -89,4 +199,62 @@ body {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
+}
+
+/* ── One button system (shared by BOTH directions) ──────────────────────────────────────────────────────
+   The page shipped with six: a gold gloss-gradient pill, a mist-outline pill,
+   a navy gradient with a 2px gold border and 20px Cormorant inside it (a serif
+   in a button reads as costume), a flat navy with gold text, a flat navy with
+   ivory text, and an all-caps gold. Six languages means none of them is the
+   brand's. Three variants, one geometry, one transition. */
+.va-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.625rem;
+  border-radius: 3px;
+  padding: 0.875rem 1.75rem;
+  min-height: 2.75rem;
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  transition:
+    background-color 0.16s var(--ease-out),
+    border-color 0.16s var(--ease-out),
+    filter 0.16s var(--ease-out);
+}
+.va-btn-gold {
+  background: var(--color-gold);
+  color: var(--color-ink);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.28),
+    0 8px 20px -10px rgba(4, 14, 27, 0.55);
+}
+.va-btn-gold:hover {
+  background: var(--color-gold-hover);
+}
+.va-btn-navy {
+  background: var(--color-ink);
+  color: var(--color-ivory);
+  box-shadow: 0 8px 20px -10px rgba(4, 14, 27, 0.45);
+}
+.va-btn-navy:hover {
+  background: var(--color-ink-hover);
+}
+/* Text link, not a button. The secondary action should never out-mass the
+   primary — the outline pill was physically wider than the gold fill. */
+.va-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 0.375rem;
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: opacity 0.16s var(--ease-out);
+  opacity: 0.8;
+}
+.va-link:hover {
+  opacity: 1;
 }

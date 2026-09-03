@@ -1,5 +1,5 @@
 import { StrategyCallForm } from "@/components/shared/strategy-call-form";
-import { BRAND, NEXT_DECISION } from "@/lib/content";
+import { BRAND } from "@/lib/content";
 
 /**
  * Where the closing fork lands. The two paths above merge on the gold route;
@@ -13,20 +13,21 @@ export function StrategyCall(): React.JSX.Element {
       aria-labelledby="form-heading"
       className="relative overflow-hidden bg-ink"
     >
-      <div className="relative z-10 mx-auto grid max-w-[1100px] gap-12 px-6 py-20 sm:px-10 lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1fr)] lg:gap-16 lg:py-28">
+      <div className="relative z-10 va-shell grid gap-12 py-20 lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1fr)] lg:gap-16 lg:py-28">
         <div>
           <h2
             id="form-heading"
-            className="max-w-md font-display text-[clamp(1.8rem,2.6vw,2.5rem)] leading-[1.15] font-semibold text-ivory"
+            className="max-w-[18ch] text-display-m font-display leading-[1.08] font-medium tracking-[-0.02em] text-balance text-ivory"
           >
             Start with a conversation, not a proposal.
           </h2>
-          <p className="mt-5 max-w-sm font-body text-[15px] leading-relaxed text-ivory/70">
-            {NEXT_DECISION.strategyCall.summary}
-          </p>
-          <p className="mt-6 font-body text-[13px] leading-relaxed text-gold">
-            {NEXT_DECISION.strategyCall.expectation}
-          </p>
+          {/* The summary and the "not a product pitch" line are NOT repeated
+              here: next-decision renders both about 1,100px above this section,
+              and printing them twice read as a template loop rather than
+              emphasis. Nothing replaces them — writing a fresh sentence would
+              be inventing reader-facing copy for a regulated site, which the
+              manifest reserves to the client. The section opens on its
+              headline and goes straight to the form. */}
           <dl className="mt-10 grid gap-4 border-t border-ivory/15 pt-8 font-body text-[13px] text-ivory/70">
             <div className="flex gap-3">
               <dt className="w-16 shrink-0 text-ivory/45">Call</dt>

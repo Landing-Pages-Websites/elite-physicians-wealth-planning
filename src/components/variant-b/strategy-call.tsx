@@ -17,7 +17,7 @@ export default function StrategyCall(): React.JSX.Element {
         <div>
           <h2
             id="form-heading"
-            className="max-w-md font-body text-[clamp(1.7rem,2.4vw,2.25rem)] leading-[1.15] font-bold tracking-tight text-ink"
+            className="max-w-md font-body text-display-m tracking-[-0.02em] leading-[1.15] font-bold tracking-tight text-ink"
           >
             Start with a conversation, not a proposal.
           </h2>

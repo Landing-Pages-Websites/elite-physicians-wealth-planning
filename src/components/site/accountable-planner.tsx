@@ -1,25 +1,14 @@
 import Image from "next/image";
 import { ACCOUNTABLE_PLANNER, LINKS, PORTRAIT } from "@/lib/content";
 import { ArrowRightIcon } from "./icons";
-
-function splitNameCredentials(): { name: string; credentials: string } {
-  const full: string = ACCOUNTABLE_PLANNER.name;
-  const commaIndex = full.indexOf(",");
-  if (commaIndex === -1) {
-    return { name: full, credentials: "" };
-  }
-  return {
-    name: full.slice(0, commaIndex + 1),
-    credentials: full.slice(commaIndex + 1).trim(),
-  };
-}
+import { splitNameCredentials } from "./portrait-caption";
 
 /**
  * Quiet accountability trace: enters at the top edge (x=1516, from the
- * 06 exit), sweeps left along the upper field, bends down at the
- * portrait axis, passes behind the portrait plate, and exits through
- * the bottom edge at x=686 (seam to 08). A short accent sits in the
- * far-left still-life strip.
+ * 06 exit), sweeps left along the upper field, turns down the empty
+ * gutter between the portrait plate and the copy column, and exits
+ * through the bottom edge at x=686 (seam to 08). One uninterrupted
+ * line — it never strikes live copy.
  */
 function AccountabilityTrace(): React.JSX.Element {
   return (
@@ -27,7 +16,7 @@ function AccountabilityTrace(): React.JSX.Element {
       viewBox="0 0 1536 864"
       preserveAspectRatio="none"
       aria-hidden="true"
-      className="pointer-events-none absolute inset-0 hidden h-full w-full lg:block"
+      className="pointer-events-none absolute inset-0 z-[1] hidden h-full w-full lg:block"
     >
       <g
         fill="none"
@@ -37,12 +26,10 @@ function AccountabilityTrace(): React.JSX.Element {
         strokeLinejoin="round"
       >
         <path
-          d="M1516 0 V30 Q1516 62 1484 62 H746 C710 62 686 82 686 112 V864"
+          d="M1516 0 V30 Q1516 62 1484 62 H565 Q533 62 533 94 V772 Q533 800 565 800 H654 Q686 800 686 832 V864"
           vectorEffect="non-scaling-stroke"
         />
-        <path d="M188 408 H310" vectorEffect="non-scaling-stroke" />
       </g>
-      <circle cx="686" cy="800" r="4" fill="var(--color-gold)" />
     </svg>
   );
 }
@@ -56,25 +43,28 @@ export function AccountablePlanner(): React.JSX.Element {
       className="va-planner relative overflow-hidden"
     >
       <AccountabilityTrace />
-      <div className="relative z-10 mx-auto grid min-h-[min(864px,100svh)] max-w-[1536px] grid-cols-1 content-center gap-x-20 gap-y-10 px-6 py-16 sm:px-10 lg:grid-cols-[minmax(280px,26%)_minmax(0,1fr)] lg:py-24 lg:pr-[7%] lg:pl-[14%]">
+      <div className="relative z-10 va-shell grid min-h-[min(864px,100svh)] grid-cols-1 content-center gap-x-20 gap-y-10 py-16 lg:grid-cols-[minmax(0,30%)_minmax(0,1fr)] lg:py-24">
         {/* Promise leads on mobile; portrait sits center-left on desktop. */}
         <div className="order-1 lg:col-start-2 lg:row-start-1 lg:self-end">
-          <p className="font-body text-[11px] font-semibold tracking-[0.24em] text-gold uppercase">
+          {/* Gold #C8A65A on ivory #F6F2E8 measures 2.07:1 — an AA failure at
+              any size. Gold stays the accent for rules, nodes and CTA fills;
+              eyebrow text on light bands is navy. */}
+          <p className="font-body text-[11px] font-semibold tracking-[0.24em] text-ink uppercase">
             {ACCOUNTABLE_PLANNER.orientation}
           </p>
           <h2
             id="accountable-planner-heading"
-            className="va-reveal mt-5 max-w-2xl font-display text-[clamp(1.9rem,3vw,2.9rem)] leading-[1.16] font-semibold text-ink"
+            className="va-reveal mt-5 max-w-[22ch] text-display-m font-display leading-[1.08] font-medium tracking-[-0.02em] text-balance text-ink"
           >
             {ACCOUNTABLE_PLANNER.headline}
           </h2>
-          <span aria-hidden="true" className="mt-6 flex max-w-2xl items-center">
+          <span aria-hidden="true" className="mt-6 flex max-w-[28rem] items-center">
             <span className="h-[2px] flex-1 bg-gold" />
             <span className="h-2 w-2 rounded-full border-2 border-gold bg-ivory" />
           </span>
         </div>
 
-        <figure className="va-planner-card va-reveal order-2 relative mx-auto w-72 max-w-full p-2 sm:w-80 lg:col-start-1 lg:row-span-2 lg:row-start-1 lg:mx-0 lg:w-full lg:self-center">
+        <figure className="va-planner-card va-reveal order-2 relative w-full max-w-[20rem] p-3 pb-4 sm:mx-auto lg:col-start-1 lg:row-span-2 lg:row-start-1 lg:mx-0 lg:w-full lg:max-w-none lg:self-center">
           <div className="relative aspect-[405/560] overflow-hidden">
             <Image
               src={PORTRAIT.src}
@@ -84,9 +74,6 @@ export function AccountablePlanner(): React.JSX.Element {
               className="object-cover"
             />
           </div>
-          <figcaption className="px-2 pt-3 pb-1 text-center font-body text-[10px] font-semibold tracking-[0.2em] text-ink uppercase">
-            {ACCOUNTABLE_PLANNER.name}
-          </figcaption>
         </figure>
 
         <div className="order-3 lg:col-start-2 lg:row-start-2 lg:self-start">
@@ -94,12 +81,12 @@ export function AccountablePlanner(): React.JSX.Element {
             {name}{" "}
             <span className="text-xl font-medium text-charcoal">{credentials}</span>
           </p>
-          <p className="mt-4 max-w-xl font-body text-[14px] leading-relaxed text-charcoal">
+          <p className="mt-4 max-w-[68ch] font-body text-body-l leading-[1.6] text-charcoal text-pretty">
             {ACCOUNTABLE_PLANNER.body}
           </p>
           <a
-            href={LINKS.meetMichael}
-            className="mt-9 inline-flex items-center gap-3 rounded-[4px] bg-ink px-7 py-4 font-body text-sm font-semibold text-ivory shadow-[0_10px_24px_rgba(11,31,58,0.22)] transition-all duration-200 hover:gap-4 hover:brightness-125 active:brightness-95"
+            href={LINKS.meetMichaelOnsite}
+            className="va-btn va-btn-navy mt-9"
           >
             {ACCOUNTABLE_PLANNER.cta}
             <ArrowRightIcon className="h-4 w-4 text-gold" />
