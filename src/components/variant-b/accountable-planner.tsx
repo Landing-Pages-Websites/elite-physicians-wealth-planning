@@ -4,22 +4,6 @@ import GoldArrow from "./gold-arrow";
 
 const DESK_IMAGE = "/images/design/b/07-accountable-planner/medical-finance-desk-background.jpg";
 
-function TargetIcon(): React.JSX.Element {
-  return (
-    <svg
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      aria-hidden="true"
-      className="mt-0.5 h-5 w-5 shrink-0 text-ink"
-    >
-      <circle cx="12" cy="12" r="9" />
-      <circle cx="12" cy="12" r="4" />
-      <circle cx="12" cy="12" r="1" className="fill-gold stroke-gold" />
-      <path d="M12 1v4M12 19v4M1 12h4M19 12h4" />
-    </svg>
-  );
-}
 
 function RegistrationMarks(): React.JSX.Element {
   return (
@@ -54,7 +38,7 @@ function PortraitColumn(): React.JSX.Element {
         </div>
       </div>
       <div className="vb-plaque-notch mt-4 bg-ink px-6 py-3 text-center">
-        <p className="text-[9px] font-semibold uppercase tracking-[0.3em] text-white/70">Credentials</p>
+        <p className="sr-only">Professional designations</p>
         <p className="mt-1 text-base font-bold tracking-wide text-white">
           ChFC&reg;
           <span aria-hidden="true" className="mx-2.5 inline-block h-3.5 w-px translate-y-0.5 bg-gold" />
@@ -68,22 +52,18 @@ function PortraitColumn(): React.JSX.Element {
 function PlannerNarrative(): React.JSX.Element {
   return (
     <div>
-      <p className="text-[11px] font-bold uppercase tracking-[0.24em] text-ink/80">
+      <p className="text-body-s font-bold uppercase tracking-[0.24em] text-ink/80">
         {ACCOUNTABLE_PLANNER.orientation}
       </p>
       <h2
         id="accountable-planner-heading"
-        className="mt-4 max-w-[22ch] text-[clamp(1.7rem,2.6vw,2.4rem)] font-bold leading-[1.15] tracking-tight text-ink"
+        className="mt-4 max-w-[22ch] text-display-m tracking-[-0.02em] font-bold leading-[1.15] tracking-tight text-ink"
       >
         {ACCOUNTABLE_PLANNER.headline}
       </h2>
       <div aria-hidden="true" className="my-6 border-t border-dotted border-ink/40" />
       <p className="text-xl font-bold text-ink">{ACCOUNTABLE_PLANNER.name}</p>
       <p className="mt-4 max-w-xl text-sm leading-relaxed text-charcoal">{ACCOUNTABLE_PLANNER.body}</p>
-      <div className="mt-6 flex max-w-xl items-start gap-3 rounded-md bg-mist/80 p-4">
-        <TargetIcon />
-        <p className="text-xs leading-relaxed text-ink">{ACCOUNTABLE_PLANNER.credentialNote}</p>
-      </div>
       <a
         href={LINKS.meetMichael}
         className="group mt-8 inline-flex items-center gap-2.5 bg-ink px-6 py-3.5 text-sm font-bold text-white transition-colors duration-200 hover:bg-ink/85 active:bg-ink"

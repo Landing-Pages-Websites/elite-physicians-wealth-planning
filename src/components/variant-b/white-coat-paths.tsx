@@ -106,7 +106,7 @@ export default function WhiteCoatPaths(): React.JSX.Element {
             </p>
             <h2
               id="white-coat-paths-heading"
-              className="mt-4 max-w-[18ch] text-[clamp(1.9rem,3vw,2.7rem)] font-bold leading-[1.12] tracking-tight text-ink"
+              className="mt-4 max-w-[18ch] text-display-m tracking-[-0.02em] font-bold leading-[1.12] tracking-tight text-ink"
             >
               {WHITE_COAT_PATHS.headline}
             </h2>
@@ -123,13 +123,12 @@ export default function WhiteCoatPaths(): React.JSX.Element {
         <div className="mt-12">
           <a
             href={LINKS.planningPath}
-            className="group inline-flex items-center gap-2.5 bg-ink px-6 py-3.5 text-sm font-bold text-white transition-colors duration-200 hover:bg-ink/85 active:bg-ink"
+            className="group va-btn va-btn-navy whitespace-nowrap"
           >
             {WHITE_COAT_PATHS.cta}
             <GoldArrow className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5" />
           </a>
-          <p className="mt-2 text-[10px] font-semibold text-charcoal/70">
-            Navigate to the current planning overview
+          <p className="mt-2 text-body-s font-semibold text-charcoal/70">
           </p>
         </div>
       </div>

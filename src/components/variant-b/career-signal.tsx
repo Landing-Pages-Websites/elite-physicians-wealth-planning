@@ -126,7 +126,7 @@ export default function CareerSignal(): React.JSX.Element {
         </svg>
         <h2
           id="career-signal-heading"
-          className="relative max-w-md text-[clamp(1.6rem,2.6vw,2.35rem)] font-bold leading-tight tracking-tight text-ink"
+          className="relative max-w-md text-display-m tracking-[-0.02em] font-bold leading-tight tracking-tight text-ink"
         >
           {CAREER_SIGNAL.identityLine}
         </h2>

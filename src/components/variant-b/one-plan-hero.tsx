@@ -1,5 +1,6 @@
 import Image from "next/image";
-import { ACCOUNTABLE_PLANNER, BRAND, HERO, LINKS, PORTRAIT } from "@/lib/content";
+import { BRAND, HERO, LINKS, PORTRAIT } from "@/lib/content";
+import { PortraitCaption } from "@/components/site/portrait-caption";
 import GoldArrow from "./gold-arrow";
 
 const RULER_TICK_COUNT = 64;
@@ -105,26 +106,20 @@ function HeroActions(): React.JSX.Element {
       <div>
         <a
           href={LINKS.schedule}
-          className="group inline-flex items-center gap-2.5 bg-ink px-6 py-3.5 text-sm font-bold text-white transition-colors duration-200 hover:bg-ink/85 active:bg-ink"
+          className="group va-btn va-btn-navy whitespace-nowrap"
         >
           {HERO.primaryCta}
           <GoldArrow className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5" />
         </a>
-        <p className="mt-2 max-w-[26ch] text-[10px] font-semibold leading-snug text-charcoal/70">
-          Outcome: Navigate to the Google Calendar scheduling experience
-        </p>
       </div>
       <div>
         <a
           href={LINKS.process}
-          className="group inline-flex items-center gap-2.5 border border-ink px-6 py-3.5 text-sm font-bold text-ink transition-colors duration-200 hover:bg-ink hover:text-white active:bg-ink/90"
+          className="group va-btn whitespace-nowrap border border-ink text-ink transition-colors hover:bg-ink hover:text-white"
         >
           {HERO.secondaryCta}
           <GoldArrow className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5" />
         </a>
-        <p className="mt-2 max-w-[26ch] text-[10px] font-semibold leading-snug text-charcoal/70">
-          Outcome: Navigate to /our-process
-        </p>
       </div>
     </div>
   );
@@ -134,7 +129,7 @@ export default function OnePlanHero(): React.JSX.Element {
   return (
     <section id="one-plan" aria-labelledby="one-plan-heading" className="relative overflow-hidden bg-white">
       <div className="bg-ink px-6 py-3">
-        <p className="mx-auto max-w-[96rem] text-[11px] font-semibold tracking-[0.08em] text-white/90">
+        <p className="mx-auto max-w-[96rem] text-body-s font-semibold tracking-[0.08em] text-white/90">
           {BRAND.wordmark}
         </p>
       </div>
@@ -143,12 +138,12 @@ export default function OnePlanHero(): React.JSX.Element {
         <HeroFieldOrnaments />
         <div className="relative mx-auto max-w-7xl px-6 pb-14 pt-12 lg:grid lg:min-h-[42rem] lg:grid-cols-12 lg:gap-12 lg:pt-16">
           <div className="lg:col-span-6">
-            <p className="inline-flex items-center gap-2 border border-ink/30 bg-white/70 px-3 py-1.5 text-[11px] font-semibold tracking-[0.06em] text-ink">
+            <p className="inline-flex items-center gap-2 border border-ink/30 bg-white/70 px-3 py-1.5 text-body-s font-semibold tracking-[0.06em] text-ink">
               {HERO.orientation}
             </p>
             <h1
               id="one-plan-heading"
-              className="mt-6 max-w-[21ch] text-[clamp(2.4rem,4.6vw,4rem)] font-bold leading-[1.06] tracking-tight text-ink"
+              className="mt-6 max-w-[21ch] text-display-xl tracking-[-0.02em] font-bold leading-[1.06] tracking-tight text-ink"
             >
               {HERO.headline}
             </h1>
@@ -169,9 +164,7 @@ export default function OnePlanHero(): React.JSX.Element {
             </div>
             <StrategyPlaque />
             <div className="mt-8 flex items-end justify-end gap-4 lg:mt-10">
-              <p className="max-w-[18ch] text-right text-[10px] font-semibold uppercase leading-relaxed tracking-[0.14em] text-charcoal/70">
-                {ACCOUNTABLE_PLANNER.name}
-              </p>
+              <PortraitCaption className="max-w-[18ch] px-0 pt-0 pb-0 text-right text-body-s text-charcoal" />
               <div className="vb-portrait-clip shrink-0 bg-ink/60 p-px">
                 <div className="vb-portrait-clip relative aspect-[270/315] w-44 overflow-hidden bg-mist/50 sm:w-52">
                   <Image
@@ -189,7 +182,7 @@ export default function OnePlanHero(): React.JSX.Element {
 
         <div className="relative mx-auto flex max-w-7xl flex-wrap items-baseline gap-x-10 gap-y-2 px-6 pb-10">
           <p className="text-xs font-semibold tracking-[0.06em] text-ink/80">{HERO.identityLine}</p>
-          <p className="text-[11px] leading-relaxed text-charcoal/70">{HERO.disclaimer}</p>
+          <p className="text-body-s leading-relaxed text-charcoal/70">{HERO.disclaimer}</p>
         </div>
       </div>
 

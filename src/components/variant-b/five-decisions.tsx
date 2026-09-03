@@ -53,12 +53,12 @@ export default function FiveDecisions(): React.JSX.Element {
       <EdgeTickRail />
       <div className="relative mx-auto max-w-7xl px-6 py-20 md:px-12 lg:grid lg:grid-cols-[minmax(0,4fr)_minmax(0,8fr)] lg:gap-14 lg:py-24">
         <div>
-          <p className="inline-block bg-ink px-3 py-1.5 text-[10px] font-bold uppercase tracking-[0.2em] text-white">
+          <p className="inline-block bg-ink px-3 py-1.5 text-body-s font-bold uppercase tracking-[0.2em] text-white">
             {FIVE_DECISIONS.orientation}
           </p>
           <h2
             id="five-decisions-heading"
-            className="mt-6 max-w-[13ch] text-[clamp(2.1rem,3.4vw,3.1rem)] font-bold leading-[1.1] tracking-tight text-ink"
+            className="mt-6 max-w-[13ch] text-display-m tracking-[-0.02em] font-bold leading-[1.1] tracking-tight text-ink"
           >
             {FIVE_DECISIONS.headline}
           </h2>

@@ -23,6 +23,9 @@ const CHROMIUM =
   process.env.CHROMIUM_PATH ??
   `${process.env.HOME}/Library/Caches/ms-playwright/chromium_headless_shell-1234/chrome-headless-shell-mac-arm64/chrome-headless-shell`;
 const BASE = process.env.BASE ?? "http://localhost:3100";
+// Both directions. B was never covered until it was brought up to the same
+// standard, so its failures were invisible.
+const ROUTES = (process.env.ROUTES ?? "/,/variant-b").split(",");
 const OUT = "/tmp/contrast";
 const VIEWPORTS = [
   { name: "1440", width: 1440, height: 900 },
@@ -38,10 +41,11 @@ const browser = await puppeteer.launch({
 
 const samples = [];
 
-for (const vp of VIEWPORTS) {
+for (const route of ROUTES)
+  for (const vp of VIEWPORTS) {
   const page = await browser.newPage();
   await page.setViewport({ width: vp.width, height: vp.height });
-  await page.goto(BASE, { waitUntil: "networkidle0", timeout: 60000 });
+  await page.goto(BASE + route, { waitUntil: "networkidle0", timeout: 60000 });
   await page.addStyleTag({
     content: `*, *::before, *::after {
       animation: none !important;
@@ -58,7 +62,9 @@ for (const vp of VIEWPORTS) {
     await new Promise((r) => setTimeout(r, 500));
   });
 
-  const targets = await page.evaluate(() => {
+  // `route` must be passed in: page.evaluate runs in the browser, which cannot
+  // see Node scope.
+  const targets = await page.evaluate((route) => {
     // Tailwind v4 emits oklab() for opacity modifiers, which no string parser
     // reads reliably. Paint the colour on a 1x1 canvas and read the pixel back
     // so the browser resolves it and we get real RGBA.
@@ -92,6 +98,7 @@ for (const vp of VIEWPORTS) {
         idx: i++,
         domIndex: d,
         section: section ? section.id : "?",
+        route,
         text: own.slice(0, 44),
         color: toRgba(cs.color),
         fontSize: Math.round(parseFloat(cs.fontSize)),
@@ -105,7 +112,7 @@ for (const vp of VIEWPORTS) {
       });
     }
     return out;
-  });
+  }, route);
 
   // Make every glyph transparent so what remains is pure background.
   await page.addStyleTag({
@@ -143,7 +150,8 @@ for (const vp of VIEWPORTS) {
     const x = Math.max(0, rect.x), y = Math.max(0, rect.y);
     const w = Math.min(rect.w, rect.vw - x), h = rect.h;
     if (w < 8 || h < 4) continue;
-    const file = `${OUT}/${vp.name}-${t.idx}.png`;
+    const slug = route === "/" ? "home" : route.replace(/\W+/g, "");
+    const file = `${OUT}/${slug}-${vp.name}-${t.idx}.png`;
     try {
       await page.screenshot({ path: file, clip: { x, y, width: w, height: h } });
       samples.push({ ...t, viewport: vp.name, file, box: { x: 0, y: 0, w, h } });
@@ -156,4 +164,4 @@ for (const vp of VIEWPORTS) {
 
 await browser.close();
 writeFileSync("/tmp/text-contrast.json", JSON.stringify(samples, null, 1));
-console.log(`captured ${samples.length} text regions across ${VIEWPORTS.length} viewports`);
+console.log(`captured ${samples.length} text regions across ${ROUTES.length} routes x ${VIEWPORTS.length} viewports`);

@@ -114,12 +114,11 @@ function ProcessCta({ className }: { className: string }): React.JSX.Element {
     <div className={className}>
       <a
         href={LINKS.process}
-        className="group inline-flex items-center gap-2.5 bg-ink px-6 py-3.5 text-sm font-bold text-white transition-colors duration-200 hover:bg-ink/85 active:bg-ink"
+        className="group va-btn va-btn-navy whitespace-nowrap"
       >
         {BLUEPRINT.cta}
         <GoldArrow className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5" />
       </a>
-      <p className="mt-2 text-[10px] font-semibold text-charcoal/70">Navigate to /our-process</p>
     </div>
   );
 }
@@ -179,7 +178,7 @@ export default function BlueprintRounds(): React.JSX.Element {
           <p className="relative font-display text-xl italic text-ink/90">{BLUEPRINT.orientation}</p>
           <h2
             id="blueprint-rounds-heading"
-            className="relative mt-5 max-w-[13ch] text-[clamp(2.3rem,3.8vw,3.6rem)] font-bold leading-[1.08] tracking-tight text-ink"
+            className="relative mt-5 max-w-[13ch] text-display-m tracking-[-0.02em] font-bold leading-[1.08] tracking-tight text-ink"
           >
             {BLUEPRINT.headline}
           </h2>

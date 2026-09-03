@@ -77,14 +77,6 @@ function StrategyCallPath(): React.JSX.Element {
         </a>
       </div>
       <span aria-hidden="true" className="ml-10 block h-4 w-px border-l border-dashed border-white/40" />
-      <div className="flex items-start gap-3 border border-white/30 p-3">
-        <span className="shrink-0 border border-gold/70 px-2 py-0.5 text-[9px] font-bold uppercase tracking-[0.2em] text-gold">
-          Outcome
-        </span>
-        <p className="text-xs leading-relaxed text-white/80">
-          Navigate to the Google Calendar scheduling experience.
-        </p>
-      </div>
     </div>
   );
 }
@@ -115,7 +107,6 @@ function GuidePath(): React.JSX.Element {
           <path d="M12 2v20M2 12h20M5 5l14 14M19 5 5 19" strokeLinecap="round" />
         </svg>
         <div className="text-xs leading-relaxed">
-          <p className="text-white/85">{NEXT_DECISION.guide.availability}</p>
           <p className="mt-1.5 text-white/60">{NEXT_DECISION.guide.requestNote}</p>
         </div>
       </div>
@@ -210,11 +201,11 @@ export default function NextDecision(): React.JSX.Element {
       <div className="relative mx-auto max-w-6xl px-6 py-20 text-center lg:py-24">
         <h2
           id="next-decision-heading"
-          className="mx-auto max-w-[24ch] text-[clamp(2rem,3.4vw,3.1rem)] font-bold leading-[1.15] tracking-tight text-white"
+          className="mx-auto max-w-[24ch] text-display-l tracking-[-0.02em] font-bold leading-[1.15] tracking-tight text-white"
         >
           {NEXT_DECISION.headline}
         </h2>
-        <p className="mt-5 flex items-center justify-center gap-3 text-[11px] font-semibold uppercase tracking-[0.3em] text-white/85">
+        <p className="mt-5 flex items-center justify-center gap-3 text-body-s font-semibold uppercase tracking-[0.3em] text-white/85">
           <span aria-hidden="true" className="h-1.5 w-1.5 rounded-full bg-gold" />
           {SUBHEAD}
           <span aria-hidden="true" className="h-1.5 w-1.5 rounded-full bg-gold" />

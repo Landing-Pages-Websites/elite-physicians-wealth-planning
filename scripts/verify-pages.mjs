@@ -69,10 +69,17 @@ async function auditPage(route, vp) {
       };
     });
     const slug = route === "/" ? "home" : route.slice(1);
-    await page.screenshot({
-      path: `${OUT}/${slug}-${vp.name}.png`,
-      fullPage: true,
-    });
+    // The screenshot is a convenience for review, not an assertion. A very tall
+    // mobile page exceeds Chrome's capture limit and used to abort the whole
+    // audit, taking the real checks down with it.
+    try {
+      await page.screenshot({
+        path: `${OUT}/${slug}-${vp.name}.png`,
+        fullPage: true,
+      });
+    } catch (error) {
+      console.error(`  (screenshot skipped for ${slug}-${vp.name}: ${error.message.split("\n")[0]})`);
+    }
     return {
       route,
       viewport: vp.name,

@@ -72,7 +72,7 @@ for s in samples:
 
     large = s["fontSize"] >= 24 or (s["fontSize"] >= 18.66 and int(s["fontWeight"]) >= 700)
     floor = 3.0 if large else 4.5
-    rec = dict(section=s["section"], vp=s["viewport"], size=s["fontSize"],
+    rec = dict(section=s["section"], route=s.get("route", "/"), vp=s["viewport"], size=s["fontSize"],
                text=s["text"], ratio=round(worst, 2), floor=floor)
     if worst < floor:
         fails.append(rec)
@@ -81,7 +81,7 @@ for s in samples:
 
 by_sec = defaultdict(int)
 for f in fails:
-    by_sec[f["section"]] += 1
+    by_sec[f"{f['route']} #{f['section']}"] += 1
 
 print(f"scored {scored} text regions against glyph-free background plates\n")
 for label, rows in (("FAIL", fails), ("NEAR", near)):
@@ -89,7 +89,7 @@ for label, rows in (("FAIL", fails), ("NEAR", near)):
         continue
     print(f"{label} ({len(rows)}):")
     for r in sorted(rows, key=lambda x: x["ratio"])[:24]:
-        print(f'  {r["ratio"]:>5}:1 (needs {r["floor"]}) [{r["vp"]:>4}] #{r["section"]:<20} {r["size"]:>2}px  "{r["text"]}"')
+        print(f'  {r["ratio"]:>5}:1 (needs {r["floor"]}) [{r["vp"]:>4}] {r["route"]:<11} #{r["section"]:<20} {r["size"]:>2}px  "{r["text"]}"')
     if len(rows) > 24:
         print(f"  … and {len(rows) - 24} more")
     print()

@@ -222,13 +222,13 @@ export default function SeparateRooms(): React.JSX.Element {
       </svg>
       <div className="relative mx-auto max-w-[96rem] px-6 py-16 lg:grid lg:grid-cols-[31%_minmax(0,1fr)] lg:gap-6 lg:py-0">
         <div className="lg:self-center lg:py-16">
-          <p className="inline-flex items-center gap-2 border border-ink/40 bg-white/70 px-3 py-1.5 text-[11px] font-bold uppercase tracking-[0.18em] text-ink">
+          <p className="inline-flex items-center gap-2 border border-ink/40 bg-white/70 px-3 py-1.5 text-body-s font-bold uppercase tracking-[0.18em] text-ink">
             <CompassIcon className="h-4 w-4 text-ink/70" />
             {SEPARATE_ROOMS.orientation}
           </p>
           <h2
             id="separate-rooms-heading"
-            className="mt-6 max-w-[16ch] text-[clamp(1.9rem,3.2vw,2.9rem)] font-bold leading-[1.12] tracking-tight text-ink"
+            className="mt-6 max-w-[16ch] text-display-m tracking-[-0.02em] font-bold leading-[1.12] tracking-tight text-ink"
           >
             {SEPARATE_ROOMS.headline}
           </h2>
