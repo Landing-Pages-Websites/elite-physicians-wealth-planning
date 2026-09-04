@@ -1,41 +1,5 @@
 import { FIVE_DECISIONS } from "@/lib/content";
 
-/**
- * Route continuity. The viewBox is 1:1 with the 1440 layout (it used to be
- * 1536x864 under preserveAspectRatio="none", which scaled y by 0.86, turned
- * every Q corner into an ellipse and made it impossible to aim a coordinate at
- * a DOM element). The entry drops from the 04 exit onto the ledger spine at
- * x=943 and overruns behind the opaque first row on purpose; the exit leaves
- * the spine's foot and crosses to x=34, where 06's `M37 0` entry picks it up.
- */
-function LedgerRoute(): React.JSX.Element {
-  return (
-    <svg
-      viewBox="0 0 1440 740"
-      preserveAspectRatio="none"
-      aria-hidden="true"
-      className="pointer-events-none absolute inset-0 hidden h-full w-full lg:block"
-    >
-      <g
-        fill="none"
-        stroke="var(--color-gold)"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      >
-        <path
-          d="M1415 0 V48 Q1415 76 1387 76 H971 Q943 76 943 104 V150"
-          vectorEffect="non-scaling-stroke"
-        />
-        <path
-          d="M943 536 V572 Q943 600 915 600 H62 Q34 600 34 628 V740"
-          vectorEffect="non-scaling-stroke"
-        />
-      </g>
-    </svg>
-  );
-}
-
 function DisciplineRow({
   discipline,
 }: {
@@ -67,7 +31,6 @@ export function FiveDecisions(): React.JSX.Element {
       aria-labelledby="five-decisions-heading"
       className="relative overflow-hidden bg-white"
     >
-      <LedgerRoute />
       <div className="relative z-10 va-shell pt-16 pb-20 lg:pt-24 lg:pb-28">
         {/* 34% gives the headline a 438px measure — exactly enough to set
             "Every recommendation" on one line, so the block is three lines with

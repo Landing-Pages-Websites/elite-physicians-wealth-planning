@@ -16,8 +16,11 @@
   position: absolute;
   inset: 0;
   background-image: url("/images/design/a/01-one-plan/hero-office-reconstructed.jpg");
-  background-size: cover;
-  background-position: 58% center;
+  /* The source has a hard-edged composite patch in its right third. Scaling up
+     and anchoring left pushes that seam off-frame, so the scrim no longer has
+     to hide the whole photograph to hide the defect. */
+  background-size: 168% auto;
+  background-position: 12% 42%;
   background-repeat: no-repeat;
 }
 
@@ -29,9 +32,9 @@
   background:
     linear-gradient(
       90deg,
-      rgba(4, 14, 27, 0.95) 0%,
-      rgba(4, 14, 27, 0.88) 42%,
-      rgba(4, 14, 27, 0.78) 100%
+      rgba(4, 14, 27, 0.93) 0%,
+      rgba(4, 14, 27, 0.74) 46%,
+      rgba(4, 14, 27, 0.52) 100%
     ),
     radial-gradient(
       70% 80% at 36% 55%,
@@ -147,12 +150,16 @@
   content: "";
   position: absolute;
   inset: 0;
-  /* Background image removed: its only legible content was three
-     fabricated book titles and an invented handwritten checklist (one
-     misspelled "Tax Efficency"), baked into raster pixels. hard_rules bar
-     inventing publications or client artefacts, and a scrim cannot launder
-     one. The band keeps its ivory ground. */
-  background: none;
+  /* A CROPPED asset, not a CSS window onto the original. The source photograph
+     carries three invented book titles and a handwritten checklist misspelling
+     "Tax Efficency"; a CSS crop leaves those pixels in the shipped file and one
+     position tweak away from being visible again — which is exactly what
+     happened on the first attempt. desk-stethoscope-crop.jpg contains no
+     lettering at all. Anchored right so the copy column keeps a clean ground. */
+  background-image: url("/images/design/a/04-blueprint-rounds/desk-stethoscope-crop.jpg");
+  background-size: auto 118%;
+  background-position: right -3% bottom -22%;
+  background-repeat: no-repeat;
 }
 
 /* The scrim used to fade left-to-right, reaching 0% opacity by x=82% — it was
@@ -168,13 +175,24 @@
   position: absolute;
   inset: 0;
   pointer-events: none;
-  background: radial-gradient(
-    130% 100% at 92% 88%,
-    rgba(246, 242, 232, 0.44) 0%,
-    rgba(246, 242, 232, 0.74) 38%,
-    rgba(246, 242, 232, 0.9) 68%,
-    rgba(246, 242, 232, 0.95) 100%
-  );
+  background:
+    linear-gradient(
+      96deg,
+      rgba(246, 242, 232, 1) 0%,
+      rgba(246, 242, 232, 0.99) 46%,
+      rgba(246, 242, 232, 0.86) 66%,
+      rgba(246, 242, 232, 0.55) 86%,
+      rgba(246, 242, 232, 0.42) 100%
+    ),
+    /* The lede sits in the upper right. Keep that band opaque so the object
+       reads as a ground under the process rail, never behind live copy. */
+    linear-gradient(
+      180deg,
+      rgba(246, 242, 232, 0.96) 0%,
+      rgba(246, 242, 232, 0.88) 34%,
+      rgba(246, 242, 232, 0.1) 62%,
+      rgba(246, 242, 232, 0) 100%
+    );
 }
 
 /* On narrow screens the copy stacks over the still life, so the wash

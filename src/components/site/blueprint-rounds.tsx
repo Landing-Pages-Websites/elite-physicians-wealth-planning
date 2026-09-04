@@ -26,10 +26,17 @@ const STEP_ICONS: readonly StepIcon[] = [
  * the headline. Every step shares one `top`, so all six medallion centres sit
  * on the single corridor the route draws at y=237 in the 1536x484 viewBox.
  */
-const STEP_LEFTS = ["0%", "18.5%", "31.5%", "46%", "59.5%", "79%"] as const;
+/* Even steps. The measured gaps were 238/168/186/174/252px — a 204px mean with
+   ±35px scatter, which is exactly the unevenness a designer's eye catches. The
+   last group is 14rem wide, so the run stops at 83% to keep it inside the
+   shell. */
+const STEP_LEFTS = ["0%", "16.6%", "33.2%", "49.8%", "66.4%", "83%"] as const;
 
-/** Medallion centreline, as a percentage of the process field's height. */
-const STEP_TOP = "42%";
+/* The route sits at y=237 of the 484-unit viewBox = 48.97% of the field's
+   height. Subtracting half a medallion (h-14 = 3.5rem) puts every disc's CENTRE
+   on the line rather than near it — and because it is a calc, it holds at every
+   viewport width instead of only the one it was eyeballed at. */
+const STEP_TOP = "calc(48.97% - 1.75rem)";
 
 /**
  * One continuous route across the lower field (y offset 380 from the NOTES
@@ -131,7 +138,7 @@ export function BlueprintRounds(): React.JSX.Element {
             "PHYSICIAN WEALTH ADVISORY" tagline. Both are build artifacts and
             neither is client brand copy, so the lockup goes and the section's
             own orientation line opens it. The gold rule is kept as the opener. */}
-        <p className="inline-flex flex-col gap-1.5 font-body text-[11px] font-semibold tracking-[0.22em] text-ink uppercase">
+        <p className="inline-flex flex-col gap-2.5 font-display text-display-s font-medium tracking-[0.01em] text-ink">
           {BLUEPRINT.orientation}
           <span aria-hidden="true" className="h-px w-full bg-gold" />
         </p>
