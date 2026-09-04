@@ -72,6 +72,9 @@
   --color-mist-deep: #d3e2ef; /* mist gradient end stop */
   --color-ivory-bright: #f5f0e8; /* display type on navy */
   --color-ivory-warm: #f7f3ec; /* display type, warmer band */
+  --color-atlas-paper: #faf7f0; /* Decision Atlas survey ground, measured off
+                                   public/design/b/refs/03-separate-rooms.png */
+  --color-atlas-tint: #dce8f5; /* Atlas column + island fill, same frame */
 
   /* NOT a contract colour and NOT a derived shade. The palette contract defines
      no error/validation state, but the strategy-call form needs one. Flagged in

@@ -13,16 +13,33 @@
  */
 export default function SectionEyebrow({
   children,
+  mark = "dash",
   className = "",
 }: {
   children: React.ReactNode;
+  /** Some frames open on a compass rosette rather than the gold dash. */
+  mark?: "dash" | "rosette";
   className?: string;
 }): React.JSX.Element {
   return (
     <p
       className={`inline-flex items-center gap-3 font-body text-[11px] font-bold tracking-[0.22em] text-ink uppercase ${className}`}
     >
-      <span aria-hidden="true" className="inline-block h-px w-8 shrink-0 bg-gold" />
+      {mark === "rosette" ? (
+        <svg
+          aria-hidden="true"
+          viewBox="0 0 32 32"
+          className="h-6 w-6 shrink-0 text-ink/70"
+          fill="none"
+          stroke="currentColor"
+        >
+          <circle cx="16" cy="16" r="9" />
+          <circle cx="16" cy="16" r="3.2" />
+          <path d="M16 1 L18.4 13.6 L31 16 L18.4 18.4 L16 31 L13.6 18.4 L1 16 L13.6 13.6 Z" />
+        </svg>
+      ) : (
+        <span aria-hidden="true" className="inline-block h-px w-8 shrink-0 bg-gold" />
+      )}
       {children}
     </p>
   );

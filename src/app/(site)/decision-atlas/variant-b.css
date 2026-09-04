@@ -107,3 +107,31 @@
     url("/images/design/b/07-accountable-planner/medical-finance-desk-background.jpg")
       left center / cover no-repeat;
 }
+
+/* Dashed leader lines. The frames run these from a label out to a gold node
+   rather than letting a rule stop in space. */
+.vb-leader {
+  background-image: linear-gradient(90deg, var(--color-ink) 0 4px, transparent 4px 10px);
+  background-size: 10px 1px;
+  background-repeat: repeat-x;
+  opacity: 0.45;
+}
+.vb-leader-v {
+  background-image: linear-gradient(180deg, var(--color-gold) 0 4px, transparent 4px 10px);
+  background-size: 1px 10px;
+  background-repeat: repeat-y;
+}
+
+/* Beveled instrument card. The frames cut the top-left and bottom-right
+   corners of every card in the direction — it is the shape that makes the
+   plates read as machined parts rather than rounded rectangles. */
+.vb-bevel {
+  clip-path: polygon(
+    18px 0,
+    100% 0,
+    100% calc(100% - 18px),
+    calc(100% - 18px) 100%,
+    0 100%,
+    0 18px
+  );
+}
