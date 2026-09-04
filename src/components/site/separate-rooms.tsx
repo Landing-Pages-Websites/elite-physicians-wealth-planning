@@ -151,8 +151,12 @@ function RoomFigure({
 
 function BoundaryNote({ className }: { className?: string }): React.JSX.Element {
   return (
+    // A dashed rectangle is wireframe chrome — the reader sees an unfinished
+    // placeholder, not a scope boundary. The note is real and load-bearing
+    // (it is the section's disclaimer), so it gets an editorial sidenote rule
+    // in the accent that already marks edges everywhere else on the page.
     <aside
-      className={`flex items-start gap-3 rounded-md border border-dashed border-ink/40 bg-ivory/70 p-4 ${className ?? ""}`}
+      className={`flex items-start gap-3 border-l-2 border-gold bg-ivory/70 py-3 pr-4 pl-5 ${className ?? ""}`}
     >
       <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full border-2 border-gold text-gold">
         <AlertIcon className="h-4 w-4" />

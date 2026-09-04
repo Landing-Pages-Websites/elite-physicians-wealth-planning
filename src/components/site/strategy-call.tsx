@@ -13,8 +13,12 @@ export function StrategyCall(): React.JSX.Element {
       aria-labelledby="form-heading"
       className="relative overflow-hidden bg-ink"
     >
-      <div className="relative z-10 va-shell grid gap-12 py-14 lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1fr)] lg:gap-16 lg:py-20">
-        <div>
+      {/* The left column was 0.85fr carrying a headline and three lines, which
+          left roughly 300px of empty navy under it. It is now sized to its
+          content so the form — the only thing on the page a visitor can
+          actually complete — takes the width it was giving away. */}
+      <div className="relative z-10 va-shell grid gap-12 py-14 lg:grid-cols-[minmax(0,23rem)_minmax(0,1fr)] lg:gap-16 lg:py-20">
+        <div className="lg:sticky lg:top-[calc(var(--header-h)+4rem)] lg:self-start">
           <h2
             id="form-heading"
             className="max-w-[18ch] text-display-m font-display leading-[1.08] font-medium tracking-[-0.02em] text-balance text-ivory"
@@ -58,7 +62,7 @@ export function StrategyCall(): React.JSX.Element {
           </dl>
         </div>
 
-        <div className="rounded-sm border border-ivory/15 bg-ink/60 p-6 sm:p-8">
+        <div className="rounded-sm border border-ivory/15 bg-white/4 p-6 sm:p-8">
           <StrategyCallForm tone="ledger" />
         </div>
       </div>

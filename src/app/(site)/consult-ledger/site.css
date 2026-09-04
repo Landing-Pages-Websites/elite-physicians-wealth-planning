@@ -161,70 +161,11 @@
 
 /* ---------- 04 blueprint-rounds: desk still life on ivory ---------- */
 
+/* No background wash. The still-life is a real <Image> in the header row now,
+   at its own scale, so the band needs no scrim and the process rail sits on
+   clean ivory instead of on a blurred photograph. */
 .va-blueprint {
   background: var(--color-ivory);
-}
-
-.va-blueprint::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  /* A CROPPED asset, not a CSS window onto the original. The source photograph
-     carries three invented book titles and a handwritten checklist misspelling
-     "Tax Efficency"; a CSS crop leaves those pixels in the shipped file and one
-     position tweak away from being visible again — which is exactly what
-     happened on the first attempt. desk-stethoscope-crop.jpg contains no
-     lettering at all. Anchored right so the copy column keeps a clean ground. */
-  background-image: url("/images/design/a/04-blueprint-rounds/desk-stethoscope-crop.jpg");
-  background-size: auto 150%;
-  background-position: right -4% top -6%;
-  background-repeat: no-repeat;
-}
-
-/* The scrim used to fade left-to-right, reaching 0% opacity by x=82% — it was
-   built for a layout where all copy sat in the left column. Copy now spans the
-   measure, so a horizontal fade leaves text sitting on bare photography: the
-   lede ran straight across the book spines and was unreadable.
-
-   One radial release instead. The desk still-life is treated as a GROUND, not
-   a subject: it stays faint everywhere copy sits and opens up only toward the
-   bottom-right corner, where the stethoscope and books are and no text goes. */
-.va-blueprint::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  background:
-    linear-gradient(
-      96deg,
-      rgba(246, 242, 232, 1) 0%,
-      rgba(246, 242, 232, 0.99) 46%,
-      rgba(246, 242, 232, 0.86) 66%,
-      rgba(246, 242, 232, 0.55) 86%,
-      rgba(246, 242, 232, 0.42) 100%
-    ),
-    /* The lede sits in the upper right. Keep that band opaque so the object
-       reads as a ground under the process rail, never behind live copy. */
-    linear-gradient(
-      180deg,
-      rgba(246, 242, 232, 0.96) 0%,
-      rgba(246, 242, 232, 0.88) 34%,
-      rgba(246, 242, 232, 0.1) 62%,
-      rgba(246, 242, 232, 0) 100%
-    );
-}
-
-/* On narrow screens the copy stacks over the still life, so the wash
-   must carry almost the whole field for contrast. */
-@media (max-width: 1023px) {
-  .va-blueprint::after {
-    background: linear-gradient(
-      0deg,
-      rgba(246, 242, 232, 0.97) 0%,
-      rgba(246, 242, 232, 0.95) 72%,
-      rgba(246, 242, 232, 0.66) 100%
-    );
-  }
 }
 
 /* Navy step medallion with a double gold ring. */
@@ -271,23 +212,12 @@
 }
 
 /* Diagonal photo masks from the extraction NOTES. */
-.va-clip-consult {
-  clip-path: polygon(17% 0, 100% 0, 87% 100%, 0 100%);
-}
-.va-clip-surgeons {
-  clip-path: polygon(7% 0, 100% 0, 84% 100%, 0 100%);
-}
-.va-clip-dental {
-  clip-path: polygon(16% 0, 100% 0, 87% 100%, 0 100%);
-}
-.va-clip-practice {
-  clip-path: polygon(10% 0, 100% 0, 91% 100%, 0 100%);
-}
-.va-clip-executive {
-  clip-path: polygon(8% 0, 100% 0, 86% 100%, 0 100%);
-}
-.va-clip-mobile {
-  clip-path: polygon(0 7%, 100% 0, 100% 100%, 0 100%);
+/* One clip for all five pathway photographs. There were six, at six different
+   angles — 17/13, 7/16, 16/13, 10/9, 8/14 and a mobile variant that sheared the
+   other way. Same device, six geometries: the motif read as five accidents
+   rather than one system. */
+.va-clip-pathway {
+  clip-path: polygon(9% 0, 100% 0, 91% 100%, 0 100%);
 }
 
 /* ---------- 07 accountable-planner: portrait essay ---------- */
@@ -300,46 +230,39 @@
   content: "";
   position: absolute;
   inset: 0;
-  /* Cropped asset. The source carries three invented book titles — "The
-     Physician's Guide to Financial Lifecycles", "TAX STRATEGIES", "RETIREMENT
-     PLANNING" — in its upper band. desk-notepad-crop.jpg starts below them and
-     keeps the open notepad, the pen and the marble counter: real objects, no
-     lettering anywhere in the file. */
-  background-image: url("/images/design/a/07-accountable-planner/desk-notepad-crop.jpg");
+  /* A plate shot for this slot, not a rescue crop. The previous ground was a
+     2048x512 strip cut out of a photograph to escape three fabricated book
+     spines, then scaled to fill a 1400px band — it arrived as beige mush with
+     no identifiable subject. This one is a defocused office at f/1.8: the left
+     55% is soft empty wall where the portrait and the copy sit, and the desk
+     corner and leather chair carry the right third. No lettering in the file. */
+  background-image: url("/images/design/a/07-accountable-planner/office-desk-ground.jpg");
   background-size: cover;
-  background-position: left center;
+  background-position: 62% center;
   background-repeat: no-repeat;
 }
 
+/* The plate is already defocused and low-contrast, so the wash only has to
+   pull it toward ivory and hold the copy column — it no longer has to hide
+   the picture. Left stays near-opaque for the portrait card and the text; the
+   right eases off so the desk edge and the chair actually read. */
 .va-planner::after {
   content: "";
   position: absolute;
   inset: 0;
   pointer-events: none;
-  background:
-    radial-gradient(
-      circle at 63% 43%,
-      rgba(255, 255, 255, 0.26),
-      transparent 34%
-    ),
-    linear-gradient(
-      90deg,
-      rgba(246, 242, 232, 0.08) 0%,
-      rgba(246, 242, 232, 0.78) 26%,
-      rgba(246, 242, 232, 0.94) 46%,
-      rgba(246, 242, 232, 0.9) 100%
-    );
+  background: linear-gradient(
+    92deg,
+    rgba(246, 242, 232, 0.93) 0%,
+    rgba(246, 242, 232, 0.9) 42%,
+    rgba(246, 242, 232, 0.74) 72%,
+    rgba(246, 242, 232, 0.3) 100%
+  );
 }
 
-/* On narrow screens the narrative stacks over the desk photo, so the
-   ivory wash must stay near-opaque behind all copy. */
+/* On narrow screens the narrative stacks across the full width, so the wash
+   goes near-opaque behind all copy. */
 @media (max-width: 1023px) {
-  /* The desk plate ghosts through at 390 as unreadable fragments of the
-     fabricated book spines. Nothing survives that is worth the request. */
-  .va-planner::before {
-    display: none;
-  }
-
   .va-planner::after {
     background: linear-gradient(
       0deg,
@@ -348,16 +271,6 @@
       rgba(246, 242, 232, 0.7) 100%
     );
   }
-}
-
-/* Thin double border for the portrait plate. */
-.va-planner-card {
-  border: 1px solid
-    color-mix(in srgb, var(--color-ivory), var(--color-charcoal) 30%);
-  outline: 1px solid
-    color-mix(in srgb, var(--color-ivory), var(--color-charcoal) 12%);
-  outline-offset: -7px;
-  background: var(--color-ivory-bright);
 }
 
 /* ---------- 08 next-decision: dark closing fork ---------- */

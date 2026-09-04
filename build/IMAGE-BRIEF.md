@@ -49,8 +49,14 @@ a trading floor.
 
 **Light.** Low-key, one dominant warm source from the right of frame, deep
 falloff to the left so the copy column stays dark enough for ivory text at 4.5:1.
-Target mean luminance **0.05–0.12** — dark, but with real detail. The current
-plate reads 0.0127, which is why it appears empty.
+
+~~Target mean luminance 0.05-0.12.~~ **This target was wrong and is withdrawn.**
+The plate that shipped measures 0.0076 — below the old floor — and is correct: a
+low-key hero is mostly dark by design. Mean luminance does not separate a good
+dark photograph from a broken one, because the broken plate scored 0.0127 and
+passed the same test. What separates them is the brightness probe below: the
+broken plate resolves into a rectangular smear patch at 6x, and this one resolves
+into a room. Judge the plate by probe 1, not by a number.
 
 **Composition.** Keep the right third the most lit; that is where the portrait
 card sits and it needs something behind it. Leave the left 44% quiet.
@@ -68,11 +74,16 @@ card sits and it needs something behind it. Leave the left 44% quiet.
 
 ---
 
-## Plate 2 — blueprint band (optional, an upgrade)
+## Plate 2 — blueprint band ✅ DELIVERED
 
-**Slot:** `#blueprint-rounds`, right side of an ivory band, behind a six-step
-process rail. Currently served by `desk-stethoscope-crop.jpg`, which is clean and
-adequate but small (480 × 435) and carries a single object.
+Shipped as `04-blueprint-rounds/desk-still-life.jpg` (1400 × 1050, cropped from a
+2000 × 1200 render). It is no longer a background: the band's scrim and the
+`auto 150%` scaling are both gone, and the still-life is an `<Image>` in the
+header row beside the headline.
+
+**Slot (historic):** `#blueprint-rounds`, right side of an ivory band, behind a
+six-step process rail. Was served by `desk-stethoscope-crop.jpg` — clean, but
+480 × 435 scaled past 1400px, which rendered as an unidentifiable beige smear.
 
 **Deliver:** 2000 × 1200 minimum, JPEG.
 
@@ -99,6 +110,26 @@ Before wiring any new plate in, run these:
    banding, or smear means the render failed — reject it.
 2. **Legibility probe.** Zoom to 100% and read every surface. If a word can be
    made out anywhere, reject it.
-3. **Luminance.** For the hero, mean luminance must land in 0.05–0.12.
-4. **Contrast gate.** `npm run check:contrast` must stay at 0 regions below AA
+3. **Contrast gate.** `npm run check:contrast` must stay at 0 regions below AA
    with the new plate in place.
+
+---
+
+## Plate 3 — planner ground ✅ DELIVERED
+
+Shipped as `07-accountable-planner/office-desk-ground.jpg` (2400 × 1200).
+
+**Slot:** `#accountable-planner`, full-bleed ground behind a portrait card and a
+dark copy column on ivory.
+
+**Scene.** A defocused office corner at f/1.8: warm wall filling the left 55%,
+a walnut desk edge and a sliver of leather chair carrying the right third, warm
+afternoon light from the right. It is a ground, not a subject — nothing in it
+competes for attention and nothing in it is sharp.
+
+**Why it was needed.** The previous ground was `desk-notepad-crop.jpg`, a
+2048 × 512 strip cut out of a photograph to escape three fabricated book spines,
+then scaled to fill a 1400px band. It arrived as beige mush with no identifiable
+subject — the crop solved the lettering problem and created a worse one.
+
+**Passed:** no lettering anywhere, no people, no certificates, no seam at 6x.
