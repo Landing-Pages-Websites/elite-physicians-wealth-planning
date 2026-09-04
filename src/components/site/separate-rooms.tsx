@@ -141,7 +141,7 @@ function RoomFigure({
           quadrant. Centred, it sat on the drawn furniture; the ivory plate
           knocks it out of the hatching so both drawing and label survive. */}
       <figcaption className="absolute top-[9%] left-[7%]">
-        <span className="inline-block bg-ivory px-1.5 py-0.5 font-display text-body-s font-medium tracking-[0.16em] text-ink uppercase">
+        <span className="inline-block bg-ivory px-2 py-0.5 font-display text-display-s leading-none font-semibold tracking-[0.01em] text-ink">
           {room.role}
         </span>
       </figcaption>
@@ -166,7 +166,7 @@ function BoundaryNote({ className }: { className?: string }): React.JSX.Element 
 
 function CopyBlock(): React.JSX.Element {
   return (
-    <div className="max-w-md px-6 pt-10 sm:px-10 lg:absolute lg:top-[9%] lg:left-[max(1.5rem,calc((100vw-var(--page-max))/2+var(--page-pad)))] lg:z-20 lg:w-[26%] lg:max-w-none lg:px-0 lg:pt-0">
+    <div className="max-w-md px-6 pt-10 sm:px-10 lg:absolute lg:top-[9%] lg:left-0 lg:z-20 lg:w-[26%] lg:max-w-none lg:px-0 lg:pt-0">
       <p className="font-body text-[11px] font-semibold tracking-[0.22em] text-ink uppercase">
         {SEPARATE_ROOMS.orientation}
       </p>
@@ -200,7 +200,7 @@ export function SeparateRooms(): React.JSX.Element {
       aria-labelledby="separate-rooms-heading"
       className="va-rooms relative overflow-hidden"
     >
-      <div className="relative z-10">
+      <div className="va-shell relative z-10">
         {/* The approved frame carries a navy notch tab here reading "The
             Consult Ledger" — the internal A/B direction codename, not the
             client's brand. Publishing it would ship a build artifact as the
