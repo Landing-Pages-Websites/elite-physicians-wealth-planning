@@ -222,7 +222,7 @@ export function SeparateRooms(): React.JSX.Element {
             />
           ))}
           <HubCircle className="absolute top-[51.5%] left-[62.2%] h-[17%] w-[9.6%] -translate-x-1/2 -translate-y-1/2 px-3 text-[clamp(1rem,1.5vw,1.45rem)] leading-tight" />
-          <BoundaryNote className="absolute bottom-[9%] left-[max(1.5rem,calc((100vw-var(--page-max))/2+var(--page-pad)))] w-[26%] max-w-none" />
+          <BoundaryNote className="absolute bottom-[7%] left-0 w-[26%] max-w-none" />
         </div>
 
         {/* Mobile: the desktop topology rotated — one trunk off the hub with
