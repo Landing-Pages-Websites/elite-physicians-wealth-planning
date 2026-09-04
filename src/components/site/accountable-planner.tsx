@@ -43,7 +43,11 @@ export function AccountablePlanner(): React.JSX.Element {
       className="va-planner relative overflow-hidden"
     >
       <AccountabilityTrace />
-      <div className="relative z-10 va-shell grid min-h-[min(864px,100svh)] grid-cols-1 content-center gap-x-20 gap-y-10 py-16 lg:grid-cols-[minmax(0,30%)_minmax(0,1fr)] lg:py-24">
+      {/* The band was pinned to a 864px minimum because the approved frame is a
+          full-viewport slide. The content runs about 620px, so the remainder
+          rendered as roughly 200px of empty ivory under the CTA. Padding sets
+          the height now; the section is as tall as what is in it. */}
+      <div className="relative z-10 va-shell grid grid-cols-1 gap-x-20 gap-y-10 py-16 lg:grid-cols-[minmax(0,30%)_minmax(0,1fr)] lg:py-24">
         {/* Promise leads on mobile; portrait sits center-left on desktop. */}
         <div className="order-1 lg:col-start-2 lg:row-start-1 lg:self-end">
           {/* Gold #C8A65A on ivory #F6F2E8 measures 2.07:1 — an AA failure at

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { BLUEPRINT, LINKS } from "@/lib/content";
 import {
   ArrowRightIcon,
@@ -142,16 +143,39 @@ export function BlueprintRounds(): React.JSX.Element {
           {BLUEPRINT.orientation}
           <span aria-hidden="true" className="h-px w-full bg-gold" />
         </p>
-        <div className="lg:grid lg:grid-cols-[minmax(0,1fr)_minmax(0,42ch)] lg:items-end lg:gap-x-16">
-        <h2
-          id="blueprint-rounds-heading"
-          className="va-reveal mt-5 max-w-[18ch] text-display-m font-display leading-[1.08] font-medium tracking-[-0.02em] text-balance text-ink"
-        >
-          {BLUEPRINT.headline}
-        </h2>
-        <p className="mt-5 max-w-[42ch] font-body text-body-l leading-[1.6] text-charcoal text-pretty lg:mt-0 lg:pb-[0.22em]">
-          {BLUEPRINT.body}
-        </p>
+        {/* The still-life used to be a full-bleed wash behind this whole band at
+            `auto 150%` — a 480px crop blown up past 1400px, which rendered as an
+            unreadable beige smear and forced a heavy scrim over everything to
+            keep the process rail legible. It is a photograph now, at its own
+            scale, in its own frame, with the headline and lede stacked beside it
+            instead of stranded in opposite corners of an empty row. */}
+        <div className="mt-5 lg:grid lg:grid-cols-[minmax(0,1fr)_minmax(0,40%)] lg:items-center lg:gap-x-16">
+          <div>
+            <h2
+              id="blueprint-rounds-heading"
+              className="va-reveal max-w-[18ch] text-display-m font-display leading-[1.08] font-medium tracking-[-0.02em] text-balance text-ink"
+            >
+              {BLUEPRINT.headline}
+            </h2>
+            <p className="mt-6 max-w-[46ch] font-body text-body-l leading-[1.6] text-charcoal text-pretty">
+              {BLUEPRINT.body}
+            </p>
+            {/* The CTA used to float at 59.5% of the rail band, landing under
+                step 04 with nothing to anchor it — it read as a stray element
+                dropped into the diagram. It belongs at the end of the intro,
+                where the reader has just been told what the process is. */}
+            <div className="mt-9 hidden lg:block">
+              <ProcessCta />
+            </div>
+          </div>
+          <Image
+            src="/images/design/a/04-blueprint-rounds/desk-still-life.jpg"
+            alt=""
+            width={1400}
+            height={1050}
+            sizes="(min-width: 1024px) 40vw, 100vw"
+            className="mt-8 aspect-4/3 w-full rounded-sm object-cover lg:mt-0"
+          />
         </div>
 
         {/* Mobile: vertical connected path, 01 through 06. */}
@@ -206,9 +230,6 @@ export function BlueprintRounds(): React.JSX.Element {
                 />
               </div>
             ))}
-            <div className="absolute bottom-[6%] left-[59.5%]">
-              <ProcessCta />
-            </div>
           </div>
         </div>
       </div>

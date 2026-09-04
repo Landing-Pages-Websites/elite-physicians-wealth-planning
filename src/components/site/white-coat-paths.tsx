@@ -7,13 +7,6 @@ type PathwaySpec = {
   decision: (typeof WHITE_COAT_PATHS.pathways)[number]["decision"];
   src: string;
   alt: string;
-  clip: string;
-  photo: React.CSSProperties;
-  label: React.CSSProperties;
-  /** Which way the 12px gold tie points at this label's photo. Default: left. */
-  tie?: "up";
-  /** Labels sitting in a narrow slot between two photos get a tighter measure. */
-  narrow?: true;
 };
 
 const PHOTO_DIR = "/images/design/a/06-white-coat-paths";
@@ -23,115 +16,47 @@ const PATHWAYS: readonly PathwaySpec[] = [
     ...WHITE_COAT_PATHS.pathways[0],
     src: `${PHOTO_DIR}/physicians-specialists-consultation.jpg`,
     alt: "Physicians reviewing a treatment plan together during a consultation",
-    clip: "va-clip-consult",
-    photo: { left: "36.8%", top: "1.7%", width: "26.7%", aspectRatio: "2" },
-    label: { left: "63.1%", top: "9%" },
   },
   {
     ...WHITE_COAT_PATHS.pathways[1],
     src: `${PHOTO_DIR}/surgeons-operating-room.jpg`,
     alt: "Surgeons concentrating on a procedure under operating-room lights",
-    clip: "va-clip-surgeons",
-    photo: { left: "51.5%", top: "26%", width: "26%", aspectRatio: "1.86" },
-    label: { left: "78.1%", top: "27.5%" },
   },
   {
     ...WHITE_COAT_PATHS.pathways[2],
     src: `${PHOTO_DIR}/dental-office-planning.jpg`,
     alt: "Dental clinician reviewing a panoramic X-ray in a dental operatory",
-    clip: "va-clip-dental",
-    photo: { left: "36%", top: "47%", width: "25.7%", aspectRatio: "2.13" },
-    label: { left: "62.3%", top: "48.5%" },
   },
   {
     ...WHITE_COAT_PATHS.pathways[3],
     src: `${PHOTO_DIR}/practice-owner-meeting.jpg`,
     alt: "Practice owner in a white coat taking notes during an office meeting",
-    clip: "va-clip-practice",
-    photo: { left: "74.2%", top: "66%", width: "25.4%", aspectRatio: "2.4" },
-    label: { left: "74.2%", top: "84%" },
-    tie: "up",
   },
   {
     ...WHITE_COAT_PATHS.pathways[4],
     src: `${PHOTO_DIR}/healthcare-executive-hallway.jpg`,
     alt: "Clinician in scrubs carrying a tablet along a bright hospital corridor",
-    clip: "va-clip-executive",
-    photo: { left: "33.8%", top: "68%", width: "21.5%", aspectRatio: "1.09" },
-    label: { left: "56%", top: "72%" },
-    narrow: true,
   },
 ] as const;
 
 /**
- * Page route, not an index. Two runs only: it enters from the 05 seam at the
- * top edge and stops 12px short of photo 1's clipped edge, then leaves from
- * photo 4's clipped bottom-right corner and exits with an arrow at the 07 seam.
- * The five audiences are siblings, so each one carries its own node/tie inside
- * PathwayLabel — nothing threads them in sequence.
+ * Each row steps this much further right than the one above it. The cascade is
+ * the approved direction's idea and it is worth keeping; what it cannot be is
+ * five hand-placed rectangles. Every row is now the same width and the same
+ * shape, and only the offset changes — so the diagonal is a rule the layout
+ * follows rather than five positions somebody nudged until they looked close.
  */
-function IndexRail(): React.JSX.Element {
-  return (
-    <svg
-      viewBox="0 0 1536 1010"
-      preserveAspectRatio="none"
-      aria-hidden="true"
-      className="pointer-events-none absolute inset-0 h-full w-full"
-    >
-      <g
-        fill="none"
-        stroke="var(--color-gold)"
-        strokeWidth="1"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      >
-        <path d="M37 0 V86 Q37 102 53 102 H570 Q586 102 586 118 V148" vectorEffect="non-scaling-stroke" />
-        <path d="M1495 829 V984" vectorEffect="non-scaling-stroke" />
-        <path d="M1483 972 L1495 984 L1507 972" vectorEffect="non-scaling-stroke" />
-      </g>
-    </svg>
-  );
-}
-
-function PathwayLabel({
-  pathway,
-}: {
-  pathway: PathwaySpec;
-}): React.JSX.Element {
-  return (
-    <div
-      className={`relative max-w-md pl-7 ${pathway.narrow ? "xl:w-[13.25rem]" : "xl:w-[15.75rem]"}`}
-    >
-      {pathway.tie === "up" ? (
-        <span
-          aria-hidden="true"
-          className="absolute -top-4 left-[14px] hidden h-3 w-px bg-gold xl:block"
-        />
-      ) : null}
-      <h3 className="relative font-display text-display-s leading-[1.15] font-semibold text-ink">
-        {pathway.tie === "up" ? null : (
-          <span
-            aria-hidden="true"
-            className="absolute -left-7 top-[0.62em] hidden h-px w-3 bg-gold xl:block"
-          />
-        )}
-        <span
-          aria-hidden="true"
-          className="absolute -left-12 top-[0.42em] h-2 w-2 rounded-full bg-gold xl:-left-[18px]"
-        />
-        {pathway.audience}
-      </h3>
-      <p className="mt-2 font-body text-body-s leading-[1.55] text-charcoal">
-        {pathway.decision}
-      </p>
-    </div>
-  );
-}
+const STEP_PERCENT = 4;
+const ROW_WIDTH = `${100 - STEP_PERCENT * (PATHWAYS.length - 1)}%`;
 
 function CopyBlock(): React.JSX.Element {
   return (
-    <div className="max-w-md xl:absolute xl:top-[13%] xl:bottom-[9%] xl:left-0 xl:z-20 xl:flex xl:w-[30%] xl:max-w-none xl:flex-col">
-      <p className="font-display text-sm font-medium text-ink italic">
+    <div className="lg:sticky lg:top-[calc(var(--header-h)+4rem)] lg:self-start">
+      {/* Was set in italic display at 14px while every other section opens on a
+          letterspaced uppercase body eyebrow — one section using a different
+          orientation style is the kind of thing that reads as "assembled" even
+          when nobody can name it. */}
+      <p className="font-body text-[11px] font-semibold tracking-[0.22em] text-ink uppercase">
         {WHITE_COAT_PATHS.orientation}
       </p>
       <h2
@@ -140,18 +65,59 @@ function CopyBlock(): React.JSX.Element {
       >
         {WHITE_COAT_PATHS.headline}
       </h2>
-      <span aria-hidden="true" className="mt-5 block h-[2px] w-20 bg-gold xl:hidden" />
-      <p className="mt-5 max-w-[50ch] font-body text-body-m leading-[1.65] text-charcoal text-pretty">
+      <span aria-hidden="true" className="mt-6 block h-px w-14 bg-gold" />
+      <p className="mt-6 max-w-[42ch] font-body text-body-m leading-[1.65] text-charcoal text-pretty">
         {WHITE_COAT_PATHS.body}
       </p>
-      <a
-        href={LINKS.planningPathOnsite}
-        className="va-btn va-btn-navy mt-8 xl:mt-auto"
-      >
+      {/* `mt-auto` used to push this to the foot of a 1,010px canvas, leaving
+          about 300px of empty field between the lede and the button. */}
+      <a href={LINKS.planningPathOnsite} className="va-btn va-btn-navy mt-9">
         {WHITE_COAT_PATHS.cta}
         <ArrowRightIcon className="h-4 w-4" />
       </a>
     </div>
+  );
+}
+
+function Pathway({
+  pathway,
+  index,
+}: {
+  pathway: PathwaySpec;
+  index: number;
+}): React.JSX.Element {
+  return (
+    <li
+      className="grid gap-x-8 gap-y-4 sm:grid-cols-[minmax(0,1.3fr)_minmax(0,1fr)] sm:items-center lg:w-(--row-width) lg:ms-(--row-offset)"
+      style={
+        {
+          "--row-width": ROW_WIDTH,
+          "--row-offset": `${index * STEP_PERCENT}%`,
+        } as React.CSSProperties
+      }
+    >
+      <figure className="va-clip-pathway relative aspect-video w-full overflow-hidden rounded-[10px]">
+        <Image
+          src={pathway.src}
+          alt={pathway.alt}
+          fill
+          sizes="(min-width: 1024px) 40vw, 100vw"
+          className="object-cover"
+        />
+      </figure>
+      <div className="relative pl-6">
+        <span
+          aria-hidden="true"
+          className="absolute top-[0.5em] left-0 h-1.5 w-1.5 rounded-full bg-gold"
+        />
+        <h3 className="font-display text-display-s leading-[1.15] font-semibold text-ink">
+          {pathway.audience}
+        </h3>
+        <p className="mt-2.5 max-w-[34ch] font-body text-body-s leading-[1.6] text-charcoal text-pretty">
+          {pathway.decision}
+        </p>
+      </div>
+    </li>
   );
 }
 
@@ -162,61 +128,17 @@ export function WhiteCoatPaths(): React.JSX.Element {
       aria-labelledby="white-coat-paths-heading"
       className="va-mist relative overflow-hidden"
     >
-      <div className="va-shell relative z-10 pt-14 xl:pt-0">
+      {/* One list at every width. The cascade used to be an absolutely
+          positioned canvas gated at `xl`, with a separate stacked list gated at
+          `lg:hidden` — so between 1024px and 1279px the section rendered its
+          headline and nothing else: no photographs, no audiences, no
+          descriptions. Measured at 1100px and 1240px: five images, zero
+          visible. */}
+      <div className="va-shell relative z-10 py-14 lg:grid lg:grid-cols-[minmax(0,29%)_minmax(0,1fr)] lg:gap-x-16 lg:py-20">
         <CopyBlock />
-
-        {/* Desktop: cascading diagonal ribbon. The canvas sits INSIDE the page
-            shell, so the copy column and the photo percentages share one
-            coordinate system and their clearance is the same at every width. */}
-        <div className="relative hidden aspect-[1536/1010] w-full xl:block">
-          <IndexRail />
-          {PATHWAYS.map((pathway) => (
-            <figure
-              key={pathway.audience}
-              className={`absolute overflow-hidden rounded-[10px] ${pathway.clip}`}
-              style={pathway.photo}
-            >
-              <Image
-                src={pathway.src}
-                alt={pathway.alt}
-                fill
-                sizes="(min-width: 1024px) 26vw, 100vw"
-                className="object-cover"
-              />
-            </figure>
-          ))}
-          {PATHWAYS.map((pathway) => (
-            <div
-              key={pathway.audience}
-              className="absolute"
-              style={pathway.label}
-            >
-              <PathwayLabel pathway={pathway} />
-            </div>
-          ))}
-        </div>
-
-        {/* Mobile: one gold spine, five audiences hanging off it. */}
-        <ol className="relative mt-12 flex flex-col gap-10 border-l border-gold/60 pb-16 pl-4 lg:hidden">
+        <ol className="mt-12 grid gap-9 lg:mt-0">
           {PATHWAYS.map((pathway, index) => (
-            <li key={pathway.audience} className="relative">
-              <figure
-                className={`va-clip-mobile relative w-full overflow-hidden rounded-[10px] ${
-                  index === 0 ? "aspect-[4/5]" : "aspect-[3/2]"
-                }`}
-              >
-                <Image
-                  src={pathway.src}
-                  alt={pathway.alt}
-                  fill
-                  sizes="100vw"
-                  className="object-cover"
-                />
-              </figure>
-              <div className="mt-4">
-                <PathwayLabel pathway={pathway} />
-              </div>
-            </li>
+            <Pathway key={pathway.audience} pathway={pathway} index={index} />
           ))}
         </ol>
       </div>
