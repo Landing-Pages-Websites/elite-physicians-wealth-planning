@@ -1,61 +1,132 @@
-import { LINKS, NEXT_DECISION } from "@/lib/content";
-import { ArrowRightIcon, CalendarClockIcon, FileLockIcon } from "./icons";
+import { BRAND, LINKS, NEXT_DECISION } from "@/lib/content";
+import {
+  ArrowRightIcon,
+  CalendarClockIcon,
+  FileLockIcon,
+  InfoIcon,
+  MailIcon,
+  MessageIcon,
+} from "./icons";
 
 /**
- * The closing choice.
+ * The closing fork, built to the approved frame.
  *
- * This band was 1,114px tall and about a third full: a centered headline, a
- * decorative SVG fork, two centered columns, a gold stub that dangled out of
- * the primary button and terminated in nothing, and a contact block repeating
- * the email, phone and hours that the form section prints 600px below and the
- * footer prints again 600px after that — three copies on one page.
+ * The frame draws one gold route: out of each ringed icon at the top of its
+ * column, inward, down the diagonals to a junction on the centre line, straight
+ * down, and out along an inverted bracket that lifts into the foot of both
+ * actions. Both actions are gold fills. Under them, a ringed mail mark, a ruled
+ * divider with a node, the wordmark and the disclaimer.
  *
- * It is now an asymmetric spread: the headline holds the left, the two options
- * are real bordered cards on the right, and their ranking is carried by weight
- * (a lit card with a gold fill against a quiet card with a link) rather than by
- * an ornament drawn between them. Nothing was cut except the duplication.
+ * Geometry measured from public/design/a/refs/08-next-decision.png at its
+ * native 1536x864.
  */
-function PathCard({
-  icon,
-  title,
-  summary,
-  note,
-  action,
-  primary,
+function ForkRoute(): React.JSX.Element {
+  return (
+    <svg
+      viewBox="0 0 1536 864"
+      preserveAspectRatio="none"
+      aria-hidden="true"
+      className="pointer-events-none absolute inset-0 z-[5] hidden h-full w-full lg:block"
+      fill="none"
+    >
+      <g
+        stroke="var(--color-gold)"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      >
+        <path d="M422 243 H668 L767 345" vectorEffect="non-scaling-stroke" />
+        <path d="M1117 243 H866 L767 345" vectorEffect="non-scaling-stroke" />
+        <path d="M767 345 V683" vectorEffect="non-scaling-stroke" />
+        <path d="M386 660 V671 Q386 683 398 683 H1118 Q1130 683 1130 671 V660" vectorEffect="non-scaling-stroke" />
+      </g>
+      <circle cx="422" cy="243" r="6" fill="var(--color-gold)" />
+      <circle cx="1117" cy="243" r="6" fill="var(--color-gold)" />
+      <circle cx="767" cy="683" r="7" fill="var(--color-gold)" />
+    </svg>
+  );
+}
+
+/** A gold ring holding the path's mark, as the frame draws it. */
+function PathRing({ children }: { children: React.ReactNode }): React.JSX.Element {
+  return (
+    <span className="flex h-[5.5cqw] w-[5.5cqw] items-center justify-center rounded-full border border-gold text-gold">
+      {children}
+    </span>
+  );
+}
+
+/** The frame's rule under each path heading: a hairline with a node on it. */
+function NodeDivider(): React.JSX.Element {
+  return (
+    <span aria-hidden="true" className="relative mt-[1.4cqw] block h-px w-full bg-gold/55">
+      <span className="absolute top-1/2 left-1/2 block h-[0.55cqw] w-[0.55cqw] -translate-x-1/2 -translate-y-1/2 rounded-full bg-gold" />
+    </span>
+  );
+}
+
+function GoldAction({
+  href,
+  label,
+  compact,
 }: {
-  icon: React.ReactNode;
-  title: string;
-  summary: string;
-  note: string;
-  action: React.ReactNode;
-  primary: boolean;
+  href: string;
+  label: string;
+  compact?: true;
 }): React.JSX.Element {
   return (
-    <article
-      className={`flex flex-col rounded-sm border p-7 sm:p-8 ${
-        primary ? "border-gold/40 bg-white/6" : "border-white/12 bg-white/2"
+    <a
+      href={href}
+      className={`group inline-flex items-center justify-center gap-3 rounded-sm bg-gold font-semibold tracking-[0.08em] text-ink uppercase transition-colors duration-200 hover:bg-gold-hover ${
+        compact ? "min-h-12 w-full px-6 text-[13px]" : "w-full px-[1.4cqw] py-[1.15cqw] text-[0.86cqw] whitespace-nowrap"
       }`}
     >
-      <div className="flex items-start gap-4">
-        <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-sm border border-gold/50 text-gold">
-          {icon}
-        </span>
-        <h3 className="font-display text-[clamp(1.4rem,1.8vw,1.75rem)] leading-[1.15] font-medium tracking-[-0.01em] text-white">
-          {title}
-        </h3>
-      </div>
-      <p className="mt-6 font-body text-body-m leading-[1.6] text-mist/75 text-pretty">
-        {summary}
-      </p>
-      <p
-        className={`mt-4 font-body text-[13px] leading-normal ${
-          primary ? "text-gold/90" : "text-mist/60"
+      {label}
+      <ArrowRightIcon
+        className={`transition-transform duration-200 group-hover:translate-x-0.5 ${
+          compact ? "h-4 w-4" : "h-[1cqw] w-[1cqw]"
+        }`}
+      />
+    </a>
+  );
+}
+
+function ClosingIdentity({ compact }: { compact?: true }): React.JSX.Element {
+  return (
+    <div className={`flex flex-col items-center text-center ${compact ? "gap-3" : "gap-[1cqw]"}`}>
+      <a
+        href={`mailto:${NEXT_DECISION.contact}`}
+        className={`inline-flex items-center transition-colors duration-200 hover:text-gold ${
+          compact ? "min-h-11 gap-3 text-body-s text-mist" : "gap-[1cqw] text-[1.05cqw] text-mist"
         }`}
       >
-        {note}
+        <span
+          className={`flex items-center justify-center rounded-full border border-gold text-gold ${
+            compact ? "h-9 w-9" : "h-[2.9cqw] w-[2.9cqw]"
+          }`}
+        >
+          <MailIcon className={compact ? "h-4 w-4" : "h-[1.1cqw] w-[1.1cqw]"} />
+        </span>
+        {NEXT_DECISION.contact}
+      </a>
+      <span
+        aria-hidden="true"
+        className={`relative block h-px bg-gold/55 ${compact ? "w-40" : "w-[31%]"}`}
+      >
+        <span className="absolute top-1/2 left-1/2 block h-[5px] w-[5px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-gold" />
+      </span>
+      <p
+        className={`font-display font-medium text-gold ${
+          compact ? "text-base" : "text-[1.35cqw]"
+        }`}
+      >
+        {NEXT_DECISION.identityLine}
       </p>
-      <div className="mt-8 pt-2">{action}</div>
-    </article>
+      <p className={`text-mist/65 ${compact ? "text-[11px]" : "font-body text-[0.82cqw]"}`}>
+        {NEXT_DECISION.disclaimer}
+      </p>
+      <p className="sr-only">{BRAND.phone}</p>
+    </div>
   );
 }
 
@@ -67,53 +138,121 @@ export function NextDecision(): React.JSX.Element {
       aria-labelledby="next-decision-heading"
       className="va-decision relative overflow-hidden text-ivory"
     >
-      <div className="va-shell relative z-10 py-16 lg:py-20">
+      <ForkRoute />
+
+      {/* Desktop: the frame's own canvas. */}
+      <div className="@container relative z-10 hidden aspect-1536/864 w-full lg:block">
         <h2
           id="next-decision-heading"
-          className="va-reveal max-w-[17ch] text-display-l font-display leading-[1.06] font-medium tracking-[-0.02em] text-balance text-white"
+          className="va-reveal absolute top-[6.5%] right-0 left-0 mx-auto max-w-[24ch] text-center font-display text-[4.05cqw] leading-[1.1] font-medium tracking-[-0.02em] text-ivory-bright"
         >
           {headline}
         </h2>
-        <span aria-hidden="true" className="mt-8 block h-px w-16 bg-gold" />
 
-        {/* Side by side, not stacked beside the headline: at 0.72fr/1fr the
-            headline column ran 300px of type against 900px of cards and the
-            band carried a 600px void down its left. Two equal columns give the
-            cards a width their 46ch of copy actually fills. */}
-        <div className="mt-12 grid items-stretch gap-6 md:grid-cols-2">
-          <PathCard
-            primary
-            icon={<CalendarClockIcon className="h-5 w-5" />}
-            title={strategyCall.label}
-            summary={strategyCall.summary}
-            note={strategyCall.expectation}
-            action={
-              <a
-                href={LINKS.scheduleOnsite}
-                className="va-btn va-btn-gold w-full justify-center sm:w-auto"
-              >
-                {strategyCall.label}
-              </a>
-            }
-          />
-          {/* The approved frame reserved a dashed guide-cover slot here and
-              filled it with `guide.availability` — a build instruction set at
-              9px inside wireframe chrome. It stays in content.ts as a build
-              constraint and is deliberately not rendered; `requestNote` already
-              tells the reader the truth, which is what the hard rule requires. */}
-          <PathCard
-            primary={false}
-            icon={<FileLockIcon className="h-5 w-5" />}
-            title={guide.label}
-            summary={guide.summary}
-            note={guide.requestNote}
-            action={
-              <a href={LINKS.guideRequest} className="va-link min-h-11 text-mist">
-                {guide.cta}
-                <ArrowRightIcon className="h-4 w-4 text-gold" />
-              </a>
-            }
-          />
+        {/* Left path. */}
+        <div className="absolute top-[24.5%] left-[15.4%] w-[20.6%]">
+          <PathRing>
+            <CalendarClockIcon className="h-[2.2cqw] w-[2.2cqw]" />
+          </PathRing>
+          <h3 className="mt-[1.5cqw] max-w-[11ch] font-display text-[2.2cqw] leading-[1.15] font-medium text-ivory-bright">
+            {strategyCall.label}
+          </h3>
+          <NodeDivider />
+          <p className="mt-[1.3cqw] font-body text-[0.95cqw] leading-[1.55] text-mist/85">
+            {strategyCall.summary}
+          </p>
+          <p className="mt-[1.4cqw] flex items-start gap-[0.9cqw] font-body text-[0.95cqw] leading-[1.45] text-gold">
+            <span className="flex h-[2.2cqw] w-[2.2cqw] shrink-0 items-center justify-center rounded-full border border-gold/70">
+              <MessageIcon className="h-[1cqw] w-[1cqw]" />
+            </span>
+            {strategyCall.expectation}
+          </p>
+          <div className="mt-[2cqw]">
+            <GoldAction href={LINKS.scheduleOnsite} label={strategyCall.label} />
+          </div>
+        </div>
+
+        {/* Right path. */}
+        <div className="absolute top-[24.5%] left-[56.6%] w-[25.7%]">
+          <span className="flex justify-end">
+            <PathRing>
+              <FileLockIcon className="h-[2.2cqw] w-[2.2cqw]" />
+            </PathRing>
+          </span>
+          <h3 className="mt-[1.5cqw] font-display text-[2.2cqw] leading-[1.15] font-medium text-ivory-bright">
+            {guide.label}
+          </h3>
+          <NodeDivider />
+          <p className="mt-[1.3cqw] font-body text-[0.95cqw] leading-[1.55] text-mist/85">
+            {guide.summary}
+          </p>
+          {/* The frame reserves a dashed "GUIDE COVER PLACEHOLDER / FINAL FILE
+              REQUIRED" slot here and sets a build instruction beside it. Both
+              are documentation for us, not copy for a visitor; the note keeps
+              the frame's ringed mark and gold lead-in, and says the same thing
+              in the reader's terms. The instruction stays in content.ts and in
+              build/CLIENT-GAPS.md. */}
+          <p className="mt-[1.4cqw] flex items-start gap-[0.9cqw] font-body text-[0.95cqw] leading-[1.45] text-mist/85">
+            <span className="flex h-[2.2cqw] w-[2.2cqw] shrink-0 items-center justify-center rounded-full border border-gold/70 text-gold">
+              <InfoIcon className="h-[1cqw] w-[1cqw]" />
+            </span>
+            <span>
+              <strong className="font-semibold text-gold">Guide availability: </strong>
+              {guide.requestNote}
+            </span>
+          </p>
+          <div className="mt-[2cqw] flex justify-end">
+            <span className="w-[63%]">
+              <GoldAction href={LINKS.guideRequest} label={guide.cta} />
+            </span>
+          </div>
+        </div>
+
+        <div className="absolute right-0 bottom-[3%] left-0">
+          <ClosingIdentity />
+        </div>
+      </div>
+
+      {/* Below the canvas the fork cannot hold, so the two paths stack. */}
+      <div className="va-shell relative z-10 py-16 lg:hidden">
+        <h2 className="text-center font-display text-display-l leading-[1.1] font-medium tracking-[-0.02em] text-balance text-ivory-bright">
+          {headline}
+        </h2>
+        <div className="mt-10 grid gap-10">
+          <div>
+            <h3 className="font-display text-display-s leading-[1.15] font-medium text-ivory-bright">
+              {strategyCall.label}
+            </h3>
+            <span aria-hidden="true" className="mt-4 block h-px w-full bg-gold/55" />
+            <p className="mt-4 font-body text-body-s leading-[1.55] text-mist/85">
+              {strategyCall.summary}
+            </p>
+            <p className="mt-4 font-body text-body-s leading-[1.45] text-gold">
+              {strategyCall.expectation}
+            </p>
+            <div className="mt-6">
+              <GoldAction compact href={LINKS.scheduleOnsite} label={strategyCall.label} />
+            </div>
+          </div>
+          <div>
+            <h3 className="font-display text-display-s leading-[1.15] font-medium text-ivory-bright">
+              {guide.label}
+            </h3>
+            <span aria-hidden="true" className="mt-4 block h-px w-full bg-gold/55" />
+            <p className="mt-4 font-body text-body-s leading-[1.55] text-mist/85">
+              {guide.summary}
+            </p>
+            <p className="mt-4 font-body text-body-s leading-[1.45] text-mist/85">
+              <strong className="font-semibold text-gold">Guide availability: </strong>
+              {guide.requestNote}
+            </p>
+            <div className="mt-6">
+              <GoldAction compact href={LINKS.guideRequest} label={guide.cta} />
+            </div>
+          </div>
+        </div>
+        <div className="mt-12">
+          <ClosingIdentity compact />
         </div>
       </div>
     </section>

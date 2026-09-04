@@ -161,11 +161,27 @@
 
 /* ---------- 04 blueprint-rounds: desk still life on ivory ---------- */
 
-/* No background wash. The still-life is a real <Image> in the header row now,
-   at its own scale, so the band needs no scrim and the process rail sits on
-   clean ivory instead of on a blurred photograph. */
 .va-blueprint {
   background: var(--color-ivory);
+}
+
+/* The still-life bleeds off the top-right corner in the frame. This feathers
+   its lower and left edges into the field so it has no hard seam, while the
+   corner itself stays full-strength. */
+.va-blueprint-feather {
+  background:
+    linear-gradient(
+      180deg,
+      rgba(246, 242, 232, 0) 62%,
+      rgba(246, 242, 232, 0.75) 88%,
+      rgba(246, 242, 232, 1) 100%
+    ),
+    linear-gradient(
+      270deg,
+      rgba(246, 242, 232, 0) 62%,
+      rgba(246, 242, 232, 0.75) 88%,
+      rgba(246, 242, 232, 1) 100%
+    );
 }
 
 /* Navy step medallion with a double gold ring. */
@@ -220,57 +236,56 @@
   clip-path: polygon(9% 0, 100% 0, 91% 100%, 0 100%);
 }
 
-/* ---------- 07 accountable-planner: portrait essay ---------- */
+/* ---------- 07 accountable-planner: portrait plate on a cream field ---------- */
 
 .va-planner {
   background: var(--color-ivory);
 }
 
+/* The frame bleeds the desk photograph off the LEFT edge behind the plate
+   rather than washing it across the whole band. The plate itself is the
+   generated one — the frame's own desk carries three fabricated book titles. */
 .va-planner::before {
   content: "";
   position: absolute;
-  inset: 0;
-  /* A plate shot for this slot, not a rescue crop. The previous ground was a
-     2048x512 strip cut out of a photograph to escape three fabricated book
-     spines, then scaled to fill a 1400px band — it arrived as beige mush with
-     no identifiable subject. This one is a defocused office at f/1.8: the left
-     55% is soft empty wall where the portrait and the copy sit, and the desk
-     corner and leather chair carry the right third. No lettering in the file. */
+  inset-block: 0;
+  inset-inline-start: 0;
+  width: 22%;
   background-image: url("/images/design/a/07-accountable-planner/office-desk-ground.jpg");
   background-size: cover;
-  background-position: 62% center;
+  background-position: 8% 62%;
   background-repeat: no-repeat;
 }
 
-/* The plate is already defocused and low-contrast, so the wash only has to
-   pull it toward ivory and hold the copy column — it no longer has to hide
-   the picture. Left stays near-opaque for the portrait card and the text; the
-   right eases off so the desk edge and the chair actually read. */
+/* A soft feather into the cream so the strip has no hard vertical seam. */
 .va-planner::after {
   content: "";
   position: absolute;
-  inset: 0;
+  inset-block: 0;
+  inset-inline-start: 0;
+  width: 30%;
   pointer-events: none;
   background: linear-gradient(
-    92deg,
-    rgba(246, 242, 232, 0.93) 0%,
-    rgba(246, 242, 232, 0.9) 42%,
-    rgba(246, 242, 232, 0.74) 72%,
-    rgba(246, 242, 232, 0.3) 100%
+    90deg,
+    rgba(246, 242, 232, 0) 0%,
+    rgba(246, 242, 232, 0.18) 46%,
+    rgba(246, 242, 232, 0.82) 82%,
+    rgba(246, 242, 232, 1) 100%
   );
 }
 
-/* On narrow screens the narrative stacks across the full width, so the wash
-   goes near-opaque behind all copy. */
 @media (max-width: 1023px) {
+  .va-planner::before,
   .va-planner::after {
-    background: linear-gradient(
-      0deg,
-      rgba(246, 242, 232, 0.96) 0%,
-      rgba(246, 242, 232, 0.94) 70%,
-      rgba(246, 242, 232, 0.7) 100%
-    );
+    display: none;
   }
+}
+
+/* The portrait plate: a thin gold edge on cream, as drawn. */
+.va-planner-card {
+  background: var(--color-ivory-warm);
+  border: 1px solid var(--color-gold);
+  box-shadow: 0 22px 50px -30px rgba(11, 31, 58, 0.45);
 }
 
 /* ---------- 08 next-decision: dark closing fork ---------- */
