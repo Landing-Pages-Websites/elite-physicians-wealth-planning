@@ -374,3 +374,8 @@
     animation: none;
   }
 }
+
+/* Cascade photo: one parallelogram for all five, as the frame draws them. */
+.va-clip-cascade {
+  clip-path: polygon(8% 0, 100% 0, 92% 100%, 0 100%);
+}

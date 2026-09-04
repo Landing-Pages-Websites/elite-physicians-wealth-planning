@@ -142,3 +142,38 @@
   background-size: 1px 8px;
   background-repeat: repeat-y;
 }
+
+/* The planner plate: a large octagon with all four corners cut, as drawn. */
+.vb-plate {
+  clip-path: polygon(
+    46px 0,
+    calc(100% - 46px) 0,
+    100% 46px,
+    100% calc(100% - 46px),
+    calc(100% - 46px) 100%,
+    46px 100%,
+    0 calc(100% - 46px),
+    0 46px
+  );
+}
+/* Portrait frame and credential chip use the same cut at a smaller radius. */
+.vb-plate-sm {
+  clip-path: polygon(
+    22px 0,
+    calc(100% - 22px) 0,
+    100% 22px,
+    100% calc(100% - 22px),
+    calc(100% - 22px) 100%,
+    22px 100%,
+    0 calc(100% - 22px),
+    0 22px
+  );
+}
+
+/* Dotted hairline divider inside the planner plate. */
+.vb-hairline {
+  background-image: linear-gradient(90deg, var(--color-ink) 0 2px, transparent 2px 6px);
+  background-size: 6px 1px;
+  background-repeat: repeat-x;
+  opacity: 0.4;
+}

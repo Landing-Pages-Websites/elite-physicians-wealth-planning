@@ -20,7 +20,7 @@ import { PNG } from "pngjs";
 const CHROMIUM =
   process.env.CHROMIUM_PATH ??
   `${process.env.HOME}/Library/Caches/ms-playwright/chromium_headless_shell-1234/chrome-headless-shell-mac-arm64/chrome-headless-shell`;
-const BASE = process.env.BASE ?? "http://localhost:3000";
+const BASE = process.env.BASE ?? "http://localhost:3100";
 const OUT = "/tmp/compare";
 
 /** Which route each direction lives on, and which ref folder describes it. */
@@ -83,6 +83,23 @@ await page.evaluate(async () => {
   window.scrollTo(0, 0);
   await new Promise((r) => setTimeout(r, 500));
 });
+
+/**
+ * Confirm the page actually belongs to THIS build before believing anything it
+ * shows. A dev server on a shared port died mid-session and another project's
+ * next-server took the port; comparisons kept rendering, against someone else's
+ * site. Every section in this build carries `.va-shell` or `.vb-shell`.
+ */
+const isThisBuild = await page.evaluate(
+  () => document.querySelector(".va-shell, .vb-shell, [class*='va-'], [class*='vb-']") !== null
+);
+if (!isThisBuild) {
+  console.error(
+    `${BASE}${direction.route} is serving a page that is not this build — check what holds the port.`
+  );
+  await browser.close();
+  process.exit(1);
+}
 
 const box = await page.evaluate((id) => {
   const el = document.getElementById(id);

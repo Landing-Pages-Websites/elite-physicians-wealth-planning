@@ -75,6 +75,16 @@
   --color-atlas-paper: #faf7f0; /* Decision Atlas survey ground, measured off
                                    public/design/b/refs/03-separate-rooms.png */
   --color-atlas-tint: #dce8f5; /* Atlas column + island fill, same frame */
+  --color-gold-text: #7e642a; /* The accent at a weight that can carry text.
+                                  #c8a65a measures 2.32:1 on white and 1.86:1 on
+                                  mist — an AA failure at any size — and the
+                                  frames set several eyebrows in it. Same hue and
+                                  saturation, darkened until it clears 4.5:1 on
+                                  both grounds (5.61 and 4.51). Gold itself stays
+                                  the accent for rules, nodes and CTA fills. */
+  --color-ledger-warm: #faf8f4; /* Consult Ledger table row, odd. Measured off
+                                   public/design/a/refs/05-five-decisions.png */
+  --color-ledger-cool: #e6edf5; /* Consult Ledger table row, even. Same frame */
   --color-atlas-card: #eef3fa; /* Atlas card plate on navy, measured off
                                   public/design/b/refs/08-next-decision.png.
                                   A translucent tint of atlas-tint read 3.26:1
