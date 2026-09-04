@@ -187,8 +187,8 @@
      happened on the first attempt. desk-stethoscope-crop.jpg contains no
      lettering at all. Anchored right so the copy column keeps a clean ground. */
   background-image: url("/images/design/a/04-blueprint-rounds/desk-stethoscope-crop.jpg");
-  background-size: auto 118%;
-  background-position: right -3% bottom -22%;
+  background-size: auto 150%;
+  background-position: right -4% top -6%;
   background-repeat: no-repeat;
 }
 
@@ -311,7 +311,12 @@
   content: "";
   position: absolute;
   inset: 0;
-  background-image: url("/images/design/a/07-accountable-planner/background-desk-fullscene.jpg");
+  /* Cropped asset. The source carries three invented book titles — "The
+     Physician's Guide to Financial Lifecycles", "TAX STRATEGIES", "RETIREMENT
+     PLANNING" — in its upper band. desk-notepad-crop.jpg starts below them and
+     keeps the open notepad, the pen and the marble counter: real objects, no
+     lettering anywhere in the file. */
+  background-image: url("/images/design/a/07-accountable-planner/desk-notepad-crop.jpg");
   background-size: cover;
   background-position: left center;
   background-repeat: no-repeat;
