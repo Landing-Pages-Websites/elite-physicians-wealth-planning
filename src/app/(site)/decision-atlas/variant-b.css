@@ -1,5 +1,29 @@
 /* Variant B — The Decision Atlas. Variant-scoped clip-path and surface recipes. */
 
+/* One content shell for the whole direction. There were four — max-w-[96rem]
+   px-6 (career-signal, separate-rooms, planner), max-w-[92rem] px-6 (blueprint,
+   five-decisions, pathways), max-w-6xl px-6 (next-decision) and va-shell (the
+   hero) — putting the page's left edge at 24px, 76px, 210px and 397px depending
+   on which section you were reading. The hero started 52px right of everything
+   under it. This holds B's wider field (96rem against A's 1400px) while landing
+   its gutter on the same 76px the shared header uses. */
+.vb-shell {
+  margin-inline: auto;
+  width: 100%;
+  max-width: 96rem;
+  padding-inline: 1.5rem;
+}
+@media (min-width: 640px) {
+  .vb-shell {
+    padding-inline: 2.5rem;
+  }
+}
+@media (min-width: 1024px) {
+  .vb-shell {
+    padding-inline: 4.75rem;
+  }
+}
+
 /* 01 — clinical workspace media slot (notched upper-left silhouette) */
 .vb-clinical-clip {
   clip-path: polygon(

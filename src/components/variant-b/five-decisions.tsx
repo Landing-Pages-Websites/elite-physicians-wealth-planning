@@ -1,4 +1,5 @@
 import { FIVE_DECISIONS } from "@/lib/content";
+import SectionEyebrow from "./section-eyebrow";
 
 const PULL_LINE = "One life. Five disciplines. Aligned by design.";
 
@@ -9,12 +10,8 @@ export default function FiveDecisions(): React.JSX.Element {
       aria-labelledby="five-decisions-heading"
       className="relative overflow-hidden bg-white"
     >
-      {/* max-w-[92rem] px-6 is the direction's shell — 04 and 06 both use it, and
-          max-w-7xl md:px-12 stepped this section's left edge 104px inward. */}
-      <div className="relative mx-auto max-w-[92rem] px-6 py-20 lg:py-24">
-        <p className="inline-block bg-ink px-3 py-1.5 text-body-s font-bold uppercase tracking-[0.2em] text-white">
-          {FIVE_DECISIONS.orientation}
-        </p>
+      <div className="vb-shell relative py-20 lg:py-24">
+        <SectionEyebrow>{FIVE_DECISIONS.orientation}</SectionEyebrow>
         <h2
           id="five-decisions-heading"
           className="mt-6 max-w-[26ch] text-display-m font-bold leading-[1.1] tracking-[-0.02em] text-ink"
@@ -28,11 +25,17 @@ export default function FiveDecisions(): React.JSX.Element {
             against locked bottoms — a descending bar silhouette asserting rank
             and decline under a headline that claims one shared life — and gave
             each panel a ~11 character measure. */}
-        <ol className="mt-14 border-t border-ink/12">
+        {/* Three separator systems were doing one job: a continuous left rail,
+            a border above and below every row, and a gold node per row — with
+            the borders drawn across 430px of empty space to the right of the
+            longest description, which is what made the emptiness loud. The rail
+            and its nodes are the direction's calibration idea and they stay; the
+            row borders go, and the list stops where its content does. */}
+        <ol className="mt-14 max-w-[62rem]">
           {FIVE_DECISIONS.disciplines.map((discipline) => (
             <li
               key={discipline.name}
-              className="relative grid gap-2 border-b border-ink/12 py-6 pl-8 lg:grid-cols-[minmax(0,17rem)_minmax(0,1fr)] lg:gap-12 lg:py-7"
+              className="relative grid gap-2 py-6 pl-8 lg:grid-cols-[minmax(0,17rem)_minmax(0,1fr)] lg:gap-12 lg:py-7"
             >
               {/* Abutting rows make one continuous rail, and each row carries a
                   single full-strength gold node on its heading — the calibration
@@ -44,7 +47,7 @@ export default function FiveDecisions(): React.JSX.Element {
               />
               <span
                 aria-hidden="true"
-                className="absolute top-9 left-[-3px] h-[7px] w-[7px] rounded-full bg-gold"
+                className="absolute top-9 left-[-3px] h-1.75 w-1.75 rounded-full bg-gold"
               />
               <h3 className="text-display-s font-bold leading-[1.15] text-ink">
                 {discipline.name}

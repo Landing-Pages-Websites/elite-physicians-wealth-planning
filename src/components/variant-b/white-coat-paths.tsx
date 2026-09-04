@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { LINKS, WHITE_COAT_PATHS } from "@/lib/content";
 import GoldArrow from "./gold-arrow";
+import SectionEyebrow from "./section-eyebrow";
 
 const IMAGE_ROOT = "/images/design/b/06-white-coat-paths";
 
@@ -66,12 +67,10 @@ export default function WhiteCoatPaths(): React.JSX.Element {
         aria-hidden="true"
         className="absolute inset-0 bg-gradient-to-br from-white/70 via-transparent to-white/40"
       />
-      <div className="relative mx-auto max-w-[92rem] px-6 py-16 lg:py-20">
+      <div className="vb-shell relative py-16 lg:py-20">
         <div className="grid items-stretch gap-5 lg:grid-cols-3">
           <div className="lg:pb-8 lg:pr-6">
-            <p className="text-xs font-bold uppercase tracking-[0.22em] text-ink">
-              {WHITE_COAT_PATHS.orientation}
-            </p>
+            <SectionEyebrow>{WHITE_COAT_PATHS.orientation}</SectionEyebrow>
             <h2
               id="white-coat-paths-heading"
               className="mt-4 text-display-m font-bold leading-[1.12] tracking-[-0.02em] text-balance text-ink"

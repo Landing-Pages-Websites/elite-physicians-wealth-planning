@@ -8,8 +8,14 @@ function railY(x: number): number {
   return RAIL.y1 + ((RAIL.y2 - RAIL.y1) * x) / RAIL.x2;
 }
 
-/** Milestone anchor x-positions along the 1440-unit rail (stems rise to labels). */
-const MILESTONE_XS = [230, 576, 922, 1268];
+/** Milestone anchor x-positions along the 1440-unit rail (stems rise to labels).
+    The rail is drawn node-to-node, so the first and last milestones ARE its
+    ends. It used to run 0 -> 1500 against nodes at 230 and 1268, leaving 230
+    units of rule before the first career stage and 232 after the last: a line
+    that started before the sequence began and continued after it finished,
+    terminating in nothing at both ends. Half a label's width of margin keeps
+    the outer labels inside the shell. */
+const MILESTONE_XS = [104, 549, 995, 1440 - 104];
 
 const MILESTONES = CAREER_SIGNAL.signals.map((label, index) => ({
   label,
@@ -22,7 +28,7 @@ const STAGE_HEIGHT = 200;
 
 function DesktopRail(): React.JSX.Element {
   return (
-    <div className="relative mt-8 hidden h-48 lg:block lg:-mr-6">
+    <div className="relative mt-8 hidden h-48 lg:block">
       <svg
         aria-hidden="true"
         viewBox={`0 0 1440 ${STAGE_HEIGHT}`}
@@ -31,10 +37,10 @@ function DesktopRail(): React.JSX.Element {
         fill="none"
       >
         <line
-          x1={RAIL.x1}
-          y1={RAIL.y1}
-          x2={RAIL.x2 + 60}
-          y2={railY(RAIL.x2 + 60)}
+          x1={MILESTONE_XS[0]}
+          y1={railY(MILESTONE_XS[0])}
+          x2={MILESTONE_XS[MILESTONE_XS.length - 1]}
+          y2={railY(MILESTONE_XS[MILESTONE_XS.length - 1])}
           stroke="currentColor"
           strokeWidth="1.5"
           className="text-ink/50"
@@ -122,7 +128,7 @@ export default function CareerSignal(): React.JSX.Element {
       className="relative overflow-hidden bg-white"
     >
       <div aria-hidden="true" className="h-1.5 bg-ink" />
-      <div className="relative mx-auto max-w-[96rem] px-6 py-14 lg:pb-8">
+      <div className="vb-shell relative py-14 lg:pb-8">
         <h2
           id="career-signal-heading"
           className="relative max-w-[19ch] text-display-m font-bold leading-[1.08] tracking-[-0.02em] text-balance text-ink"

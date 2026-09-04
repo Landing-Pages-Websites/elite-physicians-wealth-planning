@@ -154,3 +154,49 @@ bands run on designed grounds. ~~**A replacement hero photograph is a client del
 The original
 deliverable note read — a low-key physician consultation-office scene, per the
 `extraction_plan` recipe, with no composite seam.
+
+---
+
+## 9. Evidence the page cannot manufacture (raised by the design audit, 2026-09-04)
+
+An independent design critic ran against Direction B and reached a verdict of
+FAIL on one dimension that no amount of layout work can move: **specificity,
+scored 2/10**. Its test is the swap test — replace "physician" with "attorney"
+and change four photographs, and the page is unchanged. That is correct, and it
+is a content gap, not a design gap.
+
+What is missing, and why the build will not invent it:
+
+| Missing | Why it matters | Why we cannot write it |
+|---|---|---|
+| How Michael is paid — flat planning fee, AUM %, commission, or a mix | The first question a physician asks an advisor. Its absence is the largest trust gap on an advisory page | A compensation model is a regulated disclosure. Guessing it is a compliance exposure, not a copy shortcut |
+| Any engagement minimum, and what the first meeting costs | Same | Same |
+| Fiduciary status, BD/RIA affiliation, CRD number | The page carries ChFC® and RICP® marks with no registration line beneath them | Verifiable registration facts, client-supplied only |
+| Client count, years in practice, AUM, or one attributed outcome | The whole page currently carries zero numbers apart from a phone number and office hours | `hard_rules`: never invent stats, case studies or testimonials |
+| Physician-specific decisions by career stage (PSLF vs refinancing, W-2 attending vs 1099 locums, 403(b)/457(b)/cash-balance ordering, backdoor Roth, practice buy-in economics, malpractice-driven asset protection) | This is what would make the audience descriptions non-interchangeable | Specific tax and retirement mechanics stated as advice. Reserved to the client and their compliance review |
+
+The audit's other high-ranked finding — that four to five image slots render as
+empty placeholders — was **checked and dismissed**. The auditing screenshot tool
+captures without scrolling, and Next/Image lazy-loads below the fold, so every
+below-fold photograph captured blank. Measured live at 390, 768, 1024, 1100,
+1240 and 1440: nine images, zero broken, at every width.
+
+Its finding on the hero photograph **was** correct and has been actioned; see §10.
+
+## 10. Direction B hero plate — replaced
+
+`b/01-one-plan/medical-office-scene.jpg` is retained for provenance and is no
+longer rendered. Inspected at 4x it carries:
+
+- a second hand with no thumb and no wrist, dissolving into the desk
+- a pen nib forked into three tines, not touching the paper it is marking
+- hard-edged rectangular composite patches across the right of frame
+- a source resolution of 642x420 being stretched into a 621x652 slot
+
+It was also arguing the wrong case: a wealth-planning hero whose subject is an
+MRI reads as a radiology practice.
+
+Replaced by `planning-conversation.jpg` (1600x2400), generated to the same brief
+discipline as the Direction A plates and accepted on the same probes: no legible
+text anywhere, no diagnostic imagery, complete undamaged faces, anatomically
+coherent hands with wrists and cuffs, no composite seam at 2.2x brightness.

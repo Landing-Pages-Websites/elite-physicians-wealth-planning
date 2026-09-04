@@ -40,7 +40,12 @@ export function PortraitCaption({
       <span className="tracking-[0.18em] uppercase">{name}</span>
       {credentials ? (
         <>
-          <span>, </span>
+          {/* The separator carries the name's tracking. At `normal` it sat
+              between two letterspaced runs, so the space after the comma was
+              visibly narrower than the gaps inside the words either side of it
+              and the line read as "EPPS,ChFC®" — a missing space that is not
+              missing, which is worse, because nobody can find it in the copy. */}
+          <span className="tracking-[0.18em]">, </span>
           <span className="tracking-[0.04em]">{credentials}</span>
         </>
       ) : null}

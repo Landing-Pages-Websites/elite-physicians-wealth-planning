@@ -1,27 +1,31 @@
-import { BRAND, LINKS, NEXT_DECISION } from "@/lib/content";
+import { LINKS, NEXT_DECISION } from "@/lib/content";
 import GoldArrow from "./gold-arrow";
 
 const SUBHEAD = "Two calibrated paths. One clear decision.";
-const PHONE_HREF = `tel:+1${BRAND.phone.replace(/-/g, "")}`;
 
 /**
- * The fork spans the same 1104px box as the card grid, so each branch lands
- * on the centre of the card it opens into (260 / 844) and dies on the card's
- * top edge rather than in a floating dot. Stacked cards need no fork, so
- * there is no mobile variant.
+ * The fork spans the same box as the card grid, so each branch lands on the
+ * centre of the card it opens into and dies on that card's top edge rather
+ * than in a floating dot. The box is 1288 wide now that the direction has one
+ * shell, which puts the two 612px cards' centres at 306 and 982 — the old
+ * 260/844 were measured against a max-w-6xl container that no longer exists.
+ * `preserveAspectRatio="none"` keeps the endpoints on the card centres at
+ * every width instead of only at the one this was drawn for. Stacked cards
+ * need no fork, so there is no mobile variant.
  */
 function DecisionFork(): React.JSX.Element {
   return (
     <svg
-      viewBox="0 0 1104 110"
+      viewBox="0 0 1288 110"
+      preserveAspectRatio="none"
       aria-hidden="true"
       fill="none"
       className="mx-auto mt-8 hidden h-[110px] w-full lg:block"
     >
-      <circle cx="552" cy="12" r="5" className="fill-gold" />
-      <circle cx="552" cy="12" r="10" stroke="currentColor" className="text-gold/50" />
+      <circle cx="644" cy="12" r="5" className="fill-gold" />
+      <circle cx="644" cy="12" r="10" stroke="currentColor" className="text-gold/50" />
       <path
-        d="M552 22 C552 70, 260 62, 260 110"
+        d="M644 22 C644 70, 306 62, 306 110"
         stroke="currentColor"
         strokeWidth="1.5"
         strokeLinecap="round"
@@ -29,7 +33,7 @@ function DecisionFork(): React.JSX.Element {
         className="text-gold/80"
       />
       <path
-        d="M552 22 C552 70, 844 62, 844 110"
+        d="M644 22 C644 70, 982 62, 982 110"
         stroke="currentColor"
         strokeWidth="1.5"
         strokeLinecap="round"
@@ -66,16 +70,9 @@ function GuidePath(): React.JSX.Element {
     <div className="flex h-full flex-col border border-white/40 bg-white p-7 text-left sm:p-9">
       <h3 className="text-xl font-bold text-ink">{NEXT_DECISION.guide.label}</h3>
       <p className="mt-3 text-sm leading-relaxed text-charcoal">{NEXT_DECISION.guide.summary}</p>
-      <a
-        href={LINKS.guideRequest}
-        className="group mt-6 inline-flex items-center gap-2.5 self-start border border-ink px-6 py-3.5 text-sm font-bold text-ink transition-colors duration-200 hover:bg-ink hover:text-white active:bg-ink/90"
-      >
-        {NEXT_DECISION.guide.cta}
-        <GoldArrow className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5" />
-      </a>
       {/* The delivery note belongs to the guide, so it lives in the guide's
           card — not in a second container on the dark ground. */}
-      <p className="mt-6 flex items-start gap-2.5 border-t border-ink/10 pt-4 text-body-s leading-relaxed text-charcoal/85">
+      <p className="mt-4 flex items-start gap-2.5 text-body-s leading-relaxed text-charcoal/85">
         <svg
           viewBox="0 0 24 24"
           fill="none"
@@ -88,13 +85,29 @@ function GuidePath(): React.JSX.Element {
         </svg>
         {NEXT_DECISION.guide.requestNote}
       </p>
+      <div className="mt-auto pt-6">
+        <a
+          href={LINKS.guideRequest}
+          className="group inline-flex items-center gap-2.5 border border-ink px-6 py-3.5 text-sm font-bold text-ink transition-colors duration-200 hover:bg-ink hover:text-white active:bg-ink/90"
+        >
+          {NEXT_DECISION.guide.cta}
+          <GoldArrow className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5" />
+        </a>
+      </div>
     </div>
   );
 }
 
-function CalibratedFooter(): React.JSX.Element {
+/**
+ * The calibration ruler, on the seam. It used to sit above a contact block
+ * that repeated the page's email, phone and hours for the third time; with
+ * that gone it was a divider dividing nothing, floating in 190px of empty
+ * navy. It is the band's bottom edge now — full-bleed, marking the seam into
+ * the form section — which is a job a rule can actually hold.
+ */
+function CalibratedRule(): React.JSX.Element {
   return (
-    <footer className="mt-20 text-left">
+    <div className="absolute inset-x-0 bottom-0">
       <svg
         viewBox="0 0 1536 16"
         preserveAspectRatio="none"
@@ -107,45 +120,7 @@ function CalibratedFooter(): React.JSX.Element {
           <line key={x} x1={x} y1="3" x2={x} y2="13" stroke="currentColor" />
         ))}
       </svg>
-      <div className="mt-6 grid gap-6 text-xs leading-[1.6] text-white/70 sm:grid-cols-3 sm:items-start">
-        <div>
-          <p className="flex items-center gap-2">
-            <svg
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              aria-hidden="true"
-              className="h-3.5 w-3.5 shrink-0 text-gold"
-            >
-              <rect x="2" y="5" width="20" height="14" rx="1" />
-              <path d="m2 7 10 7 10-7" />
-            </svg>
-            <a
-              href={`mailto:${NEXT_DECISION.contact}`}
-              className="inline-flex min-h-11 items-center py-2 text-body-s underline decoration-white/30 underline-offset-2 transition-colors duration-200 hover:text-white"
-            >
-              {NEXT_DECISION.contact}
-            </a>
-          </p>
-          <p>
-            <a
-              href={PHONE_HREF}
-              className="inline-flex min-h-11 items-center py-2 text-body-s underline decoration-white/30 underline-offset-2 transition-colors duration-200 hover:text-white"
-            >
-              {BRAND.phone}
-            </a>
-            <span className="mx-2" aria-hidden="true">
-              &middot;
-            </span>
-            {BRAND.hours}
-          </p>
-        </div>
-        <p className="text-balance font-semibold text-white/80 sm:text-center">
-          {NEXT_DECISION.identityLine}
-        </p>
-        <p className="text-balance sm:text-right">{NEXT_DECISION.disclaimer}</p>
-      </div>
-    </footer>
+    </div>
   );
 }
 
@@ -174,7 +149,7 @@ export default function NextDecision(): React.JSX.Element {
       >
         <path d="M22 22h-8M22 22v-8" />
       </svg>
-      <div className="relative mx-auto max-w-6xl px-6 py-20 text-center lg:py-24">
+      <div className="vb-shell relative pt-20 pb-24 text-center lg:pt-24">
         <h2
           id="next-decision-heading"
           className="mx-auto max-w-[24ch] text-display-l font-bold leading-[1.15] tracking-[-0.02em] text-balance text-white"
@@ -191,8 +166,8 @@ export default function NextDecision(): React.JSX.Element {
           <StrategyCallPath />
           <GuidePath />
         </div>
-        <CalibratedFooter />
       </div>
+      <CalibratedRule />
     </section>
   );
 }
