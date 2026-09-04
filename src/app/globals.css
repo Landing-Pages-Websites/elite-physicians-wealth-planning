@@ -75,6 +75,11 @@
   --color-atlas-paper: #faf7f0; /* Decision Atlas survey ground, measured off
                                    public/design/b/refs/03-separate-rooms.png */
   --color-atlas-tint: #dce8f5; /* Atlas column + island fill, same frame */
+  --color-atlas-card: #eef3fa; /* Atlas card plate on navy, measured off
+                                  public/design/b/refs/08-next-decision.png.
+                                  A translucent tint of atlas-tint read 3.26:1
+                                  under charcoal body copy; the frame's plate is
+                                  opaque and near-white for exactly that reason. */
 
   /* NOT a contract colour and NOT a derived shade. The palette contract defines
      no error/validation state, but the strategy-call form needs one. Flagged in

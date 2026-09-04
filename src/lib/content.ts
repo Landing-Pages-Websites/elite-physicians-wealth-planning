@@ -47,6 +47,9 @@ export const LINKS = {
    */
   scheduleOnsite: "/#form",
   processOnsite: "/#blueprint-rounds",
+  /** Frame annotation: what the primary action does. Rendered in the OUTCOME
+      chip the approved frame draws under the strategy-call card. */
+  scheduleOutcome: "Navigate to the Google Calendar scheduling experience.",
   planningPathOnsite: "/#white-coat-paths",
   meetMichaelOnsite: "/#accountable-planner",
 } as const;
