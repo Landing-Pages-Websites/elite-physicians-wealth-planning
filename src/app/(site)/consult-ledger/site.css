@@ -283,9 +283,14 @@
   content: "";
   position: absolute;
   inset: 0;
-  background-image: url("/images/design/a/08-next-decision/office-background-reconstructed.jpg");
+  /* office-background-reconstructed.jpg measured 0.0098 mean luminance with
+     0.0% of its pixels above near-black — there was nothing in the file to
+     see, so the band read as flat navy however the scrim was tuned. This plate
+     is lit in its left third (lamp, desk, leather chair) and quiet across the
+     centre and right, which is where the headline and the two cards sit. */
+  background-image: url("/images/design/a/08-next-decision/closing-office.jpg");
   background-size: cover;
-  background-position: center;
+  background-position: 32% center;
   background-repeat: no-repeat;
 }
 
@@ -294,11 +299,26 @@
   position: absolute;
   inset: 0;
   pointer-events: none;
-  background: radial-gradient(
-    120% 95% at 50% 42%,
-    rgba(6, 20, 41, 0.34),
-    rgba(4, 12, 25, 0.92) 74%
-  );
+  /* The old scrim closed to 0.92 by 74% because it was hiding an empty plate.
+     This one only has to hold contrast under the copy: the cards carry their
+     own translucent fills, so the room can stay visible around them. */
+  background:
+    /* The lamp's pool lands behind the first card's 15px summary line, which
+       measured 4.41:1 against a 4.5 floor. The band below the headline gets a
+       deeper wash so the copy clears AA; the upper half stays open, where the
+       only text is display-size and the room is worth seeing. */
+    linear-gradient(
+      180deg,
+      rgba(4, 12, 25, 0) 0%,
+      rgba(4, 12, 25, 0) 34%,
+      rgba(4, 12, 25, 0.42) 52%,
+      rgba(4, 12, 25, 0.52) 100%
+    ),
+    radial-gradient(
+      130% 100% at 22% 55%,
+      rgba(6, 20, 41, 0.36),
+      rgba(4, 12, 25, 0.8) 78%
+    );
 }
 
 /* Gold gradient action built from the gold token + light/dark overlays. */

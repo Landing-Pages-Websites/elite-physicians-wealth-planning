@@ -36,6 +36,16 @@ await page.evaluate(async () => {
   await new Promise((r) => setTimeout(r, 400));
 });
 
+// The header is fixed, so scrolling a section's top to y=0 parks the band's
+// first 86px underneath it. Every audit run before this one was reading a
+// section with its opening line, and in separate-rooms two whole labels,
+// hidden behind the masthead — a defect in the tool that read as a defect in
+// the page.
+const headerH = await page.evaluate(() => {
+  const h = document.querySelector("header");
+  return h ? Math.round(h.getBoundingClientRect().height) : 0;
+});
+
 const sections = await page.evaluate(() =>
   [...document.querySelectorAll("section[id], main[id], header, footer")].map((el) => {
     const r = el.getBoundingClientRect();
@@ -50,8 +60,8 @@ const sections = await page.evaluate(() =>
 const slug = route.replace(/\W+/g, "-").replace(/^-|-$/g, "") || "root";
 for (const s of sections) {
   if (s.height < 40) continue;
-  await page.setViewport({ width, height: Math.min(s.height, 2400) });
-  await page.evaluate((top) => window.scrollTo(0, top), s.top);
+  await page.setViewport({ width, height: Math.min(s.height + headerH, 2400) });
+  await page.evaluate((top) => window.scrollTo(0, top), s.top - headerH);
   await new Promise((r) => setTimeout(r, 250));
   await page.screenshot({ path: `${OUT}/${slug}-${width}-${s.id}.png` });
   console.log(`${s.id}\t${s.height}px`);

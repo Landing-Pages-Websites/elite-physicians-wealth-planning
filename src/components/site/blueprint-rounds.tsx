@@ -100,10 +100,10 @@ function StepGroup({
         <Icon className={`h-5.5 w-5.5 ${isFirst ? "text-ink" : "text-gold"}`} />
       </span>
       <div>
-        <p className="font-body text-body-s leading-none font-semibold tracking-[0.16em] text-ink/70">
+        <p className="font-display text-[1.75rem] leading-none font-medium tracking-[0.02em] text-gold">
           {phase.number}
         </p>
-        <h3 className="mt-1 font-display text-xl leading-none font-semibold text-ink">
+        <h3 className="mt-1.5 font-display text-xl leading-none font-semibold text-ink">
           {phase.name}
         </h3>
         <p className="mt-2 font-body text-body-s leading-[1.55] text-charcoal">
@@ -139,7 +139,11 @@ export function BlueprintRounds(): React.JSX.Element {
             "PHYSICIAN WEALTH ADVISORY" tagline. Both are build artifacts and
             neither is client brand copy, so the lockup goes and the section's
             own orientation line opens it. The gold rule is kept as the opener. */}
-        <p className="inline-flex flex-col gap-2.5 font-display text-display-s font-medium tracking-[0.01em] text-ink">
+        {/* Every other band on the page opens on an 11px letterspaced cap
+            line. This one opened on a 24px serif with a rule under it — too
+            small to be the heading it looked like, too big to be an eyebrow,
+            and the only one of its kind. */}
+        <p className="inline-flex flex-col gap-3 font-body text-[11px] font-semibold tracking-[0.22em] text-ink uppercase">
           {BLUEPRINT.orientation}
           <span aria-hidden="true" className="h-px w-full bg-gold" />
         </p>

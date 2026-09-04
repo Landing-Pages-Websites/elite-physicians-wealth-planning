@@ -7,6 +7,8 @@ type PathwaySpec = {
   decision: (typeof WHITE_COAT_PATHS.pathways)[number]["decision"];
   src: string;
   alt: string;
+  /** Focal point for the 16:9 crop. `object-cover` centred was cutting heads. */
+  focus: string;
 };
 
 const PHOTO_DIR = "/images/design/a/06-white-coat-paths";
@@ -15,26 +17,31 @@ const PATHWAYS: readonly PathwaySpec[] = [
   {
     ...WHITE_COAT_PATHS.pathways[0],
     src: `${PHOTO_DIR}/physicians-specialists-consultation.jpg`,
+    focus: "50% 30%",
     alt: "Physicians reviewing a treatment plan together during a consultation",
   },
   {
     ...WHITE_COAT_PATHS.pathways[1],
     src: `${PHOTO_DIR}/surgeons-operating-room.jpg`,
+    focus: "50% 38%",
     alt: "Surgeons concentrating on a procedure under operating-room lights",
   },
   {
     ...WHITE_COAT_PATHS.pathways[2],
     src: `${PHOTO_DIR}/dental-office-planning.jpg`,
+    focus: "50% 42%",
     alt: "Dental clinician reviewing a panoramic X-ray in a dental operatory",
   },
   {
     ...WHITE_COAT_PATHS.pathways[3],
     src: `${PHOTO_DIR}/practice-owner-meeting.jpg`,
+    focus: "50% 46%",
     alt: "Practice owner in a white coat taking notes during an office meeting",
   },
   {
     ...WHITE_COAT_PATHS.pathways[4],
     src: `${PHOTO_DIR}/healthcare-executive-hallway.jpg`,
+    focus: "50% 32%",
     alt: "Clinician in scrubs carrying a tablet along a bright hospital corridor",
   },
 ] as const;
@@ -88,7 +95,7 @@ function Pathway({
 }): React.JSX.Element {
   return (
     <li
-      className="grid gap-x-8 gap-y-4 sm:grid-cols-[minmax(0,1.3fr)_minmax(0,1fr)] sm:items-center lg:w-(--row-width) lg:ms-(--row-offset)"
+      className="grid gap-x-8 gap-y-4 sm:grid-cols-[minmax(0,1.3fr)_minmax(0,1fr)] sm:items-start lg:w-(--row-width) lg:ms-(--row-offset)"
       style={
         {
           "--row-width": ROW_WIDTH,
@@ -96,16 +103,23 @@ function Pathway({
         } as React.CSSProperties
       }
     >
-      <figure className="va-clip-pathway relative aspect-video w-full overflow-hidden rounded-[10px]">
+      <figure className="va-clip-pathway relative aspect-video w-full overflow-hidden">
         <Image
           src={pathway.src}
           alt={pathway.alt}
           fill
           sizes="(min-width: 1024px) 40vw, 100vw"
           className="object-cover"
+          style={{ objectPosition: pathway.focus }}
         />
       </figure>
-      <div className="relative pl-6">
+      {/* The dot alone left the label unattached to its photograph. A short
+          gold elbow ties it back, the way the approved frame does. */}
+      <div className="relative pl-6 sm:pt-1.5">
+        <span
+          aria-hidden="true"
+          className="absolute top-[0.62em] -left-8 hidden h-px w-8 bg-gold sm:block"
+        />
         <span
           aria-hidden="true"
           className="absolute top-[0.5em] left-0 h-1.5 w-1.5 rounded-full bg-gold"

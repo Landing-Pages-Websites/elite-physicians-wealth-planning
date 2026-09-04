@@ -32,11 +32,11 @@ function Wordmark(): React.JSX.Element {
       href="/"
       className="flex shrink-0 flex-col gap-0.5 rounded-sm transition-opacity duration-200 hover:opacity-90"
     >
-      <span className="font-display text-xl font-medium whitespace-nowrap text-white sm:text-2xl lg:text-[27px]">
+      <span className="font-display text-[22px] font-medium whitespace-nowrap text-white sm:text-[27px] lg:text-[34px]">
         {BRAND.name}
         <span className="align-super text-[0.6em]">™</span>
       </span>
-      <span className="hidden font-body text-[10px] font-semibold tracking-[0.26em] whitespace-nowrap text-gold uppercase sm:block">
+      <span className="hidden font-body text-[11px] font-semibold tracking-[0.24em] whitespace-nowrap text-gold uppercase sm:block">
         {BRAND.poweredBy}
       </span>
     </Link>

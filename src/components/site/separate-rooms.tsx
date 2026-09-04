@@ -1,6 +1,13 @@
 import Image from "next/image";
 import { SEPARATE_ROOMS } from "@/lib/content";
-import { AlertIcon } from "./icons";
+import {
+  AlertIcon,
+  CalculatorIcon,
+  ChartBarIcon,
+  ScalesIcon,
+  ShieldPlusIcon,
+  UmbrellaIcon,
+} from "./icons";
 
 type RoomSpec = {
   role: (typeof SEPARATE_ROOMS.roles)[number];
@@ -8,9 +15,22 @@ type RoomSpec = {
   alt: string;
   width: number;
   height: number;
+  Icon: (props: { className?: string }) => React.JSX.Element;
   /** Desktop placement on the 1536x864 canvas. */
-  desktop: { left: string; top: string; width: string };
+  desktop: { left: string; top: string };
 };
+
+/**
+ * Every room gets the same box.
+ *
+ * The five plans are 422x278, 494x278, 316x260, 388x261 and 411x278, and each
+ * was previously given its own hand-tuned width — so they rendered at five
+ * different sizes in five hand-picked positions, and read as five accidents
+ * rather than five peers of one network. One width, one aspect, `object-contain`
+ * inside it, and the arrangement is a radial rule: two above the hub, two
+ * flanking it, one below.
+ */
+const ROOM_WIDTH = "17%";
 
 const ROOM_DIR = "/images/design/a/03-separate-rooms";
 
@@ -21,7 +41,8 @@ const ROOMS: readonly RoomSpec[] = [
     alt: "Hand-drawn floor plan of a CPA’s separate office",
     width: 422,
     height: 278,
-    desktop: { left: "37.5%", top: "6%", width: "25%" },
+    Icon: CalculatorIcon,
+    desktop: { left: "31%", top: "5.5%" },
   },
   {
     role: "Attorney",
@@ -29,7 +50,8 @@ const ROOMS: readonly RoomSpec[] = [
     alt: "Hand-drawn floor plan of an attorney’s separate office",
     width: 494,
     height: 278,
-    desktop: { left: "66.5%", top: "5%", width: "27%" },
+    Icon: ScalesIcon,
+    desktop: { left: "75%", top: "5.5%" },
   },
   {
     role: "TPA",
@@ -37,7 +59,8 @@ const ROOMS: readonly RoomSpec[] = [
     alt: "Hand-drawn floor plan of a third-party administrator’s separate office",
     width: 316,
     height: 260,
-    desktop: { left: "33.5%", top: "44%", width: "19%" },
+    Icon: ShieldPlusIcon,
+    desktop: { left: "26.5%", top: "40%" },
   },
   {
     role: "Insurance professional",
@@ -45,7 +68,8 @@ const ROOMS: readonly RoomSpec[] = [
     alt: "Hand-drawn floor plan of an insurance professional’s separate office",
     width: 388,
     height: 261,
-    desktop: { left: "75.5%", top: "42%", width: "22.5%" },
+    Icon: UmbrellaIcon,
+    desktop: { left: "79.5%", top: "40%" },
   },
   {
     role: "Financial advisor",
@@ -53,7 +77,8 @@ const ROOMS: readonly RoomSpec[] = [
     alt: "Hand-drawn floor plan of a financial advisor’s separate office",
     width: 411,
     height: 278,
-    desktop: { left: "44.5%", top: "67%", width: "24%" },
+    Icon: ChartBarIcon,
+    desktop: { left: "53%", top: "68%" },
   },
 ] as const;
 
@@ -91,29 +116,31 @@ function NetworkRoute(): React.JSX.Element {
         strokeLinecap="round"
         strokeLinejoin="round"
       >
-        <path
-          d="M768 0 V22 Q768 40 786 40 H970 Q988 40 988 58 V300 Q988 344 975 370"
-          vectorEffect="non-scaling-stroke"
-        />
-        <path
-          d="M955 523 V545 Q955 566 976 566 H1060 Q1082 566 1082 588 V822 Q1082 844 1060 844 H0"
-          vectorEffect="non-scaling-stroke"
-        />
+        {/* Arrival from 02, straight down the clear channel between the two
+            upper plans and onto the hub's top. */}
+        <path d="M960 0 V292" vectorEffect="non-scaling-stroke" />
+        {/* Exit to 04, leaving the lowest plan's left edge and dropping out of
+            the section clear of the boundary note, which occupies x 0-400. */}
+        <path d="M872 674 H470 Q440 674 440 704 V864" vectorEffect="non-scaling-stroke" />
+        {/* Five spokes, drawn BROKEN. The section is titled "the coordination
+            gap"; a solid, fully wired hub would draw the state the firm sells
+            rather than the problem the copy describes. Each one starts on the
+            hub's rim and stops short of its plan's edge. */}
         <g strokeDasharray="2 10">
-          <path d="M918 382 Q866 350 806 276" vectorEffect="non-scaling-stroke" />
-          <path d="M1006 390 Q1036 330 1053 251" vectorEffect="non-scaling-stroke" />
-          <path d="M877 446 H781" vectorEffect="non-scaling-stroke" />
-          <path d="M1033 452 Q1112 466 1184 487" vectorEffect="non-scaling-stroke" />
-          <path d="M950 523 Q936 556 903 583" vectorEffect="non-scaling-stroke" />
+          <path d="M891 334 L664 216" vectorEffect="non-scaling-stroke" />
+          <path d="M1028 331 L1228 217" vectorEffect="non-scaling-stroke" />
+          <path d="M884 386 L682 430" vectorEffect="non-scaling-stroke" />
+          <path d="M1036 388 L1207 430" vectorEffect="non-scaling-stroke" />
+          <path d="M954 448 L943 573" vectorEffect="non-scaling-stroke" />
         </g>
       </g>
-      <circle cx="955" cy="445" r="78" fill="var(--color-ivory)" stroke="var(--color-gold)" strokeWidth="2" />
-      <circle cx="955" cy="445" r="68" fill="none" stroke="var(--color-gold)" strokeWidth="1" />
-      {node(806, 276)}
-      {node(1053, 251)}
-      {node(781, 446)}
-      {node(1184, 487)}
-      {node(903, 583)}
+      <circle cx="960" cy="370" r="78" fill="var(--color-ivory)" stroke="var(--color-gold)" strokeWidth="2" />
+      <circle cx="960" cy="370" r="68" fill="none" stroke="var(--color-gold)" strokeWidth="1" />
+      {node(664, 216)}
+      {node(1228, 217)}
+      {node(682, 430)}
+      {node(1207, 430)}
+      {node(943, 573)}
     </svg>
   );
 }
@@ -127,21 +154,26 @@ function RoomFigure({
   className?: string;
   style?: React.CSSProperties;
 }): React.JSX.Element {
+  const { Icon } = room;
   return (
     <figure className={className} style={style}>
-      <Image
-        src={room.src}
-        alt={room.alt}
-        width={room.width}
-        height={room.height}
-        sizes="(min-width: 1024px) 26vw, 256px"
-        className="h-auto w-full"
-      />
-      {/* Drafting-style room callout pinned to the plan's empty top-left
-          quadrant. Centred, it sat on the drawn furniture; the ivory plate
-          knocks it out of the hatching so both drawing and label survive. */}
-      <figcaption className="absolute top-[9%] left-[7%]">
-        <span className="inline-block bg-ivory px-2 py-0.5 font-display text-display-s leading-none font-semibold tracking-[0.01em] text-ink">
+      <div className="relative aspect-3/2 w-full">
+        <Image
+          src={room.src}
+          alt={room.alt}
+          fill
+          sizes="(min-width: 1024px) 18vw, 256px"
+          className="object-contain"
+        />
+      </div>
+      {/* The name used to sit INSIDE the plan, pinned to its top-left quadrant
+          on a knocked-out ivory plate — so on every room it cut a notch out of
+          the drawn wall it was sitting on, and two of the five were unreadable
+          against the hatching. It sits under its own drawing now, with the
+          mark that says what kind of office it is. */}
+      <figcaption className="mt-3 flex flex-col items-center gap-1.5 text-center">
+        <Icon className="h-5 w-5 text-gold" />
+        <span className="font-display text-[1.15rem] leading-tight font-semibold text-ink">
           {room.role}
         </span>
       </figcaption>
@@ -222,10 +254,10 @@ export function SeparateRooms(): React.JSX.Element {
               key={room.role}
               room={room}
               className="absolute"
-              style={room.desktop}
+              style={{ ...room.desktop, width: ROOM_WIDTH }}
             />
           ))}
-          <HubCircle className="absolute top-[51.5%] left-[62.2%] h-[17%] w-[9.6%] -translate-x-1/2 -translate-y-1/2 px-3 text-[clamp(1rem,1.5vw,1.45rem)] leading-tight" />
+          <HubCircle className="absolute top-[42.8%] left-[62.5%] h-[18%] w-[10.2%] -translate-x-1/2 -translate-y-1/2 px-3 text-[clamp(1rem,1.5vw,1.45rem)] leading-tight" />
           <BoundaryNote className="absolute bottom-[7%] left-0 w-[26%] max-w-none" />
         </div>
 
