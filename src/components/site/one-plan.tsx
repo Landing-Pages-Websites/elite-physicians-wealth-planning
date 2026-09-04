@@ -1,7 +1,72 @@
 import Image from "next/image";
 import { HERO, LINKS, PORTRAIT } from "@/lib/content";
 import { PortraitCaption } from "./portrait-caption";
-import { CalendarIcon } from "./icons";
+import {
+  CalendarIcon,
+  FileTextIcon,
+  RefreshIcon,
+  ShieldIcon,
+  StethoscopeIcon,
+} from "./icons";
+
+/**
+ * The hero's gold route.
+ *
+ * The frame runs one continuous line through this band: it enters at the left
+ * edge beside the orientation line, breaks for that text, resumes, turns down
+ * the gutter and lands on the portrait card's left edge at a node — then leaves
+ * the card's lower right and exits the section with an arrow into 02. The build
+ * had only the middle rule, so the route appeared from nowhere and stopped in
+ * space at both ends.
+ */
+function HeroRoute(): React.JSX.Element {
+  return (
+    <svg
+      viewBox="0 0 1536 864"
+      preserveAspectRatio="none"
+      aria-hidden="true"
+      className="pointer-events-none absolute inset-0 z-[5] hidden h-full w-full lg:block"
+      fill="none"
+    >
+      <g
+        stroke="var(--color-gold)"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        opacity="0.75"
+      >
+        <path d="M0 150 H322" vectorEffect="non-scaling-stroke" />
+        <path
+          d="M872 150 H886 Q906 150 906 170 V400 Q906 420 926 420 H1062"
+          vectorEffect="non-scaling-stroke"
+        />
+        <path
+          d="M1418 700 H1466 Q1490 700 1490 724 V812"
+          vectorEffect="non-scaling-stroke"
+        />
+        <path d="M1478 800 L1490 813 L1502 800" vectorEffect="non-scaling-stroke" />
+      </g>
+      <circle cx="1068" cy="420" r="5.5" fill="var(--color-gold)" />
+    </svg>
+  );
+}
+
+/** Each proof gets the mark the frame draws beside it. */
+const PROOF_ICONS = [ShieldIcon, StethoscopeIcon, RefreshIcon] as const;
+
+/** The compass rosette the frame sets before the identity line. */
+function CompassRose({ className }: { className?: string }): React.JSX.Element {
+  return (
+    <svg viewBox="0 0 32 32" aria-hidden="true" className={className} fill="none" stroke="currentColor">
+      <circle cx="16" cy="16" r="11" strokeOpacity="0.75" />
+      <circle cx="16" cy="16" r="3.6" strokeOpacity="0.75" />
+      <path
+        d="M16 1.5 L18.6 13.4 L30.5 16 L18.6 18.6 L16 30.5 L13.4 18.6 L1.5 16 L13.4 13.4 Z"
+        strokeOpacity="0.9"
+      />
+    </svg>
+  );
+}
 
 /** The three-line monumental break of the manifest headline. */
 function headlineLines(): readonly string[] {
@@ -18,10 +83,15 @@ function headlineLines(): readonly string[] {
   ];
 }
 
+/**
+ * The frame draws this as a tall cream plate with a rounded GOLD border, not a
+ * white card with a hairline ring — the gold edge is what ties it to the route
+ * that runs into its left side and leaves from its lower right.
+ */
 function PortraitCard(): React.JSX.Element {
   return (
-    <figure className="va-reveal relative w-full max-w-[19rem] bg-ivory p-3 shadow-[0_24px_60px_rgba(2,10,22,0.55)] ring-1 ring-ink/10 sm:max-w-[20rem] lg:mt-[9px] lg:w-[21rem] lg:max-w-none">
-      <div className="relative aspect-[485/610] overflow-hidden">
+    <figure className="va-reveal relative w-full max-w-[19rem] rounded-[10px] border-2 border-gold/80 bg-ivory p-3 shadow-[0_24px_60px_rgba(2,10,22,0.55)] sm:max-w-[20rem] lg:mt-[9px] lg:w-[22rem] lg:max-w-none">
+      <div className="relative aspect-[485/645] overflow-hidden">
         <Image
           src={PORTRAIT.src}
           alt={PORTRAIT.alt}
@@ -43,6 +113,7 @@ export function OnePlan(): React.JSX.Element {
       aria-labelledby="one-plan-heading"
       className="va-hero relative overflow-hidden text-ivory"
     >
+      <HeroRoute />
       <div className="relative z-10 va-shell flex min-h-[min(864px,100svh)] flex-col py-8">
         {/* The masthead that sat here has been LIFTED into the global
             SiteHeader — not copied. The approved frame shows this lockup at the
@@ -53,16 +124,12 @@ export function OnePlan(): React.JSX.Element {
         <div aria-hidden="true" style={{ height: "var(--header-h)" }} />
 
         <div className="mt-10 flex items-center gap-5 lg:mt-14">
-          <p className="font-body text-body-s font-medium tracking-[0.18em] text-mist/80 uppercase">
+          {/* Serif italic, as drawn. It had been set as letterspaced caps,
+              which made it read as a category label rather than the line the
+              gold route runs out of. */}
+          <p className="font-display text-[1.05rem] leading-none italic text-mist/90">
             {HERO.orientation}
           </p>
-          {/* The one gold route: this rule leaves the audience label and stops
-              on the portrait card's left edge, where it nodes. Same node shape
-              repeats on the proof row below. */}
-          <span
-            aria-hidden="true"
-            className="relative hidden h-px flex-1 bg-gradient-to-r from-gold/50 via-gold/30 to-gold/60 after:absolute after:-top-0.5 after:-right-px after:h-[5px] after:w-[5px] after:rounded-full after:bg-gold lg:mr-[21rem] lg:block"
-          />
         </div>
 
         <div className="mt-7 grid items-start gap-12 lg:mt-9 lg:grid-cols-[minmax(0,1fr)_auto] lg:gap-16">
@@ -91,10 +158,14 @@ export function OnePlan(): React.JSX.Element {
                 <CalendarIcon className="h-4 w-4" />
                 {HERO.primaryCta}
               </a>
+              {/* Drawn as a bordered button with its own mark, matched in
+                  height to the gold action beside it — it was a text underline,
+                  which read as a footnote next to a filled button. */}
               <a
                 href={LINKS.processOnsite}
-                className="va-link border-mist/35 text-mist hover:border-gold hover:text-ivory"
+                className="va-btn border border-mist/45 text-mist transition-colors duration-200 hover:border-gold hover:text-ivory"
               >
+                <FileTextIcon className="h-4 w-4" />
                 {HERO.secondaryCta}
               </a>
             </div>
@@ -103,26 +174,38 @@ export function OnePlan(): React.JSX.Element {
           <PortraitCard />
         </div>
 
-        <ul className="mt-auto grid gap-y-3.5 border-t border-white/10 pt-7 sm:flex sm:flex-wrap sm:gap-x-10 sm:gap-y-4">
-          {HERO.proofLine.map((proof) => (
-            <li
-              key={proof}
-              className="flex items-center gap-2.5 font-body text-body-s font-medium text-mist/90"
-            >
-              <span
-                aria-hidden="true"
-                className="h-[5px] w-[5px] shrink-0 rounded-full bg-gold"
-              />
-              {proof}
-            </li>
-          ))}
+        {/* The frame gives each proof its own mark — shield, stethoscope,
+            refresh — with a gold dot between them, not a dot in front of each.
+            All three icons already existed in the set and none was used. */}
+        <ul className="mt-auto grid gap-y-3.5 border-t border-white/10 pt-7 sm:flex sm:flex-wrap sm:items-center sm:gap-x-5 sm:gap-y-4">
+          {HERO.proofLine.map((proof, index) => {
+            const Icon = PROOF_ICONS[index] ?? ShieldIcon;
+            return (
+              <li key={proof} className="flex items-center gap-2.5">
+                <span className="flex items-center gap-2.5 font-body text-body-s font-medium text-mist/90">
+                  <Icon className="h-[1.15rem] w-[1.15rem] shrink-0 text-gold" />
+                  {proof}
+                </span>
+                {index < HERO.proofLine.length - 1 ? (
+                  <span
+                    aria-hidden="true"
+                    className="ml-3 hidden h-[5px] w-[5px] shrink-0 rounded-full bg-gold sm:block"
+                  />
+                ) : null}
+              </li>
+            );
+          })}
         </ul>
 
-        <div className="mt-6 flex flex-col gap-2 pb-2 sm:flex-row sm:items-center sm:justify-between">
-          <p className="font-body text-body-s font-medium tracking-[0.16em] text-mist/55 uppercase">
+        <div className="mt-6 flex flex-col gap-3 pb-2 sm:flex-row sm:items-center sm:gap-6">
+          <p className="flex items-center gap-3 font-body text-body-s font-medium tracking-[0.14em] text-gold uppercase">
+            <CompassRose className="h-6 w-6 shrink-0" />
             {HERO.identityLine}
           </p>
-          <p className="font-body text-body-s text-mist/70">{HERO.disclaimer}</p>
+          <span aria-hidden="true" className="hidden h-8 w-px bg-mist/25 sm:block" />
+          <p className="max-w-[46ch] font-body text-body-s leading-[1.5] text-mist/70">
+            {HERO.disclaimer}
+          </p>
         </div>
       </div>
     </section>

@@ -30,7 +30,7 @@ export function TickRail({
   return (
     <div
       aria-hidden="true"
-      className={`pointer-events-none flex ${
+      className={`pointer-events-none flex text-ink ${
         vertical ? "flex-col items-start" : "flex-row items-end"
       } justify-between ${className}`}
     >
@@ -48,7 +48,7 @@ export function TickRail({
         return (
           <span
             key={i}
-            className={`block shrink-0 bg-ink/45 ${
+            className={`block shrink-0 bg-current opacity-45 ${
               vertical
                 ? `h-px ${major ? "w-5" : "w-2.5"}`
                 : `w-px ${major ? "h-3.5" : "h-2"}`
@@ -109,7 +109,7 @@ export function CornerBracket({
   return (
     <span
       aria-hidden="true"
-      className={`pointer-events-none block border-ink/70 ${sides[corner]} ${className}`}
+      className={`pointer-events-none block border-current opacity-70 ${sides[corner]} ${className}`}
     />
   );
 }
@@ -146,15 +146,11 @@ export function TargetRosette({
       className={`pointer-events-none ${className}`}
       fill="none"
     >
-      <circle cx="24" cy="24" r="23" stroke="var(--color-ink)" strokeOpacity="0.5" />
-      <circle cx="24" cy="24" r="16" stroke="var(--color-ink)" strokeOpacity="0.35" />
-      <circle cx="24" cy="24" r="9" stroke="var(--color-gold)" strokeWidth="1.5" />
-      <circle cx="24" cy="24" r="4" fill="var(--color-gold)" />
-      <path
-        d="M24 0 V8 M24 40 V48 M0 24 H8 M40 24 H48"
-        stroke="var(--color-ink)"
-        strokeOpacity="0.5"
-      />
+      <circle cx="24" cy="24" r="23" stroke="currentColor" strokeOpacity="0.55" />
+      <circle cx="24" cy="24" r="16" stroke="currentColor" strokeOpacity="0.4" />
+      <circle cx="24" cy="24" r="9" stroke="var(--color-gold)" strokeWidth="2" />
+      <circle cx="24" cy="24" r="4.5" fill="var(--color-gold)" />
+      <path d="M24 0 V8 M24 40 V48 M0 24 H8 M40 24 H48" stroke="currentColor" strokeOpacity="0.55" />
     </svg>
   );
 }
