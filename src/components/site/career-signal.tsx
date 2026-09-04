@@ -1,138 +1,126 @@
 import { CAREER_SIGNAL } from "@/lib/content";
 
-/** Station x positions on the 1536x400 reference frame (from NOTES). */
-const STATION_X = [246, 575, 923, 1248] as const;
+/**
+ * The career strip, built to the approved frame.
+ *
+ * The frame is a short navy band over a very dark office plate: a two-line
+ * heading whose first line is gold with "focused" in italic, then one gold rule
+ * carrying a short tick above each of the four stages, curving up at its right
+ * end and leaving through the top-right corner. A stub drops from the middle of
+ * the foot as the seam into 03.
+ *
+ * Geometry measured from public/design/a/refs/02-career-signal.png at its
+ * native 1536x512.
+ */
+const FRAME = { w: 1536, h: 512 } as const;
 
-const HEADING_BREAK = "across";
+/** Tick x-positions along the rule, measured off the frame. */
+const STAGE_XS = [243, 580, 925, 1254] as const;
+const RULE_Y = 251;
 
-function splitHeading(): { lead: string; rest: string } {
-  const heading: string = CAREER_SIGNAL.identityLine;
-  const breakIndex = heading.indexOf(HEADING_BREAK);
-  if (breakIndex === -1) {
-    return { lead: heading, rest: "" };
-  }
-  return {
-    lead: heading.slice(0, breakIndex).trim(),
-    rest: heading.slice(breakIndex),
-  };
+/** The heading breaks at "across"; the first line is gold, the second ivory. */
+function headingParts(): { lead: string; tail: string } {
+  const line: string = CAREER_SIGNAL.identityLine;
+  const at = line.indexOf("across");
+  if (at === -1) return { lead: line, tail: "" };
+  return { lead: line.slice(0, at).trim(), tail: line.slice(at).trim() };
 }
 
-function italicizeFocused(lead: string): React.JSX.Element {
-  const [before, after] = lead.split("focused");
+/** "Physician-focused" sets "focused" in italic in the frame. */
+function GoldLead({ text }: { text: string }): React.JSX.Element {
+  const marker = "focused";
+  const at = text.indexOf(marker);
+  if (at === -1) return <span className="text-gold">{text}</span>;
   return (
-    <>
-      {before}
-      <em className="font-medium">focused</em>
-      {after}
-    </>
+    <span className="text-gold">
+      {text.slice(0, at)}
+      <em className="italic">{marker}</em>
+      <span className="text-ivory-bright">{text.slice(at + marker.length)}</span>
+    </span>
   );
 }
 
-/**
- * One continuous route with exactly two ends, both leaving the frame at an
- * edge: it bleeds in off the left, carries all four stations, then lifts
- * away through the right edge. Station 4 is the resolved terminal node.
- */
-function CareerRoute(): React.JSX.Element {
+function StageRule(): React.JSX.Element {
   return (
     <svg
-      viewBox="0 0 1536 400"
+      viewBox={`0 0 ${FRAME.w} ${FRAME.h}`}
       preserveAspectRatio="none"
       aria-hidden="true"
-      className="pointer-events-none absolute inset-0 hidden h-full w-full md:block"
+      className="pointer-events-none absolute inset-0 h-full w-full"
+      fill="none"
     >
-      <g
-        fill="none"
-        stroke="var(--color-gold)"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      >
+      <g stroke="var(--color-gold)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        {/* The rule, then up and out through the top-right corner. */}
         <path
-          d="M0 280 H1248 C1270 280 1282 268 1282 244 V176 C1282 112 1325 82 1364 70 C1430 50 1490 36 1536 26"
+          d={`M${STAGE_XS[0]} ${RULE_Y} H1240 Q1290 ${RULE_Y} 1300 ${RULE_Y - 60} Q1316 130 1372 96 H1536`}
           vectorEffect="non-scaling-stroke"
         />
-        {STATION_X.map((x) => (
-          <path key={x} d={`M${x} 280 V306`} vectorEffect="non-scaling-stroke" />
+        {STAGE_XS.map((x) => (
+          <path key={x} d={`M${x} ${RULE_Y - 22} V${RULE_Y}`} vectorEffect="non-scaling-stroke" />
         ))}
+        {/* Seam stub into 03. */}
+        <path d="M768 431 V501" vectorEffect="non-scaling-stroke" />
       </g>
-      {STATION_X.map((x, index) => (
-        <circle
-          key={x}
-          cx={x}
-          cy="311"
-          r={index === 3 ? 6 : 4}
-          fill="var(--color-gold)"
-        />
-      ))}
-      {/* Station 4 is the conclusion the three transitions pay into, not a
-          fourth equal step: only it carries the outer ring. */}
-      <circle
-        cx={1248}
-        cy="311"
-        r="12"
-        fill="none"
-        stroke="var(--color-gold)"
-        strokeOpacity="0.4"
-        strokeWidth="1.5"
-        vectorEffect="non-scaling-stroke"
-      />
     </svg>
   );
 }
 
 export function CareerSignal(): React.JSX.Element {
-  const { lead, rest } = splitHeading();
+  const { lead, tail } = headingParts();
   return (
     <section
       id="career-signal"
       aria-labelledby="career-signal-heading"
       className="va-career relative overflow-hidden"
     >
-      <CareerRoute />
-      <div className="relative z-10 md:min-h-[clamp(300px,26vw,400px)]">
+      {/* Desktop: the frame's own canvas — 1536x512, not the 16:9 of the rest. */}
+      <div className="@container relative hidden aspect-1536/512 w-full lg:block">
+        <StageRule />
+
         <h2
           id="career-signal-heading"
-          className="va-reveal va-shell pt-12 text-display-m font-display leading-[1.08] font-medium tracking-[-0.02em] text-balance md:pt-16"
+          className="va-reveal absolute top-[13%] left-[3.8%] font-display text-[2.35cqw] leading-[1.35] font-medium tracking-[-0.01em]"
         >
-          <span className="block text-gold">{italicizeFocused(lead)}</span>
-          <span className="block text-ivory-warm">{rest}</span>
+          <span className="block">
+            <GoldLead text={lead} />
+          </span>
+          <span className="block text-ivory-bright">{tail}</span>
         </h2>
 
-        {/* Desktop: labels beneath their route stations. */}
-        <div className="hidden md:block">
+        <ol>
           {CAREER_SIGNAL.signals.map((signal, index) => (
-            <p
+            <li
               key={signal}
-              className={`absolute top-[77.75%] mt-3 w-[13.5rem] -translate-x-1/2 text-center font-body text-body-m leading-[1.4] text-balance ${
-                index === 3
-                  ? "font-semibold text-ivory-bright"
-                  : "font-medium text-ivory/85"
-              }`}
-              style={{ left: `${(STATION_X[index] / 1536) * 100}%` }}
+              className="absolute w-[13%] -translate-x-1/2 text-center font-display text-[1.32cqw] leading-[1.35] font-medium text-ivory-bright"
+              style={{
+                left: `${(STAGE_XS[index] / FRAME.w) * 100}%`,
+                top: `${(287 / FRAME.h) * 100}%`,
+              }}
             >
               {signal}
-            </p>
+            </li>
           ))}
-        </div>
+        </ol>
+      </div>
 
-        {/* Mobile: the same route redrawn as a vertical sequence. */}
-        <ol className="va-shell mt-8 flex flex-col gap-0 pb-16 md:hidden">
-          {CAREER_SIGNAL.signals.map((signal, index) => (
-            <li key={signal} className="relative pb-8 pl-8 last:pb-0">
-              {index < CAREER_SIGNAL.signals.length - 1 && (
-                <span
-                  aria-hidden="true"
-                  className="absolute top-2 left-[5px] h-full w-[2px] bg-gold/80"
-                />
-              )}
+      {/* Below the canvas the rule stands up as a spine. */}
+      <div className="va-shell py-12 lg:hidden">
+        <h2 className="font-display text-display-m leading-[1.3] font-medium tracking-[-0.01em]">
+          <span className="block">
+            <GoldLead text={lead} />
+          </span>
+          <span className="block text-ivory-bright">{tail}</span>
+        </h2>
+        <ol className="relative mt-8 space-y-6 border-l border-gold/70 pl-6">
+          {CAREER_SIGNAL.signals.map((signal) => (
+            <li key={signal} className="relative">
               <span
                 aria-hidden="true"
-                className="absolute top-1.5 left-0 h-3 w-3 rounded-full bg-gold"
+                className="absolute top-[0.55em] -left-[calc(1.5rem+3px)] h-1.5 w-1.5 rounded-full bg-gold"
               />
-              <span className="font-body text-body-m font-medium text-ivory">
+              <p className="font-display text-lg leading-snug font-medium text-ivory-bright">
                 {signal}
-              </span>
+              </p>
             </li>
           ))}
         </ol>
