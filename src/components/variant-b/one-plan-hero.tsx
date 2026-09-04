@@ -2,6 +2,7 @@ import Image from "next/image";
 import { HERO, LINKS, PORTRAIT } from "@/lib/content";
 import { PortraitCaption } from "@/components/site/portrait-caption";
 import GoldArrow from "./gold-arrow";
+import SectionEyebrow from "./section-eyebrow";
 
 const CONTOUR_PATHS = [
   "M-40 700 C 180 660, 360 726, 560 692 S 940 640 1140 704 S 1440 668 1580 700",
@@ -36,7 +37,7 @@ function HeroFieldOrnaments(): React.JSX.Element {
 
 function StrategyPlaque(): React.JSX.Element {
   return (
-    <div className="relative z-10 mt-6 w-full max-w-xs border border-ink/15 bg-ivory p-6 shadow-[0_18px_40px_-18px_rgba(11,31,58,0.30)] lg:absolute lg:top-[38%] lg:left-0 lg:mt-0 lg:w-64">
+    <div className="relative z-10 mt-6 w-full max-w-xs border border-ink/15 bg-ivory p-6 shadow-[0_18px_40px_-18px_rgba(11,31,58,0.30)] lg:absolute lg:bottom-10 lg:-left-10 lg:mt-0 lg:w-64">
       <ul className="relative">
         {HERO.proofLine.map((item, index) => (
           <li
@@ -97,12 +98,9 @@ export default function OnePlanHero(): React.JSX.Element {
 
       <div className="relative bg-gradient-to-b from-white via-white to-mist/40">
         <HeroFieldOrnaments />
-        <div className="va-shell relative pb-14 pt-12 lg:grid lg:min-h-[42rem] lg:grid-cols-12 lg:gap-12 lg:pt-16">
+        <div className="vb-shell relative pb-14 pt-12 lg:grid lg:min-h-[42rem] lg:grid-cols-12 lg:gap-12 lg:pt-16">
           <div className="lg:col-span-6">
-            <p className="inline-flex items-center gap-2 text-body-s font-semibold tracking-[0.06em] text-ink">
-              <span aria-hidden="true" className="inline-block h-px w-8 bg-gold" />
-              {HERO.orientation}
-            </p>
+            <SectionEyebrow>{HERO.orientation}</SectionEyebrow>
             <h1
               id="one-plan-heading"
               className="mt-6 max-w-none text-balance text-display-l tracking-[-0.02em] font-bold leading-[1.06] text-ink md:max-w-[21ch] md:text-display-xl"
@@ -111,13 +109,43 @@ export default function OnePlanHero(): React.JSX.Element {
             </h1>
             <p className="mt-6 max-w-xl text-base leading-relaxed text-charcoal">{HERO.body}</p>
             <HeroActions />
+            <div className="mt-10 flex items-center gap-4 border-t border-ink/10 pt-6">
+              <div className="vb-portrait-clip shrink-0 bg-ink/60 p-px">
+                <div className="vb-portrait-clip relative aspect-[270/315] w-28 overflow-hidden bg-mist/50">
+                  <Image
+                    src={PORTRAIT.src}
+                    alt={PORTRAIT.alt}
+                    fill
+                    sizes="112px"
+                    className="object-cover object-top"
+                  />
+                </div>
+              </div>
+              <PortraitCaption className="max-w-none px-0 pt-0 pb-0 text-left text-body-s text-charcoal" />
+            </div>
           </div>
 
-          <div className="relative mt-12 lg:col-span-6 lg:mt-0">
-            <div className="relative ml-auto aspect-[526/317] w-full max-w-[34rem] overflow-hidden bg-mist [filter:saturate(0.82)_contrast(1.02)] lg:w-[94%]">
+          {/* The plate this replaces (medical-office-scene.jpg) failed on the
+              pixels, not on taste. At 4x it has a second hand with no thumb and
+              no wrist dissolving into the desk, a pen nib forked into three
+              tines that does not touch the paper it is marking, and hard-edged
+              rectangular composite patches across the right of frame — and the
+              file is 642x405 being stretched to 621x652. It was also arguing
+              the wrong case: a wealth-planning hero whose subject is an MRI
+              reads as a radiology practice.
+
+              The media column held a 526x317 photograph in the top half of a
+              650px column and then a 208px portrait thumbnail floating at the
+              bottom right with its caption detached beside it — a sticker in a
+              field of white, and 130px of empty column under the CTAs opposite.
+              The photograph fills its column now, and the portrait moved to the
+              left column where it belongs: the face of the person you are about
+              to book sits with the button that books him. */}
+          <div className="relative mt-12 min-h-[22rem] lg:col-span-6 lg:mt-0">
+            <div className="absolute inset-0 overflow-hidden bg-mist [filter:saturate(0.82)_contrast(1.02)]">
               <Image
-                src="/images/design/b/01-one-plan/medical-office-scene.jpg"
-                alt="Clinician reviewing diagnostic imaging at a medical workstation"
+                src="/images/design/b/01-one-plan/planning-conversation.jpg"
+                alt="A physician and a planner in conversation across a consulting table"
                 fill
                 priority
                 sizes="(min-width: 1024px) 42vw, 100vw"
@@ -125,24 +153,10 @@ export default function OnePlanHero(): React.JSX.Element {
               />
             </div>
             <StrategyPlaque />
-            <div className="mt-8 flex flex-col-reverse items-start gap-3 sm:flex-row sm:items-end sm:justify-end sm:gap-4 lg:mt-10">
-              <PortraitCaption className="max-w-none px-0 pt-0 pb-0 text-left text-body-s text-charcoal sm:max-w-[13rem] sm:text-right" />
-              <div className="vb-portrait-clip shrink-0 bg-ink/60 p-px">
-                <div className="vb-portrait-clip relative aspect-[270/315] w-44 overflow-hidden bg-mist/50 sm:w-52">
-                  <Image
-                    src={PORTRAIT.src}
-                    alt={PORTRAIT.alt}
-                    fill
-                    sizes="208px"
-                    className="object-cover object-top"
-                  />
-                </div>
-              </div>
-            </div>
           </div>
         </div>
 
-        <div className="va-shell relative flex flex-wrap items-baseline gap-x-10 gap-y-2 pb-10">
+        <div className="vb-shell relative flex flex-wrap items-baseline gap-x-10 gap-y-2 pb-10">
           <p className="text-xs font-semibold tracking-[0.06em] text-ink/80">{HERO.identityLine}</p>
           <p className="text-body-s leading-relaxed text-charcoal/70">{HERO.disclaimer}</p>
         </div>

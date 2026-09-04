@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { ACCOUNTABLE_PLANNER, LINKS, PORTRAIT } from "@/lib/content";
 import GoldArrow from "./gold-arrow";
+import SectionEyebrow from "./section-eyebrow";
 
 const DESK_IMAGE = "/images/design/b/07-accountable-planner/medical-finance-desk-background.jpg";
 
@@ -41,9 +42,7 @@ function PortraitColumn(): React.JSX.Element {
 function PlannerNarrative(): React.JSX.Element {
   return (
     <div className="order-1 lg:order-2">
-      <p className="text-body-s font-bold uppercase tracking-[0.24em] text-ink/80">
-        {ACCOUNTABLE_PLANNER.orientation}
-      </p>
+      <SectionEyebrow>{ACCOUNTABLE_PLANNER.orientation}</SectionEyebrow>
       <h2
         id="accountable-planner-heading"
         className="mt-4 text-display-m font-bold leading-[1.15] tracking-[-0.02em] text-balance text-ink"
@@ -82,7 +81,7 @@ export default function AccountablePlanner(): React.JSX.Element {
           className="object-cover object-[50%_30%]"
         />
       </div>
-      <div className="relative mx-auto max-w-[96rem] px-0 py-12 sm:px-8 lg:px-6 lg:py-24 lg:pl-[18rem]">
+      <div className="vb-shell relative py-12 max-sm:px-0 lg:py-24 lg:pl-[18rem]">
         <div className="relative">
           <div
             aria-hidden="true"

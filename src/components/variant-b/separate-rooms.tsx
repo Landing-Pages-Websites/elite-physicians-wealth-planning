@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { SEPARATE_ROOMS } from "@/lib/content";
+import SectionEyebrow from "./section-eyebrow";
 
 /**
  * Stage coordinates come from the extraction notes in frame space (1536x864)
@@ -168,14 +169,19 @@ export default function SeparateRooms(): React.JSX.Element {
       className="relative overflow-hidden bg-white"
     >
       <div aria-hidden="true" className="absolute inset-0 bg-ivory/50" />
-      <div className="relative mx-auto max-w-[96rem] px-6 py-16 lg:grid lg:grid-cols-[31%_minmax(0,1fr)] lg:gap-6 lg:py-0">
+      <div className="vb-shell relative py-16 lg:grid lg:grid-cols-[31%_minmax(0,1fr)] lg:gap-6 lg:py-0">
         <div className="lg:self-start lg:pt-16">
-          <p className="inline-block bg-ink px-3 py-1.5 text-body-s font-bold tracking-[0.2em] text-white uppercase">
-            {SEPARATE_ROOMS.orientation}
-          </p>
-          <h2
+          <SectionEyebrow>{SEPARATE_ROOMS.orientation}</SectionEyebrow>
+{/* One heading family for the direction. This section and blueprint-rounds
+              set their H2 in Cormorant Garamond — one at 600, one at 500 —
+              while career-signal, five-decisions, pathways, planner,
+              next-decision and the form all set theirs in Inter Bold. Two
+              families and three weights, tracking nothing: not the surface, not
+              the section's weight, not anything a reader could learn. B's
+              language is the bold sans; the serif stays in the wordmark. */}
+            <h2
             id="separate-rooms-heading"
-            className="mt-6 text-display-m font-display font-semibold leading-[1.1] tracking-[-0.01em] text-balance text-ink"
+            className="mt-6 text-display-m font-bold leading-[1.1] tracking-[-0.02em] text-balance text-ink"
           >
             {SEPARATE_ROOMS.headline}
           </h2>

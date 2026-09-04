@@ -1,5 +1,6 @@
 import { BLUEPRINT, LINKS } from "@/lib/content";
 import GoldArrow from "./gold-arrow";
+import SectionEyebrow from "./section-eyebrow";
 
 const MAXIM_LINES = ["A structured process.", "A coordinated plan.", "A life of purpose."];
 
@@ -180,12 +181,12 @@ export default function BlueprintRounds(): React.JSX.Element {
       className="relative overflow-hidden bg-gradient-to-br from-mist/70 via-mist/40 to-mist/80"
     >
       <PerimeterRulers />
-      <div className="relative mx-auto max-w-[92rem] px-6 py-16 lg:grid lg:min-h-[52rem] lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] lg:items-start lg:gap-12 lg:py-20">
+      <div className="vb-shell relative py-16 lg:grid lg:min-h-[52rem] lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] lg:items-start lg:gap-12 lg:py-20">
         <div className="relative lg:pt-4">
-          <p className="relative font-display text-xl italic text-ink/90">{BLUEPRINT.orientation}</p>
+          <SectionEyebrow className="relative">{BLUEPRINT.orientation}</SectionEyebrow>
           <h2
             id="blueprint-rounds-heading"
-            className="relative mt-5 max-w-[13ch] font-display text-display-m leading-[1.08] font-medium tracking-[-0.015em] text-ink"
+            className="relative mt-5 max-w-[13ch] text-display-m leading-[1.08] font-bold tracking-[-0.02em] text-balance text-ink"
           >
             {BLUEPRINT.headline}
           </h2>
