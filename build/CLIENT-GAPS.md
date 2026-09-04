@@ -149,6 +149,8 @@ Two of Direction A's other plates are in the same state:
 | `a/02-career-signal/office-background-reconstructed.jpg` | 0.0283 | 4.8% |
 
 None is requested by the CSS any more. Until usable plates are supplied, those
-bands run on designed grounds. **A replacement hero photograph is a client
-deliverable** — a low-key physician consultation-office scene, per the
+bands run on designed grounds. ~~**A replacement hero photograph is a client deliverable**~~ **RESOLVED** —
+`hero-consultation-office.jpg` was generated to `build/IMAGE-BRIEF.md` and wired in.
+The original
+deliverable note read — a low-key physician consultation-office scene, per the
 `extraction_plan` recipe, with no composite seam.

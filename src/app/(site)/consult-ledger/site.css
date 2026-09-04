@@ -15,28 +15,16 @@
   content: "";
   position: absolute;
   inset: 0;
-  /* NO PHOTOGRAPH. hero-office-reconstructed.jpg measures mean luminance
-     0.0127 with 1.1% of pixels above near-black — it is not a dark photo, it is
-     a broken render. Brightened 6x it shows a hard-edged rectangular patch of
-     horizontal smear bands through the right-centre and heavy vertical banding
-     across the left. No scrim setting can make it read, and lightening only
-     exposes the damage, so it is not requested at all: shipping a 1920x1080
-     JPEG that renders as nothing costs bytes for no picture.
-
-     Until a usable plate is supplied (build/CLIENT-GAPS.md), the band gets an
-     intentional ground instead of a failed one — a lit field behind the
-     portrait so the hero reads as composed rather than as an image that did
-     not load. */
-  background:
-    radial-gradient(
-      96% 84% at 72% 42%,
-      rgba(220, 232, 242, 0.52) 0%,
-      rgba(220, 232, 242, 0.3) 26%,
-      rgba(220, 232, 242, 0.12) 48%,
-      rgba(220, 232, 242, 0.03) 66%,
-      rgba(220, 232, 242, 0) 78%
-    ),
-    linear-gradient(158deg, var(--color-ink) 0%, var(--color-ink-deep) 58%, var(--color-ink-deeper) 100%);
+  /* Generated to build/IMAGE-BRIEF.md after the original plate measured as a
+     broken render (mean luminance 0.0127, 1.1% above near-black, a composite
+     smear patch through the right-centre). Checked at 6x brightness before
+     being accepted: no legible lettering on any book spine, no people, no
+     certificates, no seam. Low-key by design — the lit desk sits right, where
+     the portrait card overlays, and the left 45% falls away for white text. */
+  background-image: url("/images/design/a/01-one-plan/hero-consultation-office.jpg");
+  background-size: cover;
+  background-position: 62% 58%;
+  background-repeat: no-repeat;
 }
 
 /* The lit field exists to sit behind the portrait. On mobile the layout stacks,
@@ -66,10 +54,11 @@
   inset: 0;
   pointer-events: none;
   background: linear-gradient(
-    92deg,
-    rgba(4, 14, 27, 0.5) 0%,
-    rgba(4, 14, 27, 0.22) 44%,
-    rgba(4, 14, 27, 0) 72%
+    94deg,
+    rgba(4, 14, 27, 0.94) 0%,
+    rgba(4, 14, 27, 0.86) 34%,
+    rgba(4, 14, 27, 0.58) 58%,
+    rgba(4, 14, 27, 0.34) 100%
   );
 }
 
