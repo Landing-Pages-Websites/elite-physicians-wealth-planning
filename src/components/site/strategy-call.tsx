@@ -13,7 +13,7 @@ export function StrategyCall(): React.JSX.Element {
       aria-labelledby="form-heading"
       className="relative overflow-hidden bg-ink"
     >
-      <div className="relative z-10 va-shell grid gap-12 py-20 lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1fr)] lg:gap-16 lg:py-28">
+      <div className="relative z-10 va-shell grid gap-12 py-14 lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1fr)] lg:gap-16 lg:py-20">
         <div>
           <h2
             id="form-heading"

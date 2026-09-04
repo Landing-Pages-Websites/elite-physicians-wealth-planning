@@ -31,7 +31,7 @@ export function FiveDecisions(): React.JSX.Element {
       aria-labelledby="five-decisions-heading"
       className="relative overflow-hidden bg-white"
     >
-      <div className="relative z-10 va-shell pt-16 pb-20 lg:pt-24 lg:pb-28">
+      <div className="relative z-10 va-shell pt-14 pb-16 lg:pt-20 lg:pb-20">
         {/* 34% gives the headline a 438px measure — exactly enough to set
             "Every recommendation" on one line, so the block is three lines with
             no one-word orphan. items-center kills the 400x365 void that opened

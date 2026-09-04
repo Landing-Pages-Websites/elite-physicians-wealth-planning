@@ -195,7 +195,7 @@ export function NextDecision(): React.JSX.Element {
       className="va-decision relative overflow-hidden text-ivory"
     >
       <div className="relative z-10">
-        <div className="relative mx-auto flex min-h-[min(864px,100svh)] max-w-5xl flex-col justify-center px-6 py-20 sm:px-10 lg:py-24">
+        <div className="relative mx-auto flex max-w-5xl flex-col justify-center px-6 py-16 sm:px-10 lg:py-20">
           <h2
             id="next-decision-heading"
             className="va-reveal text-center text-display-l font-display leading-[1.06] font-medium tracking-[-0.02em] text-balance text-white"
