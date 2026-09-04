@@ -15,13 +15,49 @@
   content: "";
   position: absolute;
   inset: 0;
-  background-image: url("/images/design/a/01-one-plan/hero-office-reconstructed.jpg");
-  /* The source has a hard-edged composite patch in its right third. Scaling up
-     and anchoring left pushes that seam off-frame, so the scrim no longer has
-     to hide the whole photograph to hide the defect. */
-  background-size: 168% auto;
-  background-position: 12% 42%;
-  background-repeat: no-repeat;
+  /* NO PHOTOGRAPH. hero-office-reconstructed.jpg measures mean luminance
+     0.0127 with 1.1% of pixels above near-black — it is not a dark photo, it is
+     a broken render. Brightened 6x it shows a hard-edged rectangular patch of
+     horizontal smear bands through the right-centre and heavy vertical banding
+     across the left. No scrim setting can make it read, and lightening only
+     exposes the damage, so it is not requested at all: shipping a 1920x1080
+     JPEG that renders as nothing costs bytes for no picture.
+
+     Until a usable plate is supplied (build/CLIENT-GAPS.md), the band gets an
+     intentional ground instead of a failed one — a lit field behind the
+     portrait so the hero reads as composed rather than as an image that did
+     not load. */
+  background:
+    radial-gradient(
+      96% 84% at 72% 42%,
+      rgba(220, 232, 242, 0.52) 0%,
+      rgba(220, 232, 242, 0.3) 26%,
+      rgba(220, 232, 242, 0.12) 48%,
+      rgba(220, 232, 242, 0.03) 66%,
+      rgba(220, 232, 242, 0) 78%
+    ),
+    linear-gradient(158deg, var(--color-ink) 0%, var(--color-ink-deep) 58%, var(--color-ink-deeper) 100%);
+}
+
+/* The lit field exists to sit behind the portrait. On mobile the layout stacks,
+   so at 72%/42% it lands under the lede instead and drops it to 3.52:1. Below
+   lg it moves down to where the portrait actually is, and eases off. */
+@media (max-width: 1023px) {
+  .va-hero::before {
+    background:
+      radial-gradient(
+        120% 52% at 62% 78%,
+        rgba(220, 232, 242, 0.34) 0%,
+        rgba(220, 232, 242, 0.16) 34%,
+        rgba(220, 232, 242, 0) 68%
+      ),
+      linear-gradient(
+        166deg,
+        var(--color-ink) 0%,
+        var(--color-ink-deep) 58%,
+        var(--color-ink-deeper) 100%
+      );
+  }
 }
 
 .va-hero::after {
@@ -29,18 +65,12 @@
   position: absolute;
   inset: 0;
   pointer-events: none;
-  background:
-    linear-gradient(
-      90deg,
-      rgba(4, 14, 27, 0.93) 0%,
-      rgba(4, 14, 27, 0.74) 46%,
-      rgba(4, 14, 27, 0.52) 100%
-    ),
-    radial-gradient(
-      70% 80% at 36% 55%,
-      rgba(255, 255, 255, 0.03),
-      rgba(4, 14, 27, 0.22)
-    );
+  background: linear-gradient(
+    92deg,
+    rgba(4, 14, 27, 0.5) 0%,
+    rgba(4, 14, 27, 0.22) 44%,
+    rgba(4, 14, 27, 0) 72%
+  );
 }
 
 /* Ivory paper portrait card surface (kept as CSS, not an image). */

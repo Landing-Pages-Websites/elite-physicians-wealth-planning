@@ -132,3 +132,23 @@ hands or a replacement image.
 crop, same ivory ring-1 card, on one page. Independent of the provenance question in 1.1:
 when the real photograph arrives, supply or authorise two different crops (tight for the
 hero, environmental for the planner section).
+
+### 4.3 The hero plate is a broken render
+`public/images/design/a/01-one-plan/hero-office-reconstructed.jpg` measures a mean
+luminance of **0.0127**, with 1.1% of its pixels above near-black. Brightened 6x it
+resolves into a hard-edged rectangular patch of horizontal smear bands across the
+right-centre and heavy vertical banding down the left. It is not an underexposed
+photograph — it is damaged, and no scrim or exposure adjustment recovers it.
+
+Two of Direction A's other plates are in the same state:
+
+| Asset | Mean luminance | Above near-black |
+|---|---|---|
+| `a/01-one-plan/hero-office-reconstructed.jpg` | 0.0127 | 1.1% |
+| `a/08-next-decision/office-background-reconstructed.jpg` | 0.0098 | **0.0%** |
+| `a/02-career-signal/office-background-reconstructed.jpg` | 0.0283 | 4.8% |
+
+None is requested by the CSS any more. Until usable plates are supplied, those
+bands run on designed grounds. **A replacement hero photograph is a client
+deliverable** — a low-key physician consultation-office scene, per the
+`extraction_plan` recipe, with no composite seam.
