@@ -1,25 +1,32 @@
 import { FIVE_DECISIONS } from "@/lib/content";
 
-function DisciplineRow({
+/**
+ * An editorial list, not a table.
+ *
+ * This section was a five-row ledger: a tinted block, table borders, a gold
+ * rail down the column gutter with a hollow node on every row, and each
+ * discipline's name sitting ~350px from its own sentence. Three separator
+ * systems doing one job, and a name far enough from its description that the
+ * eye read two unrelated lists. It looked like exported data.
+ *
+ * The copy is five facets of one life — not a sequence, not a dataset — so it
+ * is set the way a magazine sets a list: the name large enough to carry the
+ * section, its sentence beside it on a shared baseline, and a hairline between
+ * entries. Hierarchy comes from the type scale instead of from chrome.
+ */
+function Discipline({
   discipline,
 }: {
   discipline: (typeof FIVE_DECISIONS.disciplines)[number];
 }): React.JSX.Element {
   return (
-    <li className="relative grid grid-cols-1 gap-2 border-t border-ink/10 py-5 pr-6 pl-5 first:border-t-0 sm:grid-cols-[minmax(0,44%)_minmax(0,1fr)] sm:gap-8 sm:pl-7">
-      <h3 className="font-display text-display-s leading-tight font-semibold tracking-[-0.01em] text-ink">
+    <li className="grid gap-2.5 border-t border-ink/12 py-6 first:border-t-0 first:pt-0 lg:grid-cols-[minmax(0,19rem)_minmax(0,1fr)] lg:items-baseline lg:gap-x-10 lg:py-7">
+      <h3 className="font-display text-[clamp(1.6rem,2.3vw,2.15rem)] leading-[1.1] font-medium tracking-[-0.015em] text-ink">
         {discipline.name}
       </h3>
-      <p className="self-center max-w-[44ch] font-body text-body-m leading-[1.6] text-pretty text-charcoal">
+      <p className="max-w-[46ch] font-body text-body-m leading-[1.65] text-charcoal text-pretty">
         {discipline.summary}
       </p>
-      {/* Node on the shared spine. z-20 is load-bearing: the rail carries z-10
-          against the opaque rows, so without it the 2px gold bar paints through
-          the node's white fill and every stop reads as crossed out. */}
-      <span
-        aria-hidden="true"
-        className="absolute top-1/2 left-0 z-20 h-2.5 w-2.5 -translate-x-[5px] -translate-y-1/2 rounded-full border-2 border-gold bg-white sm:left-[46.5%]"
-      />
     </li>
   );
 }
@@ -31,47 +38,35 @@ export function FiveDecisions(): React.JSX.Element {
       aria-labelledby="five-decisions-heading"
       className="relative overflow-hidden bg-white"
     >
-      <div className="relative z-10 va-shell pt-16 pb-20 lg:pt-24 lg:pb-28">
-        {/* 34% gives the headline a 438px measure — exactly enough to set
-            "Every recommendation" on one line, so the block is three lines with
-            no one-word orphan. items-center kills the 400x365 void that opened
-            under a top-aligned sticky heading beside a 560px ledger. */}
-        <div className="lg:grid lg:grid-cols-[minmax(0,34%)_minmax(0,1fr)] lg:items-center lg:gap-x-16">
-          <div>
+      <div className="va-shell relative z-10 pt-16 pb-14 lg:pt-20 lg:pb-16">
+        <div className="lg:grid lg:grid-cols-[minmax(0,30%)_minmax(0,1fr)] lg:items-start lg:gap-x-20">
+          {/* The heading holds while the list scrolls past it, which is what
+              makes the five entries read as facets of one thing rather than as
+              five rows. It also removes the void that opened under a
+              top-aligned heading beside a much taller list. */}
+          <div className="lg:sticky lg:top-[calc(var(--header-h)+5rem)]">
             <p className="font-body text-[11px] font-semibold tracking-[0.22em] text-ink uppercase">
               {FIVE_DECISIONS.orientation}
             </p>
             <h2
               id="five-decisions-heading"
-              className="va-reveal mt-5 max-w-[20ch] text-display-m font-display leading-[1.08] font-medium tracking-[-0.02em] text-balance text-ink"
+              className="va-reveal mt-5 max-w-[18ch] text-display-m font-display leading-[1.08] font-medium tracking-[-0.02em] text-balance text-ink"
             >
               {FIVE_DECISIONS.headline}
             </h2>
-            {/* The boundary note used to hang off the end of the spine behind a
-                2px gold border, which made the disclaimer a sixth stop on the
-                route. It is small print: plain text, in the header column. */}
-            <p className="mt-10 max-w-[38ch] font-body text-body-s leading-[1.6] text-charcoal/90">
+            {/* The only gold in the section, and it marks a real edge: where the
+                heading ends and the list begins. */}
+            <span aria-hidden="true" className="mt-7 block h-px w-14 bg-gold" />
+            <p className="mt-7 max-w-[40ch] font-body text-body-s leading-[1.6] text-charcoal/90">
               {FIVE_DECISIONS.boundaryNote}
             </p>
           </div>
-          <div className="relative mt-12 w-full lg:mt-0">
-            {/* Shared vertical spine: left rail on mobile, in the column gutter
-                on sm+. z-10 is load-bearing — the ledger is opaque ivory and
-                later in DOM order, so without it the rows erase the spine and
-                the motif becomes unattached fragments. */}
-            <span
-              aria-hidden="true"
-              className="absolute inset-y-0 left-0 z-10 w-[2px] bg-gold sm:left-[46.5%]"
-            />
-            {/* One continuous tinted field. The alternating ivory/mist zebra
-                was a third separator on top of the spine and the nodes, and it
-                is what made the ledger read as a generated data table. */}
-            <ol className="bg-ivory">
-              {FIVE_DECISIONS.disciplines.map((discipline) => (
-                <DisciplineRow key={discipline.name} discipline={discipline} />
-              ))}
-            </ol>
-          </div>
+
+          <ol className="mt-12 lg:mt-0">
+            {FIVE_DECISIONS.disciplines.map((discipline) => (
+              <Discipline key={discipline.name} discipline={discipline} />
+            ))}
+          </ol>
         </div>
       </div>
     </section>
