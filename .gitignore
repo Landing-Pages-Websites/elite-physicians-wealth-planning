@@ -7,3 +7,6 @@ out
 next-env.d.ts
 .DS_Store
 .next-verify
+
+# stray archives dropped into the working tree
+*.zip
