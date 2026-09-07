@@ -45,7 +45,9 @@ function PlannerNarrative(): React.JSX.Element {
       </span>
       <h2
         id="accountable-planner-heading"
-        className="mt-[1.3cqw] text-[2.5cqw] leading-[1.12] font-bold tracking-[-0.02em] text-ink"
+        // Unbounded, line 1 pulled the next sentence's article onto it and read
+        // "One planning relationship. A". The frame breaks at the sentence.
+        className="mt-[1.3cqw] max-w-[24ch] text-[2.5cqw] leading-[1.12] font-bold tracking-[-0.02em] text-ink"
       >
         {ACCOUNTABLE_PLANNER.headline}
       </h2>
@@ -144,7 +146,10 @@ export default function AccountablePlanner(): React.JSX.Element {
                     visitor — it stays in content.ts as a constraint and in
                     build/CLIENT-GAPS.md, and the action takes the space rather
                     than leaving the plate with a hole in it. */}
-                <div className="mt-auto pt-[1.6cqw]">
+                {/* `mt-auto` pinned this to the bottom of the plate and left
+                    227px of empty column above it — the hole the note above
+                    says it exists to avoid. It follows the paragraph instead. */}
+                <div className="pt-[1.6cqw]">
                   <MeetAction />
                 </div>
               </div>

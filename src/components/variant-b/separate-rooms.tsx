@@ -13,26 +13,50 @@ import { NodeRule, ScaleBar, TargetRosette } from "./instrument";
  * idea rather than the same drawing.
  *
  * The field is a generated plate carrying no lettering at all; every label is
- * live text positioned over its island. Island centres were read off a
- * percentage grid laid over the plate, so they are measurements, not guesses.
+ * live text positioned over its island.
+ *
+ * Those island centres HAD been "read off a percentage grid laid over the
+ * plate", and reading them by eye is what the reviewer saw as "the text is not
+ * centered so it looks sloppy". Every one of the six sat 2 to 3% of the field
+ * height — about 24px on a 1440 canvas — above the island it names, and
+ * "Insurance professional" was also set wider than its island, so it broke out
+ * of the shape on both sides.
+ *
+ * `x`/`y` below are now the island's measured centre, and `measure` is the
+ * width actually available INSIDE the island across the height the label block
+ * occupies — both taken off contour-field.jpg by filling each island's outline
+ * and reading its horizontal run. A label can no longer be set wider than the
+ * shape it sits on, because `measure` caps it.
+ *
+ * The type came down a step with it. At the old size "Insurance professional"
+ * needed 11.2% of the field and its island offers 10.9%; 1.7cqw is the largest
+ * size at which all five role labels clear their own shapes. It is one size for
+ * all five on purpose — CPA and Attorney sit side by side at the same height,
+ * and sizing each label to its own island would show as a mismatch there.
+ *
+ * The unit is cqw, not vw. The canvas declares `@container` and the comment
+ * below already claimed cqw, but the labels were sized in vw, so their type
+ * tracked the window instead of the frame they are positioned on.
  */
 type Island = {
   role: (typeof SEPARATE_ROOMS.roles)[number] | "priorities";
   label: string;
-  /** Centre of the island, as a percentage of the 16:9 field. */
+  /** Measured centre of the island, as a percentage of the 16:9 field. */
   x: number;
   y: number;
+  /** Width available inside the island across the label block, same units. */
+  measure: number;
   /** Priorities sits on the one filled island and is set larger. */
   hub?: true;
 };
 
 const ISLANDS: readonly Island[] = [
-  { role: "CPA", label: "CPA", x: 49, y: 21 },
-  { role: "Attorney", label: "Attorney", x: 79, y: 21 },
-  { role: "priorities", label: SEPARATE_ROOMS.centerLabel, x: 67, y: 44, hub: true },
-  { role: "TPA", label: "TPA", x: 90, y: 47 },
-  { role: "Insurance professional", label: "Insurance\nprofessional", x: 49.5, y: 68 },
-  { role: "Financial advisor", label: "Financial\nadvisor", x: 71, y: 79 },
+  { role: "CPA", label: "CPA", x: 48.5, y: 23.4, measure: 9.5 },
+  { role: "Attorney", label: "Attorney", x: 78.6, y: 23.9, measure: 8.6 },
+  { role: "priorities", label: SEPARATE_ROOMS.centerLabel, x: 67.2, y: 47.1, measure: 13, hub: true },
+  { role: "TPA", label: "TPA", x: 90.6, y: 49.9, measure: 11.2 },
+  { role: "Insurance professional", label: "Insurance\nprofessional", x: 48.35, y: 71.2, measure: 11.5 },
+  { role: "Financial advisor", label: "Financial\nadvisor", x: 72.45, y: 79.7, measure: 12.6 },
 ] as const;
 
 /** The small crosshair the frame sets above each island's name. */
@@ -59,7 +83,8 @@ function IslandLabel({ island }: { island: Island }): React.JSX.Element {
       style={{
         left: `${island.x}%`,
         top: `${island.y}%`,
-        fontSize: island.hub ? "clamp(1.15rem,2.5vw,2.3rem)" : "clamp(0.95rem,1.85vw,1.75rem)",
+        width: `${island.measure}%`,
+        fontSize: island.hub ? "clamp(1.15rem,2.5cqw,2.3rem)" : "clamp(0.95rem,1.65cqw,1.55rem)",
       }}
     >
       {!island.hub && <IslandMark />}

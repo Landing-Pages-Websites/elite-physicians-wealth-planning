@@ -83,7 +83,9 @@ function PathCard({
   const t = compact
     ? { pad: "px-6 py-6", title: "text-xl", gap: "mt-3", body: "text-body-s", act: "mt-6" }
     : {
-        pad: "px-[2.2cqw] py-[1.9cqw]",
+        // 2.2cqw left the right card's title ~2px short of one line, stranding
+        // "Guide" alone where the frame sets the whole title on one.
+        pad: "px-[1.7cqw] py-[1.9cqw]",
         title: "text-[1.42cqw]",
         gap: "mt-[0.7cqw]",
         body: "text-[0.95cqw]",

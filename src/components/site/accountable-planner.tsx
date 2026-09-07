@@ -54,7 +54,7 @@ function PlannerNarrative({ compact }: { compact?: true }): React.JSX.Element {
       <h2
         id="accountable-planner-heading"
         className={`va-reveal font-display leading-[1.14] font-medium tracking-[-0.01em] text-ink ${
-          compact ? "mt-5 text-display-m text-balance" : "mt-[1.6cqw] text-[3.05cqw]"
+          compact ? "mt-5 text-display-m text-balance" : "mt-[1.6cqw] text-[3.9cqw]"
         }`}
       >
         {ACCOUNTABLE_PLANNER.headline}
@@ -122,7 +122,10 @@ export function AccountablePlanner(): React.JSX.Element {
           </div>
         </figure>
 
-        <div className="absolute top-[17.5%] left-[52.7%] w-[37.4%]">
+        {/* 37.4% is ~47px narrower than the frame's narrative column, which
+            broke the h2 mid-clause and stranded the article "A" at the end of
+            line 1. At 40.5% line 1 breaks after the full stop, as drawn. */}
+        <div className="absolute top-[17.5%] left-[52.7%] w-[40.5%]">
           <PlannerNarrative />
         </div>
       </div>

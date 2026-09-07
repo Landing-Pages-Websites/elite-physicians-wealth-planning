@@ -23,7 +23,8 @@ const browser = await puppeteer.launch({
 });
 const page = await browser.newPage();
 await page.setViewport({ width, height: 900, deviceScaleFactor: 1 });
-await page.goto(BASE + route, { waitUntil: "networkidle0", timeout: 60000 });
+// A dev server keeps its HMR socket open, so networkidle0 never fires there.
+await page.goto(BASE + route, { waitUntil: process.env.WAIT ?? "networkidle0", timeout: 60000 });
 await page.addStyleTag({
   content: `*,*::before,*::after{animation:none!important;transition:none!important}
   .va-reveal{opacity:1!important;transform:none!important}`,

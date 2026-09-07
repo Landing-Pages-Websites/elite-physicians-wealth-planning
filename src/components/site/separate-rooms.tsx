@@ -28,7 +28,34 @@ import {
  * Consult Ledger" — the internal A/B direction codename, not the client's
  * brand. Shipping it would publish a build artifact as the practice's identity.
  *
- * Boxes measured from public/design/a/refs/03-separate-rooms.png at 1536x864.
+ * Every number below is measured, not read off the frame by eye, because eye
+ * is what produced the reviewer's "the text is not centered so it looks
+ * sloppy". Two separate errors were stacking:
+ *
+ *   1. The boxes did not match the assets. Each plan was placed in a box of a
+ *      different aspect ratio and then drawn `object-contain`, so the browser
+ *      letterboxed it — up to 34px of dead margin per side. Every plan
+ *      therefore rendered SMALLER than the frame draws it, and the name, which
+ *      was centred on the BOX, drifted away from the drawing inside it.
+ *   2. The names are not centred on their plans in the frame. Each sits in the
+ *      clear floor its drawing leaves — up to 6.6% of the plan's width off
+ *      centre — so centring them was wrong even with the box fixed.
+ *
+ * `box` is now the asset's true position, recovered by cross-correlating each
+ * transparent PNG against the reference frame: all five match at 1.000, i.e.
+ * the assets sit in the frame at 1:1 and these are their exact coordinates.
+ * Boxes are at the asset's own aspect ratio, so nothing letterboxes.
+ *
+ * `label` is where the frame actually sets the lockup, recovered by masking the
+ * frame down to the pixels the asset leaves transparent and reading the icon,
+ * the name and the gold rule out of what remains. Two of the five needed the
+ * gold spoke crossing the plan excluded first, which is why the numbers are
+ * taken inside the name's own column span.
+ *
+ * The frame also sets the two names that wrap one step smaller — 28.5px against
+ * 33.5px on the 1536 frame — which is how "Insurance professional" fits a plan
+ * narrower than the word. Solved against the shipped Cormorant Garamond by
+ * fitting rendered ink to the measured ink, not guessed from cap heights.
  */
 type RoomSpec = {
   role: (typeof SEPARATE_ROOMS.roles)[number];
@@ -37,8 +64,13 @@ type RoomSpec = {
   width: number;
   height: number;
   Icon: (props: { className?: string }) => React.JSX.Element;
-  /** Plan box and spoke endpoints, percentages of the frame. */
+  /** Plan box, percentages of the frame. Matches the asset's aspect ratio. */
   box: { left: number; top: number; width: number; height: number };
+  /**
+   * Where the frame sets this plan's lockup, as a percentage of the PLAN, and
+   * the measure the name wraps to. `x`/`y` are the centre of icon-name-rule.
+   */
+  label: { x: number; y: number; measure: number };
   /** Where the spoke meets this plan, and where it leaves the hub. */
   spoke: { x1: number; y1: number; x2: number; y2: number };
 };
@@ -53,7 +85,8 @@ const ROOMS: readonly RoomSpec[] = [
     width: 422,
     height: 278,
     Icon: CalculatorIcon,
-    box: { left: 34.8, top: 9.8, width: 25.7, height: 24.9 },
+    box: { left: 32.81, top: 6.48, width: 27.47, height: 32.18 },
+    label: { x: 55.6, y: 42.4, measure: 46 },
     spoke: { x1: 906, y1: 350, x2: 742, y2: 256 },
   },
   {
@@ -63,7 +96,8 @@ const ROOMS: readonly RoomSpec[] = [
     width: 494,
     height: 278,
     Icon: ScalesIcon,
-    box: { left: 68.4, top: 9, width: 28, height: 25.7 },
+    box: { left: 66.54, top: 6.48, width: 32.16, height: 32.18 },
+    label: { x: 43.4, y: 41.7, measure: 46 },
     spoke: { x1: 1038, y1: 350, x2: 1232, y2: 256 },
   },
   {
@@ -73,7 +107,8 @@ const ROOMS: readonly RoomSpec[] = [
     width: 316,
     height: 260,
     Icon: ShieldPlusIcon,
-    box: { left: 34.8, top: 39.4, width: 19.2, height: 22.6 },
+    box: { left: 33.01, top: 35.65, width: 20.57, height: 30.09 },
+    label: { x: 55.5, y: 43.1, measure: 46 },
     spoke: { x1: 877, y1: 425, x2: 790, y2: 425 },
   },
   {
@@ -83,7 +118,8 @@ const ROOMS: readonly RoomSpec[] = [
     width: 388,
     height: 261,
     Icon: UmbrellaIcon,
-    box: { left: 75.2, top: 38.8, width: 21.2, height: 24.3 },
+    box: { left: 73.31, top: 35.53, width: 25.26, height: 30.21 },
+    label: { x: 47.3, y: 46.4, measure: 40 },
     spoke: { x1: 1067, y1: 425, x2: 1155, y2: 425 },
   },
   {
@@ -93,7 +129,8 @@ const ROOMS: readonly RoomSpec[] = [
     width: 411,
     height: 278,
     Icon: ChartBarIcon,
-    box: { left: 43.3, top: 66, width: 24.4, height: 26 },
+    box: { left: 41.86, top: 63.19, width: 26.76, height: 32.18 },
+    label: { x: 47.6, y: 42.4, measure: 30 },
     spoke: { x1: 972, y1: 520, x2: 972, y2: 592 },
   },
 ] as const;
@@ -145,6 +182,8 @@ function NetworkRoute(): React.JSX.Element {
 /** The plan, with its name set inside as the frame does. */
 function RoomFigure({ room }: { room: RoomSpec }): React.JSX.Element {
   const { Icon } = room;
+  // The frame sets a name that wraps one step down so it clears its own walls.
+  const wraps = room.role.includes(" ");
   return (
     <figure
       className="absolute"
@@ -159,16 +198,27 @@ function RoomFigure({ room }: { room: RoomSpec }): React.JSX.Element {
         src={room.src}
         alt={room.alt}
         fill
-        sizes="(min-width: 1024px) 26vw, 256px"
+        sizes="(min-width: 1024px) 33vw, 256px"
         className="object-contain"
       />
-      {/* Centred on the plan: mark, name, rule — the frame's own lockup. */}
-      <figcaption className="absolute inset-0 flex flex-col items-center justify-center">
-        <Icon className="h-[1.9cqw] w-[1.9cqw] text-gold" />
-        <span className="mt-[0.5cqw] max-w-[8ch] text-center font-display text-[1.75cqw] leading-[1.1] font-medium text-ink">
+      {/* On the plan's own clear floor, not at its centre: mark, name, rule. */}
+      <figcaption
+        className="absolute flex -translate-x-1/2 -translate-y-1/2 flex-col items-center"
+        style={{
+          left: `${room.label.x}%`,
+          top: `${room.label.y}%`,
+          width: `${room.label.measure}%`,
+        }}
+      >
+        <Icon className="h-[2.2cqw] w-[2.2cqw] text-gold" />
+        <span
+          className={`mt-[0.6cqw] text-center font-display leading-[1.1] font-medium text-ink ${
+            wraps ? "text-[1.86cqw]" : "text-[2.18cqw]"
+          }`}
+        >
           {room.role}
         </span>
-        <span aria-hidden="true" className="mt-[0.55cqw] block h-px w-[3.4cqw] bg-gold" />
+        <span aria-hidden="true" className="mt-[0.8cqw] block h-px w-[3.4cqw] bg-gold" />
       </figcaption>
     </figure>
   );
@@ -201,7 +251,7 @@ function CopyBlock({ compact }: { compact?: true }): React.JSX.Element {
       <h2
         id="separate-rooms-heading"
         className={`va-reveal font-display leading-[1.14] font-medium tracking-[-0.01em] text-ink ${
-          compact ? "mt-5 text-display-m text-balance" : "mt-[1.5cqw] text-[3.05cqw]"
+          compact ? "mt-5 text-display-m text-balance" : "mt-[1.5cqw] text-[3.9cqw]"
         }`}
       >
         {SEPARATE_ROOMS.headline}
@@ -237,7 +287,10 @@ export function SeparateRooms(): React.JSX.Element {
         {ROOMS.map((room) => (
           <RoomFigure key={room.role} room={room} />
         ))}
-        <p className="absolute top-[45.5%] left-[63.3%] w-[10.5%] -translate-x-1/2 -translate-y-1/2 text-center font-display text-[1.6cqw] leading-[1.15] font-medium text-ink">
+        {/* The hub label sat 2.8% of the frame — 24px — above the ring it is
+            set in. Measured off the frame's own ink: centre (63.48%, 48.32%),
+            8.40% wide, wrapping after "Your". */}
+        <p className="absolute top-[48.32%] left-[63.48%] w-[9%] -translate-x-1/2 -translate-y-1/2 text-center font-display text-[1.6cqw] leading-[1.15] font-medium text-ink">
           {SEPARATE_ROOMS.centerLabel}
         </p>
         <div className="absolute top-[18%] left-[3.6%] w-[30%]">
@@ -281,7 +334,12 @@ export function SeparateRooms(): React.JSX.Element {
                       />
                       <figcaption className="absolute inset-0 flex flex-col items-center justify-center">
                         <Icon className="h-5 w-5 text-gold" />
-                        <span className="mt-1 max-w-[9ch] bg-ivory/80 px-1 text-center font-display text-lg leading-tight font-medium text-ink">
+                        {/* max-w-[9ch] is narrower than "professional", and a
+                            max-width cannot break a word: the line overhung
+                            its own ivory chip and sat off the lockup's axis.
+                            The chip has to be at least as wide as the longest
+                            word it backs. */}
+                        <span className="mt-1 max-w-[14ch] bg-ivory/80 px-1 text-center font-display text-lg leading-tight font-medium text-ink">
                           {room.role}
                         </span>
                         <span aria-hidden="true" className="mt-1 block h-px w-10 bg-gold" />

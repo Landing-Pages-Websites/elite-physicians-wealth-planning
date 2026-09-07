@@ -33,7 +33,8 @@ export function SiteFooter(): React.JSX.Element {
             {BRAND.name}
             <span className="align-super text-[0.6em]">™</span>
           </p>
-          <p className="mt-1 font-body text-[10px] font-semibold tracking-[0.28em] text-ink/70 uppercase">
+          {/* Tracked uppercase at 390 stranded "Financial" on its own line. */}
+          <p className="mt-1 font-body text-[10px] font-semibold tracking-[0.28em] text-balance text-ink/70 uppercase">
             {BRAND.poweredBy}
           </p>
           <span aria-hidden="true" className="mt-5 block h-px w-12 bg-gold" />
