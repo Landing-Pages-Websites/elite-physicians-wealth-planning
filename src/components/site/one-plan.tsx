@@ -198,7 +198,7 @@ export function OnePlan(): React.JSX.Element {
         </ul>
 
         <div className="mt-6 flex flex-col gap-3 pb-2 sm:flex-row sm:items-center sm:gap-6">
-          <p className="flex items-center gap-3 font-body text-body-s font-medium tracking-[0.14em] text-gold uppercase">
+          <p className="flex items-center gap-3 font-body text-body-s font-medium tracking-[0.14em] text-balance text-gold uppercase">
             <CompassRose className="h-6 w-6 shrink-0" />
             {HERO.identityLine}
           </p>

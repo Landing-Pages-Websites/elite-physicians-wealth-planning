@@ -141,8 +141,12 @@ export default function OnePlanHero(): React.JSX.Element {
               The photograph fills its column now, and the portrait moved to the
               left column where it belongs: the face of the person you are about
               to book sits with the button that books him. */}
-          <div className="relative mt-12 min-h-[22rem] lg:col-span-6 lg:mt-0">
-            <div className="absolute inset-0 overflow-hidden bg-mist [filter:saturate(0.82)_contrast(1.02)]">
+          {/* Below lg the photograph took the whole container while the plaque
+              stayed in flow on top of it, covering the top 62% of the frame —
+              both subjects' heads. The photograph gets its own row on mobile
+              and only goes behind the plaque once the plaque floats, at lg. */}
+          <div className="relative mt-12 lg:col-span-6 lg:mt-0 lg:min-h-[22rem]">
+            <div className="relative aspect-4/3 w-full overflow-hidden bg-mist [filter:saturate(0.82)_contrast(1.02)] lg:absolute lg:inset-0 lg:aspect-auto">
               <Image
                 src="/images/design/b/01-one-plan/planning-conversation.jpg"
                 alt="A physician and a planner in conversation across a consulting table"

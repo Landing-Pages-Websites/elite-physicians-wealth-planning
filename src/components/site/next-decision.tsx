@@ -144,7 +144,10 @@ export function NextDecision(): React.JSX.Element {
       <div className="@container relative z-10 hidden aspect-1536/864 w-full lg:block">
         <h2
           id="next-decision-heading"
-          className="va-reveal absolute top-[6.5%] right-0 left-0 mx-auto max-w-[24ch] text-center font-display text-[4.05cqw] leading-[1.1] font-medium tracking-[-0.02em] text-ivory-bright"
+          // 24ch, then 21ch, both fit "Choose the next step that" on line 1.
+          // The frame breaks after "step"; 18ch is inside the 17-21ch window
+          // that forces it without breaking earlier, after "next".
+          className="va-reveal absolute top-[6.5%] right-0 left-0 mx-auto max-w-[18ch] text-center font-display text-[4.05cqw] leading-[1.1] font-medium tracking-[-0.02em] text-ivory-bright"
         >
           {headline}
         </h2>
@@ -154,7 +157,10 @@ export function NextDecision(): React.JSX.Element {
           <PathRing>
             <CalendarClockIcon className="h-[2.2cqw] w-[2.2cqw]" />
           </PathRing>
-          <h3 className="mt-[1.5cqw] max-w-[11ch] font-display text-[2.2cqw] leading-[1.15] font-medium text-ivory-bright">
+          {/* The frame centres both path headings over their column, with the
+              gold dot on the rule below landing under the heading's centre.
+              Left-aligned, the heading and the dot sat on two different axes. */}
+          <h3 className="mx-auto mt-[1.5cqw] max-w-[11ch] text-center font-display text-[2.2cqw] leading-[1.15] font-medium text-ivory-bright">
             {strategyCall.label}
           </h3>
           <NodeDivider />
@@ -179,7 +185,7 @@ export function NextDecision(): React.JSX.Element {
               <FileLockIcon className="h-[2.2cqw] w-[2.2cqw]" />
             </PathRing>
           </span>
-          <h3 className="mt-[1.5cqw] font-display text-[2.2cqw] leading-[1.15] font-medium text-ivory-bright">
+          <h3 className="mt-[1.5cqw] text-center font-display text-[2.2cqw] leading-[1.15] font-medium text-ivory-bright">
             {guide.label}
           </h3>
           <NodeDivider />

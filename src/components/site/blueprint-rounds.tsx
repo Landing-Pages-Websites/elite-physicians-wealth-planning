@@ -91,7 +91,9 @@ function StepGroup({ step, index }: { step: Step; index: number }): React.JSX.El
         <Icon className="h-[1.7cqw] w-[1.7cqw] text-gold" />
       </span>
       <div className="pt-[0.2cqw]">
-        <p className="font-display text-[2.05cqw] leading-none font-medium text-gold">
+        {/* Cormorant Garamond defaults to oldstyle figures, so "01" set an
+            x-height zero beside a serifed one and read as "OI". */}
+        <p className="font-display text-[2.05cqw] leading-none font-medium text-gold lining-nums">
           {phase.number}
         </p>
         <h3 className="mt-[0.35cqw] font-display text-[1.35cqw] leading-none font-medium text-ink">
@@ -127,7 +129,7 @@ function Intro({ compact }: { compact?: true }): React.JSX.Element {
       <h2
         id="blueprint-rounds-heading"
         className={`va-reveal font-display leading-[1.14] font-medium tracking-[-0.01em] text-ink ${
-          compact ? "mt-5 text-display-m text-balance" : "mt-[1.3cqw] max-w-[19ch] text-[3.05cqw]"
+          compact ? "mt-5 text-display-m text-balance" : "mt-[1.3cqw] max-w-[34ch] text-[3.9cqw]"
         }`}
       >
         {BLUEPRINT.headline}

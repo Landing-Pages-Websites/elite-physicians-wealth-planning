@@ -243,33 +243,52 @@
 }
 
 /* The frame bleeds the desk photograph off the LEFT edge behind the plate
-   rather than washing it across the whole band. The plate itself is the
-   generated one — the frame's own desk carries three fabricated book titles. */
+   rather than washing it across the whole band.
+
+   This was pointed at office-desk-ground.jpg, a 2400x1200 landscape whose only
+   subject — a desk corner and a leather chair — sits in its right third. Cover
+   into a 317px strip at 8% 62% showed the source's x 152-640, which is blank
+   wall, so the band rendered as a flat tan gradient with a hard seam where the
+   feather ran out. The asset was not the problem; the crop was.
+
+   planner-desk-strip.jpg is shot for this slot: 1024x2048 portrait, the frame's
+   own still life — marble, book stack, speckled mug, open notebook, fountain
+   pen — distributed down the full height. It carries no lettering. The frame's
+   own desk sets three fabricated book titles, which this build has shipped
+   twice and will not ship again. */
 .va-planner::before {
   content: "";
   position: absolute;
   inset-block: 0;
   inset-inline-start: 0;
   width: 22%;
-  background-image: url("/images/design/a/07-accountable-planner/office-desk-ground.jpg");
+  background-image: url("/images/design/a/07-accountable-planner/planner-desk-strip.jpg");
   background-size: cover;
-  background-position: 8% 62%;
+  background-position: center;
   background-repeat: no-repeat;
 }
 
-/* A soft feather into the cream so the strip has no hard vertical seam. */
+/* A soft feather into the cream so the strip has no hard vertical seam.
+
+   It did have one. The feather ran 30% wide against a 22% strip, so the strip's
+   right edge fell at 73% along the ramp, where the gradient had only reached
+   alpha 0.67 — leaving a 0.33 step exactly at the photograph's edge, measured
+   as a 79-114 sum-of-channel jump against a median horizontal step of 2.
+   The ramp now reaches full cream at 85% of a 26% feather, which is the strip's
+   own edge, so there is nothing left to step. */
 .va-planner::after {
   content: "";
   position: absolute;
   inset-block: 0;
   inset-inline-start: 0;
-  width: 30%;
+  width: 26%;
   pointer-events: none;
   background: linear-gradient(
     90deg,
     rgba(246, 242, 232, 0) 0%,
-    rgba(246, 242, 232, 0.18) 46%,
-    rgba(246, 242, 232, 0.82) 82%,
+    rgba(246, 242, 232, 0.16) 42%,
+    rgba(246, 242, 232, 0.72) 70%,
+    rgba(246, 242, 232, 1) 85%,
     rgba(246, 242, 232, 1) 100%
   );
 }

@@ -79,7 +79,10 @@ function StageMarker({ x, label }: { x: number; label: string }): React.JSX.Elem
       className="absolute flex -translate-x-1/2 -translate-y-full flex-col items-center"
       style={{ left: `${(x / FRAME.w) * 100}%`, top: `${(y / FRAME.h) * 100}%` }}
     >
-      <p className="mb-[1.1cqw] max-w-[13cqw] text-center text-[1.04cqw] leading-[1.3] font-bold text-ink">
+      {/* At 13cqw the first label set one wide line that came within 15px of
+          the section H2 — the frame leaves 33px. Breaking after "Resident to"
+          and shortening the stem drops the block clear. */}
+      <p className="mb-[1.1cqw] max-w-[10cqw] text-center text-[1.04cqw] leading-[1.3] font-bold text-ink">
         {label}
       </p>
       <span aria-hidden="true" className="h-[3.4cqw] w-px bg-ink/70" />

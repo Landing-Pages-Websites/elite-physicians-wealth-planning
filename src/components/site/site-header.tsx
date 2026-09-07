@@ -32,9 +32,15 @@ function Wordmark(): React.JSX.Element {
       href="/"
       className="flex shrink-0 flex-col gap-0.5 rounded-sm transition-opacity duration-200 hover:opacity-90"
     >
-      <span className="font-display text-[22px] font-medium whitespace-nowrap text-white sm:text-[27px] lg:text-[34px]">
+      {/* 22px here pushed the Menu button off the right edge of a 390 viewport:
+          the wordmark cannot wrap or shrink, so 24px padding + 32 characters +
+          the gap + a 56px button came to 448px in a 390px window. 17px is the
+          largest size that leaves the button its own padding at 390.
+          `align-super` floated the trademark above the cap line as a detached
+          glyph; an explicit vertical-align sits it on the cap. */}
+      <span className="font-display text-[17px] font-medium whitespace-nowrap text-white sm:text-[27px] lg:text-[34px]">
         {BRAND.name}
-        <span className="align-super text-[0.6em]">™</span>
+        <span className="align-[0.42em] text-[0.45em]">™</span>
       </span>
       <span className="hidden font-body text-[11px] font-semibold tracking-[0.24em] whitespace-nowrap text-gold uppercase sm:block">
         {BRAND.poweredBy}
@@ -52,7 +58,7 @@ export function SiteHeader(): React.JSX.Element {
       <a href="#main" className="skip-link font-body text-sm">
         Skip to content
       </a>
-      <div className="mx-auto flex w-full max-w-[1400px] items-center justify-between gap-6 px-6 py-2 sm:px-10 lg:px-14">
+      <div className="mx-auto flex w-full max-w-[1400px] items-center justify-between gap-3 px-6 py-2 sm:gap-6 sm:px-10 lg:px-14">
         <Wordmark />
 
         <nav aria-label="Primary" className="hidden items-center gap-7 xl:flex">

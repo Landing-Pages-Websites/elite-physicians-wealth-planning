@@ -31,9 +31,14 @@ type CardBox = {
 const CARDS: readonly CardBox[] = [
   { left: 37.3, top: 6.1, width: 31.2, photo: 32.1 },
   { left: 69.2, top: 6.1, width: 29.2, photo: 32.1 },
+  // The bottom row is not flush in the frame. The middle and right cards run
+  // their photos from y 50.9% to 75.7%; the LEFT card starts lower, at 57.9%,
+  // because the intro paragraph occupies that column above it — raising it to
+  // match the other two puts the photograph behind the paragraph and drops that
+  // text to 2.03:1. All three copy plates still begin together at ~75.8%.
   { left: 3.4, top: 57.9, width: 29.2, photo: 17.9 },
-  { left: 33.1, top: 57.9, width: 35.4, photo: 17.9 },
-  { left: 69.2, top: 57.9, width: 29.2, photo: 17.9 },
+  { left: 33.1, top: 50.9, width: 35.4, photo: 24.8 },
+  { left: 69.2, top: 50.9, width: 29.2, photo: 24.8 },
 ] as const;
 
 const IMAGES = [
