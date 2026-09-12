@@ -1,0 +1,261 @@
+{
+  "customer": "Elite Physicians Wealth Planning",
+  "selected_home_direction": "a",
+  "selected_direction_name": "The Consult Ledger",
+  "homepage_reference": "homepage-direction-a.reference.webp",
+  "page_count": 36,
+  "pages": [
+    {
+      "route": "/services",
+      "title": "Services for Physicians \u2014 Elite Physician Wealth Planning\u2122",
+      "canonical_png": "../pages/services/page.png",
+      "review_derivative": "services.review.webp",
+      "manifest": "../pages/services/section_manifest.json"
+    },
+    {
+      "route": "/tax-planning-for-physicians",
+      "title": "Tax Planning for Physicians \u2014 Elite Physician Wealth Planning\u2122",
+      "canonical_png": "../pages/tax-planning-for-physicians/page.png",
+      "review_derivative": "tax-planning-for-physicians.review.webp",
+      "manifest": "../pages/tax-planning-for-physicians/section_manifest.json"
+    },
+    {
+      "route": "/wealth-management-for-physicians",
+      "title": "Wealth Management for Physicians \u2014 Elite Physician Wealth Planning\u2122",
+      "canonical_png": "../pages/wealth-management-for-physicians/page.png",
+      "review_derivative": "wealth-management-for-physicians.review.webp",
+      "manifest": "../pages/wealth-management-for-physicians/section_manifest.json"
+    },
+    {
+      "route": "/retirement-planning-for-physicians",
+      "title": "Retirement Planning for Physicians \u2014 Elite Physician Wealth Planning\u2122",
+      "canonical_png": "../pages/retirement-planning-for-physicians/page.png",
+      "review_derivative": "retirement-planning-for-physicians.review.webp",
+      "manifest": "../pages/retirement-planning-for-physicians/section_manifest.json"
+    },
+    {
+      "route": "/practice-owner-planning",
+      "title": "Practice Owner Planning \u2014 Elite Physician Wealth Planning\u2122",
+      "canonical_png": "../pages/practice-owner-planning/page.png",
+      "review_derivative": "practice-owner-planning.review.webp",
+      "manifest": "../pages/practice-owner-planning/section_manifest.json"
+    },
+    {
+      "route": "/legacy-estate-planning",
+      "title": "Legacy & Estate Planning Coordination \u2014 Elite Physician Wealth Planning\u2122",
+      "canonical_png": "../pages/legacy-estate-planning/page.png",
+      "review_derivative": "legacy-estate-planning.review.webp",
+      "manifest": "../pages/legacy-estate-planning/section_manifest.json"
+    },
+    {
+      "route": "/who-we-serve",
+      "title": "Who We Serve \u2014 Elite Physician Wealth Planning\u2122",
+      "canonical_png": "../pages/who-we-serve/page.png",
+      "review_derivative": "who-we-serve.review.webp",
+      "manifest": "../pages/who-we-serve/section_manifest.json"
+    },
+    {
+      "route": "/physicians-specialists",
+      "title": "Financial Planning for Physicians & Specialists \u2014 Elite Physician Wealth Planning\u2122",
+      "canonical_png": "../pages/physicians-specialists/page.png",
+      "review_derivative": "physicians-specialists.review.webp",
+      "manifest": "../pages/physicians-specialists/section_manifest.json"
+    },
+    {
+      "route": "/financial-planning-for-surgeons",
+      "title": "Financial Planning for Surgeons \u2014 Elite Physician Wealth Planning\u2122",
+      "canonical_png": "../pages/financial-planning-for-surgeons/page.png",
+      "review_derivative": "financial-planning-for-surgeons.review.webp",
+      "manifest": "../pages/financial-planning-for-surgeons/section_manifest.json"
+    },
+    {
+      "route": "/financial-planning-for-dentists",
+      "title": "Financial Planning for Dentists \u2014 Elite Physician Wealth Planning\u2122",
+      "canonical_png": "../pages/financial-planning-for-dentists/page.png",
+      "review_derivative": "financial-planning-for-dentists.review.webp",
+      "manifest": "../pages/financial-planning-for-dentists/section_manifest.json"
+    },
+    {
+      "route": "/financial-planning-for-crnas-nps-pas",
+      "title": "Financial Planning for CRNAs, NPs & PAs \u2014 Elite Physician Wealth Planning\u2122",
+      "canonical_png": "../pages/financial-planning-for-crnas-nps-pas/page.png",
+      "review_derivative": "financial-planning-for-crnas-nps-pas.review.webp",
+      "manifest": "../pages/financial-planning-for-crnas-nps-pas/section_manifest.json"
+    },
+    {
+      "route": "/financial-planning-for-healthcare-executives",
+      "title": "Financial Planning for Healthcare Executives \u2014 Elite Physician Wealth Planning\u2122",
+      "canonical_png": "../pages/financial-planning-for-healthcare-executives/page.png",
+      "review_derivative": "financial-planning-for-healthcare-executives.review.webp",
+      "manifest": "../pages/financial-planning-for-healthcare-executives/section_manifest.json"
+    },
+    {
+      "route": "/physicians",
+      "title": "Who We Help \u2014 Elite Physician Wealth Planning\u2122",
+      "canonical_png": "../pages/physicians/page.png",
+      "review_derivative": "physicians.review.webp",
+      "manifest": "../pages/physicians/section_manifest.json"
+    },
+    {
+      "route": "/our-process",
+      "title": "The Elite Physician Wealth Blueprint\u2122 | Our Process",
+      "canonical_png": "../pages/our-process/page.png",
+      "review_derivative": "our-process.review.webp",
+      "manifest": "../pages/our-process/section_manifest.json"
+    },
+    {
+      "route": "/resources",
+      "title": "Physician Resource Center \u2014 Elite Physician Wealth Planning\u2122",
+      "canonical_png": "../pages/resources/page.png",
+      "review_derivative": "resources.review.webp",
+      "manifest": "../pages/resources/section_manifest.json"
+    },
+    {
+      "route": "/insights",
+      "title": "Insights \u2014 Elite Physician Wealth Planning\u2122",
+      "canonical_png": "../pages/insights/page.png",
+      "review_derivative": "insights.review.webp",
+      "manifest": "../pages/insights/section_manifest.json"
+    },
+    {
+      "route": "/insights/physician-financial-checkup-seven-areas",
+      "title": "The Physician Financial Checkup: Seven Areas That Should Work Together \u2014 Elite Physician Wealth Planning\u2122",
+      "canonical_png": "../pages/insights--physician-financial-checkup-seven-areas/page.png",
+      "review_derivative": "insights--physician-financial-checkup-seven-areas.review.webp",
+      "manifest": "../pages/insights--physician-financial-checkup-seven-areas/section_manifest.json"
+    },
+    {
+      "route": "/insights/first-five-years-financial-moves",
+      "title": "Seven Financial Moves to Consider in the First Five Years of Practice \u2014 Elite Physician Wealth Planning\u2122",
+      "canonical_png": "../pages/insights--first-five-years-financial-moves/page.png",
+      "review_derivative": "insights--first-five-years-financial-moves.review.webp",
+      "manifest": "../pages/insights--first-five-years-financial-moves/section_manifest.json"
+    },
+    {
+      "route": "/insights/w2-1099-practice-income-questions",
+      "title": "W-2, 1099, and Practice Income: Questions Physicians Should Ask Before Year-End \u2014 Elite Physician Wealth Planning\u2122",
+      "canonical_png": "../pages/insights--w2-1099-practice-income-questions/page.png",
+      "review_derivative": "insights--w2-1099-practice-income-questions.review.webp",
+      "manifest": "../pages/insights--w2-1099-practice-income-questions/section_manifest.json"
+    },
+    {
+      "route": "/insights/cash-balance-defined-benefit-decision-guide",
+      "title": "Cash Balance and Defined Benefit Plans: A Decision Guide for Medical Practice Owners \u2014 Elite Physician Wealth Planning\u2122",
+      "canonical_png": "../pages/insights--cash-balance-defined-benefit-decision-guide/page.png",
+      "review_derivative": "insights--cash-balance-defined-benefit-decision-guide.review.webp",
+      "manifest": "../pages/insights--cash-balance-defined-benefit-decision-guide/section_manifest.json"
+    },
+    {
+      "route": "/insights/coordinating-cpa-attorney-tpa-advisor",
+      "title": "How Physicians Can Coordinate a CPA, Attorney, TPA, and Financial Advisor \u2014 Elite Physician Wealth Planning\u2122",
+      "canonical_png": "../pages/insights--coordinating-cpa-attorney-tpa-advisor/page.png",
+      "review_derivative": "insights--coordinating-cpa-attorney-tpa-advisor.review.webp",
+      "manifest": "../pages/insights--coordinating-cpa-attorney-tpa-advisor/section_manifest.json"
+    },
+    {
+      "route": "/insights/five-years-from-retirement-checklist",
+      "title": "Five Years From Retirement: A Physician's Planning Checklist \u2014 Elite Physician Wealth Planning\u2122",
+      "canonical_png": "../pages/insights--five-years-from-retirement-checklist/page.png",
+      "review_derivative": "insights--five-years-from-retirement-checklist.review.webp",
+      "manifest": "../pages/insights--five-years-from-retirement-checklist/section_manifest.json"
+    },
+    {
+      "route": "/insights/disability-insurance-review-overlooked",
+      "title": "Disability Insurance Review: Questions Physicians Often Overlook \u2014 Elite Physician Wealth Planning\u2122",
+      "canonical_png": "../pages/insights--disability-insurance-review-overlooked/page.png",
+      "review_derivative": "insights--disability-insurance-review-overlooked.review.webp",
+      "manifest": "../pages/insights--disability-insurance-review-overlooked/section_manifest.json"
+    },
+    {
+      "route": "/insights/roth-conversion-timing",
+      "title": "Roth Conversion Timing Before and After Retirement \u2014 Elite Physician Wealth Planning\u2122",
+      "canonical_png": "../pages/insights--roth-conversion-timing/page.png",
+      "review_derivative": "insights--roth-conversion-timing.review.webp",
+      "manifest": "../pages/insights--roth-conversion-timing/section_manifest.json"
+    },
+    {
+      "route": "/insights/preparing-for-practice-sale",
+      "title": "Preparing Financially for the Sale or Transition of a Medical Practice \u2014 Elite Physician Wealth Planning\u2122",
+      "canonical_png": "../pages/insights--preparing-for-practice-sale/page.png",
+      "review_derivative": "insights--preparing-for-practice-sale.review.webp",
+      "manifest": "../pages/insights--preparing-for-practice-sale/section_manifest.json"
+    },
+    {
+      "route": "/insights/beneficiaries-trusts-ownership-checklist",
+      "title": "Beneficiaries, Trusts, and Account Ownership: A Physician Estate-Plan Coordination Checklist \u2014 Elite Physician Wealth Planning\u2122",
+      "canonical_png": "../pages/insights--beneficiaries-trusts-ownership-checklist/page.png",
+      "review_derivative": "insights--beneficiaries-trusts-ownership-checklist.review.webp",
+      "manifest": "../pages/insights--beneficiaries-trusts-ownership-checklist/section_manifest.json"
+    },
+    {
+      "route": "/insights/charitable-giving-strategies",
+      "title": "Charitable Giving Strategies for High-Income Medical Professionals \u2014 Elite Physician Wealth Planning\u2122",
+      "canonical_png": "../pages/insights--charitable-giving-strategies/page.png",
+      "review_derivative": "insights--charitable-giving-strategies.review.webp",
+      "manifest": "../pages/insights--charitable-giving-strategies/section_manifest.json"
+    },
+    {
+      "route": "/insights/long-term-care-survivor-planning",
+      "title": "Long-Term Care and Survivor Planning for Physician Families \u2014 Elite Physician Wealth Planning\u2122",
+      "canonical_png": "../pages/insights--long-term-care-survivor-planning/page.png",
+      "review_derivative": "insights--long-term-care-survivor-planning.review.webp",
+      "manifest": "../pages/insights--long-term-care-survivor-planning/section_manifest.json"
+    },
+    {
+      "route": "/about",
+      "title": "About Elite Physician Wealth Planning",
+      "canonical_png": "../pages/about/page.png",
+      "review_derivative": "about.review.webp",
+      "manifest": "../pages/about/section_manifest.json"
+    },
+    {
+      "route": "/meet-michael-epps",
+      "title": "Meet Michael A. Epps, ChFC\u00ae, RICP\u00ae | Elite Physician Wealth Planning",
+      "canonical_png": "../pages/meet-michael-epps/page.png",
+      "review_derivative": "meet-michael-epps.review.webp",
+      "manifest": "../pages/meet-michael-epps/section_manifest.json"
+    },
+    {
+      "route": "/about/team",
+      "title": "Meet the Team \u2014 Elite Physician Wealth Planning\u2122",
+      "canonical_png": "../pages/about--team/page.png",
+      "review_derivative": "about--team.review.webp",
+      "manifest": "../pages/about--team/section_manifest.json"
+    },
+    {
+      "route": "/checkup",
+      "title": "Physician Financial Checkup \u2014 Elite Physician Wealth Planning\u2122",
+      "canonical_png": "../pages/checkup/page.png",
+      "review_derivative": "checkup.review.webp",
+      "manifest": "../pages/checkup/section_manifest.json"
+    },
+    {
+      "route": "/physician-tax-retirement-guide",
+      "title": "Physician Tax & Retirement Planning Guide \u2014 Elite Physician Wealth Planning\u2122",
+      "canonical_png": "../pages/physician-tax-retirement-guide/page.png",
+      "review_derivative": "physician-tax-retirement-guide.review.webp",
+      "manifest": "../pages/physician-tax-retirement-guide/section_manifest.json"
+    },
+    {
+      "route": "/schedule",
+      "title": "Schedule a Strategy Call \u2014 Elite Physician Wealth Planning\u2122",
+      "canonical_png": "../pages/schedule/page.png",
+      "review_derivative": "schedule.review.webp",
+      "manifest": "../pages/schedule/section_manifest.json"
+    },
+    {
+      "route": "/contact",
+      "title": "Contact \u2014 Elite Physician Wealth Planning\u2122",
+      "canonical_png": "../pages/contact/page.png",
+      "review_derivative": "contact.review.webp",
+      "manifest": "../pages/contact/section_manifest.json"
+    },
+    {
+      "route": "/privacy-disclosures",
+      "title": "Privacy & Website Disclosures \u2014 Elite Physician Wealth Planning\u2122",
+      "canonical_png": "../pages/privacy-disclosures/page.png",
+      "review_derivative": "privacy-disclosures.review.webp",
+      "manifest": "../pages/privacy-disclosures/section_manifest.json"
+    }
+  ]
+}
