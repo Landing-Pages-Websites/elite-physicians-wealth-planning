@@ -25,8 +25,8 @@ export default function SiteDesignPage(): React.JSX.Element {
           <p className={styles.summary}>
             Selected direction: Direction {siteDesignDelivery.selectedHomeDirection},{" "}
             &quot;{siteDesignDelivery.selectedDirectionName}&quot;. Revision note:
-            simplified implementation contract for line elements; publish the 36
-            interior page designs at /site-design.
+            the frozen images show alignment and hierarchy, not literal line
+            geometry; publish the 36 interior page designs at /site-design.
           </p>
         </div>
         <dl className={styles.facts} aria-label="Review summary">
@@ -75,11 +75,11 @@ export default function SiteDesignPage(): React.JSX.Element {
         <div className={styles.note}>
           <span aria-hidden="true" />
           <p>
-            The gold coordination lines shown in these frozen image-model comps
-            are art-direction cues only. The production implementation contract
-            is simplified to short local connectors, section-edge rules, and
-            compact node markers. No continuous cross-section or complex
-            branching line network is required.
+            <strong>Line implementation contract:</strong> production uses only
+            short section-local connectors, a maximum of one simple path per
+            section, no cross-section continuation, and no multi-branch
+            topology. The frozen images communicate alignment and hierarchy, not
+            literal line geometry.
           </p>
         </div>
         <div className={styles.note}>

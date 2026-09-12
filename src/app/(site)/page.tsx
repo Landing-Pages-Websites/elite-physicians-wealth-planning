@@ -89,6 +89,26 @@ export default function ChooserPage(): React.JSX.Element {
           ))}
         </div>
 
+        <Link
+          href="/site-design"
+          className="group mt-8 flex items-center justify-between gap-5 rounded-sm border border-gold/45 bg-white/80 px-7 py-5 font-body text-ink shadow-[0_18px_44px_-36px_rgba(11,31,58,0.55)] transition-colors duration-200 hover:border-gold hover:bg-gold/10 sm:px-8"
+        >
+          <span>
+            <span className="block text-[11px] font-semibold tracking-[0.18em] text-gold-text uppercase">
+              Human review gallery
+            </span>
+            <span className="mt-2 block text-body-l font-semibold">
+              Review the site design
+            </span>
+          </span>
+          <span
+            aria-hidden="true"
+            className="shrink-0 text-display-s leading-none transition-transform duration-200 group-hover:translate-x-1"
+          >
+            →
+          </span>
+        </Link>
+
         <p className="mt-14 max-w-[70ch] font-body text-body-s leading-[1.6] text-charcoal/70">
           {HERO.identityLine} · {HERO.disclaimer}
         </p>
