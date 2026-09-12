@@ -24,9 +24,9 @@ export default function SiteDesignPage(): React.JSX.Element {
           <h1>Elite Physician Wealth Planning interior designs</h1>
           <p className={styles.summary}>
             Selected direction: Direction {siteDesignDelivery.selectedHomeDirection},{" "}
-            &quot;{siteDesignDelivery.selectedDirectionName}&quot;. Revision note:
-            the frozen images show alignment and hierarchy, not literal line
-            geometry; publish the 36 interior page designs at /site-design.
+            &quot;{siteDesignDelivery.selectedDirectionName}&quot;. All 36 interior
+            designs now show the simplified motif directly: compact local gold
+            rules, with no complex route networks or cross-section continuation.
           </p>
         </div>
         <dl className={styles.facts} aria-label="Review summary">
@@ -75,11 +75,10 @@ export default function SiteDesignPage(): React.JSX.Element {
         <div className={styles.note}>
           <span aria-hidden="true" />
           <p>
-            <strong>Line implementation contract:</strong> production uses only
-            short section-local connectors, a maximum of one simple path per
-            section, no cross-section continuation, and no multi-branch
-            topology. The frozen images communicate alignment and hierarchy, not
-            literal line geometry.
+            <strong>Revised in the source comps:</strong> complex ornamental gold
+            connectors, multi-branch topology, and lines crossing section seams
+            have been removed from every frame. Functional dividers, link cues,
+            short accent rules, and meaningful annotations remain.
           </p>
         </div>
         <div className={styles.note}>
