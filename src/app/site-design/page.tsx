@@ -24,10 +24,9 @@ export default function SiteDesignPage(): React.JSX.Element {
           <h1>Elite Physician Wealth Planning interior designs</h1>
           <p className={styles.summary}>
             Selected direction: Direction {siteDesignDelivery.selectedHomeDirection},{" "}
-            &quot;{siteDesignDelivery.selectedDirectionName}&quot;. This implementation-readiness
-            set separates {siteDesignDelivery.readyCount} exact, responsive page designs
-            from {siteDesignDelivery.holdCount} internal publication holds that must not be
-            built or indexed until their listed inputs are approved.
+            &quot;{siteDesignDelivery.selectedDirectionName}&quot;. This redesigned set gives all{" "}
+            {siteDesignDelivery.readyCount} interior routes exact desktop and mobile page
+            states, route-specific content structures, and implementation-ready SEO intent.
           </p>
         </div>
         <dl className={styles.facts} aria-label="Review summary">
@@ -49,7 +48,7 @@ export default function SiteDesignPage(): React.JSX.Element {
           </div>
           <div>
             <dt>Publication holds</dt>
-            <dd>{siteDesignDelivery.holdCount} routes</dd>
+            <dd>None in the design set</dd>
           </div>
         </dl>
       </header>
@@ -84,17 +83,17 @@ export default function SiteDesignPage(): React.JSX.Element {
         <div className={styles.note}>
           <span aria-hidden="true" />
           <p>
-            <strong>Implementation-ready routes:</strong> each includes a complete desktop
-            page, a 390px mobile page, global header/footer, readable live-content
-            structures, and route-specific interaction and responsive contracts.
+            <strong>Redesigned for implementation:</strong> every route includes a complete
+            desktop page, a 390px mobile page, global chrome, readable content structures,
+            and route-specific interaction and responsive contracts.
           </p>
         </div>
         <div className={styles.note}>
           <span aria-hidden="true" />
           <p>
-            <strong>Hold routes:</strong> the red internal sheets are not public-page
-            proposals. They identify the exact missing content and the noindex or
-            consolidation decision required before implementation.
+            <strong>Content discipline:</strong> editorial and resource routes now show
+            complete, specific public-page designs without exposing production notes,
+            placeholders, or internal gating language.
           </p>
         </div>
       </section>
