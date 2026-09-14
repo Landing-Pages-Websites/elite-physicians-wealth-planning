@@ -24,9 +24,10 @@ export default function SiteDesignPage(): React.JSX.Element {
           <h1>Elite Physician Wealth Planning interior designs</h1>
           <p className={styles.summary}>
             Selected direction: Direction {siteDesignDelivery.selectedHomeDirection},{" "}
-            &quot;{siteDesignDelivery.selectedDirectionName}&quot;. All 36 interior
-            designs now show the simplified motif directly: compact local gold
-            rules, with no complex route networks or cross-section continuation.
+            &quot;{siteDesignDelivery.selectedDirectionName}&quot;. This implementation-readiness
+            set separates {siteDesignDelivery.readyCount} exact, responsive page designs
+            from {siteDesignDelivery.holdCount} internal publication holds that must not be
+            built or indexed until their listed inputs are approved.
           </p>
         </div>
         <dl className={styles.facts} aria-label="Review summary">
@@ -41,6 +42,14 @@ export default function SiteDesignPage(): React.JSX.Element {
           <div>
             <dt>Total routes</dt>
             <dd>{pageCount} interiors</dd>
+          </div>
+          <div>
+            <dt>Ready to implement</dt>
+            <dd>{siteDesignDelivery.readyCount} routes</dd>
+          </div>
+          <div>
+            <dt>Publication holds</dt>
+            <dd>{siteDesignDelivery.holdCount} routes</dd>
           </div>
         </dl>
       </header>
@@ -75,17 +84,17 @@ export default function SiteDesignPage(): React.JSX.Element {
         <div className={styles.note}>
           <span aria-hidden="true" />
           <p>
-            <strong>Revised in the source comps:</strong> complex ornamental gold
-            connectors, multi-branch topology, and lines crossing section seams
-            have been removed from every frame. Functional dividers, link cues,
-            short accent rules, and meaningful annotations remain.
+            <strong>Implementation-ready routes:</strong> each includes a complete desktop
+            page, a 390px mobile page, global header/footer, readable live-content
+            structures, and route-specific interaction and responsive contracts.
           </p>
         </div>
         <div className={styles.note}>
           <span aria-hidden="true" />
           <p>
-            Named-person placeholders and unresolved content gates remain
-            build-time items.
+            <strong>Hold routes:</strong> the red internal sheets are not public-page
+            proposals. They identify the exact missing content and the noindex or
+            consolidation decision required before implementation.
           </p>
         </div>
       </section>
@@ -123,6 +132,9 @@ export default function SiteDesignPage(): React.JSX.Element {
                     <code>{page.route}</code>
                   </div>
                   <h3>{page.routeLabel}</h3>
+                  <p className={page.implementation_ready ? styles.ready : styles.hold}>
+                    {page.implementation_ready ? "Implementation-ready" : "Internal hold"}
+                  </p>
                   <p>
                     <span>Page title:</span> {page.title}
                   </p>

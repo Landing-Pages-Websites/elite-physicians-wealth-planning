@@ -5,7 +5,12 @@ type DeliveryPage = {
   title: string;
   canonical_png: string;
   review_derivative: string;
+  mobile_derivative: string;
   manifest: string;
+  classification: "REDESIGN_NOW" | "SYSTEM_UTILITY" | "CONTENT_GATE";
+  seo_ready: boolean;
+  implementation_ready: boolean;
+  hold_reason?: string | null;
 };
 
 type DeliveryIndex = {
@@ -14,6 +19,8 @@ type DeliveryIndex = {
   selected_direction_name: string;
   homepage_reference: string;
   page_count: number;
+  ready_count: number;
+  hold_count: number;
   pages: DeliveryPage[];
 };
 
@@ -54,6 +61,8 @@ export const siteDesignDelivery = {
     src: `/site-design/${index.homepage_reference}`,
   },
   pageCount: index.page_count,
+  readyCount: index.ready_count,
+  holdCount: index.hold_count,
   pages: index.pages.map((page, order) => {
     const slug = slugFromDerivative(page.review_derivative);
 
@@ -63,6 +72,7 @@ export const siteDesignDelivery = {
       slug,
       routeLabel: labelFromRoute(page.route),
       imageSrc: `/site-design/pages/${page.review_derivative}`,
+      mobileImageSrc: `/site-design/mobile/${page.mobile_derivative}`,
       detailHref: `/site-design/${slug}`,
     };
   }),
