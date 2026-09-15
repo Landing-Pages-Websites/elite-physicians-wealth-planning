@@ -1,0 +1,90 @@
+{
+  "customer_id": "2443cdd5-f9c8-44a5-9201-e46bafde1dfe",
+  "project": "elite-physicians-wealth-planning",
+  "task": "landing-page-build",
+  "scope": "production landing page for book.elitephysicianswealthplanning.com",
+  "required_sections": [
+    "hero",
+    "trust-bar",
+    "coordination-gap",
+    "wealth-blueprint",
+    "planning-focus",
+    "fiduciary-planner",
+    "faq",
+    "form"
+  ],
+  "form_fields": [
+    {
+      "name": "firstName",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "lastName",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "email",
+      "type": "email",
+      "required": true
+    },
+    {
+      "name": "phone",
+      "type": "tel",
+      "required": true
+    },
+    {
+      "name": "taxPlanningInterest",
+      "type": "select",
+      "required": true,
+      "options": ["Yes", "No"],
+      "qualifier": true
+    },
+    {
+      "name": "writtenRetirementPlan",
+      "type": "select",
+      "required": true,
+      "options": ["Yes", "No"],
+      "qualifier": false
+    }
+  ],
+  "qualification_rules": {
+    "qualified_when": "taxPlanningInterest === 'Yes'",
+    "disqualified_when": "taxPlanningInterest === 'No'",
+    "context_only": "writtenRetirementPlan"
+  },
+  "design_system": {
+    "primary": "#0B1F3A",
+    "secondary": "#F6F2E8",
+    "accent": "#C8A65A",
+    "display_font": "Cormorant Garamond",
+    "body_font": "Inter"
+  },
+  "integration": {
+    "site_id": "YOUR_SITE_ID",
+    "site_key": "YOUR_SITE_KEY",
+    "lead_endpoint": "https://analytics.gomega.ai/submission/submit",
+    "source_provider": "elite-physician-wealth-planning",
+    "gtm_container": "GTM-NH764P5L",
+    "meta_pixel": "2343207629431734",
+    "ctm_script": "https://572388.tctm.co/t.js",
+    "phone": "301-259-1636",
+    "email": "info@fiscalvisionfinancial.com"
+  },
+  "routing": {
+    "host": "book.elitephysicianswealthplanning.com",
+    "route": "/landing",
+    "middleware": "middleware.ts"
+  },
+  "constraints": {
+    "no_unsupported_claims": true,
+    "no_income_threshold_question": true,
+    "fiduciary_statement_required": true,
+    "real_epps_portrait_required": true,
+    "african_american_representation_minimum": 0.5,
+    "form_submit_pattern": "button with type=button, validate, then requestSubmit()",
+    "fail_closed": true,
+    "tracking_on_success_only": true
+  }
+}
