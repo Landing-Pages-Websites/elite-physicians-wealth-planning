@@ -22,6 +22,13 @@ const DISQUALIFY_REASON = 'Tax planning interest: No';
 const EMAIL_RE =
   /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)+$/;
 
+/**
+ * Canonical RFC-5322-lite pattern for the native HTML5 `pattern` attribute
+ * (un-anchored — the browser applies its own ^…$). This only ADDS a native
+ * gate to the live form; the stricter JS `EMAIL_RE` above still owns validation.
+ */
+export const EMAIL_PATTERN = "[A-Za-z0-9._%+\\-]+@[A-Za-z0-9.\\-]+\\.[A-Za-z]{2,}";
+
 export interface LeadFormData {
   firstName: string;
   lastName: string;
@@ -79,7 +86,11 @@ declare global {
 }
 
 export function normalizePhoneDigits(value: string): string {
-  return value.replace(/\D/g, '').slice(0, 10);
+  const digits = value.replace(/\D/g, '');
+  // Strip a leading NANP country code so +1 5555550100 → 5555550100 (ten
+  // national digits) instead of truncating to a wrong 1-prefixed value.
+  const national = digits.length === 11 && digits.startsWith('1') ? digits.slice(1) : digits;
+  return national.slice(0, 10);
 }
 
 export function isValidEmail(email: string): boolean {

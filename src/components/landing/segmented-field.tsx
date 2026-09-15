@@ -32,7 +32,7 @@ export function SegmentedField({
     <fieldset className="lp-seg-group">
       <legend className="lp-label">{legend}</legend>
       <div className="lp-seg">
-        {options.map((option) => {
+        {options.map((option, index) => {
           const id = `${idPrefix}-${name}-${option}`;
           const selected = value === option;
           return (
@@ -50,6 +50,9 @@ export function SegmentedField({
                 disabled={disabled}
                 onChange={onChange}
                 className="lp-seg-input"
+                // One radio per same-name group carries `required`, which makes
+                // the whole group natively required without flagging each option.
+                required={index === 0}
               />
               <span>{option}</span>
             </label>
