@@ -1,0 +1,511 @@
+{
+  "meta": {
+    "client_name": "Elite Physician Wealth Planning",
+    "profile": "landing-page",
+    "source_url": "https://elitephysicianswealthplanning.com/",
+    "confidence": "high"
+  },
+  "visual_theme": {
+    "archetype": "lp-meta-authority-ledger",
+    "copy_framework": "AIDA",
+    "brand_voice": "Calm, refined, physician-specific, consultative, fiduciary, precise, and conservative. Avoid hype, fear, status assumptions, and promises.",
+    "rationale": [
+      "Cold Meta traffic needs education plus an immediate hero form, so AIDA and HeroWithForm balance conversion with trust-building.",
+      "Approved repository palette and type contracts override the inaccurate GoDaddy placeholder extraction.",
+      "Market sophistication 4 favors a mechanism and accountable relationship rather than outcome claims.",
+      "At least half of people imagery must feature African American medical professionals per the task."
+    ],
+    "section_order": [
+      "HeroWithForm",
+      "StatsBar",
+      "FeaturesAlternating",
+      "FeaturesIconList",
+      "FeaturesAlternating",
+      "TestimonialWall",
+      "FAQ",
+      "CTAGradient",
+      "Footer",
+      "CTAFloatingBar"
+    ],
+    "visual_exclusions": [
+      "No generic gradient blobs",
+      "No centered three-equal-card feature row",
+      "No purple-to-blue SaaS gradient",
+      "No coins, currency, market charts, mansions, cars, or handshakes",
+      "No broad gold luxury fills or seal motifs",
+      "No artificial faces, broken hands, blurred image edges, or baked-in text",
+      "Adopt structure, composition, and motion ideas from inspiration references; DO NOT adopt their color palette or fonts \u2014 palette and type come from the brand tokens."
+    ]
+  },
+  "color_roles": {
+    "primary": "#0B1F3A",
+    "secondary": "#F6F2E8",
+    "accent": "#C8A65A",
+    "neutral": [
+      "#FFFFFF",
+      "#38373E",
+      "#DCE8F2"
+    ],
+    "roles": {
+      "background": "#F6F2E8",
+      "surface": "#FFFFFF",
+      "text": "#0B1F3A",
+      "muted": "#38373E",
+      "border": "#DCE8F2",
+      "link": "#0B1F3A"
+    },
+    "states": {
+      "hover": "#8F7133",
+      "focus": "#C8A65A",
+      "active": "#725821",
+      "disabled": "#A8AFB8",
+      "error": "#9F2D2D",
+      "success": "#276749"
+    },
+    "contrast_verdict": "White on #0B1F3A is AAA at 16.52:1; navy on gold is AAA at 7.12:1.",
+    "wcag_pairings": [
+      "#FFFFFF on #0B1F3A: AAA 16.52:1",
+      "#0B1F3A on #C8A65A: AAA 7.12:1",
+      "#0B1F3A on #F6F2E8: AAA 14.78:1"
+    ]
+  },
+  "typography_rules": {
+    "display": "Cormorant Garamond",
+    "body": "Inter",
+    "scale": "editorial 1.33 display / 1.2 body",
+    "scale_steps": {
+      "h1": {
+        "size": "64px",
+        "weight": 600,
+        "line_height": "1.02"
+      },
+      "h2": {
+        "size": "48px",
+        "weight": 600,
+        "line_height": "1.08"
+      },
+      "h3": {
+        "size": "32px",
+        "weight": 600,
+        "line_height": "1.15"
+      },
+      "h4": {
+        "size": "24px",
+        "weight": 600,
+        "line_height": "1.2"
+      },
+      "h5": {
+        "size": "20px",
+        "weight": 600,
+        "line_height": "1.3"
+      },
+      "h6": {
+        "size": "16px",
+        "weight": 600,
+        "line_height": "1.3"
+      },
+      "body": {
+        "size": "17px",
+        "weight": 400,
+        "line_height": "1.65"
+      },
+      "small": {
+        "size": "14px",
+        "weight": 500,
+        "line_height": "1.5"
+      }
+    }
+  },
+  "component_stylings": [
+    {
+      "name": "button",
+      "variants": [
+        "primary-gold",
+        "secondary-outline",
+        "ghost"
+      ],
+      "states": {
+        "default": "gold fill with navy label",
+        "hover": "darker gold and 1px lift",
+        "focus": "2px gold focus ring with offset",
+        "active": "pressed, no lift",
+        "disabled": "slate fill and reduced contrast"
+      },
+      "notes": "Minimal radius, 48px minimum height, Inter 700."
+    },
+    {
+      "name": "link",
+      "variants": [],
+      "states": {
+        "default": "navy or ivory with underline offset",
+        "hover": "gold underline",
+        "focus": "2px gold ring"
+      },
+      "notes": null
+    },
+    {
+      "name": "input",
+      "variants": [
+        "text",
+        "email",
+        "tel",
+        "radio-toggle"
+      ],
+      "states": {
+        "default": "2px visible border on dark translucent form",
+        "hover": "gold-tinted border",
+        "focus": "gold ring",
+        "active": "gold border",
+        "disabled": "muted surface"
+      },
+      "notes": null
+    },
+    {
+      "name": "card",
+      "variants": [
+        "ledger",
+        "portrait",
+        "glass-form"
+      ],
+      "states": {},
+      "notes": "Use editorial ledger rows and asymmetry; avoid equal generic card grids."
+    },
+    {
+      "name": "nav",
+      "variants": [
+        "fixed-minimal"
+      ],
+      "states": {},
+      "notes": "Logo/wordmark left; phone and form CTA right; no menu links."
+    },
+    {
+      "name": "badge",
+      "variants": [
+        "gold-rule",
+        "credential"
+      ],
+      "states": {},
+      "notes": "Small restrained labels, never gold seals."
+    }
+  ],
+  "layout_principles": {
+    "spacing_scale": [
+      "4px",
+      "8px",
+      "12px",
+      "16px",
+      "24px",
+      "32px",
+      "48px",
+      "64px",
+      "96px",
+      "128px"
+    ],
+    "base_unit": 4,
+    "container": "max-width 1240px; 20px mobile gutters",
+    "grid": "12-column desktop, one-column mobile",
+    "section_order": [
+      "HeroWithForm",
+      "StatsBar",
+      "FeaturesAlternating",
+      "FeaturesIconList",
+      "FeaturesAlternating",
+      "TestimonialWall",
+      "FAQ",
+      "CTAGradient",
+      "Footer",
+      "CTAFloatingBar"
+    ]
+  },
+  "depth_elevation": {
+    "surface": "#FFFFFF",
+    "border": "#DCE8F2",
+    "elevation_note": "Use the surface role for raised cards/panels against background; keep shadows subtle and consistent with the component card spec.",
+    "iconography": {
+      "style": "custom 1.5px line diagrams",
+      "family": "custom SVG plus Lucide where necessary",
+      "size": "20px utility, 32px feature"
+    },
+    "motion": {
+      "direction": "Restrained scroll reveals and a single continuous gold route that progresses through coordination/process sections.",
+      "easing": "cubic-bezier(0.16,1,0.3,1)",
+      "duration": "180ms interactions, 550ms reveals"
+    }
+  },
+  "dos_donts": {
+    "design_dos": [
+      "Use the approved Consult Ledger direction already in the repository",
+      "Use deep navy #0B1F3A, restrained gold #C8A65A, warm ivory #F6F2E8, white, and mist blue #DCE8F2",
+      "Use Cormorant Garamond for editorial display type and Inter for body and utility copy",
+      "At least 50% of people imagery must feature African American physicians or medical professionals",
+      "Use professional, realistic, non-artificial medical and planning imagery",
+      "Use the continuous restrained gold coordination-route motif to make the all-in-one process visible"
+    ],
+    "design_donts": [
+      "No generic purple-blue SaaS gradients",
+      "No coins, currency piles, handshakes, market charts, mansions, luxury cars, or gold seal imagery",
+      "No generic centered hero followed by three equal icon cards",
+      "No obviously artificial faces, damaged hands, blurred edges, or fabricated text in imagery",
+      "No broad gold fills or black-and-gold casino styling",
+      "No navigation menu or outbound website links"
+    ],
+    "visual_exclusions": [
+      "No generic gradient blobs",
+      "No centered three-equal-card feature row",
+      "No purple-to-blue SaaS gradient",
+      "No coins, currency, market charts, mansions, cars, or handshakes",
+      "No broad gold luxury fills or seal motifs",
+      "No artificial faces, broken hands, blurred image edges, or baked-in text",
+      "Adopt structure, composition, and motion ideas from inspiration references; DO NOT adopt their color palette or fonts \u2014 palette and type come from the brand tokens."
+    ],
+    "messaging_guardrails": [
+      {
+        "rule": "Use neutral calls to action such as Book a consultation, Talk to an advisor, or Get started",
+        "type": "must"
+      },
+      {
+        "rule": "State the coordinated relationship accurately: the firm works with outside CPAs, TPAs, estate planners, attorneys, and insurance agents; do not imply it holds all of those credentials",
+        "type": "must"
+      },
+      {
+        "rule": "Never reference a visitor's income level, debt, financial hardship, or financial distress",
+        "type": "must_not"
+      },
+      {
+        "rule": "Never frame the service as personalized to the visitor's financial situation",
+        "type": "must_not"
+      },
+      {
+        "rule": "Never guarantee returns, tax savings, lead outcomes, or any specific performance",
+        "type": "must_not"
+      },
+      {
+        "rule": "Never include the $100,000 income-threshold question on the landing-page form",
+        "type": "must_not"
+      },
+      {
+        "rule": "The written-retirement-plan question is context only and must never affect qualification",
+        "type": "must"
+      }
+    ]
+  },
+  "responsive_behavior": {
+    "mobile_first_notes": "Stack hero copy then complete form; show phone CTA as a full-width styled button. Convert horizontal routes into simple vertical lines. Keep all targets at least 44px and floating CTA form-only.",
+    "breakpoints": {
+      "mobile": "<=640px",
+      "tablet": "641-1024px",
+      "desktop": ">=1025px"
+    }
+  },
+  "agent_prompt_guide": {
+    "instruction_block": "Build a landing-page for Elite Physician Wealth Planning.\nArchetype: lp-meta-authority-ledger. Copy framework: AIDA.\nTheme the ENTIRE build off this client palette \u2014 primary #0B1F3A, secondary #F6F2E8, accent #C8A65A. Never substitute a generic brand color.\nTypography: headings in Cormorant Garamond, body in Inter; honor the typography scale_steps.\nUse the color_roles + states verbatim for surfaces, text, and interactive feedback.\nRender every component across the states given in component_stylings \u2014 do not ship defaults.\nVoice: Calm, refined, physician-specific, consultative, fiduciary, precise, and conservative. Avoid hype, fear, status assumptions, and promises..\nHARD EXCLUSIONS (never produce): No generic gradient blobs; No centered three-equal-card feature row; No purple-to-blue SaaS gradient; No coins, currency, market charts, mansions, cars, or handshakes; No broad gold luxury fills or seal motifs; No artificial faces, broken hands, blurred image edges, or baked-in text; Adopt structure, composition, and motion ideas from inspiration references; DO NOT adopt their color palette or fonts \u2014 palette and type come from the brand tokens..\nWrite real copy from page_blueprint.copy_direction grounded in the content inventory \u2014 never lorem, never invented facts.",
+    "non_negotiables": [
+      "client-themed palette (no fixed brand color)",
+      "all component states rendered",
+      "real copy per blueprint copy_direction",
+      "exclude: No generic gradient blobs",
+      "exclude: No centered three-equal-card feature row",
+      "exclude: No purple-to-blue SaaS gradient",
+      "exclude: No coins, currency, market charts, mansions, cars, or handshakes",
+      "exclude: No broad gold luxury fills or seal motifs",
+      "exclude: No artificial faces, broken hands, blurred image edges, or baked-in text",
+      "exclude: Adopt structure, composition, and motion ideas from inspiration references; DO NOT adopt their color palette or fonts \u2014 palette and type come from the brand tokens."
+    ]
+  },
+  "page_blueprint": {
+    "pages": [
+      {
+        "path": "/",
+        "title": "Physician Tax & Retirement Planning | Elite Physician Wealth Planning",
+        "intent": "commercial",
+        "sections": [
+          {
+            "name": "hero",
+            "functional_goal": "Earn attention and capture a physician planning lead above the fold.",
+            "copy_direction": "Lead with the approved tax-first physician positioning and complimentary consultation; support with coordinated retirement planning and fiduciary duty.",
+            "components": [
+              "HeroWithForm",
+              "dual CTA",
+              "physician photo"
+            ],
+            "imagery": "African American physician or medical professional in a credible consultation/planning context.",
+            "internal_links": [
+              "/#form"
+            ],
+            "cta": "Book a consultation"
+          },
+          {
+            "name": "trust-bar",
+            "functional_goal": "Establish immediate relevance and trust without unsupported statistics.",
+            "copy_direction": "Use the sourced facts Physician-focused, Coordinated strategy, and Fiduciary duty as identity signals, not numbers.",
+            "components": [
+              "StatsBar",
+              "gold route"
+            ],
+            "imagery": "",
+            "internal_links": [
+              "/#form"
+            ],
+            "cta": "Book a consultation"
+          },
+          {
+            "name": "coordination-gap",
+            "functional_goal": "Show why separate professional conversations need coordination.",
+            "copy_direction": "Explain that physicians may work separately with a CPA, TPA, attorney, estate planner, insurance professional and advisor; the firm brings the strategy together without claiming to perform every service.",
+            "components": [
+              "FeaturesAlternating",
+              "convergence diagram",
+              "dual CTA"
+            ],
+            "imagery": "Practice-owner meeting or documentary planning scene.",
+            "internal_links": [
+              "/#form"
+            ],
+            "cta": "Talk to an advisor"
+          },
+          {
+            "name": "wealth-blueprint",
+            "functional_goal": "Make the Elite Physician Wealth Blueprint the memorable mechanism.",
+            "copy_direction": "Use a concise connected Discover, Assess, Strategize, Implement, Optimize, Review progression grounded in approved site content.",
+            "components": [
+              "six-step route",
+              "asymmetric process ledger",
+              "dual CTA"
+            ],
+            "imagery": "Desk/stethoscope detail as a supporting texture, not a hero.",
+            "internal_links": [
+              "/#form"
+            ],
+            "cta": "Book a consultation"
+          },
+          {
+            "name": "planning-focus",
+            "functional_goal": "Clarify the two campaign services and their relationship.",
+            "copy_direction": "Tax planning is primary; retirement planning is secondary. Explain both conservatively, with no income, hardship, savings, or performance claim.",
+            "components": [
+              "uneven ledger rows",
+              "clinical image mosaic",
+              "dual CTA"
+            ],
+            "imagery": "Two or more documentary medical-professional images; maintain at least 50% African American representation page-wide.",
+            "internal_links": [
+              "/#form"
+            ],
+            "cta": "Get started"
+          },
+          {
+            "name": "fiduciary-planner",
+            "functional_goal": "Put an accountable human and verified credentials behind the process.",
+            "copy_direction": "Feature Michael A. Epps, ChFC\u00ae, RICP\u00ae and the task-approved fiduciary-duty statement; describe coordination with appropriate outside professionals.",
+            "components": [
+              "real portrait",
+              "credential line",
+              "dual CTA"
+            ],
+            "imagery": "Real repository portrait of Michael A. Epps.",
+            "internal_links": [
+              "/#form"
+            ],
+            "cta": "Book a consultation"
+          },
+          {
+            "name": "faq",
+            "functional_goal": "Remove final hesitation using only sourced answers.",
+            "copy_direction": "Answer what the first consultation covers, what coordination means, how the Blueprint works, and that the written-retirement-plan answer is context-only. Include educational-information disclaimer.",
+            "components": [
+              "collapsed FAQ accordion",
+              "dual CTA"
+            ],
+            "imagery": "",
+            "internal_links": [
+              "/#form"
+            ],
+            "cta": "Talk to an advisor"
+          },
+          {
+            "name": "form",
+            "functional_goal": "Convert with the complete task-specified form and phone route.",
+            "copy_direction": "Repeat the complimentary consultation offer with neutral copy. Ask exactly the four contact fields, tax-planning qualifier, and context-only written-retirement-plan question.",
+            "components": [
+              "LeadForm",
+              "dual CTA",
+              "privacy reassurance"
+            ],
+            "imagery": "Subtle approved office texture with strong contrast.",
+            "internal_links": [],
+            "cta": "Book a consultation"
+          }
+        ],
+        "proof_to_feature": [
+          "Michael A. Epps, ChFC\u00ae, RICP\u00ae",
+          "Physician-focused planning",
+          "Fiduciary duty from task scope"
+        ],
+        "notes": "No testimonials, ratings, client counts, AUM, return, tax-savings, income, debt, hardship, or performance claims. Preserve all existing website/review routes; select the landing page by production host."
+      }
+    ],
+    "nav": {
+      "primary": [],
+      "footer": []
+    },
+    "internal_linking_notes": "Single-page LP with only #form scroll links and tel: phone actions; legal links may open in a new tab if implemented. No links to the main website.",
+    "confidence": "high"
+  },
+  "references": [
+    {
+      "url": "https://elite-physicians-wealth-planning.vercel.app/consult-ledger",
+      "why": "Client-approved Consult Ledger direction and its navy/ivory/gold coordination-route system."
+    },
+    {
+      "url": "https://elitephysicianswealthplanning.com/",
+      "why": "Current public business-name continuity; content is otherwise a thin placeholder."
+    }
+  ],
+  "build_directives": [
+    {
+      "directive": "Implement a separate host-routed ads LP for book.elitephysicianswealthplanning.com without replacing the existing root review chooser or /consult-ledger and /decision-atlas experiences.",
+      "source": "build_context.json",
+      "section": "routing"
+    },
+    {
+      "directive": "Use HeroWithForm with an African American physician/medical-professional image, tax-first headline, complimentary consultation offer, styled phone CTA, and full form above the fold.",
+      "source": "offer_cro.json",
+      "section": "hero"
+    },
+    {
+      "directive": "Use #0B1F3A navy, #F6F2E8 ivory, #C8A65A restrained gold, #DCE8F2 mist, Cormorant Garamond display and Inter body type.",
+      "source": "design_direction.json",
+      "section": "palette"
+    },
+    {
+      "directive": "Build at least eight anchored content sections in the page_blueprint order and end every content section with centered side-by-side form and phone CTAs.",
+      "source": "page_blueprint.json",
+      "section": "layout"
+    },
+    {
+      "directive": "Use exactly firstName, lastName, email, phone, taxPlanningInterest Yes/No, and writtenRetirementPlan Yes/No. Only taxPlanningInterest=Yes qualifies; writtenRetirementPlan never affects qualification.",
+      "source": "offer_cro.json",
+      "section": "form"
+    },
+    {
+      "directive": "Install GTM-NH764P5L, Meta Pixel 2343207629431734, universal CTM 572388, source phone 301-259-1636, and lead notifications/routing for info@fiscalvisionfinancial.com. Site ID and key are Flow B placeholders until registration.",
+      "source": "triggering task input_data",
+      "section": "tracking"
+    },
+    {
+      "directive": "Use the real Michael A. Epps portrait and only ChFC\u00ae and RICP\u00ae credentials; do not add review/testimonial components when proof.json contains none.",
+      "source": "proof.json",
+      "section": "proof"
+    },
+    {
+      "directive": "Keep at least half of all people imagery African American physicians or medical professionals and reject obvious AI defects or generic finance imagery.",
+      "source": "build_context.json",
+      "section": "imagery"
+    },
+    {
+      "directive": "Manually fire MegaTag form_submit and dataLayer form_submission only after successful lead API responses, while blocking invalid, empty, and duplicate submissions.",
+      "source": "landing-page forms/tracking hard rules",
+      "section": "form"
+    }
+  ]
+}
