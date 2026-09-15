@@ -69,14 +69,14 @@ export default async function SiteDesignDetailPage({
           </p>
           <p className={page.implementation_ready ? styles.ready : styles.hold}>
             {page.implementation_ready
-              ? "Implementation-ready, desktop and mobile contracts included"
-              : `Internal hold, not for public implementation${page.hold_reason ? `: ${page.hold_reason}` : ""}`}
+              ? "Implementation-ready, desktop reference and 390px recomposition contract included"
+              : `Design-ready with publication hold${page.hold_reason ? `: ${page.hold_reason}` : ""}`}
           </p>
         </div>
         <nav className={styles.detailActions} aria-label="Inspection controls">
           <Link href="/site-design">Back to gallery</Link>
           <a href={page.imageSrc}>Open desktop</a>
-          <a href={page.mobileImageSrc}>Open mobile</a>
+          <a href={page.mobileImageSrc}>Open narrow preview</a>
           {previous ? (
             <Link href={previous.detailHref}>Previous</Link>
           ) : (
@@ -98,7 +98,7 @@ export default async function SiteDesignDetailPage({
         />
       </section>
       <section className={`${styles.inspectSurface} ${styles.mobileInspect}`} aria-label="Mobile full-page comp">
-        <h2 className={styles.viewportLabel}>Mobile reference, 390px</h2>
+        <h2 className={styles.viewportLabel}>Narrow full-page preview, see manifest for 390px recomposition</h2>
         <img
           src={page.mobileImageSrc}
           alt={`Mobile design comp for ${page.routeLabel}, route ${page.route}.`}
