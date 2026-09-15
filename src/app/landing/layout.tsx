@@ -4,8 +4,8 @@ import Script from 'next/script';
 import './landing.css';
 
 /* Flow B placeholders — replace after `mega site-tracking enable` returns them. */
-const SITE_ID = 'YOUR_SITE_ID';
-const SITE_KEY = 'YOUR_SITE_KEY';
+const SITE_ID = 'fdd3f3ad-c642-450f-abb8-762b18de7cb7';
+const SITE_KEY = 'yvwp8rijauytz92g';
 
 /**
  * MegaTag optimizer config. The optimizer owns GTM (GTM-NH764P5L) and the Meta

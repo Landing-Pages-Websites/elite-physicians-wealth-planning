@@ -13,7 +13,7 @@ import {
 
 const CUSTOMER_ID = '2443cdd5-f9c8-44a5-9201-e46bafde1dfe';
 /** Flow B placeholder — replace after `mega site-tracking enable` returns it. */
-const SITE_ID = 'YOUR_SITE_ID';
+const SITE_ID = 'fdd3f3ad-c642-450f-abb8-762b18de7cb7';
 const SOURCE_PROVIDER = 'elite-physician-wealth-planning';
 const SUBMIT_ENDPOINT = 'https://analytics.gomega.ai/submission/submit';
 const DISQUALIFY_REASON = 'Tax planning interest: No';
