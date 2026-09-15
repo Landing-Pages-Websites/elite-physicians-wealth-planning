@@ -11,6 +11,8 @@ type DeliveryPage = {
   seo_ready: boolean;
   implementation_ready: boolean;
   hold_reason?: string | null;
+  archetype: string;
+  publication_state: "ready" | "content-gate";
 };
 
 type DeliveryIndex = {
@@ -21,6 +23,8 @@ type DeliveryIndex = {
   page_count: number;
   ready_count: number;
   hold_count: number;
+  design_method: string;
+  qa_status: "PASS" | "FAIL";
   pages: DeliveryPage[];
 };
 

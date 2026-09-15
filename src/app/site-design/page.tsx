@@ -24,9 +24,9 @@ export default function SiteDesignPage(): React.JSX.Element {
           <h1>Elite Physician Wealth Planning interior designs</h1>
           <p className={styles.summary}>
             Selected direction: Direction {siteDesignDelivery.selectedHomeDirection},{" "}
-            &quot;{siteDesignDelivery.selectedDirectionName}&quot;. This redesigned set gives all{" "}
-            {siteDesignDelivery.readyCount} interior routes exact desktop and mobile page
-            states, route-specific content structures, and implementation-ready SEO intent.
+            &quot;{siteDesignDelivery.selectedDirectionName}&quot;. This image-first set gives all{" "}
+            {siteDesignDelivery.pageCount} interior routes route-specific page-mode compositions,
+            SEO intent contracts, and concrete responsive implementation guidance.
           </p>
         </div>
         <dl className={styles.facts} aria-label="Review summary">
@@ -48,7 +48,7 @@ export default function SiteDesignPage(): React.JSX.Element {
           </div>
           <div>
             <dt>Publication holds</dt>
-            <dd>None in the design set</dd>
+            <dd>{siteDesignDelivery.holdCount} content-gated routes</dd>
           </div>
         </dl>
       </header>
@@ -83,17 +83,17 @@ export default function SiteDesignPage(): React.JSX.Element {
         <div className={styles.note}>
           <span aria-hidden="true" />
           <p>
-            <strong>Redesigned for implementation:</strong> every route includes a complete
-            desktop page, a 390px mobile page, global chrome, readable content structures,
-            and route-specific interaction and responsive contracts.
+            <strong>Designed image-first:</strong> every route was generated section by section
+            from its own manifest, then visually reviewed and stitched into a complete page.
+            Navigation and footer remain shared implementation chrome, not baked into the frames.
           </p>
         </div>
         <div className={styles.note}>
           <span aria-hidden="true" />
           <p>
-            <strong>Content discipline:</strong> editorial and resource routes now show
-            complete, specific public-page designs without exposing production notes,
-            placeholders, or internal gating language.
+            <strong>Truthful publication gates:</strong> {siteDesignDelivery.holdCount} routes
+            deliberately await manuscripts, team data, integrations, or contact routing. Their
+            designs are implementation-ready, but they must not be published as complete content.
           </p>
         </div>
       </section>
