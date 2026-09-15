@@ -2,6 +2,7 @@
 
 import { useId, useRef, useState, type ChangeEvent, type FormEvent } from 'react';
 import {
+  EMAIL_PATTERN,
   isValidEmail,
   isValidPhone,
   normalizePhoneDigits,
@@ -186,6 +187,8 @@ export function LeadForm({
           autoComplete="email"
           className="input-field"
           placeholder="you@practice.com"
+          pattern={EMAIL_PATTERN}
+          title="Enter a valid email address, e.g. you@practice.com"
           value={data.email}
           onChange={handleChange}
           disabled={isSubmitting}

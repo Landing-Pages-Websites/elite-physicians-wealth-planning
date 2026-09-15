@@ -22,8 +22,9 @@ export function SiteHeader(): React.ReactElement {
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
           <a
             href="tel:3012591636"
-            className="lp-wordmark-text lp-muted-light"
-            style={{ display: 'inline-flex', alignItems: 'center', gap: '0.4rem', fontSize: '0.95rem' }}
+            className="btn btn-secondary btn-secondary--dark"
+            aria-label="Call (301) 259-1636"
+            style={{ minHeight: '44px', padding: '0 1.15rem', fontSize: '0.95rem' }}
           >
             <PhoneIcon aria-hidden="true" />
             <span className="lp-header-phone">(301) 259-1636</span>

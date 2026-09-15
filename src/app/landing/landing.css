@@ -585,6 +585,13 @@
 
 /* ---------- scroll reveal (progressive enhancement, no JS) ---------- */
 
+/*
+ * Content is visible by default. The reveal is a scroll-driven enhancement
+ * only: `forwards` fill (never `backwards`/`both`) means an element uses its
+ * normal, fully-visible styles BEFORE its entry range — so below-fold nodes
+ * are not held at the keyframe's opacity:0 in a static full-page capture.
+ * The fade/rise still plays as each element scrolls into view.
+ */
 @supports (animation-timeline: view()) {
   @media (prefers-reduced-motion: no-preference) {
     @keyframes lp-rise {
@@ -599,7 +606,7 @@
     }
 
     .lp-wrap .lp-reveal {
-      animation: lp-rise 550ms var(--lp-ease) both;
+      animation: lp-rise 550ms var(--lp-ease) forwards;
       animation-timeline: view();
       animation-range: entry 0% cover 26%;
     }

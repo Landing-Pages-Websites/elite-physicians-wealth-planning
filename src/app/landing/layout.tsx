@@ -57,10 +57,11 @@ export default function LandingLayout({
         strategy="beforeInteractive"
         dangerouslySetInnerHTML={{ __html: MEGA_TAG_CONFIG_SCRIPT }}
       />
-      {/* MegaTag optimizer — owns GTM + Meta Pixel; no duplicate standalone tags. */}
+      {/* MegaTag optimizer — owns GTM + Meta Pixel; no duplicate standalone tags.
+          beforeInteractive so Next hoists it into <head>, after the config above. */}
       <Script
         id="mega-optimizer"
-        strategy="afterInteractive"
+        strategy="beforeInteractive"
         src="https://cdn.gomega.ai/scripts/optimizer.min.js"
         data-site-id={SITE_ID}
         data-site-key={SITE_KEY}
