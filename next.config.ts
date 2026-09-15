@@ -9,6 +9,17 @@ const nextConfig: NextConfig = {
    * Verification sets NEXT_DIST_DIR=.next-verify so the two can never collide.
    */
   distDir: process.env.NEXT_DIST_DIR || ".next",
+  async rewrites() {
+    return {
+      // This is a dedicated Vercel project whose custom domain must serve the
+      // completed /landing page at the root. A beforeFiles rewrite runs ahead
+      // of page routing (and does not match static assets, which have their own
+      // paths), so it is more reliable than the hostname middleware alone.
+      beforeFiles: [{ source: "/", destination: "/landing" }],
+      afterFiles: [],
+      fallback: [],
+    };
+  },
   async redirects() {
     return [
       // The old review URLs may already be shared. Both directions now live at
