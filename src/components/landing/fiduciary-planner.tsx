@@ -50,6 +50,7 @@ export function FiduciaryPlanner(): React.ReactElement {
               alt="Michael A. Epps, fiduciary financial planner, in his office"
               fill
               sizes="(max-width: 1023px) 100vw, 40vw"
+              priority
             />
           </figure>
         </div>

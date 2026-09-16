@@ -66,6 +66,7 @@ export function CoordinationGap(): React.ReactElement {
               alt="Stethoscope and planning materials on a consultation desk"
               fill
               sizes="(max-width: 1023px) 100vw, 50vw"
+              priority
             />
           </figure>
         </div>

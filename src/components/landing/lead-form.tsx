@@ -28,7 +28,12 @@ const INITIAL: LeadFormData = {
 };
 
 function formatPhone(value: string): string {
-  const digits = normalizePhoneDigits(value);
+  // A NANP number never starts with 1 (area/exchange codes are 2-9), so a
+  // leading 1 is always a country-code prefix. Drop it even mid-entry so a
+  // typed or pasted "+1 555…" normalizes cleanly instead of locking the
+  // display into "(155) …" once maxLength blocks the final digit.
+  const raw = value.replace(/\D/g, '');
+  const digits = normalizePhoneDigits(raw.startsWith('1') ? raw.slice(1) : raw);
   if (digits.length < 4) return digits;
   if (digits.length < 7) return `(${digits.slice(0, 3)}) ${digits.slice(3)}`;
   return `(${digits.slice(0, 3)}) ${digits.slice(3, 6)}-${digits.slice(6)}`;
