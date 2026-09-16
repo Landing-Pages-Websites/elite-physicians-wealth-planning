@@ -60,6 +60,7 @@ export function PlanningFocus(): React.ReactElement {
                 alt="Stethoscope and planning materials"
                 fill
                 sizes="(max-width: 1023px) 50vw, 25vw"
+                priority
               />
             </figure>
             <figure className="lp-media" style={{ margin: 0 }}>
@@ -68,6 +69,7 @@ export function PlanningFocus(): React.ReactElement {
                 alt="Quiet consultation office"
                 fill
                 sizes="(max-width: 1023px) 50vw, 25vw"
+                priority
               />
             </figure>
           </div>
