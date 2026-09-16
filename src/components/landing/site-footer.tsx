@@ -1,5 +1,3 @@
-import { PhoneIcon } from './icons';
-
 const YEAR = 2025;
 
 /**
@@ -10,25 +8,15 @@ export function SiteFooter(): React.ReactElement {
   return (
     <footer className="lp-surface-navy" style={{ paddingBlock: '3.5rem' }}>
       <div className="lp-container">
-        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1.5rem', justifyContent: 'space-between', alignItems: 'flex-start' }}>
-          <div className="lp-wordmark">
-            <span className="lp-wordmark-mark" aria-hidden="true">
-              E
-            </span>
-            <span className="lp-wordmark-text">
-              Elite Physician
-              <br />
-              Wealth Planning
-            </span>
-          </div>
-          <a
-            href="tel:3012591636"
-            className="lp-muted-light"
-            style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', fontWeight: 600 }}
-          >
-            <PhoneIcon aria-hidden="true" />
-            (301) 259-1636
-          </a>
+        <div className="lp-wordmark">
+          <span className="lp-wordmark-mark" aria-hidden="true">
+            E
+          </span>
+          <span className="lp-wordmark-text">
+            Elite Physician
+            <br />
+            Wealth Planning
+          </span>
         </div>
 
         <div className="lp-rule" style={{ margin: '2rem 0 1.5rem' }} />

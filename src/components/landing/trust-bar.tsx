@@ -1,3 +1,4 @@
+import { CtaGroup } from './cta-group';
 import { CompassIcon, ScaleIcon, ShieldIcon } from './icons';
 
 const SIGNALS = [
@@ -38,6 +39,10 @@ export function TrustBar(): React.ReactElement {
               </div>
             </div>
           ))}
+        </div>
+
+        <div className="lp-reveal" style={{ marginTop: '2.75rem' }}>
+          <CtaGroup primaryLabel="Book a consultation" align="center" />
         </div>
       </div>
     </section>

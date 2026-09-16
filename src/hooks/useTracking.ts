@@ -65,15 +65,37 @@ function readCookie(name: string): string | null {
   return match ? decodeURIComponent(match[1]) : null;
 }
 
+function randomUuid(): string {
+  if (typeof crypto !== 'undefined' && 'randomUUID' in crypto) return crypto.randomUUID();
+  return `id-${Date.now().toString(36)}-${Math.round(performance.now()).toString(36)}`;
+}
+
 function ensureId(store: Storage, key: string): string {
   const existing = readStorage(store, key);
   if (existing) return existing;
-  const id =
-    typeof crypto !== 'undefined' && 'randomUUID' in crypto
-      ? crypto.randomUUID()
-      : `id-${Date.now().toString(36)}-${Math.round(performance.now()).toString(36)}`;
+  const id = randomUuid();
   writeStorage(store, key, id);
   return id;
+}
+
+export interface SubmissionIdentity {
+  session_id: string;
+  visitor_id: string;
+}
+
+/**
+ * A fresh identity minted for each lead submission.
+ *
+ * The MEGA collector de-duplicates submissions that share a session/visitor id.
+ * Reusing the persisted per-browser ids (getSessionId / getVisitorId) over-
+ * collapses genuinely distinct submissions from the same browser: a second,
+ * unique-email lead was returned as `deduped:true` and reused an earlier,
+ * unrelated lead. Minting a per-submission identity keeps every real submission
+ * authoritative. Attribution (utm_*, click ids, fbp/fbc, referrer) is carried
+ * separately in the envelope and is unaffected.
+ */
+export function createSubmissionIdentity(): SubmissionIdentity {
+  return { session_id: randomUuid(), visitor_id: randomUuid() };
 }
 
 /** Capture first-touch attribution once per session. */

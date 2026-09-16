@@ -2,9 +2,8 @@
 
 import { useCallback, useState } from 'react';
 import {
-  getSessionId,
+  createSubmissionIdentity,
   getStoredAttribution,
-  getVisitorId,
 } from '@/hooks/useTracking';
 
 /* ------------------------------------------------------------------ *
@@ -117,6 +116,7 @@ export function qualify(taxPlanningInterest: 'Yes' | 'No'): {
 
 function buildEnvelope(data: LeadFormData): SubmissionEnvelope {
   const attribution = getStoredAttribution();
+  const identity = createSubmissionIdentity();
   const { isQualified, disqualificationReason } = qualify(data.taxPlanningInterest);
   const formData: FormDataPayload = {
     firstName: data.firstName.trim(),
@@ -139,8 +139,8 @@ function buildEnvelope(data: LeadFormData): SubmissionEnvelope {
     page_path: window.location.pathname,
     page_title: document.title,
     submitted_at: new Date().toISOString(),
-    session_id: getSessionId(),
-    visitor_id: getVisitorId(),
+    session_id: identity.session_id,
+    visitor_id: identity.visitor_id,
     utm_source: attribution.utm_source,
     utm_medium: attribution.utm_medium,
     utm_campaign: attribution.utm_campaign,
@@ -155,9 +155,27 @@ function buildEnvelope(data: LeadFormData): SubmissionEnvelope {
   };
 }
 
-function fireConversionEvents(formData: FormDataPayload): void {
+/** The collector confirms receipt with an authoritative submission id. */
+interface SubmissionResponse {
+  ok?: unknown;
+  id?: unknown;
+  lead_id?: unknown;
+  event_id?: unknown;
+}
+
+/** Prefer the documented `id`, then any lead/event id the collector returns. */
+function extractResultId(body: SubmissionResponse): string | undefined {
+  const candidate = body.id ?? body.lead_id ?? body.event_id;
+  if (typeof candidate === 'string' && candidate) return candidate;
+  // Some collectors return a numeric primary key; keep it rather than drop it.
+  if (typeof candidate === 'number' && Number.isFinite(candidate)) return String(candidate);
+  return undefined;
+}
+
+function fireConversionEvents(formData: FormDataPayload, resultId?: string): void {
   window.MegaTag?.trackEvent('form_submit', {
     element: 'form-physician-lead',
+    lead_id: resultId,
     ...formData,
   });
   window.dataLayer = window.dataLayer ?? [];
@@ -166,6 +184,7 @@ function fireConversionEvents(formData: FormDataPayload): void {
     form_id: 'form-physician-lead',
     form_provider: 'elite-physician-wealth-planning',
     isQualified: formData.isQualified,
+    lead_id: resultId,
   });
 }
 
@@ -199,12 +218,12 @@ export function useMegaLeadForm(): UseLeadFormReturn {
       if (!response.ok) throw new Error(`Request failed (${response.status}).`);
 
       // Fail closed: require an explicit ok === true from the pipeline.
-      const body: unknown = await response.json();
-      if (!body || (body as { ok?: unknown }).ok !== true) {
+      const body = (await response.json()) as SubmissionResponse | null;
+      if (!body || body.ok !== true) {
         throw new Error('The service did not confirm your submission.');
       }
 
-      fireConversionEvents(envelope.form_data);
+      fireConversionEvents(envelope.form_data, extractResultId(body));
       return { ok: true };
     } catch {
       // Fail closed: no success state, no conversion events.
