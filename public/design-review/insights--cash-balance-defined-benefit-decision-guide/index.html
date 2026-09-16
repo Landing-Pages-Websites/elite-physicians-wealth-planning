@@ -1,0 +1,402 @@
+<!doctype html><meta charset='utf-8'>
+<title>Image asset review</title><style>
+body{margin:0;padding:24px;background:#111;color:#eee;
+     font:14px/1.5 -apple-system,'Segoe UI',sans-serif}
+a{color:#8bd} .muted{color:#999} h1{font-size:20px}
+.proto{background:#1b1b1b;border:1px solid #333;border-radius:8px;
+       padding:12px 16px;max-width:900px;margin-bottom:24px}
+.proto code{background:#000;padding:1px 5px;border-radius:4px}
+.card{background:#1b1b1b;border:1px solid #333;border-radius:8px;
+      padding:16px;margin-bottom:20px;max-width:1200px}
+.card.missing{border-color:#a33}
+.pair{display:flex;gap:16px;flex-wrap:wrap}
+.pair figure{margin:0;flex:1;min-width:280px}
+.pair img{max-width:100%;border:1px solid #444}
+.asset-preview{display:grid;place-items:center;min-height:180px;
+  background-color:#fff;background-image:linear-gradient(45deg,#ddd 25%,transparent 25%),
+  linear-gradient(-45deg,#ddd 25%,transparent 25%),linear-gradient(45deg,transparent 75%,#ddd 75%),
+  linear-gradient(-45deg,transparent 75%,#ddd 75%);background-size:24px 24px;
+  background-position:0 0,0 12px,12px -12px,-12px 0}
+.asset-preview img,.intended-preview img{display:block;max-height:520px}
+.intended-preview{display:grid;place-items:center;min-height:180px;border:1px solid #444}
+figcaption{font-size:12px;color:#999;margin-top:4px}
+.chip{display:inline-block;font-size:11px;padding:2px 8px;border-radius:10px;
+      background:#333;margin-left:8px;text-transform:uppercase}
+.chip.extract{background:#264} .chip.inpaint{background:#452}
+.chip.code{background:#345}
+.chip.plate{background:#246} .chip.generated{background:#525}
+.chip.unmapped{background:#630} .chip.client-copy{background:#444}
+.chip.composite{background:#536}
+</style>
+<h1>Image asset review</h1>
+<p class='muted'>36 CODE regions and 6 raster assets to review: 6 extract, 0 inpaint.</p>
+<div class='proto'><b>How to review:</b> judge every planned treatment against its design reference on the left. For CODE cards, verify the build note can preserve the region's silhouette, materiality, and compositing—not merely approximate its geometry. To swap a raster, replace the file directly in git — same path, push to main. Replaced files are authoritative — the pipeline never overwrites them. This page updates on every push. Complete the review subtask to approve; the build does not start until then.</div>
+<div class='card' id='01-editorial-state-hero-r1-photo'>
+<b>01-editorial-state-hero-r1-photo</b><span class='chip extract'>extract</span>
+<div class='muted'>presentation: {&quot;alpha_required&quot;: false, &quot;crop_contract&quot;: &quot;right half of hero full-height; desk scene vertically centered; no website text in crop area; preserve stethoscope and clipboard detail&quot;, &quot;intended_background&quot;: &quot;#04142C&quot;, &quot;minimum_visible_fraction&quot;: &quot;90%&quot;, &quot;mode&quot;: &quot;framed-panel&quot;}</div>
+<div class='pair'>
+<figure><a href='crops/01-editorial-state-hero-context.png'><img src='crops/01-editorial-state-hero-r1-photo-ref.png' alt=''></a><figcaption>design reference — 01-editorial-state-hero (click for full frame)</figcaption></figure>
+<figure><div class='asset-preview'><img src='../images/design/elements/01-editorial-state-hero-desk-scene.png' alt=''></div><figcaption>shipped asset on transparency checkerboard — <code>elements/01-editorial-state-hero-desk-scene.png</code> (replace in git)</figcaption></figure>
+<figure><div class='intended-preview' style='background:#04142C'><img src='../images/design/elements/01-editorial-state-hero-desk-scene.png' alt=''></div><figcaption>asset on intended background — #04142C</figcaption></figure>
+</div></div>
+<div class='card' id='01-editorial-state-hero-r1-code'>
+<b>01-editorial-state-hero-r1-code</b><span class='chip code'>code</span>
+<div class='muted'>Dark navy #04142C hero left-column container div full-height flex-col layout; no border or additional background fill; houses eyebrow headline body and nav link children left-aligned padding-left ~88px</div>
+<div class='pair'>
+<figure><a href='crops/01-editorial-state-hero-context.png'><img src='crops/01-editorial-state-hero-r1-code-ref.png' alt=''></a><figcaption>design reference — 01-editorial-state-hero (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Dark navy #04142C hero left-column container div full-height flex-col layout; no border or additional background fill; houses eyebrow headline body and nav link children left-aligned padding-left ~88px</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='01-editorial-state-hero-r2'>
+<b>01-editorial-state-hero-r2</b><span class='chip code'>code</span>
+<div class='muted'>Off-white #F0EDE6 serif display headline four lines ~52px font-size tight letter-spacing leading-snug left-aligned on dark navy #04142C; editorial serif typeface Playfair Display or equivalent weight 700</div>
+<div class='pair'>
+<figure><a href='crops/01-editorial-state-hero-context.png'><img src='crops/01-editorial-state-hero-r2-ref.png' alt=''></a><figcaption>design reference — 01-editorial-state-hero (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Off-white #F0EDE6 serif display headline four lines ~52px font-size tight letter-spacing leading-snug left-aligned on dark navy #04142C; editorial serif typeface Playfair Display or equivalent weight 700</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='01-editorial-state-hero-r3'>
+<b>01-editorial-state-hero-r3</b><span class='chip code'>code</span>
+<div class='muted'>Off-white ~#D6D0C4 body text ~16px serif line-height 1.6 left-aligned on dark navy #04142C; max-width ~445px; describes how advanced qualified plans fit into practice owner picture</div>
+<div class='pair'>
+<figure><a href='crops/01-editorial-state-hero-context.png'><img src='crops/01-editorial-state-hero-r3-ref.png' alt=''></a><figcaption>design reference — 01-editorial-state-hero (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Off-white ~#D6D0C4 body text ~16px serif line-height 1.6 left-aligned on dark navy #04142C; max-width ~445px; describes how advanced qualified plans fit into practice owner picture</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='01-editorial-state-hero-r4'>
+<b>01-editorial-state-hero-r4</b><span class='chip code'>code</span>
+<div class='muted'>Editorial status row with small lock SVG icon ~16px amber-tinted muted #B8A47A text ~14px sans-serif; inline-flex row gap-2; subtle dashed or solid 1px amber border container on dark navy background</div>
+<div class='pair'>
+<figure><a href='crops/01-editorial-state-hero-context.png'><img src='crops/01-editorial-state-hero-r4-ref.png' alt=''></a><figcaption>design reference — 01-editorial-state-hero (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Editorial status row with small lock SVG icon ~16px amber-tinted muted #B8A47A text ~14px sans-serif; inline-flex row gap-2; subtle dashed or solid 1px amber border container on dark navy background</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='01-editorial-state-hero-r5'>
+<b>01-editorial-state-hero-r5</b><span class='chip code'>code</span>
+<div class='muted'>Eyebrow label PRACTICE OWNER STRATEGY amber #C9A84C all-caps letter-spacing-widest ~11px sans-serif font-weight 600; left-aligned flex row with separator dot or slash; on dark navy #04142C background</div>
+<div class='pair'>
+<figure><a href='crops/01-editorial-state-hero-context.png'><img src='crops/01-editorial-state-hero-r5-ref.png' alt=''></a><figcaption>design reference — 01-editorial-state-hero (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Eyebrow label PRACTICE OWNER STRATEGY amber #C9A84C all-caps letter-spacing-widest ~11px sans-serif font-weight 600; left-aligned flex row with separator dot or slash; on dark navy #04142C background</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='01-editorial-state-hero-r6'>
+<b>01-editorial-state-hero-r6</b><span class='chip code'>code</span>
+<div class='muted'>All Insights navigation link with right chevron icon; amber #C9A84C text ~14px sans-serif font-weight 500; inline-flex row gap-1; underline on hover; left-aligned on dark navy #04142C background</div>
+<div class='pair'>
+<figure><a href='crops/01-editorial-state-hero-context.png'><img src='crops/01-editorial-state-hero-r6-ref.png' alt=''></a><figcaption>design reference — 01-editorial-state-hero (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>All Insights navigation link with right chevron icon; amber #C9A84C text ~14px sans-serif font-weight 500; inline-flex row gap-1; underline on hover; left-aligned on dark navy #04142C background</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='02-verified-teaser-r1'>
+<b>02-verified-teaser-r1</b><span class='chip extract'>extract</span>
+<div class='muted'>presentation: {&quot;alpha_required&quot;: false, &quot;crop_contract&quot;: &quot;full crop of notebook cover with cream margin at edges; no website text; preserve gold border and cloth texture detail&quot;, &quot;intended_background&quot;: &quot;#F4F4E4&quot;, &quot;minimum_visible_fraction&quot;: &quot;85%&quot;, &quot;mode&quot;: &quot;framed-panel&quot;}</div>
+<div class='pair'>
+<figure><a href='crops/02-verified-teaser-context.png'><img src='crops/02-verified-teaser-r1-ref.png' alt=''></a><figcaption>design reference — 02-verified-teaser (click for full frame)</figcaption></figure>
+<figure><div class='asset-preview'><img src='../images/design/elements/02-verified-teaser-notebook-cover.png' alt=''></div><figcaption>shipped asset on transparency checkerboard — <code>elements/02-verified-teaser-notebook-cover.png</code> (replace in git)</figcaption></figure>
+<figure><div class='intended-preview' style='background:#F4F4E4'><img src='../images/design/elements/02-verified-teaser-notebook-cover.png' alt=''></div><figcaption>asset on intended background — #F4F4E4</figcaption></figure>
+</div></div>
+<div class='card' id='02-verified-teaser-r2'>
+<b>02-verified-teaser-r2</b><span class='chip extract'>extract</span>
+<div class='muted'>presentation: {&quot;alpha_required&quot;: false, &quot;crop_contract&quot;: &quot;full crop of paper stack and pen; no website text; preserve paper edge and tab detail at top&quot;, &quot;intended_background&quot;: &quot;#F4F4E4&quot;, &quot;minimum_visible_fraction&quot;: &quot;85%&quot;, &quot;mode&quot;: &quot;framed-panel&quot;}</div>
+<div class='pair'>
+<figure><a href='crops/02-verified-teaser-context.png'><img src='crops/02-verified-teaser-r2-ref.png' alt=''></a><figcaption>design reference — 02-verified-teaser (click for full frame)</figcaption></figure>
+<figure><div class='asset-preview'><img src='../images/design/elements/02-verified-teaser-papers-pen.png' alt=''></div><figcaption>shipped asset on transparency checkerboard — <code>elements/02-verified-teaser-papers-pen.png</code> (replace in git)</figcaption></figure>
+<figure><div class='intended-preview' style='background:#F4F4E4'><img src='../images/design/elements/02-verified-teaser-papers-pen.png' alt=''></div><figcaption>asset on intended background — #F4F4E4</figcaption></figure>
+</div></div>
+<div class='card' id='02-verified-teaser-r3'>
+<b>02-verified-teaser-r3</b><span class='chip code'>code</span>
+<div class='muted'>VERIFIED TEASER eyebrow ~11px amber #C9A84C letter-spacing-widest all-caps above large serif headline What is verified now in dark navy ~42px; left-aligned stacked on cream #F4F4E4 background</div>
+<div class='pair'>
+<figure><a href='crops/02-verified-teaser-context.png'><img src='crops/02-verified-teaser-r3-ref.png' alt=''></a><figcaption>design reference — 02-verified-teaser (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>VERIFIED TEASER eyebrow ~11px amber #C9A84C letter-spacing-widest all-caps above large serif headline What is verified now in dark navy ~42px; left-aligned stacked on cream #F4F4E4 background</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='02-verified-teaser-r4'>
+<b>02-verified-teaser-r4</b><span class='chip code'>code</span>
+<div class='muted'>Dark navy #0D1F3C body paragraph ~15px serif line-height 1.6 left-aligned on cream #F4F4E4; describes advanced qualified plans fitting into practice owner larger picture; max-width ~549px</div>
+<div class='pair'>
+<figure><a href='crops/02-verified-teaser-context.png'><img src='crops/02-verified-teaser-r4-ref.png' alt=''></a><figcaption>design reference — 02-verified-teaser (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Dark navy #0D1F3C body paragraph ~15px serif line-height 1.6 left-aligned on cream #F4F4E4; describes advanced qualified plans fitting into practice owner larger picture; max-width ~549px</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='02-verified-teaser-r5'>
+<b>02-verified-teaser-r5</b><span class='chip code'>code</span>
+<div class='muted'>Checklist item inline-flex row gap-3; amber gold bullet dot ~8px; dark navy ~#0D1F3C text ~14px sans-serif line-height 1.5; states audience is physicians and practice owners per source crawl; cream bg</div>
+<div class='pair'>
+<figure><a href='crops/02-verified-teaser-context.png'><img src='crops/02-verified-teaser-r5-ref.png' alt=''></a><figcaption>design reference — 02-verified-teaser (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Checklist item inline-flex row gap-3; amber gold bullet dot ~8px; dark navy ~#0D1F3C text ~14px sans-serif line-height 1.5; states audience is physicians and practice owners per source crawl; cream bg</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='02-verified-teaser-r6'>
+<b>02-verified-teaser-r6</b><span class='chip code'>code</span>
+<div class='muted'>Checklist item inline-flex row gap-3; amber gold bullet dot; dark navy ~14px sans-serif; states full article body not available in verified inputs; cream #F4F4E4 background; two-line wrap</div>
+<div class='pair'>
+<figure><a href='crops/02-verified-teaser-context.png'><img src='crops/02-verified-teaser-r6-ref.png' alt=''></a><figcaption>design reference — 02-verified-teaser (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Checklist item inline-flex row gap-3; amber gold bullet dot; dark navy ~14px sans-serif; states full article body not available in verified inputs; cream #F4F4E4 background; two-line wrap</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='02-verified-teaser-r7'>
+<b>02-verified-teaser-r7</b><span class='chip code'>code</span>
+<div class='muted'>Checklist item inline-flex row gap-3; amber gold bullet dot ~8px; dark navy ~14px sans-serif; single line stating topic category is supplied; cream #F4F4E4 background; no wrapping</div>
+<div class='pair'>
+<figure><a href='crops/02-verified-teaser-context.png'><img src='crops/02-verified-teaser-r7-ref.png' alt=''></a><figcaption>design reference — 02-verified-teaser (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Checklist item inline-flex row gap-3; amber gold bullet dot ~8px; dark navy ~14px sans-serif; single line stating topic category is supplied; cream #F4F4E4 background; no wrapping</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='02-verified-teaser-r8'>
+<b>02-verified-teaser-r8</b><span class='chip code'>code</span>
+<div class='muted'>Dark navy #04142C circle 57px diameter border-radius-full with white lock SVG icon 24px centered; no box-shadow; inline-block; on cream background; icon from lucide or similar single-family set</div>
+<div class='pair'>
+<figure><a href='crops/02-verified-teaser-context.png'><img src='crops/02-verified-teaser-r8-ref.png' alt=''></a><figcaption>design reference — 02-verified-teaser (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Dark navy #04142C circle 57px diameter border-radius-full with white lock SVG icon 24px centered; no box-shadow; inline-block; on cream background; icon from lucide or similar single-family set</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='02-verified-teaser-r9'>
+<b>02-verified-teaser-r9</b><span class='chip code'>code</span>
+<div class='muted'>Dark navy #04142C circle 57px diameter border-radius-full with white users/group SVG icon 24px centered; no box-shadow; inline-block; cream background; lucide or consistent icon family</div>
+<div class='pair'>
+<figure><a href='crops/02-verified-teaser-context.png'><img src='crops/02-verified-teaser-r9-ref.png' alt=''></a><figcaption>design reference — 02-verified-teaser (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Dark navy #04142C circle 57px diameter border-radius-full with white users/group SVG icon 24px centered; no box-shadow; inline-block; cream background; lucide or consistent icon family</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='02-verified-teaser-r10'>
+<b>02-verified-teaser-r10</b><span class='chip code'>code</span>
+<div class='muted'>Dark navy #04142C circle 57px diameter border-radius-full with white file-text SVG icon 24px centered; no box-shadow; inline-block; cream #F4F4E4 background; consistent lucide icon family</div>
+<div class='pair'>
+<figure><a href='crops/02-verified-teaser-context.png'><img src='crops/02-verified-teaser-r10-ref.png' alt=''></a><figcaption>design reference — 02-verified-teaser (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Dark navy #04142C circle 57px diameter border-radius-full with white file-text SVG icon 24px centered; no box-shadow; inline-block; cream #F4F4E4 background; consistent lucide icon family</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='03-manuscript-gate-r1'>
+<b>03-manuscript-gate-r1</b><span class='chip extract'>extract</span>
+<div class='muted'>presentation: {&quot;alpha_required&quot;: false, &quot;crop_contract&quot;: &quot;right-column crop of envelope clipboard and pen flat-lay; no website text; full height of right panel; preserve string-tie and paper detail&quot;, &quot;intended_background&quot;: &quot;#FCFCFC&quot;, &quot;minimum_visible_fraction&quot;: &quot;90%&quot;, &quot;mode&quot;: &quot;framed-panel&quot;}</div>
+<div class='pair'>
+<figure><a href='crops/03-manuscript-gate-context.png'><img src='crops/03-manuscript-gate-r1-ref.png' alt=''></a><figcaption>design reference — 03-manuscript-gate (click for full frame)</figcaption></figure>
+<figure><div class='asset-preview'><img src='../images/design/elements/03-manuscript-gate-envelope-clipboard.png' alt=''></div><figcaption>shipped asset on transparency checkerboard — <code>elements/03-manuscript-gate-envelope-clipboard.png</code> (replace in git)</figcaption></figure>
+<figure><div class='intended-preview' style='background:#FCFCFC'><img src='../images/design/elements/03-manuscript-gate-envelope-clipboard.png' alt=''></div><figcaption>asset on intended background — #FCFCFC</figcaption></figure>
+</div></div>
+<div class='card' id='03-manuscript-gate-r2'>
+<b>03-manuscript-gate-r2</b><span class='chip code'>code</span>
+<div class='muted'>Full-width horizontal status footer bar 113px tall solid muted sky-blue #D8E4ED fill; no border no gradient; contains small dark icon and short sans-serif text row centered or left-aligned inside bar</div>
+<div class='pair'>
+<figure><a href='crops/03-manuscript-gate-context.png'><img src='crops/03-manuscript-gate-r2-ref.png' alt=''></a><figcaption>design reference — 03-manuscript-gate (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Full-width horizontal status footer bar 113px tall solid muted sky-blue #D8E4ED fill; no border no gradient; contains small dark icon and short sans-serif text row centered or left-aligned inside bar</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='03-manuscript-gate-r3'>
+<b>03-manuscript-gate-r3</b><span class='chip code'>code</span>
+<div class='muted'>Gate headline text fragment Required before this artic– in ~72px dark #1A1A1A serif font weight 400 or 300; left-aligned on near-white #FCFCFC; part of multi-line heading Required before this article can go live</div>
+<div class='pair'>
+<figure><a href='crops/03-manuscript-gate-context.png'><img src='crops/03-manuscript-gate-r3-ref.png' alt=''></a><figcaption>design reference — 03-manuscript-gate (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Gate headline text fragment Required before this artic– in ~72px dark #1A1A1A serif font weight 400 or 300; left-aligned on near-white #FCFCFC; part of multi-line heading Required before this article can go live</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='03-manuscript-gate-r4'>
+<b>03-manuscript-gate-r4</b><span class='chip code'>code</span>
+<div class='muted'>Checklist requirement text No invented body copy conclusions examples or citations; dark navy ~14px sans-serif left-aligned; inside left-column gate requirements list on near-white background</div>
+<div class='pair'>
+<figure><a href='crops/03-manuscript-gate-context.png'><img src='crops/03-manuscript-gate-r4-ref.png' alt=''></a><figcaption>design reference — 03-manuscript-gate (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Checklist requirement text No invented body copy conclusions examples or citations; dark navy ~14px sans-serif left-aligned; inside left-column gate requirements list on near-white background</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='03-manuscript-gate-r5'>
+<b>03-manuscript-gate-r5</b><span class='chip code'>code</span>
+<div class='muted'>Gate headline word fragment article in ~72px dark #1A1A1A serif same typeface and weight as region 3; left-aligned on near-white #FCFCFC; continues multi-line Required before this article can go live heading</div>
+<div class='pair'>
+<figure><a href='crops/03-manuscript-gate-context.png'><img src='crops/03-manuscript-gate-r5-ref.png' alt=''></a><figcaption>design reference — 03-manuscript-gate (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Gate headline word fragment article in ~72px dark #1A1A1A serif same typeface and weight as region 3; left-aligned on near-white #FCFCFC; continues multi-line Required before this article can go live heading</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='03-manuscript-gate-r6'>
+<b>03-manuscript-gate-r6</b><span class='chip code'>code</span>
+<div class='muted'>Gate headline word fragment before in ~72px dark #1A1A1A serif same typeface and scale as region 3 and 5; left-aligned on near-white #FCFCFC; part of Required before this article can go live heading</div>
+<div class='pair'>
+<figure><a href='crops/03-manuscript-gate-context.png'><img src='crops/03-manuscript-gate-r6-ref.png' alt=''></a><figcaption>design reference — 03-manuscript-gate (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Gate headline word fragment before in ~72px dark #1A1A1A serif same typeface and scale as region 3 and 5; left-aligned on near-white #FCFCFC; part of Required before this article can go live heading</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='03-manuscript-gate-r7'>
+<b>03-manuscript-gate-r7</b><span class='chip code'>code</span>
+<div class='muted'>Checklist requirement text Financial-compliance review for high-stakes claims; dark navy ~14px sans-serif line-height 1.4; left-aligned within left gate checklist column on near-white background</div>
+<div class='pair'>
+<figure><a href='crops/03-manuscript-gate-context.png'><img src='crops/03-manuscript-gate-r7-ref.png' alt=''></a><figcaption>design reference — 03-manuscript-gate (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Checklist requirement text Financial-compliance review for high-stakes claims; dark navy ~14px sans-serif line-height 1.4; left-aligned within left gate checklist column on near-white background</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='03-manuscript-gate-r8'>
+<b>03-manuscript-gate-r8</b><span class='chip code'>code</span>
+<div class='muted'>Checklist requirement text Approved author date only when supplied; dark navy ~14px sans-serif line-height 1.4 left-aligned; within left-column gate requirements checklist on near-white #FCFCFC</div>
+<div class='pair'>
+<figure><a href='crops/03-manuscript-gate-context.png'><img src='crops/03-manuscript-gate-r8-ref.png' alt=''></a><figcaption>design reference — 03-manuscript-gate (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Checklist requirement text Approved author date only when supplied; dark navy ~14px sans-serif line-height 1.4 left-aligned; within left-column gate requirements checklist on near-white #FCFCFC</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='03-manuscript-gate-r9'>
+<b>03-manuscript-gate-r9</b><span class='chip code'>code</span>
+<div class='muted'>Gate headline word fragment can in ~72px dark #1A1A1A serif identical typeface and weight to regions 3 5 6; left-aligned on near-white #FCFCFC; part of Required before this article can go live heading</div>
+<div class='pair'>
+<figure><a href='crops/03-manuscript-gate-context.png'><img src='crops/03-manuscript-gate-r9-ref.png' alt=''></a><figcaption>design reference — 03-manuscript-gate (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Gate headline word fragment can in ~72px dark #1A1A1A serif identical typeface and weight to regions 3 5 6; left-aligned on near-white #FCFCFC; part of Required before this article can go live heading</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='03-manuscript-gate-r10'>
+<b>03-manuscript-gate-r10</b><span class='chip code'>code</span>
+<div class='muted'>Gate headline word fragment go in ~72px dark #1A1A1A serif identical typeface scale to other headline fragments; left-aligned on near-white #FCFCFC; part of Required before this article can go live heading</div>
+<div class='pair'>
+<figure><a href='crops/03-manuscript-gate-context.png'><img src='crops/03-manuscript-gate-r10-ref.png' alt=''></a><figcaption>design reference — 03-manuscript-gate (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Gate headline word fragment go in ~72px dark #1A1A1A serif identical typeface scale to other headline fragments; left-aligned on near-white #FCFCFC; part of Required before this article can go live heading</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='03-manuscript-gate-r11'>
+<b>03-manuscript-gate-r11</b><span class='chip code'>code</span>
+<div class='muted'>Checklist requirement text Approved full manuscript; dark navy ~14px sans-serif line-height 1.4 left-aligned; thin single-line text entry within gate requirements list on near-white background</div>
+<div class='pair'>
+<figure><a href='crops/03-manuscript-gate-context.png'><img src='crops/03-manuscript-gate-r11-ref.png' alt=''></a><figcaption>design reference — 03-manuscript-gate (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Checklist requirement text Approved full manuscript; dark navy ~14px sans-serif line-height 1.4 left-aligned; thin single-line text entry within gate requirements list on near-white background</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='03-manuscript-gate-r12'>
+<b>03-manuscript-gate-r12</b><span class='chip code'>code</span>
+<div class='muted'>Eyebrow label MANUSCRIPT GATE all-caps letter-spacing-widest ~11px amber #C9A84C or dark sans-serif font-weight 600; thin horizontal text bar; left-aligned breadcrumb on near-white #FCFCFC background</div>
+<div class='pair'>
+<figure><a href='crops/03-manuscript-gate-context.png'><img src='crops/03-manuscript-gate-r12-ref.png' alt=''></a><figcaption>design reference — 03-manuscript-gate (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Eyebrow label MANUSCRIPT GATE all-caps letter-spacing-widest ~11px amber #C9A84C or dark sans-serif font-weight 600; thin horizontal text bar; left-aligned breadcrumb on near-white #FCFCFC background</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='04-source-and-review-gate-r1-photo'>
+<b>04-source-and-review-gate-r1-photo</b><span class='chip extract'>extract</span>
+<div class='muted'>presentation: {&quot;alpha_required&quot;: false, &quot;crop_contract&quot;: &quot;Clean owner-specific photographic crop from the approved frame; preserve the complete named physical subject at desktop and mobile; no website copy or neighboring UI enters the crop.&quot;, &quot;intended_background&quot;: &quot;#F4F4EC&quot;, &quot;minimum_visible_fraction&quot;: &quot;85%&quot;, &quot;mode&quot;: &quot;framed-panel&quot;}</div>
+<div class='pair'>
+<figure><a href='crops/04-source-and-review-gate-context.png'><img src='crops/04-source-and-review-gate-r1-photo-ref.png' alt=''></a><figcaption>design reference — 04-source-and-review-gate (click for full frame)</figcaption></figure>
+<figure><div class='asset-preview'><img src='../images/design/elements/04-source-and-review-gate-hands-documents.png' alt=''></div><figcaption>shipped asset on transparency checkerboard — <code>elements/04-source-and-review-gate-hands-documents.png</code> (replace in git)</figcaption></figure>
+<figure><div class='intended-preview' style='background:#F4F4EC'><img src='../images/design/elements/04-source-and-review-gate-hands-documents.png' alt=''></div><figcaption>asset on intended background — #F4F4EC</figcaption></figure>
+</div></div>
+<div class='card' id='04-source-and-review-gate-r1-code'>
+<b>04-source-and-review-gate-r1-code</b><span class='chip code'>code</span>
+<div class='muted'>Left-panel section cream #F4F4EC background flex-col layout; holds ~38px dark navy serif headline Source and review requirements plus body text ~15px below and three feature-block row at bottom with icons</div>
+<div class='pair'>
+<figure><a href='crops/04-source-and-review-gate-context.png'><img src='crops/04-source-and-review-gate-r1-code-ref.png' alt=''></a><figcaption>design reference — 04-source-and-review-gate (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Left-panel section cream #F4F4EC background flex-col layout; holds ~38px dark navy serif headline Source and review requirements plus body text ~15px below and three feature-block row at bottom with icons</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='04-source-and-review-gate-r2'>
+<b>04-source-and-review-gate-r2</b><span class='chip code'>code</span>
+<div class='muted'>Feature block inline-flex row gap-3; shield-checkmark SVG icon ~36px amber stroke on left; text Structured data must match visible approved content dark navy ~13px sans-serif; muted blue-cream card background #D8E4ED</div>
+<div class='pair'>
+<figure><a href='crops/04-source-and-review-gate-context.png'><img src='crops/04-source-and-review-gate-r2-ref.png' alt=''></a><figcaption>design reference — 04-source-and-review-gate (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Feature block inline-flex row gap-3; shield-checkmark SVG icon ~36px amber stroke on left; text Structured data must match visible approved content dark navy ~13px sans-serif; muted blue-cream card background #D8E4ED</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='04-source-and-review-gate-r3'>
+<b>04-source-and-review-gate-r3</b><span class='chip code'>code</span>
+<div class='muted'>Feature text block No expert review label appears unless that review occurred; dark navy ~13px sans-serif left-aligned; muted sky-blue #D8E4ED highlight background rectangle; inline-flex row with leading icon gap-3</div>
+<div class='pair'>
+<figure><a href='crops/04-source-and-review-gate-context.png'><img src='crops/04-source-and-review-gate-r3-ref.png' alt=''></a><figcaption>design reference — 04-source-and-review-gate (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Feature text block No expert review label appears unless that review occurred; dark navy ~13px sans-serif left-aligned; muted sky-blue #D8E4ED highlight background rectangle; inline-flex row with leading icon gap-3</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='04-source-and-review-gate-r4'>
+<b>04-source-and-review-gate-r4</b><span class='chip code'>code</span>
+<div class='muted'>Document file SVG icon ~40px centered in muted light-blue #D8E4ED rectangle container 41×75px; icon color dark navy; no text label; leading icon element for feature row on cream section background</div>
+<div class='pair'>
+<figure><a href='crops/04-source-and-review-gate-context.png'><img src='crops/04-source-and-review-gate-r4-ref.png' alt=''></a><figcaption>design reference — 04-source-and-review-gate (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Document file SVG icon ~40px centered in muted light-blue #D8E4ED rectangle container 41×75px; icon color dark navy; no text label; leading icon element for feature row on cream section background</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='05-related-reading-r1'>
+<b>05-related-reading-r1</b><span class='chip extract'>extract</span>
+<div class='muted'>presentation: {&quot;alpha_required&quot;: false, &quot;crop_contract&quot;: &quot;full left-column crop of navy folder with paper tabs visible at top; no website text; preserve full folder height and shadow at base&quot;, &quot;intended_background&quot;: &quot;#FCF4EC&quot;, &quot;minimum_visible_fraction&quot;: &quot;90%&quot;, &quot;mode&quot;: &quot;framed-panel&quot;}</div>
+<div class='pair'>
+<figure><a href='crops/05-related-reading-context.png'><img src='crops/05-related-reading-r1-ref.png' alt=''></a><figcaption>design reference — 05-related-reading (click for full frame)</figcaption></figure>
+<figure><div class='asset-preview'><img src='../images/design/elements/05-related-reading-navy-folder.png' alt=''></div><figcaption>shipped asset on transparency checkerboard — <code>elements/05-related-reading-navy-folder.png</code> (replace in git)</figcaption></figure>
+<figure><div class='intended-preview' style='background:#FCF4EC'><img src='../images/design/elements/05-related-reading-navy-folder.png' alt=''></div><figcaption>asset on intended background — #FCF4EC</figcaption></figure>
+</div></div>
+<div class='card' id='05-related-reading-r2'>
+<b>05-related-reading-r2</b><span class='chip code'>code</span>
+<div class='muted'>Body text paragraph dark navy ~#0D1F3C ~15px serif line-height 1.6 left-aligned on warm cream #FCF4EC; states while article held page points reviewers to service pages with verified planning context; max-width ~700px</div>
+<div class='pair'>
+<figure><a href='crops/05-related-reading-context.png'><img src='crops/05-related-reading-r2-ref.png' alt=''></a><figcaption>design reference — 05-related-reading (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Body text paragraph dark navy ~#0D1F3C ~15px serif line-height 1.6 left-aligned on warm cream #FCF4EC; states while article held page points reviewers to service pages with verified planning context; max-width ~700px</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='05-related-reading-r3'>
+<b>05-related-reading-r3</b><span class='chip code'>code</span>
+<div class='muted'>Large serif section headline Related planning paths for this topic dark navy #0D1F3C ~48px font-size two-line left-aligned; region 7 captures word fragment paths; warm cream #FCF4EC background; font weight 400</div>
+<div class='pair'>
+<figure><a href='crops/05-related-reading-context.png'><img src='crops/05-related-reading-r3-ref.png' alt=''></a><figcaption>design reference — 05-related-reading (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Large serif section headline Related planning paths for this topic dark navy #0D1F3C ~48px font-size two-line left-aligned; region 7 captures word fragment paths; warm cream #FCF4EC background; font weight 400</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='05-related-reading-r4'>
+<b>05-related-reading-r4</b><span class='chip code'>code</span>
+<div class='muted'>Navigation path link /retirement-planning-for-physicians dark navy ~16px monospace or sans-serif underline decoration amber #C9A84C; inline-flex left-aligned on warm cream #FCF4EC; hover underline opacity change</div>
+<div class='pair'>
+<figure><a href='crops/05-related-reading-context.png'><img src='crops/05-related-reading-r4-ref.png' alt=''></a><figcaption>design reference — 05-related-reading (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Navigation path link /retirement-planning-for-physicians dark navy ~16px monospace or sans-serif underline decoration amber #C9A84C; inline-flex left-aligned on warm cream #FCF4EC; hover underline opacity change</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='05-related-reading-r5'>
+<b>05-related-reading-r5</b><span class='chip code'>code</span>
+<div class='muted'>Navigation path link /practice-owner-planning dark navy ~16px monospace or sans-serif underline decoration amber #C9A84C; inline-flex left-aligned on warm cream #FCF4EC; hover underline opacity transition</div>
+<div class='pair'>
+<figure><a href='crops/05-related-reading-context.png'><img src='crops/05-related-reading-r5-ref.png' alt=''></a><figcaption>design reference — 05-related-reading (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Navigation path link /practice-owner-planning dark navy ~16px monospace or sans-serif underline decoration amber #C9A84C; inline-flex left-aligned on warm cream #FCF4EC; hover underline opacity transition</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='05-related-reading-r6'>
+<b>05-related-reading-r6</b><span class='chip code'>code</span>
+<div class='muted'>Return to insights navigation link ~16px sans-serif dark navy font-weight 500 with amber #C9A84C underline text-decoration; inline-flex row; left-aligned on warm cream background; hover changes underline opacity</div>
+<div class='pair'>
+<figure><a href='crops/05-related-reading-context.png'><img src='crops/05-related-reading-r6-ref.png' alt=''></a><figcaption>design reference — 05-related-reading (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Return to insights navigation link ~16px sans-serif dark navy font-weight 500 with amber #C9A84C underline text-decoration; inline-flex row; left-aligned on warm cream background; hover changes underline opacity</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='05-related-reading-r7'>
+<b>05-related-reading-r7</b><span class='chip code'>code</span>
+<div class='muted'>Headline word fragment paths in ~48px dark navy #0D1F3C serif font weight 400; warm cream #FCF4EC background; left-aligned; same typeface scale and weight as region 3 headline; no additional styling</div>
+<div class='pair'>
+<figure><a href='crops/05-related-reading-context.png'><img src='crops/05-related-reading-r7-ref.png' alt=''></a><figcaption>design reference — 05-related-reading (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Headline word fragment paths in ~48px dark navy #0D1F3C serif font weight 400; warm cream #FCF4EC background; left-aligned; same typeface scale and weight as region 3 headline; no additional styling</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='05-related-reading-r8'>
+<b>05-related-reading-r8</b><span class='chip code'>code</span>
+<div class='muted'>Navigation path link /insights dark navy ~16px monospace or sans-serif underline decoration amber #C9A84C; inline-flex left-aligned on warm cream #FCF4EC background; hover underline opacity transition</div>
+<div class='pair'>
+<figure><a href='crops/05-related-reading-context.png'><img src='crops/05-related-reading-r8-ref.png' alt=''></a><figcaption>design reference — 05-related-reading (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Navigation path link /insights dark navy ~16px monospace or sans-serif underline decoration amber #C9A84C; inline-flex left-aligned on warm cream #FCF4EC background; hover underline opacity transition</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<details><summary>NOTES.md — CSS/SVG techniques the build uses instead of images</summary><pre># Design frame decomposition: `insights--cash-balance-defined-benefit-decision-guide`
+
+Canonical source: approved 1536px page-mode frames. Cormorant Garamond remains the display family and Inter remains the body/utility family. Palette tokens are ink `#0B1F3A`, action `#C8A65A`, mist `#DCE8F2`, surface `#F6F2E8`, white, and charcoal `#38373E`.
+
+Every section is assembled from a live CSS surface, live HTML copy, responsive CSS/SVG coordination lines, and only its owner-specific photographic crop. Intrinsic media geometry must not control layout. No full section is baked. Hybrid full-frame CODE regions describe the responsive CSS surface, live typography, and SVG geometry around smaller owner-specific raster crops; they are not raster assets or permission to bake the frame. Printed lettering physically present on photographed documents remains part of the source photograph; all website copy remains live HTML.
+
+## 01-editorial-state-hero
+- **Assembly tier:** Tier 2, CSS surface plus extracted photography and live content.
+- **Geometry:** 7 segmented region contracts; preserve the frame&#x27;s asymmetric mass, content grouping, and named quiet zones rather than pixel coordinates.
+- **Raster `elements/01-editorial-state-hero-desk-scene.png`:** Owner-specific photographic material. right half of hero full-height; desk scene vertically centered; no website text in crop area; preserve stethoscope and clipboard detail Minimum visible: 90%.
+- **CODE region 1-code [12, 12, 749, 851]:** Dark navy #04142C hero left-column container div full-height flex-col layout; no border or additional background fill; houses eyebrow headline body and nav link children left-aligned padding-left ~88px
+- **CODE region 2 [93, 163, 748, 424]:** Off-white #F0EDE6 serif display headline four lines ~52px font-size tight letter-spacing leading-snug left-aligned on dark navy #04142C; editorial serif typeface Playfair Display or equivalent weight 700
+- **CODE region 3 [94, 493, 539, 557]:** Off-white ~#D6D0C4 body text ~16px serif line-height 1.6 left-aligned on dark navy #04142C; max-width ~445px; describes how advanced qualified plans fit into practice owner picture
+- **CODE region 4 [92, 595, 528, 643]:** Editorial status row with small lock SVG icon ~16px amber-tinted muted #B8A47A text ~14px sans-serif; inline-flex row gap-2; subtle dashed or solid 1px amber border container on dark navy background
+- **CODE region 5 [91, 118, 383, 130]:** Eyebrow label PRACTICE OWNER STRATEGY amber #C9A84C all-caps letter-spacing-widest ~11px sans-serif font-weight 600; left-aligned flex row with separator dot or slash; on dark navy #04142C background
+- **CODE region 6 [92, 674, 203, 695]:** All Insights navigation link with right chevron icon; amber #C9A84C text ~14px sans-serif font-weight 500; inline-flex row gap-1; underline on hover; left-aligned on dark navy #04142C background
+
+## 02-verified-teaser
+- **Assembly tier:** Tier 2, CSS surface plus extracted photography and live content.
+- **Geometry:** 10 segmented region contracts; preserve the frame&#x27;s asymmetric mass, content grouping, and named quiet zones rather than pixel coordinates.
+- **Raster `elements/02-verified-teaser-notebook-cover.png`:** Owner-specific photographic material. full crop of notebook cover with cream margin at edges; no website text; preserve gold border and cloth texture detail Minimum visible: 85%.
+- **Raster `elements/02-verified-teaser-papers-pen.png`:** Owner-specific photographic material. full crop of paper stack and pen; no website text; preserve paper edge and tab detail at top Minimum visible: 85%.
+- **CODE region 3 [291, 145, 869, 231]:** VERIFIED TEASER eyebrow ~11px amber #C9A84C letter-spacing-widest all-caps above large serif headline What is verified now in dark navy ~42px; left-aligned stacked on cream #F4F4E4 background
+- **CODE region 4 [295, 266, 844, 327]:** Dark navy #0D1F3C body paragraph ~15px serif line-height 1.6 left-aligned on cream #F4F4E4; describes advanced qualified plans fitting into practice owner larger picture; max-width ~549px
+- **CODE region 5 [391, 459, 767, 497]:** Checklist item inline-flex row gap-3; amber gold bullet dot ~8px; dark navy ~#0D1F3C text ~14px sans-serif line-height 1.5; states audience is physicians and practice owners per source crawl; cream bg
+- **CODE region 6 [391, 546, 707, 586]:** Checklist item inline-flex row gap-3; amber gold bullet dot; dark navy ~14px sans-serif; states full article body not available in verified inputs; cream #F4F4E4 background; two-line wrap
+- **CODE region 7 [391, 385, 630, 402]:** Checklist item inline-flex row gap-3; amber gold bullet dot ~8px; dark navy ~14px sans-serif; single line stating topic category is supplied; cream #F4F4E4 background; no wrapping
+- **CODE region 8 [301, 532, 358, 589]:** Dark navy #04142C circle 57px diameter border-radius-full with white lock SVG icon 24px centered; no box-shadow; inline-block; on cream background; icon from lucide or similar single-family set
+- **CODE region 9 [301, 447, 358, 504]:** Dark navy #04142C circle 57px diameter border-radius-full with white users/group SVG icon 24px centered; no box-shadow; inline-block; cream background; lucide or consistent icon family
+- **CODE region 10 [301, 363, 358, 420]:** Dark navy #04142C circle 57px diameter border-radius-full with white file-text SVG icon 24px centered; no box-shadow; inline-block; cream #F4F4E4 background; consistent lucide icon family
+
+## 03-manuscript-gate
+- **Assembly tier:** Tier 2, CSS surface plus extracted photography and live content.
+- **Geometry:** 12 segmented region contracts; preserve the frame&#x27;s asymmetric mass, content grouping, and named quiet zones rather than pixel coordinates.
+- **Raster `elements/03-manuscript-gate-envelope-clipboard.png`:** Owner-specific photographic material. right-column crop of envelope clipboard and pen flat-lay; no website text; full height of right panel; preserve string-tie and paper detail Minimum visible: 90%.
+- **CODE region 2 [12, 738, 1523, 851]:** Full-width horizontal status footer bar 113px tall solid muted sky-blue #D8E4ED fill; no border no gradient; contains small dark icon and short sans-serif text row centered or left-aligned inside bar
+- **CODE region 3 [87, 127, 346, 338]:** Gate headline text fragment Required before this artic– in ~72px dark #1A1A1A serif font weight 400 or 300; left-aligned on near-white #FCFCFC; part of multi-line heading Required before this article can go live
+- **CODE region 4 [239, 608, 406, 673]:** Checklist requirement text No invented body copy conclusions examples or citations; dark navy ~14px sans-serif left-aligned; inside left-column gate requirements list on near-white background
+- **CODE region 5 [218, 204, 395, 261]:** Gate headline word fragment article in ~72px dark #1A1A1A serif same typeface and weight as region 3; left-aligned on near-white #FCFCFC; continues multi-line Required before this article can go live heading
+- **CODE region 6 [378, 125, 551, 182]:** Gate headline word fragment before in ~72px dark #1A1A1A serif same typeface and scale as region 3 and 5; left-aligned on near-white #FCFCFC; part of Required before this article can go live heading
+- **CODE region 7 [240, 533, 439, 574]:** Checklist requirement text Financial-compliance review for high-stakes claims; dark navy ~14px sans-serif line-height 1.4; left-aligned within left gate checklist column on near-white background
+- **CODE region 8 [239, 453, 429, 495]:** Checklist requirement text Approved author date only when supplied; dark navy ~14px sans-serif line-height 1.4 left-aligned; within left-column gate requirements checklist on near-white #FCFCFC
+- **CODE region 9 [421, 227, 513, 261]:** Gate headline word fragment can in ~72px dark #1A1A1A serif identical typeface and weight to regions 3 5 6; left-aligned on near-white #FCFCFC; part of Required before this article can go live heading
+- **CODE region 10 [85, 304, 150, 357]:** Gate headline word fragment go in ~72px dark #1A1A1A serif identical typeface scale to other headline fragments; left-aligned on near-white #FCFCFC; part of Required before this article can go live heading
+- **CODE region 11 [240, 396, 421, 412]:** Checklist requirement text Approved full manuscript; dark navy ~14px sans-serif line-height 1.4 left-aligned; thin single-line text entry within gate requirements list on near-white background
+- **CODE region 12 [88, 84, 231, 95]:** Eyebrow label MANUSCRIPT GATE all-caps letter-spacing-widest ~11px amber #C9A84C or dark sans-serif font-weight 600; thin horizontal text bar; left-aligned breadcrumb on near-white #FCFCFC background
+
+## 04-source-and-review-gate
+- **Assembly tier:** Tier 2, CSS surface plus extracted photography and live content.
+- **Geometry:** 5 segmented region contracts; preserve the frame&#x27;s asymmetric mass, content grouping, and named quiet zones rather than pixel coordinates.
+- **Raster `elements/04-source-and-review-gate-hands-documents.png`:** Owner-specific photographic material. right-panel crop of hands with file folders; no website text in crop; preserve hands and folder-tab detail; full section height Minimum visible: 85%.
+- **CODE region 1-code [70, 12, 940, 381]:** Left-panel section cream #F4F4EC background flex-col layout; holds ~38px dark navy serif headline Source and review requirements plus body text ~15px below and three feature-block row at bottom with icons
+- **CODE region 2 [573, 290, 858, 366]:** Feature block inline-flex row gap-3; shield-checkmark SVG icon ~36px amber stroke on left; text Structured data must match visible approved content dark navy ~13px sans-serif; muted blue-cream card background #D8E4ED
+- **CODE region 3 [184, 319, 426, 361]:** Feature text block No expert review label appears unless that review occurred; dark navy ~13px sans-serif left-aligned; muted sky-blue #D8E4ED highlight background rectangle; inline-flex row with leading icon gap-3
+- **CODE region 4 [114, 290, 155, 365]:** Document file SVG icon ~40px centered in muted light-blue #D8E4ED rectangle container 41×75px; icon color dark navy; no text label; leading icon element for feature row on cream section background
+
+## 05-related-reading
+- **Assembly tier:** Tier 2, CSS surface plus extracted photography and live content.
+- **Geometry:** 8 segmented region contracts; preserve the frame&#x27;s asymmetric mass, content grouping, and named quiet zones rather than pixel coordinates.
+- **Raster `elements/05-related-reading-navy-folder.png`:** Owner-specific photographic material. full left-column crop of navy folder with paper tabs visible at top; no website text; preserve full folder height and shadow at base Minimum visible: 90%.
+- **CODE region 2 [580, 302, 1281, 364]:** Body text paragraph dark navy ~#0D1F3C ~15px serif line-height 1.6 left-aligned on warm cream #FCF4EC; states while article held page points reviewers to service pages with verified planning context; max-width ~700px
+- **CODE region 3 [577, 128, 1038, 271]:** Large serif section headline Related planning paths for this topic dark navy #0D1F3C ~48px font-size two-line left-aligned; region 7 captures word fragment paths; warm cream #FCF4EC background; font weight 400
+- **CODE region 4 [632, 528, 1096, 555]:** Navigation path link /retirement-planning-for-physicians dark navy ~16px monospace or sans-serif underline decoration amber #C9A84C; inline-flex left-aligned on warm cream #FCF4EC; hover underline opacity change
+- **CODE region 5 [632, 438, 969, 463]:** Navigation path link /practice-owner-planning dark navy ~16px monospace or sans-serif underline decoration amber #C9A84C; inline-flex left-aligned on warm cream #FCF4EC; hover underline opacity transition
+- **CODE region 6 [581, 727, 807, 759]:** Return to insights navigation link ~16px sans-serif dark navy font-weight 500 with amber #C9A84C underline text-decoration; inline-flex row; left-aligned on warm cream background; hover changes underline opacity
+- **CODE region 7 [1063, 129, 1199, 194]:** Headline word fragment paths in ~48px dark navy #0D1F3C serif font weight 400; warm cream #FCF4EC background; left-aligned; same typeface scale and weight as region 3 headline; no additional styling
+- **CODE region 8 [632, 620, 739, 647]:** Navigation path link /insights dark navy ~16px monospace or sans-serif underline decoration amber #C9A84C; inline-flex left-aligned on warm cream #FCF4EC background; hover underline opacity transition
+
+</pre></details>

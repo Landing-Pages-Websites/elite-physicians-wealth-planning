@@ -1,0 +1,428 @@
+<!doctype html><meta charset='utf-8'>
+<title>Elite Physicians Wealth Planning — our-process</title><style>
+body{margin:0;padding:24px;background:#111;color:#eee;
+     font:14px/1.5 -apple-system,'Segoe UI',sans-serif}
+a{color:#8bd} .muted{color:#999} h1{font-size:20px}
+.proto{background:#1b1b1b;border:1px solid #333;border-radius:8px;
+       padding:12px 16px;max-width:900px;margin-bottom:24px}
+.proto code{background:#000;padding:1px 5px;border-radius:4px}
+.card{background:#1b1b1b;border:1px solid #333;border-radius:8px;
+      padding:16px;margin-bottom:20px;max-width:1200px}
+.card.missing{border-color:#a33}
+.pair{display:flex;gap:16px;flex-wrap:wrap}
+.pair figure{margin:0;flex:1;min-width:280px}
+.pair img{max-width:100%;border:1px solid #444}
+.asset-preview{display:grid;place-items:center;min-height:180px;
+  background-color:#fff;background-image:linear-gradient(45deg,#ddd 25%,transparent 25%),
+  linear-gradient(-45deg,#ddd 25%,transparent 25%),linear-gradient(45deg,transparent 75%,#ddd 75%),
+  linear-gradient(-45deg,transparent 75%,#ddd 75%);background-size:24px 24px;
+  background-position:0 0,0 12px,12px -12px,-12px 0}
+.asset-preview img,.intended-preview img{display:block;max-height:520px}
+.intended-preview{display:grid;place-items:center;min-height:180px;border:1px solid #444}
+figcaption{font-size:12px;color:#999;margin-top:4px}
+.chip{display:inline-block;font-size:11px;padding:2px 8px;border-radius:10px;
+      background:#333;margin-left:8px;text-transform:uppercase}
+.chip.extract{background:#264} .chip.inpaint{background:#452}
+.chip.code{background:#345}
+.chip.plate{background:#246} .chip.generated{background:#525}
+.chip.unmapped{background:#630} .chip.client-copy{background:#444}
+.chip.composite{background:#536}
+</style>
+<h1>Elite Physicians Wealth Planning — our-process</h1>
+<p class='muted'>27 CODE regions and 11 raster assets to review: 6 extract, 0 inpaint.</p>
+<div class='proto'><b>How to review:</b> judge every planned treatment against its design reference on the left. For CODE cards, verify the build note can preserve the region's silhouette, materiality, and compositing—not merely approximate its geometry. To swap a raster, replace the file directly in git — same path, push to main. Replaced files are authoritative — the pipeline never overwrites them. This page updates on every push. Complete the review subtask to approve; the build does not start until then.</div>
+<div class='card' id='01-blueprint-origin-r1'>
+<b>01-blueprint-origin-r1</b><span class='chip extract'>extract</span>
+<div class='muted'>clean photographic imagery isolated from live website copy</div>
+<div class='muted'>Render this photographic asset inside the section-owned media slot with object-fit: cover; keep all website copy, rules, icons, labels, and surfaces as live HTML/CSS/SVG layers.</div>
+<div class='muted'>presentation: {&quot;alpha_required&quot;: false, &quot;crop_contract&quot;: &quot;Preserve the principal desk, medical, document, or office subject shown in the approved frame; desktop may crop only quiet outer margins and mobile must choose an alternate focal crop without shrinking the intrinsic image into layout authority.&quot;, &quot;intended_background&quot;: &quot;#FFFFFF&quot;, &quot;minimum_visible_fraction&quot;: &quot;At least 70% of the photographic subject cluster remains visible; all section copy stays live and outside the raster.&quot;, &quot;mode&quot;: &quot;full-bleed&quot;}</div>
+<div class='pair'>
+<figure><a href='crops/01-blueprint-origin-context.png'><img src='crops/01-blueprint-origin-r1-ref.png' alt=''></a><figcaption>design reference — 01-blueprint-origin (click for full frame)</figcaption></figure>
+<figure><div class='asset-preview'><img src='../images/design/elements/01-blueprint-origin-canvas.jpg' alt=''></div><figcaption>shipped asset on transparency checkerboard — <code>elements/01-blueprint-origin-canvas.jpg</code> (replace in git)</figcaption></figure>
+<figure><div class='intended-preview' style='background:#FFFFFF'><img src='../images/design/elements/01-blueprint-origin-canvas.jpg' alt=''></div><figcaption>asset on intended background — #FFFFFF</figcaption></figure>
+</div></div>
+<div class='card' id='02-six-phase-route-r1'>
+<b>02-six-phase-route-r1</b><span class='chip extract'>extract</span>
+<div class='muted'>clean photographic imagery isolated from live website copy</div>
+<div class='muted'>Render this photographic asset inside the section-owned media slot with object-fit: cover; keep all website copy, rules, icons, labels, and surfaces as live HTML/CSS/SVG layers.</div>
+<div class='muted'>presentation: {&quot;alpha_required&quot;: false, &quot;crop_contract&quot;: &quot;Preserve the principal desk, medical, document, or office subject shown in the approved frame; desktop may crop only quiet outer margins and mobile must choose an alternate focal crop without shrinking the intrinsic image into layout authority.&quot;, &quot;intended_background&quot;: &quot;#FFFFFF&quot;, &quot;minimum_visible_fraction&quot;: &quot;At least 70% of the photographic subject cluster remains visible; all section copy stays live and outside the raster.&quot;, &quot;mode&quot;: &quot;framed-panel&quot;}</div>
+<div class='pair'>
+<figure><a href='crops/02-six-phase-route-context.png'><img src='crops/02-six-phase-route-r1-ref.png' alt=''></a><figcaption>design reference — 02-six-phase-route (click for full frame)</figcaption></figure>
+<figure><div class='asset-preview'><img src='../images/design/elements/02-six-phase-route-photo.jpg' alt=''></div><figcaption>shipped asset on transparency checkerboard — <code>elements/02-six-phase-route-photo.jpg</code> (replace in git)</figcaption></figure>
+<figure><div class='intended-preview' style='background:#FFFFFF'><img src='../images/design/elements/02-six-phase-route-photo.jpg' alt=''></div><figcaption>asset on intended background — #FFFFFF</figcaption></figure>
+</div></div>
+<div class='card' id='02-six-phase-route-r2'>
+<b>02-six-phase-route-r2</b><span class='chip code'>code</span>
+<div class='muted'>segmented live composition region</div>
+<div class='muted'>Rebuild segmented region for 02-six-phase-route as semantic HTML using CSS Grid or Flexbox, Cormorant Garamond for display text, Inter for body text, palette tokens #0B1F3A, #C8A65A, #DCE8F2, #F6F2E8, and responsive SVG strokes or pseudo-elements for thin rules; preserve reading order and stack without rasterizing copy.</div>
+<div class='pair'>
+<figure><a href='crops/02-six-phase-route-context.png'><img src='crops/02-six-phase-route-r2-ref.png' alt=''></a><figcaption>design reference — 02-six-phase-route (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Rebuild segmented region for 02-six-phase-route as semantic HTML using CSS Grid or Flexbox, Cormorant Garamond for display text, Inter for body text, palette tokens #0B1F3A, #C8A65A, #DCE8F2, #F6F2E8, and responsive SVG strokes or pseudo-elements for thin rules; preserve reading order and stack without rasterizing copy.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='03-first-meeting-inputs-r1'>
+<b>03-first-meeting-inputs-r1</b><span class='chip extract'>extract</span>
+<div class='muted'>clean photographic imagery isolated from live website copy</div>
+<div class='muted'>Render this photographic asset inside the section-owned media slot with object-fit: cover; keep all website copy, rules, icons, labels, and surfaces as live HTML/CSS/SVG layers.</div>
+<div class='muted'>presentation: {&quot;alpha_required&quot;: false, &quot;crop_contract&quot;: &quot;Preserve the principal desk, medical, document, or office subject shown in the approved frame; desktop may crop only quiet outer margins and mobile must choose an alternate focal crop without shrinking the intrinsic image into layout authority.&quot;, &quot;intended_background&quot;: &quot;#FFFFFF&quot;, &quot;minimum_visible_fraction&quot;: &quot;At least 70% of the photographic subject cluster remains visible; all section copy stays live and outside the raster.&quot;, &quot;mode&quot;: &quot;framed-panel&quot;}</div>
+<div class='pair'>
+<figure><a href='crops/03-first-meeting-inputs-context.png'><img src='crops/03-first-meeting-inputs-r1-ref.png' alt=''></a><figcaption>design reference — 03-first-meeting-inputs (click for full frame)</figcaption></figure>
+<figure><div class='asset-preview'><img src='../images/design/elements/03-first-meeting-inputs-photo.jpg' alt=''></div><figcaption>shipped asset on transparency checkerboard — <code>elements/03-first-meeting-inputs-photo.jpg</code> (replace in git)</figcaption></figure>
+<figure><div class='intended-preview' style='background:#FFFFFF'><img src='../images/design/elements/03-first-meeting-inputs-photo.jpg' alt=''></div><figcaption>asset on intended background — #FFFFFF</figcaption></figure>
+</div></div>
+<div class='card' id='03-first-meeting-inputs-r2'>
+<b>03-first-meeting-inputs-r2</b><span class='chip code'>code</span>
+<div class='muted'>segmented live composition region</div>
+<div class='muted'>Rebuild segmented region for 03-first-meeting-inputs as semantic HTML using CSS Grid or Flexbox, Cormorant Garamond for display text, Inter for body text, palette tokens #0B1F3A, #C8A65A, #DCE8F2, #F6F2E8, and responsive SVG strokes or pseudo-elements for thin rules; preserve reading order and stack without rasterizing copy.</div>
+<div class='pair'>
+<figure><a href='crops/03-first-meeting-inputs-context.png'><img src='crops/03-first-meeting-inputs-r2-ref.png' alt=''></a><figcaption>design reference — 03-first-meeting-inputs (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Rebuild segmented region for 03-first-meeting-inputs as semantic HTML using CSS Grid or Flexbox, Cormorant Garamond for display text, Inter for body text, palette tokens #0B1F3A, #C8A65A, #DCE8F2, #F6F2E8, and responsive SVG strokes or pseudo-elements for thin rules; preserve reading order and stack without rasterizing copy.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='03-first-meeting-inputs-r3'>
+<b>03-first-meeting-inputs-r3</b><span class='chip code'>code</span>
+<div class='muted'>segmented live composition region</div>
+<div class='muted'>Rebuild segmented region for 03-first-meeting-inputs as semantic HTML using CSS Grid or Flexbox, Cormorant Garamond for display text, Inter for body text, palette tokens #0B1F3A, #C8A65A, #DCE8F2, #F6F2E8, and responsive SVG strokes or pseudo-elements for thin rules; preserve reading order and stack without rasterizing copy.</div>
+<div class='pair'>
+<figure><a href='crops/03-first-meeting-inputs-context.png'><img src='crops/03-first-meeting-inputs-r3-ref.png' alt=''></a><figcaption>design reference — 03-first-meeting-inputs (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Rebuild segmented region for 03-first-meeting-inputs as semantic HTML using CSS Grid or Flexbox, Cormorant Garamond for display text, Inter for body text, palette tokens #0B1F3A, #C8A65A, #DCE8F2, #F6F2E8, and responsive SVG strokes or pseudo-elements for thin rules; preserve reading order and stack without rasterizing copy.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='03-first-meeting-inputs-r4'>
+<b>03-first-meeting-inputs-r4</b><span class='chip code'>code</span>
+<div class='muted'>segmented live composition region</div>
+<div class='muted'>Rebuild segmented region for 03-first-meeting-inputs as semantic HTML using CSS Grid or Flexbox, Cormorant Garamond for display text, Inter for body text, palette tokens #0B1F3A, #C8A65A, #DCE8F2, #F6F2E8, and responsive SVG strokes or pseudo-elements for thin rules; preserve reading order and stack without rasterizing copy.</div>
+<div class='pair'>
+<figure><a href='crops/03-first-meeting-inputs-context.png'><img src='crops/03-first-meeting-inputs-r4-ref.png' alt=''></a><figcaption>design reference — 03-first-meeting-inputs (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Rebuild segmented region for 03-first-meeting-inputs as semantic HTML using CSS Grid or Flexbox, Cormorant Garamond for display text, Inter for body text, palette tokens #0B1F3A, #C8A65A, #DCE8F2, #F6F2E8, and responsive SVG strokes or pseudo-elements for thin rules; preserve reading order and stack without rasterizing copy.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='03-first-meeting-inputs-r5'>
+<b>03-first-meeting-inputs-r5</b><span class='chip code'>code</span>
+<div class='muted'>segmented live composition region</div>
+<div class='muted'>Rebuild segmented region for 03-first-meeting-inputs as semantic HTML using CSS Grid or Flexbox, Cormorant Garamond for display text, Inter for body text, palette tokens #0B1F3A, #C8A65A, #DCE8F2, #F6F2E8, and responsive SVG strokes or pseudo-elements for thin rules; preserve reading order and stack without rasterizing copy.</div>
+<div class='pair'>
+<figure><a href='crops/03-first-meeting-inputs-context.png'><img src='crops/03-first-meeting-inputs-r5-ref.png' alt=''></a><figcaption>design reference — 03-first-meeting-inputs (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Rebuild segmented region for 03-first-meeting-inputs as semantic HTML using CSS Grid or Flexbox, Cormorant Garamond for display text, Inter for body text, palette tokens #0B1F3A, #C8A65A, #DCE8F2, #F6F2E8, and responsive SVG strokes or pseudo-elements for thin rules; preserve reading order and stack without rasterizing copy.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='03-first-meeting-inputs-r6'>
+<b>03-first-meeting-inputs-r6</b><span class='chip code'>code</span>
+<div class='muted'>segmented live composition region</div>
+<div class='muted'>Rebuild segmented region for 03-first-meeting-inputs as semantic HTML using CSS Grid or Flexbox, Cormorant Garamond for display text, Inter for body text, palette tokens #0B1F3A, #C8A65A, #DCE8F2, #F6F2E8, and responsive SVG strokes or pseudo-elements for thin rules; preserve reading order and stack without rasterizing copy.</div>
+<div class='pair'>
+<figure><a href='crops/03-first-meeting-inputs-context.png'><img src='crops/03-first-meeting-inputs-r6-ref.png' alt=''></a><figcaption>design reference — 03-first-meeting-inputs (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Rebuild segmented region for 03-first-meeting-inputs as semantic HTML using CSS Grid or Flexbox, Cormorant Garamond for display text, Inter for body text, palette tokens #0B1F3A, #C8A65A, #DCE8F2, #F6F2E8, and responsive SVG strokes or pseudo-elements for thin rules; preserve reading order and stack without rasterizing copy.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='03-first-meeting-inputs-r7'>
+<b>03-first-meeting-inputs-r7</b><span class='chip code'>code</span>
+<div class='muted'>segmented live composition region</div>
+<div class='muted'>Rebuild segmented region for 03-first-meeting-inputs as semantic HTML using CSS Grid or Flexbox, Cormorant Garamond for display text, Inter for body text, palette tokens #0B1F3A, #C8A65A, #DCE8F2, #F6F2E8, and responsive SVG strokes or pseudo-elements for thin rules; preserve reading order and stack without rasterizing copy.</div>
+<div class='pair'>
+<figure><a href='crops/03-first-meeting-inputs-context.png'><img src='crops/03-first-meeting-inputs-r7-ref.png' alt=''></a><figcaption>design reference — 03-first-meeting-inputs (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Rebuild segmented region for 03-first-meeting-inputs as semantic HTML using CSS Grid or Flexbox, Cormorant Garamond for display text, Inter for body text, palette tokens #0B1F3A, #C8A65A, #DCE8F2, #F6F2E8, and responsive SVG strokes or pseudo-elements for thin rules; preserve reading order and stack without rasterizing copy.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='03-first-meeting-inputs-r8'>
+<b>03-first-meeting-inputs-r8</b><span class='chip code'>code</span>
+<div class='muted'>segmented live composition region</div>
+<div class='muted'>Rebuild segmented region for 03-first-meeting-inputs as semantic HTML using CSS Grid or Flexbox, Cormorant Garamond for display text, Inter for body text, palette tokens #0B1F3A, #C8A65A, #DCE8F2, #F6F2E8, and responsive SVG strokes or pseudo-elements for thin rules; preserve reading order and stack without rasterizing copy.</div>
+<div class='pair'>
+<figure><a href='crops/03-first-meeting-inputs-context.png'><img src='crops/03-first-meeting-inputs-r8-ref.png' alt=''></a><figcaption>design reference — 03-first-meeting-inputs (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Rebuild segmented region for 03-first-meeting-inputs as semantic HTML using CSS Grid or Flexbox, Cormorant Garamond for display text, Inter for body text, palette tokens #0B1F3A, #C8A65A, #DCE8F2, #F6F2E8, and responsive SVG strokes or pseudo-elements for thin rules; preserve reading order and stack without rasterizing copy.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='03-first-meeting-inputs-r9'>
+<b>03-first-meeting-inputs-r9</b><span class='chip code'>code</span>
+<div class='muted'>segmented live composition region</div>
+<div class='muted'>Rebuild segmented region for 03-first-meeting-inputs as semantic HTML using CSS Grid or Flexbox, Cormorant Garamond for display text, Inter for body text, palette tokens #0B1F3A, #C8A65A, #DCE8F2, #F6F2E8, and responsive SVG strokes or pseudo-elements for thin rules; preserve reading order and stack without rasterizing copy.</div>
+<div class='pair'>
+<figure><a href='crops/03-first-meeting-inputs-context.png'><img src='crops/03-first-meeting-inputs-r9-ref.png' alt=''></a><figcaption>design reference — 03-first-meeting-inputs (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Rebuild segmented region for 03-first-meeting-inputs as semantic HTML using CSS Grid or Flexbox, Cormorant Garamond for display text, Inter for body text, palette tokens #0B1F3A, #C8A65A, #DCE8F2, #F6F2E8, and responsive SVG strokes or pseudo-elements for thin rules; preserve reading order and stack without rasterizing copy.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='04-professional-coordination-r1'>
+<b>04-professional-coordination-r1</b><span class='chip code'>code</span>
+<div class='muted'>segmented live composition region</div>
+<div class='muted'>Rebuild segmented region for 04-professional-coordination as semantic HTML using CSS Grid or Flexbox, Cormorant Garamond for display text, Inter for body text, palette tokens #0B1F3A, #C8A65A, #DCE8F2, #F6F2E8, and responsive SVG strokes or pseudo-elements for thin rules; preserve reading order and stack without rasterizing copy.</div>
+<div class='pair'>
+<figure><a href='crops/04-professional-coordination-context.png'><img src='crops/04-professional-coordination-r1-ref.png' alt=''></a><figcaption>design reference — 04-professional-coordination (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Rebuild segmented region for 04-professional-coordination as semantic HTML using CSS Grid or Flexbox, Cormorant Garamond for display text, Inter for body text, palette tokens #0B1F3A, #C8A65A, #DCE8F2, #F6F2E8, and responsive SVG strokes or pseudo-elements for thin rules; preserve reading order and stack without rasterizing copy.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='04-professional-coordination-r2-financial-planner'>
+<b>04-professional-coordination-r2-financial-planner</b><span class='chip extract'>extract</span>
+<div class='muted'>five clean section-owned office-room plates; all role labels and the central shared-strategy panel remain live HTML/CSS — financial-planner</div>
+<div class='muted'>Place five transparent office-room plates in a responsive CSS Grid; render role labels and the central #0B1F3A shared-strategy panel as live HTML, and connect them with a simple #C8A65A inline SVG rule.</div>
+<div class='muted'>presentation: {&quot;alpha_required&quot;: true, &quot;crop_contract&quot;: &quot;Keep the complete room perimeter visible; do not crop furniture or doorway edges.&quot;, &quot;intended_background&quot;: &quot;#DCE8F2&quot;, &quot;minimum_visible_fraction&quot;: &quot;100% of each office-room plate&quot;, &quot;mode&quot;: &quot;transparent-cutout&quot;}</div>
+<div class='pair'>
+<figure><a href='crops/04-professional-coordination-context.png'><img src='crops/04-professional-coordination-r2-financial-planner-ref.png' alt=''></a><figcaption>design reference — 04-professional-coordination (click for full frame)</figcaption></figure>
+<figure><div class='asset-preview'><img src='../images/design/elements/04-professional-coordination-financial-planner.png' alt=''></div><figcaption>shipped asset on transparency checkerboard — <code>elements/04-professional-coordination-financial-planner.png</code> (replace in git)</figcaption></figure>
+<figure><div class='intended-preview' style='background:#DCE8F2'><img src='../images/design/elements/04-professional-coordination-financial-planner.png' alt=''></div><figcaption>asset on intended background — #DCE8F2</figcaption></figure>
+</div></div>
+<div class='card' id='04-professional-coordination-r2-cpa'>
+<b>04-professional-coordination-r2-cpa</b><span class='chip extract'>extract</span>
+<div class='muted'>five clean section-owned office-room plates; all role labels and the central shared-strategy panel remain live HTML/CSS — cpa</div>
+<div class='muted'>Place five transparent office-room plates in a responsive CSS Grid; render role labels and the central #0B1F3A shared-strategy panel as live HTML, and connect them with a simple #C8A65A inline SVG rule.</div>
+<div class='muted'>presentation: {&quot;alpha_required&quot;: true, &quot;crop_contract&quot;: &quot;Keep the complete room perimeter visible; do not crop furniture or doorway edges.&quot;, &quot;intended_background&quot;: &quot;#DCE8F2&quot;, &quot;minimum_visible_fraction&quot;: &quot;100% of each office-room plate&quot;, &quot;mode&quot;: &quot;transparent-cutout&quot;}</div>
+<div class='pair'>
+<figure><a href='crops/04-professional-coordination-context.png'><img src='crops/04-professional-coordination-r2-cpa-ref.png' alt=''></a><figcaption>design reference — 04-professional-coordination (click for full frame)</figcaption></figure>
+<figure><div class='asset-preview'><img src='../images/design/elements/04-professional-coordination-cpa.png' alt=''></div><figcaption>shipped asset on transparency checkerboard — <code>elements/04-professional-coordination-cpa.png</code> (replace in git)</figcaption></figure>
+<figure><div class='intended-preview' style='background:#DCE8F2'><img src='../images/design/elements/04-professional-coordination-cpa.png' alt=''></div><figcaption>asset on intended background — #DCE8F2</figcaption></figure>
+</div></div>
+<div class='card' id='04-professional-coordination-r2-attorney'>
+<b>04-professional-coordination-r2-attorney</b><span class='chip extract'>extract</span>
+<div class='muted'>five clean section-owned office-room plates; all role labels and the central shared-strategy panel remain live HTML/CSS — attorney</div>
+<div class='muted'>Place five transparent office-room plates in a responsive CSS Grid; render role labels and the central #0B1F3A shared-strategy panel as live HTML, and connect them with a simple #C8A65A inline SVG rule.</div>
+<div class='muted'>presentation: {&quot;alpha_required&quot;: true, &quot;crop_contract&quot;: &quot;Keep the complete room perimeter visible; do not crop furniture or doorway edges.&quot;, &quot;intended_background&quot;: &quot;#DCE8F2&quot;, &quot;minimum_visible_fraction&quot;: &quot;100% of each office-room plate&quot;, &quot;mode&quot;: &quot;transparent-cutout&quot;}</div>
+<div class='pair'>
+<figure><a href='crops/04-professional-coordination-context.png'><img src='crops/04-professional-coordination-r2-attorney-ref.png' alt=''></a><figcaption>design reference — 04-professional-coordination (click for full frame)</figcaption></figure>
+<figure><div class='asset-preview'><img src='../images/design/elements/04-professional-coordination-attorney.png' alt=''></div><figcaption>shipped asset on transparency checkerboard — <code>elements/04-professional-coordination-attorney.png</code> (replace in git)</figcaption></figure>
+<figure><div class='intended-preview' style='background:#DCE8F2'><img src='../images/design/elements/04-professional-coordination-attorney.png' alt=''></div><figcaption>asset on intended background — #DCE8F2</figcaption></figure>
+</div></div>
+<div class='card' id='04-professional-coordination-r2-tpa-payroll'>
+<b>04-professional-coordination-r2-tpa-payroll</b><span class='chip extract'>extract</span>
+<div class='muted'>five clean section-owned office-room plates; all role labels and the central shared-strategy panel remain live HTML/CSS — tpa-payroll</div>
+<div class='muted'>Place five transparent office-room plates in a responsive CSS Grid; render role labels and the central #0B1F3A shared-strategy panel as live HTML, and connect them with a simple #C8A65A inline SVG rule.</div>
+<div class='muted'>presentation: {&quot;alpha_required&quot;: true, &quot;crop_contract&quot;: &quot;Keep the complete room perimeter visible; do not crop furniture or doorway edges.&quot;, &quot;intended_background&quot;: &quot;#DCE8F2&quot;, &quot;minimum_visible_fraction&quot;: &quot;100% of each office-room plate&quot;, &quot;mode&quot;: &quot;transparent-cutout&quot;}</div>
+<div class='pair'>
+<figure><a href='crops/04-professional-coordination-context.png'><img src='crops/04-professional-coordination-r2-tpa-payroll-ref.png' alt=''></a><figcaption>design reference — 04-professional-coordination (click for full frame)</figcaption></figure>
+<figure><div class='asset-preview'><img src='../images/design/elements/04-professional-coordination-tpa-payroll.png' alt=''></div><figcaption>shipped asset on transparency checkerboard — <code>elements/04-professional-coordination-tpa-payroll.png</code> (replace in git)</figcaption></figure>
+<figure><div class='intended-preview' style='background:#DCE8F2'><img src='../images/design/elements/04-professional-coordination-tpa-payroll.png' alt=''></div><figcaption>asset on intended background — #DCE8F2</figcaption></figure>
+</div></div>
+<div class='card' id='04-professional-coordination-r2-insurance-professional'>
+<b>04-professional-coordination-r2-insurance-professional</b><span class='chip extract'>extract</span>
+<div class='muted'>five clean section-owned office-room plates; all role labels and the central shared-strategy panel remain live HTML/CSS — insurance-professional</div>
+<div class='muted'>Place five transparent office-room plates in a responsive CSS Grid; render role labels and the central #0B1F3A shared-strategy panel as live HTML, and connect them with a simple #C8A65A inline SVG rule.</div>
+<div class='muted'>presentation: {&quot;alpha_required&quot;: true, &quot;crop_contract&quot;: &quot;Keep the complete room perimeter visible; do not crop furniture or doorway edges.&quot;, &quot;intended_background&quot;: &quot;#DCE8F2&quot;, &quot;minimum_visible_fraction&quot;: &quot;100% of each office-room plate&quot;, &quot;mode&quot;: &quot;transparent-cutout&quot;}</div>
+<div class='pair'>
+<figure><a href='crops/04-professional-coordination-context.png'><img src='crops/04-professional-coordination-r2-insurance-professional-ref.png' alt=''></a><figcaption>design reference — 04-professional-coordination (click for full frame)</figcaption></figure>
+<figure><div class='asset-preview'><img src='../images/design/elements/04-professional-coordination-insurance-professional.png' alt=''></div><figcaption>shipped asset on transparency checkerboard — <code>elements/04-professional-coordination-insurance-professional.png</code> (replace in git)</figcaption></figure>
+<figure><div class='intended-preview' style='background:#DCE8F2'><img src='../images/design/elements/04-professional-coordination-insurance-professional.png' alt=''></div><figcaption>asset on intended background — #DCE8F2</figcaption></figure>
+</div></div>
+<div class='card' id='04-professional-coordination-r2-assembled'>
+<b>04-professional-coordination-r2-assembled</b><span class='chip composite'>composite</span>
+<div class='muted'>five clean section-owned office-room plates; all role labels and the central shared-strategy panel remain live HTML/CSS — assembled linked layers</div>
+<div class='muted'>Place five transparent office-room plates in a responsive CSS Grid; render role labels and the central #0B1F3A shared-strategy panel as live HTML, and connect them with a simple #C8A65A inline SVG rule.</div>
+<div class='muted'>presentation: {&quot;alpha_required&quot;: true, &quot;crop_contract&quot;: &quot;Preserve every complete office plate and its perimeter; role labels stay live outside the rasters.&quot;, &quot;intended_background&quot;: &quot;#DCE8F2&quot;, &quot;minimum_visible_fraction&quot;: &quot;100% of every room plate&quot;, &quot;mode&quot;: &quot;transparent-cutout&quot;}</div>
+<div class='pair'>
+<figure><a href='crops/04-professional-coordination-context.png'><img src='crops/04-professional-coordination-r2-assembled-ref.png' alt=''></a><figcaption>design reference — 04-professional-coordination (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Container-relative linked layers</b><p>This relationship cannot be flattened accurately before the build. Verify it in the required live desktop and mobile captures.</p></div><figcaption>declared assembly relationship; live composite QA required</figcaption></figure>
+</div></div>
+<div class='card' id='04-professional-coordination-r3'>
+<b>04-professional-coordination-r3</b><span class='chip code'>code</span>
+<div class='muted'>segmented live composition region</div>
+<div class='muted'>Rebuild segmented region for 04-professional-coordination as semantic HTML using CSS Grid or Flexbox, Cormorant Garamond for display text, Inter for body text, palette tokens #0B1F3A, #C8A65A, #DCE8F2, #F6F2E8, and responsive SVG strokes or pseudo-elements for thin rules; preserve reading order and stack without rasterizing copy.</div>
+<div class='pair'>
+<figure><a href='crops/04-professional-coordination-context.png'><img src='crops/04-professional-coordination-r3-ref.png' alt=''></a><figcaption>design reference — 04-professional-coordination (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Rebuild segmented region for 04-professional-coordination as semantic HTML using CSS Grid or Flexbox, Cormorant Garamond for display text, Inter for body text, palette tokens #0B1F3A, #C8A65A, #DCE8F2, #F6F2E8, and responsive SVG strokes or pseudo-elements for thin rules; preserve reading order and stack without rasterizing copy.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='04-professional-coordination-r4'>
+<b>04-professional-coordination-r4</b><span class='chip code'>code</span>
+<div class='muted'>segmented live composition region</div>
+<div class='muted'>Rebuild segmented region for 04-professional-coordination as semantic HTML using CSS Grid or Flexbox, Cormorant Garamond for display text, Inter for body text, palette tokens #0B1F3A, #C8A65A, #DCE8F2, #F6F2E8, and responsive SVG strokes or pseudo-elements for thin rules; preserve reading order and stack without rasterizing copy.</div>
+<div class='pair'>
+<figure><a href='crops/04-professional-coordination-context.png'><img src='crops/04-professional-coordination-r4-ref.png' alt=''></a><figcaption>design reference — 04-professional-coordination (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Rebuild segmented region for 04-professional-coordination as semantic HTML using CSS Grid or Flexbox, Cormorant Garamond for display text, Inter for body text, palette tokens #0B1F3A, #C8A65A, #DCE8F2, #F6F2E8, and responsive SVG strokes or pseudo-elements for thin rules; preserve reading order and stack without rasterizing copy.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='04-professional-coordination-r5'>
+<b>04-professional-coordination-r5</b><span class='chip code'>code</span>
+<div class='muted'>segmented live composition region</div>
+<div class='muted'>Rebuild segmented region for 04-professional-coordination as semantic HTML using CSS Grid or Flexbox, Cormorant Garamond for display text, Inter for body text, palette tokens #0B1F3A, #C8A65A, #DCE8F2, #F6F2E8, and responsive SVG strokes or pseudo-elements for thin rules; preserve reading order and stack without rasterizing copy.</div>
+<div class='pair'>
+<figure><a href='crops/04-professional-coordination-context.png'><img src='crops/04-professional-coordination-r5-ref.png' alt=''></a><figcaption>design reference — 04-professional-coordination (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Rebuild segmented region for 04-professional-coordination as semantic HTML using CSS Grid or Flexbox, Cormorant Garamond for display text, Inter for body text, palette tokens #0B1F3A, #C8A65A, #DCE8F2, #F6F2E8, and responsive SVG strokes or pseudo-elements for thin rules; preserve reading order and stack without rasterizing copy.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='04-professional-coordination-r6'>
+<b>04-professional-coordination-r6</b><span class='chip code'>code</span>
+<div class='muted'>segmented live composition region</div>
+<div class='muted'>Rebuild segmented region for 04-professional-coordination as semantic HTML using CSS Grid or Flexbox, Cormorant Garamond for display text, Inter for body text, palette tokens #0B1F3A, #C8A65A, #DCE8F2, #F6F2E8, and responsive SVG strokes or pseudo-elements for thin rules; preserve reading order and stack without rasterizing copy.</div>
+<div class='pair'>
+<figure><a href='crops/04-professional-coordination-context.png'><img src='crops/04-professional-coordination-r6-ref.png' alt=''></a><figcaption>design reference — 04-professional-coordination (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Rebuild segmented region for 04-professional-coordination as semantic HTML using CSS Grid or Flexbox, Cormorant Garamond for display text, Inter for body text, palette tokens #0B1F3A, #C8A65A, #DCE8F2, #F6F2E8, and responsive SVG strokes or pseudo-elements for thin rules; preserve reading order and stack without rasterizing copy.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='04-professional-coordination-r7'>
+<b>04-professional-coordination-r7</b><span class='chip code'>code</span>
+<div class='muted'>segmented live composition region</div>
+<div class='muted'>Rebuild segmented region for 04-professional-coordination as semantic HTML using CSS Grid or Flexbox, Cormorant Garamond for display text, Inter for body text, palette tokens #0B1F3A, #C8A65A, #DCE8F2, #F6F2E8, and responsive SVG strokes or pseudo-elements for thin rules; preserve reading order and stack without rasterizing copy.</div>
+<div class='pair'>
+<figure><a href='crops/04-professional-coordination-context.png'><img src='crops/04-professional-coordination-r7-ref.png' alt=''></a><figcaption>design reference — 04-professional-coordination (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Rebuild segmented region for 04-professional-coordination as semantic HTML using CSS Grid or Flexbox, Cormorant Garamond for display text, Inter for body text, palette tokens #0B1F3A, #C8A65A, #DCE8F2, #F6F2E8, and responsive SVG strokes or pseudo-elements for thin rules; preserve reading order and stack without rasterizing copy.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='04-professional-coordination-r8'>
+<b>04-professional-coordination-r8</b><span class='chip code'>code</span>
+<div class='muted'>segmented live composition region</div>
+<div class='muted'>Rebuild segmented region for 04-professional-coordination as semantic HTML using CSS Grid or Flexbox, Cormorant Garamond for display text, Inter for body text, palette tokens #0B1F3A, #C8A65A, #DCE8F2, #F6F2E8, and responsive SVG strokes or pseudo-elements for thin rules; preserve reading order and stack without rasterizing copy.</div>
+<div class='pair'>
+<figure><a href='crops/04-professional-coordination-context.png'><img src='crops/04-professional-coordination-r8-ref.png' alt=''></a><figcaption>design reference — 04-professional-coordination (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Rebuild segmented region for 04-professional-coordination as semantic HTML using CSS Grid or Flexbox, Cormorant Garamond for display text, Inter for body text, palette tokens #0B1F3A, #C8A65A, #DCE8F2, #F6F2E8, and responsive SVG strokes or pseudo-elements for thin rules; preserve reading order and stack without rasterizing copy.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='05-ongoing-review-r1'>
+<b>05-ongoing-review-r1</b><span class='chip extract'>extract</span>
+<div class='muted'>clean photographic imagery isolated from live website copy</div>
+<div class='muted'>Render this photographic asset inside the section-owned media slot with object-fit: cover; keep all website copy, rules, icons, labels, and surfaces as live HTML/CSS/SVG layers.</div>
+<div class='muted'>presentation: {&quot;alpha_required&quot;: false, &quot;crop_contract&quot;: &quot;Preserve the principal desk, medical, document, or office subject shown in the approved frame; desktop may crop only quiet outer margins and mobile must choose an alternate focal crop without shrinking the intrinsic image into layout authority.&quot;, &quot;intended_background&quot;: &quot;#FFFFFF&quot;, &quot;minimum_visible_fraction&quot;: &quot;At least 70% of the photographic subject cluster remains visible; all section copy stays live and outside the raster.&quot;, &quot;mode&quot;: &quot;framed-panel&quot;}</div>
+<div class='pair'>
+<figure><a href='crops/05-ongoing-review-context.png'><img src='crops/05-ongoing-review-r1-ref.png' alt=''></a><figcaption>design reference — 05-ongoing-review (click for full frame)</figcaption></figure>
+<figure><div class='asset-preview'><img src='../images/design/elements/05-ongoing-review-photo.jpg' alt=''></div><figcaption>shipped asset on transparency checkerboard — <code>elements/05-ongoing-review-photo.jpg</code> (replace in git)</figcaption></figure>
+<figure><div class='intended-preview' style='background:#FFFFFF'><img src='../images/design/elements/05-ongoing-review-photo.jpg' alt=''></div><figcaption>asset on intended background — #FFFFFF</figcaption></figure>
+</div></div>
+<div class='card' id='06-start-blueprint-r1'>
+<b>06-start-blueprint-r1</b><span class='chip extract'>extract</span>
+<div class='muted'>clean photographic imagery isolated from live website copy</div>
+<div class='muted'>Render this photographic asset inside the section-owned media slot with object-fit: cover; keep all website copy, rules, icons, labels, and surfaces as live HTML/CSS/SVG layers.</div>
+<div class='muted'>presentation: {&quot;alpha_required&quot;: false, &quot;crop_contract&quot;: &quot;Preserve the principal desk, medical, document, or office subject shown in the approved frame; desktop may crop only quiet outer margins and mobile must choose an alternate focal crop without shrinking the intrinsic image into layout authority.&quot;, &quot;intended_background&quot;: &quot;#FFFFFF&quot;, &quot;minimum_visible_fraction&quot;: &quot;At least 70% of the photographic subject cluster remains visible; all section copy stays live and outside the raster.&quot;, &quot;mode&quot;: &quot;full-bleed&quot;}</div>
+<div class='pair'>
+<figure><a href='crops/06-start-blueprint-context.png'><img src='crops/06-start-blueprint-r1-ref.png' alt=''></a><figcaption>design reference — 06-start-blueprint (click for full frame)</figcaption></figure>
+<figure><div class='asset-preview'><img src='../images/design/elements/06-start-blueprint-canvas.jpg' alt=''></div><figcaption>shipped asset on transparency checkerboard — <code>elements/06-start-blueprint-canvas.jpg</code> (replace in git)</figcaption></figure>
+<figure><div class='intended-preview' style='background:#FFFFFF'><img src='../images/design/elements/06-start-blueprint-canvas.jpg' alt=''></div><figcaption>asset on intended background — #FFFFFF</figcaption></figure>
+</div></div>
+<div class='card' id='06-start-blueprint-r2'>
+<b>06-start-blueprint-r2</b><span class='chip code'>code</span>
+<div class='muted'>segmented live composition region</div>
+<div class='muted'>Rebuild segmented region for 06-start-blueprint as semantic HTML using CSS Grid or Flexbox, Cormorant Garamond for display text, Inter for body text, palette tokens #0B1F3A, #C8A65A, #DCE8F2, #F6F2E8, and responsive SVG strokes or pseudo-elements for thin rules; preserve reading order and stack without rasterizing copy.</div>
+<div class='pair'>
+<figure><a href='crops/06-start-blueprint-context.png'><img src='crops/06-start-blueprint-r2-ref.png' alt=''></a><figcaption>design reference — 06-start-blueprint (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Rebuild segmented region for 06-start-blueprint as semantic HTML using CSS Grid or Flexbox, Cormorant Garamond for display text, Inter for body text, palette tokens #0B1F3A, #C8A65A, #DCE8F2, #F6F2E8, and responsive SVG strokes or pseudo-elements for thin rules; preserve reading order and stack without rasterizing copy.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='06-start-blueprint-r3'>
+<b>06-start-blueprint-r3</b><span class='chip code'>code</span>
+<div class='muted'>segmented live composition region</div>
+<div class='muted'>Rebuild segmented region for 06-start-blueprint as semantic HTML using CSS Grid or Flexbox, Cormorant Garamond for display text, Inter for body text, palette tokens #0B1F3A, #C8A65A, #DCE8F2, #F6F2E8, and responsive SVG strokes or pseudo-elements for thin rules; preserve reading order and stack without rasterizing copy.</div>
+<div class='pair'>
+<figure><a href='crops/06-start-blueprint-context.png'><img src='crops/06-start-blueprint-r3-ref.png' alt=''></a><figcaption>design reference — 06-start-blueprint (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Rebuild segmented region for 06-start-blueprint as semantic HTML using CSS Grid or Flexbox, Cormorant Garamond for display text, Inter for body text, palette tokens #0B1F3A, #C8A65A, #DCE8F2, #F6F2E8, and responsive SVG strokes or pseudo-elements for thin rules; preserve reading order and stack without rasterizing copy.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='06-start-blueprint-r4'>
+<b>06-start-blueprint-r4</b><span class='chip code'>code</span>
+<div class='muted'>segmented live composition region</div>
+<div class='muted'>Rebuild segmented region for 06-start-blueprint as semantic HTML using CSS Grid or Flexbox, Cormorant Garamond for display text, Inter for body text, palette tokens #0B1F3A, #C8A65A, #DCE8F2, #F6F2E8, and responsive SVG strokes or pseudo-elements for thin rules; preserve reading order and stack without rasterizing copy.</div>
+<div class='pair'>
+<figure><a href='crops/06-start-blueprint-context.png'><img src='crops/06-start-blueprint-r4-ref.png' alt=''></a><figcaption>design reference — 06-start-blueprint (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Rebuild segmented region for 06-start-blueprint as semantic HTML using CSS Grid or Flexbox, Cormorant Garamond for display text, Inter for body text, palette tokens #0B1F3A, #C8A65A, #DCE8F2, #F6F2E8, and responsive SVG strokes or pseudo-elements for thin rules; preserve reading order and stack without rasterizing copy.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='06-start-blueprint-r5'>
+<b>06-start-blueprint-r5</b><span class='chip code'>code</span>
+<div class='muted'>segmented live composition region</div>
+<div class='muted'>Rebuild segmented region for 06-start-blueprint as semantic HTML using CSS Grid or Flexbox, Cormorant Garamond for display text, Inter for body text, palette tokens #0B1F3A, #C8A65A, #DCE8F2, #F6F2E8, and responsive SVG strokes or pseudo-elements for thin rules; preserve reading order and stack without rasterizing copy.</div>
+<div class='pair'>
+<figure><a href='crops/06-start-blueprint-context.png'><img src='crops/06-start-blueprint-r5-ref.png' alt=''></a><figcaption>design reference — 06-start-blueprint (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Rebuild segmented region for 06-start-blueprint as semantic HTML using CSS Grid or Flexbox, Cormorant Garamond for display text, Inter for body text, palette tokens #0B1F3A, #C8A65A, #DCE8F2, #F6F2E8, and responsive SVG strokes or pseudo-elements for thin rules; preserve reading order and stack without rasterizing copy.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='06-start-blueprint-r6'>
+<b>06-start-blueprint-r6</b><span class='chip code'>code</span>
+<div class='muted'>segmented live composition region</div>
+<div class='muted'>Rebuild segmented region for 06-start-blueprint as semantic HTML using CSS Grid or Flexbox, Cormorant Garamond for display text, Inter for body text, palette tokens #0B1F3A, #C8A65A, #DCE8F2, #F6F2E8, and responsive SVG strokes or pseudo-elements for thin rules; preserve reading order and stack without rasterizing copy.</div>
+<div class='pair'>
+<figure><a href='crops/06-start-blueprint-context.png'><img src='crops/06-start-blueprint-r6-ref.png' alt=''></a><figcaption>design reference — 06-start-blueprint (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Rebuild segmented region for 06-start-blueprint as semantic HTML using CSS Grid or Flexbox, Cormorant Garamond for display text, Inter for body text, palette tokens #0B1F3A, #C8A65A, #DCE8F2, #F6F2E8, and responsive SVG strokes or pseudo-elements for thin rules; preserve reading order and stack without rasterizing copy.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='06-start-blueprint-r7'>
+<b>06-start-blueprint-r7</b><span class='chip code'>code</span>
+<div class='muted'>segmented live composition region</div>
+<div class='muted'>Rebuild segmented region for 06-start-blueprint as semantic HTML using CSS Grid or Flexbox, Cormorant Garamond for display text, Inter for body text, palette tokens #0B1F3A, #C8A65A, #DCE8F2, #F6F2E8, and responsive SVG strokes or pseudo-elements for thin rules; preserve reading order and stack without rasterizing copy.</div>
+<div class='pair'>
+<figure><a href='crops/06-start-blueprint-context.png'><img src='crops/06-start-blueprint-r7-ref.png' alt=''></a><figcaption>design reference — 06-start-blueprint (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Rebuild segmented region for 06-start-blueprint as semantic HTML using CSS Grid or Flexbox, Cormorant Garamond for display text, Inter for body text, palette tokens #0B1F3A, #C8A65A, #DCE8F2, #F6F2E8, and responsive SVG strokes or pseudo-elements for thin rules; preserve reading order and stack without rasterizing copy.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='06-start-blueprint-r8'>
+<b>06-start-blueprint-r8</b><span class='chip code'>code</span>
+<div class='muted'>segmented live composition region</div>
+<div class='muted'>Rebuild segmented region for 06-start-blueprint as semantic HTML using CSS Grid or Flexbox, Cormorant Garamond for display text, Inter for body text, palette tokens #0B1F3A, #C8A65A, #DCE8F2, #F6F2E8, and responsive SVG strokes or pseudo-elements for thin rules; preserve reading order and stack without rasterizing copy.</div>
+<div class='pair'>
+<figure><a href='crops/06-start-blueprint-context.png'><img src='crops/06-start-blueprint-r8-ref.png' alt=''></a><figcaption>design reference — 06-start-blueprint (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Rebuild segmented region for 06-start-blueprint as semantic HTML using CSS Grid or Flexbox, Cormorant Garamond for display text, Inter for body text, palette tokens #0B1F3A, #C8A65A, #DCE8F2, #F6F2E8, and responsive SVG strokes or pseudo-elements for thin rules; preserve reading order and stack without rasterizing copy.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='06-start-blueprint-r9'>
+<b>06-start-blueprint-r9</b><span class='chip code'>code</span>
+<div class='muted'>segmented live composition region</div>
+<div class='muted'>Rebuild segmented region for 06-start-blueprint as semantic HTML using CSS Grid or Flexbox, Cormorant Garamond for display text, Inter for body text, palette tokens #0B1F3A, #C8A65A, #DCE8F2, #F6F2E8, and responsive SVG strokes or pseudo-elements for thin rules; preserve reading order and stack without rasterizing copy.</div>
+<div class='pair'>
+<figure><a href='crops/06-start-blueprint-context.png'><img src='crops/06-start-blueprint-r9-ref.png' alt=''></a><figcaption>design reference — 06-start-blueprint (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Rebuild segmented region for 06-start-blueprint as semantic HTML using CSS Grid or Flexbox, Cormorant Garamond for display text, Inter for body text, palette tokens #0B1F3A, #C8A65A, #DCE8F2, #F6F2E8, and responsive SVG strokes or pseudo-elements for thin rules; preserve reading order and stack without rasterizing copy.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='06-start-blueprint-r10'>
+<b>06-start-blueprint-r10</b><span class='chip code'>code</span>
+<div class='muted'>segmented live composition region</div>
+<div class='muted'>Rebuild segmented region for 06-start-blueprint as semantic HTML using CSS Grid or Flexbox, Cormorant Garamond for display text, Inter for body text, palette tokens #0B1F3A, #C8A65A, #DCE8F2, #F6F2E8, and responsive SVG strokes or pseudo-elements for thin rules; preserve reading order and stack without rasterizing copy.</div>
+<div class='pair'>
+<figure><a href='crops/06-start-blueprint-context.png'><img src='crops/06-start-blueprint-r10-ref.png' alt=''></a><figcaption>design reference — 06-start-blueprint (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Rebuild segmented region for 06-start-blueprint as semantic HTML using CSS Grid or Flexbox, Cormorant Garamond for display text, Inter for body text, palette tokens #0B1F3A, #C8A65A, #DCE8F2, #F6F2E8, and responsive SVG strokes or pseudo-elements for thin rules; preserve reading order and stack without rasterizing copy.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='06-start-blueprint-r11'>
+<b>06-start-blueprint-r11</b><span class='chip code'>code</span>
+<div class='muted'>segmented live composition region</div>
+<div class='muted'>Rebuild segmented region for 06-start-blueprint as semantic HTML using CSS Grid or Flexbox, Cormorant Garamond for display text, Inter for body text, palette tokens #0B1F3A, #C8A65A, #DCE8F2, #F6F2E8, and responsive SVG strokes or pseudo-elements for thin rules; preserve reading order and stack without rasterizing copy.</div>
+<div class='pair'>
+<figure><a href='crops/06-start-blueprint-context.png'><img src='crops/06-start-blueprint-r11-ref.png' alt=''></a><figcaption>design reference — 06-start-blueprint (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Rebuild segmented region for 06-start-blueprint as semantic HTML using CSS Grid or Flexbox, Cormorant Garamond for display text, Inter for body text, palette tokens #0B1F3A, #C8A65A, #DCE8F2, #F6F2E8, and responsive SVG strokes or pseudo-elements for thin rules; preserve reading order and stack without rasterizing copy.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='06-start-blueprint-r12'>
+<b>06-start-blueprint-r12</b><span class='chip code'>code</span>
+<div class='muted'>segmented live composition region</div>
+<div class='muted'>Rebuild segmented region for 06-start-blueprint as semantic HTML using CSS Grid or Flexbox, Cormorant Garamond for display text, Inter for body text, palette tokens #0B1F3A, #C8A65A, #DCE8F2, #F6F2E8, and responsive SVG strokes or pseudo-elements for thin rules; preserve reading order and stack without rasterizing copy.</div>
+<div class='pair'>
+<figure><a href='crops/06-start-blueprint-context.png'><img src='crops/06-start-blueprint-r12-ref.png' alt=''></a><figcaption>design reference — 06-start-blueprint (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Rebuild segmented region for 06-start-blueprint as semantic HTML using CSS Grid or Flexbox, Cormorant Garamond for display text, Inter for body text, palette tokens #0B1F3A, #C8A65A, #DCE8F2, #F6F2E8, and responsive SVG strokes or pseudo-elements for thin rules; preserve reading order and stack without rasterizing copy.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<details><summary>NOTES.md — CSS/SVG techniques the build uses instead of images</summary><pre># 01-blueprint-origin
+
+**Assembly tier:** Tier 1.
+
+Use a section-sized CSS Grid with live Cormorant Garamond display copy and Inter utility/body copy. Build navy, ivory, mist-blue, and white surfaces from palette tokens, thin gold coordination rules from responsive inline SVG or pseudo-elements, and all cards, labels, icons, buttons, tabs, ledgers, and diagrams as semantic HTML/CSS. Preserve the approved asymmetry, focal dominance, and named quiet space from `composition_map.json`; never let intrinsic media dimensions set section height.
+
+- `01-blueprint-origin-canvas.jpg`: approved source asset public/images/design/a/04-blueprint-rounds/desk-still-life-background.jpg; owner `01-blueprint-origin`; full-bleed; preserve &gt;=70% of the subject cluster.
+
+On mobile, recompose into one readable column while retaining the primary focal element and one load-bearing connector/overlap. Do not proportionally shrink the desktop scene. Never ship a whole-section bitmap, baked website text, frame chrome, or invented imagery.
+
+---
+
+# 02-six-phase-route
+
+**Assembly tier:** Tier 2.
+
+Use a section-sized CSS Grid with live Cormorant Garamond display copy and Inter utility/body copy. Build navy, ivory, mist-blue, and white surfaces from palette tokens, thin gold coordination rules from responsive inline SVG or pseudo-elements, and all cards, labels, icons, buttons, tabs, ledgers, and diagrams as semantic HTML/CSS. Preserve the approved asymmetry, focal dominance, and named quiet space from `composition_map.json`; never let intrinsic media dimensions set section height.
+
+- `02-six-phase-route-photo.jpg`: clean text-free crop from 02-six-phase-route.png; owner `02-six-phase-route`; framed-panel; preserve &gt;=70% of the subject cluster.
+
+On mobile, recompose into one readable column while retaining the primary focal element and one load-bearing connector/overlap. Do not proportionally shrink the desktop scene. Never ship a whole-section bitmap, baked website text, frame chrome, or invented imagery.
+
+---
+
+# 03-first-meeting-inputs
+
+**Assembly tier:** Tier 2.
+
+Use a section-sized CSS Grid with live Cormorant Garamond display copy and Inter utility/body copy. Build navy, ivory, mist-blue, and white surfaces from palette tokens, thin gold coordination rules from responsive inline SVG or pseudo-elements, and all cards, labels, icons, buttons, tabs, ledgers, and diagrams as semantic HTML/CSS. Preserve the approved asymmetry, focal dominance, and named quiet space from `composition_map.json`; never let intrinsic media dimensions set section height.
+
+- `03-first-meeting-inputs-photo.jpg`: clean text-free crop from 03-first-meeting-inputs.png; owner `03-first-meeting-inputs`; framed-panel; preserve &gt;=70% of the subject cluster.
+
+On mobile, recompose into one readable column while retaining the primary focal element and one load-bearing connector/overlap. Do not proportionally shrink the desktop scene. Never ship a whole-section bitmap, baked website text, frame chrome, or invented imagery.
+
+---
+
+# 04-professional-coordination
+
+**Assembly tier:** Tier 2.
+
+Use a section-sized CSS Grid with live Cormorant Garamond display copy and Inter utility/body copy. Build navy, ivory, mist-blue, and white surfaces from palette tokens, thin gold coordination rules from responsive inline SVG or pseudo-elements, and all cards, labels, icons, buttons, tabs, ledgers, and diagrams as semantic HTML/CSS. Preserve the approved asymmetry, focal dominance, and named quiet space from `composition_map.json`; never let intrinsic media dimensions set section height.
+
+- `04-professional-coordination-photo.jpg`: clean text-free crop from 04-professional-coordination.png; owner `04-professional-coordination`; framed-panel; preserve &gt;=70% of the subject cluster.
+
+On mobile, recompose into one readable column while retaining the primary focal element and one load-bearing connector/overlap. Do not proportionally shrink the desktop scene. Never ship a whole-section bitmap, baked website text, frame chrome, or invented imagery.
+
+---
+
+# 05-ongoing-review
+
+**Assembly tier:** Tier 2.
+
+Use a section-sized CSS Grid with live Cormorant Garamond display copy and Inter utility/body copy. Build navy, ivory, mist-blue, and white surfaces from palette tokens, thin gold coordination rules from responsive inline SVG or pseudo-elements, and all cards, labels, icons, buttons, tabs, ledgers, and diagrams as semantic HTML/CSS. Preserve the approved asymmetry, focal dominance, and named quiet space from `composition_map.json`; never let intrinsic media dimensions set section height.
+
+- `05-ongoing-review-photo.jpg`: clean text-free crop from 05-ongoing-review.png; owner `05-ongoing-review`; framed-panel; preserve &gt;=70% of the subject cluster.
+
+On mobile, recompose into one readable column while retaining the primary focal element and one load-bearing connector/overlap. Do not proportionally shrink the desktop scene. Never ship a whole-section bitmap, baked website text, frame chrome, or invented imagery.
+
+---
+
+# 06-start-blueprint
+
+**Assembly tier:** Tier 1.
+
+Use a section-sized CSS Grid with live Cormorant Garamond display copy and Inter utility/body copy. Build navy, ivory, mist-blue, and white surfaces from palette tokens, thin gold coordination rules from responsive inline SVG or pseudo-elements, and all cards, labels, icons, buttons, tabs, ledgers, and diagrams as semantic HTML/CSS. Preserve the approved asymmetry, focal dominance, and named quiet space from `composition_map.json`; never let intrinsic media dimensions set section height.
+
+- `06-start-blueprint-canvas.jpg`: approved source asset public/images/design/a/08-next-decision/closing-office.jpg; owner `06-start-blueprint`; full-bleed; preserve &gt;=70% of the subject cluster.
+
+On mobile, recompose into one readable column while retaining the primary focal element and one load-bearing connector/overlap. Do not proportionally shrink the desktop scene. Never ship a whole-section bitmap, baked website text, frame chrome, or invented imagery.
+</pre></details>

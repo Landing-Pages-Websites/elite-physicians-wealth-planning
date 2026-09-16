@@ -1,0 +1,398 @@
+<!doctype html><meta charset='utf-8'>
+<title>Image asset review</title><style>
+body{margin:0;padding:24px;background:#111;color:#eee;
+     font:14px/1.5 -apple-system,'Segoe UI',sans-serif}
+a{color:#8bd} .muted{color:#999} h1{font-size:20px}
+.proto{background:#1b1b1b;border:1px solid #333;border-radius:8px;
+       padding:12px 16px;max-width:900px;margin-bottom:24px}
+.proto code{background:#000;padding:1px 5px;border-radius:4px}
+.card{background:#1b1b1b;border:1px solid #333;border-radius:8px;
+      padding:16px;margin-bottom:20px;max-width:1200px}
+.card.missing{border-color:#a33}
+.pair{display:flex;gap:16px;flex-wrap:wrap}
+.pair figure{margin:0;flex:1;min-width:280px}
+.pair img{max-width:100%;border:1px solid #444}
+.asset-preview{display:grid;place-items:center;min-height:180px;
+  background-color:#fff;background-image:linear-gradient(45deg,#ddd 25%,transparent 25%),
+  linear-gradient(-45deg,#ddd 25%,transparent 25%),linear-gradient(45deg,transparent 75%,#ddd 75%),
+  linear-gradient(-45deg,transparent 75%,#ddd 75%);background-size:24px 24px;
+  background-position:0 0,0 12px,12px -12px,-12px 0}
+.asset-preview img,.intended-preview img{display:block;max-height:520px}
+.intended-preview{display:grid;place-items:center;min-height:180px;border:1px solid #444}
+figcaption{font-size:12px;color:#999;margin-top:4px}
+.chip{display:inline-block;font-size:11px;padding:2px 8px;border-radius:10px;
+      background:#333;margin-left:8px;text-transform:uppercase}
+.chip.extract{background:#264} .chip.inpaint{background:#452}
+.chip.code{background:#345}
+.chip.plate{background:#246} .chip.generated{background:#525}
+.chip.unmapped{background:#630} .chip.client-copy{background:#444}
+.chip.composite{background:#536}
+</style>
+<h1>Image asset review</h1>
+<p class='muted'>26 CODE regions and 12 raster assets to review: 9 extract, 0 inpaint.</p>
+<div class='proto'><b>How to review:</b> judge every planned treatment against its design reference on the left. For CODE cards, verify the build note can preserve the region's silhouette, materiality, and compositing—not merely approximate its geometry. To swap a raster, replace the file directly in git — same path, push to main (<a href='https://github.com/Landing-Pages-Websites/elite-physicians-wealth-planning/tree/main/public/images/design'>assets folder in the repo</a>; each card links to its file). Replaced files are authoritative — the pipeline never overwrites them. This page updates on every push. Complete the review subtask to approve; the build does not start until then.</div>
+<div class='card' id='01-team-state-hero-r1'>
+<b>01-team-state-hero-r1</b><span class='chip extract'>extract</span>
+<div class='muted'>Clean section-owned photographic material for 01-team-state-hero, with all website text and controls kept live</div>
+<div class='muted'>Use semantic live headings and body copy over a CSS navy field, with the contracted photo in a responsive media slot, a thin gold SVG route, and an accessible CTA.</div>
+<div class='muted'>presentation: {&quot;alpha_required&quot;: false, &quot;crop_contract&quot;: &quot;Preserve the complete conference table, stethoscope, empty chairs, and right-side office context; trim the text-side darkness first on mobile.&quot;, &quot;edge_treatment&quot;: {&quot;protected_crisp_regions&quot;: [&quot;focal photographic subject&quot;], &quot;style&quot;: &quot;crisp editorial crop with no synthetic fade or halo&quot;, &quot;zones&quot;: [&quot;outer crop boundary&quot;]}, &quot;intended_background&quot;: &quot;#0B1F3A&quot;, &quot;minimum_visible_fraction&quot;: &quot;At least 70% of the table and the stethoscope remain visible.&quot;, &quot;mode&quot;: &quot;framed-panel&quot;}</div>
+<div class='pair'>
+<figure><a href='crops/01-team-state-hero-context.png'><img src='crops/01-team-state-hero-r1-ref.png' alt=''></a><figcaption>design reference — 01-team-state-hero (click for full frame)</figcaption></figure>
+<figure><div class='asset-preview'><img src='../images/design/media/team-hero-office-right.jpg' alt=''></div><figcaption>shipped asset on transparency checkerboard — <a href='https://github.com/Landing-Pages-Websites/elite-physicians-wealth-planning/blob/main/public/images/design/media/team-hero-office-right.jpg'><code>media/team-hero-office-right.jpg</code></a> (replace in git)</figcaption></figure>
+<figure><div class='intended-preview' style='background:#0B1F3A'><img src='../images/design/media/team-hero-office-right.jpg' alt=''></div><figcaption>asset on intended background — #0B1F3A</figcaption></figure>
+</div></div>
+<div class='card' id='02-verified-leadership-r1'>
+<b>02-verified-leadership-r1</b><span class='chip code'>code</span>
+<div class='muted'>utility region 1 from the approved 02-verified-leadership frame</div>
+<div class='muted'>Use semantic article typography, restrained max-widths, CSS borders and alternating token surfaces; keep every disclosure sentence live and selectable.</div>
+<div class='pair'>
+<figure><a href='crops/02-verified-leadership-context.png'><img src='crops/02-verified-leadership-r1-ref.png' alt=''></a><figcaption>design reference — 02-verified-leadership (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Use semantic article typography, restrained max-widths, CSS borders and alternating token surfaces; keep every disclosure sentence live and selectable.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='02-verified-leadership-r2'>
+<b>02-verified-leadership-r2</b><span class='chip code'>code</span>
+<div class='muted'>utility region 2 from the approved 02-verified-leadership frame</div>
+<div class='muted'>Use semantic article typography, restrained max-widths, CSS borders and alternating token surfaces; keep every disclosure sentence live and selectable.</div>
+<div class='pair'>
+<figure><a href='crops/02-verified-leadership-context.png'><img src='crops/02-verified-leadership-r2-ref.png' alt=''></a><figcaption>design reference — 02-verified-leadership (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Use semantic article typography, restrained max-widths, CSS borders and alternating token surfaces; keep every disclosure sentence live and selectable.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='02-verified-leadership-r3'>
+<b>02-verified-leadership-r3</b><span class='chip code'>code</span>
+<div class='muted'>utility region 3 from the approved 02-verified-leadership frame</div>
+<div class='muted'>Use semantic article typography, restrained max-widths, CSS borders and alternating token surfaces; keep every disclosure sentence live and selectable.</div>
+<div class='pair'>
+<figure><a href='crops/02-verified-leadership-context.png'><img src='crops/02-verified-leadership-r3-ref.png' alt=''></a><figcaption>design reference — 02-verified-leadership (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Use semantic article typography, restrained max-widths, CSS borders and alternating token surfaces; keep every disclosure sentence live and selectable.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='02-verified-leadership-r4'>
+<b>02-verified-leadership-r4</b><span class='chip code'>code</span>
+<div class='muted'>utility region 4 from the approved 02-verified-leadership frame</div>
+<div class='muted'>Use semantic article typography, restrained max-widths, CSS borders and alternating token surfaces; keep every disclosure sentence live and selectable.</div>
+<div class='pair'>
+<figure><a href='crops/02-verified-leadership-context.png'><img src='crops/02-verified-leadership-r4-ref.png' alt=''></a><figcaption>design reference — 02-verified-leadership (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Use semantic article typography, restrained max-widths, CSS borders and alternating token surfaces; keep every disclosure sentence live and selectable.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='03-bio-input-gate-r1'>
+<b>03-bio-input-gate-r1</b><span class='chip extract'>extract</span>
+<div class='muted'>Clean section-owned photographic material for 03-bio-input-gate, with all website text and controls kept live</div>
+<div class='muted'>Use semantic article typography, restrained max-widths, CSS borders and alternating token surfaces; keep every disclosure sentence live and selectable.</div>
+<div class='muted'>presentation: {&quot;alpha_required&quot;: false, &quot;crop_contract&quot;: &quot;Preserve the closed notebook and pen as a low, wide grounding image; no roster copy may be baked into the crop.&quot;, &quot;edge_treatment&quot;: {&quot;protected_crisp_regions&quot;: [&quot;focal photographic subject&quot;], &quot;style&quot;: &quot;crisp editorial crop with no synthetic fade or halo&quot;, &quot;zones&quot;: [&quot;outer crop boundary&quot;]}, &quot;intended_background&quot;: &quot;#FFFFFF&quot;, &quot;minimum_visible_fraction&quot;: &quot;Notebook and pen remain complete at desktop; at least the notebook spine and pen remain at mobile.&quot;, &quot;mode&quot;: &quot;framed-panel&quot;}</div>
+<div class='pair'>
+<figure><a href='crops/03-bio-input-gate-context.png'><img src='crops/03-bio-input-gate-r1-ref.png' alt=''></a><figcaption>design reference — 03-bio-input-gate (click for full frame)</figcaption></figure>
+<figure><div class='asset-preview'><img src='../images/design/media/bio-gate-desk.jpg' alt=''></div><figcaption>shipped asset on transparency checkerboard — <a href='https://github.com/Landing-Pages-Websites/elite-physicians-wealth-planning/blob/main/public/images/design/media/bio-gate-desk.jpg'><code>media/bio-gate-desk.jpg</code></a> (replace in git)</figcaption></figure>
+<figure><div class='intended-preview' style='background:#FFFFFF'><img src='../images/design/media/bio-gate-desk.jpg' alt=''></div><figcaption>asset on intended background — #FFFFFF</figcaption></figure>
+</div></div>
+<div class='card' id='03-bio-input-gate-r2'>
+<b>03-bio-input-gate-r2</b><span class='chip code'>code</span>
+<div class='muted'>utility region 2 from the approved 03-bio-input-gate frame</div>
+<div class='muted'>Use semantic article typography, restrained max-widths, CSS borders and alternating token surfaces; keep every disclosure sentence live and selectable.</div>
+<div class='pair'>
+<figure><a href='crops/03-bio-input-gate-context.png'><img src='crops/03-bio-input-gate-r2-ref.png' alt=''></a><figcaption>design reference — 03-bio-input-gate (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Use semantic article typography, restrained max-widths, CSS borders and alternating token surfaces; keep every disclosure sentence live and selectable.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='03-bio-input-gate-r3'>
+<b>03-bio-input-gate-r3</b><span class='chip code'>code</span>
+<div class='muted'>utility region 3 from the approved 03-bio-input-gate frame</div>
+<div class='muted'>Use semantic article typography, restrained max-widths, CSS borders and alternating token surfaces; keep every disclosure sentence live and selectable.</div>
+<div class='pair'>
+<figure><a href='crops/03-bio-input-gate-context.png'><img src='crops/03-bio-input-gate-r3-ref.png' alt=''></a><figcaption>design reference — 03-bio-input-gate (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Use semantic article typography, restrained max-widths, CSS borders and alternating token surfaces; keep every disclosure sentence live and selectable.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='03-bio-input-gate-r4'>
+<b>03-bio-input-gate-r4</b><span class='chip code'>code</span>
+<div class='muted'>utility region 4 from the approved 03-bio-input-gate frame</div>
+<div class='muted'>Use semantic article typography, restrained max-widths, CSS borders and alternating token surfaces; keep every disclosure sentence live and selectable.</div>
+<div class='pair'>
+<figure><a href='crops/03-bio-input-gate-context.png'><img src='crops/03-bio-input-gate-r4-ref.png' alt=''></a><figcaption>design reference — 03-bio-input-gate (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Use semantic article typography, restrained max-widths, CSS borders and alternating token surfaces; keep every disclosure sentence live and selectable.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='03-bio-input-gate-r5'>
+<b>03-bio-input-gate-r5</b><span class='chip code'>code</span>
+<div class='muted'>utility region 5 from the approved 03-bio-input-gate frame</div>
+<div class='muted'>Use semantic article typography, restrained max-widths, CSS borders and alternating token surfaces; keep every disclosure sentence live and selectable.</div>
+<div class='pair'>
+<figure><a href='crops/03-bio-input-gate-context.png'><img src='crops/03-bio-input-gate-r5-ref.png' alt=''></a><figcaption>design reference — 03-bio-input-gate (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Use semantic article typography, restrained max-widths, CSS borders and alternating token surfaces; keep every disclosure sentence live and selectable.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='03-bio-input-gate-r6'>
+<b>03-bio-input-gate-r6</b><span class='chip code'>code</span>
+<div class='muted'>utility region 6 from the approved 03-bio-input-gate frame</div>
+<div class='muted'>Use semantic article typography, restrained max-widths, CSS borders and alternating token surfaces; keep every disclosure sentence live and selectable.</div>
+<div class='pair'>
+<figure><a href='crops/03-bio-input-gate-context.png'><img src='crops/03-bio-input-gate-r6-ref.png' alt=''></a><figcaption>design reference — 03-bio-input-gate (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Use semantic article typography, restrained max-widths, CSS borders and alternating token surfaces; keep every disclosure sentence live and selectable.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='04-team-model-r1-hallway'>
+<b>04-team-model-r1-hallway</b><span class='chip extract'>extract</span>
+<div class='muted'>Clean section-owned photographic material for 04-team-model, with all website text and controls kept live — hallway</div>
+<div class='muted'>Build the responsive diagram with semantic labels, CSS circles and panels, and an inline SVG coordination path; place only contracted photographs inside media masks.</div>
+<div class='muted'>presentation: {&quot;alpha_contract&quot;: {&quot;require_fully_opaque_pixels&quot;: true, &quot;require_fully_transparent_pixels&quot;: true, &quot;transparent_corners&quot;: true}, &quot;alpha_required&quot;: true, &quot;crop_contract&quot;: &quot;Keep the clean circular hallway photograph with no label, dot field, or connector pixels.&quot;, &quot;edge_treatment&quot;: {&quot;protected_crisp_regions&quot;: [&quot;focal photographic subject&quot;], &quot;style&quot;: &quot;crisp editorial crop with no synthetic fade or halo&quot;, &quot;zones&quot;: [&quot;outer crop boundary&quot;]}, &quot;intended_background&quot;: &quot;#DCE8F2&quot;, &quot;minimum_visible_fraction&quot;: &quot;The full circular photo remains visible.&quot;, &quot;mode&quot;: &quot;transparent-cutout&quot;}</div>
+<div class='pair'>
+<figure><a href='crops/04-team-model-context.png'><img src='crops/04-team-model-r1-hallway-ref.png' alt=''></a><figcaption>design reference — 04-team-model (click for full frame)</figcaption></figure>
+<figure><div class='asset-preview'><img src='../images/design/media/team-model-hallway.png' alt=''></div><figcaption>shipped asset on transparency checkerboard — <a href='https://github.com/Landing-Pages-Websites/elite-physicians-wealth-planning/blob/main/public/images/design/media/team-model-hallway.png'><code>media/team-model-hallway.png</code></a> (replace in git)</figcaption></figure>
+<figure><div class='intended-preview' style='background:#DCE8F2'><img src='../images/design/media/team-model-hallway.png' alt=''></div><figcaption>asset on intended background — #DCE8F2</figcaption></figure>
+</div></div>
+<div class='card' id='04-team-model-r1-files'>
+<b>04-team-model-r1-files</b><span class='chip extract'>extract</span>
+<div class='muted'>Clean section-owned photographic material for 04-team-model, with all website text and controls kept live — files</div>
+<div class='muted'>Build the responsive diagram with semantic labels, CSS circles and panels, and an inline SVG coordination path; place only contracted photographs inside media masks.</div>
+<div class='muted'>presentation: {&quot;alpha_contract&quot;: {&quot;require_fully_opaque_pixels&quot;: true, &quot;require_fully_transparent_pixels&quot;: true, &quot;transparent_corners&quot;: true}, &quot;alpha_required&quot;: true, &quot;crop_contract&quot;: &quot;Keep the clean circular files photograph with no label, dot field, or connector pixels.&quot;, &quot;edge_treatment&quot;: {&quot;protected_crisp_regions&quot;: [&quot;focal photographic subject&quot;], &quot;style&quot;: &quot;crisp editorial crop with no synthetic fade or halo&quot;, &quot;zones&quot;: [&quot;outer crop boundary&quot;]}, &quot;intended_background&quot;: &quot;#DCE8F2&quot;, &quot;minimum_visible_fraction&quot;: &quot;The full circular photo remains visible.&quot;, &quot;mode&quot;: &quot;transparent-cutout&quot;}</div>
+<div class='pair'>
+<figure><a href='crops/04-team-model-context.png'><img src='crops/04-team-model-r1-files-ref.png' alt=''></a><figcaption>design reference — 04-team-model (click for full frame)</figcaption></figure>
+<figure><div class='asset-preview'><img src='../images/design/media/team-model-files.png' alt=''></div><figcaption>shipped asset on transparency checkerboard — <a href='https://github.com/Landing-Pages-Websites/elite-physicians-wealth-planning/blob/main/public/images/design/media/team-model-files.png'><code>media/team-model-files.png</code></a> (replace in git)</figcaption></figure>
+<figure><div class='intended-preview' style='background:#DCE8F2'><img src='../images/design/media/team-model-files.png' alt=''></div><figcaption>asset on intended background — #DCE8F2</figcaption></figure>
+</div></div>
+<div class='card' id='04-team-model-r1-notebook'>
+<b>04-team-model-r1-notebook</b><span class='chip extract'>extract</span>
+<div class='muted'>Clean section-owned photographic material for 04-team-model, with all website text and controls kept live — notebook</div>
+<div class='muted'>Build the responsive diagram with semantic labels, CSS circles and panels, and an inline SVG coordination path; place only contracted photographs inside media masks.</div>
+<div class='muted'>presentation: {&quot;alpha_contract&quot;: {&quot;require_fully_opaque_pixels&quot;: true, &quot;require_fully_transparent_pixels&quot;: true, &quot;transparent_corners&quot;: true}, &quot;alpha_required&quot;: true, &quot;crop_contract&quot;: &quot;Keep the clean circular notebook photograph with no label, dot field, or connector pixels.&quot;, &quot;edge_treatment&quot;: {&quot;protected_crisp_regions&quot;: [&quot;focal photographic subject&quot;], &quot;style&quot;: &quot;crisp editorial crop with no synthetic fade or halo&quot;, &quot;zones&quot;: [&quot;outer crop boundary&quot;]}, &quot;intended_background&quot;: &quot;#DCE8F2&quot;, &quot;minimum_visible_fraction&quot;: &quot;The full circular photo remains visible.&quot;, &quot;mode&quot;: &quot;transparent-cutout&quot;}</div>
+<div class='pair'>
+<figure><a href='crops/04-team-model-context.png'><img src='crops/04-team-model-r1-notebook-ref.png' alt=''></a><figcaption>design reference — 04-team-model (click for full frame)</figcaption></figure>
+<figure><div class='asset-preview'><img src='../images/design/media/team-model-notebook.png' alt=''></div><figcaption>shipped asset on transparency checkerboard — <a href='https://github.com/Landing-Pages-Websites/elite-physicians-wealth-planning/blob/main/public/images/design/media/team-model-notebook.png'><code>media/team-model-notebook.png</code></a> (replace in git)</figcaption></figure>
+<figure><div class='intended-preview' style='background:#DCE8F2'><img src='../images/design/media/team-model-notebook.png' alt=''></div><figcaption>asset on intended background — #DCE8F2</figcaption></figure>
+</div></div>
+<div class='card' id='04-team-model-r1-assembled'>
+<b>04-team-model-r1-assembled</b><span class='chip composite'>composite</span>
+<div class='muted'>Clean section-owned photographic material for 04-team-model, with all website text and controls kept live — assembled linked layers</div>
+<div class='muted'>Build the responsive diagram with semantic labels, CSS circles and panels, and an inline SVG coordination path; place only contracted photographs inside media masks.</div>
+<div class='muted'>presentation: {&quot;alpha_contract&quot;: {&quot;require_fully_opaque_pixels&quot;: true, &quot;require_fully_transparent_pixels&quot;: true, &quot;transparent_corners&quot;: true}, &quot;alpha_required&quot;: true, &quot;crop_contract&quot;: &quot;Keep the clean circular hallway photograph with no label, dot field, or connector pixels.&quot;, &quot;edge_treatment&quot;: {&quot;protected_crisp_regions&quot;: [&quot;focal photographic subject&quot;], &quot;style&quot;: &quot;crisp editorial crop with no synthetic fade or halo&quot;, &quot;zones&quot;: [&quot;outer crop boundary&quot;]}, &quot;intended_background&quot;: &quot;#DCE8F2&quot;, &quot;minimum_visible_fraction&quot;: &quot;The full circular photo remains visible.&quot;, &quot;mode&quot;: &quot;transparent-cutout&quot;}</div>
+<div class='pair'>
+<figure><a href='crops/04-team-model-context.png'><img src='crops/04-team-model-r1-assembled-ref.png' alt=''></a><figcaption>design reference — 04-team-model (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Container-relative linked layers</b><p>This relationship cannot be flattened accurately before the build. Verify it in the required live desktop and mobile captures.</p></div><figcaption>declared assembly relationship; live composite QA required</figcaption></figure>
+</div></div>
+<div class='card' id='04-team-model-r2'>
+<b>04-team-model-r2</b><span class='chip extract'>extract</span>
+<div class='muted'>Clean section-owned photographic material for 04-team-model, with all website text and controls kept live</div>
+<div class='muted'>Build the responsive diagram with semantic labels, CSS circles and panels, and an inline SVG coordination path; place only contracted photographs inside media masks.</div>
+<div class='muted'>presentation: {&quot;alpha_contract&quot;: {&quot;require_fully_opaque_pixels&quot;: true, &quot;require_fully_transparent_pixels&quot;: true, &quot;transparent_corners&quot;: true}, &quot;alpha_required&quot;: true, &quot;crop_contract&quot;: &quot;Keep the clean circular tablet photograph without surrounding dot field or connector.&quot;, &quot;edge_treatment&quot;: {&quot;protected_crisp_regions&quot;: [&quot;focal photographic subject&quot;], &quot;style&quot;: &quot;crisp editorial crop with no synthetic fade or halo&quot;, &quot;zones&quot;: [&quot;outer crop boundary&quot;]}, &quot;intended_background&quot;: &quot;#DCE8F2&quot;, &quot;minimum_visible_fraction&quot;: &quot;The full circular photo remains visible.&quot;, &quot;mode&quot;: &quot;transparent-cutout&quot;}</div>
+<div class='pair'>
+<figure><a href='crops/04-team-model-context.png'><img src='crops/04-team-model-r2-ref.png' alt=''></a><figcaption>design reference — 04-team-model (click for full frame)</figcaption></figure>
+<figure><div class='asset-preview'><img src='../images/design/media/team-model-tablet.png' alt=''></div><figcaption>shipped asset on transparency checkerboard — <a href='https://github.com/Landing-Pages-Websites/elite-physicians-wealth-planning/blob/main/public/images/design/media/team-model-tablet.png'><code>media/team-model-tablet.png</code></a> (replace in git)</figcaption></figure>
+<figure><div class='intended-preview' style='background:#DCE8F2'><img src='../images/design/media/team-model-tablet.png' alt=''></div><figcaption>asset on intended background — #DCE8F2</figcaption></figure>
+</div></div>
+<div class='card' id='04-team-model-r3'>
+<b>04-team-model-r3</b><span class='chip code'>code</span>
+<div class='muted'>diagram region 3 from the approved 04-team-model frame</div>
+<div class='muted'>Build the responsive diagram with semantic labels, CSS circles and panels, and an inline SVG coordination path; place only contracted photographs inside media masks.</div>
+<div class='pair'>
+<figure><a href='crops/04-team-model-context.png'><img src='crops/04-team-model-r3-ref.png' alt=''></a><figcaption>design reference — 04-team-model (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Build the responsive diagram with semantic labels, CSS circles and panels, and an inline SVG coordination path; place only contracted photographs inside media masks.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='04-team-model-r4'>
+<b>04-team-model-r4</b><span class='chip extract'>extract</span>
+<div class='muted'>Clean section-owned photographic material for 04-team-model, with all website text and controls kept live</div>
+<div class='muted'>Build the responsive diagram with semantic labels, CSS circles and panels, and an inline SVG coordination path; place only contracted photographs inside media masks.</div>
+<div class='muted'>presentation: {&quot;alpha_contract&quot;: {&quot;require_fully_opaque_pixels&quot;: true, &quot;require_fully_transparent_pixels&quot;: true, &quot;transparent_corners&quot;: true}, &quot;alpha_required&quot;: true, &quot;crop_contract&quot;: &quot;Keep the clean circular conference-room photograph without gold connector pixels.&quot;, &quot;edge_treatment&quot;: {&quot;protected_crisp_regions&quot;: [&quot;focal photographic subject&quot;], &quot;style&quot;: &quot;crisp editorial crop with no synthetic fade or halo&quot;, &quot;zones&quot;: [&quot;outer crop boundary&quot;]}, &quot;intended_background&quot;: &quot;#DCE8F2&quot;, &quot;minimum_visible_fraction&quot;: &quot;The full circular photo remains visible.&quot;, &quot;mode&quot;: &quot;transparent-cutout&quot;}</div>
+<div class='pair'>
+<figure><a href='crops/04-team-model-context.png'><img src='crops/04-team-model-r4-ref.png' alt=''></a><figcaption>design reference — 04-team-model (click for full frame)</figcaption></figure>
+<figure><div class='asset-preview'><img src='../images/design/media/team-model-conference.png' alt=''></div><figcaption>shipped asset on transparency checkerboard — <a href='https://github.com/Landing-Pages-Websites/elite-physicians-wealth-planning/blob/main/public/images/design/media/team-model-conference.png'><code>media/team-model-conference.png</code></a> (replace in git)</figcaption></figure>
+<figure><div class='intended-preview' style='background:#DCE8F2'><img src='../images/design/media/team-model-conference.png' alt=''></div><figcaption>asset on intended background — #DCE8F2</figcaption></figure>
+</div></div>
+<div class='card' id='04-team-model-r5'>
+<b>04-team-model-r5</b><span class='chip code'>code</span>
+<div class='muted'>diagram region 5 from the approved 04-team-model frame</div>
+<div class='muted'>Build the responsive diagram with semantic labels, CSS circles and panels, and an inline SVG coordination path; place only contracted photographs inside media masks.</div>
+<div class='pair'>
+<figure><a href='crops/04-team-model-context.png'><img src='crops/04-team-model-r5-ref.png' alt=''></a><figcaption>design reference — 04-team-model (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Build the responsive diagram with semantic labels, CSS circles and panels, and an inline SVG coordination path; place only contracted photographs inside media masks.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='04-team-model-r6'>
+<b>04-team-model-r6</b><span class='chip code'>code</span>
+<div class='muted'>diagram region 6 from the approved 04-team-model frame</div>
+<div class='muted'>Build the responsive diagram with semantic labels, CSS circles and panels, and an inline SVG coordination path; place only contracted photographs inside media masks.</div>
+<div class='pair'>
+<figure><a href='crops/04-team-model-context.png'><img src='crops/04-team-model-r6-ref.png' alt=''></a><figcaption>design reference — 04-team-model (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Build the responsive diagram with semantic labels, CSS circles and panels, and an inline SVG coordination path; place only contracted photographs inside media masks.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='04-team-model-r7'>
+<b>04-team-model-r7</b><span class='chip code'>code</span>
+<div class='muted'>diagram region 7 from the approved 04-team-model frame</div>
+<div class='muted'>Build the responsive diagram with semantic labels, CSS circles and panels, and an inline SVG coordination path; place only contracted photographs inside media masks.</div>
+<div class='pair'>
+<figure><a href='crops/04-team-model-context.png'><img src='crops/04-team-model-r7-ref.png' alt=''></a><figcaption>design reference — 04-team-model (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Build the responsive diagram with semantic labels, CSS circles and panels, and an inline SVG coordination path; place only contracted photographs inside media masks.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='04-team-model-r8'>
+<b>04-team-model-r8</b><span class='chip code'>code</span>
+<div class='muted'>diagram region 8 from the approved 04-team-model frame</div>
+<div class='muted'>Build the responsive diagram with semantic labels, CSS circles and panels, and an inline SVG coordination path; place only contracted photographs inside media masks.</div>
+<div class='pair'>
+<figure><a href='crops/04-team-model-context.png'><img src='crops/04-team-model-r8-ref.png' alt=''></a><figcaption>design reference — 04-team-model (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Build the responsive diagram with semantic labels, CSS circles and panels, and an inline SVG coordination path; place only contracted photographs inside media masks.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='05-next-step-r1'>
+<b>05-next-step-r1</b><span class='chip extract'>extract</span>
+<div class='muted'>Clean section-owned photographic material for 05-next-step, with all website text and controls kept live</div>
+<div class='muted'>Use live heading, body, and links on a CSS field with thin gold connector geometry; position the contracted photo as a supporting edge rail rather than a section bitmap.</div>
+<div class='muted'>presentation: {&quot;alpha_required&quot;: false, &quot;crop_contract&quot;: &quot;Preserve the lamp, books, window, and desk edge as the right atmospheric rail; no route text may appear.&quot;, &quot;edge_treatment&quot;: {&quot;protected_crisp_regions&quot;: [&quot;focal photographic subject&quot;], &quot;style&quot;: &quot;crisp editorial crop with no synthetic fade or halo&quot;, &quot;zones&quot;: [&quot;outer crop boundary&quot;]}, &quot;intended_background&quot;: &quot;#0B1F3A&quot;, &quot;minimum_visible_fraction&quot;: &quot;Lamp and desk remain visible together.&quot;, &quot;mode&quot;: &quot;framed-panel&quot;}</div>
+<div class='pair'>
+<figure><a href='crops/05-next-step-context.png'><img src='crops/05-next-step-r1-ref.png' alt=''></a><figcaption>design reference — 05-next-step (click for full frame)</figcaption></figure>
+<figure><div class='asset-preview'><img src='../images/design/media/next-step-office-right.jpg' alt=''></div><figcaption>shipped asset on transparency checkerboard — <a href='https://github.com/Landing-Pages-Websites/elite-physicians-wealth-planning/blob/main/public/images/design/media/next-step-office-right.jpg'><code>media/next-step-office-right.jpg</code></a> (replace in git)</figcaption></figure>
+<figure><div class='intended-preview' style='background:#0B1F3A'><img src='../images/design/media/next-step-office-right.jpg' alt=''></div><figcaption>asset on intended background — #0B1F3A</figcaption></figure>
+</div></div>
+<div class='card' id='05-next-step-r2'>
+<b>05-next-step-r2</b><span class='chip code'>code</span>
+<div class='muted'>cta region 2 from the approved 05-next-step frame</div>
+<div class='muted'>Use live heading, body, and links on a CSS field with thin gold connector geometry; position the contracted photo as a supporting edge rail rather than a section bitmap.</div>
+<div class='pair'>
+<figure><a href='crops/05-next-step-context.png'><img src='crops/05-next-step-r2-ref.png' alt=''></a><figcaption>design reference — 05-next-step (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Use live heading, body, and links on a CSS field with thin gold connector geometry; position the contracted photo as a supporting edge rail rather than a section bitmap.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='05-next-step-r3'>
+<b>05-next-step-r3</b><span class='chip extract'>extract</span>
+<div class='muted'>Clean section-owned photographic material for 05-next-step, with all website text and controls kept live</div>
+<div class='muted'>Use live heading, body, and links on a CSS field with thin gold connector geometry; position the contracted photo as a supporting edge rail rather than a section bitmap.</div>
+<div class='muted'>presentation: {&quot;alpha_required&quot;: false, &quot;crop_contract&quot;: &quot;Preserve the upper shelf and books as a narrow left atmospheric crop.&quot;, &quot;edge_treatment&quot;: {&quot;protected_crisp_regions&quot;: [&quot;focal photographic subject&quot;], &quot;style&quot;: &quot;crisp editorial crop with no synthetic fade or halo&quot;, &quot;zones&quot;: [&quot;outer crop boundary&quot;]}, &quot;intended_background&quot;: &quot;#0B1F3A&quot;, &quot;minimum_visible_fraction&quot;: &quot;At least one lit shelf and book group remains visible.&quot;, &quot;mode&quot;: &quot;framed-panel&quot;}</div>
+<div class='pair'>
+<figure><a href='crops/05-next-step-context.png'><img src='crops/05-next-step-r3-ref.png' alt=''></a><figcaption>design reference — 05-next-step (click for full frame)</figcaption></figure>
+<figure><div class='asset-preview'><img src='../images/design/media/next-step-shelf-upper.jpg' alt=''></div><figcaption>shipped asset on transparency checkerboard — <a href='https://github.com/Landing-Pages-Websites/elite-physicians-wealth-planning/blob/main/public/images/design/media/next-step-shelf-upper.jpg'><code>media/next-step-shelf-upper.jpg</code></a> (replace in git)</figcaption></figure>
+<figure><div class='intended-preview' style='background:#0B1F3A'><img src='../images/design/media/next-step-shelf-upper.jpg' alt=''></div><figcaption>asset on intended background — #0B1F3A</figcaption></figure>
+</div></div>
+<div class='card' id='05-next-step-r4'>
+<b>05-next-step-r4</b><span class='chip extract'>extract</span>
+<div class='muted'>Clean section-owned photographic material for 05-next-step, with all website text and controls kept live</div>
+<div class='muted'>Use live heading, body, and links on a CSS field with thin gold connector geometry; position the contracted photo as a supporting edge rail rather than a section bitmap.</div>
+<div class='muted'>presentation: {&quot;alpha_required&quot;: false, &quot;crop_contract&quot;: &quot;Preserve the lower shelf and stacked books as a narrow left atmospheric crop.&quot;, &quot;edge_treatment&quot;: {&quot;protected_crisp_regions&quot;: [&quot;focal photographic subject&quot;], &quot;style&quot;: &quot;crisp editorial crop with no synthetic fade or halo&quot;, &quot;zones&quot;: [&quot;outer crop boundary&quot;]}, &quot;intended_background&quot;: &quot;#0B1F3A&quot;, &quot;minimum_visible_fraction&quot;: &quot;The lit shelf edge and stacked books remain visible.&quot;, &quot;mode&quot;: &quot;framed-panel&quot;}</div>
+<div class='pair'>
+<figure><a href='crops/05-next-step-context.png'><img src='crops/05-next-step-r4-ref.png' alt=''></a><figcaption>design reference — 05-next-step (click for full frame)</figcaption></figure>
+<figure><div class='asset-preview'><img src='../images/design/media/next-step-shelf-lower.jpg' alt=''></div><figcaption>shipped asset on transparency checkerboard — <a href='https://github.com/Landing-Pages-Websites/elite-physicians-wealth-planning/blob/main/public/images/design/media/next-step-shelf-lower.jpg'><code>media/next-step-shelf-lower.jpg</code></a> (replace in git)</figcaption></figure>
+<figure><div class='intended-preview' style='background:#0B1F3A'><img src='../images/design/media/next-step-shelf-lower.jpg' alt=''></div><figcaption>asset on intended background — #0B1F3A</figcaption></figure>
+</div></div>
+<div class='card' id='05-next-step-r5'>
+<b>05-next-step-r5</b><span class='chip code'>code</span>
+<div class='muted'>cta region 5 from the approved 05-next-step frame</div>
+<div class='muted'>Use live heading, body, and links on a CSS field with thin gold connector geometry; position the contracted photo as a supporting edge rail rather than a section bitmap.</div>
+<div class='pair'>
+<figure><a href='crops/05-next-step-context.png'><img src='crops/05-next-step-r5-ref.png' alt=''></a><figcaption>design reference — 05-next-step (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Use live heading, body, and links on a CSS field with thin gold connector geometry; position the contracted photo as a supporting edge rail rather than a section bitmap.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='05-next-step-r6'>
+<b>05-next-step-r6</b><span class='chip code'>code</span>
+<div class='muted'>cta region 6 from the approved 05-next-step frame</div>
+<div class='muted'>Use live heading, body, and links on a CSS field with thin gold connector geometry; position the contracted photo as a supporting edge rail rather than a section bitmap.</div>
+<div class='pair'>
+<figure><a href='crops/05-next-step-context.png'><img src='crops/05-next-step-r6-ref.png' alt=''></a><figcaption>design reference — 05-next-step (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Use live heading, body, and links on a CSS field with thin gold connector geometry; position the contracted photo as a supporting edge rail rather than a section bitmap.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='05-next-step-r7'>
+<b>05-next-step-r7</b><span class='chip code'>code</span>
+<div class='muted'>cta region 7 from the approved 05-next-step frame</div>
+<div class='muted'>Use live heading, body, and links on a CSS field with thin gold connector geometry; position the contracted photo as a supporting edge rail rather than a section bitmap.</div>
+<div class='pair'>
+<figure><a href='crops/05-next-step-context.png'><img src='crops/05-next-step-r7-ref.png' alt=''></a><figcaption>design reference — 05-next-step (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Use live heading, body, and links on a CSS field with thin gold connector geometry; position the contracted photo as a supporting edge rail rather than a section bitmap.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='05-next-step-r8'>
+<b>05-next-step-r8</b><span class='chip code'>code</span>
+<div class='muted'>cta region 8 from the approved 05-next-step frame</div>
+<div class='muted'>Use live heading, body, and links on a CSS field with thin gold connector geometry; position the contracted photo as a supporting edge rail rather than a section bitmap.</div>
+<div class='pair'>
+<figure><a href='crops/05-next-step-context.png'><img src='crops/05-next-step-r8-ref.png' alt=''></a><figcaption>design reference — 05-next-step (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Use live heading, body, and links on a CSS field with thin gold connector geometry; position the contracted photo as a supporting edge rail rather than a section bitmap.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='05-next-step-r9'>
+<b>05-next-step-r9</b><span class='chip code'>code</span>
+<div class='muted'>cta region 9 from the approved 05-next-step frame</div>
+<div class='muted'>Use live heading, body, and links on a CSS field with thin gold connector geometry; position the contracted photo as a supporting edge rail rather than a section bitmap.</div>
+<div class='pair'>
+<figure><a href='crops/05-next-step-context.png'><img src='crops/05-next-step-r9-ref.png' alt=''></a><figcaption>design reference — 05-next-step (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Use live heading, body, and links on a CSS field with thin gold connector geometry; position the contracted photo as a supporting edge rail rather than a section bitmap.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='05-next-step-r10'>
+<b>05-next-step-r10</b><span class='chip code'>code</span>
+<div class='muted'>cta region 10 from the approved 05-next-step frame</div>
+<div class='muted'>Use live heading, body, and links on a CSS field with thin gold connector geometry; position the contracted photo as a supporting edge rail rather than a section bitmap.</div>
+<div class='pair'>
+<figure><a href='crops/05-next-step-context.png'><img src='crops/05-next-step-r10-ref.png' alt=''></a><figcaption>design reference — 05-next-step (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Use live heading, body, and links on a CSS field with thin gold connector geometry; position the contracted photo as a supporting edge rail rather than a section bitmap.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='05-next-step-r11'>
+<b>05-next-step-r11</b><span class='chip extract'>extract</span>
+<div class='muted'>Clean section-owned photographic material for 05-next-step, with all website text and controls kept live</div>
+<div class='muted'>Use live heading, body, and links on a CSS field with thin gold connector geometry; position the contracted photo as a supporting edge rail rather than a section bitmap.</div>
+<div class='muted'>presentation: {&quot;alpha_required&quot;: false, &quot;crop_contract&quot;: &quot;Preserve the book grouping without adjacent route labels.&quot;, &quot;edge_treatment&quot;: {&quot;protected_crisp_regions&quot;: [&quot;focal photographic subject&quot;], &quot;style&quot;: &quot;crisp editorial crop with no synthetic fade or halo&quot;, &quot;zones&quot;: [&quot;outer crop boundary&quot;]}, &quot;intended_background&quot;: &quot;#0B1F3A&quot;, &quot;minimum_visible_fraction&quot;: &quot;The complete book grouping remains visible.&quot;, &quot;mode&quot;: &quot;framed-panel&quot;}</div>
+<div class='pair'>
+<figure><a href='crops/05-next-step-context.png'><img src='crops/05-next-step-r11-ref.png' alt=''></a><figcaption>design reference — 05-next-step (click for full frame)</figcaption></figure>
+<figure><div class='asset-preview'><img src='../images/design/media/next-step-books.jpg' alt=''></div><figcaption>shipped asset on transparency checkerboard — <a href='https://github.com/Landing-Pages-Websites/elite-physicians-wealth-planning/blob/main/public/images/design/media/next-step-books.jpg'><code>media/next-step-books.jpg</code></a> (replace in git)</figcaption></figure>
+<figure><div class='intended-preview' style='background:#0B1F3A'><img src='../images/design/media/next-step-books.jpg' alt=''></div><figcaption>asset on intended background — #0B1F3A</figcaption></figure>
+</div></div>
+<div class='card' id='05-next-step-r12'>
+<b>05-next-step-r12</b><span class='chip code'>code</span>
+<div class='muted'>cta region 12 from the approved 05-next-step frame</div>
+<div class='muted'>Use live heading, body, and links on a CSS field with thin gold connector geometry; position the contracted photo as a supporting edge rail rather than a section bitmap.</div>
+<div class='pair'>
+<figure><a href='crops/05-next-step-context.png'><img src='crops/05-next-step-r12-ref.png' alt=''></a><figcaption>design reference — 05-next-step (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Use live heading, body, and links on a CSS field with thin gold connector geometry; position the contracted photo as a supporting edge rail rather than a section bitmap.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='05-next-step-r13'>
+<b>05-next-step-r13</b><span class='chip code'>code</span>
+<div class='muted'>cta region 13 from the approved 05-next-step frame</div>
+<div class='muted'>Use live heading, body, and links on a CSS field with thin gold connector geometry; position the contracted photo as a supporting edge rail rather than a section bitmap.</div>
+<div class='pair'>
+<figure><a href='crops/05-next-step-context.png'><img src='crops/05-next-step-r13-ref.png' alt=''></a><figcaption>design reference — 05-next-step (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Use live heading, body, and links on a CSS field with thin gold connector geometry; position the contracted photo as a supporting edge rail rather than a section bitmap.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='05-next-step-r14'>
+<b>05-next-step-r14</b><span class='chip code'>code</span>
+<div class='muted'>cta region 14 from the approved 05-next-step frame</div>
+<div class='muted'>Use live heading, body, and links on a CSS field with thin gold connector geometry; position the contracted photo as a supporting edge rail rather than a section bitmap.</div>
+<div class='pair'>
+<figure><a href='crops/05-next-step-context.png'><img src='crops/05-next-step-r14-ref.png' alt=''></a><figcaption>design reference — 05-next-step (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Use live heading, body, and links on a CSS field with thin gold connector geometry; position the contracted photo as a supporting edge rail rather than a section bitmap.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='05-next-step-r15'>
+<b>05-next-step-r15</b><span class='chip code'>code</span>
+<div class='muted'>cta region 15 from the approved 05-next-step frame</div>
+<div class='muted'>Use live heading, body, and links on a CSS field with thin gold connector geometry; position the contracted photo as a supporting edge rail rather than a section bitmap.</div>
+<div class='pair'>
+<figure><a href='crops/05-next-step-context.png'><img src='crops/05-next-step-r15-ref.png' alt=''></a><figcaption>design reference — 05-next-step (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Use live heading, body, and links on a CSS field with thin gold connector geometry; position the contracted photo as a supporting edge rail rather than a section bitmap.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='05-next-step-r16'>
+<b>05-next-step-r16</b><span class='chip code'>code</span>
+<div class='muted'>cta region 16 from the approved 05-next-step frame</div>
+<div class='muted'>Use live heading, body, and links on a CSS field with thin gold connector geometry; position the contracted photo as a supporting edge rail rather than a section bitmap.</div>
+<div class='pair'>
+<figure><a href='crops/05-next-step-context.png'><img src='crops/05-next-step-r16-ref.png' alt=''></a><figcaption>design reference — 05-next-step (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Use live heading, body, and links on a CSS field with thin gold connector geometry; position the contracted photo as a supporting edge rail rather than a section bitmap.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<details><summary>NOTES.md — CSS/SVG techniques the build uses instead of images</summary><pre># about--team decomposition notes
+
+## Page content gate
+
+Do not invent team biographies, roles, portraits, credentials, or roster status. The neutral leadership reserve stays a CSS placeholder until approved client media is supplied.
+
+All typography uses Cormorant Garamond for display roles and Inter for body/UI roles. Use approved navy, gold, mist, ivory, white, and charcoal tokens. Website text, form controls, diagrams, connectors, rules, paper fields, and geometric icons stay live HTML/CSS/SVG. Extracted files are clean section-owned media crops only; no full section is baked and no pixels are invented.
+
+## 01-team-state-hero — Tier 2
+
+Use semantic live headings and body copy over a CSS navy field, with the contracted photo in a responsive media slot, a thin gold SVG route, and an accessible CTA.
+
+Raster roles: 1 contracted region(s). Intrinsic media geometry must not control section height. Do not invent team biographies, roles, portraits, credentials, or roster status. The neutral leadership reserve stays a CSS placeholder until approved client media is supplied.
+
+## 02-verified-leadership — Tier 3
+
+Use semantic article typography, restrained max-widths, CSS borders and alternating token surfaces; keep every disclosure sentence live and selectable.
+
+Raster roles: 0 contracted region(s). Intrinsic media geometry must not control section height. Do not invent team biographies, roles, portraits, credentials, or roster status. The neutral leadership reserve stays a CSS placeholder until approved client media is supplied.
+
+## 03-bio-input-gate — Tier 2
+
+Use semantic article typography, restrained max-widths, CSS borders and alternating token surfaces; keep every disclosure sentence live and selectable.
+
+Raster roles: 1 contracted region(s). Intrinsic media geometry must not control section height. Do not invent team biographies, roles, portraits, credentials, or roster status. The neutral leadership reserve stays a CSS placeholder until approved client media is supplied.
+
+## 04-team-model — Tier 2
+
+Build the responsive diagram with semantic labels, CSS circles and panels, and an inline SVG coordination path; place only contracted photographs inside media masks.
+
+Raster roles: 3 contracted region(s). Intrinsic media geometry must not control section height. Do not invent team biographies, roles, portraits, credentials, or roster status. The neutral leadership reserve stays a CSS placeholder until approved client media is supplied.
+
+## 05-next-step — Tier 2
+
+Use live heading, body, and links on a CSS field with thin gold connector geometry; position the contracted photo as a supporting edge rail rather than a section bitmap.
+
+Raster roles: 4 contracted region(s). Intrinsic media geometry must not control section height. Do not invent team biographies, roles, portraits, credentials, or roster status. The neutral leadership reserve stays a CSS placeholder until approved client media is supplied.
+</pre></details>

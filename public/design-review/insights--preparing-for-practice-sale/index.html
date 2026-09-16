@@ -1,0 +1,322 @@
+<!doctype html><meta charset='utf-8'>
+<title>Elite Physicians — insights--preparing-for-practice-sale</title><style>
+body{margin:0;padding:24px;background:#111;color:#eee;
+     font:14px/1.5 -apple-system,'Segoe UI',sans-serif}
+a{color:#8bd} .muted{color:#999} h1{font-size:20px}
+.proto{background:#1b1b1b;border:1px solid #333;border-radius:8px;
+       padding:12px 16px;max-width:900px;margin-bottom:24px}
+.proto code{background:#000;padding:1px 5px;border-radius:4px}
+.card{background:#1b1b1b;border:1px solid #333;border-radius:8px;
+      padding:16px;margin-bottom:20px;max-width:1200px}
+.card.missing{border-color:#a33}
+.pair{display:flex;gap:16px;flex-wrap:wrap}
+.pair figure{margin:0;flex:1;min-width:280px}
+.pair img{max-width:100%;border:1px solid #444}
+.asset-preview{display:grid;place-items:center;min-height:180px;
+  background-color:#fff;background-image:linear-gradient(45deg,#ddd 25%,transparent 25%),
+  linear-gradient(-45deg,#ddd 25%,transparent 25%),linear-gradient(45deg,transparent 75%,#ddd 75%),
+  linear-gradient(-45deg,transparent 75%,#ddd 75%);background-size:24px 24px;
+  background-position:0 0,0 12px,12px -12px,-12px 0}
+.asset-preview img,.intended-preview img{display:block;max-height:520px}
+.intended-preview{display:grid;place-items:center;min-height:180px;border:1px solid #444}
+figcaption{font-size:12px;color:#999;margin-top:4px}
+.chip{display:inline-block;font-size:11px;padding:2px 8px;border-radius:10px;
+      background:#333;margin-left:8px;text-transform:uppercase}
+.chip.extract{background:#264} .chip.inpaint{background:#452}
+.chip.code{background:#345}
+.chip.plate{background:#246} .chip.generated{background:#525}
+.chip.unmapped{background:#630} .chip.client-copy{background:#444}
+.chip.composite{background:#536}
+</style>
+<h1>Elite Physicians — insights--preparing-for-practice-sale</h1>
+<p class='muted'>26 CODE regions and 5 raster assets to review: 5 extract, 0 inpaint.</p>
+<div class='proto'><b>How to review:</b> judge every planned treatment against its design reference on the left. For CODE cards, verify the build note can preserve the region's silhouette, materiality, and compositing—not merely approximate its geometry. To swap a raster, replace the file directly in git — same path, push to main. Replaced files are authoritative — the pipeline never overwrites them. This page updates on every push. Complete the review subtask to approve; the build does not start until then.</div>
+<div class='card' id='01-editorial-state-hero-r1'>
+<b>01-editorial-state-hero-r1</b><span class='chip extract'>extract</span>
+<div class='muted'>navy leather portfolio, valuation folder, pen, and stethoscope desk still life</div>
+<div class='muted'>Extract the clean approved-frame crop; preserve navy leather portfolio, valuation folder, pen, and stethoscope desk still life material texture, natural lighting, and photographic depth.</div>
+<div class='muted'>presentation: {&quot;alpha_required&quot;: false, &quot;crop_contract&quot;: &quot;Portfolio, folder title, pen, and stethoscope remain legible; &gt;=75% of the still life.&quot;, &quot;intended_background&quot;: &quot;#061A34&quot;, &quot;minimum_visible_fraction&quot;: &quot;Portfolio, folder title, pen, and stethoscope remain legible; &gt;=75% of the still life.&quot;, &quot;mode&quot;: &quot;framed-panel&quot;}</div>
+<div class='pair'>
+<figure><a href='crops/01-editorial-state-hero-context.png'><img src='crops/01-editorial-state-hero-r1-ref.png' alt=''></a><figcaption>design reference — 01-editorial-state-hero (click for full frame)</figcaption></figure>
+<figure><div class='asset-preview'><img src='../images/design/elements/hero-practice-portfolio.jpg' alt=''></div><figcaption>shipped asset on transparency checkerboard — <code>elements/hero-practice-portfolio.jpg</code> (replace in git)</figcaption></figure>
+<figure><div class='intended-preview' style='background:#061A34'><img src='../images/design/elements/hero-practice-portfolio.jpg' alt=''></div><figcaption>asset on intended background — #061A34</figcaption></figure>
+</div></div>
+<div class='card' id='01-editorial-state-hero-r1-live-overlay'>
+<b>01-editorial-state-hero-r1-live-overlay</b><span class='chip code'>code</span>
+<div class='muted'>Live website copy, controls, lines, and responsive section layout over or beside the photographic crop</div>
+<div class='muted'>Build with semantic HTML in a responsive CSS grid; use live typography, #061A34 navy, #C79A3B hairlines, accessible spacing, and inline SVG only for simple geometric accents.</div>
+<div class='pair'>
+<figure><a href='crops/01-editorial-state-hero-context.png'><img src='crops/01-editorial-state-hero-r1-live-overlay-ref.png' alt=''></a><figcaption>design reference — 01-editorial-state-hero (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Build with semantic HTML in a responsive CSS grid; use live typography, #061A34 navy, #C79A3B hairlines, accessible spacing, and inline SVG only for simple geometric accents.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='02-verified-teaser-r1'>
+<b>02-verified-teaser-r1</b><span class='chip extract'>extract</span>
+<div class='muted'>cream source files, navy pen, and handwritten planning sheet</div>
+<div class='muted'>Extract the clean approved-frame crop; preserve cream source files, navy pen, and handwritten planning sheet material texture, natural lighting, and photographic depth.</div>
+<div class='muted'>presentation: {&quot;alpha_required&quot;: false, &quot;crop_contract&quot;: &quot;Source tab, pen, and planning sheet remain visible; &gt;=70% of the photographed cluster.&quot;, &quot;intended_background&quot;: &quot;#F8F4EB&quot;, &quot;minimum_visible_fraction&quot;: &quot;Source tab, pen, and planning sheet remain visible; &gt;=70% of the photographed cluster.&quot;, &quot;mode&quot;: &quot;framed-panel&quot;}</div>
+<div class='pair'>
+<figure><a href='crops/02-verified-teaser-context.png'><img src='crops/02-verified-teaser-r1-ref.png' alt=''></a><figcaption>design reference — 02-verified-teaser (click for full frame)</figcaption></figure>
+<figure><div class='asset-preview'><img src='../images/design/elements/verified-source-files.jpg' alt=''></div><figcaption>shipped asset on transparency checkerboard — <code>elements/verified-source-files.jpg</code> (replace in git)</figcaption></figure>
+<figure><div class='intended-preview' style='background:#F8F4EB'><img src='../images/design/elements/verified-source-files.jpg' alt=''></div><figcaption>asset on intended background — #F8F4EB</figcaption></figure>
+</div></div>
+<div class='card' id='02-verified-teaser-r2'>
+<b>02-verified-teaser-r2</b><span class='chip code'>code</span>
+<div class='muted'>Serif headline text what is verified now</div>
+<div class='muted'>Display serif heading clamp font-size 2.4rem 4rem color-primary-dark tracking-tight line-height-1.2</div>
+<div class='pair'>
+<figure><a href='crops/02-verified-teaser-context.png'><img src='crops/02-verified-teaser-r2-ref.png' alt=''></a><figcaption>design reference — 02-verified-teaser (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Display serif heading clamp font-size 2.4rem 4rem color-primary-dark tracking-tight line-height-1.2</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='02-verified-teaser-r3'>
+<b>02-verified-teaser-r3</b><span class='chip code'>code</span>
+<div class='muted'>Body text the full article body is not available in the verified inputs</div>
+<div class='muted'>Paragraph text-body font-family-sans line-height-1.6 color-neutral-600 margin-bottom-1.5</div>
+<div class='pair'>
+<figure><a href='crops/02-verified-teaser-context.png'><img src='crops/02-verified-teaser-r3-ref.png' alt=''></a><figcaption>design reference — 02-verified-teaser (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Paragraph text-body font-family-sans line-height-1.6 color-neutral-600 margin-bottom-1.5</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='02-verified-teaser-r4'>
+<b>02-verified-teaser-r4</b><span class='chip code'>code</span>
+<div class='muted'>Supporting copy personal plan questions to bring alongside a valuation and legal team</div>
+<div class='muted'>Paragraph text-sm font-family-sans line-height-1.5 color-neutral-500 margin-top-1</div>
+<div class='pair'>
+<figure><a href='crops/02-verified-teaser-context.png'><img src='crops/02-verified-teaser-r4-ref.png' alt=''></a><figcaption>design reference — 02-verified-teaser (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Paragraph text-sm font-family-sans line-height-1.5 color-neutral-500 margin-top-1</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='02-verified-teaser-r5'>
+<b>02-verified-teaser-r5</b><span class='chip code'>code</span>
+<div class='muted'>Section eyebrow label verified teaser in gold color</div>
+<div class='muted'>Label text-xs uppercase tracking-wide color-accent-gold margin-bottom-0.5 border-bottom-1 border-accent-gold padding-bottom-0.5</div>
+<div class='pair'>
+<figure><a href='crops/02-verified-teaser-context.png'><img src='crops/02-verified-teaser-r5-ref.png' alt=''></a><figcaption>design reference — 02-verified-teaser (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Label text-xs uppercase tracking-wide color-accent-gold margin-bottom-0.5 border-bottom-1 border-accent-gold padding-bottom-0.5</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='02-verified-teaser-r6'>
+<b>02-verified-teaser-r6</b><span class='chip code'>code</span>
+<div class='muted'>Horizontal divider rule line separator neutral color</div>
+<div class='muted'>HR border-top-1 border-neutral-200 width-full height-auto margin-y-3</div>
+<div class='pair'>
+<figure><a href='crops/02-verified-teaser-context.png'><img src='crops/02-verified-teaser-r6-ref.png' alt=''></a><figcaption>design reference — 02-verified-teaser (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>HR border-top-1 border-neutral-200 width-full height-auto margin-y-3</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='02-verified-teaser-r7'>
+<b>02-verified-teaser-r7</b><span class='chip code'>code</span>
+<div class='muted'>Subheading text smaller serif copy supporting headline</div>
+<div class='muted'>Build with semantic HTML in a responsive CSS grid; use live typography, #061A34 navy, #C79A3B hairlines, accessible spacing, and inline SVG only for simple geometric accents.</div>
+<div class='pair'>
+<figure><a href='crops/02-verified-teaser-context.png'><img src='crops/02-verified-teaser-r7-ref.png' alt=''></a><figcaption>design reference — 02-verified-teaser (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Build with semantic HTML in a responsive CSS grid; use live typography, #061A34 navy, #C79A3B hairlines, accessible spacing, and inline SVG only for simple geometric accents.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='02-verified-teaser-r8'>
+<b>02-verified-teaser-r8</b><span class='chip code'>code</span>
+<div class='muted'>Vertical divider rule line neutral accent color</div>
+<div class='muted'>Vertical border-left-1 border-neutral-300 height-auto display-block margin-x-2</div>
+<div class='pair'>
+<figure><a href='crops/02-verified-teaser-context.png'><img src='crops/02-verified-teaser-r8-ref.png' alt=''></a><figcaption>design reference — 02-verified-teaser (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Vertical border-left-1 border-neutral-300 height-auto display-block margin-x-2</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='02-verified-teaser-r9'>
+<b>02-verified-teaser-r9</b><span class='chip code'>code</span>
+<div class='muted'>Caption or label text below image element supporting context</div>
+<div class='muted'>Caption text-xs color-neutral-600 font-family-sans margin-top-0.5 font-italic</div>
+<div class='pair'>
+<figure><a href='crops/02-verified-teaser-context.png'><img src='crops/02-verified-teaser-r9-ref.png' alt=''></a><figcaption>design reference — 02-verified-teaser (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Caption text-xs color-neutral-600 font-family-sans margin-top-0.5 font-italic</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='03-manuscript-gate-r1'>
+<b>03-manuscript-gate-r1</b><span class='chip extract'>extract</span>
+<div class='muted'>cream manuscript-gate string folder with review tabs and pen</div>
+<div class='muted'>Extract the clean approved-frame crop; preserve cream manuscript-gate string folder with review tabs and pen material texture, natural lighting, and photographic depth.</div>
+<div class='muted'>presentation: {&quot;alpha_required&quot;: false, &quot;crop_contract&quot;: &quot;Folder label, string closure, review tabs, and pen remain visible; &gt;=80% of folder.&quot;, &quot;intended_background&quot;: &quot;#FFFFFF&quot;, &quot;minimum_visible_fraction&quot;: &quot;Folder label, string closure, review tabs, and pen remain visible; &gt;=80% of folder.&quot;, &quot;mode&quot;: &quot;framed-panel&quot;}</div>
+<div class='pair'>
+<figure><a href='crops/03-manuscript-gate-context.png'><img src='crops/03-manuscript-gate-r1-ref.png' alt=''></a><figcaption>design reference — 03-manuscript-gate (click for full frame)</figcaption></figure>
+<figure><div class='asset-preview'><img src='../images/design/elements/manuscript-gate-folder.jpg' alt=''></div><figcaption>shipped asset on transparency checkerboard — <code>elements/manuscript-gate-folder.jpg</code> (replace in git)</figcaption></figure>
+<figure><div class='intended-preview' style='background:#FFFFFF'><img src='../images/design/elements/manuscript-gate-folder.jpg' alt=''></div><figcaption>asset on intended background — #FFFFFF</figcaption></figure>
+</div></div>
+<div class='card' id='03-manuscript-gate-r2'>
+<b>03-manuscript-gate-r2</b><span class='chip code'>code</span>
+<div class='muted'>Serif display headline required before this article can go live</div>
+<div class='muted'>H1 font-family-serif font-size-clamp-2.5rem-4rem color-primary-dark tracking-tight margin-bottom-1.5</div>
+<div class='pair'>
+<figure><a href='crops/03-manuscript-gate-context.png'><img src='crops/03-manuscript-gate-r2-ref.png' alt=''></a><figcaption>design reference — 03-manuscript-gate (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>H1 font-family-serif font-size-clamp-2.5rem-4rem color-primary-dark tracking-tight margin-bottom-1.5</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='03-manuscript-gate-r3'>
+<b>03-manuscript-gate-r3</b><span class='chip code'>code</span>
+<div class='muted'>Vertical divider line accent gold color</div>
+<div class='muted'>Vertical border-left-2 border-accent-gold height-60 display-block margin-right-2</div>
+<div class='pair'>
+<figure><a href='crops/03-manuscript-gate-context.png'><img src='crops/03-manuscript-gate-r3-ref.png' alt=''></a><figcaption>design reference — 03-manuscript-gate (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Vertical border-left-2 border-accent-gold height-60 display-block margin-right-2</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='03-manuscript-gate-r4'>
+<b>03-manuscript-gate-r4</b><span class='chip code'>code</span>
+<div class='muted'>Checklist item text approved author date only when supplied</div>
+<div class='muted'>List-item text-body font-family-sans color-neutral-700 padding-left-2 margin-bottom-1 with leading-6</div>
+<div class='pair'>
+<figure><a href='crops/03-manuscript-gate-context.png'><img src='crops/03-manuscript-gate-r4-ref.png' alt=''></a><figcaption>design reference — 03-manuscript-gate (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>List-item text-body font-family-sans color-neutral-700 padding-left-2 margin-bottom-1 with leading-6</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='03-manuscript-gate-r5'>
+<b>03-manuscript-gate-r5</b><span class='chip code'>code</span>
+<div class='muted'>Checklist item text financial compliance review for high stakes claims</div>
+<div class='muted'>List-item text-body font-family-sans color-neutral-700 padding-left-2 margin-bottom-1 with leading-6</div>
+<div class='pair'>
+<figure><a href='crops/03-manuscript-gate-context.png'><img src='crops/03-manuscript-gate-r5-ref.png' alt=''></a><figcaption>design reference — 03-manuscript-gate (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>List-item text-body font-family-sans color-neutral-700 padding-left-2 margin-bottom-1 with leading-6</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='03-manuscript-gate-r6'>
+<b>03-manuscript-gate-r6</b><span class='chip code'>code</span>
+<div class='muted'>Checklist item text no invented body copy conclusions examples or citations</div>
+<div class='muted'>List-item text-body font-family-sans color-neutral-700 padding-left-2 margin-bottom-1 with leading-6</div>
+<div class='pair'>
+<figure><a href='crops/03-manuscript-gate-context.png'><img src='crops/03-manuscript-gate-r6-ref.png' alt=''></a><figcaption>design reference — 03-manuscript-gate (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>List-item text-body font-family-sans color-neutral-700 padding-left-2 margin-bottom-1 with leading-6</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='03-manuscript-gate-r7'>
+<b>03-manuscript-gate-r7</b><span class='chip code'>code</span>
+<div class='muted'>Checklist item text approved full manuscript required</div>
+<div class='muted'>List-item text-body font-family-sans color-neutral-700 padding-left-2 margin-bottom-1 with leading-6</div>
+<div class='pair'>
+<figure><a href='crops/03-manuscript-gate-context.png'><img src='crops/03-manuscript-gate-r7-ref.png' alt=''></a><figcaption>design reference — 03-manuscript-gate (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>List-item text-body font-family-sans color-neutral-700 padding-left-2 margin-bottom-1 with leading-6</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='04-source-and-review-gate-r1'>
+<b>04-source-and-review-gate-r1</b><span class='chip extract'>extract</span>
+<div class='muted'>reference-material file box, policy tabs, and stethoscope</div>
+<div class='muted'>Extract the clean approved-frame crop; preserve reference-material file box, policy tabs, and stethoscope material texture, natural lighting, and photographic depth.</div>
+<div class='muted'>presentation: {&quot;alpha_required&quot;: false, &quot;crop_contract&quot;: &quot;File tabs and stethoscope remain recognizable; &gt;=65% of photographed cluster.&quot;, &quot;intended_background&quot;: &quot;#DCEAF4&quot;, &quot;minimum_visible_fraction&quot;: &quot;File tabs and stethoscope remain recognizable; &gt;=65% of photographed cluster.&quot;, &quot;mode&quot;: &quot;framed-panel&quot;}</div>
+<div class='pair'>
+<figure><a href='crops/04-source-and-review-gate-context.png'><img src='crops/04-source-and-review-gate-r1-ref.png' alt=''></a><figcaption>design reference — 04-source-and-review-gate (click for full frame)</figcaption></figure>
+<figure><div class='asset-preview'><img src='../images/design/elements/source-review-files.jpg' alt=''></div><figcaption>shipped asset on transparency checkerboard — <code>elements/source-review-files.jpg</code> (replace in git)</figcaption></figure>
+<figure><div class='intended-preview' style='background:#DCEAF4'><img src='../images/design/elements/source-review-files.jpg' alt=''></div><figcaption>asset on intended background — #DCEAF4</figcaption></figure>
+</div></div>
+<div class='card' id='04-source-and-review-gate-r2'>
+<b>04-source-and-review-gate-r2</b><span class='chip code'>code</span>
+<div class='muted'>Label text box-item checkbox marker neutral tone callout</div>
+<div class='muted'>Checkbox-label text-sm font-family-sans color-neutral-700 padding-x-1 padding-y-0.5 border-1 border-neutral-300</div>
+<div class='pair'>
+<figure><a href='crops/04-source-and-review-gate-context.png'><img src='crops/04-source-and-review-gate-r2-ref.png' alt=''></a><figcaption>design reference — 04-source-and-review-gate (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Checkbox-label text-sm font-family-sans color-neutral-700 padding-x-1 padding-y-0.5 border-1 border-neutral-300</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='04-source-and-review-gate-r3'>
+<b>04-source-and-review-gate-r3</b><span class='chip code'>code</span>
+<div class='muted'>Section heading serif source and review requirements display text</div>
+<div class='muted'>H2 font-family-serif font-size-clamp-2rem-3.5rem color-primary-dark margin-bottom-2 tracking-tight</div>
+<div class='pair'>
+<figure><a href='crops/04-source-and-review-gate-context.png'><img src='crops/04-source-and-review-gate-r3-ref.png' alt=''></a><figcaption>design reference — 04-source-and-review-gate (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>H2 font-family-serif font-size-clamp-2rem-3.5rem color-primary-dark margin-bottom-2 tracking-tight</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='04-source-and-review-gate-r4'>
+<b>04-source-and-review-gate-r4</b><span class='chip code'>code</span>
+<div class='muted'>Label text box-item checkbox marker neutral tone callout</div>
+<div class='muted'>Checkbox-label text-sm font-family-sans color-neutral-700 padding-x-1 padding-y-0.5 border-1 border-neutral-300</div>
+<div class='pair'>
+<figure><a href='crops/04-source-and-review-gate-context.png'><img src='crops/04-source-and-review-gate-r4-ref.png' alt=''></a><figcaption>design reference — 04-source-and-review-gate (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Checkbox-label text-sm font-family-sans color-neutral-700 padding-x-1 padding-y-0.5 border-1 border-neutral-300</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='04-source-and-review-gate-r5'>
+<b>04-source-and-review-gate-r5</b><span class='chip code'>code</span>
+<div class='muted'>Supporting descriptive text structured data must match visible approved content</div>
+<div class='muted'>Text-sm font-family-sans color-neutral-600 line-height-1.5 padding-top-1 border-top-1 border-accent-gold</div>
+<div class='pair'>
+<figure><a href='crops/04-source-and-review-gate-context.png'><img src='crops/04-source-and-review-gate-r5-ref.png' alt=''></a><figcaption>design reference — 04-source-and-review-gate (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Text-sm font-family-sans color-neutral-600 line-height-1.5 padding-top-1 border-top-1 border-accent-gold</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='04-source-and-review-gate-r6'>
+<b>04-source-and-review-gate-r6</b><span class='chip code'>code</span>
+<div class='muted'>Callout label text source review gate section marker</div>
+<div class='muted'>Label text-xs uppercase tracking-wide color-neutral-500 font-weight-bold padding-0.5</div>
+<div class='pair'>
+<figure><a href='crops/04-source-and-review-gate-context.png'><img src='crops/04-source-and-review-gate-r6-ref.png' alt=''></a><figcaption>design reference — 04-source-and-review-gate (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Label text-xs uppercase tracking-wide color-neutral-500 font-weight-bold padding-0.5</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='05-related-reading-r1'>
+<b>05-related-reading-r1</b><span class='chip extract'>extract</span>
+<div class='muted'>practice-owner, wealth-planning, and insights file tabs with navy tray and pen</div>
+<div class='muted'>Extract the clean approved-frame crop; preserve practice-owner, wealth-planning, and insights file tabs with navy tray and pen material texture, natural lighting, and photographic depth.</div>
+<div class='muted'>presentation: {&quot;alpha_required&quot;: false, &quot;crop_contract&quot;: &quot;All three named physical tabs and navy tray remain visible; &gt;=75% of cluster.&quot;, &quot;intended_background&quot;: &quot;#F8F4EB&quot;, &quot;minimum_visible_fraction&quot;: &quot;All three named physical tabs and navy tray remain visible; &gt;=75% of cluster.&quot;, &quot;mode&quot;: &quot;framed-panel&quot;}</div>
+<div class='pair'>
+<figure><a href='crops/05-related-reading-context.png'><img src='crops/05-related-reading-r1-ref.png' alt=''></a><figcaption>design reference — 05-related-reading (click for full frame)</figcaption></figure>
+<figure><div class='asset-preview'><img src='../images/design/elements/related-path-files.jpg' alt=''></div><figcaption>shipped asset on transparency checkerboard — <code>elements/related-path-files.jpg</code> (replace in git)</figcaption></figure>
+<figure><div class='intended-preview' style='background:#F8F4EB'><img src='../images/design/elements/related-path-files.jpg' alt=''></div><figcaption>asset on intended background — #F8F4EB</figcaption></figure>
+</div></div>
+<div class='card' id='05-related-reading-r2'>
+<b>05-related-reading-r2</b><span class='chip code'>code</span>
+<div class='muted'>Serif display headline related planning paths for this topic</div>
+<div class='muted'>H2 font-family-serif font-size-clamp-2.5rem-4rem color-primary-dark tracking-tight line-height-1.1 margin-bottom-2</div>
+<div class='pair'>
+<figure><a href='crops/05-related-reading-context.png'><img src='crops/05-related-reading-r2-ref.png' alt=''></a><figcaption>design reference — 05-related-reading (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>H2 font-family-serif font-size-clamp-2.5rem-4rem color-primary-dark tracking-tight line-height-1.1 margin-bottom-2</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='05-related-reading-r3'>
+<b>05-related-reading-r3</b><span class='chip code'>code</span>
+<div class='muted'>Descriptive text while article is held page can point reviewers to service pages carrying verified planning context</div>
+<div class='muted'>Paragraph text-body font-family-sans color-neutral-700 line-height-1.6 max-width-prose margin-bottom-2</div>
+<div class='pair'>
+<figure><a href='crops/05-related-reading-context.png'><img src='crops/05-related-reading-r3-ref.png' alt=''></a><figcaption>design reference — 05-related-reading (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Paragraph text-body font-family-sans color-neutral-700 line-height-1.6 max-width-prose margin-bottom-2</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='05-related-reading-r4'>
+<b>05-related-reading-r4</b><span class='chip code'>code</span>
+<div class='muted'>Link text practice owner planning forward arrow navigation</div>
+<div class='muted'>A href text-sm color-primary-dark underline-offset-2 hover:text-accent-gold active:font-weight-bold with trailing icon</div>
+<div class='pair'>
+<figure><a href='crops/05-related-reading-context.png'><img src='crops/05-related-reading-r4-ref.png' alt=''></a><figcaption>design reference — 05-related-reading (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>A href text-sm color-primary-dark underline-offset-2 hover:text-accent-gold active:font-weight-bold with trailing icon</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='05-related-reading-r5'>
+<b>05-related-reading-r5</b><span class='chip code'>code</span>
+<div class='muted'>Link text wealth management for physicians forward arrow navigation</div>
+<div class='muted'>A href text-sm color-primary-dark underline-offset-2 hover:text-accent-gold active:font-weight-bold with trailing icon</div>
+<div class='pair'>
+<figure><a href='crops/05-related-reading-context.png'><img src='crops/05-related-reading-r5-ref.png' alt=''></a><figcaption>design reference — 05-related-reading (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>A href text-sm color-primary-dark underline-offset-2 hover:text-accent-gold active:font-weight-bold with trailing icon</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='05-related-reading-r6'>
+<b>05-related-reading-r6</b><span class='chip code'>code</span>
+<div class='muted'>Link text return to insights navigation breadcrumb underline</div>
+<div class='muted'>A href text-sm color-primary-dark underline-offset-2 hover:text-accent-gold active:font-weight-bold</div>
+<div class='pair'>
+<figure><a href='crops/05-related-reading-context.png'><img src='crops/05-related-reading-r6-ref.png' alt=''></a><figcaption>design reference — 05-related-reading (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>A href text-sm color-primary-dark underline-offset-2 hover:text-accent-gold active:font-weight-bold</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='05-related-reading-r7'>
+<b>05-related-reading-r7</b><span class='chip code'>code</span>
+<div class='muted'>Link text insights navigation breadcrumb underline</div>
+<div class='muted'>A href text-sm color-primary-dark underline-offset-2 hover:text-accent-gold active:font-weight-bold</div>
+<div class='pair'>
+<figure><a href='crops/05-related-reading-context.png'><img src='crops/05-related-reading-r7-ref.png' alt=''></a><figcaption>design reference — 05-related-reading (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>A href text-sm color-primary-dark underline-offset-2 hover:text-accent-gold active:font-weight-bold</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<details><summary>NOTES.md — CSS/SVG techniques the build uses instead of images</summary><pre># insights--preparing-for-practice-sale decomposition notes
+
+Approved section frames: `/var/lib/megaclaw/workspace/worktrees/elite-site-build/_design_inputs/pages/insights--preparing-for-practice-sale/refs/`. Shipped rasters: `public/images/design/insights--preparing-for-practice-sale/elements/`.
+
+Verdicts: 26 CODE, 5 EXTRACT, 0 INPAINT. All website copy remains live HTML; no full section is baked.
+
+## 01-editorial-state-hero
+
+- **Tier 2 raster:** `elements/hero-practice-portfolio.jpg`. navy leather portfolio, valuation folder, pen, and stethoscope desk still life Owner `insights--preparing-for-practice-sale/01-editorial-state-hero`; Portfolio, folder title, pen, and stethoscope remain legible; &gt;=75% of the still life.
+- **CODE:** All headings, body copy, links, cards, checkmarks, dividers, connector lines, and surface colors use semantic HTML/CSS or concise inline SVG. Intrinsic media dimensions never control section height.
+
+## 02-verified-teaser
+
+- **Tier 2 raster:** `elements/verified-source-files.jpg`. cream source files, navy pen, and handwritten planning sheet Owner `insights--preparing-for-practice-sale/02-verified-teaser`; Source tab, pen, and planning sheet remain visible; &gt;=70% of the photographed cluster.
+- **CODE:** All headings, body copy, links, cards, checkmarks, dividers, connector lines, and surface colors use semantic HTML/CSS or concise inline SVG. Intrinsic media dimensions never control section height.
+
+## 03-manuscript-gate
+
+- **Tier 2 raster:** `elements/manuscript-gate-folder.jpg`. cream manuscript-gate string folder with review tabs and pen Owner `insights--preparing-for-practice-sale/03-manuscript-gate`; Folder label, string closure, review tabs, and pen remain visible; &gt;=80% of folder.
+- **CODE:** All headings, body copy, links, cards, checkmarks, dividers, connector lines, and surface colors use semantic HTML/CSS or concise inline SVG. Intrinsic media dimensions never control section height.
+
+## 04-source-and-review-gate
+
+- **Tier 2 raster:** `elements/source-review-files.jpg`. reference-material file box, policy tabs, and stethoscope Owner `insights--preparing-for-practice-sale/04-source-and-review-gate`; File tabs and stethoscope remain recognizable; &gt;=65% of photographed cluster.
+- **CODE:** All headings, body copy, links, cards, checkmarks, dividers, connector lines, and surface colors use semantic HTML/CSS or concise inline SVG. Intrinsic media dimensions never control section height.
+
+## 05-related-reading
+
+- **Tier 2 raster:** `elements/related-path-files.jpg`. practice-owner, wealth-planning, and insights file tabs with navy tray and pen Owner `insights--preparing-for-practice-sale/05-related-reading`; All three named physical tabs and navy tray remain visible; &gt;=75% of cluster.
+- **CODE:** All headings, body copy, links, cards, checkmarks, dividers, connector lines, and surface colors use semantic HTML/CSS or concise inline SVG. Intrinsic media dimensions never control section height.
+</pre></details>
