@@ -1,0 +1,104 @@
+{
+  "confidence": "high",
+  "businessName": "Elite Physician Wealth Planning",
+  "vertical": "financial-services",
+  "websiteUrl": "https://elitephysicianswealthplanning.com/",
+  "platform": "custom-coded Next.js landing page",
+  "targetAudience": "Physicians and medical professionals in the DC-Maryland area, including specialists, surgeons, dentists, CRNAs, nurse practitioners, physician assistants, practice owners, residents and fellows, established physicians approaching retirement, and healthcare executives.",
+  "aiImageryAllowed": true,
+  "icp": "A physician or medical professional in Charles County, Prince George's County, Waldorf, White Plains, or Washington, D.C. who wants to explore tax planning or reducing tax burden and is open to a complimentary consultation; retirement-planning interest is useful context but not a qualification gate.",
+  "productsServicesInScope": [
+    "Physician-focused tax planning",
+    "Physician-focused retirement planning",
+    "Complimentary consultation",
+    "Complimentary financial analysis",
+    "Elite Physician Wealth Blueprint coordinated planning process"
+  ],
+  "productsServicesOutOfScope": [
+    "Wealth management as a standalone campaign offer",
+    "Practice or business planning as a standalone campaign offer",
+    "Legacy planning as a standalone campaign offer",
+    "Income qualification on the landing-page form"
+  ],
+  "qualificationCriteria": [
+    "Answers Yes to: Are you looking for help with tax planning or reducing your tax burden?"
+  ],
+  "disqualificationCriteria": [
+    "Answers No to the tax-planning interest question; still deliver the lead but mark it disqualified",
+    "The written-retirement-plan answer never disqualifies"
+  ],
+  "geo": "Charles County, MD; Prince George's County, MD; Waldorf, MD; White Plains, MD; Washington, D.C.",
+  "conversionGoal": "Generate form submissions and phone calls for complimentary consultations, optimizing initially toward all leads rather than qualified-only leads.",
+  "offerPositioning": "Lead with physician-specific tax planning and the complimentary consultation, then explain retirement planning as a secondary benefit. Make the Elite Physician Wealth Blueprint the memorable mechanism: one coordinated process that works alongside the prospect's CPAs, TPAs, estate planners, attorneys, and insurance agents. Reinforce the firm's fiduciary duty factually, without promises of performance or financial outcomes.",
+  "valueProposition": "A physician-focused planning relationship that coordinates tax and retirement decisions with the other professionals already involved, helping keep the planning team aligned around the physician's priorities.",
+  "keyMessaging": "- Physician-focused tax planning is the primary reason to begin.\n- Retirement planning is addressed within a coordinated process.\n- The Elite Physician Wealth Blueprint connects CPAs, TPAs, estate planners, attorneys, and insurance professionals.\n- Fiduciary duty means client interests come before the firm's.\n- The first step is a complimentary consultation or complimentary financial analysis.",
+  "usp": "The Elite Physician Wealth Blueprint coordinates physician tax and retirement planning with the other professionals already at the table.",
+  "awarenessStage": "problem-aware",
+  "marketSophistication": 4,
+  "requiredSections": [
+    "Hero with lead form",
+    "Physician audience and trust signal",
+    "Coordination problem and solution",
+    "Elite Physician Wealth Blueprint process",
+    "Tax and retirement planning focus",
+    "Fiduciary commitment",
+    "FAQ",
+    "Final lead form and CTA"
+  ],
+  "primaryCTA": "Book a consultation",
+  "secondaryCTA": "Call 301-259-1636",
+  "trafficSource": "Meta",
+  "existingSiteAudit": "Use the approved Consult Ledger design language already present in the customer repository as the visual basis: deep navy, restrained gold, warm ivory, mist blue, Cormorant Garamond and Inter, documentary medical-professional imagery, and a continuous coordination-route motif. Preserve existing website-review routes; the ads landing page is a separate host-routed experience.",
+  "integrations": [
+    {"name": "MEGA lead submission API", "purpose": "Create Keystone lead records and preserve attribution"},
+    {"name": "MEGA optimizer", "purpose": "Site events, Meta Pixel, and GTM loading"},
+    {"name": "Google Tag Manager GTM-NH764P5L", "purpose": "Customer analytics and conversion tags"},
+    {"name": "Meta Pixel 2343207629431734", "purpose": "Meta campaign measurement"},
+    {"name": "CallTrackingMetrics", "purpose": "Universal DNI script; source phone routes to 301-259-1636"},
+    {"name": "Keystone", "purpose": "Customer CRM lead destination"}
+  ],
+  "brandVoice": "Calm, refined, physician-specific, consultative, fiduciary, precise, and conservative. Avoid hype, fear, status assumptions, and promises.",
+  "certifications": [],
+  "certifications_note": "Do not invent designations, awards, review counts, performance statistics, or credentials. Use only proof verified in public source material.",
+  "differentiators": [
+    {"claim": "The Elite Physician Wealth Blueprint provides a coordinated planning process", "source": "Triggering task input and delivered ads strategy"},
+    {"claim": "The firm works with the client's CPAs, TPAs, estate planners, attorneys, and insurance agents", "source": "Triggering task input and delivered ads strategy"},
+    {"claim": "The firm operates under a fiduciary duty and puts client interests before its own", "source": "Triggering task input and delivered ads strategy"},
+    {"claim": "The planning focus is specific to physicians and medical professionals", "source": "Customer website and strategy"}
+  ],
+  "messagingGuardrails": [
+    {"rule": "Use neutral calls to action such as Book a consultation, Talk to an advisor, or Get started", "type": "must"},
+    {"rule": "State the coordinated relationship accurately: the firm works with outside CPAs, TPAs, estate planners, attorneys, and insurance agents; do not imply it holds all of those credentials", "type": "must"},
+    {"rule": "Never reference a visitor's income level, debt, financial hardship, or financial distress", "type": "must_not"},
+    {"rule": "Never frame the service as personalized to the visitor's financial situation", "type": "must_not"},
+    {"rule": "Never guarantee returns, tax savings, lead outcomes, or any specific performance", "type": "must_not"},
+    {"rule": "Never include the $100,000 income-threshold question on the landing-page form", "type": "must_not"},
+    {"rule": "The written-retirement-plan question is context only and must never affect qualification", "type": "must"}
+  ],
+  "designDos": [
+    "Use the approved Consult Ledger direction already in the repository",
+    "Use deep navy #0B1F3A, restrained gold #C8A65A, warm ivory #F6F2E8, white, and mist blue #DCE8F2",
+    "Use Cormorant Garamond for editorial display type and Inter for body and utility copy",
+    "At least 50% of people imagery must feature African American physicians or medical professionals",
+    "Use professional, realistic, non-artificial medical and planning imagery",
+    "Use the continuous restrained gold coordination-route motif to make the all-in-one process visible"
+  ],
+  "designDonts": [
+    "No generic purple-blue SaaS gradients",
+    "No coins, currency piles, handshakes, market charts, mansions, luxury cars, or gold seal imagery",
+    "No generic centered hero followed by three equal icon cards",
+    "No obviously artificial faces, damaged hands, blurred edges, or fabricated text in imagery",
+    "No broad gold fills or black-and-gold casino styling",
+    "No navigation menu or outbound website links"
+  ],
+  "explicitCustomerPromises": [
+    "Build one landing page at book.elitephysicianswealthplanning.com",
+    "At least 50% of imagery features African American physicians and medical professionals",
+    "Use form submission and phone call as the two conversion actions",
+    "Deliver form notifications to info@fiscalvisionfinancial.com and create Keystone lead records",
+    "The tax-planning interest question qualifies Yes and disqualifies No",
+    "The written-retirement-plan question never disqualifies",
+    "Exclude the income-threshold question from the landing-page form"
+  ],
+  "competitors": []
+}

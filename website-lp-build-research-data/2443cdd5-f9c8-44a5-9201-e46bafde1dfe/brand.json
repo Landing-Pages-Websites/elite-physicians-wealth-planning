@@ -1,0 +1,73 @@
+{
+  "url": "https://elitephysicianswealthplanning.com/",
+  "scannedAt": "2026-09-15T19:07:32.327375+00:00",
+  "engine": "curl + approved repository design contracts",
+  "builder": "custom Next.js",
+  "needs_palette_review": false,
+  "palette_review_reasons": [
+    "Auto-extracted GoDaddy placeholder colors were rejected. Palette manually verified against the approved Consult Ledger palette contract and rendered references in the customer repository."
+  ],
+  "theme": "mixed",
+  "colors": {
+    "primary": "#0B1F3A",
+    "secondary": "#F6F2E8",
+    "accent": "#C8A65A",
+    "neutral": ["#FFFFFF", "#38373E", "#DCE8F2"],
+    "all": ["#0B1F3A", "#F6F2E8", "#C8A65A", "#FFFFFF", "#38373E", "#DCE8F2"]
+  },
+  "fonts": {
+    "display": "Cormorant Garamond",
+    "body": "Inter",
+    "all": ["Cormorant Garamond", "Inter"]
+  },
+  "logo_url": "",
+  "favicon_url": "",
+  "images": [
+    {
+      "url": "/images/design/shared/hero-founder.png",
+      "alt": "Michael A. Epps, financial planner",
+      "usage": "founder portrait and fiduciary section",
+      "subject": "hero-grade-photo",
+      "subject_reason": "Real client-approved portrait already present in the repository."
+    },
+    {
+      "url": "/images/design/a/06-white-coat-paths/physicians-specialists-consultation.jpg",
+      "alt": "Physician in a consultation setting",
+      "usage": "hero or physician-audience section",
+      "subject": "hero-grade-photo",
+      "subject_reason": "Approved repository image showing the target medical audience."
+    },
+    {
+      "url": "/images/design/a/06-white-coat-paths/dental-office-planning.jpg",
+      "alt": "Dental professional in a clinical office",
+      "usage": "audience mosaic",
+      "subject": "hero-grade-photo",
+      "subject_reason": "Approved repository image showing a medical professional."
+    },
+    {
+      "url": "/images/design/a/06-white-coat-paths/surgeons-operating-room.jpg",
+      "alt": "Surgeon preparing in an operating room",
+      "usage": "audience mosaic",
+      "subject": "hero-grade-photo",
+      "subject_reason": "Approved repository image showing a medical professional."
+    },
+    {
+      "url": "/images/design/a/06-white-coat-paths/practice-owner-meeting.jpg",
+      "alt": "Practice owners reviewing plans at a desk",
+      "usage": "coordinated planning section",
+      "subject": "hero-grade-photo",
+      "subject_reason": "Approved repository image supporting the coordinated-planning narrative."
+    }
+  ],
+  "ctas": ["Book a consultation", "Talk to an advisor"],
+  "navItems": [],
+  "toneWords": ["refined", "consultative", "physician-specific", "fiduciary", "precise", "calm"],
+  "confidence": "high",
+  "hero_photo_available": true,
+  "asset_classification": {
+    "classified": 5,
+    "hero_grade": 5,
+    "by_subject": {"hero-grade-photo": 5},
+    "warning": "Use physician or medical-professional imagery for the hero offering match; do not use the empty office image as the hero."
+  }
+}

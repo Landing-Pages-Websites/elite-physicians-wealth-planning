@@ -1,0 +1,146 @@
+{
+  "project": "elite-physicians-wealth-planning",
+  "content_inventory": {
+    "hero": {
+      "copy_source": "approved-positioning",
+      "copy": "Lead with the approved tax-first physician positioning and complimentary consultation; support with coordinated retirement planning and fiduciary duty.",
+      "imagery": "African American physician reviewing a financial plan with an advisor (LP-specific hero asset)",
+      "image_path": "public/images/landing/black-physician-planning.png",
+      "ctas": ["Book a consultation (hero lead form)", "Call 301-259-1636"]
+    },
+    "trust_bar": {
+      "copy_source": "approved-facts",
+      "signals": ["Physician-focused", "Coordinated strategy", "Fiduciary duty"],
+      "copy": "Use the sourced facts Physician-focused, Coordinated strategy, and Fiduciary duty as identity signals, not numbers.",
+      "cta": "Book a consultation"
+    },
+    "coordination_gap": {
+      "copy_source": "approved-problem-solution",
+      "copy": "Explain that physicians may work separately with a CPA, TPA, attorney, estate planner, insurance professional and advisor; the firm brings the strategy together without claiming to perform every service.",
+      "imagery": "Practice-owner meeting or documentary planning scene",
+      "image_path": "public/images/design/a/06-white-coat-paths/practice-owner-meeting.jpg",
+      "ctas": ["Talk to an advisor", "Book a consultation"]
+    },
+    "wealth_blueprint": {
+      "copy_source": "approved-process",
+      "copy": "Use a concise connected Discover, Assess, Strategize, Implement, Optimize, Review progression grounded in approved site content.",
+      "steps": ["Discover", "Assess", "Strategize", "Implement", "Optimize", "Review"],
+      "imagery": "Six-step continuous gold route motif (no photo hero); asymmetric process ledger",
+      "ctas": ["Book a consultation", "Call (301) 259-1636"]
+    },
+    "planning_focus": {
+      "copy_source": "approved-services",
+      "copy": "Tax planning is primary; retirement planning is secondary. Explain both conservatively, with no income, hardship, savings, or performance claim.",
+      "services": ["Tax planning", "Retirement planning"],
+      "imagery": "Two or more documentary medical-professional images; maintain at least 50% African American representation page-wide",
+      "image_path": "public/images/design/a/06-white-coat-paths/dental-office-planning.jpg",
+      "ctas": ["Get started", "Talk to an advisor"]
+    },
+    "fiduciary_planner": {
+      "copy_source": "approved-credentials",
+      "name": "Michael A. Epps",
+      "credentials": ["ChFC®", "RICP®"],
+      "copy": "Feature Michael A. Epps, ChFC®, RICP® and the task-approved fiduciary-duty statement; describe coordination with appropriate outside professionals.",
+      "fiduciary_statement": "This is educational information. Michael is a fiduciary for fee-only advisory services and maintains professional standards of care and conduct in all engagements.",
+      "image_path": "public/images/design/shared/hero-founder.png",
+      "ctas": ["Book a consultation", "Call 301-259-1636"]
+    },
+    "faq": {
+      "copy_source": "approved-qa",
+      "questions": [
+        {
+          "q": "What happens in a complimentary consultation?",
+          "a": "We'll learn about your practice, planning goals, and current advisory relationships. This is a discovery conversation—no pressure, no sales pitch. You'll understand what the Elite Physician Wealth Blueprint can offer and whether it's the right fit."
+        },
+        {
+          "q": "How does coordination work with my existing advisors?",
+          "a": "We work alongside your CPA, retirement plan advisor, estate planner, attorney, and insurance professional—not instead of them. The blueprint identifies where strategies need alignment and surfaces gaps that your team should address together."
+        },
+        {
+          "q": "How does the Elite Physician Wealth Blueprint process work?",
+          "a": "We follow the six steps: Discover your full picture, Assess tax and retirement readiness, Strategize a coordinated approach, Implement with clear next steps, Optimize as circumstances change, and Review regularly to maintain alignment."
+        },
+        {
+          "q": "Is the written retirement plan question used to qualify me?",
+          "a": "No. The retirement plan question is context-only and helps us understand where you are in your planning journey. It never determines whether we can work with you—we focus on tax planning and coordinated strategy for all physicians."
+        }
+      ],
+      "ctas": ["Talk to an advisor", "Book a consultation"]
+    },
+    "form": {
+      "copy_source": "approved-cta",
+      "copy": "Repeat the complimentary consultation offer with neutral copy. Ask exactly the four contact fields, tax-planning qualifier, and context-only written-retirement-plan question.",
+      "fields": [
+        "firstName",
+        "lastName",
+        "email",
+        "phone",
+        "taxPlanningInterest",
+        "writtenRetirementPlan"
+      ],
+      "privacy_reassurance": "We respect your privacy. Your information will never be shared or sold.",
+      "disclaimer": "This is educational information provided for informational purposes only and should not be construed as specific investment or tax advice. Your situation is unique and may warrant professional guidance tailored to your circumstances. Consult with a qualified financial, tax, or legal professional before making any decisions.",
+      "ctas": ["Book a consultation", "Talk to an advisor"]
+    }
+  },
+  "brand_assets": {
+    "images": {
+      "hero_physician": "public/images/landing/black-physician-planning.png",
+      "dental_professional": "public/images/design/a/06-white-coat-paths/dental-office-planning.jpg",
+      "surgeon": "public/images/design/a/06-white-coat-paths/surgeons-operating-room.jpg",
+      "practice_meeting": "public/images/design/a/06-white-coat-paths/practice-owner-meeting.jpg",
+      "founder_portrait": "public/images/design/shared/hero-founder.png"
+    },
+    "fonts": {
+      "display": "Cormorant Garamond",
+      "body": "Inter"
+    },
+    "colors": {
+      "primary": "#0B1F3A",
+      "secondary": "#F6F2E8",
+      "accent": "#C8A65A"
+    }
+  },
+  "messaging_guardrails": [
+    {
+      "rule": "Use neutral calls to action such as Book a consultation, Talk to an advisor, or Get started",
+      "enforced": true
+    },
+    {
+      "rule": "State the coordinated relationship accurately: the firm works with outside CPAs, TPAs, estate planners, attorneys, and insurance agents; do not imply it holds all of those credentials",
+      "enforced": true
+    },
+    {
+      "rule": "Never reference a visitor's income level, debt, financial hardship, or financial distress",
+      "enforced": true
+    },
+    {
+      "rule": "Never frame the service as personalized to the visitor's financial situation",
+      "enforced": true
+    },
+    {
+      "rule": "Never guarantee returns, tax savings, lead outcomes, or any specific performance",
+      "enforced": true
+    },
+    {
+      "rule": "Never include the $100,000 income-threshold question on the landing-page form",
+      "enforced": true
+    },
+    {
+      "rule": "The written-retirement-plan question is context only and must never affect qualification",
+      "enforced": true
+    }
+  ],
+  "verification": {
+    "section_anchors": ["hero", "trust-bar", "coordination-gap", "wealth-blueprint", "planning-focus", "fiduciary-planner", "faq", "form"],
+    "form_field_count": 6,
+    "form_fields": ["firstName", "lastName", "email", "phone", "taxPlanningInterest", "writtenRetirementPlan"],
+    "qualifier_field": "taxPlanningInterest",
+    "context_only_field": "writtenRetirementPlan",
+    "cta_frequency": "dual CTA on every section + floating form-only CTA",
+    "phone_number": "301-259-1636",
+    "email": "info@fiscalvisionfinancial.com",
+    "real_portrait_required": "Michael A. Epps",
+    "african_american_representation": "minimum 50% of people imagery"
+  }
+}
