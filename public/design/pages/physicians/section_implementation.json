@@ -1,0 +1,193 @@
+{
+  "version": 1,
+  "slug": "physicians",
+  "route": "/physicians",
+  "sections": [
+    {
+      "frame": "01-index-hero",
+      "implementation_kind": "bespoke",
+      "implementation_owner": "src/components/pages/physicians/index-hero.tsx",
+      "content_source": "section_manifest.json#01-index-hero",
+      "asset_roles": [
+        "Who We Help editorial index image"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "Approved manifest fields (eyebrow, headline, body, primary_cta) render as live HTML text, led by \"Start with your physician career stage, then move into the planning discipline that needs attention.\"."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "Dedicated asset renders the declared subject \"Who We Help editorial index image\" with the approved \"wide cinematic planning-room composition\" crop and treatment."
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "Frame composition preserved: Near-full-frame dark study canvas (section-owned background, veil holds AA under the left copy); live 'Who We Help' eyebrow, left-anchored display headline with the frame's gold underline segment, body, gold CTA to…."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved navy/gold/ivory language retained on the #0B1F3A band per the manifest edge contract; Cormorant Garamond display over Inter body."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "390x844 recomposition per manifest: Preserve the headline and primary action before the image; use a 4:5 or 3:2 crop centered on the declared subject/focal point, never a blurred filler panel; stack overlays into live blocks, keep at least 70% of the…"
+        }
+      },
+      "ref": "_design_inputs/pages/physicians/refs/01-index-hero.png",
+      "owners": [
+        "src/app/(site)/physicians/page.tsx",
+        "src/app/(site)/physicians/physicians.css",
+        "src/components/pages/physicians/index-hero.tsx"
+      ],
+      "notes": "Near-full-frame dark study canvas (section-owned background, veil holds AA under the left copy); live 'Who We Help' eyebrow, left-anchored display headline with the frame's gold underline segment, body, gold CTA to /schedule; mist fade seam into the taxonomy strip."
+    },
+    {
+      "frame": "02-taxonomy-rail",
+      "implementation_kind": "bespoke",
+      "implementation_owner": "src/components/pages/physicians/taxonomy-rail.tsx",
+      "content_source": "section_manifest.json#02-taxonomy-rail",
+      "asset_roles": [
+        "code-only live semantic content"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "Approved manifest fields (headline, items) render as live HTML text, led by \"Browse by decision type.\"."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "Code-native section per the manifest image_treatment (\"1536x512 strip with live topic labels\"); live text and drawn elements only, no raster asset required."
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "Frame composition preserved: Pale clinical strip: left heading, five career-stage decision types distributed along one gold rail with gold dot markers, desk-vignette crop at the upper-right edge; kept as static orientation content per the…."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved navy/gold/ivory language retained on the #DCE8F2 band per the manifest edge contract; Cormorant Garamond display over Inter body."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "390x844 recomposition per manifest: Convert multi-column ledgers or tables into full-width rule-separated rows in source order; preserve all decision labels and contextual links, move any documentary crop between logical groups, and use only one slim gold…"
+        }
+      },
+      "ref": "_design_inputs/pages/physicians/refs/02-taxonomy-rail.png",
+      "owners": [
+        "src/app/(site)/physicians/physicians.css",
+        "src/components/pages/physicians/taxonomy-rail.tsx"
+      ],
+      "notes": "Pale clinical strip: left heading, five career-stage decision types distributed along one gold rail with gold dot markers, desk-vignette crop at the upper-right edge; kept as static orientation content per the manifest's static_content semantics because the stages do not map one-to-one onto routes; mobile converts to rule-separated rows."
+    },
+    {
+      "frame": "03-featured-path",
+      "implementation_kind": "bespoke",
+      "implementation_owner": "src/components/pages/physicians/featured-path.tsx",
+      "content_source": "section_manifest.json#03-featured-path",
+      "asset_roles": [
+        "Who We Help featured route spread"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "Approved manifest fields (headline, body, links) render as live HTML text, led by \"Start where the pressure is clearest.\"."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "Dedicated asset renders the declared subject \"Who We Help featured route spread\" with the approved \"asymmetric editorial spread with one large photo and live route labels\" crop and treatment."
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "Frame composition preserved: Two-pole ivory spread: left editorial column (headline, gold rule, body rewritten from the manifest's spec phrasing into visitor-facing orientation copy, navy 'Open featured path' card showing its…."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved navy/gold/ivory language retained on the #F6F2E8 band per the manifest edge contract; Cormorant Garamond display over Inter body."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "390x844 recomposition per manifest: Convert the desktop diagram into a vertical reading rail in source order; keep every label and connector endpoint, place supporting imagery after the decisive step, avoid horizontal scrolling, and redraw the gold…"
+        }
+      },
+      "ref": "_design_inputs/pages/physicians/refs/03-featured-path.png",
+      "owners": [
+        "src/app/(site)/physicians/physicians.css",
+        "src/components/pages/physicians/featured-path.tsx"
+      ],
+      "notes": "Two-pole ivory spread: left editorial column (headline, gold rule, body rewritten from the manifest's spec phrasing into visitor-facing orientation copy, navy 'Open featured path' card showing its /physicians-specialists route), the tall consultation photograph as the central mass, and the right path sidebar with three ringed-icon route entries (/physicians-specialists, /retirement-planning-for-physicians, /practice-owner-planning); the ref's decorative 'orientation' eyebrow is omitted because it is not manifest copy."
+    },
+    {
+      "frame": "04-topic-ledger",
+      "implementation_kind": "bespoke",
+      "implementation_owner": "src/components/pages/physicians/topic-ledger.tsx",
+      "content_source": "section_manifest.json#04-topic-ledger",
+      "asset_roles": [
+        "Who We Help route ledger"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "Approved manifest fields (headline, body, links) render as live HTML text, led by \"Compare the paths before you choose.\"."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "Code-native section per the manifest image_treatment (\"mostly live-text ledger with small editorial tabs\"); live text and drawn elements only, no raster asset required."
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "Frame composition preserved: White ledger: heading/body, five gold-dot rows showing each route path with its registry label (all live links: /physicians-specialists, /retirement-planning-for-physicians, /practice-owner-planning…."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved navy/gold/ivory language retained on the #FFFFFF band per the manifest edge contract; Cormorant Garamond display over Inter body."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "390x844 recomposition per manifest: Convert multi-column ledgers or tables into full-width rule-separated rows in source order; preserve all decision labels and contextual links, move any documentary crop between logical groups, and use only one slim gold…"
+        }
+      },
+      "ref": "_design_inputs/pages/physicians/refs/04-topic-ledger.png",
+      "owners": [
+        "src/app/(site)/physicians/physicians.css",
+        "src/components/pages/physicians/topic-ledger.tsx"
+      ],
+      "notes": "White ledger: heading/body, five gold-dot rows showing each route path with its registry label (all live links: /physicians-specialists, /retirement-planning-for-physicians, /practice-owner-planning, /tax-planning-for-physicians, /checkup), the marble still-life as the right counterweight, and the navy bottom band carrying the live 'Open first related page → /physicians-specialists' action."
+    },
+    {
+      "frame": "05-next-best-step",
+      "implementation_kind": "bespoke",
+      "implementation_owner": "src/components/pages/physicians/next-best-step.tsx",
+      "content_source": "section_manifest.json#05-next-best-step",
+      "asset_roles": [
+        "private advisory office closing field"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "Approved manifest fields (headline, body, primary_cta, secondary_cta, boundary) render as live HTML text, led by \"Choose the next step that matches your readiness.\"."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "Dedicated asset renders the declared subject \"private advisory office closing field\" with the approved \"wide navy close, no faces\" crop and treatment."
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "Frame composition preserved: Closing office canvas (section-owned full-bleed with scrim), centered heading, body with the 'resource path' phrase linked to /resources per the manifest's text_link outcome, gold fork drawn across the full width of the…."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "PASS with documented deliberate adaptation preserving the approved semantic gate: the ref's internal availability note under the guide card is not rendered because it reads as production jargon; the guide CTA routes to the gated guide page, which owns the truthful availability state"
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "390x844 recomposition per manifest: Stack the primary content group in narrative order while preserving asymmetric emphasis through offset margins and varied spacing; crop imagery around its declared focal point, keep all live text and links, and simplify…"
+        }
+      },
+      "ref": "_design_inputs/pages/physicians/refs/05-next-best-step.png",
+      "owners": [
+        "src/app/(site)/physicians/physicians.css",
+        "src/components/pages/physicians/next-best-step.tsx"
+      ],
+      "notes": "Closing office canvas (section-owned full-bleed with scrim), centered heading, body with the 'resource path' phrase linked to /resources per the manifest's text_link outcome, gold fork drawn across the full width of the two equal choice columns (preserveAspectRatio none, termini at the column centers) so each branch descends onto its icon ring — the ringed strategy-call choice (gold button → /schedule) and the ringed guide choice (bordered button → /physician-tax-retirement-guide); boundary line closes the page and the gold line ends on a node."
+    }
+  ]
+}

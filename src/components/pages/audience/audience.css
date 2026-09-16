@@ -1,0 +1,539 @@
+/*
+ * Audience/career family — shared section surfaces.
+ * Six-section grammar: role-context (navy canvas) → decision-patterns (ivory
+ * ledger) → career-scenario (mist spread) → coordination-map (white) →
+ * questions-before-call (ivory strip) → related-paths (navy close).
+ * All classes carry the `aud-` prefix. Recipes follow site.css conventions:
+ * CSS sizes every media slot; rasters never set section height.
+ */
+
+/* ---------- 01 role-context: navy image-canvas hero ---------- */
+
+.aud-hero {
+  background: linear-gradient(
+    180deg,
+    var(--color-ink-deep) 0%,
+    var(--color-ink) 68%,
+    var(--color-ink-deep) 100%
+  );
+}
+
+/* The scene column. The photograph is cropped by this slot; a left-running
+   navy veil keeps the seam to the live copy field soft without a generic
+   full-frame fade. Position comes from the layout (absolute column on
+   desktop, in-flow block on mobile) — never set here. */
+.aud-hero-media {
+  overflow: hidden;
+}
+
+.aud-hero-media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    92deg,
+    var(--color-ink-deep) 0%,
+    rgba(6, 21, 39, 0.55) 14%,
+    rgba(6, 21, 39, 0) 38%
+  );
+}
+
+@media (max-width: 1023px) {
+  .aud-hero-media::after {
+    background: linear-gradient(
+      180deg,
+      var(--color-ink-deep) 0%,
+      rgba(6, 21, 39, 0.4) 12%,
+      rgba(6, 21, 39, 0) 32%,
+      rgba(6, 21, 39, 0) 82%,
+      var(--color-ink-deep) 100%
+    );
+  }
+}
+
+/* Live hero side panels (never raster): the CRNAs ivory decision ledger and
+   the execs navy compensation table. */
+.aud-hero-panel-light {
+  background: var(--color-ivory);
+  border: 1px solid rgba(11, 31, 58, 0.18);
+  box-shadow: 0 26px 60px -28px rgba(0, 0, 0, 0.85);
+}
+
+.aud-hero-panel-dark {
+  background: linear-gradient(
+    170deg,
+    var(--color-ink-lift) 0%,
+    var(--color-ink) 100%
+  );
+  border: 1px solid rgba(200, 166, 90, 0.35);
+  box-shadow: 0 26px 60px -28px rgba(0, 0, 0, 0.85);
+}
+
+/* Ivory boundary plate seated on the seam sweep (execs ref). */
+.aud-hero-boundary-plate {
+  background: var(--color-ivory);
+  box-shadow: 0 14px 34px -20px rgba(0, 0, 0, 0.7);
+}
+
+/* Ivory curved seam resolving the hero canvas into the decision ledger. */
+.aud-hero-sweep {
+  height: 72px;
+  background: var(--color-ivory);
+  border-top-left-radius: 100% 175%;
+}
+
+/* ---------- 02 decision-patterns: quiet ivory ledger ---------- */
+
+.aud-ledger {
+  background: linear-gradient(
+    180deg,
+    var(--color-ivory) 0%,
+    var(--color-ivory) 78%,
+    var(--color-mist) 100%
+  );
+}
+
+/* Counterweight photograph. Soft fade only at the asset boundary the
+   extraction plan allows; the focal object stays crisp. */
+.aud-ledger-photo {
+  position: relative;
+  overflow: hidden;
+}
+
+.aud-ledger-photo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    338deg,
+    rgba(246, 242, 232, 0) 0%,
+    rgba(246, 242, 232, 0) 72%,
+    var(--color-ivory) 100%
+  );
+}
+
+/* Staircase ledger (dentists ref): a gold elbow joins each row's diamond to
+   the previous step, desktop only — mobile keeps the plain rule rows. */
+.aud-ledger-step {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .aud-ledger-step {
+    display: block;
+    position: absolute;
+    left: -1.5rem;
+    top: -1.6rem;
+    bottom: 50%;
+    width: 1.4rem;
+    border-left: 1px solid rgba(200, 166, 90, 0.75);
+    border-bottom: 1px solid rgba(200, 166, 90, 0.75);
+  }
+}
+
+/* ---------- 03 career-scenario: mist hybrid spread ---------- */
+
+.aud-scenario {
+  background: linear-gradient(
+    180deg,
+    var(--color-mist) 0%,
+    var(--color-mist-deep) 100%
+  );
+}
+
+/* Translucent decision chips / floating panels over the mist field. */
+.aud-scenario-chip {
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(11, 31, 58, 0.14);
+  backdrop-filter: blur(3px);
+  box-shadow: 0 14px 34px -18px rgba(4, 14, 27, 0.45);
+}
+
+.aud-scenario-panel {
+  background: linear-gradient(
+    168deg,
+    var(--color-ink) 0%,
+    var(--color-ink-deep) 100%
+  );
+  box-shadow: 0 24px 56px -24px rgba(4, 14, 27, 0.65);
+}
+
+/* Translucent document sheet behind the path chips ("paths" variant) — the
+   ref's document overlay, rebuilt as a live surface. */
+.aud-scenario-sheet {
+  background: rgba(255, 255, 255, 0.34);
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(2px);
+  box-shadow: 0 18px 44px -26px rgba(4, 14, 27, 0.4);
+}
+
+/* Live checklist paper (surgeons "board" variant). */
+.aud-scenario-paper {
+  background: var(--color-ivory-warm);
+  border: 1px solid rgba(56, 55, 62, 0.14);
+  box-shadow: 0 20px 48px -22px rgba(4, 14, 27, 0.5);
+}
+
+/* Execs canvas spread: the section-owned scene fills the field; a light
+   mist-to-white veil keeps the live copy corner readable. The approved raster
+   carries its own baked gold gesture, so no live route overlays it. */
+.aud-scenario-canvas {
+  overflow: hidden;
+}
+
+.aud-scenario-canvas img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.aud-scenario-canvas::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    76deg,
+    var(--color-mist) 0%,
+    rgba(220, 232, 242, 0.82) 26%,
+    rgba(220, 232, 242, 0.2) 55%,
+    rgba(220, 232, 242, 0) 100%
+  );
+}
+
+@media (max-width: 1023px) {
+  .aud-scenario-canvas::after {
+    background: linear-gradient(
+      180deg,
+      rgba(220, 232, 242, 0.88) 0%,
+      rgba(220, 232, 242, 0.72) 60%,
+      rgba(220, 232, 242, 0.4) 100%
+    );
+  }
+}
+
+/* Drawn decision-calendar sheet (live SVG; the ref's photographic calendar
+   overlay did not ship as an extracted asset). */
+.aud-scenario-calendar {
+  transform: rotate(3deg);
+  filter: drop-shadow(0 24px 36px rgba(4, 14, 27, 0.35));
+}
+
+/* ---------- 04 coordination-map: white diagram field ---------- */
+
+.aud-map {
+  background: #ffffff;
+}
+
+.aud-map-vignette {
+  background: #ffffff;
+  border: 1px solid rgba(11, 31, 58, 0.22);
+  box-shadow: 0 12px 28px -18px rgba(4, 14, 27, 0.35);
+}
+
+/* Drawn floor-plan cell (surgeons variant): faint blueprint grid behind the
+   navy line work, as the ref's plan panels carry. */
+.aud-map-plan {
+  background-color: #ffffff;
+  background-image:
+    linear-gradient(rgba(11, 31, 58, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(11, 31, 58, 0.05) 1px, transparent 1px);
+  background-size: 14px 14px;
+  border: 1px solid rgba(11, 31, 58, 0.3);
+}
+
+.aud-map-hub {
+  background: #ffffff;
+  border: 1.5px solid var(--color-gold);
+  box-shadow: 0 10px 26px -14px rgba(4, 14, 27, 0.3);
+}
+
+/* Floor-plan constellation (surgeons variant). Mobile keeps a single vertical
+   rail in source order; at lg the named areas place the manifest-ordered DOM
+   around the central hub without reordering it. */
+@media (min-width: 1024px) {
+  .aud-plan-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr auto 1fr 1fr;
+    grid-template-areas:
+      ". tax tax tax ."
+      "wealth wealth hub retirement retirement"
+      "practice practice . legacy legacy";
+    align-items: center;
+    column-gap: 1.5rem;
+    row-gap: 3rem;
+  }
+  .aud-plan-hub {
+    grid-area: hub;
+    justify-self: center;
+  }
+  .aud-plan-tax {
+    grid-area: tax;
+    justify-self: center;
+  }
+  .aud-plan-wealth {
+    grid-area: wealth;
+    justify-self: end;
+  }
+  .aud-plan-retirement {
+    grid-area: retirement;
+    justify-self: start;
+  }
+  .aud-plan-practice {
+    grid-area: practice;
+    justify-self: center;
+  }
+  .aud-plan-legacy {
+    grid-area: legacy;
+    justify-self: center;
+  }
+}
+
+/* Edge-touching architectural plates (CRNAs / execs refs): each fragment
+   intentionally exits its viewport edge; a soft white fade seats it on the
+   quiet field. */
+.aud-map-edge {
+  overflow: hidden;
+}
+
+.aud-map-edge::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.35) 0%,
+    rgba(255, 255, 255, 0) 30%,
+    rgba(255, 255, 255, 0) 70%,
+    rgba(255, 255, 255, 0.35) 100%
+  );
+}
+
+/* Dentists vignette loop: named areas scatter the manifest-ordered DOM
+   around the looping route without reordering it. */
+@media (min-width: 1024px) {
+  .aud-loop-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr 1fr;
+    grid-template-areas:
+      "retirement tax wealth"
+      "retirement practice legacy";
+    align-items: center;
+    column-gap: 2rem;
+    row-gap: 3.5rem;
+  }
+  .aud-loop-tax {
+    grid-area: tax;
+    justify-self: center;
+  }
+  .aud-loop-wealth {
+    grid-area: wealth;
+    justify-self: end;
+    margin-top: 2rem;
+  }
+  .aud-loop-retirement {
+    grid-area: retirement;
+    justify-self: start;
+  }
+  .aud-loop-practice {
+    grid-area: practice;
+    justify-self: center;
+    margin-top: 1.5rem;
+  }
+  .aud-loop-legacy {
+    grid-area: legacy;
+    justify-self: end;
+  }
+}
+
+/* Execs hub-spokes constellation: hub centred, manifest-ordered labels
+   placed around it by named areas. Gaps clear the hub's fixed 80px spoke
+   reach so no label collides with a spoke or its terminal dot. */
+@media (min-width: 1024px) {
+  .aud-hub-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr auto 1fr 1fr;
+    grid-template-areas:
+      ". . tax . ."
+      "wealth wealth hub retirement retirement"
+      ". practice . legacy .";
+    align-items: center;
+    column-gap: 3.25rem;
+    row-gap: 2.75rem;
+    justify-items: center;
+  }
+  .aud-hub-center {
+    grid-area: hub;
+  }
+  .aud-hub-tax {
+    grid-area: tax;
+    text-align: center;
+  }
+  .aud-hub-wealth {
+    grid-area: wealth;
+    justify-self: end;
+    text-align: right;
+  }
+  .aud-hub-retirement {
+    grid-area: retirement;
+    justify-self: start;
+  }
+  .aud-hub-practice {
+    grid-area: practice;
+    text-align: center;
+  }
+  .aud-hub-legacy {
+    grid-area: legacy;
+    text-align: center;
+  }
+}
+
+/* ---------- 05 questions-before-call: ivory strip ---------- */
+
+.aud-questions {
+  background: var(--color-ivory);
+}
+
+.aud-question-card {
+  background: #ffffff;
+  border: 1px solid rgba(56, 55, 62, 0.12);
+  box-shadow: 0 10px 24px -16px rgba(4, 14, 27, 0.25);
+}
+
+/* Navy exit band carrying the seam into the closing section. */
+.aud-questions-exit {
+  background: var(--color-ink);
+}
+
+/* Dentists ref: the three questions ride a gold rail on a navy band. */
+.aud-questions-band {
+  background: linear-gradient(
+    180deg,
+    var(--color-ink) 0%,
+    var(--color-ink-deep) 100%
+  );
+}
+
+/* ---------- 06 related-paths: navy close over quiet office ---------- */
+
+.aud-close {
+  background: var(--color-ink-deep);
+}
+
+.aud-close-media {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.aud-close-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Central field stays quiet for the live route system. */
+.aud-close-media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(
+      92% 78% at 50% 46%,
+      rgba(6, 21, 39, 0.78) 0%,
+      rgba(6, 21, 39, 0.52) 55%,
+      rgba(6, 21, 39, 0.18) 100%
+    ),
+    linear-gradient(180deg, rgba(4, 16, 31, 0.42), rgba(4, 16, 31, 0.58));
+}
+
+.aud-route-card {
+  background: rgba(11, 31, 58, 0.55);
+  border: 1px solid rgba(200, 166, 90, 0.32);
+  backdrop-filter: blur(2px);
+  transition:
+    border-color 0.18s var(--ease-out),
+    background-color 0.18s var(--ease-out),
+    transform 0.18s var(--ease-out);
+}
+
+.aud-route-card:hover {
+  border-color: var(--color-gold);
+  background: rgba(11, 31, 58, 0.78);
+  transform: translateY(-2px);
+}
+
+/* Live navy icon tab standing in for the refs' tiny image tabs (every card
+   region is CODE per the extraction plans). */
+.aud-route-tab {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  flex-shrink: 0;
+  background: rgba(6, 21, 39, 0.85);
+  border: 1px solid rgba(200, 166, 90, 0.4);
+}
+
+/* Labelled route group panel (CRNAs two-path close). */
+.aud-route-panel {
+  background: rgba(11, 31, 58, 0.45);
+  border: 1px solid rgba(200, 166, 90, 0.3);
+  backdrop-filter: blur(2px);
+}
+
+.aud-route-panel .aud-route-card {
+  border-color: transparent;
+  background: transparent;
+  backdrop-filter: none;
+  padding-inline: 0;
+}
+
+.aud-route-panel .aud-route-card:hover {
+  border-color: transparent;
+  background: rgba(11, 31, 58, 0.6);
+}
+
+/* Dentists ladder close: one gold stem with a rung into each route card. */
+.aud-route-ladder::before {
+  content: "";
+  position: absolute;
+  top: 0.5rem;
+  bottom: 0.5rem;
+  left: 0;
+  border-left: 1px solid rgba(200, 166, 90, 0.7);
+}
+
+.aud-route-rung::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -1.5rem;
+  width: 1.5rem;
+  border-top: 1px solid rgba(200, 166, 90, 0.7);
+}
+
+/* Declared edge-touching media: pulls a shell child to the true viewport
+   edge (shell margin + shell padding), desktop only. */
+@media (min-width: 1024px) {
+  .aud-bleed-right {
+    margin-right: calc((min(100vw, var(--page-max)) - 100vw) / 2 - var(--page-pad));
+  }
+  .aud-bleed-left {
+    margin-left: calc((min(100vw, var(--page-max)) - 100vw) / 2 - var(--page-pad));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .aud-route-card,
+  .aud-route-card:hover {
+    transform: none;
+  }
+}

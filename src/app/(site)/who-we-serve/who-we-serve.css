@@ -1,0 +1,86 @@
+/*
+ * /who-we-serve — audience-selector atlas, page-scoped recipes.
+ * Photo plates, veils and seam stubs only; all copy and controls stay live.
+ */
+
+/* ---------- shared page-local coordination seam ---------- */
+.wws-seam-top::before,
+.wws-seam-bottom::after {
+  content: "";
+  position: absolute;
+  left: clamp(1.25rem, 12%, 11rem);
+  width: 1px;
+  height: 3.5rem;
+  background: var(--color-gold);
+  opacity: 0.8;
+  pointer-events: none;
+}
+.wws-seam-top::before {
+  top: 0;
+}
+.wws-seam-bottom::after {
+  bottom: 0;
+}
+
+/* ---------- 01 index-hero: dark consult-room canvas ---------- */
+.wws-hero {
+  background: var(--color-ink-deep);
+}
+.wws-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("/images/design/who-we-serve/elements/index-hero-background.jpg");
+  background-size: cover;
+  background-position: 68% 55%;
+  background-repeat: no-repeat;
+}
+/* Veil: hold contrast under the left copy while the lamp field stays open. */
+.wws-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    94deg,
+    rgba(4, 14, 27, 0.94) 0%,
+    rgba(4, 14, 27, 0.85) 36%,
+    rgba(4, 14, 27, 0.55) 62%,
+    rgba(4, 14, 27, 0.35) 100%
+  );
+}
+
+/* The audience rail hangs its chips from one gold spine. */
+.wws-rail-spine {
+  position: relative;
+}
+.wws-rail-spine::before {
+  content: "";
+  position: absolute;
+  top: -2.5rem;
+  bottom: 1.25rem;
+  left: -1.25rem;
+  width: 1px;
+  background: var(--color-gold);
+  opacity: 0.8;
+}
+
+/* ---------- 02 taxonomy-rail: mist strip ---------- */
+.wws-strip {
+  background: linear-gradient(
+    180deg,
+    var(--color-mist) 0%,
+    #e7eff6 55%,
+    var(--color-mist-deep) 100%
+  );
+}
+
+/* ---------- 05 next-best-step: dark close ---------- */
+.wws-close {
+  background: linear-gradient(
+    180deg,
+    var(--color-ink-deeper) 0%,
+    var(--color-ink-deep) 40%,
+    var(--color-ink-deeper) 100%
+  );
+}

@@ -1,0 +1,202 @@
+{
+  "version": 1,
+  "slug": "insights--coordinating-cpa-attorney-tpa-advisor",
+  "route": "/insights/coordinating-cpa-attorney-tpa-advisor",
+  "sections": [
+    {
+      "frame": "01-editorial-state-hero",
+      "implementation_kind": "shared-designed",
+      "implementation_owner": "src/components/pages/insights-article/editorial-state-hero.tsx",
+      "shared_basis": "All twelve insights article manifests in revision-2026-09-15-image-first share the editorial-content-gate archetype and the identical five-frame grammar (01-editorial-state-hero, 02-verified-teaser, 03-manuscript-gate, 04-source-and-review-gate, 05-related-reading); the approved insights-article family component src/components/pages/insights-article/editorial-state-hero.tsx renders this frame with the per-article content module src/components/pages/insights-article/content/coordinating-cpa-attorney-tpa-advisor.ts.",
+      "content_source": "section_manifest.json#01-editorial-state-hero",
+      "asset_roles": [
+        "editorial article photograph for Career-Stage Planning: A practical model for keeping outside professionals aligned around one plan."
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "Approved manifest fields (eyebrow, headline, body, visibility_note) render as live HTML text, led by \"How Physicians Can Coordinate a CPA, Attorney, TPA, and Financial Advisor\"."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "PASS with documented deliberate adaptation preserving the approved semantic gate: the extraction carries a baked ivory seam band across its bottom 16%; the family hero's top-aligned object-position and navy floor fade keep it out of the visible plate at review viewports, but the raster itself is not clean"
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "Frame composition preserved: Navy masthead: Career-Stage Planning eyebrow, H1, teaser body left; kraft-envelope still life right; the ref's decorative insight-pill row is production chrome and is not reproduced; single 'All insights' link to…."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved navy/gold/ivory language retained on the #0B1F3A band per the manifest edge contract; Cormorant Garamond display over Inter body."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "390x844 recomposition per manifest: Preserve the headline and primary action before the image; use a 4:5 or 3:2 crop centered on the declared subject/focal point, never a blurred filler panel; stack overlays into live blocks, keep at least 70% of the…"
+        }
+      },
+      "ref": "design_refs/revision-2026-09-15-image-first/pages/insights--coordinating-cpa-attorney-tpa-advisor/refs/01-editorial-state-hero.png",
+      "owners": [
+        "src/app/(site)/insights/coordinating-cpa-attorney-tpa-advisor/page.tsx",
+        "src/components/pages/insights-article/editorial-state-hero.tsx",
+        "src/components/pages/insights-article/content/coordinating-cpa-attorney-tpa-advisor.ts"
+      ],
+      "notes": "Navy masthead: Career-Stage Planning eyebrow, H1, teaser body left; kraft-envelope still life right; the ref's decorative insight-pill row is production chrome and is not reproduced; single 'All insights' link to /insights."
+    },
+    {
+      "frame": "02-verified-teaser",
+      "implementation_kind": "shared-designed",
+      "implementation_owner": "src/components/pages/insights-article/verified-teaser.tsx",
+      "shared_basis": "All twelve insights article manifests in revision-2026-09-15-image-first share the editorial-content-gate archetype and the identical five-frame grammar (01-editorial-state-hero, 02-verified-teaser, 03-manuscript-gate, 04-source-and-review-gate, 05-related-reading); the approved insights-article family component src/components/pages/insights-article/verified-teaser.tsx renders this frame with the per-article content module src/components/pages/insights-article/content/coordinating-cpa-attorney-tpa-advisor.ts.",
+      "content_source": "section_manifest.json#02-verified-teaser",
+      "asset_roles": [
+        "quiet editorial abstract ledger"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "Approved manifest fields (headline, body, items) render as live HTML text, led by \"What is verified now.\"."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "Dedicated asset renders the declared subject \"quiet editorial abstract ledger\" with the approved \"warm ivory desk crop with live text area\" crop and treatment."
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "PASS with documented deliberate adaptation preserving the approved semantic gate: the ref is a pure-typography spread with copy left and an icon-noded item rail right of a gold connector; the family grammar keeps the items under the copy, so the media column is suppressed (cpa-teaser recipe) and the right half stays open negative space instead of a second column"
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved navy/gold/ivory language retained on the #F6F2E8 band per the manifest edge contract; Cormorant Garamond display over Inter body."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "390x844 recomposition per manifest: Stack the primary content group in narrative order while preserving asymmetric emphasis through offset margins and varied spacing; crop imagery around its declared focal point, keep all live text and links, and simplify…"
+        }
+      },
+      "ref": "design_refs/revision-2026-09-15-image-first/pages/insights--coordinating-cpa-attorney-tpa-advisor/refs/02-verified-teaser.png",
+      "owners": [
+        "src/components/pages/insights-article/verified-teaser.tsx",
+        "src/components/pages/insights-article/content/coordinating-cpa-attorney-tpa-advisor.ts",
+        "src/components/pages/insights-article/content/coordinating-cpa-attorney-tpa-advisor.css"
+      ],
+      "notes": "Ivory ledger with no photograph, matching the extraction plan's pure-code verdict: verified headline/body and the three ringed-check items as live text; family media slot hidden by the page-scoped class."
+    },
+    {
+      "frame": "03-manuscript-gate",
+      "implementation_kind": "shared-designed",
+      "implementation_owner": "src/components/pages/insights-article/manuscript-gate.tsx",
+      "shared_basis": "All twelve insights article manifests in revision-2026-09-15-image-first share the editorial-content-gate archetype and the identical five-frame grammar (01-editorial-state-hero, 02-verified-teaser, 03-manuscript-gate, 04-source-and-review-gate, 05-related-reading); the approved insights-article family component src/components/pages/insights-article/manuscript-gate.tsx renders this frame with the per-article content module src/components/pages/insights-article/content/coordinating-cpa-attorney-tpa-advisor.ts.",
+      "content_source": "section_manifest.json#03-manuscript-gate",
+      "asset_roles": [
+        "editorial desk with sealed manuscript sleeve and source tabs"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "Approved manifest fields (headline, items) render as live HTML text, led by \"Required before this article can go live.\"."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "Dedicated asset renders the declared subject \"editorial desk with sealed manuscript sleeve and source tabs\" with the approved \"white field, document sleeve, no readable fake article text\" crop and treatment."
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "PASS with documented deliberate adaptation preserving the approved semantic gate: the ref centers the sealed envelope with the four requirements as flanking cards; the family grammar renders envelope left and the requirement list on the gold spine right, and the ref's bottom internal review-gates banner is production metadata that is intentionally not reproduced"
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved navy/gold/ivory language retained on the #FFFFFF band per the manifest edge contract; Cormorant Garamond display over Inter body."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "390x844 recomposition per manifest: Stack the primary content group in narrative order while preserving asymmetric emphasis through offset margins and varied spacing; crop imagery around its declared focal point, keep all live text and links, and simplify…"
+        }
+      },
+      "ref": "design_refs/revision-2026-09-15-image-first/pages/insights--coordinating-cpa-attorney-tpa-advisor/refs/03-manuscript-gate.png",
+      "owners": [
+        "src/components/pages/insights-article/manuscript-gate.tsx",
+        "src/components/pages/insights-article/content/coordinating-cpa-attorney-tpa-advisor.ts",
+        "src/components/pages/insights-article/content/coordinating-cpa-attorney-tpa-advisor.css"
+      ],
+      "notes": "White gate spread: sealed kraft envelope (cpa-gate recipe crops the baked gold seam caret along the bottom; the envelope's printed plate and tab lettering are physical document print per the extraction plan) beside the four live requirements."
+    },
+    {
+      "frame": "04-source-and-review-gate",
+      "implementation_kind": "shared-designed",
+      "implementation_owner": "src/components/pages/insights-article/source-and-review-gate.tsx",
+      "shared_basis": "All twelve insights article manifests in revision-2026-09-15-image-first share the editorial-content-gate archetype and the identical five-frame grammar (01-editorial-state-hero, 02-verified-teaser, 03-manuscript-gate, 04-source-and-review-gate, 05-related-reading); the approved insights-article family component src/components/pages/insights-article/source-and-review-gate.tsx renders this frame with the per-article content module src/components/pages/insights-article/content/coordinating-cpa-attorney-tpa-advisor.ts.",
+      "content_source": "section_manifest.json#04-source-and-review-gate",
+      "asset_roles": [
+        "short source-review strip with file tabs"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "Approved manifest fields (headline, items) render as live HTML text, led by \"Source and review requirements.\"."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "Code-native section per the manifest image_treatment (\"1536x512 strip, mist blue, live labels\"); live text and drawn elements only, no raster asset required."
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "Frame composition preserved: Mist strip: three rule-separated live requirement panels, document-review photograph right (cpa-review recipe crops the baked gold corner fragment on the left and the gold rule + ivory band along the bottom); the ref's…."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved navy/gold/ivory language retained on the #DCE8F2 band per the manifest edge contract; Cormorant Garamond display over Inter body."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "390x844 recomposition per manifest: Stack the primary content group in narrative order while preserving asymmetric emphasis through offset margins and varied spacing; crop imagery around its declared focal point, keep all live text and links, and simplify…"
+        }
+      },
+      "ref": "design_refs/revision-2026-09-15-image-first/pages/insights--coordinating-cpa-attorney-tpa-advisor/refs/04-source-and-review-gate.png",
+      "owners": [
+        "src/components/pages/insights-article/source-and-review-gate.tsx",
+        "src/components/pages/insights-article/content/coordinating-cpa-attorney-tpa-advisor.ts",
+        "src/components/pages/insights-article/content/coordinating-cpa-attorney-tpa-advisor.css"
+      ],
+      "notes": "Mist strip: three rule-separated live requirement panels, document-review photograph right (cpa-review recipe crops the baked gold corner fragment on the left and the gold rule + ivory band along the bottom); the ref's 'source/review gate' caption is internal wording and is not rendered."
+    },
+    {
+      "frame": "05-related-reading",
+      "implementation_kind": "shared-designed",
+      "implementation_owner": "src/components/pages/insights-article/related-reading.tsx",
+      "shared_basis": "All twelve insights article manifests in revision-2026-09-15-image-first share the editorial-content-gate archetype and the identical five-frame grammar (01-editorial-state-hero, 02-verified-teaser, 03-manuscript-gate, 04-source-and-review-gate, 05-related-reading); the approved insights-article family component src/components/pages/insights-article/related-reading.tsx renders this frame with the per-article content module src/components/pages/insights-article/content/coordinating-cpa-attorney-tpa-advisor.ts.",
+      "content_source": "section_manifest.json#05-related-reading",
+      "asset_roles": [
+        "related-reading ledger for Career-Stage Planning"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "Approved manifest fields (headline, body, links) render as live HTML text, led by \"Related planning paths for this topic.\"."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "Dedicated asset renders the declared subject \"related-reading ledger for Career-Stage Planning\" with the approved \"ivory/white editorial index with small topic crop\" crop and treatment."
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "Frame composition preserved: Ivory close: /our-process, /services, /insights as live route links on the gold ledger, planning-overview still life right, shared held note, boundary line, and the page-local gold line ending on a node."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved navy/gold/ivory language retained on the #F6F2E8 band per the manifest edge contract; Cormorant Garamond display over Inter body."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "390x844 recomposition per manifest: Stack the primary content group in narrative order while preserving asymmetric emphasis through offset margins and varied spacing; crop imagery around its declared focal point, keep all live text and links, and simplify…"
+        }
+      },
+      "ref": "design_refs/revision-2026-09-15-image-first/pages/insights--coordinating-cpa-attorney-tpa-advisor/refs/05-related-reading.png",
+      "owners": [
+        "src/components/pages/insights-article/related-reading.tsx",
+        "src/components/pages/insights-article/content/coordinating-cpa-attorney-tpa-advisor.ts",
+        "src/components/pages/insights-article/content/coordinating-cpa-attorney-tpa-advisor.css"
+      ],
+      "notes": "Ivory close: /our-process, /services, /insights as live route links on the gold ledger, planning-overview still life right, shared held note, boundary line, and the page-local gold line ending on a node."
+    }
+  ]
+}

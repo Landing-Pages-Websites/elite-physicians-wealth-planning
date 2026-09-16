@@ -1,0 +1,39 @@
+{
+  "date": "2026-09-16",
+  "branch": "peter/awb-site-build-elite",
+  "scope": "Full 37-route site build for Elite Physicians Wealth Planning",
+  "deterministic_route_verifier": {
+    "routes_checked": 37,
+    "viewports": ["1440x900", "390x844"],
+    "checks": {
+      "bridge_ready": "PASS — every route reached ready state before capture",
+      "metadata": "PASS — unique title and description on all 37 routes",
+      "h1": "PASS — exactly one H1 per route",
+      "images": "PASS — 0 broken images across both viewports on all routes",
+      "horizontal_overflow": "PASS — 0px overflow at 390 and 1440 on all routes",
+      "internal_jargon_leaks": "PASS — no production/internal vocabulary leaked into public copy"
+    },
+    "failures": 0,
+    "report": "public/verification/site/report.json",
+    "screenshots": "public/verification/site/<slug>-{1440,390}.jpg (74 captures)"
+  },
+  "interaction_verifier": {
+    "status": "PASS",
+    "script": "scripts/verify-interactions.mjs",
+    "checks": [
+      "desktop dropdown opens with route links, closes on Escape, and navigates",
+      "mobile menu opens with links and navigates to /schedule",
+      "checkup blocks empty submission with visible validation",
+      "checkup renders a personalized result with route links and offers restart",
+      "contact blocks empty submission with inline errors and does not hit the collector while invalid",
+      "contact submits once to the (stubbed) collector and fires form_submission only on success"
+    ]
+  },
+  "static_gates": {
+    "lint": "PASS",
+    "typescript": "PASS (npx tsc --noEmit)",
+    "next_build": "PASS — all 37 routes compile and prerender",
+    "section_implementation_contracts": "OK: 36/36 pages validate against design-frame-fidelity schema",
+    "site_build_contracts": "OK: pre-qa phase valid against page_blueprint.json"
+  }
+}

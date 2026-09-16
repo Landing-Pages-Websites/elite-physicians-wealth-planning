@@ -1,0 +1,189 @@
+{
+  "version": 1,
+  "slug": "resources",
+  "route": "/resources",
+  "sections": [
+    {
+      "frame": "01-editorial-hero",
+      "implementation_kind": "bespoke",
+      "implementation_owner": "src/components/pages/resources/editorial-hero.tsx",
+      "content_source": "section_manifest.json#01-editorial-hero",
+      "asset_roles": [
+        "Physician Resource Center editorial index image"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "Approved manifest fields (eyebrow, headline, body, primary_cta) render as live HTML text, led by \"Browse educational guides, checklists, articles, and webinars by planning topic without implying every asset…\"."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "Dedicated asset renders the declared subject \"Physician Resource Center editorial index image\" with the approved \"wide cinematic planning-room composition\" crop and treatment."
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "Frame composition preserved: Full-bleed approved planning-room canvas (lamp-lit desk right, dark left field), eyebrow + h1 index headline + body + gold /schedule CTA above the fold, mist fade at the base handing the gold line into the taxonomy rail."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved navy/gold/ivory language retained on the #0B1F3A band per the manifest edge contract; Cormorant Garamond display over Inter body."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "390x844 recomposition per manifest: Preserve the headline and primary action before the image; use a 4:5 or 3:2 crop centered on the declared subject/focal point, never a blurred filler panel; stack overlays into live blocks, keep at least 70% of the…"
+        }
+      },
+      "ref": "_design_inputs/pages/resources/refs/01-editorial-hero.png",
+      "owners": [
+        "src/app/(site)/resources/page.tsx",
+        "src/app/(site)/resources/resources.css",
+        "src/components/pages/resources/editorial-hero.tsx"
+      ],
+      "notes": "Full-bleed approved planning-room canvas (lamp-lit desk right, dark left field), eyebrow + h1 index headline + body + gold /schedule CTA above the fold, mist fade at the base handing the gold line into the taxonomy rail."
+    },
+    {
+      "frame": "02-topic-taxonomy",
+      "implementation_kind": "bespoke",
+      "implementation_owner": "src/components/pages/resources/topic-taxonomy.tsx",
+      "content_source": "section_manifest.json#02-topic-taxonomy",
+      "asset_roles": [
+        "code-only live semantic content"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "Approved manifest fields (headline, items) render as live HTML text, led by \"Browse by decision type.\"."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "Code-native section per the manifest image_treatment (\"1536x512 strip with live topic labels\"); live text and drawn elements only, no raster asset required."
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "Frame composition preserved: Mist strip: heading set on one line at desktop widths (max-width widened past the headline's length so no orphaned wrap), TOPIC TAXONOMY rail label, one continuous gold rule with four diamond stops carrying the…."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved navy/gold/ivory language retained on the #DCE8F2 band per the manifest edge contract; Cormorant Garamond display over Inter body."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "390x844 recomposition per manifest: Convert multi-column ledgers or tables into full-width rule-separated rows in source order; preserve all decision labels and contextual links, move any documentary crop between logical groups, and use only one slim gold…"
+        }
+      },
+      "ref": "_design_inputs/pages/resources/refs/02-topic-taxonomy.png",
+      "owners": [
+        "src/components/pages/resources/topic-taxonomy.tsx"
+      ],
+      "notes": "Mist strip: heading set on one line at desktop widths (max-width widened past the headline's length so no orphaned wrap), TOPIC TAXONOMY rail label, one continuous gold rule with four diamond stops carrying the remaining manifest items as static scan labels (manifest marks this static_content), tilted document accent cropped at the right edge; mobile converts to one vertical rail."
+    },
+    {
+      "frame": "03-featured-index",
+      "implementation_kind": "bespoke",
+      "implementation_owner": "src/components/pages/resources/featured-index.tsx",
+      "content_source": "section_manifest.json#03-featured-index",
+      "asset_roles": [
+        "Physician Resource Center featured route spread"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "Approved manifest fields (headline, body, links) render as live HTML text, led by \"Start where the pressure is clearest.\"."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "Dedicated asset renders the declared subject \"Physician Resource Center featured route spread\" with the approved \"asymmetric editorial spread with one large photo and live route labels\" crop and treatment."
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "Frame composition preserved: Ivory editorial spread: headline/body left (body rewritten from the manifest's spec phrasing into visitor-facing orientation copy naming the three formats below) above a vertical gold rail with three ringed live links —…."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved navy/gold/ivory language retained on the #F6F2E8 band per the manifest edge contract; Cormorant Garamond display over Inter body."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "390x844 recomposition per manifest: Stack the primary content group in narrative order while preserving asymmetric emphasis through offset margins and varied spacing; crop imagery around its declared focal point, keep all live text and links, and simplify…"
+        }
+      },
+      "ref": "_design_inputs/pages/resources/refs/03-featured-index.png",
+      "owners": [
+        "src/components/pages/resources/featured-index.tsx"
+      ],
+      "notes": "Ivory editorial spread: headline/body left (body rewritten from the manifest's spec phrasing into visitor-facing orientation copy naming the three formats below) above a vertical gold rail with three ringed live links — Open featured path → /physician-tax-retirement-guide, Explore insights → /insights, Begin your checkup → /checkup — each captioned with its route; large advisory photograph (no identifiable face, not presented as staff) holds the right page."
+    },
+    {
+      "frame": "04-content-state-ledger",
+      "implementation_kind": "bespoke",
+      "implementation_owner": "src/components/pages/resources/content-state-ledger.tsx",
+      "content_source": "section_manifest.json#04-content-state-ledger",
+      "asset_roles": [
+        "Physician Resource Center route ledger"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "Approved manifest fields (headline, body, links) render as live HTML text, led by \"Compare the paths before you choose.\"."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "Code-native section per the manifest image_treatment (\"mostly live-text ledger with small editorial tabs\"); live text and drawn elements only, no raster asset required."
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "Frame composition preserved: Quiet white route ledger, no card grid: five rule-separated rows in manifest link order (guide, /insights, /checkup, /services, /schedule), each row one live link with a CSS-sliced editorial tab from the extracted rail…."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved navy/gold/ivory language retained on the #FFFFFF band per the manifest edge contract; Cormorant Garamond display over Inter body."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "390x844 recomposition per manifest: Convert multi-column ledgers or tables into full-width rule-separated rows in source order; preserve all decision labels and contextual links, move any documentary crop between logical groups, and use only one slim gold…"
+        }
+      },
+      "ref": "_design_inputs/pages/resources/refs/04-content-state-ledger.png",
+      "owners": [
+        "src/components/pages/resources/content-state-ledger.tsx"
+      ],
+      "notes": "Quiet white route ledger, no card grid: five rule-separated rows in manifest link order (guide, /insights, /checkup, /services, /schedule), each row one live link with a CSS-sliced editorial tab from the extracted rail, dot leader and gold arrow; first row carries the manifest 'Open first related page' action; navy base band with the gold curve resolves the line into the choice band."
+    },
+    {
+      "frame": "05-subscribe-or-schedule",
+      "implementation_kind": "bespoke",
+      "implementation_owner": "src/components/pages/resources/subscribe-or-schedule.tsx",
+      "content_source": "section_manifest.json#05-subscribe-or-schedule",
+      "asset_roles": [
+        "private advisory office closing field"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "Approved manifest fields (headline, body, primary_cta, secondary_cta, boundary) render as live HTML text, led by \"Choose the next step that matches your readiness.\"."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "Dedicated asset renders the declared subject \"private advisory office closing field\" with the approved \"wide navy close, no faces\" crop and treatment."
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "Frame composition preserved: Navy conversion band on the approved closing office: centred choice headline/body, gold-bordered strategy-call card (gold CTA → /schedule) beside the guide card (ghost 'Open resource path' →…."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved navy/gold/ivory language retained on the #0B1F3A band per the manifest edge contract; Cormorant Garamond display over Inter body."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "390x844 recomposition per manifest: Stack the primary content group in narrative order while preserving asymmetric emphasis through offset margins and varied spacing; crop imagery around its declared focal point, keep all live text and links, and simplify…"
+        }
+      },
+      "ref": "_design_inputs/pages/resources/refs/05-subscribe-or-schedule.png",
+      "owners": [
+        "src/components/pages/resources/subscribe-or-schedule.tsx"
+      ],
+      "notes": "Navy conversion band on the approved closing office: centred choice headline/body, gold-bordered strategy-call card (gold CTA → /schedule) beside the guide card (ghost 'Open resource path' → /physician-tax-retirement-guide with the approved no-instant-download availability note — never shown as downloadable), shield-marked educational boundary; the ref's internal 'final file required / internal review' annotation was replaced with the approved customer-facing availability copy; page-local line ends in a terminal node."
+    }
+  ]
+}

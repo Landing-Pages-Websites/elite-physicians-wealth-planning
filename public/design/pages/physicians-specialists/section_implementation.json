@@ -1,0 +1,238 @@
+{
+  "version": 1,
+  "slug": "physicians-specialists",
+  "route": "/physicians-specialists",
+  "sections": [
+    {
+      "frame": "01-role-context",
+      "implementation_kind": "shared-designed",
+      "implementation_owner": "src/components/pages/audience/role-context.tsx",
+      "shared_basis": "The five audience manifests (financial-planning-for-crnas-nps-pas, financial-planning-for-dentists, financial-planning-for-healthcare-executives, financial-planning-for-surgeons, physicians-specialists) in revision-2026-09-15-image-first share the identical six-frame audience grammar (01-role-context through 06-related-paths); the approved audience family component src/components/pages/audience/role-context.tsx renders this frame with page content from src/components/pages/audience/content/physicians-specialists.ts.",
+      "content_source": "section_manifest.json#01-role-context",
+      "asset_roles": [
+        "specialist consultation corridor and private planning desk, no named staff"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "Approved manifest fields (eyebrow, headline, body, primary_cta, boundary) render as live HTML text, led by \"Planning for physicians whose income, benefits, and career decisions rarely stay simple.\"."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "Dedicated asset renders the declared subject \"specialist consultation corridor and private planning desk, no named staff\" with the approved \"cinematic role-specific crop with no identifiable staff\" crop and treatment."
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "Frame composition preserved: Navy image-canvas hero: eyebrow-over-gold-rule, h1, body, gold /schedule CTA and plain boundary in the quiet left field; section-owned corridor/desk scene fills the right 52% edge-to-edge with a navy veil; the baked…."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved navy/gold/ivory language retained on the #0B1F3A band per the manifest edge contract; Cormorant Garamond display over Inter body."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "390x844 recomposition per manifest: Preserve the headline and primary action before the image; use a 4:5 or 3:2 crop centered on the declared subject/focal point, never a blurred filler panel; stack overlays into live blocks, keep at least 70% of the…"
+        }
+      },
+      "ref": "_design_inputs/pages/physicians-specialists/refs/01-role-context.png",
+      "owners": [
+        "src/app/(site)/physicians-specialists/page.tsx",
+        "src/components/pages/audience/role-context.tsx",
+        "src/components/pages/audience/audience.css",
+        "src/components/pages/audience/content/physicians-specialists.ts"
+      ],
+      "notes": "Navy image-canvas hero: eyebrow-over-gold-rule, h1, body, gold /schedule CTA and plain boundary in the quiet left field; section-owned corridor/desk scene fills the right 52% edge-to-edge with a navy veil; the baked gold seam and ivory band were trimmed from the raster so the exit line is live SVG. Mobile stacks copy then a 4:5 crop on the desk still life."
+    },
+    {
+      "frame": "02-decision-patterns",
+      "implementation_kind": "shared-designed",
+      "implementation_owner": "src/components/pages/audience/decision-patterns.tsx",
+      "shared_basis": "The five audience manifests (financial-planning-for-crnas-nps-pas, financial-planning-for-dentists, financial-planning-for-healthcare-executives, financial-planning-for-surgeons, physicians-specialists) in revision-2026-09-15-image-first share the identical six-frame audience grammar (01-role-context through 06-related-paths); the approved audience family component src/components/pages/audience/decision-patterns.tsx renders this frame with page content from src/components/pages/audience/content/physicians-specialists.ts.",
+      "content_source": "section_manifest.json#02-decision-patterns",
+      "asset_roles": [
+        "Physicians & Specialists decision ledger"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "Approved manifest fields (headline, body, items) render as live HTML text, led by \"Planning questions that tend to show up for this role.\"."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "Code-native section per the manifest image_treatment (\"mostly typographic ivory ledger with one small role-specific crop\"); live text and drawn elements only, no raster asset required."
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "Frame composition preserved: Quiet ivory ledger: headline + body left, five offset rule-separated decision rows with gold diamond terminals (no card grid); sleeve/notebook photograph counterweights the lower-right with the contracted ivory boundary…."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved navy/gold/ivory language retained on the #F6F2E8 band per the manifest edge contract; Cormorant Garamond display over Inter body."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "390x844 recomposition per manifest: Stack the primary content group in narrative order while preserving asymmetric emphasis through offset margins and varied spacing; crop imagery around its declared focal point, keep all live text and links, and simplify…"
+        }
+      },
+      "ref": "_design_inputs/pages/physicians-specialists/refs/02-decision-patterns.png",
+      "owners": [
+        "src/components/pages/audience/decision-patterns.tsx",
+        "src/components/pages/audience/audience.css"
+      ],
+      "notes": "Quiet ivory ledger: headline + body left, five offset rule-separated decision rows with gold diamond terminals (no card grid); sleeve/notebook photograph counterweights the lower-right with the contracted ivory boundary fade; one gold line enters at the hero seam, runs the left margin and exits bottom toward the scenario. Mobile keeps rows in source order. Design-review remediation: the subhead now reads in visitor voice (the manifest's internal “the page should…” phrasing no longer ships as visible copy)."
+    },
+    {
+      "frame": "03-career-scenario",
+      "implementation_kind": "shared-designed",
+      "implementation_owner": "src/components/pages/audience/career-scenario.tsx",
+      "shared_basis": "The five audience manifests (financial-planning-for-crnas-nps-pas, financial-planning-for-dentists, financial-planning-for-healthcare-executives, financial-planning-for-surgeons, physicians-specialists) in revision-2026-09-15-image-first share the identical six-frame audience grammar (01-role-context through 06-related-paths); the approved audience family component src/components/pages/audience/career-scenario.tsx renders this frame with page content from src/components/pages/audience/content/physicians-specialists.ts.",
+      "content_source": "section_manifest.json#03-career-scenario",
+      "asset_roles": [
+        "Physicians & Specialists career or practice scenario"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "Approved manifest fields (headline, body, secondary_link) render as live HTML text, led by \"The career structure changes the planning work.\"."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "Dedicated asset renders the declared subject \"Physicians & Specialists career or practice scenario\" with the approved \"image-as-canvas with document overlay, no fabricated names\" crop and treatment."
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "Frame composition preserved: \"paths\" variant: mist spread with copy left, three translucent live path chips (Employed / Group-practice / Independent specialist, lifted verbatim from the manifest body) over a translucent document sheet…."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved navy/gold/ivory language retained on the #DCE8F2 band per the manifest edge contract; Cormorant Garamond display over Inter body."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "390x844 recomposition per manifest: Stack the primary content group in narrative order while preserving asymmetric emphasis through offset margins and varied spacing; crop imagery around its declared focal point, keep all live text and links, and simplify…"
+        }
+      },
+      "ref": "_design_inputs/pages/physicians-specialists/refs/03-career-scenario.png",
+      "owners": [
+        "src/components/pages/audience/career-scenario.tsx",
+        "src/components/pages/audience/audience.css"
+      ],
+      "notes": "\"paths\" variant: mist spread with copy left, three translucent live path chips (Employed / Group-practice / Independent specialist, lifted verbatim from the manifest body) over a translucent document sheet, writing-physician crop holding the right edge (declared edge-touch); /our-process text link. Baked bottom gold line trimmed from the raster."
+    },
+    {
+      "frame": "04-coordination-map",
+      "implementation_kind": "shared-designed",
+      "implementation_owner": "src/components/pages/audience/coordination-map.tsx",
+      "shared_basis": "The five audience manifests (financial-planning-for-crnas-nps-pas, financial-planning-for-dentists, financial-planning-for-healthcare-executives, financial-planning-for-surgeons, physicians-specialists) in revision-2026-09-15-image-first share the identical six-frame audience grammar (01-role-context through 06-related-paths); the approved audience family component src/components/pages/audience/coordination-map.tsx renders this frame with page content from src/components/pages/audience/content/physicians-specialists.ts.",
+      "content_source": "section_manifest.json#04-coordination-map",
+      "asset_roles": [
+        "code-only live semantic content"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "Approved manifest fields (headline, body, items) render as live HTML text, led by \"One conversation across the relevant pillars.\"."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "Code-native section per the manifest image_treatment (\"abstracted professional-team rooms, no faces, live text labels\"); live text and drawn elements only, no raster asset required."
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "Frame composition preserved: \"vignette-row\" variant on white: centred heading/body, one gold route running behind the five section-owned room vignettes (exact manifest pillar order) with live labels, centre descender becoming the question-strip…."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved navy/gold/ivory language retained on the #FFFFFF band per the manifest edge contract; Cormorant Garamond display over Inter body."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "390x844 recomposition per manifest: Convert the desktop diagram into a vertical reading rail in source order; keep every label and connector endpoint, place supporting imagery after the decisive step, avoid horizontal scrolling, and redraw the gold…"
+        }
+      },
+      "ref": "_design_inputs/pages/physicians-specialists/refs/04-coordination-map.png",
+      "owners": [
+        "src/components/pages/audience/coordination-map.tsx",
+        "src/components/pages/audience/audience.css"
+      ],
+      "notes": "\"vignette-row\" variant on white: centred heading/body, one gold route running behind the five section-owned room vignettes (exact manifest pillar order) with live labels, centre descender becoming the question-strip spine. Mobile converts to a single vertical rail with a left gold rule."
+    },
+    {
+      "frame": "05-questions-before-call",
+      "implementation_kind": "shared-designed",
+      "implementation_owner": "src/components/pages/audience/questions-before-call.tsx",
+      "shared_basis": "The five audience manifests (financial-planning-for-crnas-nps-pas, financial-planning-for-dentists, financial-planning-for-healthcare-executives, financial-planning-for-surgeons, physicians-specialists) in revision-2026-09-15-image-first share the identical six-frame audience grammar (01-role-context through 06-related-paths); the approved audience family component src/components/pages/audience/questions-before-call.tsx renders this frame with page content from src/components/pages/audience/content/physicians-specialists.ts.",
+      "content_source": "section_manifest.json#05-questions-before-call",
+      "asset_roles": [
+        "short question strip for Physicians & Specialists"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "Approved manifest fields (headline, items, note) render as live HTML text, led by \"Questions to bring into the first review.\"."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "Dedicated asset renders the declared subject \"short question strip for Physicians & Specialists\" with the approved \"1536x512 strip, ivory paper, pen, no faces\" crop and treatment."
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "Frame composition preserved: True ivory strip: heading, three white question cards, italic route note; fountain-pen still life holds the right edge (baked navy band trimmed from the raster — the navy exit band with its gold rule and diamond…."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved navy/gold/ivory language retained on the #F6F2E8 band per the manifest edge contract; Cormorant Garamond display over Inter body."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "390x844 recomposition per manifest: Convert multi-column ledgers or tables into full-width rule-separated rows in source order; preserve all decision labels and contextual links, move any documentary crop between logical groups, and use only one slim gold…"
+        }
+      },
+      "ref": "_design_inputs/pages/physicians-specialists/refs/05-questions-before-call.png",
+      "owners": [
+        "src/components/pages/audience/questions-before-call.tsx",
+        "src/components/pages/audience/audience.css"
+      ],
+      "notes": "True ivory strip: heading, three white question cards, italic route note; fountain-pen still life holds the right edge (baked navy band trimmed from the raster — the navy exit band with its gold rule and diamond terminal is live CSS). Mobile stacks cards full-width in source order."
+    },
+    {
+      "frame": "06-related-paths",
+      "implementation_kind": "shared-designed",
+      "implementation_owner": "src/components/pages/audience/related-paths.tsx",
+      "shared_basis": "The five audience manifests (financial-planning-for-crnas-nps-pas, financial-planning-for-dentists, financial-planning-for-healthcare-executives, financial-planning-for-surgeons, physicians-specialists) in revision-2026-09-15-image-first share the identical six-frame audience grammar (01-role-context through 06-related-paths); the approved audience family component src/components/pages/audience/related-paths.tsx renders this frame with page content from src/components/pages/audience/content/physicians-specialists.ts.",
+      "content_source": "section_manifest.json#06-related-paths",
+      "asset_roles": [
+        "navy advisory close with route cards as live text"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "Approved manifest fields (headline, body, links, primary_cta) render as live HTML text, led by \"Choose the planning path that fits the decision in front of you.\"."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "Dedicated asset renders the declared subject \"navy advisory close with route cards as live text\" with the approved \"wide navy editorial composition with small image tabs\" crop and treatment."
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "Frame composition preserved: \"route-row\" close over the approved quiet consult-room plate: centred heading/body, one gold stem branching to five live route cards drawn as path text (per the extraction plan every card region is CODE, so the ref's…."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved navy/gold/ivory language retained on the #0B1F3A band per the manifest edge contract; Cormorant Garamond display over Inter body."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "390x844 recomposition per manifest: Convert the desktop diagram into a vertical reading rail in source order; keep every label and connector endpoint, place supporting imagery after the decisive step, avoid horizontal scrolling, and redraw the gold…"
+        }
+      },
+      "ref": "_design_inputs/pages/physicians-specialists/refs/06-related-paths.png",
+      "owners": [
+        "src/components/pages/audience/related-paths.tsx",
+        "src/components/pages/audience/audience.css",
+        "src/components/pages/audience/content/shared.ts"
+      ],
+      "notes": "\"route-row\" close over the approved quiet consult-room plate: centred heading/body, one gold stem branching to five live route cards drawn as path text (per the extraction plan every card region is CODE, so the ref's tiny image tabs are rendered as live navy panels), gold /schedule CTA ends the page-local line. Mobile stacks cards on a left gold rail. Design-review remediation: route labels wrap at their hyphens instead of ellipsis-truncating mid-word, and the branch drop-lines keep a clear 16px air gap above the card tops so drops never merge with card borders."
+    }
+  ]
+}

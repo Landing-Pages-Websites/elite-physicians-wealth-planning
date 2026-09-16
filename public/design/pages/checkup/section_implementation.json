@@ -1,0 +1,228 @@
+{
+  "version": 1,
+  "slug": "checkup",
+  "route": "/checkup",
+  "sections": [
+    {
+      "frame": "01-checkup-hero",
+      "implementation_kind": "bespoke",
+      "implementation_owner": "src/components/pages/checkup/checkup-hero.tsx",
+      "content_source": "section_manifest.json#01-checkup-hero",
+      "asset_roles": [
+        "physician financial checkup desk with seven area notes"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "Approved manifest fields (eyebrow, headline, body, primary_cta, boundary) render as live HTML text, led by \"Find where your financial plan may be disconnected.\"."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "Dedicated asset renders the declared subject \"physician financial checkup desk with seven area notes\" with the approved \"wide editorial crop, no dashboard stock\" crop and treatment."
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "Frame composition preserved: Left copy block (eyebrow, h1, body, gold Start-the-Checkup anchor to #interactive-review, boundary line) on the navy field; the seven-note desk crop fills the right media slot with its baked corner stub cropped out…."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved navy/gold/ivory language retained on the #0B1F3A band per the manifest edge contract; Cormorant Garamond display over Inter body."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "390x844 recomposition per manifest: Preserve the headline and primary action before the image; use a 4:5 or 3:2 crop centered on the declared subject/focal point, never a blurred filler panel; stack overlays into live blocks, keep at least 70% of the…"
+        }
+      },
+      "ref": "_design_inputs/pages/checkup/refs/01-checkup-hero.png",
+      "owners": [
+        "src/app/(site)/checkup/page.tsx",
+        "src/components/pages/checkup/checkup-hero.tsx",
+        "src/app/(site)/checkup/checkup.css"
+      ],
+      "notes": "Left copy block (eyebrow, h1, body, gold Start-the-Checkup anchor to #interactive-review, boundary line) on the navy field; the seven-note desk crop fills the right media slot with its baked corner stub cropped out; gold route exits the bottom seam. Boundary sits under the CTA in the copy column rather than a separate full-width bottom band. Design-review fix: the desk still-life slot is now aspect 846/610 anchored to the top edge, so the baked gold frame fragment in the source’s lower-left (rows 626+) sits fully below the visible window at every viewport — no clipped motif stroke renders; all seven note cards remain complete."
+    },
+    {
+      "frame": "02-seven-area-map",
+      "implementation_kind": "bespoke",
+      "implementation_owner": "src/components/pages/checkup/seven-area-map.tsx",
+      "content_source": "section_manifest.json#02-seven-area-map",
+      "asset_roles": [
+        "code-only live semantic content"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "Approved manifest fields (headline, items) render as live HTML text, led by \"Seven areas to review together.\"."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "Code-native section per the manifest image_treatment (\"ivory ledger with compact labels\"); live text and drawn elements only, no raster asset required."
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "Frame composition preserved: Code-native diagram: seven live-text watercolor chips on warm paper positioned as the ref's constellation, one gold SVG spine with spurs continuing the hero seam and exiting into 03; mobile converts to a single…."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved navy/gold/ivory language retained on the #F6F2E8 band per the manifest edge contract; Cormorant Garamond display over Inter body."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "390x844 recomposition per manifest: Convert the desktop diagram into a vertical reading rail in source order; keep every label and connector endpoint, place supporting imagery after the decisive step, avoid horizontal scrolling, and redraw the gold…"
+        }
+      },
+      "ref": "_design_inputs/pages/checkup/refs/02-seven-area-map.png",
+      "owners": [
+        "src/components/pages/checkup/seven-area-map.tsx"
+      ],
+      "notes": "Code-native diagram: seven live-text watercolor chips on warm paper positioned as the ref's constellation, one gold SVG spine with spurs continuing the hero seam and exiting into 03; mobile converts to a single left-rail in source order. Design-review fix: chip constellation regeometried — every spur leaves the spine at its own junction (≥7% vertical separation) and no spur’s horizontal run crosses another chip’s box; the Retirement/Investments collision at 1440 is resolved."
+    },
+    {
+      "frame": "03-interactive-review",
+      "implementation_kind": "bespoke",
+      "implementation_owner": "src/components/pages/checkup/checkup-tool.tsx",
+      "content_source": "section_manifest.json#03-interactive-review",
+      "asset_roles": [
+        "code-only live semantic content"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "Approved manifest fields (headline, body, controls) render as live HTML text, led by \"Answer high-level planning prompts.\"."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "Code-native section per the manifest image_treatment (\"mist-blue interface surface with live form controls\"); live text and drawn elements only, no raster asset required."
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "Frame composition preserved: Live form on the mist surface: seven area-toggle checkboxes, priority radio selector (enabled only for selected areas), optional email-results input, required privacy acknowledgment, validate-first button that calls…."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved navy/gold/ivory language retained on the #DCE8F2 band per the manifest edge contract; Cormorant Garamond display over Inter body."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "390x844 recomposition per manifest: Stack the primary content group in narrative order while preserving asymmetric emphasis through offset margins and varied spacing; crop imagery around its declared focal point, keep all live text and links, and simplify…"
+        }
+      },
+      "ref": "_design_inputs/pages/checkup/refs/03-interactive-review.png",
+      "owners": [
+        "src/components/pages/checkup/checkup-tool.tsx",
+        "src/components/pages/checkup/review-form.tsx",
+        "src/components/pages/checkup/checkup-areas.ts"
+      ],
+      "notes": "Live form on the mist surface: seven area-toggle checkboxes, priority radio selector (enabled only for selected areas), optional email-results input, required privacy acknowledgment, validate-first button that calls form.requestSubmit(). Email path submits through the site lead pipeline with error/service-unavailable fallback to mailto; the hands crop sits top-right with its baked top hairline cropped."
+    },
+    {
+      "frame": "04-results-guidance",
+      "implementation_kind": "bespoke",
+      "implementation_owner": "src/components/pages/checkup/results-ledger.tsx",
+      "content_source": "section_manifest.json#04-results-guidance",
+      "asset_roles": [
+        "code-only live semantic content"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "Approved manifest fields (headline, body) render as live HTML text, led by \"Results should guide a conversation, not prescribe decisions.\"."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "Code-native section per the manifest image_treatment (\"white results surface with route links\"); live text and drawn elements only, no raster asset required."
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "Frame composition preserved: White ledger field with the manifest heading/body and the Review-related-services link; before completion the watercolor strips hold the ledger frame, after completion a live aria-live ledger groups the selections into…."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved navy/gold/ivory language retained on the #FFFFFF band per the manifest edge contract; Cormorant Garamond display over Inter body."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "390x844 recomposition per manifest: Stack the primary content group in narrative order while preserving asymmetric emphasis through offset margins and varied spacing; crop imagery around its declared focal point, keep all live text and links, and simplify…"
+        }
+      },
+      "ref": "_design_inputs/pages/checkup/refs/04-results-guidance.png",
+      "owners": [
+        "src/components/pages/checkup/checkup-tool.tsx",
+        "src/components/pages/checkup/results-ledger.tsx"
+      ],
+      "notes": "White ledger field with the manifest heading/body and the Review-related-services link; before completion the watercolor strips hold the ledger frame, after completion a live aria-live ledger groups the selections into discussion priorities with links to real planning routes, a Schedule CTA, a Start-over restart, and truthful email-delivery status. No scores, benchmarks, or advice language."
+    },
+    {
+      "frame": "05-privacy-boundary",
+      "implementation_kind": "bespoke",
+      "implementation_owner": "src/components/pages/checkup/privacy-boundary.tsx",
+      "content_source": "section_manifest.json#05-privacy-boundary",
+      "asset_roles": [
+        "code-only live semantic content"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "Approved manifest fields (headline, body) render as live HTML text, led by \"No sensitive records in the tool.\"."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "Code-native section per the manifest image_treatment (\"1536x512 strip with lock icon and live text\"); live text and drawn elements only, no raster asset required."
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "Frame composition preserved: Quiet ivory strip: ringed lock icon in the site stroke family, thin gold rule, live headline and body, generous negative space; route passes through both seams."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved navy/gold/ivory language retained on the #F6F2E8 band per the manifest edge contract; Cormorant Garamond display over Inter body."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "390x844 recomposition per manifest: Stack the primary content group in narrative order while preserving asymmetric emphasis through offset margins and varied spacing; crop imagery around its declared focal point, keep all live text and links, and simplify…"
+        }
+      },
+      "ref": "_design_inputs/pages/checkup/refs/05-privacy-boundary.png",
+      "owners": [
+        "src/components/pages/checkup/privacy-boundary.tsx"
+      ],
+      "notes": "Quiet ivory strip: ringed lock icon in the site stroke family, thin gold rule, live headline and body, generous negative space; route passes through both seams."
+    },
+    {
+      "frame": "06-next-step",
+      "implementation_kind": "bespoke",
+      "implementation_owner": "src/components/pages/checkup/next-step.tsx",
+      "content_source": "section_manifest.json#06-next-step",
+      "asset_roles": [
+        "consultation office close"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "Approved manifest fields (headline, body, primary_cta) render as live HTML text, led by \"Turn the checkup into a planning conversation.\"."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "Dedicated asset renders the declared subject \"consultation office close\" with the approved \"wide navy image\" crop and treatment."
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "Frame composition preserved: Dark close: display heading, body, gold Schedule-a-Strategy-Call CTA to /schedule; the office still life is a right edge rail with its baked left-edge text fragment cropped via a right-anchored slot; the page-local gold…."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved navy/gold/ivory language retained on the #0B1F3A band per the manifest edge contract; Cormorant Garamond display over Inter body."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "390x844 recomposition per manifest: Stack the primary content group in narrative order while preserving asymmetric emphasis through offset margins and varied spacing; crop imagery around its declared focal point, keep all live text and links, and simplify…"
+        }
+      },
+      "ref": "_design_inputs/pages/checkup/refs/06-next-step.png",
+      "owners": [
+        "src/components/pages/checkup/next-step.tsx"
+      ],
+      "notes": "Dark close: display heading, body, gold Schedule-a-Strategy-Call CTA to /schedule; the office still life is a right edge rail with its baked left-edge text fragment cropped via a right-anchored slot; the page-local gold line terminates at a node inside the section. The ref's CTA state-swatch rows are design-spec artifacts and are implemented as real hover/focus/active states, not rendered rows."
+    }
+  ]
+}

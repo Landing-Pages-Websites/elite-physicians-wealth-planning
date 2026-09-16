@@ -1,0 +1,193 @@
+{
+  "version": 1,
+  "slug": "services",
+  "route": "/services",
+  "sections": [
+    {
+      "frame": "01-index-hero",
+      "implementation_kind": "bespoke",
+      "implementation_owner": "src/components/pages/services/index-hero.tsx",
+      "content_source": "section_manifest.json#01-index-hero",
+      "asset_roles": [
+        "services index advisory office"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "Approved manifest fields (eyebrow, headline, body, primary_cta, boundary) render as live HTML text, led by \"Choose the planning discipline that matches the decision in front of you.\"."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "Dedicated asset renders the declared subject \"services index advisory office\" with the approved \"wide cinematic planning-room composition\" crop and treatment."
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "Frame composition preserved: Navy field with the section-owned worktable crop full-bleed right, gradient veil for copy contrast, live eyebrow/headline/body/gold CTA left, boundary line at the foot, mist fade seam, one sparse gold line from eyebrow…."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved navy/gold/ivory language retained on the #0B1F3A band per the manifest edge contract; Cormorant Garamond display over Inter body."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "390x844 recomposition per manifest: Preserve the headline and primary action before the image; use a 4:5 or 3:2 crop centered on the declared subject/focal point, never a blurred filler panel; stack overlays into live blocks, keep at least 70% of the…"
+        }
+      },
+      "ref": "_design_inputs/pages/services/refs/01-index-hero.png",
+      "owners": [
+        "src/app/(site)/services/page.tsx",
+        "src/app/(site)/services/services.css",
+        "src/components/pages/services/index-hero.tsx"
+      ],
+      "notes": "Navy field with the section-owned worktable crop full-bleed right, gradient veil for copy contrast, live eyebrow/headline/body/gold CTA left, boundary line at the foot, mist fade seam, one sparse gold line from eyebrow toward the plate; mobile keeps copy+CTA first then a 3:2 worktable crop."
+    },
+    {
+      "frame": "02-taxonomy-rail",
+      "implementation_kind": "bespoke",
+      "implementation_owner": "src/components/pages/services/taxonomy-rail.tsx",
+      "content_source": "section_manifest.json#02-taxonomy-rail",
+      "asset_roles": [
+        "code-only live semantic content"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "Approved manifest fields (headline, items) render as live HTML text, led by \"Browse by planning discipline.\"."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "Code-native section per the manifest image_treatment (\"1536x512 mist-blue strip with live topic labels\"); live text and drawn elements only, no raster asset required."
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "Frame composition preserved: Mist strip with centered heading and the five discipline labels scanning in one row separated by short gold dashes; coat crop anchors bottom-left and corridor crop top-right as subordinate edge cues; labels are live…."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved navy/gold/ivory language retained on the #DCE8F2 band per the manifest edge contract; Cormorant Garamond display over Inter body."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "390x844 recomposition per manifest: Convert multi-column ledgers or tables into full-width rule-separated rows in source order; preserve all decision labels and contextual links, move any documentary crop between logical groups, and use only one slim gold…"
+        }
+      },
+      "ref": "_design_inputs/pages/services/refs/02-taxonomy-rail.png",
+      "owners": [
+        "src/app/(site)/services/services.css",
+        "src/components/pages/services/taxonomy-rail.tsx"
+      ],
+      "notes": "Mist strip with centered heading and the five discipline labels scanning in one row separated by short gold dashes; coat crop anchors bottom-left and corridor crop top-right as subordinate edge cues; labels are live links to the five service routes; mobile converts to rule-separated rows."
+    },
+    {
+      "frame": "03-featured-path",
+      "implementation_kind": "bespoke",
+      "implementation_owner": "src/components/pages/services/featured-path.tsx",
+      "content_source": "section_manifest.json#03-featured-path",
+      "asset_roles": [
+        "featured service spread"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "Approved manifest fields (headline, body, links) render as live HTML text, led by \"Start where the pressure is clearest.\"."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "Dedicated asset renders the declared subject \"featured service spread\" with the approved \"asymmetric editorial spread with one large office image and live route labels\" crop and treatment."
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "Frame composition preserved: Ivory spread: narrow left field carries headline/body, the tax-folder detail and the navy 'Open tax planning' CTA; the physician-planning crop dominates the right two-thirds; the gold route resolves into three live…."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved navy/gold/ivory language retained on the #F6F2E8 band per the manifest edge contract; Cormorant Garamond display over Inter body."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "390x844 recomposition per manifest: Convert the desktop diagram into a vertical reading rail in source order; keep every label and connector endpoint, place supporting imagery after the decisive step, avoid horizontal scrolling, and redraw the gold…"
+        }
+      },
+      "ref": "_design_inputs/pages/services/refs/03-featured-path.png",
+      "owners": [
+        "src/app/(site)/services/services.css",
+        "src/components/pages/services/featured-path.tsx"
+      ],
+      "notes": "Ivory spread: narrow left field carries headline/body, the tax-folder detail and the navy 'Open tax planning' CTA; the physician-planning crop dominates the right two-thirds; the gold route resolves into three live planning links (tax, practice owner, retirement) under the photograph, with the connector segments between stops set as equal flex-basis-0 lengths so the route rhythm is even per the ref; mobile stacks with a left-edge gold rail."
+    },
+    {
+      "frame": "04-topic-ledger",
+      "implementation_kind": "bespoke",
+      "implementation_owner": "src/components/pages/services/topic-ledger.tsx",
+      "content_source": "section_manifest.json#04-topic-ledger",
+      "asset_roles": [
+        "service comparison ledger"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "Approved manifest fields (headline, body, links) render as live HTML text, led by \"Each service connects to the others.\"."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "Code-native section per the manifest image_treatment (\"mostly live-text ledger with small route-specific photo insets\"); live text and drawn elements only, no raster asset required."
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "Frame composition preserved: Quiet white ledger: conspicuous left field with headline/body (body rewritten from the manifest's spec phrasing into visitor-facing orientation copy — 'These services are connected planning decisions, not isolated…."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved navy/gold/ivory language retained on the #FFFFFF band per the manifest edge contract; Cormorant Garamond display over Inter body."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "390x844 recomposition per manifest: Convert multi-column ledgers or tables into full-width rule-separated rows in source order; preserve all decision labels and contextual links, move any documentary crop between logical groups, and use only one slim gold…"
+        }
+      },
+      "ref": "_design_inputs/pages/services/refs/04-topic-ledger.png",
+      "owners": [
+        "src/app/(site)/services/services.css",
+        "src/components/pages/services/topic-ledger.tsx"
+      ],
+      "notes": "Quiet white ledger: conspicuous left field with headline/body (body rewritten from the manifest's spec phrasing into visitor-facing orientation copy — 'These services are connected planning decisions, not isolated products…'), five rule-plate rows on one gold spine, each row a live link with its own section-owned thumbnail, alternating warm/cool ledger plates, the wealth row carrying the frame's restrained 'Open wealth management' active state, and a navy exit band into the closing section."
+    },
+    {
+      "frame": "05-next-best-step",
+      "implementation_kind": "bespoke",
+      "implementation_owner": "src/components/pages/services/next-best-step.tsx",
+      "content_source": "section_manifest.json#05-next-best-step",
+      "asset_roles": [
+        "private advisory office closing field"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "Approved manifest fields (headline, body, primary_cta, secondary_cta, boundary) render as live HTML text, led by \"Choose the next step that matches your readiness.\"."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "Dedicated asset renders the declared subject \"private advisory office closing field\" with the approved \"wide navy close, no faces\" crop and treatment."
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "Frame composition preserved: Navy close flanked by the lamp-and-chair and shelf ambience crops; centered headline/body, gold fork line branching into the strategy-call button (/schedule) and the guide request link (/physician-tax-retirement-guide)…."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "PASS with documented deliberate adaptation preserving the approved semantic gate: the primary action is a gold fill per the sitewide one-button system rather than the frame's outlined card pair, so CTA hierarchy stays consistent with the approved homepage"
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "390x844 recomposition per manifest: Stack the primary content group in narrative order while preserving asymmetric emphasis through offset margins and varied spacing; crop imagery around its declared focal point, keep all live text and links, and simplify…"
+        }
+      },
+      "ref": "_design_inputs/pages/services/refs/05-next-best-step.png",
+      "owners": [
+        "src/app/(site)/services/services.css",
+        "src/components/pages/services/next-best-step.tsx"
+      ],
+      "notes": "Navy close flanked by the lamp-and-chair and shelf ambience crops; centered headline/body, gold fork line branching into the strategy-call button (/schedule) and the guide request link (/physician-tax-retirement-guide); boundary line in a quiet bordered panel; the page-local gold line ends on a closing node."
+    }
+  ]
+}

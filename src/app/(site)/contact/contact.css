@@ -1,0 +1,229 @@
+/*
+ * /contact — "cnt-" page surfaces.
+ * Same recipe style as site.css: token-only colours, CSS-sized photo
+ * slots, gradient veils, and one sparse gold line whose seam crossings
+ * sit at a fixed 8% so every band reads as the same page-local thread.
+ */
+
+/* ---------- 01 contact-hero: navy office image-as-canvas ---------- */
+
+.cnt-hero {
+  background: linear-gradient(
+    162deg,
+    var(--color-ink) 0%,
+    var(--color-ink-deep) 52%,
+    var(--color-ink-deeper) 100%
+  );
+}
+
+.cnt-hero-media {
+  position: absolute;
+  inset-block: 0;
+  inset-inline-end: 0;
+  width: 60%;
+}
+
+.cnt-hero-media img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: 68% center;
+}
+
+/* Solid navy under the copy column, opening over the lamplit desk. */
+.cnt-hero-veil {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(
+      90deg,
+      var(--color-ink-deep) 38%,
+      rgba(6, 21, 39, 0.8) 54%,
+      rgba(6, 21, 39, 0.12) 74%,
+      rgba(6, 21, 39, 0.3) 100%
+    ),
+    linear-gradient(180deg, rgba(4, 16, 31, 0.82) 0%, rgba(4, 16, 31, 0) 26%);
+}
+
+.cnt-hero-media-mobile {
+  aspect-ratio: 3 / 2;
+  overflow: hidden;
+}
+
+.cnt-hero-media-mobile img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: 60% 40%;
+}
+
+/* The ref's soft ivory arc rising into the verified-contact strip. */
+.cnt-hero-curve {
+  position: absolute;
+  bottom: -1px;
+  left: -12%;
+  width: 124%;
+  height: 56px;
+  background: var(--color-ivory);
+  border-radius: 100% 100% 0 0;
+}
+
+/* ---------- Page-local coordination line: seam stubs at 8% ---------- */
+
+.cnt-seam-in::before,
+.cnt-seam-out::after {
+  content: "";
+  position: absolute;
+  left: 8%;
+  width: 1.5px;
+  height: 40px;
+  background: var(--color-gold);
+  opacity: 0.85;
+  display: none;
+  z-index: 5;
+}
+
+.cnt-seam-in::before {
+  top: 0;
+}
+
+.cnt-seam-out::after {
+  bottom: 0;
+}
+
+@media (min-width: 1024px) {
+  .cnt-seam-in::before,
+  .cnt-seam-out::after {
+    display: block;
+  }
+}
+
+/* ---------- 02 verified-contact: ivory node strip ---------- */
+
+.cnt-verified {
+  background: var(--color-ivory);
+}
+
+/* The horizontal gold thread the three contact nodes sit on. */
+.cnt-node-rail::before {
+  content: "";
+  position: absolute;
+  top: 22px;
+  inset-inline: 0;
+  height: 1px;
+  background: var(--color-gold);
+  opacity: 0.55;
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .cnt-node-rail::before {
+    display: block;
+  }
+}
+
+/* ---------- 03 contact-form: mist inquiry dossier ---------- */
+
+.cnt-form-band {
+  background: linear-gradient(
+    180deg,
+    var(--color-mist) 0%,
+    var(--color-mist-deep) 100%
+  );
+}
+
+.cnt-form-panel {
+  background: #ffffff;
+  border: 1px solid rgba(11, 31, 58, 0.14);
+  box-shadow: 0 28px 56px -36px rgba(11, 31, 58, 0.45);
+}
+
+/* Left desk rail: tall editorial crop on desktop, shallow band after the
+   form on mobile — never covering the controls. */
+.cnt-form-rail {
+  overflow: hidden;
+}
+
+.cnt-form-rail img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+}
+
+/* ---------- 04 referral-context: white ledger with role tabs ---------- */
+
+.cnt-referral-photo {
+  aspect-ratio: 317 / 480;
+  overflow: hidden;
+  border: 1px solid rgba(11, 31, 58, 0.1);
+  box-shadow: 0 24px 48px -32px rgba(11, 31, 58, 0.35);
+}
+
+.cnt-referral-photo img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.cnt-referral-tab {
+  background: var(--color-ivory-warm);
+  border: 1px solid rgba(11, 31, 58, 0.14);
+  box-shadow: 0 8px 16px -10px rgba(11, 31, 58, 0.35);
+}
+
+/* ---------- 05 booking-alternative: ivory panel, photo edge rail ---------- */
+
+.cnt-booking {
+  background: var(--color-ivory);
+}
+
+/* Right rail touches top and bottom edges; its baked navy foot meets the
+   navy disclosure strip below, per the composition map's edge contract. */
+.cnt-booking-rail {
+  position: absolute;
+  inset-block: 0;
+  inset-inline-end: 0;
+  width: 240px;
+  display: none;
+}
+
+@media (min-width: 1280px) {
+  .cnt-booking-rail {
+    display: block;
+  }
+}
+
+.cnt-booking-rail img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center bottom;
+}
+
+/* ---------- 06 disclosure-boundary: navy closing strip ---------- */
+
+.cnt-disclosure {
+  background: var(--color-ink-deep);
+}
+
+/* Terminal dot: the page line ends inside this strip, not in the footer. */
+.cnt-line-end {
+  position: absolute;
+  top: 40px;
+  left: 8%;
+  height: 7px;
+  width: 7px;
+  transform: translateX(-45%);
+  border-radius: 9999px;
+  background: var(--color-gold);
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .cnt-line-end {
+    display: block;
+  }
+}

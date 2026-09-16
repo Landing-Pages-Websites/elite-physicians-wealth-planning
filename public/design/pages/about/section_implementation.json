@@ -1,0 +1,234 @@
+{
+  "version": 1,
+  "slug": "about",
+  "route": "/about",
+  "sections": [
+    {
+      "frame": "01-origin-hero",
+      "implementation_kind": "bespoke",
+      "implementation_owner": "src/components/pages/about/origin-hero.tsx",
+      "content_source": "section_manifest.json#01-origin-hero",
+      "asset_roles": [
+        "private physician advisory office"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "Approved manifest fields (eyebrow, headline, body, primary_cta) render as live HTML text, led by \"Elite Physicians Wealth Planning coordinates a medical professional's financial life into one strategy.\"."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "Dedicated asset renders the declared subject \"private physician advisory office\" with the approved \"wide image-as-canvas, no people\" crop and treatment."
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "Frame composition preserved: Image-as-canvas hero with dark left veil, gold-accented 'coordinates', and gold CTA."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved navy/gold/ivory language retained on the #0B1F3A band per the manifest edge contract; Cormorant Garamond display over Inter body."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "390x844 recomposition per manifest: Preserve the headline and primary action before the image; use a 4:5 or 3:2 crop centered on the declared subject/focal point, never a blurred filler panel; stack overlays into live blocks, keep at least 70% of the…"
+        }
+      },
+      "ref": "_design_inputs/pages/about/refs/01-origin-hero.png",
+      "owners": [
+        "src/app/(site)/about/page.tsx",
+        "src/app/(site)/about/about.css",
+        "src/components/pages/about/origin-hero.tsx"
+      ],
+      "notes": "Image-as-canvas hero with dark left veil, gold-accented 'coordinates', and gold CTA. The extract's left 12% (two baked headline letterforms from the source frame) is windowed out via CSS crop; desk focal subject stays fully visible on the right."
+    },
+    {
+      "frame": "02-coordination-philosophy",
+      "implementation_kind": "bespoke",
+      "implementation_owner": "src/components/pages/about/coordination-philosophy.tsx",
+      "content_source": "section_manifest.json#02-coordination-philosophy",
+      "asset_roles": [
+        "consult ledger essay field"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "Approved manifest fields (headline, body) render as live HTML text, led by \"A physician's financial life should work as one coordinated system.\"."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "Dedicated asset renders the declared subject \"consult ledger essay field\" with the approved \"ivory editorial spread with thin gold line\" crop and treatment."
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "Frame composition preserved: Typography-first ivory essay: display heading, thin gold rule, body copy left; ledger-detail photograph anchored lower-right; upper-right stays deliberately empty."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved navy/gold/ivory language retained on the #F6F2E8 band per the manifest edge contract; Cormorant Garamond display over Inter body."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "390x844 recomposition per manifest: Stack the primary content group in narrative order while preserving asymmetric emphasis through offset margins and varied spacing; crop imagery around its declared focal point, keep all live text and links, and simplify…"
+        }
+      },
+      "ref": "_design_inputs/pages/about/refs/02-coordination-philosophy.png",
+      "owners": [
+        "src/app/(site)/about/page.tsx",
+        "src/components/pages/about/coordination-philosophy.tsx"
+      ],
+      "notes": "Typography-first ivory essay: display heading, thin gold rule, body copy left; ledger-detail photograph anchored lower-right; upper-right stays deliberately empty."
+    },
+    {
+      "frame": "03-planning-scope",
+      "implementation_kind": "bespoke",
+      "implementation_owner": "src/components/pages/about/planning-scope.tsx",
+      "content_source": "section_manifest.json#03-planning-scope",
+      "asset_roles": [
+        "five-discipline ledger"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "Approved manifest fields (headline, items, boundary) render as live HTML text, led by \"Five disciplines, one planning relationship.\"."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "Code-native section per the manifest image_treatment (\"white typographic ledger with no icons as badges\"); live text and drawn elements only, no raster asset required."
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "Frame composition preserved: Still-life bleeds flush to left/top/bottom edges; five disciplines in fixed order behind gold arrows in rule-separated rows; boundary line between list and 'Explore services'."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved navy/gold/ivory language retained on the #FFFFFF band per the manifest edge contract; Cormorant Garamond display over Inter body."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "390x844 recomposition per manifest: Convert multi-column ledgers or tables into full-width rule-separated rows in source order; preserve all decision labels and contextual links, move any documentary crop between logical groups, and use only one slim gold…"
+        }
+      },
+      "ref": "_design_inputs/pages/about/refs/03-planning-scope.png",
+      "owners": [
+        "src/app/(site)/about/page.tsx",
+        "src/app/(site)/about/about.css",
+        "src/components/pages/about/planning-scope.tsx"
+      ],
+      "notes": "Still-life bleeds flush to left/top/bottom edges; five disciplines in fixed order behind gold arrows in rule-separated rows; boundary line between list and 'Explore services'. The extract's baked gold connector geometry (right ~14% and top edge) is windowed out; Purpose/Clarity/Legacy spines and pen remain visible."
+    },
+    {
+      "frame": "04-fiscal-vision-relationship",
+      "implementation_kind": "bespoke",
+      "implementation_owner": "src/components/pages/about/fiscal-vision-relationship.tsx",
+      "content_source": "section_manifest.json#04-fiscal-vision-relationship",
+      "asset_roles": [
+        "brand relationship office document"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "PASS with documented deliberate adaptation preserving the approved semantic gate: the manifest body is production guidance ('Use this relationship as an accountability and brand-context statement without inventing a separate parent-company website or unsupported credentials'); rendered a customer-facing equivalent with the same meaning and no new claims"
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "Dedicated asset renders the declared subject \"brand relationship office document\" with the approved \"mist-blue document close crop\" crop and treatment."
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "Frame composition preserved: White document card with gold corner accent over mist ground; columns photograph bleeds off the right edge."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "PASS with documented deliberate adaptation preserving the approved semantic gate: section ground uses the page_flow band #DCE8F2 (manifest edge contract) instead of the ref's sandstone; card, corner accent, and right-bleed columns photo match the ref"
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "390x844 recomposition per manifest: Stack the primary content group in narrative order while preserving asymmetric emphasis through offset margins and varied spacing; crop imagery around its declared focal point, keep all live text and links, and simplify…"
+        }
+      },
+      "ref": "_design_inputs/pages/about/refs/04-fiscal-vision-relationship.png",
+      "owners": [
+        "src/app/(site)/about/page.tsx",
+        "src/app/(site)/about/about.css",
+        "src/components/pages/about/fiscal-vision-relationship.tsx"
+      ],
+      "notes": "White document card with gold corner accent over mist ground; columns photograph bleeds off the right edge. The extract's left 26% (baked navy letterforms) is windowed out — 74% kept against the >=70% crop contract. No interactive element, per the manifest."
+    },
+    {
+      "frame": "05-michael-anchor",
+      "implementation_kind": "bespoke",
+      "implementation_owner": "src/components/pages/about/michael-anchor.tsx",
+      "content_source": "section_manifest.json#05-michael-anchor",
+      "asset_roles": [
+        "Michael portrait reserve in planner essay"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "Approved manifest fields (headline, body, link) render as live HTML text, led by \"Meet the planner coordinating the strategy.\"."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "Dedicated asset renders the declared subject \"Michael portrait reserve in planner essay\" with the approved \"neutral no-face reserve or authoritative portrait at build time\" crop and treatment."
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "Frame composition preserved: Approved supplied portrait (owner copy of hero-founder.png) in a gold-edged plate, full likeness visible, no crop or alteration; heading, gold divider, verbatim bio line, and 'Meet Michael Epps' link right."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved navy/gold/ivory language retained on the #F6F2E8 band per the manifest edge contract; Cormorant Garamond display over Inter body."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "390x844 recomposition per manifest: Stack the primary content group in narrative order while preserving asymmetric emphasis through offset margins and varied spacing; crop imagery around its declared focal point, keep all live text and links, and simplify…"
+        }
+      },
+      "ref": "_design_inputs/pages/about/refs/05-michael-anchor.png",
+      "owners": [
+        "src/app/(site)/about/page.tsx",
+        "src/app/(site)/about/about.css",
+        "src/components/pages/about/michael-anchor.tsx"
+      ],
+      "notes": "Approved supplied portrait (owner copy of hero-founder.png) in a gold-edged plate, full likeness visible, no crop or alteration; heading, gold divider, verbatim bio line, and 'Meet Michael Epps' link right. The ref's dark prop backdrop was not extracted for this section, so the plate sits directly on the ivory field. Design-review fix: visible bio line normalized to the exact brand string \"Elite Physicians Wealth Planning\"."
+    },
+    {
+      "frame": "06-next-step",
+      "implementation_kind": "bespoke",
+      "implementation_owner": "src/components/pages/about/next-step.tsx",
+      "content_source": "section_manifest.json#06-next-step",
+      "asset_roles": [
+        "dark closing office with process links"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "Approved manifest fields (headline, links, primary_cta) render as live HTML text, led by \"See how the coordination works.\"."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "PASS with documented deliberate adaptation preserving the approved semantic gate: the extract's left ~52% carries baked display type and a baked gold path from the source frame, so only the clean lamp-desk half ships (below the >=65% crop contract); truth contract forbids shipping text-bearing raster"
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "Frame composition preserved: Navy close: headline, continuous gold route through three circle-arrow nodes labeled with the literal paths (/our-process, /services, /schedule — all live links), solid gold primary CTA plus 'See the process' secondary…."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved navy/gold/ivory language retained on the #0B1F3A band per the manifest edge contract; Cormorant Garamond display over Inter body."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "390x844 recomposition per manifest: Stack the primary content group in narrative order while preserving asymmetric emphasis through offset margins and varied spacing; crop imagery around its declared focal point, keep all live text and links, and simplify…"
+        }
+      },
+      "ref": "_design_inputs/pages/about/refs/06-next-step.png",
+      "owners": [
+        "src/app/(site)/about/page.tsx",
+        "src/app/(site)/about/about.css",
+        "src/components/pages/about/next-step.tsx"
+      ],
+      "notes": "Navy close: headline, continuous gold route through three circle-arrow nodes labeled with the literal paths (/our-process, /services, /schedule — all live links), solid gold primary CTA plus 'See the process' secondary link; page-local gold line terminates at a dot inside this section."
+    }
+  ]
+}

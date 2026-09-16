@@ -1,0 +1,237 @@
+{
+  "version": 1,
+  "slug": "legacy-estate-planning",
+  "route": "/legacy-estate-planning",
+  "sections": [
+    {
+      "frame": "01-opening-docket",
+      "implementation_kind": "shared-designed",
+      "implementation_owner": "src/components/pages/planning-docket/opening-docket.tsx",
+      "shared_basis": "The five service docket manifests (tax-planning-for-physicians, wealth-management-for-physicians, retirement-planning-for-physicians, legacy-estate-planning, practice-owner-planning) in revision-2026-09-15-image-first share the identical six-frame docket grammar (01-opening-docket through 06-next-step); the approved planning-docket family component src/components/pages/planning-docket/opening-docket.tsx renders this frame with page content from src/components/pages/planning-docket/content/legacy-estate-planning.ts.",
+      "content_source": "section_manifest.json#01-opening-docket",
+      "asset_roles": [
+        "estate coordination still life with beneficiary ledger, family-document sleeve, and attorney coordination tab"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "Approved manifest fields (eyebrow, headline, body, primary_cta, secondary_link, boundary) render as live HTML text, led by \"Legacy planning helps connect your wealth to the people and causes that matter most.\"."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "Dedicated asset renders the declared subject \"estate coordination still life with beneficiary ledger, family-document sleeve, and attorney coordination tab\" with the approved \"wide editorial crop, desk-height perspective, no decorative charts\" crop and treatment."
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "Frame composition preserved: Canvas opening with new 'deep' veil: the estate coordination ledger scene dissolves into a near-solid navy left field (which also fully absorbs the baked headline fragments the extraction carried on the raster's left…."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved navy/gold/ivory language retained on the #0B1F3A band per the manifest edge contract; Cormorant Garamond display over Inter body."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "390x844 recomposition per manifest: Preserve the headline and primary action before the image; use a 4:5 or 3:2 crop centered on the declared subject/focal point, never a blurred filler panel; stack overlays into live blocks, keep at least 70% of the…"
+        }
+      },
+      "ref": "design_refs/revision-2026-09-15-image-first/pages/legacy-estate-planning/refs/01-opening-docket.png",
+      "owners": [
+        "src/app/(site)/legacy-estate-planning/page.tsx",
+        "src/components/pages/planning-docket/opening-docket.tsx",
+        "src/components/pages/planning-docket/docket-ext.css"
+      ],
+      "notes": "Canvas opening with new 'deep' veil: the estate coordination ledger scene dissolves into a near-solid navy left field (which also fully absorbs the baked headline fragments the extraction carried on the raster's left margin); live eyebrow/H1/CTAs, disclosure band, lower-right gold exit."
+    },
+    {
+      "frame": "02-demand-situations",
+      "implementation_kind": "shared-designed",
+      "implementation_owner": "src/components/pages/planning-docket/demand-situations.tsx",
+      "shared_basis": "The five service docket manifests (tax-planning-for-physicians, wealth-management-for-physicians, retirement-planning-for-physicians, legacy-estate-planning, practice-owner-planning) in revision-2026-09-15-image-first share the identical six-frame docket grammar (01-opening-docket through 06-next-step); the approved planning-docket family component src/components/pages/planning-docket/demand-situations.tsx renders this frame with page content from src/components/pages/planning-docket/content/legacy-estate-planning.ts.",
+      "content_source": "section_manifest.json#02-demand-situations",
+      "asset_roles": [
+        "editorial still life for legacy planning decision timing"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "Approved manifest fields (headline, body, items) render as live HTML text, led by \"Situations that should trigger a review.\"."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "PASS with documented deliberate adaptation preserving the approved semantic gate: the extracted still life's folder-tab lettering is generated and partially illegible at full zoom (asset-level; the extraction plan mandates this exact crop) — flagged for the central visual pass"
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "Frame composition preserved: New 'mirror' variant: estate binder portrait bleeds off the left edge at desktop; intro and the gold-spined ledger hold the right column with circled stroke glyphs (beneficiary/trust/giving/property/family) per trigger…."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved navy/gold/ivory language retained on the #F6F2E8 band per the manifest edge contract; Cormorant Garamond display over Inter body."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "390x844 recomposition per manifest: Stack the primary content group in narrative order while preserving asymmetric emphasis through offset margins and varied spacing; crop imagery around its declared focal point, keep all live text and links, and simplify…"
+        }
+      },
+      "ref": "design_refs/revision-2026-09-15-image-first/pages/legacy-estate-planning/refs/02-demand-situations.png",
+      "owners": [
+        "src/components/pages/planning-docket/demand-situations.tsx",
+        "src/components/pages/planning-docket/docket-glyphs.tsx",
+        "src/components/pages/planning-docket/docket-ext.css"
+      ],
+      "notes": "New 'mirror' variant: estate binder portrait bleeds off the left edge at desktop; intro and the gold-spined ledger hold the right column with circled stroke glyphs (beneficiary/trust/giving/property/family) per trigger; mobile stacks intro + ledger first, portrait after — the focal trigger list stays dominant."
+    },
+    {
+      "frame": "03-documents-needed",
+      "implementation_kind": "shared-designed",
+      "implementation_owner": "src/components/pages/planning-docket/documents-needed.tsx",
+      "shared_basis": "The five service docket manifests (tax-planning-for-physicians, wealth-management-for-physicians, retirement-planning-for-physicians, legacy-estate-planning, practice-owner-planning) in revision-2026-09-15-image-first share the identical six-frame docket grammar (01-opening-docket through 06-next-step); the approved planning-docket family component src/components/pages/planning-docket/documents-needed.tsx renders this frame with page content from src/components/pages/planning-docket/content/legacy-estate-planning.ts.",
+      "content_source": "section_manifest.json#03-documents-needed",
+      "asset_roles": [
+        "cropped documents for legacy planning planning"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "Approved manifest fields (headline, body, items) render as live HTML text, led by \"What to have in view.\"."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "Dedicated asset renders the declared subject \"cropped documents for legacy planning planning\" with the approved \"1536x512 true strip, hands absent or non-identifiable\" crop and treatment."
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "Frame composition preserved: Top media position with new 'thread' item style: the estate-summary strip anchors the top-right corner while the four live items sit under gold-circled checks seated on one continuous gold hairline (desktop); mist exit…."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved navy/gold/ivory language retained on the #FFFFFF band per the manifest edge contract; Cormorant Garamond display over Inter body."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "390x844 recomposition per manifest: Stack the primary content group in narrative order while preserving asymmetric emphasis through offset margins and varied spacing; crop imagery around its declared focal point, keep all live text and links, and simplify…"
+        }
+      },
+      "ref": "design_refs/revision-2026-09-15-image-first/pages/legacy-estate-planning/refs/03-documents-needed.png",
+      "owners": [
+        "src/components/pages/planning-docket/documents-needed.tsx",
+        "src/components/pages/planning-docket/docket-ext.css"
+      ],
+      "notes": "Top media position with new 'thread' item style: the estate-summary strip anchors the top-right corner while the four live items sit under gold-circled checks seated on one continuous gold hairline (desktop); mist exit band hands the line to the boundary diagram."
+    },
+    {
+      "frame": "04-coordination-boundary",
+      "implementation_kind": "shared-designed",
+      "implementation_owner": "src/components/pages/planning-docket/coordination-boundary.tsx",
+      "shared_basis": "The five service docket manifests (tax-planning-for-physicians, wealth-management-for-physicians, retirement-planning-for-physicians, legacy-estate-planning, practice-owner-planning) in revision-2026-09-15-image-first share the identical six-frame docket grammar (01-opening-docket through 06-next-step); the approved planning-docket family component src/components/pages/planning-docket/coordination-boundary.tsx renders this frame with page content from src/components/pages/planning-docket/content/legacy-estate-planning.ts.",
+      "content_source": "section_manifest.json#04-coordination-boundary",
+      "asset_roles": [
+        "separate advisory rooms connected by a single gold line"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "Approved manifest fields (headline, body, items) render as live HTML text, led by \"What Elite coordinates and what stays with the right professional.\"."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "Code-native section per the manifest image_treatment (\"diagram-forward 16:9 composition, no faces, no credential badges\"); live text and drawn elements only, no raster asset required."
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "Frame composition preserved: New code-native 'cards' layout (no raster ships): double-framed white label cards (CPA left, attorney right, TPA below) around the double-framed navy Elite hub card, element-anchored gold connectors on the mist band…."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved navy/gold/ivory language retained on the #DCE8F2 band per the manifest edge contract; Cormorant Garamond display over Inter body."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "390x844 recomposition per manifest: Stack the primary content group in narrative order while preserving asymmetric emphasis through offset margins and varied spacing; crop imagery around its declared focal point, keep all live text and links, and simplify…"
+        }
+      },
+      "ref": "design_refs/revision-2026-09-15-image-first/pages/legacy-estate-planning/refs/04-coordination-boundary.png",
+      "owners": [
+        "src/components/pages/planning-docket/coordination-boundary.tsx",
+        "src/components/pages/planning-docket/docket-ext.css"
+      ],
+      "notes": "New code-native 'cards' layout (no raster ships): double-framed white label cards (CPA left, attorney right, TPA below) around the double-framed navy Elite hub card, element-anchored gold connectors on the mist band; mobile collapses to the family gold rail."
+    },
+    {
+      "frame": "05-adjacent-planning",
+      "implementation_kind": "shared-designed",
+      "implementation_owner": "src/components/pages/planning-docket/adjacent-planning.tsx",
+      "shared_basis": "The five service docket manifests (tax-planning-for-physicians, wealth-management-for-physicians, retirement-planning-for-physicians, legacy-estate-planning, practice-owner-planning) in revision-2026-09-15-image-first share the identical six-frame docket grammar (01-opening-docket through 06-next-step); the approved planning-docket family component src/components/pages/planning-docket/adjacent-planning.tsx renders this frame with page content from src/components/pages/planning-docket/content/legacy-estate-planning.ts.",
+      "content_source": "section_manifest.json#05-adjacent-planning",
+      "asset_roles": [
+        "adjacent service ledger for legacy planning"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "Approved manifest fields (headline, body, links) render as live HTML text, led by \"The neighboring decisions.\"."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "Dedicated asset renders the declared subject \"adjacent service ledger for legacy planning\" with the approved \"mostly typographic ledger with small route-specific photo insets\" crop and treatment."
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "Frame composition preserved: Stair layout with the legacy options: rows step down-right (owned thumbnails + literal paths) for /wealth-management-for-physicians, /retirement-planning-for-physicians…."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved navy/gold/ivory language retained on the #F6F2E8 band per the manifest edge contract; Cormorant Garamond display over Inter body."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "390x844 recomposition per manifest: Stack the primary content group in narrative order while preserving asymmetric emphasis through offset margins and varied spacing; crop imagery around its declared focal point, keep all live text and links, and simplify…"
+        }
+      },
+      "ref": "design_refs/revision-2026-09-15-image-first/pages/legacy-estate-planning/refs/05-adjacent-planning.png",
+      "owners": [
+        "src/components/pages/planning-docket/adjacent-planning.tsx",
+        "src/components/pages/planning-docket/docket-ext.css"
+      ],
+      "notes": "Stair layout with the legacy options: rows step down-right (owned thumbnails + literal paths) for /wealth-management-for-physicians, /retirement-planning-for-physicians, /insights/beneficiaries-trusts-ownership-checklist, /insights/long-term-care-survivor-planning; 'Explore related planning' aligns to the seam's right end and the line descends into the navy band onto a gold dot (exitNode 'dot')."
+    },
+    {
+      "frame": "06-next-step",
+      "implementation_kind": "shared-designed",
+      "implementation_owner": "src/components/pages/planning-docket/next-step.tsx",
+      "shared_basis": "The five service docket manifests (tax-planning-for-physicians, wealth-management-for-physicians, retirement-planning-for-physicians, legacy-estate-planning, practice-owner-planning) in revision-2026-09-15-image-first share the identical six-frame docket grammar (01-opening-docket through 06-next-step); the approved planning-docket family component src/components/pages/planning-docket/next-step.tsx renders this frame with page content from src/components/pages/planning-docket/content/legacy-estate-planning.ts.",
+      "content_source": "section_manifest.json#06-next-step",
+      "asset_roles": [
+        "private advisory office at dusk with open chair and planning dossier"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "Approved manifest fields (headline, body, primary_cta, boundary) render as live HTML text, led by \"Bring the decision into one coordinated strategy.\"."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "Dedicated asset renders the declared subject \"private advisory office at dusk with open chair and planning dossier\" with the approved \"wide navy field, no people, strong negative space\" crop and treatment."
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "Frame composition preserved: Family close, media right: lamp-lit study with the open planning dossier anchors the right field (the raster's baked gold entry curve reads as the seam line from 05); decision group left with gold corner rule…."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved navy/gold/ivory language retained on the #0B1F3A band per the manifest edge contract; Cormorant Garamond display over Inter body."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "390x844 recomposition per manifest: Stack the primary content group in narrative order while preserving asymmetric emphasis through offset margins and varied spacing; crop imagery around its declared focal point, keep all live text and links, and simplify…"
+        }
+      },
+      "ref": "design_refs/revision-2026-09-15-image-first/pages/legacy-estate-planning/refs/06-next-step.png",
+      "owners": [
+        "src/components/pages/planning-docket/next-step.tsx",
+        "src/components/pages/planning-docket/content/legacy-estate-planning.ts"
+      ],
+      "notes": "Family close, media right: lamp-lit study with the open planning dossier anchors the right field (the raster's baked gold entry curve reads as the seam line from 05); decision group left with gold corner rule terminating the page-local line; framed disclosure; CTA to /schedule."
+    }
+  ]
+}

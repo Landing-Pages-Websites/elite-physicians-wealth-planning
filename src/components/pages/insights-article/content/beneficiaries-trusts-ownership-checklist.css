@@ -1,0 +1,38 @@
+/*
+ * Page-owned frame recipes for /insights/beneficiaries-trusts-ownership-checklist.
+ * Extends the family .art-frame system (insights-article.css) without touching
+ * it: each class pins the slot aspect ratio to the raster's visible rect and,
+ * where the extraction carries baked artifacts, applies the exact overflow
+ * crop. Percentages: width = fullW/visW, left = -x0/visW, top = -y0/visH.
+ */
+
+.art-frame--est-teaser {
+  /* 456x864 minus the baked ivory-to-white seam band along the bottom:
+     visible rect (0,0,456,716). */
+  aspect-ratio: 456 / 716;
+}
+
+.art-frame--est-gate {
+  /* Clean full frame 740x864 (the gold coordination line crossing the plate
+     is the approved ref's own in-photo motif). */
+  aspect-ratio: 740 / 864;
+}
+
+.art-frame--est-review {
+  /* 216x408 minus two baked gold hairlines (rows 40-41 full width and row
+     287 right half): visible rect (0,46,216,282). */
+  aspect-ratio: 216 / 236;
+}
+.art-frame--est-review > img {
+  top: -19.492%;
+}
+
+.art-frame--est-related {
+  /* 470x660 minus the baked ivory mat border: visible rect (13,13,457,647). */
+  aspect-ratio: 444 / 634;
+}
+.art-frame--est-related > img {
+  width: 105.856%;
+  left: -2.928%;
+  top: -2.05%;
+}

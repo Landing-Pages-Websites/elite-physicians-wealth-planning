@@ -1,0 +1,159 @@
+/*
+ * insights-article family — shared recipes for all twelve /insights/* pages.
+ * Photo plates, veils, seam stubs and exact frame crops only; every heading,
+ * label and link is live HTML styled with tokens/utilities. Prefix: art-.
+ */
+
+/* ---------- page-local coordination seam ----------
+   One sparse gold line crosses each section seam at a constant x, per the
+   article page_flow motif contract (hero → teaser → gate → strip → related).
+   The related-reading section ends the line on a node instead of an exit. */
+.art-seam-top::before,
+.art-seam-bottom::after {
+  content: "";
+  position: absolute;
+  left: clamp(1.25rem, 12%, 11rem);
+  width: 1px;
+  height: 3.5rem;
+  background: var(--color-gold);
+  opacity: 0.8;
+  pointer-events: none;
+}
+.art-seam-top::before {
+  top: 0;
+}
+.art-seam-bottom::after {
+  bottom: 0;
+}
+
+/* ---------- 01 editorial-state-hero: navy masthead ---------- */
+.art-hero {
+  background: linear-gradient(
+    180deg,
+    var(--color-ink-deep) 0%,
+    var(--color-ink-deeper) 78%,
+    var(--color-ink) 100%
+  );
+}
+
+/* The hero plate blends into the navy field from the copy side. The opaque
+   run to 24% also guarantees that the extractions' left-edge artifacts
+   (headline glyph fragments baked into two of the twelve source rasters)
+   can never surface at any plate aspect ratio. */
+.art-hero-veil {
+  background: linear-gradient(
+    90deg,
+    var(--color-ink-deep) 0%,
+    var(--color-ink-deep) 24%,
+    rgba(6, 21, 39, 0.55) 48%,
+    rgba(6, 21, 39, 0.08) 78%,
+    rgba(6, 21, 39, 0) 100%
+  );
+}
+
+/* Grounding fade at the plate foot; also swallows the ivory seam band some
+   source rasters carry along their bottom edge. */
+.art-hero-floor {
+  background: linear-gradient(
+    0deg,
+    var(--color-ink-deep) 0%,
+    rgba(6, 21, 39, 0.85) 9%,
+    rgba(6, 21, 39, 0) 26%
+  );
+}
+
+/* ---------- 04 source-and-review-gate: mist strip ---------- */
+.art-strip {
+  background: linear-gradient(
+    180deg,
+    var(--color-mist) 0%,
+    #eaf1f7 55%,
+    var(--color-mist-deep) 100%
+  );
+}
+
+/* ---------- media frames ----------
+   The frame sizes the image slot FIRST (aspect-ratio on the frame); the
+   image is placed by percentage so intrinsic dimensions never control
+   section height. Crop variants exclude baked artifacts near an edge
+   (annotation strips, motif fragments, glyph overlap) deterministically
+   at every viewport, because all offsets are relative to the slot. */
+.art-frame {
+  position: relative;
+  overflow: hidden;
+  border-radius: 3px;
+}
+.art-frame > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  max-width: none;
+}
+
+/* physician-financial-checkup-seven-areas */
+.art-frame--checkup-teaser {
+  aspect-ratio: 338 / 592;
+}
+.art-frame--checkup-gate {
+  /* full 638x650 minus the right motif fragment and the baked bottom
+     annotation strip: visible rect (0,0,595,555). */
+  aspect-ratio: 595 / 555;
+}
+.art-frame--checkup-gate > img {
+  width: 107.227%;
+}
+.art-frame--checkup-review {
+  /* 344x388 minus the left baked motif hook and bottom seam band:
+     visible rect (45,0,344,340). */
+  aspect-ratio: 299 / 340;
+}
+.art-frame--checkup-review > img {
+  width: 115.05%;
+  left: -15.05%;
+}
+.art-frame--checkup-related {
+  aspect-ratio: 584 / 840;
+}
+
+/* first-five-years-financial-moves */
+.art-frame--ff-teaser {
+  aspect-ratio: 564 / 660;
+}
+.art-frame--ff-gate {
+  aspect-ratio: 588 / 630;
+}
+.art-frame--ff-review {
+  /* 674x398 minus the pseudo-lettered book spine along the top and the
+     baked gold corner bottom-left: visible rect (240,100,674,398). */
+  aspect-ratio: 434 / 298;
+}
+.art-frame--ff-review > img {
+  width: 155.3%;
+  left: -55.3%;
+  top: -33.56%;
+}
+.art-frame--ff-related {
+  /* 674x840 minus the ivory seam band along the top: (0,72,674,840). */
+  aspect-ratio: 674 / 768;
+}
+.art-frame--ff-related > img {
+  top: -9.375%;
+}
+
+/* w2-1099-practice-income-questions */
+.art-frame--w2-teaser {
+  /* 524x402 minus the baked outline-card corner bottom-left: (0,0,524,328). */
+  aspect-ratio: 524 / 328;
+}
+.art-frame--w2-gate {
+  aspect-ratio: 566 / 586;
+}
+.art-frame--w2-review {
+  /* 374x386 minus the baked gold corner bottom-left: (0,0,374,324). */
+  aspect-ratio: 374 / 324;
+}
+.art-frame--w2-related {
+  aspect-ratio: 579 / 445;
+}

@@ -1,0 +1,41 @@
+/*
+ * Page-owned frame crops for /insights/disability-insurance-review-overlooked.
+ * Same recipe system as the family insights-article.css: the class sets the
+ * slot aspect-ratio to the raster's clean visible rect and places the img by
+ * percentages so baked artifacts are excluded deterministically at every
+ * viewport. Family CSS is not modified. Prefix: art-frame--dis-.
+ */
+
+.art-frame--dis-teaser {
+  /* 474x489 minus the two baked navy rule stubs on the left edge
+     (x 0–41, y 341–417): visible rect (50,0,474,489). */
+  aspect-ratio: 424 / 489;
+}
+.art-frame--dis-teaser > img {
+  width: 111.792%;
+  left: -11.792%;
+}
+
+.art-frame--dis-gate {
+  /* 711x611 minus the baked gold seam line and corner at top-right
+     (x 570–711, y 0–190): visible rect (0,0,565,611). */
+  aspect-ratio: 565 / 611;
+}
+.art-frame--dis-gate > img {
+  width: 125.841%;
+}
+
+.art-frame--dis-review {
+  /* 674x339 minus the baked copy fragments and gold dash on the left edge
+     (x 0–55, y 110–275): visible rect (62,0,674,339). */
+  aspect-ratio: 612 / 339;
+}
+.art-frame--dis-review > img {
+  width: 110.131%;
+  left: -10.131%;
+}
+
+.art-frame--dis-related {
+  /* Clean 707x383 extraction; pin the slot to its intrinsic ratio. */
+  aspect-ratio: 707 / 383;
+}

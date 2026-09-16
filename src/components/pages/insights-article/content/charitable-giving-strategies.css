@@ -1,0 +1,91 @@
+/*
+ * Page-owned frame recipes for /insights/charitable-giving-strategies.
+ * Extends the family .art-frame system (insights-article.css) without touching
+ * it: each class pins the slot aspect ratio to the raster's visible rect and,
+ * where the extraction carries baked artifacts, applies the exact overflow
+ * crop. Percentages: width = fullW/visW, left = -x0/visW, top = -y0/visH.
+ */
+
+/* ---------- 01 hero plate overrides (art-hero--chg) ----------
+   The hero raster (hero-donor-intent.jpg, 636x754) bakes two artifact groups:
+   cut MANUSCRIPT / CONFIDENTIAL letterforms at x<=88 (13.8% of width),
+   y>=555. The family veil's 24%-opaque run also crushed the raster's own
+   DONOR INTENT lockup (x 110-345 = 17-54% of the fit-width plate), which the
+   ref shows warm-lit and fully legible. */
+.art-hero--chg .art-hero-veil {
+  /* Mobile 3:2 frame (object-position 100% 35%) shows image rows ~115-540,
+     so the cut letterforms (y>=555) never surface; the wash only has to
+     blend the frame's left edge into the navy field. */
+  background: linear-gradient(
+    90deg,
+    rgba(6, 21, 39, 0.5) 0%,
+    rgba(6, 21, 39, 0.14) 20%,
+    rgba(6, 21, 39, 0) 48%
+  );
+}
+@media (min-width: 1024px) {
+  .art-hero--chg .art-hero-veil {
+    /* Desktop plate: opaque through 13.8% still covers the cut letterforms at
+       every lg plate aspect (they sit at <=12.7% of the plate wherever the
+       bottom crop does not already exclude them) and keeps the live headline
+       AA where it overlaps the plate at 1024-1300px; the fast release lets
+       the baked lockup and the warm folder scene read per ref. */
+    background: linear-gradient(
+      90deg,
+      var(--color-ink-deep) 0%,
+      var(--color-ink-deep) 13.8%,
+      rgba(6, 21, 39, 0.3) 16.5%,
+      rgba(6, 21, 39, 0.1) 24%,
+      rgba(6, 21, 39, 0) 50%
+    );
+  }
+}
+
+.art-frame--chg-teaser {
+  /* Mobile-first: the full visible rect is a featureless cream field at one
+     column, so small viewports crop to the detail cluster — tab notch, corner
+     curve and layered folder edges: visible rect (60,20,282,210). The right
+     bound still excludes the baked gold hairline fragment (x 284-339). */
+  aspect-ratio: 222 / 190;
+}
+.art-frame--chg-teaser > img {
+  width: 153.153%;
+  left: -27.027%;
+  top: -10.526%;
+}
+@media (min-width: 1024px) {
+  .art-frame--chg-teaser {
+    /* 340x344 minus the baked gold hairline fragment along the right edge
+       (x 284-339): visible rect (0,0,282,344). */
+    aspect-ratio: 282 / 344;
+  }
+  .art-frame--chg-teaser > img {
+    width: 120.567%;
+    left: 0;
+    top: 0;
+  }
+}
+
+.art-frame--chg-gate {
+  /* 380x520 minus baked gold ring nodes on both side edges and the vertical
+     gold line at the foot: visible rect (6,0,333,461). */
+  aspect-ratio: 327 / 461;
+}
+.art-frame--chg-gate > img {
+  width: 116.208%;
+  left: -1.835%;
+}
+
+.art-frame--chg-review {
+  /* 535x512 minus the baked gold corner bracket top-right and the ivory
+     seam band plus gold bracket at the foot: visible rect (0,78,535,444). */
+  aspect-ratio: 535 / 366;
+}
+.art-frame--chg-review > img {
+  top: -21.311%;
+}
+
+.art-frame--chg-related {
+  /* Clean full frame 656x684. */
+  aspect-ratio: 656 / 684;
+}

@@ -1,0 +1,217 @@
+/*
+ * /checkup — Physician Financial Checkup.
+ * Page-scoped surfaces and control recipes; every class carries the chk- prefix.
+ * Follows the recipe style of src/app/(site)/site.css.
+ */
+
+/* ---------- 01 checkup-hero: navy field, desk photo right ---------- */
+
+.chk-hero {
+  background: linear-gradient(
+    168deg,
+    var(--color-ink) 0%,
+    var(--color-ink-deep) 56%,
+    var(--color-ink-deeper) 100%
+  );
+}
+
+/* A soft desk-lamp pool behind the media edge so the photo's own navy leather
+   ground meets the CSS field without a hard value step. */
+.chk-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(
+    90% 70% at 78% 45%,
+    rgba(220, 232, 242, 0.1) 0%,
+    rgba(220, 232, 242, 0) 60%
+  );
+}
+
+/* The extracted crop carries a stray baked gold frame fragment across its
+   lower-left corner (source rows 626+). The slot's 846/610 aspect anchors the
+   crop to the top edge so the fragment sits fully below the visible window at
+   every viewport — no clipped stroke ever renders. */
+.chk-hero-media {
+  object-fit: cover;
+  object-position: 50% 0%;
+}
+
+/* ---------- 02 seven-area-map: warm paper diagram field ---------- */
+
+.chk-map {
+  background: var(--color-ivory);
+}
+
+.chk-map::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(
+    120% 110% at 50% 30%,
+    rgba(255, 255, 255, 0.6) 0%,
+    rgba(255, 255, 255, 0) 52%,
+    rgba(200, 166, 90, 0.1) 100%
+  );
+}
+
+/* Watercolor-wash area chip, live text only. */
+.chk-chip {
+  border: 1px solid rgba(11, 31, 58, 0.22);
+  background: linear-gradient(
+    120deg,
+    rgba(220, 232, 242, 0.55) 0%,
+    rgba(255, 255, 255, 0.85) 55%,
+    rgba(220, 232, 242, 0.35) 100%
+  );
+  box-shadow: 0 6px 18px -12px rgba(11, 31, 58, 0.35);
+}
+
+/* ---------- 03 interactive-review: mist control surface ---------- */
+
+.chk-review {
+  background: linear-gradient(
+    180deg,
+    var(--color-mist) 0%,
+    var(--color-mist-deep) 100%
+  );
+}
+
+/* The hands crop carries a baked gold hairline along its top edge; the slot
+   crops from the top so it never renders. */
+.chk-review-media {
+  object-fit: cover;
+  object-position: 50% 100%;
+}
+
+/* Form controls: one drawn family, never native defaults. */
+.chk-box,
+.chk-dot {
+  appearance: none;
+  flex-shrink: 0;
+  width: 1.125rem;
+  height: 1.125rem;
+  border: 1.5px solid rgba(11, 31, 58, 0.45);
+  background: #ffffff;
+  cursor: pointer;
+  transition:
+    border-color 0.16s var(--ease-out),
+    background-color 0.16s var(--ease-out),
+    box-shadow 0.16s var(--ease-out);
+}
+
+.chk-box {
+  border-radius: 2px;
+}
+
+.chk-dot {
+  border-radius: 50%;
+}
+
+.chk-box:hover:not(:disabled),
+.chk-dot:hover:not(:disabled) {
+  border-color: var(--color-ink);
+}
+
+.chk-box:checked {
+  border-color: var(--color-ink);
+  background-color: var(--color-ink);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' fill='none'%3E%3Cpath d='M2.5 6.5L5 9L9.5 3.5' stroke='%23C8A65A' stroke-width='1.75' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-size: 0.75rem;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.chk-dot:checked {
+  border-color: var(--color-ink);
+  box-shadow: inset 0 0 0 3.5px #ffffff;
+  background: var(--color-ink);
+}
+
+.chk-dot:disabled {
+  border-color: rgba(11, 31, 58, 0.18);
+  background: rgba(11, 31, 58, 0.04);
+  cursor: not-allowed;
+}
+
+/* Row hover lift so the touch target reads as one control, not a bare box. */
+.chk-option {
+  transition: background-color 0.16s var(--ease-out);
+}
+
+.chk-option:hover {
+  background-color: rgba(220, 232, 242, 0.45);
+}
+
+.chk-option:has(.chk-box:checked),
+.chk-option:has(.chk-dot:checked) {
+  background-color: rgba(220, 232, 242, 0.6);
+}
+
+.chk-option:has(:disabled) {
+  color: rgba(56, 55, 62, 0.45);
+}
+
+.chk-option:has(:disabled):hover {
+  background-color: transparent;
+}
+
+/* ---------- 04 results-guidance: white ledger field ---------- */
+
+.chk-results {
+  background: #ffffff;
+}
+
+.chk-ledger-row {
+  background: var(--color-ledger-warm);
+  border: 1px solid rgba(11, 31, 58, 0.14);
+}
+
+/* ---------- 05 privacy-boundary: quiet ivory strip ---------- */
+
+.chk-privacy {
+  background: var(--color-ivory);
+}
+
+/* ---------- 06 next-step: dark consultation close ---------- */
+
+.chk-close {
+  background: linear-gradient(
+    180deg,
+    var(--color-ink-deep) 0%,
+    var(--color-ink-deeper) 100%
+  );
+}
+
+/* The office crop carries a baked headline fragment on its left edge; the slot
+   is narrower than the source and anchored right, so that edge is cropped. */
+.chk-close-media {
+  object-fit: cover;
+  object-position: 88% 50%;
+}
+
+/* Feather the photo's left edge into the navy field — no hard seam. */
+.chk-close-veil {
+  background: linear-gradient(
+    90deg,
+    var(--color-ink-deep) 0%,
+    rgba(6, 21, 39, 0.55) 18%,
+    rgba(6, 21, 39, 0) 45%
+  );
+}
+
+/* ---------- Shared: page-local gold coordination line ---------- */
+
+/* One thin vertical route at the section's midline; each segment touches the
+   seam it is contracted to cross so adjacent sections read as one line. */
+.chk-seam {
+  position: absolute;
+  left: 50%;
+  width: 1.5px;
+  margin-left: -0.75px;
+  background: var(--color-gold);
+  opacity: 0.7;
+  pointer-events: none;
+}

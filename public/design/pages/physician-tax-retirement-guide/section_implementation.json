@@ -1,0 +1,226 @@
+{
+  "version": 1,
+  "slug": "physician-tax-retirement-guide",
+  "route": "/physician-tax-retirement-guide",
+  "sections": [
+    {
+      "frame": "01-guide-hero",
+      "implementation_kind": "bespoke",
+      "implementation_owner": "src/components/pages/physician-tax-retirement-guide/guide-hero.tsx",
+      "content_source": "section_manifest.json#01-guide-hero",
+      "asset_roles": [
+        "premium guide cover on physician planning desk"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "Approved manifest fields (eyebrow, headline, body, primary_cta) render as live HTML text, led by \"Physician Tax & Retirement Planning Guide.\"."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "Dedicated asset renders the declared subject \"premium guide cover on physician planning desk\" with the approved \"image-as-canvas, no readable fake pages\" crop and treatment."
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "Frame composition preserved: Left copy (eyebrow, h1, body, gold Request-the-Guide anchor to #lead-capture-form) on the navy study field; the cover is CODE per the extraction plan — an ivory plate with inset double rule and live type in a CSS lamp…."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved navy/gold/ivory language retained on the #0B1F3A band per the manifest edge contract; Cormorant Garamond display over Inter body."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "390x844 recomposition per manifest: Preserve the headline and primary action before the image; use a 4:5 or 3:2 crop centered on the declared subject/focal point, never a blurred filler panel; stack overlays into live blocks, keep at least 70% of the…"
+        }
+      },
+      "ref": "_design_inputs/pages/physician-tax-retirement-guide/refs/01-guide-hero.png",
+      "owners": [
+        "src/app/(site)/physician-tax-retirement-guide/page.tsx",
+        "src/components/pages/physician-tax-retirement-guide/guide-hero.tsx",
+        "src/app/(site)/physician-tax-retirement-guide/ptg.css"
+      ],
+      "notes": "Left copy (eyebrow, h1, body, gold Request-the-Guide anchor to #lead-capture-form) on the navy study field; the cover is CODE per the extraction plan — an ivory plate with inset double rule and live type in a CSS lamp pool, no raster cover, no readable fake pages, no download claim."
+    },
+    {
+      "frame": "02-learning-outcomes",
+      "implementation_kind": "bespoke",
+      "implementation_owner": "src/components/pages/physician-tax-retirement-guide/learning-outcomes.tsx",
+      "content_source": "section_manifest.json#02-learning-outcomes",
+      "asset_roles": [
+        "learning outcomes ledger"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "Approved manifest fields (headline, items) render as live HTML text, led by \"What the guide is expected to cover.\"."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "Dedicated asset renders the declared subject \"learning outcomes ledger\" with the approved \"ivory ledger and small document crop\" crop and treatment."
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "Frame composition preserved: Warm-paper band: heading and the notebook-corner crop hold the left rail; the five expected-coverage items render as a live-text ledger inside the ref's navy double-rule frame with gold row leads; single column on mobile."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved navy/gold/ivory language retained on the #F6F2E8 band per the manifest edge contract; Cormorant Garamond display over Inter body."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "390x844 recomposition per manifest: Stack the primary content group in narrative order while preserving asymmetric emphasis through offset margins and varied spacing; crop imagery around its declared focal point, keep all live text and links, and simplify…"
+        }
+      },
+      "ref": "_design_inputs/pages/physician-tax-retirement-guide/refs/02-learning-outcomes.png",
+      "owners": [
+        "src/components/pages/physician-tax-retirement-guide/learning-outcomes.tsx"
+      ],
+      "notes": "Warm-paper band: heading and the notebook-corner crop hold the left rail; the five expected-coverage items render as a live-text ledger inside the ref's navy double-rule frame with gold row leads; single column on mobile."
+    },
+    {
+      "frame": "03-who-it-is-for",
+      "implementation_kind": "bespoke",
+      "implementation_owner": "src/components/pages/physician-tax-retirement-guide/who-it-is-for.tsx",
+      "content_source": "section_manifest.json#03-who-it-is-for",
+      "asset_roles": [
+        "medical professional audience index without faces"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "Approved manifest fields (headline, body) render as live HTML text, led by \"For medical professionals who want a framework, not a product recommendation.\"."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "Dedicated asset renders the declared subject \"medical professional audience index without faces\" with the approved \"white field with small profession-context crops\" crop and treatment."
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "Frame composition preserved: White audience-fit spread: manifest copy left, five profession-context crops (physician, surgeon, dentist, practice owner, executive) in an offset three-rail constellation with live navy label tabs; contaminated bottom…."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved navy/gold/ivory language retained on the #FFFFFF band per the manifest edge contract; Cormorant Garamond display over Inter body."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "390x844 recomposition per manifest: Stack the primary content group in narrative order while preserving asymmetric emphasis through offset margins and varied spacing; crop imagery around its declared focal point, keep all live text and links, and simplify…"
+        }
+      },
+      "ref": "_design_inputs/pages/physician-tax-retirement-guide/refs/03-who-it-is-for.png",
+      "owners": [
+        "src/components/pages/physician-tax-retirement-guide/who-it-is-for.tsx"
+      ],
+      "notes": "White audience-fit spread: manifest copy left, five profession-context crops (physician, surgeon, dentist, practice owner, executive) in an offset three-rail constellation with live navy label tabs; contaminated bottom edges of the crops are cropped via top-anchored slots; mobile is a single rail. No faces presented as named staff. Design-review fix: the practice-owner and executive source crops were re-cut in the asset (bottom baked layout bands — second corridor strip, orphan gold rule, pale strip — removed), so every tile is photo + navy chip flush at both viewports."
+    },
+    {
+      "frame": "04-lead-capture-form",
+      "implementation_kind": "bespoke",
+      "implementation_owner": "src/components/pages/physician-tax-retirement-guide/lead-capture.tsx",
+      "content_source": "section_manifest.json#04-lead-capture-form",
+      "asset_roles": [
+        "lead capture form surface"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "PASS with documented deliberate adaptation preserving the approved semantic gate: the manifest body ('Collect contact details before delivery. Do not claim instant access…') is internal production instruction, not visitor copy; the section renders the approved customer-facing availability sentence (NEXT_DECISION.guide.requestNote) instead, per the truth contract"
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "Code-native section per the manifest image_treatment (\"mist-blue live form area with document-cover edge\"); live text and drawn elements only, no raster asset required."
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "Frame composition preserved: Live request form on the mist surface with every manifest field (first/last name, email, optional phone, specialty or role, career stage, primary planning concern, consent + privacy acknowledgment), validate-first…."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved navy/gold/ivory language retained on the #DCE8F2 band per the manifest edge contract; Cormorant Garamond display over Inter body."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "390x844 recomposition per manifest: Stack fields and controls in one column at 390px, preserve labels above inputs, make all targets at least 44px high and CTAs full-width, keep validation/results immediately after the relevant control, and move…"
+        }
+      },
+      "ref": "_design_inputs/pages/physician-tax-retirement-guide/refs/04-lead-capture-form.png",
+      "owners": [
+        "src/components/pages/physician-tax-retirement-guide/lead-capture.tsx",
+        "src/components/pages/physician-tax-retirement-guide/guide-request-form.tsx"
+      ],
+      "notes": "Live request form on the mist surface with every manifest field (first/last name, email, optional phone, specialty or role, career stage, primary planning concern, consent + privacy acknowledgment), validate-first button calling form.requestSubmit(), submission to the site lead pipeline, mailto/phone fallback on failure, and a success state that promises only a personal email reply once the approved guide is available — never an instant download. Ink-and-pen still life holds the left field."
+    },
+    {
+      "frame": "05-delivery-gate",
+      "implementation_kind": "bespoke",
+      "implementation_owner": "src/components/pages/physician-tax-retirement-guide/delivery-gate.tsx",
+      "content_source": "section_manifest.json#05-delivery-gate",
+      "asset_roles": [
+        "code-only live semantic content"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "PASS with documented deliberate adaptation preserving the approved semantic gate: the manifest strip copy ('Delivery workflow required before publication' / 'held state') is internal production language; the strip renders the truthful customer-facing availability state — 'Every request is answered personally' plus the approved requestNote and the educational boundary — preserving the ref's icon-rule-message strip composition"
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "Code-native section per the manifest image_treatment (\"1536x512 ivory strip with locked document icon\"); live text and drawn elements only, no raster asset required."
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "Frame composition preserved: Ivory utility strip with the locked-document icon in a gold ring, thin gold rule, and the honest no-instant-download availability message; no internal production words appear on the public page."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved navy/gold/ivory language retained on the #F6F2E8 band per the manifest edge contract; Cormorant Garamond display over Inter body."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "390x844 recomposition per manifest: Stack the primary content group in narrative order while preserving asymmetric emphasis through offset margins and varied spacing; crop imagery around its declared focal point, keep all live text and links, and simplify…"
+        }
+      },
+      "ref": "_design_inputs/pages/physician-tax-retirement-guide/refs/05-delivery-gate.png",
+      "owners": [
+        "src/components/pages/physician-tax-retirement-guide/delivery-gate.tsx"
+      ],
+      "notes": "Ivory utility strip with the locked-document icon in a gold ring, thin gold rule, and the honest no-instant-download availability message; no internal production words appear on the public page."
+    },
+    {
+      "frame": "06-related-paths",
+      "implementation_kind": "bespoke",
+      "implementation_owner": "src/components/pages/physician-tax-retirement-guide/related-paths.tsx",
+      "content_source": "section_manifest.json#06-related-paths",
+      "asset_roles": [
+        "navy related path close"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "Approved manifest fields (headline, links) render as live HTML text, led by \"Explore verified planning pages while the guide is completed.\"."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "Dedicated asset renders the declared subject \"navy related path close\" with the approved \"wide navy with route ledger\" crop and treatment."
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "Frame composition preserved: Dark close: centered headline over one vertical gold spine with the four verified routes alternating across it (label in the manifest's 'Explore tax planning' voice plus the literal path annotation the ref draws)…."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved navy/gold/ivory language retained on the #0B1F3A band per the manifest edge contract; Cormorant Garamond display over Inter body."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "390x844 recomposition per manifest: Convert the desktop diagram into a vertical reading rail in source order; keep every label and connector endpoint, place supporting imagery after the decisive step, avoid horizontal scrolling, and redraw the gold…"
+        }
+      },
+      "ref": "_design_inputs/pages/physician-tax-retirement-guide/refs/06-related-paths.png",
+      "owners": [
+        "src/components/pages/physician-tax-retirement-guide/related-paths.tsx"
+      ],
+      "notes": "Dark close: centered headline over one vertical gold spine with the four verified routes alternating across it (label in the manifest's 'Explore tax planning' voice plus the literal path annotation the ref draws), book-stack crops as feathered edge rails, and the page-local line ending at its final node — no continuation into the footer."
+    }
+  ]
+}

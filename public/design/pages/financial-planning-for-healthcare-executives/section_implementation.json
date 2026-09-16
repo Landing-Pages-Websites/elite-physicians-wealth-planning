@@ -1,0 +1,240 @@
+{
+  "version": 1,
+  "slug": "financial-planning-for-healthcare-executives",
+  "route": "/financial-planning-for-healthcare-executives",
+  "sections": [
+    {
+      "frame": "01-role-context",
+      "implementation_kind": "shared-designed",
+      "implementation_owner": "src/components/pages/audience/role-context.tsx",
+      "shared_basis": "The five audience manifests (financial-planning-for-crnas-nps-pas, financial-planning-for-dentists, financial-planning-for-healthcare-executives, financial-planning-for-surgeons, physicians-specialists) in revision-2026-09-15-image-first share the identical six-frame audience grammar (01-role-context through 06-related-paths); the approved audience family component src/components/pages/audience/role-context.tsx renders this frame with page content from src/components/pages/audience/content/financial-planning-for-healthcare-executives.ts.",
+      "content_source": "section_manifest.json#01-role-context",
+      "asset_roles": [
+        "healthcare executive boardroom edge with compensation election calendar, no fake numbers"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "Approved manifest fields (eyebrow, headline, body, primary_cta, boundary) render as live HTML text, led by \"Wealth planning for healthcare executives with complex compensation and benefits.\"."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "PASS with documented deliberate adaptation preserving the approved semantic gate: the shipped raster is a 325x523 boardroom slice (not the ref's full canvas) and carried a baked headline fragment and gold line, both trimmed; the calendar/folio slice now renders as a framed portrait plate beside the live table"
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "Frame composition preserved: Navy hero: gold-rule eyebrow, h1, body, gold /schedule CTA; the compensation-election table is live HTML per the composition map — heading and six rows lifted verbatim from the manifest body (\"a compensation package…."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved navy/gold/ivory language retained on the #0B1F3A band per the manifest edge contract; Cormorant Garamond display over Inter body."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "390x844 recomposition per manifest: Preserve the headline and primary action before the image; use a 4:5 or 3:2 crop centered on the declared subject/focal point, never a blurred filler panel; stack overlays into live blocks, keep at least 70% of the…"
+        }
+      },
+      "ref": "design_refs/revision-2026-09-15-image-first/pages/financial-planning-for-healthcare-executives/refs/01-role-context.png",
+      "owners": [
+        "src/app/(site)/financial-planning-for-healthcare-executives/page.tsx",
+        "src/components/pages/audience/role-context.tsx",
+        "src/components/pages/audience/audience.css",
+        "src/components/pages/audience/content/financial-planning-for-healthcare-executives.ts"
+      ],
+      "notes": "Navy hero: gold-rule eyebrow, h1, body, gold /schedule CTA; the compensation-election table is live HTML per the composition map — heading and six rows lifted verbatim from the manifest body (\"a compensation package rather than a paycheck: base salary, incentives…\") on a navy panel right of the calendar plate; boundary rides an ivory plate over the live seam sweep."
+    },
+    {
+      "frame": "02-decision-patterns",
+      "implementation_kind": "shared-designed",
+      "implementation_owner": "src/components/pages/audience/decision-patterns.tsx",
+      "shared_basis": "The five audience manifests (financial-planning-for-crnas-nps-pas, financial-planning-for-dentists, financial-planning-for-healthcare-executives, financial-planning-for-surgeons, physicians-specialists) in revision-2026-09-15-image-first share the identical six-frame audience grammar (01-role-context through 06-related-paths); the approved audience family component src/components/pages/audience/decision-patterns.tsx renders this frame with page content from src/components/pages/audience/content/financial-planning-for-healthcare-executives.ts.",
+      "content_source": "section_manifest.json#02-decision-patterns",
+      "asset_roles": [
+        "Healthcare Executives decision ledger"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "Approved manifest fields (headline, body, items) render as live HTML text, led by \"Planning questions that tend to show up for this role.\"."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "Code-native section per the manifest image_treatment (\"mostly typographic ivory ledger with one small role-specific crop\"); live text and drawn elements only, no raster asset required."
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "Frame composition preserved: Quiet ivory ledger: five offset rule-separated decision rows left with gold diamond terminals; the benefits-binder/stethoscope/suited-forearm portrait (baked gold rule and dot trimmed off its base, angled lower desk…."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved navy/gold/ivory language retained on the #F6F2E8 band per the manifest edge contract; Cormorant Garamond display over Inter body."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "390x844 recomposition per manifest: Stack the primary content group in narrative order while preserving asymmetric emphasis through offset margins and varied spacing; crop imagery around its declared focal point, keep all live text and links, and simplify…"
+        }
+      },
+      "ref": "design_refs/revision-2026-09-15-image-first/pages/financial-planning-for-healthcare-executives/refs/02-decision-patterns.png",
+      "owners": [
+        "src/components/pages/audience/decision-patterns.tsx",
+        "src/components/pages/audience/audience.css"
+      ],
+      "notes": "Quiet ivory ledger: five offset rule-separated decision rows left with gold diamond terminals; the benefits-binder/stethoscope/suited-forearm portrait (baked gold rule and dot trimmed off its base, angled lower desk edge preserved) counterweights the lower right. Design-review remediation: the subhead now reads in visitor voice (the manifest's internal “the page should…” phrasing no longer ships as visible copy)."
+    },
+    {
+      "frame": "03-career-scenario",
+      "implementation_kind": "shared-designed",
+      "implementation_owner": "src/components/pages/audience/career-scenario.tsx",
+      "shared_basis": "The five audience manifests (financial-planning-for-crnas-nps-pas, financial-planning-for-dentists, financial-planning-for-healthcare-executives, financial-planning-for-surgeons, physicians-specialists) in revision-2026-09-15-image-first share the identical six-frame audience grammar (01-role-context through 06-related-paths); the approved audience family component src/components/pages/audience/career-scenario.tsx renders this frame with page content from src/components/pages/audience/content/financial-planning-for-healthcare-executives.ts.",
+      "content_source": "section_manifest.json#03-career-scenario",
+      "asset_roles": [
+        "Healthcare Executives career or practice scenario"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "Approved manifest fields (headline, body, secondary_link) render as live HTML text, led by \"The career structure changes the planning work.\"."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "PASS with documented deliberate adaptation preserving the approved semantic gate: the ref's tilted photographic decision-calendar sheet is not in the shipped raster, so it is rebuilt as a drawn aria-hidden SVG sheet (grid, header bar, two highlighted election windows) per the CODE-first rule; the raster ships with its approved baked gold gesture, so no second live route is drawn in this section"
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "Frame composition preserved: \"canvas\" variant: the advisory scene fills the section under a mist veil that keeps the lower-left copy corner readable; headline, body and the /our-process link are live; the drawn calendar sheet holds the right on…."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved navy/gold/ivory language retained on the #DCE8F2 band per the manifest edge contract; Cormorant Garamond display over Inter body."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "390x844 recomposition per manifest: Stack the primary content group in narrative order while preserving asymmetric emphasis through offset margins and varied spacing; crop imagery around its declared focal point, keep all live text and links, and simplify…"
+        }
+      },
+      "ref": "design_refs/revision-2026-09-15-image-first/pages/financial-planning-for-healthcare-executives/refs/03-career-scenario.png",
+      "owners": [
+        "src/components/pages/audience/career-scenario.tsx",
+        "src/components/pages/audience/audience.css"
+      ],
+      "notes": "\"canvas\" variant: the advisory scene fills the section under a mist veil that keeps the lower-left copy corner readable; headline, body and the /our-process link are live; the drawn calendar sheet holds the right on desktop and yields to the copy on mobile (vertical veil). Design-review remediation: the body now reads in visitor voice (“the core experience is…” spec phrasing removed) while keeping the decision-calendar framing."
+    },
+    {
+      "frame": "04-coordination-map",
+      "implementation_kind": "bespoke",
+      "implementation_owner": "src/components/pages/audience/coordination-map-hub.tsx",
+      "content_source": "section_manifest.json#04-coordination-map",
+      "asset_roles": [
+        "coordination map for Healthcare Executives"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "Approved manifest fields (headline, body, items) render as live HTML text, led by \"One conversation across the relevant pillars.\"."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "Code-native section per the manifest image_treatment (\"abstracted professional-team rooms, no faces, live text labels\"); live text and drawn elements only, no raster asset required."
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "Frame composition preserved: \"hub-spokes\" variant: intro top-left; a central gold hub ring (stroke nodes mark, no invented label) with five live gold spokes and dot terminals to the manifest-ordered pillar labels placed by named grid areas; the two…."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved navy/gold/ivory language retained on the #FFFFFF band per the manifest edge contract; Cormorant Garamond display over Inter body."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "390x844 recomposition per manifest: Convert the desktop diagram into a vertical reading rail in source order; keep every label and connector endpoint, place supporting imagery after the decisive step, avoid horizontal scrolling, and redraw the gold…"
+        }
+      },
+      "ref": "design_refs/revision-2026-09-15-image-first/pages/financial-planning-for-healthcare-executives/refs/04-coordination-map.png",
+      "owners": [
+        "src/components/pages/audience/coordination-map.tsx",
+        "src/components/pages/audience/coordination-map-hub.tsx",
+        "src/components/pages/audience/coordination-edge-plates.tsx",
+        "src/components/pages/audience/coordination-map-intro.tsx",
+        "src/components/pages/audience/audience.css"
+      ],
+      "notes": "\"hub-spokes\" variant: intro top-left; a central gold hub ring (stroke nodes mark, no invented label) with five live gold spokes and dot terminals to the manifest-ordered pillar labels placed by named grid areas; the two top-view floor-plan plates hug the viewport edges as complete fragments. Mobile collapses to a vertical rail, hub first, right plan inline. Design-review remediation: the spokes are rebuilt as five equal-length hub-anchored lines in fixed pixel geometry (no grid-stretched SVG), one per pillar with a single terminal dot each — the orphan sixth stub/dot is gone — and the constellation gaps widened so no label collides with a spoke."
+    },
+    {
+      "frame": "05-questions-before-call",
+      "implementation_kind": "shared-designed",
+      "implementation_owner": "src/components/pages/audience/questions-before-call.tsx",
+      "shared_basis": "The five audience manifests (financial-planning-for-crnas-nps-pas, financial-planning-for-dentists, financial-planning-for-healthcare-executives, financial-planning-for-surgeons, physicians-specialists) in revision-2026-09-15-image-first share the identical six-frame audience grammar (01-role-context through 06-related-paths); the approved audience family component src/components/pages/audience/questions-before-call.tsx renders this frame with page content from src/components/pages/audience/content/financial-planning-for-healthcare-executives.ts.",
+      "content_source": "section_manifest.json#05-questions-before-call",
+      "asset_roles": [
+        "short question strip for Healthcare Executives"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "Approved manifest fields (headline, items, note) render as live HTML text, led by \"Questions to bring into the first review.\"."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "PASS with documented deliberate adaptation preserving the approved semantic gate: the pen still-life raster carried the baked gold rail; the edge crossings were trimmed (top/bottom) but one interior segment terminating at the pen ships inside the plate, reading as the live rail meeting the pen at the right edge"
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "Frame composition preserved: \"centered-rail\" style: centred headline, three questions on one horizontal gold rail with diamond nodes, pen still life holding the right edge; the wealth/retirement/schedule routing note is live copy inside the navy…."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved navy/gold/ivory language retained on the #F6F2E8 band per the manifest edge contract; Cormorant Garamond display over Inter body."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "390x844 recomposition per manifest: Convert multi-column ledgers or tables into full-width rule-separated rows in source order; preserve all decision labels and contextual links, move any documentary crop between logical groups, and use only one slim gold…"
+        }
+      },
+      "ref": "design_refs/revision-2026-09-15-image-first/pages/financial-planning-for-healthcare-executives/refs/05-questions-before-call.png",
+      "owners": [
+        "src/components/pages/audience/questions-before-call.tsx",
+        "src/components/pages/audience/audience.css"
+      ],
+      "notes": "\"centered-rail\" style: centred headline, three questions on one horizontal gold rail with diamond nodes, pen still life holding the right edge; the wealth/retirement/schedule routing note is live copy inside the navy exit band with the gold rule and terminal."
+    },
+    {
+      "frame": "06-related-paths",
+      "implementation_kind": "shared-designed",
+      "implementation_owner": "src/components/pages/audience/related-paths.tsx",
+      "shared_basis": "The five audience manifests (financial-planning-for-crnas-nps-pas, financial-planning-for-dentists, financial-planning-for-healthcare-executives, financial-planning-for-surgeons, physicians-specialists) in revision-2026-09-15-image-first share the identical six-frame audience grammar (01-role-context through 06-related-paths); the approved audience family component src/components/pages/audience/related-paths.tsx renders this frame with page content from src/components/pages/audience/content/financial-planning-for-healthcare-executives.ts.",
+      "content_source": "section_manifest.json#06-related-paths",
+      "asset_roles": [
+        "navy advisory close with route cards as live text"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "Approved manifest fields (headline, body, links, primary_cta) render as live HTML text, led by \"Choose the planning path that fits the decision in front of you.\"."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "PASS with documented deliberate adaptation preserving the approved semantic gate: the ref's small image tabs on each route row did not ship as assets (all row regions are CODE per the extraction plan), so each row carries a live navy icon tab"
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "Frame composition preserved: \"columns\" close over the approved quiet consult-room plate: centred three-line heading and body, one gold descender into two route columns (3 + 2) of live path-text cards with real destinations, centred gold /schedule…."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved navy/gold/ivory language retained on the #0B1F3A band per the manifest edge contract; Cormorant Garamond display over Inter body."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "390x844 recomposition per manifest: Convert the desktop diagram into a vertical reading rail in source order; keep every label and connector endpoint, place supporting imagery after the decisive step, avoid horizontal scrolling, and redraw the gold…"
+        }
+      },
+      "ref": "design_refs/revision-2026-09-15-image-first/pages/financial-planning-for-healthcare-executives/refs/06-related-paths.png",
+      "owners": [
+        "src/components/pages/audience/related-paths.tsx",
+        "src/components/pages/audience/audience.css",
+        "src/components/pages/audience/content/shared.ts"
+      ],
+      "notes": "\"columns\" close over the approved quiet consult-room plate: centred three-line heading and body, one gold descender into two route columns (3 + 2) of live path-text cards with real destinations, centred gold /schedule CTA ending the page-local line before the footer. Design-review remediation: the five cards now genuinely compose as 3 + 2 columns (previously 2-2-1 with an empty cell), and route labels wrap at hyphens instead of truncating."
+    }
+  ]
+}

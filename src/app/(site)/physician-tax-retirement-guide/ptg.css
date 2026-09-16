@@ -1,0 +1,223 @@
+/*
+ * /physician-tax-retirement-guide — gated guide request page.
+ * Page-scoped surfaces; every class carries the ptg- prefix.
+ * Follows the recipe style of src/app/(site)/site.css.
+ */
+
+/* ---------- 01 guide-hero: navy study with a code-built cover plate ---------- */
+
+.ptg-hero {
+  background: linear-gradient(
+    166deg,
+    var(--color-ink) 0%,
+    var(--color-ink-deep) 55%,
+    var(--color-ink-deeper) 100%
+  );
+}
+
+/* Desk-lamp pool behind the cover plate, per the ref's warm right field. */
+.ptg-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(
+      55% 60% at 74% 38%,
+      rgba(200, 166, 90, 0.16) 0%,
+      rgba(200, 166, 90, 0) 62%
+    ),
+    radial-gradient(
+      70% 40% at 60% 100%,
+      rgba(220, 232, 242, 0.08) 0%,
+      rgba(220, 232, 242, 0) 60%
+    );
+}
+
+/* The guide cover is CODE, not a raster: an ivory plate with an inset double
+   rule and live type, standing on a soft desk shadow. No readable fake pages. */
+.ptg-cover {
+  background: linear-gradient(
+    170deg,
+    var(--color-ivory-bright) 0%,
+    var(--color-ivory) 70%,
+    #ece6d8 100%
+  );
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.7),
+    0 34px 70px -30px rgba(2, 10, 22, 0.85);
+}
+
+.ptg-cover-rule {
+  border: 1px solid rgba(11, 31, 58, 0.55);
+  outline: 1px solid rgba(11, 31, 58, 0.25);
+  outline-offset: 3px;
+}
+
+/* ---------- 02 learning-outcomes: warm paper ledger ---------- */
+
+.ptg-outcomes {
+  background: var(--color-ivory);
+}
+
+.ptg-outcomes::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(
+    110% 100% at 30% 20%,
+    rgba(255, 255, 255, 0.55) 0%,
+    rgba(255, 255, 255, 0) 55%
+  );
+}
+
+/* Framed outcome panel: white paper inside a navy double rule, as drawn. */
+.ptg-ledger {
+  background: #ffffff;
+  border: 1.5px solid var(--color-ink);
+  outline: 1px solid rgba(11, 31, 58, 0.35);
+  outline-offset: 5px;
+  box-shadow: 0 26px 60px -42px rgba(11, 31, 58, 0.55);
+}
+
+/* ---------- 03 who-it-is-for: white constellation field ---------- */
+
+.ptg-audience {
+  background: #ffffff;
+}
+
+/* The taller-than-slot crops (surgeon, dentist) carry baked layout bands on
+   their bottom edges; the near-top focus crops those away. The wider-than-slot
+   crops (practice owner, executive) were re-cut in the asset itself so no
+   baked band exists below the photo — each tile is photo + chip, flush. */
+.ptg-audience-media {
+  object-fit: cover;
+  object-position: 50% 12%;
+}
+
+/* ---------- 04 lead-capture-form: mist form surface ---------- */
+
+.ptg-form {
+  background: linear-gradient(
+    180deg,
+    var(--color-mist) 0%,
+    var(--color-mist-deep) 100%
+  );
+}
+
+.ptg-field {
+  width: 100%;
+  border-radius: 3px;
+  border: 1px solid rgba(11, 31, 58, 0.25);
+  background: #ffffff;
+  padding: 0.75rem 1rem;
+  font-family: var(--font-body);
+  font-size: 15px;
+  color: var(--color-ink);
+  transition:
+    border-color 0.16s var(--ease-out),
+    box-shadow 0.16s var(--ease-out);
+}
+
+.ptg-field::placeholder {
+  color: rgba(56, 55, 62, 0.45);
+}
+
+.ptg-field:hover {
+  border-color: rgba(11, 31, 58, 0.45);
+}
+
+.ptg-field:focus {
+  border-color: var(--color-ink);
+  outline: none;
+}
+
+.ptg-field:focus-visible {
+  box-shadow: 0 0 0 2px var(--color-gold);
+}
+
+/* Consent checkboxes, same drawn family as the checkup controls. */
+.ptg-box {
+  appearance: none;
+  flex-shrink: 0;
+  width: 1.125rem;
+  height: 1.125rem;
+  border-radius: 2px;
+  border: 1.5px solid rgba(11, 31, 58, 0.45);
+  background: #ffffff;
+  cursor: pointer;
+  transition:
+    border-color 0.16s var(--ease-out),
+    background-color 0.16s var(--ease-out);
+}
+
+.ptg-box:hover {
+  border-color: var(--color-ink);
+}
+
+.ptg-box:checked {
+  border-color: var(--color-ink);
+  background-color: var(--color-ink);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' fill='none'%3E%3Cpath d='M2.5 6.5L5 9L9.5 3.5' stroke='%23C8A65A' stroke-width='1.75' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-size: 0.75rem;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* ---------- 05 delivery-gate: quiet ivory strip ---------- */
+
+.ptg-gate {
+  background: var(--color-ivory);
+}
+
+/* ---------- 06 related-paths: dark study close ---------- */
+
+.ptg-paths {
+  background: linear-gradient(
+    180deg,
+    var(--color-ink-deep) 0%,
+    var(--color-ink-deeper) 100%
+  );
+}
+
+.ptg-paths::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(
+    80% 60% at 50% 20%,
+    rgba(220, 232, 242, 0.06) 0%,
+    rgba(220, 232, 242, 0) 60%
+  );
+}
+
+/* Feathers so the book rails meet the navy field without hard seams. */
+.ptg-paths-veil-left {
+  background: linear-gradient(
+    75deg,
+    rgba(6, 21, 39, 0) 40%,
+    var(--color-ink-deeper) 96%
+  );
+}
+
+.ptg-paths-veil-right {
+  background: linear-gradient(
+    255deg,
+    rgba(6, 21, 39, 0) 40%,
+    var(--color-ink-deeper) 96%
+  );
+}
+
+/* ---------- Shared: page-local gold coordination line ---------- */
+
+.ptg-seam {
+  position: absolute;
+  left: 50%;
+  width: 1.5px;
+  margin-left: -0.75px;
+  background: var(--color-gold);
+  opacity: 0.7;
+  pointer-events: none;
+}

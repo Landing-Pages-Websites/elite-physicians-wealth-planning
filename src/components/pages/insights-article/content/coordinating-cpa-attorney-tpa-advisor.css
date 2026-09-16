@@ -1,0 +1,35 @@
+/*
+ * Page-scoped frame recipes for /insights/coordinating-cpa-attorney-tpa-advisor.
+ * Same math as the family art-frame recipes: the class pins the slot's
+ * aspect-ratio to the raster's visible rect; img width/left percentages are
+ * relative to that visible rect so baked artifacts stay outside the slot at
+ * every viewport. Family components and insights-article.css are untouched.
+ */
+
+.art-frame--cpa-teaser {
+  /* The approved teaser frame is pure typography (no owner raster). The
+     family media slot is suppressed so the verified copy carries the
+     section over open negative space, as the ref draws it. */
+  display: none;
+}
+
+.art-frame--cpa-gate {
+  /* 469x459 minus the baked gold seam caret along the bottom edge:
+     visible rect (0,0,469,435). */
+  aspect-ratio: 469 / 435;
+}
+
+.art-frame--cpa-review {
+  /* 524x419 minus the baked gold corner fragment on the left edge and the
+     gold rule + ivory band along the bottom: visible rect (48,0,476,398). */
+  aspect-ratio: 476 / 398;
+}
+.art-frame--cpa-review > img {
+  width: 110.084%;
+  left: -10.084%;
+}
+
+.art-frame--cpa-related {
+  /* Clean extraction; pin the intrinsic 636x642 aspect. */
+  aspect-ratio: 636 / 642;
+}

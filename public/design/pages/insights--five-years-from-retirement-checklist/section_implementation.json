@@ -1,0 +1,202 @@
+{
+  "version": 1,
+  "slug": "insights--five-years-from-retirement-checklist",
+  "route": "/insights/five-years-from-retirement-checklist",
+  "sections": [
+    {
+      "frame": "01-editorial-state-hero",
+      "implementation_kind": "shared-designed",
+      "implementation_owner": "src/components/pages/insights-article/editorial-state-hero.tsx",
+      "shared_basis": "All twelve insights article manifests in revision-2026-09-15-image-first share the editorial-content-gate archetype and the identical five-frame grammar (01-editorial-state-hero, 02-verified-teaser, 03-manuscript-gate, 04-source-and-review-gate, 05-related-reading); the approved insights-article family component src/components/pages/insights-article/editorial-state-hero.tsx renders this frame with the per-article content module src/components/pages/insights-article/content/five-years-from-retirement-checklist.ts.",
+      "content_source": "section_manifest.json#01-editorial-state-hero",
+      "asset_roles": [
+        "editorial article photograph for Retirement & Income: The conversations to have before the transition begins."
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "Approved manifest fields (eyebrow, headline, body, visibility_note) render as live HTML text, led by \"Five Years From Retirement: A Physician's Planning Checklist\"."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "PASS with documented deliberate adaptation preserving the approved semantic gate: the extraction carries baked headline glyph fragments on its left edge and a baked held-note pill outline + ivory band along its bottom; the family hero's opaque veil run, top-aligned object-position, and floor fade keep them invisible at review viewports, but the raster itself is not clean"
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "Frame composition preserved: Navy masthead: Retirement & Income eyebrow, H1, teaser body left; lamplit desk scene right blended by the family veils; the manifest visibility note renders as the shared customer-facing held line; 'All insights' links…."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved navy/gold/ivory language retained on the #0B1F3A band per the manifest edge contract; Cormorant Garamond display over Inter body."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "390x844 recomposition per manifest: Preserve the headline and primary action before the image; use a 4:5 or 3:2 crop centered on the declared subject/focal point, never a blurred filler panel; stack overlays into live blocks, keep at least 70% of the…"
+        }
+      },
+      "ref": "design_refs/revision-2026-09-15-image-first/pages/insights--five-years-from-retirement-checklist/refs/01-editorial-state-hero.png",
+      "owners": [
+        "src/app/(site)/insights/five-years-from-retirement-checklist/page.tsx",
+        "src/components/pages/insights-article/editorial-state-hero.tsx",
+        "src/components/pages/insights-article/content/five-years-from-retirement-checklist.ts"
+      ],
+      "notes": "Navy masthead: Retirement & Income eyebrow, H1, teaser body left; lamplit desk scene right blended by the family veils; the manifest visibility note renders as the shared customer-facing held line; 'All insights' links to /insights."
+    },
+    {
+      "frame": "02-verified-teaser",
+      "implementation_kind": "shared-designed",
+      "implementation_owner": "src/components/pages/insights-article/verified-teaser.tsx",
+      "shared_basis": "All twelve insights article manifests in revision-2026-09-15-image-first share the editorial-content-gate archetype and the identical five-frame grammar (01-editorial-state-hero, 02-verified-teaser, 03-manuscript-gate, 04-source-and-review-gate, 05-related-reading); the approved insights-article family component src/components/pages/insights-article/verified-teaser.tsx renders this frame with the per-article content module src/components/pages/insights-article/content/five-years-from-retirement-checklist.ts.",
+      "content_source": "section_manifest.json#02-verified-teaser",
+      "asset_roles": [
+        "quiet editorial abstract ledger"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "Approved manifest fields (headline, body, items) render as live HTML text, led by \"What is verified now.\"."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "PASS with documented deliberate adaptation preserving the approved semantic gate: the extraction bakes a navy bookmark printed with internal production wording into the notebook still life; the fyr-teaser recipe crops to the clean right portion (a quiet notebook-corner ledger), so the ref's landscape corner accent is recomposed as a narrow portrait frame"
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "Frame composition preserved: Ivory ledger: verified headline/body left with ringed-check rows, quiet notebook-corner crop right; only the truthful teaser items are rendered."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved navy/gold/ivory language retained on the #F6F2E8 band per the manifest edge contract; Cormorant Garamond display over Inter body."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "390x844 recomposition per manifest: Stack the primary content group in narrative order while preserving asymmetric emphasis through offset margins and varied spacing; crop imagery around its declared focal point, keep all live text and links, and simplify…"
+        }
+      },
+      "ref": "design_refs/revision-2026-09-15-image-first/pages/insights--five-years-from-retirement-checklist/refs/02-verified-teaser.png",
+      "owners": [
+        "src/components/pages/insights-article/verified-teaser.tsx",
+        "src/components/pages/insights-article/content/five-years-from-retirement-checklist.ts",
+        "src/components/pages/insights-article/content/five-years-from-retirement-checklist.css"
+      ],
+      "notes": "Ivory ledger: verified headline/body left with ringed-check rows, quiet notebook-corner crop right; only the truthful teaser items are rendered."
+    },
+    {
+      "frame": "03-manuscript-gate",
+      "implementation_kind": "shared-designed",
+      "implementation_owner": "src/components/pages/insights-article/manuscript-gate.tsx",
+      "shared_basis": "All twelve insights article manifests in revision-2026-09-15-image-first share the editorial-content-gate archetype and the identical five-frame grammar (01-editorial-state-hero, 02-verified-teaser, 03-manuscript-gate, 04-source-and-review-gate, 05-related-reading); the approved insights-article family component src/components/pages/insights-article/manuscript-gate.tsx renders this frame with the per-article content module src/components/pages/insights-article/content/five-years-from-retirement-checklist.ts.",
+      "content_source": "section_manifest.json#03-manuscript-gate",
+      "asset_roles": [
+        "editorial desk with sealed manuscript sleeve and source tabs"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "Approved manifest fields (headline, items) render as live HTML text, led by \"Required before this article can go live.\"."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "Dedicated asset renders the declared subject \"editorial desk with sealed manuscript sleeve and source tabs\" with the approved \"white field, document sleeve, no readable fake article text\" crop and treatment."
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "Frame composition preserved: White gate spread: headline and the four requirements on the gold spine left, sealed portrait envelope right (fyr-gate recipe pins the intrinsic aspect and caps width to the ref's document scale); the ref's 'Manuscript…."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved navy/gold/ivory language retained on the #FFFFFF band per the manifest edge contract; Cormorant Garamond display over Inter body."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "390x844 recomposition per manifest: Stack the primary content group in narrative order while preserving asymmetric emphasis through offset margins and varied spacing; crop imagery around its declared focal point, keep all live text and links, and simplify…"
+        }
+      },
+      "ref": "design_refs/revision-2026-09-15-image-first/pages/insights--five-years-from-retirement-checklist/refs/03-manuscript-gate.png",
+      "owners": [
+        "src/components/pages/insights-article/manuscript-gate.tsx",
+        "src/components/pages/insights-article/content/five-years-from-retirement-checklist.ts",
+        "src/components/pages/insights-article/content/five-years-from-retirement-checklist.css"
+      ],
+      "notes": "White gate spread: headline and the four requirements on the gold spine left, sealed portrait envelope right (fyr-gate recipe pins the intrinsic aspect and caps width to the ref's document scale); the ref's 'Manuscript gate' footer label is production chrome and is not reproduced."
+    },
+    {
+      "frame": "04-source-and-review-gate",
+      "implementation_kind": "shared-designed",
+      "implementation_owner": "src/components/pages/insights-article/source-and-review-gate.tsx",
+      "shared_basis": "All twelve insights article manifests in revision-2026-09-15-image-first share the editorial-content-gate archetype and the identical five-frame grammar (01-editorial-state-hero, 02-verified-teaser, 03-manuscript-gate, 04-source-and-review-gate, 05-related-reading); the approved insights-article family component src/components/pages/insights-article/source-and-review-gate.tsx renders this frame with the per-article content module src/components/pages/insights-article/content/five-years-from-retirement-checklist.ts.",
+      "content_source": "section_manifest.json#04-source-and-review-gate",
+      "asset_roles": [
+        "short source-review strip with file tabs"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "Approved manifest fields (headline, items) render as live HTML text, led by \"Source and review requirements.\"."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "Code-native section per the manifest image_treatment (\"1536x512 strip, mist blue, live labels\"); live text and drawn elements only, no raster asset required."
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "Frame composition preserved: Mist strip: three rule-separated live requirement panels, tabbed-divider documentary crop right (fyr-review recipe crops the baked gold node and card edge along the bottom); the tab lettering is physical document print…."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved navy/gold/ivory language retained on the #DCE8F2 band per the manifest edge contract; Cormorant Garamond display over Inter body."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "390x844 recomposition per manifest: Stack the primary content group in narrative order while preserving asymmetric emphasis through offset margins and varied spacing; crop imagery around its declared focal point, keep all live text and links, and simplify…"
+        }
+      },
+      "ref": "design_refs/revision-2026-09-15-image-first/pages/insights--five-years-from-retirement-checklist/refs/04-source-and-review-gate.png",
+      "owners": [
+        "src/components/pages/insights-article/source-and-review-gate.tsx",
+        "src/components/pages/insights-article/content/five-years-from-retirement-checklist.ts",
+        "src/components/pages/insights-article/content/five-years-from-retirement-checklist.css"
+      ],
+      "notes": "Mist strip: three rule-separated live requirement panels, tabbed-divider documentary crop right (fyr-review recipe crops the baked gold node and card edge along the bottom); the tab lettering is physical document print per the extraction plan; the ref's 'source/review gate' eyebrow is internal wording and is not rendered."
+    },
+    {
+      "frame": "05-related-reading",
+      "implementation_kind": "shared-designed",
+      "implementation_owner": "src/components/pages/insights-article/related-reading.tsx",
+      "shared_basis": "All twelve insights article manifests in revision-2026-09-15-image-first share the editorial-content-gate archetype and the identical five-frame grammar (01-editorial-state-hero, 02-verified-teaser, 03-manuscript-gate, 04-source-and-review-gate, 05-related-reading); the approved insights-article family component src/components/pages/insights-article/related-reading.tsx renders this frame with the per-article content module src/components/pages/insights-article/content/five-years-from-retirement-checklist.ts.",
+      "content_source": "section_manifest.json#05-related-reading",
+      "asset_roles": [
+        "related-reading ledger for Retirement & Income"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "Approved manifest fields (headline, body, links) render as live HTML text, led by \"Related planning paths for this topic.\"."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "Dedicated asset renders the declared subject \"related-reading ledger for Retirement & Income\" with the approved \"ivory/white editorial index with small topic crop\" crop and treatment."
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "Frame composition preserved: Ivory close: /retirement-planning-for-physicians, /legacy-estate-planning, /insights as live route links on the gold ledger, retirement-planning book still life right, shared held note, boundary line, and the page-local…."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved navy/gold/ivory language retained on the #F6F2E8 band per the manifest edge contract; Cormorant Garamond display over Inter body."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "390x844 recomposition per manifest: Stack the primary content group in narrative order while preserving asymmetric emphasis through offset margins and varied spacing; crop imagery around its declared focal point, keep all live text and links, and simplify…"
+        }
+      },
+      "ref": "design_refs/revision-2026-09-15-image-first/pages/insights--five-years-from-retirement-checklist/refs/05-related-reading.png",
+      "owners": [
+        "src/components/pages/insights-article/related-reading.tsx",
+        "src/components/pages/insights-article/content/five-years-from-retirement-checklist.ts",
+        "src/components/pages/insights-article/content/five-years-from-retirement-checklist.css"
+      ],
+      "notes": "Ivory close: /retirement-planning-for-physicians, /legacy-estate-planning, /insights as live route links on the gold ledger, retirement-planning book still life right, shared held note, boundary line, and the page-local gold line ending on a node."
+    }
+  ]
+}

@@ -1,0 +1,231 @@
+{
+  "version": 1,
+  "slug": "contact",
+  "route": "/contact",
+  "sections": [
+    {
+      "frame": "01-contact-hero",
+      "implementation_kind": "bespoke",
+      "implementation_owner": "src/components/pages/contact/contact-hero.tsx",
+      "content_source": "section_manifest.json#01-contact-hero",
+      "asset_roles": [
+        "contact support advisory office with no identifiable staff"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "Approved manifest fields (eyebrow, headline, body, primary_cta) render as live HTML text, led by \"Contact Elite Physicians Wealth Planning.\"."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "Dedicated asset renders the declared subject \"contact support advisory office with no identifiable staff\" with the approved \"navy editorial office crop\" crop and treatment."
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "Frame composition preserved: Navy image-as-canvas: manifest-verbatim eyebrow/headline/body/CTA at left, the extracted lamplit office owning the right under a navy veil, and the ref's soft ivory arc carrying the seam into the verified-contact strip."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved navy/gold/ivory language retained on the #0B1F3A band per the manifest edge contract; Cormorant Garamond display over Inter body."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "390x844 recomposition per manifest: Preserve the headline and primary action before the image; use a 4:5 or 3:2 crop centered on the declared subject/focal point, never a blurred filler panel; stack overlays into live blocks, keep at least 70% of the…"
+        }
+      },
+      "ref": "_design_inputs/pages/contact/refs/01-contact-hero.png",
+      "owners": [
+        "src/app/(site)/contact/page.tsx",
+        "src/app/(site)/contact/contact.css",
+        "src/components/pages/contact/contact-hero.tsx"
+      ],
+      "notes": "Navy image-as-canvas: manifest-verbatim eyebrow/headline/body/CTA at left, the extracted lamplit office owning the right under a navy veil, and the ref's soft ivory arc carrying the seam into the verified-contact strip. 'Send a Message' anchors to #contact-form."
+    },
+    {
+      "frame": "02-verified-contact",
+      "implementation_kind": "bespoke",
+      "implementation_owner": "src/components/pages/contact/verified-contact.tsx",
+      "content_source": "section_manifest.json#02-verified-contact",
+      "asset_roles": [
+        "code-only live semantic content"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "Approved manifest fields (headline, phone, email, hours, address_note) render as live HTML text, led by \"Verified public contact.\"."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "Code-native section per the manifest image_treatment (\"1536x512 ivory strip with phone/email live text\"); live text and drawn elements only, no raster asset required."
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "Frame composition preserved: Ivory strip: phone/email/hours as three nodes on one horizontal gold thread (live tel:/mailto: Call and Email links), address-hold note beneath."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved navy/gold/ivory language retained on the #F6F2E8 band per the manifest edge contract; Cormorant Garamond display over Inter body."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "390x844 recomposition per manifest: Stack the primary content group in narrative order while preserving asymmetric emphasis through offset margins and varied spacing; crop imagery around its declared focal point, keep all live text and links, and simplify…"
+        }
+      },
+      "ref": "_design_inputs/pages/contact/refs/02-verified-contact.png",
+      "owners": [
+        "src/app/(site)/contact/page.tsx",
+        "src/components/pages/contact/verified-contact.tsx"
+      ],
+      "notes": "Ivory strip: phone/email/hours as three nodes on one horizontal gold thread (live tel:/mailto: Call and Email links), address-hold note beneath. Hours use the BRAND constant (en-dash typography); no street address anywhere."
+    },
+    {
+      "frame": "03-contact-form",
+      "implementation_kind": "bespoke",
+      "implementation_owner": "src/components/pages/contact/contact-form-section.tsx",
+      "content_source": "section_manifest.json#03-contact-form",
+      "asset_roles": [
+        "code-only live semantic content"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "PASS with documented deliberate adaptation preserving the approved semantic gate: manifest gate-state body ('The final form will route inquiries only after an approved lead destination is configured.') and internal publication_note superseded — the approved MEGA lead pipeline is configured, so the live functional form replaces the held-state preview; headline, all nine manifest fields, required privacy copy, and the phone/email fallback line are verbatim"
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "Code-native section per the manifest image_treatment (\"mist-blue publication-gate surface, no active submit button and no endpoint, pending, unavailable, disabled, or system-status labels\"); live text and drawn elements only, no raster asset required."
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "Frame composition preserved: White dossier panel keeps the ref's four group labels (Your contact / Professional context / Planning focus / Consent and disclosure acknowledgments) as fieldset legends beside the tall desk rail."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved navy/gold/ivory language retained on the #DCE8F2 band per the manifest edge contract; Cormorant Garamond display over Inter body."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "390x844 recomposition per manifest: Stack fields and controls in one column at 390px, preserve labels above inputs, make all targets at least 44px high and CTAs full-width, keep validation/results immediately after the relevant control, and move…"
+        }
+      },
+      "ref": "_design_inputs/pages/contact/refs/03-contact-form.png",
+      "owners": [
+        "src/app/(site)/contact/page.tsx",
+        "src/components/pages/contact/contact-form-section.tsx",
+        "src/components/pages/contact/contact-form.tsx"
+      ],
+      "notes": "White dossier panel keeps the ref's four group labels (Your contact / Professional context / Planning focus / Consent and disclosure acknowledgments) as fieldset legends beside the tall desk rail. Live behavior: validate-first (type='button' → validate → requestSubmit), honeypot, aria-invalid/aria-describedby wiring, sending/sent/failed states; submits via submitSiteInquiry('contact-inquiry', …) with camelCase-only keys — the form_submission dataLayer event fires inside the pipeline only on confirmed receipt. Failure state surfaces the verified phone and email."
+    },
+    {
+      "frame": "04-referral-context",
+      "implementation_kind": "bespoke",
+      "implementation_owner": "src/components/pages/contact/referral-context.tsx",
+      "content_source": "section_manifest.json#04-referral-context",
+      "asset_roles": [
+        "professional referral documents with role tabs"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "Approved manifest fields (headline, body, boundary) render as live HTML text, led by \"Referral partners.\"."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "Dedicated asset renders the declared subject \"professional referral documents with role tabs\" with the approved \"white ledger, no logos or badges\" crop and treatment."
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "Frame composition preserved: Blank extracted notepad at left with the five role tabs rendered as live stepped paper chips (labels are the roles named in the body copy, per the extraction plan's tabs-as-code verdict); headline, body, and the…."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved navy/gold/ivory language retained on the #FFFFFF band per the manifest edge contract; Cormorant Garamond display over Inter body."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "390x844 recomposition per manifest: Stack the primary content group in narrative order while preserving asymmetric emphasis through offset margins and varied spacing; crop imagery around its declared focal point, keep all live text and links, and simplify…"
+        }
+      },
+      "ref": "_design_inputs/pages/contact/refs/04-referral-context.png",
+      "owners": [
+        "src/app/(site)/contact/page.tsx",
+        "src/components/pages/contact/referral-context.tsx"
+      ],
+      "notes": "Blank extracted notepad at left with the five role tabs rendered as live stepped paper chips (labels are the roles named in the body copy, per the extraction plan's tabs-as-code verdict); headline, body, and the no-implication boundary box at right."
+    },
+    {
+      "frame": "05-booking-alternative",
+      "implementation_kind": "bespoke",
+      "implementation_owner": "src/components/pages/contact/booking-alternative.tsx",
+      "content_source": "section_manifest.json#05-booking-alternative",
+      "asset_roles": [
+        "calendar booking alternative"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "PASS with documented deliberate adaptation preserving the approved semantic gate: manifest body ('…when the Google Calendar embed is supplied and active') referenced the then-unsupplied embed; the scheduler is now live on /schedule, so the sentence states the resolved truth without production jargon — headline, /schedule route, and 'Open scheduling page' link are verbatim"
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "Code-native section per the manifest image_treatment (\"ivory panel with calendar icon\"); live text and drawn elements only, no raster asset required."
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "Frame composition preserved: Ivory decision panel: copy and the /schedule route left, large code-native calendar cue center, and the extracted desk rail touching the section's top and bottom edges at right — its baked navy foot meets the navy…."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved navy/gold/ivory language retained on the #F6F2E8 band per the manifest edge contract; Cormorant Garamond display over Inter body."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "390x844 recomposition per manifest: Stack the primary content group in narrative order while preserving asymmetric emphasis through offset margins and varied spacing; crop imagery around its declared focal point, keep all live text and links, and simplify…"
+        }
+      },
+      "ref": "_design_inputs/pages/contact/refs/05-booking-alternative.png",
+      "owners": [
+        "src/app/(site)/contact/page.tsx",
+        "src/components/pages/contact/booking-alternative.tsx"
+      ],
+      "notes": "Ivory decision panel: copy and the /schedule route left, large code-native calendar cue center, and the extracted desk rail touching the section's top and bottom edges at right — its baked navy foot meets the navy disclosure strip below, per the edge contract."
+    },
+    {
+      "frame": "06-disclosure-boundary",
+      "implementation_kind": "bespoke",
+      "implementation_owner": "src/components/pages/contact/disclosure-boundary.tsx",
+      "content_source": "section_manifest.json#06-disclosure-boundary",
+      "asset_roles": [
+        "code-only live semantic content"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "Approved manifest fields (headline, body) render as live HTML text, led by \"Do not send sensitive records through the website.\"."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "Code-native section per the manifest image_treatment (\"1536x512 navy strip with live text\"); live text and drawn elements only, no raster asset required."
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "Frame composition preserved: Navy closing strip with manifest-verbatim headline/body and the 'Read disclosures' route to /privacy-disclosures; the page's gold line enters at the contracted seam and ends at a dot inside the strip, not in the footer."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved navy/gold/ivory language retained on the #0B1F3A band per the manifest edge contract; Cormorant Garamond display over Inter body."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "390x844 recomposition per manifest: Stack the primary content group in narrative order while preserving asymmetric emphasis through offset margins and varied spacing; crop imagery around its declared focal point, keep all live text and links, and simplify…"
+        }
+      },
+      "ref": "_design_inputs/pages/contact/refs/06-disclosure-boundary.png",
+      "owners": [
+        "src/app/(site)/contact/page.tsx",
+        "src/components/pages/contact/disclosure-boundary.tsx"
+      ],
+      "notes": "Navy closing strip with manifest-verbatim headline/body and the 'Read disclosures' route to /privacy-disclosures; the page's gold line enters at the contracted seam and ends at a dot inside the strip, not in the footer."
+    }
+  ]
+}

@@ -1,0 +1,239 @@
+{
+  "version": 1,
+  "slug": "financial-planning-for-dentists",
+  "route": "/financial-planning-for-dentists",
+  "sections": [
+    {
+      "frame": "01-role-context",
+      "implementation_kind": "shared-designed",
+      "implementation_owner": "src/components/pages/audience/role-context.tsx",
+      "shared_basis": "The five audience manifests (financial-planning-for-crnas-nps-pas, financial-planning-for-dentists, financial-planning-for-healthcare-executives, financial-planning-for-surgeons, physicians-specialists) in revision-2026-09-15-image-first share the identical six-frame audience grammar (01-role-context through 06-related-paths); the approved audience family component src/components/pages/audience/role-context.tsx renders this frame with page content from src/components/pages/audience/content/financial-planning-for-dentists.ts.",
+      "content_source": "section_manifest.json#01-role-context",
+      "asset_roles": [
+        "dental operatory context with practice finance documents and equipment-cost annotations"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "Approved manifest fields (eyebrow, headline, body, primary_cta, boundary) render as live HTML text, led by \"Wealth strategy for dentists and dental specialists.\"."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "PASS with documented deliberate adaptation preserving the approved semantic gate: the shipped raster carried a baked headline fragment (\"ists\") on its left edge; the 175px trim that removed it also removed most of the dental chair, so the scene leads with the overhead light, equipment plan, practice-debt binder and cash-flow notebook"
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "Frame composition preserved: Navy image-canvas hero in the ref's display-eyebrow arrangement: \"Dentists & Dental Specialists\" at display scale, the manifest headline as the gold h1 subhead, body, gold /schedule CTA, framed boundary; operatory scene…."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved navy/gold/ivory language retained on the #0B1F3A band per the manifest edge contract; Cormorant Garamond display over Inter body."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "390x844 recomposition per manifest: Preserve the headline and primary action before the image; use a 4:5 or 3:2 crop centered on the declared subject/focal point, never a blurred filler panel; stack overlays into live blocks, keep at least 70% of the…"
+        }
+      },
+      "ref": "design_refs/revision-2026-09-15-image-first/pages/financial-planning-for-dentists/refs/01-role-context.png",
+      "owners": [
+        "src/app/(site)/financial-planning-for-dentists/page.tsx",
+        "src/components/pages/audience/role-context.tsx",
+        "src/components/pages/audience/audience.css",
+        "src/components/pages/audience/content/financial-planning-for-dentists.ts"
+      ],
+      "notes": "Navy image-canvas hero in the ref's display-eyebrow arrangement: \"Dentists & Dental Specialists\" at display scale, the manifest headline as the gold h1 subhead, body, gold /schedule CTA, framed boundary; operatory scene owns the right 52% with a live ivory seam sweep under the live gold exit line. Mobile stacks copy then a 4:5 crop."
+    },
+    {
+      "frame": "02-decision-patterns",
+      "implementation_kind": "shared-designed",
+      "implementation_owner": "src/components/pages/audience/decision-patterns.tsx",
+      "shared_basis": "The five audience manifests (financial-planning-for-crnas-nps-pas, financial-planning-for-dentists, financial-planning-for-healthcare-executives, financial-planning-for-surgeons, physicians-specialists) in revision-2026-09-15-image-first share the identical six-frame audience grammar (01-role-context through 06-related-paths); the approved audience family component src/components/pages/audience/decision-patterns.tsx renders this frame with page content from src/components/pages/audience/content/financial-planning-for-dentists.ts.",
+      "content_source": "section_manifest.json#02-decision-patterns",
+      "asset_roles": [
+        "Dentists & Dental Specialists decision ledger"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "Approved manifest fields (headline, body, items) render as live HTML text, led by \"Planning questions that tend to show up for this role.\"."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "Code-native section per the manifest image_treatment (\"mostly typographic ivory ledger with one small role-specific crop\"); live text and drawn elements only, no raster asset required."
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "Frame composition preserved: Quiet ivory ledger, \"staircase\" rows: five rule-separated decision rows step right with live gold elbow connectors and diamond terminals; the instruments/clipboard raster (baked curved seam and gold line trimmed off its…."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved navy/gold/ivory language retained on the #F6F2E8 band per the manifest edge contract; Cormorant Garamond display over Inter body."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "390x844 recomposition per manifest: Stack the primary content group in narrative order while preserving asymmetric emphasis through offset margins and varied spacing; crop imagery around its declared focal point, keep all live text and links, and simplify…"
+        }
+      },
+      "ref": "design_refs/revision-2026-09-15-image-first/pages/financial-planning-for-dentists/refs/02-decision-patterns.png",
+      "owners": [
+        "src/components/pages/audience/decision-patterns.tsx",
+        "src/components/pages/audience/audience.css"
+      ],
+      "notes": "Quiet ivory ledger, \"staircase\" rows: five rule-separated decision rows step right with live gold elbow connectors and diamond terminals; the instruments/clipboard raster (baked curved seam and gold line trimmed off its base) bleeds to the top and right edges as the counterweight. Mobile keeps source order with clamped indents. Design-review remediation: the subhead now reads in visitor voice (the manifest's internal “the page should…” phrasing no longer ships as visible copy). The top/right-bleed counterweight photo (decision-patterns-scene.jpg, the page's own namespace) is restored: the sized slot is now the .aud-ledger-photo element itself — that class pins position:relative in unlayered CSS, which had collapsed the previous inner absolute figure to zero height, leaving an empty cream right column on desktop, a floating gold entry stub, and ~700px of dead gradient scroll on mobile; the gold route's entry segment now terminates under the photo plate, and mobile shows the 3:4 photo crop with no contentless gap."
+    },
+    {
+      "frame": "03-career-scenario",
+      "implementation_kind": "shared-designed",
+      "implementation_owner": "src/components/pages/audience/career-scenario.tsx",
+      "shared_basis": "The five audience manifests (financial-planning-for-crnas-nps-pas, financial-planning-for-dentists, financial-planning-for-healthcare-executives, financial-planning-for-surgeons, physicians-specialists) in revision-2026-09-15-image-first share the identical six-frame audience grammar (01-role-context through 06-related-paths); the approved audience family component src/components/pages/audience/career-scenario.tsx renders this frame with page content from src/components/pages/audience/content/financial-planning-for-dentists.ts.",
+      "content_source": "section_manifest.json#03-career-scenario",
+      "asset_roles": [
+        "Dentists & Dental Specialists career or practice scenario"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "Approved manifest fields (headline, body, secondary_link) render as live HTML text, led by \"The career structure changes the planning work.\"."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "Dedicated asset renders the declared subject \"Dentists & Dental Specialists career or practice scenario\" with the approved \"image-as-canvas with document overlay, no fabricated names\" crop and treatment."
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "Frame composition preserved: \"paths\" variant: copy left on mist, live document sheet with two manifest-lifted chips centre, corridor/consultation-table raster (baked top gold line and bottom-right exit segments trimmed) holding the right edge…."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "PASS with documented deliberate adaptation preserving the approved semantic gate: the ref's blank propped planning sheet is rendered as the family's live translucent document sheet carrying two path chips (\"Workplace\", \"Wealth engine\") lifted verbatim from the manifest body, since a raster of the sheet did not ship"
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "390x844 recomposition per manifest: Stack the primary content group in narrative order while preserving asymmetric emphasis through offset margins and varied spacing; crop imagery around its declared focal point, keep all live text and links, and simplify…"
+        }
+      },
+      "ref": "design_refs/revision-2026-09-15-image-first/pages/financial-planning-for-dentists/refs/03-career-scenario.png",
+      "owners": [
+        "src/components/pages/audience/career-scenario.tsx",
+        "src/components/pages/audience/audience.css"
+      ],
+      "notes": "\"paths\" variant: copy left on mist, live document sheet with two manifest-lifted chips centre, corridor/consultation-table raster (baked top gold line and bottom-right exit segments trimmed) holding the right edge; /our-process text link."
+    },
+    {
+      "frame": "04-coordination-map",
+      "implementation_kind": "bespoke",
+      "implementation_owner": "src/components/pages/audience/coordination-map-loop.tsx",
+      "content_source": "section_manifest.json#04-coordination-map",
+      "asset_roles": [
+        "coordination map for Dentists & Dental Specialists"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "Approved manifest fields (headline, body, items) render as live HTML text, led by \"One conversation across the relevant pillars.\"."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "Code-native section per the manifest image_treatment (\"abstracted professional-team rooms, no faces, live text labels\"); live text and drawn elements only, no raster asset required."
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "Frame composition preserved: \"vignette-loop\" variant on white: copy-left intro, five section-owned room vignettes (baked gold nodes/line fragments trimmed from every room raster) scattered by named grid areas in exact manifest DOM order, joined by…."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved navy/gold/ivory language retained on the #FFFFFF band per the manifest edge contract; Cormorant Garamond display over Inter body."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "390x844 recomposition per manifest: Convert the desktop diagram into a vertical reading rail in source order; keep every label and connector endpoint, place supporting imagery after the decisive step, avoid horizontal scrolling, and redraw the gold…"
+        }
+      },
+      "ref": "design_refs/revision-2026-09-15-image-first/pages/financial-planning-for-dentists/refs/04-coordination-map.png",
+      "owners": [
+        "src/components/pages/audience/coordination-map.tsx",
+        "src/components/pages/audience/coordination-map-loop.tsx",
+        "src/components/pages/audience/coordination-map-intro.tsx",
+        "src/components/pages/audience/audience.css"
+      ],
+      "notes": "\"vignette-loop\" variant on white: copy-left intro, five section-owned room vignettes (baked gold nodes/line fragments trimmed from every room raster) scattered by named grid areas in exact manifest DOM order, joined by one live looping gold route; centre descender becomes the question-strip spine. Mobile collapses to a vertical gold-ruled rail."
+    },
+    {
+      "frame": "05-questions-before-call",
+      "implementation_kind": "shared-designed",
+      "implementation_owner": "src/components/pages/audience/questions-before-call.tsx",
+      "shared_basis": "The five audience manifests (financial-planning-for-crnas-nps-pas, financial-planning-for-dentists, financial-planning-for-healthcare-executives, financial-planning-for-surgeons, physicians-specialists) in revision-2026-09-15-image-first share the identical six-frame audience grammar (01-role-context through 06-related-paths); the approved audience family component src/components/pages/audience/questions-before-call.tsx renders this frame with page content from src/components/pages/audience/content/financial-planning-for-dentists.ts.",
+      "content_source": "section_manifest.json#05-questions-before-call",
+      "asset_roles": [
+        "short question strip for Dentists & Dental Specialists"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "Approved manifest fields (headline, items, note) render as live HTML text, led by \"Questions to bring into the first review.\"."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "Dedicated asset renders the declared subject \"short question strip for Dentists & Dental Specialists\" with the approved \"1536x512 strip, ivory paper, pen, no faces\" crop and treatment."
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "Frame composition preserved: \"navy-band\" style: ivory headline strip with the pen still life holding the right edge, then the three questions in white on a navy band along one live gold rail with diamond nodes, and the practice-owner routing note…."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved navy/gold/ivory language retained on the #F6F2E8 band per the manifest edge contract; Cormorant Garamond display over Inter body."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "390x844 recomposition per manifest: Convert multi-column ledgers or tables into full-width rule-separated rows in source order; preserve all decision labels and contextual links, move any documentary crop between logical groups, and use only one slim gold…"
+        }
+      },
+      "ref": "design_refs/revision-2026-09-15-image-first/pages/financial-planning-for-dentists/refs/05-questions-before-call.png",
+      "owners": [
+        "src/components/pages/audience/questions-before-call.tsx",
+        "src/components/pages/audience/audience.css"
+      ],
+      "notes": "\"navy-band\" style: ivory headline strip with the pen still life holding the right edge, then the three questions in white on a navy band along one live gold rail with diamond nodes, and the practice-owner routing note in italic at the band's right. Mobile stacks the questions on a left gold rule."
+    },
+    {
+      "frame": "06-related-paths",
+      "implementation_kind": "shared-designed",
+      "implementation_owner": "src/components/pages/audience/related-paths.tsx",
+      "shared_basis": "The five audience manifests (financial-planning-for-crnas-nps-pas, financial-planning-for-dentists, financial-planning-for-healthcare-executives, financial-planning-for-surgeons, physicians-specialists) in revision-2026-09-15-image-first share the identical six-frame audience grammar (01-role-context through 06-related-paths); the approved audience family component src/components/pages/audience/related-paths.tsx renders this frame with page content from src/components/pages/audience/content/financial-planning-for-dentists.ts.",
+      "content_source": "section_manifest.json#06-related-paths",
+      "asset_roles": [
+        "navy advisory close with route cards as live text"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "Approved manifest fields (headline, body, links, primary_cta) render as live HTML text, led by \"Choose the planning path that fits the decision in front of you.\"."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "Dedicated asset renders the declared subject \"navy advisory close with route cards as live text\" with the approved \"wide navy editorial composition with small image tabs\" crop and treatment."
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "Frame composition preserved: \"ladder\" close over the approved quiet consult-room plate: centred heading/body, gold /schedule CTA at the left, five live route cards stacked on one gold stem with rung connectors at the right, real destinations from…."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "PASS with documented deliberate adaptation preserving the approved semantic gate: the ref's tiny photographic tabs on each route card are rendered as live navy icon tabs (every card region is CODE per the extraction plan; no tab rasters shipped)"
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "390x844 recomposition per manifest: Convert the desktop diagram into a vertical reading rail in source order; keep every label and connector endpoint, place supporting imagery after the decisive step, avoid horizontal scrolling, and redraw the gold…"
+        }
+      },
+      "ref": "design_refs/revision-2026-09-15-image-first/pages/financial-planning-for-dentists/refs/06-related-paths.png",
+      "owners": [
+        "src/components/pages/audience/related-paths.tsx",
+        "src/components/pages/audience/audience.css",
+        "src/components/pages/audience/content/shared.ts"
+      ],
+      "notes": "\"ladder\" close over the approved quiet consult-room plate: centred heading/body, gold /schedule CTA at the left, five live route cards stacked on one gold stem with rung connectors at the right, real destinations from the route registry. The page-local line ends at the ladder; nothing continues into the footer."
+    }
+  ]
+}

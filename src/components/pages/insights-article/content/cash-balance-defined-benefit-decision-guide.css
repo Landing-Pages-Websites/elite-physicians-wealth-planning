@@ -1,0 +1,36 @@
+/*
+ * Page-scoped frame recipes for /insights/cash-balance-defined-benefit-decision-guide.
+ * Same math as the family art-frame recipes: the class pins the slot's
+ * aspect-ratio to the raster's visible rect; img width/left percentages are
+ * relative to that visible rect so baked artifacts stay outside the slot at
+ * every viewport. Family components and insights-article.css are untouched.
+ */
+
+.art-frame--cbdb-teaser {
+  /* 258x714 minus the baked gold diagonal in the bottom-left corner:
+     visible rect (0,0,258,675). Width capped so the tall paper-stack column
+     reads like the ref's narrow right-edge ledger. */
+  aspect-ratio: 258 / 675;
+  max-width: 15rem;
+}
+
+.art-frame--cbdb-gate {
+  /* 883x583 minus the baked gold outline entering bottom-left:
+     visible rect (0,0,883,568). */
+  aspect-ratio: 883 / 568;
+}
+
+.art-frame--cbdb-review {
+  /* 639x324 minus the baked internal-jargon tab label on the left and the
+     baked annotation card along the bottom: visible rect (265,0,374,235). */
+  aspect-ratio: 374 / 235;
+}
+.art-frame--cbdb-review > img {
+  width: 170.855%;
+  left: -70.855%;
+}
+
+.art-frame--cbdb-related {
+  /* Clean extraction; pin the intrinsic 429x593 aspect. */
+  aspect-ratio: 429 / 593;
+}

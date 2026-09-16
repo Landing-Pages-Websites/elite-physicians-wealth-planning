@@ -1,0 +1,201 @@
+{
+  "version": 1,
+  "slug": "insights--first-five-years-financial-moves",
+  "route": "/insights/first-five-years-financial-moves",
+  "sections": [
+    {
+      "frame": "01-editorial-state-hero",
+      "implementation_kind": "shared-designed",
+      "implementation_owner": "src/components/pages/insights-article/editorial-state-hero.tsx",
+      "shared_basis": "All twelve insights article manifests in revision-2026-09-15-image-first share the editorial-content-gate archetype and the identical five-frame grammar (01-editorial-state-hero, 02-verified-teaser, 03-manuscript-gate, 04-source-and-review-gate, 05-related-reading); the approved insights-article family component src/components/pages/insights-article/editorial-state-hero.tsx renders this frame with the per-article content module src/components/pages/insights-article/content/first-five-years-financial-moves.ts.",
+      "content_source": "section_manifest.json#01-editorial-state-hero",
+      "asset_roles": [
+        "editorial article photograph for Career-Stage Planning: Foundational decisions to consider between residency and mid-career."
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "Approved manifest fields (eyebrow, headline, body, visibility_note) render as live HTML text, led by \"Seven Financial Moves to Consider in the First Five Years of Practice\"."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "PASS with documented deliberate adaptation preserving the approved semantic gate: the extraction (01-editorial-state-hero-photo.jpg) carries a baked headline glyph fragment on its left edge and an ivory seam band along its bottom; the family hero veils (opaque navy run to 24% + bottom floor fade) keep both invisible at every plate aspect"
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "Frame composition preserved: Navy image-first masthead: eyebrow/H1/teaser body left over the study scene with notebook, pen and draped physician coat; customer-facing held line; no author, date, or reviewer; 'All insights' link to /insights."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved navy/gold/ivory language retained on the #0B1F3A band per the manifest edge contract; Cormorant Garamond display over Inter body."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "390x844 recomposition per manifest: Preserve the headline and primary action before the image; use a 4:5 or 3:2 crop centered on the declared subject/focal point, never a blurred filler panel; stack overlays into live blocks, keep at least 70% of the…"
+        }
+      },
+      "ref": "_design_inputs/pages/insights--first-five-years-financial-moves/refs/01-editorial-state-hero.png",
+      "owners": [
+        "src/app/(site)/insights/first-five-years-financial-moves/page.tsx",
+        "src/components/pages/insights-article/editorial-state-hero.tsx",
+        "src/components/pages/insights-article/insights-article.css",
+        "src/components/pages/insights-article/content/first-five-years-financial-moves.ts"
+      ],
+      "notes": "Navy image-first masthead: eyebrow/H1/teaser body left over the study scene with notebook, pen and draped physician coat; customer-facing held line; no author, date, or reviewer; 'All insights' link to /insights."
+    },
+    {
+      "frame": "02-verified-teaser",
+      "implementation_kind": "shared-designed",
+      "implementation_owner": "src/components/pages/insights-article/verified-teaser.tsx",
+      "shared_basis": "All twelve insights article manifests in revision-2026-09-15-image-first share the editorial-content-gate archetype and the identical five-frame grammar (01-editorial-state-hero, 02-verified-teaser, 03-manuscript-gate, 04-source-and-review-gate, 05-related-reading); the approved insights-article family component src/components/pages/insights-article/verified-teaser.tsx renders this frame with the per-article content module src/components/pages/insights-article/content/first-five-years-financial-moves.ts.",
+      "content_source": "section_manifest.json#02-verified-teaser",
+      "asset_roles": [
+        "quiet editorial abstract ledger"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "Approved manifest fields (headline, body, items) render as live HTML text, led by \"What is verified now.\"."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "Dedicated asset renders the declared subject \"quiet editorial abstract ledger\" with the approved \"warm ivory desk crop with live text area\" crop and treatment."
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "Frame composition preserved: Ivory ledger with the tabbed-folder still-life on the right (mediaSide mirrors this article's ref), ringed-check verified rows left; the ref's small internal 'Verified teaser' label is not reproduced as chrome — the…."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved navy/gold/ivory language retained on the #F6F2E8 band per the manifest edge contract; Cormorant Garamond display over Inter body."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "390x844 recomposition per manifest: Stack the primary content group in narrative order while preserving asymmetric emphasis through offset margins and varied spacing; crop imagery around its declared focal point, keep all live text and links, and simplify…"
+        }
+      },
+      "ref": "_design_inputs/pages/insights--first-five-years-financial-moves/refs/02-verified-teaser.png",
+      "owners": [
+        "src/components/pages/insights-article/verified-teaser.tsx",
+        "src/components/pages/insights-article/content/first-five-years-financial-moves.ts"
+      ],
+      "notes": "Ivory ledger with the tabbed-folder still-life on the right (mediaSide mirrors this article's ref), ringed-check verified rows left; the ref's small internal 'Verified teaser' label is not reproduced as chrome — the section heading carries the meaning."
+    },
+    {
+      "frame": "03-manuscript-gate",
+      "implementation_kind": "shared-designed",
+      "implementation_owner": "src/components/pages/insights-article/manuscript-gate.tsx",
+      "shared_basis": "All twelve insights article manifests in revision-2026-09-15-image-first share the editorial-content-gate archetype and the identical five-frame grammar (01-editorial-state-hero, 02-verified-teaser, 03-manuscript-gate, 04-source-and-review-gate, 05-related-reading); the approved insights-article family component src/components/pages/insights-article/manuscript-gate.tsx renders this frame with the per-article content module src/components/pages/insights-article/content/first-five-years-financial-moves.ts.",
+      "content_source": "section_manifest.json#03-manuscript-gate",
+      "asset_roles": [
+        "editorial desk with sealed manuscript sleeve and source tabs"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "Approved manifest fields (headline, items) render as live HTML text, led by \"Required before this article can go live.\"."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "Dedicated asset renders the declared subject \"editorial desk with sealed manuscript sleeve and source tabs\" with the approved \"white field, document sleeve, no readable fake article text\" crop and treatment."
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "Frame composition preserved: White spread: cream string-tie envelope left above the mist filing tray, four requirement items as the live gold-spine rail right, exactly the manifest strings; no internal 'Manuscript gate' label chrome."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved navy/gold/ivory language retained on the #FFFFFF band per the manifest edge contract; Cormorant Garamond display over Inter body."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "390x844 recomposition per manifest: Stack the primary content group in narrative order while preserving asymmetric emphasis through offset margins and varied spacing; crop imagery around its declared focal point, keep all live text and links, and simplify…"
+        }
+      },
+      "ref": "_design_inputs/pages/insights--first-five-years-financial-moves/refs/03-manuscript-gate.png",
+      "owners": [
+        "src/components/pages/insights-article/manuscript-gate.tsx",
+        "src/components/pages/insights-article/content/first-five-years-financial-moves.ts"
+      ],
+      "notes": "White spread: cream string-tie envelope left above the mist filing tray, four requirement items as the live gold-spine rail right, exactly the manifest strings; no internal 'Manuscript gate' label chrome."
+    },
+    {
+      "frame": "04-source-and-review-gate",
+      "implementation_kind": "shared-designed",
+      "implementation_owner": "src/components/pages/insights-article/source-and-review-gate.tsx",
+      "shared_basis": "All twelve insights article manifests in revision-2026-09-15-image-first share the editorial-content-gate archetype and the identical five-frame grammar (01-editorial-state-hero, 02-verified-teaser, 03-manuscript-gate, 04-source-and-review-gate, 05-related-reading); the approved insights-article family component src/components/pages/insights-article/source-and-review-gate.tsx renders this frame with the per-article content module src/components/pages/insights-article/content/first-five-years-financial-moves.ts.",
+      "content_source": "section_manifest.json#04-source-and-review-gate",
+      "asset_roles": [
+        "code-only live semantic content"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "Approved manifest fields (headline, items) render as live HTML text, led by \"Source and review requirements.\"."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "PASS with documented deliberate adaptation preserving the approved semantic gate: the extraction (04-source-and-review-gate-photo.jpg) carries an AI pseudo-lettered book spine along its top and a baked gold card corner bottom-left; art-frame--ff-review crops to the clean folder-fan rect (240,100,674,398)"
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "Frame composition preserved: Mist strip: headline and three live requirement panels, folder-fan crop right; the ref's 'source/review gate' internal label strip is intentionally not reproduced."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved navy/gold/ivory language retained on the #DCE8F2 band per the manifest edge contract; Cormorant Garamond display over Inter body."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "390x844 recomposition per manifest: Stack the primary content group in narrative order while preserving asymmetric emphasis through offset margins and varied spacing; crop imagery around its declared focal point, keep all live text and links, and simplify…"
+        }
+      },
+      "ref": "_design_inputs/pages/insights--first-five-years-financial-moves/refs/04-source-and-review-gate.png",
+      "owners": [
+        "src/components/pages/insights-article/source-and-review-gate.tsx",
+        "src/components/pages/insights-article/insights-article.css",
+        "src/components/pages/insights-article/content/first-five-years-financial-moves.ts"
+      ],
+      "notes": "Mist strip: headline and three live requirement panels, folder-fan crop right; the ref's 'source/review gate' internal label strip is intentionally not reproduced."
+    },
+    {
+      "frame": "05-related-reading",
+      "implementation_kind": "shared-designed",
+      "implementation_owner": "src/components/pages/insights-article/related-reading.tsx",
+      "shared_basis": "All twelve insights article manifests in revision-2026-09-15-image-first share the editorial-content-gate archetype and the identical five-frame grammar (01-editorial-state-hero, 02-verified-teaser, 03-manuscript-gate, 04-source-and-review-gate, 05-related-reading); the approved insights-article family component src/components/pages/insights-article/related-reading.tsx renders this frame with the per-article content module src/components/pages/insights-article/content/first-five-years-financial-moves.ts.",
+      "content_source": "section_manifest.json#05-related-reading",
+      "asset_roles": [
+        "related-reading ledger for Career-Stage Planning"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "Approved manifest fields (headline, body, links) render as live HTML text, led by \"Related planning paths for this topic.\"."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "PASS with documented deliberate adaptation preserving the approved semantic gate: the extraction (05-related-reading-photo.jpg) carries an ivory seam band along its top; art-frame--ff-related crops it (visible rect 0,72,674,840)"
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "Frame composition preserved: Ivory close: the manifest's three routes (/physicians, /tax-planning-for-physicians, /insights) as the gold-spine path ledger, shared held note, boundary, 'Return to insights', closing node; books/coat/notebook crop…."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved navy/gold/ivory language retained on the #F6F2E8 band per the manifest edge contract; Cormorant Garamond display over Inter body."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "390x844 recomposition per manifest: Stack the primary content group in narrative order while preserving asymmetric emphasis through offset margins and varied spacing; crop imagery around its declared focal point, keep all live text and links, and simplify…"
+        }
+      },
+      "ref": "_design_inputs/pages/insights--first-five-years-financial-moves/refs/05-related-reading.png",
+      "owners": [
+        "src/components/pages/insights-article/related-reading.tsx",
+        "src/components/pages/insights-article/insights-article.css",
+        "src/components/pages/insights-article/content/first-five-years-financial-moves.ts"
+      ],
+      "notes": "Ivory close: the manifest's three routes (/physicians, /tax-planning-for-physicians, /insights) as the gold-spine path ledger, shared held note, boundary, 'Return to insights', closing node; books/coat/notebook crop right."
+    }
+  ]
+}

@@ -1,0 +1,203 @@
+{
+  "version": 1,
+  "slug": "insights--beneficiaries-trusts-ownership-checklist",
+  "route": "/insights/beneficiaries-trusts-ownership-checklist",
+  "sections": [
+    {
+      "frame": "01-editorial-state-hero",
+      "implementation_kind": "shared-designed",
+      "implementation_owner": "src/components/pages/insights-article/editorial-state-hero.tsx",
+      "shared_basis": "All twelve insights article manifests in revision-2026-09-15-image-first share the editorial-content-gate archetype and the identical five-frame grammar (01-editorial-state-hero, 02-verified-teaser, 03-manuscript-gate, 04-source-and-review-gate, 05-related-reading); the approved insights-article family component src/components/pages/insights-article/editorial-state-hero.tsx renders this frame with the per-article content module src/components/pages/insights-article/content/beneficiaries-trusts-ownership-checklist.ts.",
+      "content_source": "section_manifest.json#01-editorial-state-hero",
+      "asset_roles": [
+        "editorial article photograph for Estate & Family: Where estate documents and account titling most often disconnect."
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "Approved manifest fields (eyebrow, headline, body, visibility_note) render as live HTML text, led by \"Beneficiaries, Trusts, and Account Ownership: A Physician Estate-Plan Coordination Checklist\"."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "Dedicated asset renders the declared subject \"editorial article photograph for Estate & Family: Where estate documents and account titling most often disconnect.\" with the approved \"cinematic crop with no people or generic charts\" crop and treatment."
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "Frame composition preserved: Navy image-first masthead: Estate & Family eyebrow, H1, teaser body left; Estate Plan binder/trust-ledger desk scene right (prop titles from the approved frame remain visible); customer-facing held line; no author…."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved navy/gold/ivory language retained on the #0B1F3A band per the manifest edge contract; Cormorant Garamond display over Inter body."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "390x844 recomposition per manifest: Preserve the headline and primary action before the image; use a 4:5 or 3:2 crop centered on the declared subject/focal point, never a blurred filler panel; stack overlays into live blocks, keep at least 70% of the…"
+        }
+      },
+      "ref": "design_refs/revision-2026-09-15-image-first/pages/insights--beneficiaries-trusts-ownership-checklist/refs/01-editorial-state-hero.png",
+      "owners": [
+        "src/app/(site)/insights/beneficiaries-trusts-ownership-checklist/page.tsx",
+        "src/components/pages/insights-article/editorial-state-hero.tsx",
+        "src/components/pages/insights-article/insights-article.css",
+        "src/components/pages/insights-article/content/beneficiaries-trusts-ownership-checklist.ts"
+      ],
+      "notes": "Navy image-first masthead: Estate & Family eyebrow, H1, teaser body left; Estate Plan binder/trust-ledger desk scene right (prop titles from the approved frame remain visible); customer-facing held line; no author, date, or reviewer; 'All insights' link."
+    },
+    {
+      "frame": "02-verified-teaser",
+      "implementation_kind": "shared-designed",
+      "implementation_owner": "src/components/pages/insights-article/verified-teaser.tsx",
+      "shared_basis": "All twelve insights article manifests in revision-2026-09-15-image-first share the editorial-content-gate archetype and the identical five-frame grammar (01-editorial-state-hero, 02-verified-teaser, 03-manuscript-gate, 04-source-and-review-gate, 05-related-reading); the approved insights-article family component src/components/pages/insights-article/verified-teaser.tsx renders this frame with the per-article content module src/components/pages/insights-article/content/beneficiaries-trusts-ownership-checklist.ts.",
+      "content_source": "section_manifest.json#02-verified-teaser",
+      "asset_roles": [
+        "quiet editorial abstract ledger"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "Approved manifest fields (headline, body, items) render as live HTML text, led by \"What is verified now.\"."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "PASS with documented deliberate adaptation preserving the approved semantic gate: the extraction (verified-estate-binder.jpg) carries the frame's baked ivory-to-white seam band along its bottom edge; art-frame--est-teaser crops to (0,0,456,716)"
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "Frame composition preserved: Ivory ledger: tabbed estate-binder crop right (mediaSide mirrors this article's ref), ringed-check verified rows left with only the truthful teaser items."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved navy/gold/ivory language retained on the #F6F2E8 band per the manifest edge contract; Cormorant Garamond display over Inter body."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "390x844 recomposition per manifest: Stack the primary content group in narrative order while preserving asymmetric emphasis through offset margins and varied spacing; crop imagery around its declared focal point, keep all live text and links, and simplify…"
+        }
+      },
+      "ref": "design_refs/revision-2026-09-15-image-first/pages/insights--beneficiaries-trusts-ownership-checklist/refs/02-verified-teaser.png",
+      "owners": [
+        "src/components/pages/insights-article/verified-teaser.tsx",
+        "src/components/pages/insights-article/content/beneficiaries-trusts-ownership-checklist.css",
+        "src/components/pages/insights-article/content/beneficiaries-trusts-ownership-checklist.ts"
+      ],
+      "notes": "Ivory ledger: tabbed estate-binder crop right (mediaSide mirrors this article's ref), ringed-check verified rows left with only the truthful teaser items."
+    },
+    {
+      "frame": "03-manuscript-gate",
+      "implementation_kind": "shared-designed",
+      "implementation_owner": "src/components/pages/insights-article/manuscript-gate.tsx",
+      "shared_basis": "All twelve insights article manifests in revision-2026-09-15-image-first share the editorial-content-gate archetype and the identical five-frame grammar (01-editorial-state-hero, 02-verified-teaser, 03-manuscript-gate, 04-source-and-review-gate, 05-related-reading); the approved insights-article family component src/components/pages/insights-article/manuscript-gate.tsx renders this frame with the per-article content module src/components/pages/insights-article/content/beneficiaries-trusts-ownership-checklist.ts.",
+      "content_source": "section_manifest.json#03-manuscript-gate",
+      "asset_roles": [
+        "editorial desk with sealed manuscript sleeve and source tabs"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "Approved manifest fields (headline, items) render as live HTML text, led by \"Required before this article can go live.\"."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "Dedicated asset renders the declared subject \"editorial desk with sealed manuscript sleeve and source tabs\" with the approved \"white field, document sleeve, no readable fake article text\" crop and treatment."
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "Frame composition preserved: White spread per this ref's composition: string-tied manuscript folder with source tabs left ('Manuscript Gate' plaque is the approved frame's own customer-facing state prop), headline and gold-spine requirement rail…."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "PASS with documented deliberate adaptation preserving the approved semantic gate: the extraction bakes the ref's gold coordination line through the photo plate at the ref's own x; the family seam stubs also render at the family's fixed left x, so two motif x-positions coexist in this section"
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "390x844 recomposition per manifest: Stack the primary content group in narrative order while preserving asymmetric emphasis through offset margins and varied spacing; crop imagery around its declared focal point, keep all live text and links, and simplify…"
+        }
+      },
+      "ref": "design_refs/revision-2026-09-15-image-first/pages/insights--beneficiaries-trusts-ownership-checklist/refs/03-manuscript-gate.png",
+      "owners": [
+        "src/components/pages/insights-article/manuscript-gate.tsx",
+        "src/components/pages/insights-article/content/beneficiaries-trusts-ownership-checklist.css",
+        "src/components/pages/insights-article/content/beneficiaries-trusts-ownership-checklist.ts"
+      ],
+      "notes": "White spread per this ref's composition: string-tied manuscript folder with source tabs left ('Manuscript Gate' plaque is the approved frame's own customer-facing state prop), headline and gold-spine requirement rail right."
+    },
+    {
+      "frame": "04-source-and-review-gate",
+      "implementation_kind": "shared-designed",
+      "implementation_owner": "src/components/pages/insights-article/source-and-review-gate.tsx",
+      "shared_basis": "All twelve insights article manifests in revision-2026-09-15-image-first share the editorial-content-gate archetype and the identical five-frame grammar (01-editorial-state-hero, 02-verified-teaser, 03-manuscript-gate, 04-source-and-review-gate, 05-related-reading); the approved insights-article family component src/components/pages/insights-article/source-and-review-gate.tsx renders this frame with the per-article content module src/components/pages/insights-article/content/beneficiaries-trusts-ownership-checklist.ts.",
+      "content_source": "section_manifest.json#04-source-and-review-gate",
+      "asset_roles": [
+        "code-only live semantic content"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "Approved manifest fields (headline, items) render as live HTML text, led by \"Source and review requirements.\"."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "PASS with documented deliberate adaptation preserving the approved semantic gate: the extraction (estate-source-review-desk.jpg) carries two baked gold hairlines; art-frame--est-review crops to (0,46,216,282), which trims the lower chestpiece and desk edge"
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "PASS with documented deliberate adaptation preserving the approved semantic gate: the ref places the stethoscope crop on the strip's left edge; the family component renders the documentary crop in the right column"
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved navy/gold/ivory language retained on the #DCE8F2 band per the manifest edge contract; Cormorant Garamond display over Inter body."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "390x844 recomposition per manifest: Stack the primary content group in narrative order while preserving asymmetric emphasis through offset margins and varied spacing; crop imagery around its declared focal point, keep all live text and links, and simplify…"
+        }
+      },
+      "ref": "design_refs/revision-2026-09-15-image-first/pages/insights--beneficiaries-trusts-ownership-checklist/refs/04-source-and-review-gate.png",
+      "owners": [
+        "src/components/pages/insights-article/source-and-review-gate.tsx",
+        "src/components/pages/insights-article/content/beneficiaries-trusts-ownership-checklist.css",
+        "src/components/pages/insights-article/content/beneficiaries-trusts-ownership-checklist.ts"
+      ],
+      "notes": "Mist strip: headline and three live requirement panels with icon rings; stethoscope desk crop in the family's right-column slot; the ref's 'Source/review gate' internal label strip is intentionally not reproduced."
+    },
+    {
+      "frame": "05-related-reading",
+      "implementation_kind": "shared-designed",
+      "implementation_owner": "src/components/pages/insights-article/related-reading.tsx",
+      "shared_basis": "All twelve insights article manifests in revision-2026-09-15-image-first share the editorial-content-gate archetype and the identical five-frame grammar (01-editorial-state-hero, 02-verified-teaser, 03-manuscript-gate, 04-source-and-review-gate, 05-related-reading); the approved insights-article family component src/components/pages/insights-article/related-reading.tsx renders this frame with the per-article content module src/components/pages/insights-article/content/beneficiaries-trusts-ownership-checklist.ts.",
+      "content_source": "section_manifest.json#05-related-reading",
+      "asset_roles": [
+        "related-reading ledger for Estate & Family"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "Approved manifest fields (headline, body, links) render as live HTML text, led by \"Related planning paths for this topic.\"."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "PASS with documented deliberate adaptation preserving the approved semantic gate: the extraction (estate-related-still-life.jpg) carries a baked ivory mat border; art-frame--est-related crops to (13,13,457,647)"
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "PASS with documented deliberate adaptation preserving the approved semantic gate: the ref places the still life on the left with the path ledger right; the family component fixes copy left / media right"
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved navy/gold/ivory language retained on the #F6F2E8 band per the manifest edge contract; Cormorant Garamond display over Inter body."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "390x844 recomposition per manifest: Stack the primary content group in narrative order while preserving asymmetric emphasis through offset margins and varied spacing; crop imagery around its declared focal point, keep all live text and links, and simplify…"
+        }
+      },
+      "ref": "design_refs/revision-2026-09-15-image-first/pages/insights--beneficiaries-trusts-ownership-checklist/refs/05-related-reading.png",
+      "owners": [
+        "src/components/pages/insights-article/related-reading.tsx",
+        "src/components/pages/insights-article/content/beneficiaries-trusts-ownership-checklist.css",
+        "src/components/pages/insights-article/content/beneficiaries-trusts-ownership-checklist.ts"
+      ],
+      "notes": "Ivory close: the manifest's three routes (/legacy-estate-planning, /wealth-management-for-physicians, /insights) as the gold-spine path ledger, shared held note, boundary line, 'Return to insights', closing node; Estate & Family still life in the family's media slot."
+    }
+  ]
+}

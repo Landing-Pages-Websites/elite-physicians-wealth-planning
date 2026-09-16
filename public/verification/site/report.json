@@ -1,0 +1,450 @@
+{
+  "base": "http://localhost:3199",
+  "routes": {
+    "/": {
+      "390": {
+        "overflow": 0,
+        "brokenImages": 0
+      },
+      "1440": {
+        "overflow": 0,
+        "brokenImages": 0
+      },
+      "title": "Helping Physicians Keep More, Grow More, and Retire Better | Elite Physicians Wealth Planning",
+      "description": "Elite Physicians Wealth Planning helps physicians and medical professionals coordinate tax planning, retirement planning, wealth management, practice planning, and legacy planning into one clear financial strategy."
+    },
+    "/services": {
+      "390": {
+        "overflow": 0,
+        "brokenImages": 0
+      },
+      "1440": {
+        "overflow": 0,
+        "brokenImages": 0
+      },
+      "title": "Services for Physicians — Elite Physician Wealth Planning™",
+      "description": "One coordinated service map: tax strategy, wealth management, retirement strategy, practice and business planning, and legacy planning for physicians."
+    },
+    "/tax-planning-for-physicians": {
+      "390": {
+        "overflow": 0,
+        "brokenImages": 0
+      },
+      "1440": {
+        "overflow": 0,
+        "brokenImages": 0
+      },
+      "title": "Tax Planning for Physicians — Elite Physician Wealth Planning™",
+      "description": "Tax planning for physicians should be proactive, coordinated, and year-round. For many medical professionals, taxes are one of the largest lifetime expenses."
+    },
+    "/wealth-management-for-physicians": {
+      "390": {
+        "overflow": 0,
+        "brokenImages": 0
+      },
+      "1440": {
+        "overflow": 0,
+        "brokenImages": 0
+      },
+      "title": "Wealth Management for Physicians — Elite Physician Wealth Planning™",
+      "description": "Portfolio decisions should reflect taxes, risk tolerance, time horizon, cash-flow needs, retirement income goals, estate objectives, and concentration risk."
+    },
+    "/retirement-planning-for-physicians": {
+      "390": {
+        "overflow": 0,
+        "brokenImages": 0
+      },
+      "1440": {
+        "overflow": 0,
+        "brokenImages": 0
+      },
+      "title": "Retirement Planning for Physicians — Elite Physician Wealth Planning™",
+      "description": "Retirement planning for physicians is more than choosing a retirement date: one coordinated income strategy across employer plans, IRAs, pensions, and taxes."
+    },
+    "/practice-owner-planning": {
+      "390": {
+        "overflow": 0,
+        "brokenImages": 0
+      },
+      "1440": {
+        "overflow": 0,
+        "brokenImages": 0
+      },
+      "title": "Practice Owner Planning — Elite Physician Wealth Planning™",
+      "description": "Your practice is a major part of your wealth strategy: retirement-plan design, cash flow, entity questions, succession planning, and practice exit decisions."
+    },
+    "/legacy-estate-planning": {
+      "390": {
+        "overflow": 0,
+        "brokenImages": 0
+      },
+      "1440": {
+        "overflow": 0,
+        "brokenImages": 0
+      },
+      "title": "Legacy &amp; Estate Planning Coordination — Elite Physician Wealth Planning™",
+      "description": "Legacy planning connects your wealth to the people and causes that matter most: estate documents, beneficiary designations, titling, and charitable giving."
+    },
+    "/who-we-serve": {
+      "390": {
+        "overflow": 0,
+        "brokenImages": 0
+      },
+      "1440": {
+        "overflow": 0,
+        "brokenImages": 0
+      },
+      "title": "Who We Serve — Elite Physician Wealth Planning™",
+      "description": "Find the professional path closest to your career, compensation, and ownership structure. Use the index to choose a more specific planning page or resource."
+    },
+    "/physicians-specialists": {
+      "390": {
+        "overflow": 0,
+        "brokenImages": 0
+      },
+      "1440": {
+        "overflow": 0,
+        "brokenImages": 0
+      },
+      "title": "Financial Planning for Physicians &amp; Specialists — Elite Physician Wealth Planning™",
+      "description": "Physicians &amp; Specialists: Specialists often need one plan across compensation, tax, retirement, insurance, family goals, and professional-team coordination."
+    },
+    "/financial-planning-for-surgeons": {
+      "390": {
+        "overflow": 0,
+        "brokenImages": 0
+      },
+      "1440": {
+        "overflow": 0,
+        "brokenImages": 0
+      },
+      "title": "Financial Planning for Surgeons — Elite Physician Wealth Planning™",
+      "description": "Wealth planning for surgeons with demanding careers and complex financial lives. Surgeons often combine high earning potential with unpredictable schedules."
+    },
+    "/financial-planning-for-dentists": {
+      "390": {
+        "overflow": 0,
+        "brokenImages": 0
+      },
+      "1440": {
+        "overflow": 0,
+        "brokenImages": 0
+      },
+      "title": "Financial Planning for Dentists — Elite Physician Wealth Planning™",
+      "description": "Wealth strategy for dentists and dental specialists managing practice ownership, equipment and practice debt, uneven cash flow, and practice transition."
+    },
+    "/financial-planning-for-crnas-nps-pas": {
+      "390": {
+        "overflow": 0,
+        "brokenImages": 0
+      },
+      "1440": {
+        "overflow": 0,
+        "brokenImages": 0
+      },
+      "title": "Financial Planning for CRNAs, NPs &amp; PAs — Elite Physician Wealth Planning™",
+      "description": "Financial planning for advanced practice professionals building long-term wealth as benefits, retirement choices, and tax considerations grow more complex."
+    },
+    "/financial-planning-for-healthcare-executives": {
+      "390": {
+        "overflow": 0,
+        "brokenImages": 0
+      },
+      "1440": {
+        "overflow": 0,
+        "brokenImages": 0
+      },
+      "title": "Financial Planning for Healthcare Executives — Elite Physician Wealth Planning™",
+      "description": "Wealth planning for healthcare executives with complex compensation and benefits: incentives, deferred compensation, and supplemental retirement plans."
+    },
+    "/physicians": {
+      "390": {
+        "overflow": 0,
+        "brokenImages": 0
+      },
+      "1440": {
+        "overflow": 0,
+        "brokenImages": 0
+      },
+      "title": "Who We Help — Elite Physician Wealth Planning™",
+      "description": "Start with your physician career stage, then move into the planning discipline that needs attention. Choose a more specific planning page or resource."
+    },
+    "/our-process": {
+      "390": {
+        "overflow": 0,
+        "brokenImages": 0
+      },
+      "1440": {
+        "overflow": 0,
+        "brokenImages": 0
+      },
+      "title": "The Elite Physician Wealth Blueprint™ | Our Process",
+      "description": "A structured advisory process helps medical professionals evaluate their financial life, identify opportunities, and coordinate advisors over time."
+    },
+    "/resources": {
+      "390": {
+        "overflow": 0,
+        "brokenImages": 0
+      },
+      "1440": {
+        "overflow": 0,
+        "brokenImages": 0
+      },
+      "title": "Physician Resource Center — Elite Physician Wealth Planning™",
+      "description": "Browse educational guides, checklists, articles, and webinars by planning topic, and choose a more specific planning page or resource before a strategy call."
+    },
+    "/insights": {
+      "390": {
+        "overflow": 0,
+        "brokenImages": 0
+      },
+      "1440": {
+        "overflow": 0,
+        "brokenImages": 0
+      },
+      "title": "Insights — Elite Physician Wealth Planning™",
+      "description": "Use the index to choose a more specific planning page or resource before requesting a strategy call. Choose the next step that matches your readiness."
+    },
+    "/insights/physician-financial-checkup-seven-areas": {
+      "390": {
+        "overflow": 0,
+        "brokenImages": 0
+      },
+      "1440": {
+        "overflow": 0,
+        "brokenImages": 0
+      },
+      "title": "The Physician Financial Checkup: Seven Areas That Should Work Together — Elite Physician Wealth Planning™",
+      "description": "Career-Stage Planning: a framework for looking at cash flow, taxes, retirement, investments, protection, estate, and practice planning as one system."
+    },
+    "/insights/first-five-years-financial-moves": {
+      "390": {
+        "overflow": 0,
+        "brokenImages": 0
+      },
+      "1440": {
+        "overflow": 0,
+        "brokenImages": 0
+      },
+      "title": "Seven Financial Moves to Consider in the First Five Years of Practice — Elite Physician Wealth Planning™",
+      "description": "Seven Financial Moves to Consider in the First Five Years of Practice — foundational decisions to consider between residency and mid-career."
+    },
+    "/insights/w2-1099-practice-income-questions": {
+      "390": {
+        "overflow": 0,
+        "brokenImages": 0
+      },
+      "1440": {
+        "overflow": 0,
+        "brokenImages": 0
+      },
+      "title": "W-2, 1099, and Practice Income: Questions Physicians Should Ask Before Year-End — Elite Physician Wealth Planning™",
+      "description": "W-2, 1099, and Practice Income: Questions Physicians Should Ask Before Year-End — compensation-source questions that shape tax and retirement planning."
+    },
+    "/insights/cash-balance-defined-benefit-decision-guide": {
+      "390": {
+        "overflow": 0,
+        "brokenImages": 0
+      },
+      "1440": {
+        "overflow": 0,
+        "brokenImages": 0
+      },
+      "title": "Cash Balance and Defined Benefit Plans: A Decision Guide for Medical Practice Owners — Elite Physician Wealth Planning™",
+      "description": "Practice Owner Strategy: how advanced qualified plans fit into a practice owner&#x27;s larger picture. A decision guide for medical practice owners."
+    },
+    "/insights/coordinating-cpa-attorney-tpa-advisor": {
+      "390": {
+        "overflow": 0,
+        "brokenImages": 0
+      },
+      "1440": {
+        "overflow": 0,
+        "brokenImages": 0
+      },
+      "title": "How Physicians Can Coordinate a CPA, Attorney, TPA, and Financial Advisor — Elite Physician Wealth Planning™",
+      "description": "Career-Stage Planning: a practical model for keeping outside professionals aligned around one plan — coordinating a CPA, attorney, TPA, and financial advisor."
+    },
+    "/insights/five-years-from-retirement-checklist": {
+      "390": {
+        "overflow": 0,
+        "brokenImages": 0
+      },
+      "1440": {
+        "overflow": 0,
+        "brokenImages": 0
+      },
+      "title": "Five Years From Retirement: A Physician&#x27;s Planning Checklist — Elite Physician Wealth Planning™",
+      "description": "Retirement &amp; Income: the conversations to have before the transition begins. Five Years From Retirement is a physician&#x27;s planning checklist."
+    },
+    "/insights/disability-insurance-review-overlooked": {
+      "390": {
+        "overflow": 0,
+        "brokenImages": 0
+      },
+      "1440": {
+        "overflow": 0,
+        "brokenImages": 0
+      },
+      "title": "Disability Insurance Review: Questions Physicians Often Overlook — Elite Physician Wealth Planning™",
+      "description": "Disability Insurance Review: Questions Physicians Often Overlook. Own-occupation, portability, and definition questions worth revisiting. What is verified now."
+    },
+    "/insights/roth-conversion-timing": {
+      "390": {
+        "overflow": 0,
+        "brokenImages": 0
+      },
+      "1440": {
+        "overflow": 0,
+        "brokenImages": 0
+      },
+      "title": "Roth Conversion Timing Before and After Retirement — Elite Physician Wealth Planning™",
+      "description": "Roth Conversion Timing Before and After Retirement — scenarios where conversion windows may open and close. Related planning paths for this topic."
+    },
+    "/insights/preparing-for-practice-sale": {
+      "390": {
+        "overflow": 0,
+        "brokenImages": 0
+      },
+      "1440": {
+        "overflow": 0,
+        "brokenImages": 0
+      },
+      "title": "Preparing Financially for the Sale or Transition of a Medical Practice — Elite Physician Wealth Planning™",
+      "description": "Preparing Financially for the Sale or Transition of a Medical Practice — personal-plan questions to bring alongside a valuation and legal team."
+    },
+    "/insights/beneficiaries-trusts-ownership-checklist": {
+      "390": {
+        "overflow": 0,
+        "brokenImages": 0
+      },
+      "1440": {
+        "overflow": 0,
+        "brokenImages": 0
+      },
+      "title": "Beneficiaries, Trusts, and Account Ownership: A Physician Estate-Plan Coordination Checklist — Elite Physician Wealth Planning™",
+      "description": "Beneficiaries, Trusts, and Account Ownership: A Physician Estate-Plan Coordination Checklist — where estate documents and account titling most often disconnect."
+    },
+    "/insights/charitable-giving-strategies": {
+      "390": {
+        "overflow": 0,
+        "brokenImages": 0
+      },
+      "1440": {
+        "overflow": 0,
+        "brokenImages": 0
+      },
+      "title": "Charitable Giving Strategies for High-Income Medical Professionals — Elite Physician Wealth Planning™",
+      "description": "Charitable Giving Strategies for High-Income Medical Professionals: vehicles and timing decisions worth reviewing with a tax professional. What is verified now."
+    },
+    "/insights/long-term-care-survivor-planning": {
+      "390": {
+        "overflow": 0,
+        "brokenImages": 0
+      },
+      "1440": {
+        "overflow": 0,
+        "brokenImages": 0
+      },
+      "title": "Long-Term Care and Survivor Planning for Physician Families — Elite Physician Wealth Planning™",
+      "description": "Long-Term Care and Survivor Planning for Physician Families — preparing the household for scenarios wealth alone may not solve. What is verified now."
+    },
+    "/about": {
+      "390": {
+        "overflow": 0,
+        "brokenImages": 0
+      },
+      "1440": {
+        "overflow": 0,
+        "brokenImages": 0
+      },
+      "title": "About Elite Physician Wealth Planning",
+      "description": "Elite Physicians Wealth Planning coordinates a medical professional&#x27;s financial life into one clear strategy, powered by Fiscal Vision Financial."
+    },
+    "/meet-michael-epps": {
+      "390": {
+        "overflow": 0,
+        "brokenImages": 0
+      },
+      "1440": {
+        "overflow": 0,
+        "brokenImages": 0
+      },
+      "title": "Meet Michael A. Epps, ChFC®, RICP® | Elite Physician Wealth Planning",
+      "description": "Michael A. Epps, ChFC®, RICP®, founded Elite Physician Wealth Planning to give physicians a more coordinated way to approach taxes, retirement, and wealth."
+    },
+    "/about/team": {
+      "390": {
+        "overflow": 0,
+        "brokenImages": 0
+      },
+      "1440": {
+        "overflow": 0,
+        "brokenImages": 0
+      },
+      "title": "Meet the Team — Elite Physician Wealth Planning™",
+      "description": "Elite Physicians Wealth Planning works as a coordinated team. Full team biographies and portraits are published here as each is confirmed and approved."
+    },
+    "/checkup": {
+      "390": {
+        "overflow": 0,
+        "brokenImages": 0
+      },
+      "1440": {
+        "overflow": 0,
+        "brokenImages": 0
+      },
+      "title": "Physician Financial Checkup — Elite Physician Wealth Planning™",
+      "description": "A structured checkup can help a medical professional identify which planning areas deserve a deeper conversation. Seven areas to review together."
+    },
+    "/physician-tax-retirement-guide": {
+      "390": {
+        "overflow": 0,
+        "brokenImages": 0
+      },
+      "1440": {
+        "overflow": 0,
+        "brokenImages": 0
+      },
+      "title": "Physician Tax &amp; Retirement Planning Guide — Elite Physician Wealth Planning™",
+      "description": "A structured framework for physicians: how tax, retirement, investment, practice, and legacy decisions connect before a deadline forces the issue."
+    },
+    "/schedule": {
+      "390": {
+        "overflow": 0,
+        "brokenImages": 0
+      },
+      "1440": {
+        "overflow": 0,
+        "brokenImages": 0
+      },
+      "title": "Schedule a Strategy Call — Elite Physician Wealth Planning™",
+      "description": "Schedule a private strategy call — a confidential introductory conversation to review planning priorities and whether a coordinated relationship makes sense."
+    },
+    "/contact": {
+      "390": {
+        "overflow": 0,
+        "brokenImages": 0
+      },
+      "1440": {
+        "overflow": 0,
+        "brokenImages": 0
+      },
+      "title": "Contact — Elite Physician Wealth Planning™",
+      "description": "Contact Elite Physicians Wealth Planning about a planning relationship, a guide request, or referral coordination. Call 301-242-3929 or email the firm."
+    },
+    "/privacy-disclosures": {
+      "390": {
+        "overflow": 0,
+        "brokenImages": 0
+      },
+      "1440": {
+        "overflow": 0,
+        "brokenImages": 0
+      },
+      "title": "Privacy &amp; Website Disclosures — Elite Physician Wealth Planning™",
+      "description": "Website content is provided for educational purposes only and should not be treated as individualized tax, legal, investment, insurance, or financial advice."
+    }
+  },
+  "failures": []
+}

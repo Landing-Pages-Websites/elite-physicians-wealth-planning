@@ -1,0 +1,237 @@
+{
+  "version": 1,
+  "slug": "retirement-planning-for-physicians",
+  "route": "/retirement-planning-for-physicians",
+  "sections": [
+    {
+      "frame": "01-opening-docket",
+      "implementation_kind": "shared-designed",
+      "implementation_owner": "src/components/pages/planning-docket/opening-docket.tsx",
+      "shared_basis": "The five service docket manifests (tax-planning-for-physicians, wealth-management-for-physicians, retirement-planning-for-physicians, legacy-estate-planning, practice-owner-planning) in revision-2026-09-15-image-first share the identical six-frame docket grammar (01-opening-docket through 06-next-step); the approved planning-docket family component src/components/pages/planning-docket/opening-docket.tsx renders this frame with page content from src/components/pages/planning-docket/content/retirement-planning-for-physicians.ts.",
+      "content_source": "section_manifest.json#01-opening-docket",
+      "asset_roles": [
+        "retirement-income planning table with physician household documents and calm editorial travel-free imagery"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "Approved manifest fields (eyebrow, headline, body, primary_cta, secondary_link, boundary) render as live HTML text, led by \"Retirement planning for physicians is more than choosing a retirement date.\"."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "Dedicated asset renders the declared subject \"retirement-income planning table with physician household documents and calm editorial travel-free imagery\" with the approved \"wide editorial crop, desk-height perspective, no decorative charts\" crop and treatment."
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "Frame composition preserved: Canvas opening: retirement dossier as the right desk canvas dissolving into the navy copy field; live eyebrow/H1/CTAs; disclosure band with lower-right gold exit; objectPosition crops the raster's baked bottom seam strip."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved navy/gold/ivory language retained on the #0B1F3A band per the manifest edge contract; Cormorant Garamond display over Inter body."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "390x844 recomposition per manifest: Preserve the headline and primary action before the image; use a 4:5 or 3:2 crop centered on the declared subject/focal point, never a blurred filler panel; stack overlays into live blocks, keep at least 70% of the…"
+        }
+      },
+      "ref": "design_refs/revision-2026-09-15-image-first/pages/retirement-planning-for-physicians/refs/01-opening-docket.png",
+      "owners": [
+        "src/app/(site)/retirement-planning-for-physicians/page.tsx",
+        "src/components/pages/planning-docket/opening-docket.tsx",
+        "src/components/pages/planning-docket/content/retirement-planning-for-physicians.ts"
+      ],
+      "notes": "Canvas opening: retirement dossier as the right desk canvas dissolving into the navy copy field; live eyebrow/H1/CTAs; disclosure band with lower-right gold exit; objectPosition crops the raster's baked bottom seam strip."
+    },
+    {
+      "frame": "02-demand-situations",
+      "implementation_kind": "shared-designed",
+      "implementation_owner": "src/components/pages/planning-docket/demand-situations.tsx",
+      "shared_basis": "The five service docket manifests (tax-planning-for-physicians, wealth-management-for-physicians, retirement-planning-for-physicians, legacy-estate-planning, practice-owner-planning) in revision-2026-09-15-image-first share the identical six-frame docket grammar (01-opening-docket through 06-next-step); the approved planning-docket family component src/components/pages/planning-docket/demand-situations.tsx renders this frame with page content from src/components/pages/planning-docket/content/retirement-planning-for-physicians.ts.",
+      "content_source": "section_manifest.json#02-demand-situations",
+      "asset_roles": [
+        "editorial still life for retirement strategy decision timing"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "Approved manifest fields (headline, body, items) render as live HTML text, led by \"Situations that should trigger a review.\"."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "Dedicated asset renders the declared subject \"editorial still life for retirement strategy decision timing\" with the approved \"asymmetric crop with negative space for live list\" crop and treatment."
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "Frame composition preserved: New 'ambient' variant: intro top-left, wide book-and-glasses crop settles edge-touching into the lower-left, gold-spined ledger with 'Decision trigger ledger' kicker (manifest interaction label) on the warm right…."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved navy/gold/ivory language retained on the #F6F2E8 band per the manifest edge contract; Cormorant Garamond display over Inter body."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "390x844 recomposition per manifest: Stack the primary content group in narrative order while preserving asymmetric emphasis through offset margins and varied spacing; crop imagery around its declared focal point, keep all live text and links, and simplify…"
+        }
+      },
+      "ref": "design_refs/revision-2026-09-15-image-first/pages/retirement-planning-for-physicians/refs/02-demand-situations.png",
+      "owners": [
+        "src/components/pages/planning-docket/demand-situations.tsx",
+        "src/components/pages/planning-docket/docket-ext.css"
+      ],
+      "notes": "New 'ambient' variant: intro top-left, wide book-and-glasses crop settles edge-touching into the lower-left, gold-spined ledger with 'Decision trigger ledger' kicker (manifest interaction label) on the warm right column; mobile stacks intro → ledger → image."
+    },
+    {
+      "frame": "03-documents-needed",
+      "implementation_kind": "shared-designed",
+      "implementation_owner": "src/components/pages/planning-docket/documents-needed.tsx",
+      "shared_basis": "The five service docket manifests (tax-planning-for-physicians, wealth-management-for-physicians, retirement-planning-for-physicians, legacy-estate-planning, practice-owner-planning) in revision-2026-09-15-image-first share the identical six-frame docket grammar (01-opening-docket through 06-next-step); the approved planning-docket family component src/components/pages/planning-docket/documents-needed.tsx renders this frame with page content from src/components/pages/planning-docket/content/retirement-planning-for-physicians.ts.",
+      "content_source": "section_manifest.json#03-documents-needed",
+      "asset_roles": [
+        "cropped documents for retirement strategy planning"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "Approved manifest fields (headline, body, items) render as live HTML text, led by \"What to have in view.\"."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "Dedicated asset renders the declared subject \"cropped documents for retirement strategy planning\" with the approved \"1536x512 true strip, hands absent or non-identifiable\" crop and treatment."
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "Frame composition preserved: New 'flank' media position: retirement-documents panel at the left edge, practice-documents panel at the right edge, live checklist ('Preparation checklist' kicker, gold-circled checks, hairline dividers) seated between…."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved navy/gold/ivory language retained on the #FFFFFF band per the manifest edge contract; Cormorant Garamond display over Inter body."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "390x844 recomposition per manifest: Stack the primary content group in narrative order while preserving asymmetric emphasis through offset margins and varied spacing; crop imagery around its declared focal point, keep all live text and links, and simplify…"
+        }
+      },
+      "ref": "design_refs/revision-2026-09-15-image-first/pages/retirement-planning-for-physicians/refs/03-documents-needed.png",
+      "owners": [
+        "src/components/pages/planning-docket/documents-needed.tsx",
+        "src/components/pages/planning-docket/docket-ext.css"
+      ],
+      "notes": "New 'flank' media position: retirement-documents panel at the left edge, practice-documents panel at the right edge, live checklist ('Preparation checklist' kicker, gold-circled checks, hairline dividers) seated between them; mist exit band. Mobile keeps the left panel and drops the right counterweight (secondary-ambience simplification per the composition contract)."
+    },
+    {
+      "frame": "04-coordination-boundary",
+      "implementation_kind": "shared-designed",
+      "implementation_owner": "src/components/pages/planning-docket/coordination-boundary.tsx",
+      "shared_basis": "The five service docket manifests (tax-planning-for-physicians, wealth-management-for-physicians, retirement-planning-for-physicians, legacy-estate-planning, practice-owner-planning) in revision-2026-09-15-image-first share the identical six-frame docket grammar (01-opening-docket through 06-next-step); the approved planning-docket family component src/components/pages/planning-docket/coordination-boundary.tsx renders this frame with page content from src/components/pages/planning-docket/content/retirement-planning-for-physicians.ts.",
+      "content_source": "section_manifest.json#04-coordination-boundary",
+      "asset_roles": [
+        "separate advisory rooms connected by a single gold line"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "Approved manifest fields (headline, body, items) render as live HTML text, led by \"What Elite coordinates and what stays with the right professional.\"."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "Code-native section per the manifest image_treatment (\"diagram-forward 16:9 composition, no faces, no credential badges\"); live text and drawn elements only, no raster asset required."
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "PASS with documented deliberate adaptation preserving the approved semantic gate: ref draws a fifth 'insurance provider and product issuers' card, an annotation paragraph, and a right-margin note that are absent from the manifest content; manifest wins, so the plan seats the four manifest roles and a label-only 'Professional boundary map' plate (label from interaction_semantics)"
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved navy/gold/ivory language retained on the #DCE8F2 band per the manifest edge contract; Cormorant Garamond display over Inter body."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "390x844 recomposition per manifest: Stack the primary content group in narrative order while preserving asymmetric emphasis through offset margins and varied spacing; crop imagery around its declared focal point, keep all live text and links, and simplify…"
+        }
+      },
+      "ref": "design_refs/revision-2026-09-15-image-first/pages/retirement-planning-for-physicians/refs/04-coordination-boundary.png",
+      "owners": [
+        "src/components/pages/planning-docket/coordination-boundary.tsx",
+        "src/components/pages/planning-docket/docket-glyphs.tsx",
+        "src/components/pages/planning-docket/docket-ext.css"
+      ],
+      "notes": "New code-native 'plan' layout (no raster ships): glyph cards (calculator/scales/clipboard) around the navy Elite hub node on a quiet blueprint hairline field, element-anchored gold connectors; mobile collapses to the family gold rail."
+    },
+    {
+      "frame": "05-adjacent-planning",
+      "implementation_kind": "shared-designed",
+      "implementation_owner": "src/components/pages/planning-docket/adjacent-planning.tsx",
+      "shared_basis": "The five service docket manifests (tax-planning-for-physicians, wealth-management-for-physicians, retirement-planning-for-physicians, legacy-estate-planning, practice-owner-planning) in revision-2026-09-15-image-first share the identical six-frame docket grammar (01-opening-docket through 06-next-step); the approved planning-docket family component src/components/pages/planning-docket/adjacent-planning.tsx renders this frame with page content from src/components/pages/planning-docket/content/retirement-planning-for-physicians.ts.",
+      "content_source": "section_manifest.json#05-adjacent-planning",
+      "asset_roles": [
+        "adjacent service ledger for retirement strategy"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "Approved manifest fields (headline, body, links) render as live HTML text, led by \"The neighboring decisions.\"."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "Dedicated asset renders the declared subject \"adjacent service ledger for retirement strategy\" with the approved \"mostly typographic ledger with small route-specific photo insets\" crop and treatment."
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "Frame composition preserved: New 'ledger' layout: four aligned rows (owned thumbnail + literal route path + gold rule to arrow terminal) for /wealth-management-for-physicians, /tax-planning-for-physicians, /legacy-estate-planning…."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved navy/gold/ivory language retained on the #F6F2E8 band per the manifest edge contract; Cormorant Garamond display over Inter body."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "390x844 recomposition per manifest: Stack the primary content group in narrative order while preserving asymmetric emphasis through offset margins and varied spacing; crop imagery around its declared focal point, keep all live text and links, and simplify…"
+        }
+      },
+      "ref": "design_refs/revision-2026-09-15-image-first/pages/retirement-planning-for-physicians/refs/05-adjacent-planning.png",
+      "owners": [
+        "src/components/pages/planning-docket/adjacent-planning.tsx",
+        "src/components/pages/planning-docket/docket-ext.css"
+      ],
+      "notes": "New 'ledger' layout: four aligned rows (owned thumbnail + literal route path + gold rule to arrow terminal) for /wealth-management-for-physicians, /tax-planning-for-physicians, /legacy-estate-planning, /insights/five-years-from-retirement-checklist; 'Explore related planning' sits inside the navy exit band where the line drops to a gold dot."
+    },
+    {
+      "frame": "06-next-step",
+      "implementation_kind": "shared-designed",
+      "implementation_owner": "src/components/pages/planning-docket/next-step.tsx",
+      "shared_basis": "The five service docket manifests (tax-planning-for-physicians, wealth-management-for-physicians, retirement-planning-for-physicians, legacy-estate-planning, practice-owner-planning) in revision-2026-09-15-image-first share the identical six-frame docket grammar (01-opening-docket through 06-next-step); the approved planning-docket family component src/components/pages/planning-docket/next-step.tsx renders this frame with page content from src/components/pages/planning-docket/content/retirement-planning-for-physicians.ts.",
+      "content_source": "section_manifest.json#06-next-step",
+      "asset_roles": [
+        "private advisory office at dusk with open chair and planning dossier"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "Approved manifest fields (headline, body, primary_cta, boundary) render as live HTML text, led by \"Bring the decision into one coordinated strategy.\"."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "Dedicated asset renders the declared subject \"private advisory office at dusk with open chair and planning dossier\" with the approved \"wide navy field, no people, strong negative space\" crop and treatment."
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "Frame composition preserved: Family close, media right: lamp-lit retirement desk anchors the right field; decision group left with gold corner rule terminating the page-local line; framed disclosure; CTA to /schedule."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved navy/gold/ivory language retained on the #0B1F3A band per the manifest edge contract; Cormorant Garamond display over Inter body."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "390x844 recomposition per manifest: Stack the primary content group in narrative order while preserving asymmetric emphasis through offset margins and varied spacing; crop imagery around its declared focal point, keep all live text and links, and simplify…"
+        }
+      },
+      "ref": "design_refs/revision-2026-09-15-image-first/pages/retirement-planning-for-physicians/refs/06-next-step.png",
+      "owners": [
+        "src/components/pages/planning-docket/next-step.tsx",
+        "src/components/pages/planning-docket/content/retirement-planning-for-physicians.ts"
+      ],
+      "notes": "Family close, media right: lamp-lit retirement desk anchors the right field; decision group left with gold corner rule terminating the page-local line; framed disclosure; CTA to /schedule."
+    }
+  ]
+}
