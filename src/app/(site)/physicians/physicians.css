@@ -1,0 +1,102 @@
+/*
+ * /physicians — career-stage index ("Who We Help"), page-scoped recipes.
+ * Photo canvases, veils and seam stubs only; all copy and controls stay live.
+ */
+
+/* ---------- shared page-local coordination seam ---------- */
+.phy-seam-top::before,
+.phy-seam-bottom::after {
+  content: "";
+  position: absolute;
+  left: clamp(1.25rem, 12%, 11rem);
+  width: 1px;
+  height: 3.5rem;
+  background: var(--color-gold);
+  opacity: 0.8;
+  pointer-events: none;
+}
+.phy-seam-top::before {
+  top: 0;
+}
+.phy-seam-bottom::after {
+  bottom: 0;
+}
+
+/* ---------- 01 index-hero: dark study canvas, copy over the left third ---------- */
+.phy-hero {
+  background: var(--color-ink-deep);
+}
+.phy-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("/images/design/physicians/elements/01-index-hero-canvas.jpg");
+  background-size: cover;
+  background-position: 70% 55%;
+  background-repeat: no-repeat;
+}
+.phy-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    94deg,
+    rgba(4, 14, 27, 0.95) 0%,
+    rgba(4, 14, 27, 0.86) 38%,
+    rgba(4, 14, 27, 0.5) 64%,
+    rgba(4, 14, 27, 0.3) 100%
+  );
+}
+
+/* Mist transition at the hero foot into the taxonomy strip. */
+.phy-hero-fade {
+  background: linear-gradient(
+    180deg,
+    rgba(220, 232, 242, 0) 0%,
+    rgba(220, 232, 242, 0.5) 55%,
+    var(--color-mist) 100%
+  );
+}
+
+/* ---------- 02 taxonomy-rail: pale clinical strip ---------- */
+.phy-strip {
+  background: linear-gradient(
+    180deg,
+    var(--color-mist) 0%,
+    #edf3f8 50%,
+    var(--color-mist-deep) 100%
+  );
+}
+
+/* ---------- 05 next-best-step: closing office canvas ---------- */
+.phy-close {
+  background: var(--color-ink-deeper);
+}
+.phy-close::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("/images/design/physicians/elements/05-next-best-step-canvas.jpg");
+  background-size: cover;
+  background-position: 30% center;
+  background-repeat: no-repeat;
+}
+.phy-close::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(4, 12, 25, 0.25) 0%,
+      rgba(4, 12, 25, 0.55) 42%,
+      rgba(4, 12, 25, 0.72) 100%
+    ),
+    radial-gradient(
+      130% 100% at 24% 55%,
+      rgba(6, 20, 41, 0.3),
+      rgba(4, 12, 25, 0.72) 80%
+    );
+}

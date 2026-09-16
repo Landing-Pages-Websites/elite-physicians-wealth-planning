@@ -1,0 +1,295 @@
+/*
+ * /about — firm origin & coordination page (slug: about).
+ * Page-scoped surfaces only; every class carries the abt- prefix.
+ * Crop offsets exist to window out baked headline fragments and baked gold
+ * motif pixels that the extraction left at the raster edges — no text-bearing
+ * pixels may ship as content.
+ */
+
+/* ---------- shared page-local coordination line ---------- */
+
+.abt-seam {
+  position: absolute;
+  left: 1.5rem;
+  width: 1px;
+  background: var(--color-gold);
+  opacity: 0.85;
+}
+.abt-seam-top {
+  top: 0;
+  height: 3rem;
+}
+.abt-seam-bottom {
+  bottom: 0;
+  height: 3rem;
+}
+/* The page-local line ends inside the closing section: a short drop to a dot. */
+.abt-seam-close {
+  top: 0;
+  height: 5.5rem;
+}
+.abt-seam-close::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -9px;
+  transform: translateX(-50%);
+  width: 8px;
+  height: 8px;
+  border-radius: 9999px;
+  background: var(--color-gold);
+}
+
+/* ---------- 01 origin-hero: office photograph as canvas ---------- */
+
+.abt-hero {
+  background: var(--color-ink-deep);
+}
+/* The 96-character manifest headline needs 30px below lg to hold the
+   four-deliberate-lines mobile contract (measured at 390px: 32px wraps to
+   five lines, 30px to four). */
+@media (max-width: 1023px) {
+  .abt-hero h1 {
+    font-size: 1.875rem;
+  }
+}
+
+/* Mobile: the photograph becomes an in-flow 3:2 block after the copy. */
+.abt-hero-media {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 3 / 2;
+}
+/* The extract keeps two baked serif letterforms on its far-left edge
+   (headline tail from the source frame). The 12% left window removes them. */
+.abt-hero-media img {
+  position: absolute;
+  inset-block: 0;
+  left: -12%;
+  height: 100%;
+  width: 112%;
+  max-width: none;
+  object-fit: cover;
+  object-position: right center;
+}
+.abt-hero-media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    90deg,
+    var(--color-ink-deep) 0%,
+    rgba(6, 21, 39, 0.42) 24%,
+    rgba(6, 21, 39, 0.08) 55%,
+    rgba(6, 21, 39, 0.3) 100%
+  );
+}
+@media (min-width: 1024px) {
+  .abt-hero-media {
+    position: absolute;
+    inset-block: 0;
+    right: 0;
+    width: 58%;
+    aspect-ratio: auto;
+  }
+  .abt-hero-media::after {
+    background: linear-gradient(
+      90deg,
+      var(--color-ink-deep) 0%,
+      rgba(6, 21, 39, 0.55) 18%,
+      rgba(6, 21, 39, 0.1) 52%,
+      rgba(6, 21, 39, 0.32) 100%
+    );
+  }
+}
+
+/* ---------- 02 coordination-philosophy: ivory essay ---------- */
+
+.abt-philosophy {
+  background: var(--color-ivory);
+}
+
+/* ---------- 03 planning-scope: white ledger, photo flush left ---------- */
+
+/* Mobile: documentary crop between heading and ledger rows. */
+.abt-scope-media {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+}
+/* The extract carries the frame's baked gold ledger connectors down its right
+   ~14%, along its top edge, and a mist sliver at its foot; the oversize
+   window crops all three. */
+.abt-scope-media img {
+  position: absolute;
+  top: -5%;
+  left: 0;
+  height: 110%;
+  width: 117%;
+  max-width: none;
+  object-fit: cover;
+  object-position: left top;
+}
+@media (min-width: 1024px) {
+  .abt-scope-media {
+    position: absolute;
+    inset-block: 0;
+    left: 0;
+    width: 27%;
+    aspect-ratio: auto;
+  }
+}
+
+/* ---------- 04 fiscal-vision-relationship: mist band, document card ---------- */
+
+.abt-fv {
+  background: var(--color-mist);
+}
+.abt-fv-card {
+  background: #ffffff;
+  box-shadow: 0 24px 55px -32px rgba(11, 31, 58, 0.45);
+}
+/* Mobile banner above the card; desktop right-bleed per the composition map. */
+.abt-fv-media {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+}
+/* The extract keeps baked navy letterforms ("…al.") on its left quarter;
+   the right-anchored 136% window drops the leftmost 26% of the image. */
+.abt-fv-media img {
+  position: absolute;
+  inset-block: 0;
+  right: 0;
+  height: 100%;
+  width: 136%;
+  max-width: none;
+  object-fit: cover;
+  object-position: right center;
+}
+@media (min-width: 1024px) {
+  .abt-fv-media {
+    position: absolute;
+    inset-block: 0;
+    right: 0;
+    width: 34%;
+    aspect-ratio: auto;
+  }
+}
+
+/* ---------- 05 michael-anchor: portrait plate on ivory ---------- */
+
+.abt-anchor {
+  background: var(--color-ivory);
+}
+.abt-anchor-plate {
+  background: var(--color-ivory-warm);
+  border: 1px solid var(--color-gold);
+  box-shadow: 0 22px 50px -30px rgba(11, 31, 58, 0.45);
+}
+
+/* ---------- 06 next-step: navy close with route path ---------- */
+
+.abt-next {
+  background: var(--color-ink-deeper);
+}
+.abt-next-media {
+  display: none;
+}
+@media (min-width: 1024px) {
+  .abt-next-media {
+    display: block;
+    position: absolute;
+    inset-block: 0;
+    right: 0;
+    width: 26%;
+    overflow: hidden;
+  }
+  /* The extract's left ~52% is baked display type and baked gold path from the
+     source frame; only the clean lamp-desk half may show. */
+  .abt-next-media img {
+    position: absolute;
+    inset-block: 0;
+    right: 0;
+    height: 100%;
+    width: 208%;
+    max-width: none;
+    object-fit: cover;
+    object-position: right center;
+  }
+  .abt-next-media::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: linear-gradient(
+      90deg,
+      var(--color-ink-deeper) 0%,
+      rgba(4, 16, 31, 0.55) 30%,
+      rgba(4, 16, 31, 0.22) 100%
+    );
+  }
+}
+
+/* The three-stop route: one continuous gold line through circle-arrow nodes. */
+.abt-path {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.abt-path::before {
+  content: "";
+  position: absolute;
+  top: 1.375rem;
+  bottom: 1.375rem;
+  left: 1.375rem;
+  width: 1px;
+  background: var(--color-gold);
+  opacity: 0.9;
+}
+@media (min-width: 768px) {
+  .abt-path {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 4.5rem;
+  }
+  .abt-path::before {
+    top: 1.375rem;
+    bottom: auto;
+    left: 1.375rem;
+    right: 0;
+    width: auto;
+    height: 1px;
+  }
+}
+.abt-node {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+@media (min-width: 768px) {
+  .abt-node {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.875rem;
+  }
+}
+.abt-node-ring {
+  display: flex;
+  height: 2.75rem;
+  width: 2.75rem;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  border: 1px solid var(--color-gold);
+  background: var(--color-ink-deeper);
+  color: var(--color-gold);
+  transition: background-color 0.2s var(--ease-out);
+}
+.abt-node:hover .abt-node-ring {
+  background: var(--color-ink-hover);
+}

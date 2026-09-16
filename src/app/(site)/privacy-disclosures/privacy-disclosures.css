@@ -1,0 +1,122 @@
+/*
+ * /privacy-disclosures — "pvd-" page surfaces.
+ * Restrained utility page: alternating white/ivory bands, minimal gold
+ * rules marking section changes, and CSS-sized photo slots whose crops
+ * exclude the sources' baked ref artifacts.
+ */
+
+/* Minimal gold seam marks: one short vertical stub either side of each
+   band change at a fixed 8%. No long-form line treatment on this page. */
+.pvd-seam-in::before,
+.pvd-seam-out::after {
+  content: "";
+  position: absolute;
+  left: 8%;
+  width: 1.5px;
+  height: 28px;
+  background: var(--color-gold);
+  opacity: 0.8;
+  display: none;
+}
+
+.pvd-seam-in::before {
+  top: 0;
+}
+
+.pvd-seam-out::after {
+  bottom: 0;
+}
+
+@media (min-width: 1024px) {
+  .pvd-seam-in::before,
+  .pvd-seam-out::after {
+    display: block;
+  }
+}
+
+/* ---------- 02 educational-use: faded consultation plate ---------- */
+
+/* The 1.14 scale (anchored bottom-right) crops the source's top-left
+   corner, where fragments of the ref frame's own headline are baked in;
+   the hands, pen, and paper focal group sits bottom-center and stays. */
+.pvd-edu-plate {
+  aspect-ratio: 636 / 560;
+  overflow: hidden;
+  border: 1px solid rgba(11, 31, 58, 0.1);
+  background: #ffffff;
+}
+
+.pvd-edu-plate img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transform: scale(1.14);
+  transform-origin: 100% 100%;
+}
+
+/* ---------- 04 communications-privacy: channel bar + still life ---------- */
+
+/* Shallow photo band. The image is bottom-anchored at 130% height so the
+   source's top sliver — a baked copy of the channel bar — is always
+   clipped; the live HTML bar above replaces it. */
+.pvd-comm-band {
+  position: relative;
+  height: 150px;
+  overflow: hidden;
+}
+
+@media (min-width: 640px) {
+  .pvd-comm-band {
+    height: 190px;
+  }
+}
+
+.pvd-comm-band img {
+  position: absolute;
+  inset-inline: 0;
+  bottom: 0;
+  height: 130%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center bottom;
+}
+
+/* ---------- 05 contact-for-questions: navy utility strip ---------- */
+
+.pvd-contact {
+  background: var(--color-ink-deep);
+}
+
+/* Legal-desk texture as a bottom band; 160% height bottom-anchored crops
+   the source's upper third, where a ref gold rule is baked in. A navy
+   veil keeps the strip's own copy comfortably above AA. */
+.pvd-contact-texture {
+  position: absolute;
+  inset-inline: 0;
+  bottom: 0;
+  height: 96px;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.pvd-contact-texture img {
+  position: absolute;
+  inset-inline: 0;
+  bottom: 0;
+  height: 160%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center bottom;
+  opacity: 0.55;
+}
+
+.pvd-contact-texture::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    var(--color-ink-deep) 0%,
+    rgba(6, 21, 39, 0.35) 100%
+  );
+}

@@ -1,0 +1,226 @@
+{
+  "version": 1,
+  "slug": "our-process",
+  "route": "/our-process",
+  "sections": [
+    {
+      "frame": "01-blueprint-origin",
+      "implementation_kind": "bespoke",
+      "implementation_owner": "src/components/pages/our-process/blueprint-origin.tsx",
+      "content_source": "section_manifest.json#01-blueprint-origin",
+      "asset_roles": [
+        "blueprint process desk with stethoscope and advisory documents"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "Approved manifest fields (eyebrow, headline, body, primary_cta) render as live HTML text, led by \"The Elite Physician Wealth Blueprint.\"."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "Dedicated asset renders the declared subject \"blueprint process desk with stethoscope and advisory documents\" with the approved \"image-as-canvas using approved desk still life\" crop and treatment."
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "Frame composition preserved: 55/45 navy-text/photo split hero with the approved desk still life (object-position on the book/stethoscope cluster), gold seam stitch at mid-height, eyebrow + h1 + body + gold /schedule CTA above the fold; mobile…."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved navy/gold/ivory language retained on the #0B1F3A band per the manifest edge contract; Cormorant Garamond display over Inter body."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "390x844 recomposition per manifest: Preserve the headline and primary action before the image; use a 4:5 or 3:2 crop centered on the declared subject/focal point, never a blurred filler panel; stack overlays into live blocks, keep at least 70% of the…"
+        }
+      },
+      "ref": "_design_inputs/pages/our-process/refs/01-blueprint-origin.png",
+      "owners": [
+        "src/app/(site)/our-process/page.tsx",
+        "src/app/(site)/our-process/our-process.css",
+        "src/components/pages/our-process/blueprint-origin.tsx"
+      ],
+      "notes": "55/45 navy-text/photo split hero with the approved desk still life (object-position on the book/stethoscope cluster), gold seam stitch at mid-height, eyebrow + h1 + body + gold /schedule CTA above the fold; mobile stacks text before a 3:2 crop."
+    },
+    {
+      "frame": "02-six-phase-route",
+      "implementation_kind": "bespoke",
+      "implementation_owner": "src/components/pages/our-process/six-phase-route.tsx",
+      "content_source": "section_manifest.json#02-six-phase-route",
+      "asset_roles": [
+        "six phase route diagram for physician wealth blueprint"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "Approved manifest fields (headline, phases, body) render as live HTML text, led by \"From discovery to annual review.\"."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "Code-native section per the manifest image_treatment (\"diagram-forward, functional 01-06 only here\"); live text and drawn elements only, no raster asset required."
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "Frame composition preserved: Live-text zigzag route diagram: one continuous gold SVG path through six numbered chips (01–06 in exact manifest order Discover→Review, the only section carrying functional numbering), ledger-corner photo accent…."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved navy/gold/ivory language retained on the #F6F2E8 band per the manifest edge contract; Cormorant Garamond display over Inter body."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "390x844 recomposition per manifest: Convert the desktop diagram into a vertical reading rail in source order; keep every label and connector endpoint, place supporting imagery after the decisive step, avoid horizontal scrolling, and redraw the gold…"
+        }
+      },
+      "ref": "_design_inputs/pages/our-process/refs/02-six-phase-route.png",
+      "owners": [
+        "src/components/pages/our-process/six-phase-route.tsx",
+        "src/components/pages/our-process/process-icons.tsx"
+      ],
+      "notes": "Live-text zigzag route diagram: one continuous gold SVG path through six numbered chips (01–06 in exact manifest order Discover→Review, the only section carrying functional numbering), ledger-corner photo accent top-right, boxed boundary note; mobile converts to a single vertical rail in source order."
+    },
+    {
+      "frame": "03-first-meeting-inputs",
+      "implementation_kind": "bespoke",
+      "implementation_owner": "src/components/pages/our-process/first-meeting-inputs.tsx",
+      "content_source": "section_manifest.json#03-first-meeting-inputs",
+      "asset_roles": [
+        "document preparation strip for first strategy conversation"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "Approved manifest fields (headline, items, body) render as live HTML text, led by \"What the process needs from you.\"."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "Dedicated asset renders the declared subject \"document preparation strip for first strategy conversation\" with the approved \"quiet white ledger with document categories\" crop and treatment."
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "Frame composition preserved: White ledger: heading + web-form caution left, elevated INPUT CHECKLIST card with the three manifest rows and stroke icons centre, document photograph bleeding off the right edge (composition map allows omitting it on…."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved navy/gold/ivory language retained on the #FFFFFF band per the manifest edge contract; Cormorant Garamond display over Inter body."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "390x844 recomposition per manifest: Stack the primary content group in narrative order while preserving asymmetric emphasis through offset margins and varied spacing; crop imagery around its declared focal point, keep all live text and links, and simplify…"
+        }
+      },
+      "ref": "_design_inputs/pages/our-process/refs/03-first-meeting-inputs.png",
+      "owners": [
+        "src/components/pages/our-process/first-meeting-inputs.tsx"
+      ],
+      "notes": "White ledger: heading + web-form caution left, elevated INPUT CHECKLIST card with the three manifest rows and stroke icons centre, document photograph bleeding off the right edge (composition map allows omitting it on mobile), gold arc exiting lower-left."
+    },
+    {
+      "frame": "04-professional-coordination",
+      "implementation_kind": "bespoke",
+      "implementation_owner": "src/components/pages/our-process/professional-coordination.tsx",
+      "content_source": "section_manifest.json#04-professional-coordination",
+      "asset_roles": [
+        "professional rooms connected by a single line"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "Approved manifest fields (headline, body, items) render as live HTML text, led by \"A shared strategy across your professional team.\"."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "Dedicated asset renders the declared subject \"professional rooms connected by a single line\" with the approved \"no people; room-map composition\" crop and treatment."
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "Frame composition preserved: Mist band: centred heading/body, all five transparent room plates with live labels around the live navy Shared strategy panel, gold dividers and row rule, full-bleed navy base strip with the gold line dropping through…."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved navy/gold/ivory language retained on the #DCE8F2 band per the manifest edge contract; Cormorant Garamond display over Inter body."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "390x844 recomposition per manifest: Stack the primary content group in narrative order while preserving asymmetric emphasis through offset margins and varied spacing; crop imagery around its declared focal point, keep all live text and links, and simplify…"
+        }
+      },
+      "ref": "_design_inputs/pages/our-process/refs/04-professional-coordination.png",
+      "owners": [
+        "src/components/pages/our-process/professional-coordination.tsx"
+      ],
+      "notes": "Mist band: centred heading/body, all five transparent room plates with live labels around the live navy Shared strategy panel, gold dividers and row rule, full-bleed navy base strip with the gold line dropping through it; mobile stacks the plates vertically with no overlap."
+    },
+    {
+      "frame": "05-ongoing-review",
+      "implementation_kind": "bespoke",
+      "implementation_owner": "src/components/pages/our-process/ongoing-review.tsx",
+      "content_source": "section_manifest.json#05-ongoing-review",
+      "asset_roles": [
+        "review cadence strip"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "Approved manifest fields (headline, body) render as live HTML text, led by \"Annual review keeps the plan active.\"."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "Code-native section per the manifest image_treatment (\"1536x512 quiet ivory strip with calendar icon and live text\"); live text and drawn elements only, no raster asset required."
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "Frame composition preserved: Ivory strip: gold entry rule + ringed calendar icon beside the heading and body, framed ledger photograph right (hidden on mobile per composition map), navy base band carrying the line into the closing section."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved navy/gold/ivory language retained on the #F6F2E8 band per the manifest edge contract; Cormorant Garamond display over Inter body."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "390x844 recomposition per manifest: Stack the primary content group in narrative order while preserving asymmetric emphasis through offset margins and varied spacing; crop imagery around its declared focal point, keep all live text and links, and simplify…"
+        }
+      },
+      "ref": "_design_inputs/pages/our-process/refs/05-ongoing-review.png",
+      "owners": [
+        "src/components/pages/our-process/ongoing-review.tsx"
+      ],
+      "notes": "Ivory strip: gold entry rule + ringed calendar icon beside the heading and body, framed ledger photograph right (hidden on mobile per composition map), navy base band carrying the line into the closing section."
+    },
+    {
+      "frame": "06-start-blueprint",
+      "implementation_kind": "bespoke",
+      "implementation_owner": "src/components/pages/our-process/start-blueprint.tsx",
+      "content_source": "section_manifest.json#06-start-blueprint",
+      "asset_roles": [
+        "private advisory office ready for meeting"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "Approved manifest fields (headline, body, primary_cta, boundary) render as live HTML text, led by \"Start with a strategy conversation.\"."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "Dedicated asset renders the declared subject \"private advisory office ready for meeting\" with the approved \"wide navy close, no people\" crop and treatment."
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "Frame composition preserved: Full-bleed closing office canvas with AA scrim, thin gold interior frame, centred heading/body, gold-edged ghost CTA to /schedule, shield-marked educational boundary; the page-local gold line terminates in a node above…."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved navy/gold/ivory language retained on the #0B1F3A band per the manifest edge contract; Cormorant Garamond display over Inter body."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "390x844 recomposition per manifest: Stack the primary content group in narrative order while preserving asymmetric emphasis through offset margins and varied spacing; crop imagery around its declared focal point, keep all live text and links, and simplify…"
+        }
+      },
+      "ref": "_design_inputs/pages/our-process/refs/06-start-blueprint.png",
+      "owners": [
+        "src/components/pages/our-process/start-blueprint.tsx"
+      ],
+      "notes": "Full-bleed closing office canvas with AA scrim, thin gold interior frame, centred heading/body, gold-edged ghost CTA to /schedule, shield-marked educational boundary; the page-local gold line terminates in a node above the headline and does not continue into the footer."
+    }
+  ]
+}

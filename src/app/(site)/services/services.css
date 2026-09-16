@@ -1,0 +1,94 @@
+/*
+ * /services — planning-pillar index, page-scoped recipes.
+ * Photo plates, veils, seam stubs and the ledger spine only; all copy,
+ * labels and controls are live HTML styled with tokens/utilities.
+ */
+
+/* ---------- shared page-local coordination seam ----------
+   One sparse gold line crosses each section seam at the same x, per the
+   page_flow motif contract. Entry stub hangs from the section top, exit stub
+   sits on its bottom; the final section ends the line with a node instead. */
+.svc-seam-top::before,
+.svc-seam-bottom::after {
+  content: "";
+  position: absolute;
+  left: clamp(1.25rem, 12%, 11rem);
+  width: 1px;
+  height: 3.5rem;
+  background: var(--color-gold);
+  opacity: 0.8;
+  pointer-events: none;
+}
+.svc-seam-top::before {
+  top: 0;
+}
+.svc-seam-bottom::after {
+  bottom: 0;
+}
+
+/* ---------- 01 index-hero: navy field, worktable right ---------- */
+.svc-hero {
+  background: linear-gradient(
+    180deg,
+    var(--color-ink-deep) 0%,
+    var(--color-ink-deeper) 72%,
+    var(--color-ink) 100%
+  );
+}
+
+/* Contrast veil over the worktable plate so the left copy field never
+   competes with the lit desk; transparent toward the lamp. */
+.svc-hero-veil {
+  background: linear-gradient(
+    90deg,
+    var(--color-ink-deeper) 0%,
+    rgba(4, 16, 31, 0.82) 22%,
+    rgba(4, 16, 31, 0.28) 55%,
+    rgba(4, 16, 31, 0.05) 100%
+  );
+}
+
+/* Quiet mist transition at the hero foot — the frame's lower band. */
+.svc-hero-fade {
+  background: linear-gradient(
+    180deg,
+    rgba(220, 232, 242, 0) 0%,
+    rgba(220, 232, 242, 0.55) 55%,
+    var(--color-mist) 100%
+  );
+}
+
+/* ---------- 02 taxonomy-rail: pale mist strip ---------- */
+.svc-rail {
+  background: linear-gradient(
+    180deg,
+    var(--color-mist) 0%,
+    #eaf1f7 45%,
+    var(--color-mist-deep) 100%
+  );
+}
+
+/* ---------- 04 topic-ledger: vertical service spine ---------- */
+.svc-spine {
+  position: relative;
+}
+.svc-spine::before {
+  content: "";
+  position: absolute;
+  top: 1.75rem;
+  bottom: 1.75rem;
+  left: 0;
+  width: 1px;
+  background: var(--color-gold);
+  opacity: 0.7;
+}
+
+/* ---------- 05 next-best-step: dark close ---------- */
+.svc-close {
+  background: linear-gradient(
+    180deg,
+    var(--color-ink) 0%,
+    var(--color-ink-deeper) 30%,
+    var(--color-ink-deeper) 100%
+  );
+}

@@ -1,7 +1,8 @@
 "use client";
 
 import { useRef, useState } from "react";
-import { BRAND , telHref } from "@/lib/content";
+import { BRAND, telHref } from "@/lib/content";
+import { submitSiteInquiry } from "@/lib/mega-submission";
 
 declare global {
   interface Window {
@@ -37,9 +38,6 @@ type Fields = {
 };
 
 const EMPTY: Fields = { fullName: "", email: "", careerStage: "", notes: "" };
-
-/** Endpoint is injected at build time; absent in the review builds. */
-const ENDPOINT = process.env.NEXT_PUBLIC_LEAD_ENDPOINT;
 
 function validate(values: Fields): Partial<Record<keyof Fields, string>> {
   const errors: Partial<Record<keyof Fields, string>> = {};
@@ -107,23 +105,18 @@ export function StrategyCallForm({
 
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>): Promise<void> {
     event.preventDefault();
-    if (!ENDPOINT) {
-      // No endpoint wired yet. Hand off to email rather than report a success
-      // that never happened.
-      window.location.href = mailtoHandoff(values);
-      setStatus("failed");
-      return;
-    }
+    const honeypot = new FormData(event.currentTarget).get("companyWebsite");
+    if (typeof honeypot === "string" && honeypot.trim()) return;
     setStatus("sending");
     try {
-      const response = await fetch(ENDPOINT, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(values),
+      // The same MEGA pipeline the /landing campaign form submits to; the
+      // conversion dataLayer event fires inside only on confirmed receipt.
+      await submitSiteInquiry("strategy-call-request", {
+        fullName: values.fullName.trim(),
+        email: values.email.trim(),
+        careerStage: values.careerStage,
+        notes: values.notes.trim(),
       });
-      if (!response.ok) throw new Error(`Lead endpoint returned ${response.status}`);
-      window.dataLayer = window.dataLayer || [];
-      window.dataLayer.push({ event: "form_submission" });
       setStatus("sent");
       setValues(EMPTY);
     } catch {
@@ -289,10 +282,9 @@ export function StrategyCallForm({
             isLedger ? "text-ivory/80" : "text-charcoal"
           }`}
         >
-          This form opens your email app to send the request. If nothing opened,
-          email{" "}
-          <a className="underline underline-offset-4" href={`mailto:${BRAND.email}`}>
-            {BRAND.email}
+          The request could not be sent just now. You can{" "}
+          <a className="underline underline-offset-4" href={mailtoHandoff(values)}>
+            email it instead
           </a>{" "}
           or call{" "}
           <a className="underline underline-offset-4" href={telHref()}>

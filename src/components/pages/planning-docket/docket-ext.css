@@ -1,0 +1,385 @@
+/*
+ * Planning-docket family — variant surfaces for the retirement, practice-
+ * owner, and legacy dockets (docket.css holds the shared base; this sheet
+ * only adds the ref-specific compositions those three pages declare).
+ * Imported BY EACH ROUTE FILE that uses these variants, after docket.css.
+ * Same conventions: dkt- prefix, grouped declarations, one sparse gold
+ * coordination line per section, seams per the page_flow contract.
+ */
+
+/* ---------- 01 opening-docket variants ---------- */
+
+/* Legacy ref: the canvas veil's left edge reads near-solid navy so the
+   headline field fully absorbs the photograph's left margin. */
+.dkt-open--veil-deep.dkt-open--canvas .dkt-open-media::after {
+  background: linear-gradient(94deg, rgba(6, 21, 39, 0.98) 0%, rgba(6, 21, 39, 0.88) 14%, rgba(6, 21, 39, 0.4) 40%, rgba(6, 21, 39, 0.05) 66%, rgba(6, 21, 39, 0.16) 100%);
+}
+
+/* Practice ref: the section exits on one gentle ivory sweep with a gold
+   hairline; no straight seam, no vertical exit line. */
+.dkt-open--arc .dkt-open-band { border-top: none; padding-block: 1.25rem 1.5rem; }
+.dkt-open-arc { order: 4; position: relative; height: clamp(64px, 11vw, 184px); }
+.dkt-open-arc svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+@media (min-width: 1024px) {
+  /* The photograph runs to the section bottom; the arc paints over it. */
+  .dkt-open--arc .dkt-open-media { bottom: 0; }
+}
+
+/* ---------- 02 demand-situations variants ---------- */
+
+/* Small-caps ledger/checklist titles, from the manifests' interaction labels. */
+.dkt-ledger-kicker,
+.dkt-docs-kicker {
+  font-size: 0.72rem; font-weight: 600; letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-ink);
+}
+.dkt-ledger-kicker { margin-bottom: 1.1rem; }
+
+/* Retirement "ambient": warm ledger column right, ambience crop settling
+   into the lower-left corner (edge-touching per the composition map). */
+.dkt-demand-ledgerfield {
+  background: #fcf4e4;
+  padding: 2rem 2.25rem 2.25rem;
+  box-shadow: 0 18px 40px -30px rgba(11, 31, 58, 0.4);
+}
+.dkt-demand--ambient .dkt-ledger li::before { background: #fcf4e4; }
+.dkt-demand-ambience { position: relative; aspect-ratio: 925 / 396; width: 100%; }
+.dkt-demand-ambience img {
+  position: absolute; inset: 0;
+  height: 100%; width: 100%; object-fit: cover;
+}
+@media (min-width: 1024px) {
+  .dkt-demand-ambience {
+    position: absolute; left: 0; bottom: 0;
+    width: 52%; height: clamp(220px, 24vw, 330px);
+    aspect-ratio: auto;
+  }
+  /* The crop dissolves into the ivory field on its upper-right, as drawn. */
+  .dkt-demand-ambience::after {
+    content: "";
+    position: absolute; inset: 0; pointer-events: none;
+    background: linear-gradient(288deg, rgba(246, 242, 232, 0) 55%, rgba(246, 242, 232, 0.85) 100%);
+  }
+}
+
+/* Practice "card": framed check-row ledger; the still life owns the right
+   field to the section edges under an ivory dissolve. */
+.dkt-ledger-card {
+  border: 1px solid rgba(200, 166, 90, 0.5);
+  background: #fbf7ec;
+  box-shadow: 0 20px 44px -32px rgba(11, 31, 58, 0.45);
+}
+.dkt-ledger-card li { display: flex; align-items: flex-start; gap: 0.9rem; padding: 0.95rem 1.15rem; }
+.dkt-ledger-card li + li { border-top: 1px solid rgba(200, 166, 90, 0.35); }
+.dkt-ledger-card svg { margin-top: 0.2rem; }
+.dkt-demand-canvas { position: relative; aspect-ratio: 902 / 743; width: 100%; }
+.dkt-demand-canvas img {
+  position: absolute; inset: 0;
+  height: 100%; width: 100%; object-fit: cover;
+}
+@media (min-width: 1024px) {
+  .dkt-demand-canvas {
+    position: absolute; top: 0; right: 0; bottom: 0;
+    width: 55%; aspect-ratio: auto;
+  }
+  .dkt-demand-canvas::after {
+    content: "";
+    position: absolute; inset: 0; pointer-events: none;
+    background: linear-gradient(90deg, rgba(246, 242, 232, 1) 0%, rgba(246, 242, 232, 0) 16%);
+  }
+}
+/* The card's exit: the line pauses on a small document tile at the seam. */
+.dkt-demand-glyphnode {
+  position: absolute; bottom: 3.4rem;
+  display: grid; place-items: center;
+  width: 2.3rem; height: 2.3rem;
+  background: #ffffff;
+  border: 1px solid var(--color-gold);
+  color: var(--color-gold-text);
+  box-shadow: 0 10px 20px -12px rgba(11, 31, 58, 0.4);
+}
+
+/* Legacy "mirror": estate still life bleeds off the left edge; circled
+   trigger glyphs ride the gold spine. */
+.dkt-demand-mirror-media {
+  position: relative; overflow: hidden;
+  aspect-ratio: 4 / 5; max-height: 540px; width: 100%;
+  box-shadow: 0 26px 60px -34px rgba(11, 31, 58, 0.55);
+}
+.dkt-demand-mirror-media img {
+  position: absolute; inset: 0;
+  height: 100%; width: 100%; object-fit: cover;
+}
+@media (min-width: 1024px) {
+  .dkt-demand-mirror-media {
+    position: absolute; left: 0; top: 3rem; bottom: 0;
+    width: clamp(300px, 36vw, 560px); max-height: none;
+    aspect-ratio: auto;
+  }
+}
+.dkt-ledger--glyphs li { display: flex; align-items: center; gap: 1.1rem; }
+.dkt-glyph-ring {
+  display: grid; place-items: center; flex-shrink: 0;
+  width: 2.5rem; height: 2.5rem; border-radius: 50%;
+  border: 1px solid rgba(11, 31, 58, 0.4);
+  color: var(--color-ink);
+  background: transparent;
+}
+
+/* ---------- 03 documents-needed variants ---------- */
+
+.dkt-docs-kicker { margin-top: 2.25rem; margin-bottom: -1.25rem; }
+
+/* Gold-circled check mark (retirement inline, practice stacked, legacy thread). */
+.dkt-docs-ring {
+  display: inline-grid; place-items: center; flex-shrink: 0;
+  width: 1.7rem; height: 1.7rem; border-radius: 50%;
+  border: 1.5px solid var(--color-gold);
+  color: var(--color-gold-text);
+  background: #ffffff;
+}
+
+/* Practice "stacked": mark above a short gold rule above the item text. */
+.dkt-docs-list--stacked .dkt-docs-item { flex-direction: column; gap: 0.8rem; }
+.dkt-docs-list--stacked .dkt-docs-item span:last-child::before {
+  content: "";
+  display: block;
+  width: 3.5rem; height: 1.5px;
+  margin-bottom: 0.7rem;
+  background: rgba(200, 166, 90, 0.7);
+}
+.dkt-docs-list--stacked .dkt-docs-item + .dkt-docs-item { border-left: 0; padding-left: 0; }
+
+/* Legacy "thread": the marks seat on one continuous gold hairline. */
+.dkt-docs-list--thread .dkt-docs-item { flex-direction: column; gap: 0.9rem; }
+@media (min-width: 1024px) {
+  .dkt-docs-list--thread { position: relative; }
+  .dkt-docs-list--thread::before {
+    content: "";
+    position: absolute; top: 0.85rem; left: 0; right: 0; height: 1px;
+    background: rgba(200, 166, 90, 0.65);
+  }
+  .dkt-docs-list--thread .dkt-docs-item { position: relative; }
+  .dkt-docs-list--thread .dkt-docs-item + .dkt-docs-item { border-left: 0; padding-left: 0; }
+}
+
+/* Retirement "flank": two framed document panels bracket the checklist from
+   the section edges; the right panel is a desktop-only counterweight. */
+.dkt-docs-flank { position: relative; }
+.dkt-docs-flank img {
+  display: block; width: 100%; height: auto; object-fit: cover;
+  box-shadow: 0 22px 44px -26px rgba(11, 31, 58, 0.45);
+}
+.dkt-docs-flank--left { width: min(55%, 15rem); margin-top: 2rem; }
+.dkt-docs-flank--right { display: none; }
+@media (min-width: 1024px) {
+  .dkt-docs-flank--left {
+    position: absolute; left: 0; top: 1.5rem;
+    width: clamp(11rem, 18vw, 17rem); margin-top: 0;
+  }
+  .dkt-docs-flank--right {
+    display: block;
+    position: absolute; right: 0; top: 1rem;
+    width: clamp(8rem, 14vw, 13rem);
+  }
+}
+
+/* ---------- 04 coordination-boundary variants ---------- */
+
+/* Retirement "plan": blueprint field of glyph cards around the navy node.
+   The annotation plate fills the ref's left-of-centre note position with the
+   manifest's interaction label and boundary body line. */
+.dkt-plan-note {
+  background: #ffffff;
+  border: 1px solid rgba(11, 31, 58, 0.18);
+  padding: 1.1rem 1.25rem;
+  max-width: 19rem;
+  box-shadow: 0 10px 24px -14px rgba(11, 31, 58, 0.35);
+}
+.dkt-plan-note-title {
+  display: inline-flex; align-items: center; gap: 0.7rem;
+  font-size: 0.72rem; font-weight: 600; letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-ink);
+}
+.dkt-plan-card {
+  position: relative;
+  display: flex; flex-direction: column; align-items: flex-start; gap: 0.9rem;
+  background: #ffffff;
+  border: 1.5px solid rgba(11, 31, 58, 0.55);
+  padding: 1.3rem 1.2rem;
+  font-size: var(--text-body-s); font-weight: 500; line-height: 1.45;
+  color: var(--color-ink);
+  box-shadow: 0 14px 30px -18px rgba(11, 31, 58, 0.4);
+}
+.dkt-plan-glyph { color: rgba(11, 31, 58, 0.75); }
+@media (min-width: 1024px) {
+  .dkt-map-diagram--plan {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+    grid-template-areas: "a . b" "note hub ." "c . .";
+    column-gap: 3rem; row-gap: 3rem;
+    align-items: start;
+    position: relative;
+    padding: 1rem 0.5rem;
+  }
+  /* Quiet blueprint hairlines behind the plan, per the ref's drawing field. */
+  .dkt-map-diagram--plan::before {
+    content: "";
+    position: absolute; inset: -1rem;
+    pointer-events: none;
+    background:
+      repeating-linear-gradient(0deg, rgba(11, 31, 58, 0.05) 0 1px, transparent 1px 72px),
+      repeating-linear-gradient(90deg, rgba(11, 31, 58, 0.05) 0 1px, transparent 1px 72px);
+  }
+  .dkt-plan-cell--a { grid-area: a; justify-self: end; position: relative; }
+  .dkt-plan-cell--b { grid-area: b; justify-self: start; position: relative; }
+  .dkt-plan-cell--c { grid-area: c; justify-self: end; position: relative; }
+  .dkt-plan-cell--note { grid-area: note; justify-self: end; align-self: center; }
+  .dkt-plan-cell--hub { grid-area: hub; justify-self: center; align-self: center; position: relative; }
+  .dkt-plan-cell--a::after,
+  .dkt-plan-cell--b::after,
+  .dkt-plan-cell--c::before {
+    content: "";
+    position: absolute; left: 50%; width: 1.5px; height: 3rem;
+    background: var(--color-gold); opacity: 0.85;
+  }
+  .dkt-plan-cell--a::after, .dkt-plan-cell--b::after { bottom: -3rem; }
+  .dkt-plan-cell--c::before { top: -3rem; }
+  /* Element-anchored horizontals so the sparse line always meets the hub. */
+  .dkt-plan-cell--hub::before,
+  .dkt-plan-cell--hub::after {
+    content: "";
+    position: absolute; top: 50%;
+    width: 3rem; height: 1.5px;
+    background: var(--color-gold); opacity: 0.85;
+  }
+  .dkt-plan-cell--hub::before { left: -3rem; }
+  .dkt-plan-cell--hub::after { right: -3rem; }
+}
+
+/* Practice "niches": one labelled photographic niche band, hub first. */
+.dkt-niche-fig { display: flex; flex-direction: column; }
+.dkt-niche-fig .dkt-map-label { position: relative; z-index: 1; margin: 0 1rem -1.1rem; }
+.dkt-niche--hub .dkt-room { border: 1px solid var(--color-ink); }
+@media (min-width: 1024px) {
+  .dkt-map-diagram--niches {
+    display: flex; align-items: flex-end; gap: 2.75rem;
+    position: relative;
+    padding-bottom: 1.6rem;
+  }
+  .dkt-niche { flex: 1; }
+  .dkt-niche--hub { flex: 1.2; padding-bottom: 0.5rem; }
+  /* Gold baseline running beneath the row, as the ref draws the floor line. */
+  .dkt-map-diagram--niches::after {
+    content: "";
+    position: absolute; left: 1%; right: 1%; bottom: 0; height: 1.5px;
+    background: var(--color-gold); opacity: 0.85;
+  }
+}
+
+/* Legacy "cards": double-framed live label cards around the navy hub card. */
+.dkt-cards-card,
+.dkt-cards-hub {
+  position: relative;
+  padding: 1.15rem 1.3rem;
+  text-align: center;
+  font-size: var(--text-body-s); font-weight: 500; line-height: 1.45;
+}
+.dkt-cards-card {
+  background: #ffffff;
+  border: 1px solid rgba(11, 31, 58, 0.35);
+  color: var(--color-ink);
+  box-shadow: 0 14px 30px -18px rgba(11, 31, 58, 0.35);
+}
+.dkt-cards-card::before,
+.dkt-cards-hub::before {
+  content: "";
+  position: absolute; inset: 4px;
+  pointer-events: none;
+  border: 1px solid rgba(11, 31, 58, 0.16);
+}
+.dkt-cards-hub {
+  background: var(--color-ink);
+  color: var(--color-ivory);
+  font-weight: 600;
+  padding: 1.6rem 1.75rem; min-width: 13rem;
+  box-shadow: 0 24px 44px -24px rgba(4, 16, 31, 0.7);
+}
+.dkt-cards-hub::before { border-color: rgba(220, 232, 242, 0.35); }
+@media (min-width: 1024px) {
+  .dkt-map-diagram--cards {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+    grid-template-areas: "left . right" "hub hub hub" "bottom bottom bottom";
+    column-gap: 3rem; row-gap: 3rem;
+    align-items: center;
+  }
+  .dkt-cards-cell--left { grid-area: left; position: relative; }
+  .dkt-cards-cell--right { grid-area: right; position: relative; }
+  .dkt-cards-cell--hub { grid-area: hub; justify-self: center; position: relative; }
+  .dkt-cards-cell--bottom { grid-area: bottom; justify-self: center; position: relative; width: min(100%, 17rem); }
+  .dkt-cards-cell--left::after,
+  .dkt-cards-cell--right::after,
+  .dkt-cards-cell--bottom::before {
+    content: "";
+    position: absolute; left: 50%; width: 1.5px; height: 3rem;
+    background: var(--color-gold); opacity: 0.85;
+  }
+  .dkt-cards-cell--left::after, .dkt-cards-cell--right::after { bottom: -3rem; }
+  .dkt-cards-cell--bottom::before { top: -3rem; }
+  /* Element-anchored horizontals so the sparse line always meets the hub. */
+  .dkt-cards-cell--hub::after,
+  .dkt-cards-cell--hub > .dkt-cards-hub::after {
+    content: "";
+    position: absolute; top: 50%;
+    width: 3rem; height: 1.5px;
+    background: var(--color-gold); opacity: 0.85;
+  }
+  .dkt-cards-cell--hub::after { left: -3rem; }
+  .dkt-cards-cell--hub > .dkt-cards-hub::after { right: -3rem; }
+}
+
+/* ---------- 05 adjacent-planning variants ---------- */
+
+/* Retirement "ledger": aligned rows, rules running to gold arrow terminals. */
+.dkt-adj-lrow { display: flex; align-items: center; gap: 1.25rem; }
+.dkt-adj-lrow .dkt-adj-route { overflow-wrap: anywhere; }
+.dkt-adj-lrow > span:first-child { box-shadow: 0 14px 26px -16px rgba(11, 31, 58, 0.55); }
+.dkt-adj-lrule {
+  flex: 1; min-width: 1.5rem; height: 1.5px;
+  background: rgba(200, 166, 90, 0.75);
+}
+
+/* Practice "cascade": ivory plates step down-right; arrow terminal per row. */
+.dkt-adj-cplate { grid-template-columns: minmax(5.5rem, 8.5rem) minmax(0, 1fr) auto; }
+@media (min-width: 1024px) {
+  .dkt-adj--cascade .dkt-adj-cplate {
+    width: 88%;
+    margin-left: calc(var(--dkt-step) * 3%);
+  }
+}
+
+/* Navy exit band shared by the ledger/cascade refs and the legacy stair:
+   the page-local line descends past the seam and pauses on a gold dot. */
+.dkt-adj-band {
+  position: relative; margin-top: 3.5rem;
+  background: var(--color-ink);
+  padding-block: 2.1rem;
+}
+.dkt-adj-band-drop {
+  position: absolute; top: -3.5rem;
+  width: 1.5px; height: 4.9rem;
+  background: var(--color-gold); opacity: 0.9;
+}
+.dkt-adj-band-drop::after {
+  content: "";
+  position: absolute; bottom: -4px; left: 50%; transform: translateX(-50%);
+  width: 8px; height: 8px; border-radius: 50%;
+  background: var(--color-gold);
+}
+.dkt-adj-band--start .dkt-adj-band-drop { left: clamp(2rem, 9vw, 9rem); }
+.dkt-adj-band--end .dkt-adj-band-drop { right: clamp(2.5rem, 10vw, 10rem); }
+.dkt-adj-band-link { color: var(--color-ivory); }
+.dkt-adj-band-link:hover { color: var(--color-gold); }

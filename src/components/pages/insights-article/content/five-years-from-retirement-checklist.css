@@ -1,0 +1,37 @@
+/*
+ * Page-scoped frame recipes for /insights/five-years-from-retirement-checklist.
+ * Same math as the family art-frame recipes: the class pins the slot's
+ * aspect-ratio to the raster's visible rect; img width/left percentages are
+ * relative to that visible rect so baked artifacts stay outside the slot at
+ * every viewport. Family components and insights-article.css are untouched.
+ */
+
+.art-frame--fyr-teaser {
+  /* 376x320 minus the baked annotation bookmark label on the left:
+     visible rect (205,0,171,320). Width capped so the crop stays a quiet
+     right-column accent as in the ref. */
+  aspect-ratio: 171 / 320;
+  max-width: 13rem;
+}
+.art-frame--fyr-teaser > img {
+  width: 219.883%;
+  left: -119.883%;
+}
+
+.art-frame--fyr-gate {
+  /* Clean extraction; pin the intrinsic 299x565 portrait aspect and cap the
+     width so the envelope keeps the ref's narrow document scale. */
+  aspect-ratio: 299 / 565;
+  max-width: 18rem;
+}
+
+.art-frame--fyr-review {
+  /* 624x249 minus the baked gold node and card edge along the bottom:
+     visible rect (0,0,624,235). */
+  aspect-ratio: 624 / 235;
+}
+
+.art-frame--fyr-related {
+  /* Clean extraction; pin the intrinsic 517x840 aspect. */
+  aspect-ratio: 517 / 840;
+}

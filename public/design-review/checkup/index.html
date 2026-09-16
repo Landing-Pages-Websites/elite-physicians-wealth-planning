@@ -1,0 +1,349 @@
+<!doctype html><meta charset='utf-8'>
+<title>Image asset review</title><style>
+body{margin:0;padding:24px;background:#111;color:#eee;
+     font:14px/1.5 -apple-system,'Segoe UI',sans-serif}
+a{color:#8bd} .muted{color:#999} h1{font-size:20px}
+.proto{background:#1b1b1b;border:1px solid #333;border-radius:8px;
+       padding:12px 16px;max-width:900px;margin-bottom:24px}
+.proto code{background:#000;padding:1px 5px;border-radius:4px}
+.card{background:#1b1b1b;border:1px solid #333;border-radius:8px;
+      padding:16px;margin-bottom:20px;max-width:1200px}
+.card.missing{border-color:#a33}
+.pair{display:flex;gap:16px;flex-wrap:wrap}
+.pair figure{margin:0;flex:1;min-width:280px}
+.pair img{max-width:100%;border:1px solid #444}
+.asset-preview{display:grid;place-items:center;min-height:180px;
+  background-color:#fff;background-image:linear-gradient(45deg,#ddd 25%,transparent 25%),
+  linear-gradient(-45deg,#ddd 25%,transparent 25%),linear-gradient(45deg,transparent 75%,#ddd 75%),
+  linear-gradient(-45deg,transparent 75%,#ddd 75%);background-size:24px 24px;
+  background-position:0 0,0 12px,12px -12px,-12px 0}
+.asset-preview img,.intended-preview img{display:block;max-height:520px}
+.intended-preview{display:grid;place-items:center;min-height:180px;border:1px solid #444}
+figcaption{font-size:12px;color:#999;margin-top:4px}
+.chip{display:inline-block;font-size:11px;padding:2px 8px;border-radius:10px;
+      background:#333;margin-left:8px;text-transform:uppercase}
+.chip.extract{background:#264} .chip.inpaint{background:#452}
+.chip.code{background:#345}
+.chip.plate{background:#246} .chip.generated{background:#525}
+.chip.unmapped{background:#630} .chip.client-copy{background:#444}
+.chip.composite{background:#536}
+</style>
+<h1>Image asset review</h1>
+<p class='muted'>29 CODE regions and 4 raster assets to review: 4 extract, 0 inpaint.</p>
+<div class='proto'><b>How to review:</b> judge every planned treatment against its design reference on the left. For CODE cards, verify the build note can preserve the region's silhouette, materiality, and compositing—not merely approximate its geometry. To swap a raster, replace the file directly in git — same path, push to main (<a href='https://github.com/Landing-Pages-Websites/elite-physicians-wealth-planning/tree/main/public/images/design'>assets folder in the repo</a>; each card links to its file). Replaced files are authoritative — the pipeline never overwrites them. This page updates on every push. Complete the review subtask to approve; the build does not start until then.</div>
+<div class='card' id='01-checkup-hero-r1'>
+<b>01-checkup-hero-r1</b><span class='chip extract'>extract</span>
+<div class='muted'>Clean section-owned photographic material for 01-checkup-hero, with all website text and controls kept live</div>
+<div class='muted'>Use semantic live headings and body copy over a CSS navy field, with the contracted photo in a responsive media slot, a thin gold SVG route, and an accessible CTA.</div>
+<div class='muted'>presentation: {&quot;alpha_required&quot;: false, &quot;crop_contract&quot;: &quot;Preserve stethoscope, folio, pen, and seven blank notes; exclude all live headline and CTA copy.&quot;, &quot;edge_treatment&quot;: {&quot;protected_crisp_regions&quot;: [&quot;focal photographic subject&quot;], &quot;style&quot;: &quot;crisp editorial crop with no synthetic fade or halo&quot;, &quot;zones&quot;: [&quot;outer crop boundary&quot;]}, &quot;intended_background&quot;: &quot;#0B1F3A&quot;, &quot;minimum_visible_fraction&quot;: &quot;Stethoscope and at least five blank notes remain visible together.&quot;, &quot;mode&quot;: &quot;framed-panel&quot;}</div>
+<div class='pair'>
+<figure><a href='crops/01-checkup-hero-context.png'><img src='crops/01-checkup-hero-r1-ref.png' alt=''></a><figcaption>design reference — 01-checkup-hero (click for full frame)</figcaption></figure>
+<figure><div class='asset-preview'><img src='../images/design/media/checkup-hero-desk-right.jpg' alt=''></div><figcaption>shipped asset on transparency checkerboard — <a href='https://github.com/Landing-Pages-Websites/elite-physicians-wealth-planning/blob/main/public/images/design/media/checkup-hero-desk-right.jpg'><code>media/checkup-hero-desk-right.jpg</code></a> (replace in git)</figcaption></figure>
+<figure><div class='intended-preview' style='background:#0B1F3A'><img src='../images/design/media/checkup-hero-desk-right.jpg' alt=''></div><figcaption>asset on intended background — #0B1F3A</figcaption></figure>
+</div></div>
+<div class='card' id='02-seven-area-map-r1'>
+<b>02-seven-area-map-r1</b><span class='chip code'>code</span>
+<div class='muted'>diagram region 1 from the approved 02-seven-area-map frame</div>
+<div class='muted'>Build the responsive diagram with semantic labels, CSS circles and panels, and an inline SVG coordination path; place only contracted photographs inside media masks.</div>
+<div class='pair'>
+<figure><a href='crops/02-seven-area-map-context.png'><img src='crops/02-seven-area-map-r1-ref.png' alt=''></a><figcaption>design reference — 02-seven-area-map (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Build the responsive diagram with semantic labels, CSS circles and panels, and an inline SVG coordination path; place only contracted photographs inside media masks.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='02-seven-area-map-r2'>
+<b>02-seven-area-map-r2</b><span class='chip code'>code</span>
+<div class='muted'>diagram region 2 from the approved 02-seven-area-map frame</div>
+<div class='muted'>Build the responsive diagram with semantic labels, CSS circles and panels, and an inline SVG coordination path; place only contracted photographs inside media masks.</div>
+<div class='pair'>
+<figure><a href='crops/02-seven-area-map-context.png'><img src='crops/02-seven-area-map-r2-ref.png' alt=''></a><figcaption>design reference — 02-seven-area-map (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Build the responsive diagram with semantic labels, CSS circles and panels, and an inline SVG coordination path; place only contracted photographs inside media masks.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='02-seven-area-map-r3'>
+<b>02-seven-area-map-r3</b><span class='chip code'>code</span>
+<div class='muted'>diagram region 3 from the approved 02-seven-area-map frame</div>
+<div class='muted'>Build the responsive diagram with semantic labels, CSS circles and panels, and an inline SVG coordination path; place only contracted photographs inside media masks.</div>
+<div class='pair'>
+<figure><a href='crops/02-seven-area-map-context.png'><img src='crops/02-seven-area-map-r3-ref.png' alt=''></a><figcaption>design reference — 02-seven-area-map (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Build the responsive diagram with semantic labels, CSS circles and panels, and an inline SVG coordination path; place only contracted photographs inside media masks.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='03-interactive-review-r1'>
+<b>03-interactive-review-r1</b><span class='chip extract'>extract</span>
+<div class='muted'>Clean section-owned photographic material for 03-interactive-review, with all website text and controls kept live</div>
+<div class='muted'>Build the complete form as semantic labels, inputs, fieldsets, helper text, and disabled held-state controls; use CSS grid, one-pixel navy rules, and tokenized focus styling.</div>
+<div class='muted'>presentation: {&quot;alpha_required&quot;: false, &quot;crop_contract&quot;: &quot;Preserve the anonymous clinician hands, pen, and clipboard; exclude the interface panel, route line, and all website copy.&quot;, &quot;edge_treatment&quot;: {&quot;protected_crisp_regions&quot;: [&quot;focal photographic subject&quot;], &quot;style&quot;: &quot;crisp editorial crop with no synthetic fade or halo&quot;, &quot;zones&quot;: [&quot;outer crop boundary&quot;]}, &quot;intended_background&quot;: &quot;#DCE8F2&quot;, &quot;minimum_visible_fraction&quot;: &quot;Both hands, pen tip, and clipboard remain visible.&quot;, &quot;mode&quot;: &quot;framed-panel&quot;}</div>
+<div class='pair'>
+<figure><a href='crops/03-interactive-review-context.png'><img src='crops/03-interactive-review-r1-ref.png' alt=''></a><figcaption>design reference — 03-interactive-review (click for full frame)</figcaption></figure>
+<figure><div class='asset-preview'><img src='../images/design/media/checkup-review-hands.jpg' alt=''></div><figcaption>shipped asset on transparency checkerboard — <a href='https://github.com/Landing-Pages-Websites/elite-physicians-wealth-planning/blob/main/public/images/design/media/checkup-review-hands.jpg'><code>media/checkup-review-hands.jpg</code></a> (replace in git)</figcaption></figure>
+<figure><div class='intended-preview' style='background:#DCE8F2'><img src='../images/design/media/checkup-review-hands.jpg' alt=''></div><figcaption>asset on intended background — #DCE8F2</figcaption></figure>
+</div></div>
+<div class='card' id='03-interactive-review-r2'>
+<b>03-interactive-review-r2</b><span class='chip code'>code</span>
+<div class='muted'>form region 2 from the approved 03-interactive-review frame</div>
+<div class='muted'>Build the complete form as semantic labels, inputs, fieldsets, helper text, and disabled held-state controls; use CSS grid, one-pixel navy rules, and tokenized focus styling.</div>
+<div class='pair'>
+<figure><a href='crops/03-interactive-review-context.png'><img src='crops/03-interactive-review-r2-ref.png' alt=''></a><figcaption>design reference — 03-interactive-review (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Build the complete form as semantic labels, inputs, fieldsets, helper text, and disabled held-state controls; use CSS grid, one-pixel navy rules, and tokenized focus styling.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='03-interactive-review-r3'>
+<b>03-interactive-review-r3</b><span class='chip code'>code</span>
+<div class='muted'>form region 3 from the approved 03-interactive-review frame</div>
+<div class='muted'>Build the complete form as semantic labels, inputs, fieldsets, helper text, and disabled held-state controls; use CSS grid, one-pixel navy rules, and tokenized focus styling.</div>
+<div class='pair'>
+<figure><a href='crops/03-interactive-review-context.png'><img src='crops/03-interactive-review-r3-ref.png' alt=''></a><figcaption>design reference — 03-interactive-review (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Build the complete form as semantic labels, inputs, fieldsets, helper text, and disabled held-state controls; use CSS grid, one-pixel navy rules, and tokenized focus styling.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='03-interactive-review-r4'>
+<b>03-interactive-review-r4</b><span class='chip code'>code</span>
+<div class='muted'>form region 4 from the approved 03-interactive-review frame</div>
+<div class='muted'>Build the complete form as semantic labels, inputs, fieldsets, helper text, and disabled held-state controls; use CSS grid, one-pixel navy rules, and tokenized focus styling.</div>
+<div class='pair'>
+<figure><a href='crops/03-interactive-review-context.png'><img src='crops/03-interactive-review-r4-ref.png' alt=''></a><figcaption>design reference — 03-interactive-review (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Build the complete form as semantic labels, inputs, fieldsets, helper text, and disabled held-state controls; use CSS grid, one-pixel navy rules, and tokenized focus styling.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='03-interactive-review-r5'>
+<b>03-interactive-review-r5</b><span class='chip code'>code</span>
+<div class='muted'>form region 5 from the approved 03-interactive-review frame</div>
+<div class='muted'>Build the complete form as semantic labels, inputs, fieldsets, helper text, and disabled held-state controls; use CSS grid, one-pixel navy rules, and tokenized focus styling.</div>
+<div class='pair'>
+<figure><a href='crops/03-interactive-review-context.png'><img src='crops/03-interactive-review-r5-ref.png' alt=''></a><figcaption>design reference — 03-interactive-review (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Build the complete form as semantic labels, inputs, fieldsets, helper text, and disabled held-state controls; use CSS grid, one-pixel navy rules, and tokenized focus styling.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='03-interactive-review-r6'>
+<b>03-interactive-review-r6</b><span class='chip code'>code</span>
+<div class='muted'>form region 6 from the approved 03-interactive-review frame</div>
+<div class='muted'>Build the complete form as semantic labels, inputs, fieldsets, helper text, and disabled held-state controls; use CSS grid, one-pixel navy rules, and tokenized focus styling.</div>
+<div class='pair'>
+<figure><a href='crops/03-interactive-review-context.png'><img src='crops/03-interactive-review-r6-ref.png' alt=''></a><figcaption>design reference — 03-interactive-review (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Build the complete form as semantic labels, inputs, fieldsets, helper text, and disabled held-state controls; use CSS grid, one-pixel navy rules, and tokenized focus styling.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='03-interactive-review-r7'>
+<b>03-interactive-review-r7</b><span class='chip code'>code</span>
+<div class='muted'>form region 7 from the approved 03-interactive-review frame</div>
+<div class='muted'>Build the complete form as semantic labels, inputs, fieldsets, helper text, and disabled held-state controls; use CSS grid, one-pixel navy rules, and tokenized focus styling.</div>
+<div class='pair'>
+<figure><a href='crops/03-interactive-review-context.png'><img src='crops/03-interactive-review-r7-ref.png' alt=''></a><figcaption>design reference — 03-interactive-review (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Build the complete form as semantic labels, inputs, fieldsets, helper text, and disabled held-state controls; use CSS grid, one-pixel navy rules, and tokenized focus styling.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='03-interactive-review-r8'>
+<b>03-interactive-review-r8</b><span class='chip code'>code</span>
+<div class='muted'>form region 8 from the approved 03-interactive-review frame</div>
+<div class='muted'>Build the complete form as semantic labels, inputs, fieldsets, helper text, and disabled held-state controls; use CSS grid, one-pixel navy rules, and tokenized focus styling.</div>
+<div class='pair'>
+<figure><a href='crops/03-interactive-review-context.png'><img src='crops/03-interactive-review-r8-ref.png' alt=''></a><figcaption>design reference — 03-interactive-review (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Build the complete form as semantic labels, inputs, fieldsets, helper text, and disabled held-state controls; use CSS grid, one-pixel navy rules, and tokenized focus styling.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='03-interactive-review-r9'>
+<b>03-interactive-review-r9</b><span class='chip code'>code</span>
+<div class='muted'>form region 9 from the approved 03-interactive-review frame</div>
+<div class='muted'>Build the complete form as semantic labels, inputs, fieldsets, helper text, and disabled held-state controls; use CSS grid, one-pixel navy rules, and tokenized focus styling.</div>
+<div class='pair'>
+<figure><a href='crops/03-interactive-review-context.png'><img src='crops/03-interactive-review-r9-ref.png' alt=''></a><figcaption>design reference — 03-interactive-review (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Build the complete form as semantic labels, inputs, fieldsets, helper text, and disabled held-state controls; use CSS grid, one-pixel navy rules, and tokenized focus styling.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='03-interactive-review-r10'>
+<b>03-interactive-review-r10</b><span class='chip code'>code</span>
+<div class='muted'>form region 10 from the approved 03-interactive-review frame</div>
+<div class='muted'>Build the complete form as semantic labels, inputs, fieldsets, helper text, and disabled held-state controls; use CSS grid, one-pixel navy rules, and tokenized focus styling.</div>
+<div class='pair'>
+<figure><a href='crops/03-interactive-review-context.png'><img src='crops/03-interactive-review-r10-ref.png' alt=''></a><figcaption>design reference — 03-interactive-review (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Build the complete form as semantic labels, inputs, fieldsets, helper text, and disabled held-state controls; use CSS grid, one-pixel navy rules, and tokenized focus styling.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='04-results-guidance-r1'>
+<b>04-results-guidance-r1</b><span class='chip code'>code</span>
+<div class='muted'>ledger region 1 from the approved 04-results-guidance frame</div>
+<div class='muted'>Rebuild the ledger with semantic lists and CSS grid rows, thin navy and gold rules, warm paper surfaces, and responsive single-column ordering; keep every label live.</div>
+<div class='pair'>
+<figure><a href='crops/04-results-guidance-context.png'><img src='crops/04-results-guidance-r1-ref.png' alt=''></a><figcaption>design reference — 04-results-guidance (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Rebuild the ledger with semantic lists and CSS grid rows, thin navy and gold rules, warm paper surfaces, and responsive single-column ordering; keep every label live.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='04-results-guidance-r2'>
+<b>04-results-guidance-r2</b><span class='chip extract'>extract</span>
+<div class='muted'>Clean section-owned photographic material for 04-results-guidance, with all website text and controls kept live</div>
+<div class='muted'>Rebuild the ledger with semantic lists and CSS grid rows, thin navy and gold rules, warm paper surfaces, and responsive single-column ordering; keep every label live.</div>
+<div class='muted'>presentation: {&quot;alpha_required&quot;: false, &quot;crop_contract&quot;: &quot;Preserve all three organic watercolor ledger strips and the thin gold route gesture.&quot;, &quot;edge_treatment&quot;: {&quot;protected_crisp_regions&quot;: [&quot;focal photographic subject&quot;], &quot;style&quot;: &quot;crisp editorial crop with no synthetic fade or halo&quot;, &quot;zones&quot;: [&quot;outer crop boundary&quot;]}, &quot;intended_background&quot;: &quot;#FFFFFF&quot;, &quot;minimum_visible_fraction&quot;: &quot;All three strips remain visible at desktop; at least two may remain on mobile.&quot;, &quot;mode&quot;: &quot;framed-panel&quot;}</div>
+<div class='pair'>
+<figure><a href='crops/04-results-guidance-context.png'><img src='crops/04-results-guidance-r2-ref.png' alt=''></a><figcaption>design reference — 04-results-guidance (click for full frame)</figcaption></figure>
+<figure><div class='asset-preview'><img src='../images/design/media/results-watercolor-ledgers.jpg' alt=''></div><figcaption>shipped asset on transparency checkerboard — <a href='https://github.com/Landing-Pages-Websites/elite-physicians-wealth-planning/blob/main/public/images/design/media/results-watercolor-ledgers.jpg'><code>media/results-watercolor-ledgers.jpg</code></a> (replace in git)</figcaption></figure>
+<figure><div class='intended-preview' style='background:#FFFFFF'><img src='../images/design/media/results-watercolor-ledgers.jpg' alt=''></div><figcaption>asset on intended background — #FFFFFF</figcaption></figure>
+</div></div>
+<div class='card' id='04-results-guidance-r3'>
+<b>04-results-guidance-r3</b><span class='chip code'>code</span>
+<div class='muted'>ledger region 3 from the approved 04-results-guidance frame</div>
+<div class='muted'>Rebuild the ledger with semantic lists and CSS grid rows, thin navy and gold rules, warm paper surfaces, and responsive single-column ordering; keep every label live.</div>
+<div class='pair'>
+<figure><a href='crops/04-results-guidance-context.png'><img src='crops/04-results-guidance-r3-ref.png' alt=''></a><figcaption>design reference — 04-results-guidance (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Rebuild the ledger with semantic lists and CSS grid rows, thin navy and gold rules, warm paper surfaces, and responsive single-column ordering; keep every label live.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='04-results-guidance-r4'>
+<b>04-results-guidance-r4</b><span class='chip code'>code</span>
+<div class='muted'>ledger region 4 from the approved 04-results-guidance frame</div>
+<div class='muted'>Rebuild the ledger with semantic lists and CSS grid rows, thin navy and gold rules, warm paper surfaces, and responsive single-column ordering; keep every label live.</div>
+<div class='pair'>
+<figure><a href='crops/04-results-guidance-context.png'><img src='crops/04-results-guidance-r4-ref.png' alt=''></a><figcaption>design reference — 04-results-guidance (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Rebuild the ledger with semantic lists and CSS grid rows, thin navy and gold rules, warm paper surfaces, and responsive single-column ordering; keep every label live.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='05-privacy-boundary-r1'>
+<b>05-privacy-boundary-r1</b><span class='chip code'>code</span>
+<div class='muted'>strip region 1 from the approved 05-privacy-boundary frame</div>
+<div class='muted'>Use a restrained semantic content band with live typography, thin gold rules, and simple inline SVG icons; preserve generous horizontal quiet space and stack cleanly on mobile.</div>
+<div class='pair'>
+<figure><a href='crops/05-privacy-boundary-context.png'><img src='crops/05-privacy-boundary-r1-ref.png' alt=''></a><figcaption>design reference — 05-privacy-boundary (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Use a restrained semantic content band with live typography, thin gold rules, and simple inline SVG icons; preserve generous horizontal quiet space and stack cleanly on mobile.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='05-privacy-boundary-r2'>
+<b>05-privacy-boundary-r2</b><span class='chip code'>code</span>
+<div class='muted'>strip region 2 from the approved 05-privacy-boundary frame</div>
+<div class='muted'>Use a restrained semantic content band with live typography, thin gold rules, and simple inline SVG icons; preserve generous horizontal quiet space and stack cleanly on mobile.</div>
+<div class='pair'>
+<figure><a href='crops/05-privacy-boundary-context.png'><img src='crops/05-privacy-boundary-r2-ref.png' alt=''></a><figcaption>design reference — 05-privacy-boundary (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Use a restrained semantic content band with live typography, thin gold rules, and simple inline SVG icons; preserve generous horizontal quiet space and stack cleanly on mobile.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='05-privacy-boundary-r3'>
+<b>05-privacy-boundary-r3</b><span class='chip code'>code</span>
+<div class='muted'>strip region 3 from the approved 05-privacy-boundary frame</div>
+<div class='muted'>Use a restrained semantic content band with live typography, thin gold rules, and simple inline SVG icons; preserve generous horizontal quiet space and stack cleanly on mobile.</div>
+<div class='pair'>
+<figure><a href='crops/05-privacy-boundary-context.png'><img src='crops/05-privacy-boundary-r3-ref.png' alt=''></a><figcaption>design reference — 05-privacy-boundary (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Use a restrained semantic content band with live typography, thin gold rules, and simple inline SVG icons; preserve generous horizontal quiet space and stack cleanly on mobile.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='05-privacy-boundary-r4'>
+<b>05-privacy-boundary-r4</b><span class='chip code'>code</span>
+<div class='muted'>strip region 4 from the approved 05-privacy-boundary frame</div>
+<div class='muted'>Use a restrained semantic content band with live typography, thin gold rules, and simple inline SVG icons; preserve generous horizontal quiet space and stack cleanly on mobile.</div>
+<div class='pair'>
+<figure><a href='crops/05-privacy-boundary-context.png'><img src='crops/05-privacy-boundary-r4-ref.png' alt=''></a><figcaption>design reference — 05-privacy-boundary (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Use a restrained semantic content band with live typography, thin gold rules, and simple inline SVG icons; preserve generous horizontal quiet space and stack cleanly on mobile.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='06-next-step-r1'>
+<b>06-next-step-r1</b><span class='chip extract'>extract</span>
+<div class='muted'>Clean section-owned photographic material for 06-next-step, with all website text and controls kept live</div>
+<div class='muted'>Use live heading, body, and links on a CSS field with thin gold connector geometry; position the contracted photo as a supporting edge rail rather than a section bitmap.</div>
+<div class='muted'>presentation: {&quot;alpha_required&quot;: false, &quot;crop_contract&quot;: &quot;Preserve desk, stethoscope, folio, books, and chair as the right media field; exclude CTA state labels and website copy.&quot;, &quot;edge_treatment&quot;: {&quot;protected_crisp_regions&quot;: [&quot;focal photographic subject&quot;], &quot;style&quot;: &quot;crisp editorial crop with no synthetic fade or halo&quot;, &quot;zones&quot;: [&quot;outer crop boundary&quot;]}, &quot;intended_background&quot;: &quot;#0B1F3A&quot;, &quot;minimum_visible_fraction&quot;: &quot;Desk still life and chair remain visible together.&quot;, &quot;mode&quot;: &quot;framed-panel&quot;}</div>
+<div class='pair'>
+<figure><a href='crops/06-next-step-context.png'><img src='crops/06-next-step-r1-ref.png' alt=''></a><figcaption>design reference — 06-next-step (click for full frame)</figcaption></figure>
+<figure><div class='asset-preview'><img src='../images/design/media/checkup-next-step-office-right.jpg' alt=''></div><figcaption>shipped asset on transparency checkerboard — <a href='https://github.com/Landing-Pages-Websites/elite-physicians-wealth-planning/blob/main/public/images/design/media/checkup-next-step-office-right.jpg'><code>media/checkup-next-step-office-right.jpg</code></a> (replace in git)</figcaption></figure>
+<figure><div class='intended-preview' style='background:#0B1F3A'><img src='../images/design/media/checkup-next-step-office-right.jpg' alt=''></div><figcaption>asset on intended background — #0B1F3A</figcaption></figure>
+</div></div>
+<div class='card' id='06-next-step-r2'>
+<b>06-next-step-r2</b><span class='chip code'>code</span>
+<div class='muted'>cta region 2 from the approved 06-next-step frame</div>
+<div class='muted'>Use live heading, body, and links on a CSS field with thin gold connector geometry; position the contracted photo as a supporting edge rail rather than a section bitmap.</div>
+<div class='pair'>
+<figure><a href='crops/06-next-step-context.png'><img src='crops/06-next-step-r2-ref.png' alt=''></a><figcaption>design reference — 06-next-step (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Use live heading, body, and links on a CSS field with thin gold connector geometry; position the contracted photo as a supporting edge rail rather than a section bitmap.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='06-next-step-r3'>
+<b>06-next-step-r3</b><span class='chip code'>code</span>
+<div class='muted'>cta region 3 from the approved 06-next-step frame</div>
+<div class='muted'>Use live heading, body, and links on a CSS field with thin gold connector geometry; position the contracted photo as a supporting edge rail rather than a section bitmap.</div>
+<div class='pair'>
+<figure><a href='crops/06-next-step-context.png'><img src='crops/06-next-step-r3-ref.png' alt=''></a><figcaption>design reference — 06-next-step (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Use live heading, body, and links on a CSS field with thin gold connector geometry; position the contracted photo as a supporting edge rail rather than a section bitmap.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='06-next-step-r4'>
+<b>06-next-step-r4</b><span class='chip code'>code</span>
+<div class='muted'>cta region 4 from the approved 06-next-step frame</div>
+<div class='muted'>Use live heading, body, and links on a CSS field with thin gold connector geometry; position the contracted photo as a supporting edge rail rather than a section bitmap.</div>
+<div class='pair'>
+<figure><a href='crops/06-next-step-context.png'><img src='crops/06-next-step-r4-ref.png' alt=''></a><figcaption>design reference — 06-next-step (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Use live heading, body, and links on a CSS field with thin gold connector geometry; position the contracted photo as a supporting edge rail rather than a section bitmap.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='06-next-step-r5'>
+<b>06-next-step-r5</b><span class='chip code'>code</span>
+<div class='muted'>cta region 5 from the approved 06-next-step frame</div>
+<div class='muted'>Use live heading, body, and links on a CSS field with thin gold connector geometry; position the contracted photo as a supporting edge rail rather than a section bitmap.</div>
+<div class='pair'>
+<figure><a href='crops/06-next-step-context.png'><img src='crops/06-next-step-r5-ref.png' alt=''></a><figcaption>design reference — 06-next-step (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Use live heading, body, and links on a CSS field with thin gold connector geometry; position the contracted photo as a supporting edge rail rather than a section bitmap.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='06-next-step-r6'>
+<b>06-next-step-r6</b><span class='chip code'>code</span>
+<div class='muted'>cta region 6 from the approved 06-next-step frame</div>
+<div class='muted'>Use live heading, body, and links on a CSS field with thin gold connector geometry; position the contracted photo as a supporting edge rail rather than a section bitmap.</div>
+<div class='pair'>
+<figure><a href='crops/06-next-step-context.png'><img src='crops/06-next-step-r6-ref.png' alt=''></a><figcaption>design reference — 06-next-step (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Use live heading, body, and links on a CSS field with thin gold connector geometry; position the contracted photo as a supporting edge rail rather than a section bitmap.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='06-next-step-r7'>
+<b>06-next-step-r7</b><span class='chip code'>code</span>
+<div class='muted'>cta region 7 from the approved 06-next-step frame</div>
+<div class='muted'>Use live heading, body, and links on a CSS field with thin gold connector geometry; position the contracted photo as a supporting edge rail rather than a section bitmap.</div>
+<div class='pair'>
+<figure><a href='crops/06-next-step-context.png'><img src='crops/06-next-step-r7-ref.png' alt=''></a><figcaption>design reference — 06-next-step (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Use live heading, body, and links on a CSS field with thin gold connector geometry; position the contracted photo as a supporting edge rail rather than a section bitmap.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='06-next-step-r8'>
+<b>06-next-step-r8</b><span class='chip code'>code</span>
+<div class='muted'>cta region 8 from the approved 06-next-step frame</div>
+<div class='muted'>Use live heading, body, and links on a CSS field with thin gold connector geometry; position the contracted photo as a supporting edge rail rather than a section bitmap.</div>
+<div class='pair'>
+<figure><a href='crops/06-next-step-context.png'><img src='crops/06-next-step-r8-ref.png' alt=''></a><figcaption>design reference — 06-next-step (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Use live heading, body, and links on a CSS field with thin gold connector geometry; position the contracted photo as a supporting edge rail rather than a section bitmap.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='06-next-step-r9'>
+<b>06-next-step-r9</b><span class='chip code'>code</span>
+<div class='muted'>cta region 9 from the approved 06-next-step frame</div>
+<div class='muted'>Use live heading, body, and links on a CSS field with thin gold connector geometry; position the contracted photo as a supporting edge rail rather than a section bitmap.</div>
+<div class='pair'>
+<figure><a href='crops/06-next-step-context.png'><img src='crops/06-next-step-r9-ref.png' alt=''></a><figcaption>design reference — 06-next-step (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Use live heading, body, and links on a CSS field with thin gold connector geometry; position the contracted photo as a supporting edge rail rather than a section bitmap.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='06-next-step-r10'>
+<b>06-next-step-r10</b><span class='chip code'>code</span>
+<div class='muted'>cta region 10 from the approved 06-next-step frame</div>
+<div class='muted'>Use live heading, body, and links on a CSS field with thin gold connector geometry; position the contracted photo as a supporting edge rail rather than a section bitmap.</div>
+<div class='pair'>
+<figure><a href='crops/06-next-step-context.png'><img src='crops/06-next-step-r10-ref.png' alt=''></a><figcaption>design reference — 06-next-step (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Use live heading, body, and links on a CSS field with thin gold connector geometry; position the contracted photo as a supporting edge rail rather than a section bitmap.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='06-next-step-r11'>
+<b>06-next-step-r11</b><span class='chip code'>code</span>
+<div class='muted'>cta region 11 from the approved 06-next-step frame</div>
+<div class='muted'>Use live heading, body, and links on a CSS field with thin gold connector geometry; position the contracted photo as a supporting edge rail rather than a section bitmap.</div>
+<div class='pair'>
+<figure><a href='crops/06-next-step-context.png'><img src='crops/06-next-step-r11-ref.png' alt=''></a><figcaption>design reference — 06-next-step (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Use live heading, body, and links on a CSS field with thin gold connector geometry; position the contracted photo as a supporting edge rail rather than a section bitmap.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<details><summary>NOTES.md — CSS/SVG techniques the build uses instead of images</summary><pre># checkup decomposition notes
+
+## Page content gate
+
+Keep the tool educational, avoid sensitive-record collection, and do not imply individualized advice, automated results, or operational workflow beyond the approved copy.
+
+All typography uses Cormorant Garamond for display roles and Inter for body/UI roles. Use approved navy, gold, mist, ivory, white, and charcoal tokens. Website text, form controls, diagrams, connectors, rules, paper fields, and geometric icons stay live HTML/CSS/SVG. Extracted files are clean section-owned media crops only; no full section is baked and no pixels are invented.
+
+## 01-checkup-hero — Tier 2
+
+Use semantic live headings and body copy over a CSS navy field, with the contracted photo in a responsive media slot, a thin gold SVG route, and an accessible CTA.
+
+Raster roles: 1 contracted region(s). Intrinsic media geometry must not control section height. Keep the tool educational, avoid sensitive-record collection, and do not imply individualized advice, automated results, or operational workflow beyond the approved copy.
+
+## 02-seven-area-map — Tier 3
+
+Build the responsive diagram with semantic labels, CSS circles and panels, and an inline SVG coordination path; place only contracted photographs inside media masks.
+
+Raster roles: 0 contracted region(s). Intrinsic media geometry must not control section height. Keep the tool educational, avoid sensitive-record collection, and do not imply individualized advice, automated results, or operational workflow beyond the approved copy.
+
+## 03-interactive-review — Tier 2
+
+Build the complete form as semantic labels, inputs, fieldsets, helper text, and disabled held-state controls; use CSS grid, one-pixel navy rules, and tokenized focus styling.
+
+Raster roles: 1 contracted region(s). Intrinsic media geometry must not control section height. Keep the tool educational, avoid sensitive-record collection, and do not imply individualized advice, automated results, or operational workflow beyond the approved copy.
+
+## 04-results-guidance — Tier 2
+
+Rebuild the ledger with semantic lists and CSS grid rows, thin navy and gold rules, warm paper surfaces, and responsive single-column ordering; keep every label live.
+
+Raster roles: 1 contracted region(s). Intrinsic media geometry must not control section height. Keep the tool educational, avoid sensitive-record collection, and do not imply individualized advice, automated results, or operational workflow beyond the approved copy.
+
+## 05-privacy-boundary — Tier 3
+
+Use a restrained semantic content band with live typography, thin gold rules, and simple inline SVG icons; preserve generous horizontal quiet space and stack cleanly on mobile.
+
+Raster roles: 0 contracted region(s). Intrinsic media geometry must not control section height. Keep the tool educational, avoid sensitive-record collection, and do not imply individualized advice, automated results, or operational workflow beyond the approved copy.
+
+## 06-next-step — Tier 2
+
+Use live heading, body, and links on a CSS field with thin gold connector geometry; position the contracted photo as a supporting edge rail rather than a section bitmap.
+
+Raster roles: 1 contracted region(s). Intrinsic media geometry must not control section height. Keep the tool educational, avoid sensitive-record collection, and do not imply individualized advice, automated results, or operational workflow beyond the approved copy.
+</pre></details>

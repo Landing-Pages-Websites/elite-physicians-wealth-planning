@@ -1,0 +1,202 @@
+{
+  "version": 1,
+  "slug": "insights--cash-balance-defined-benefit-decision-guide",
+  "route": "/insights/cash-balance-defined-benefit-decision-guide",
+  "sections": [
+    {
+      "frame": "01-editorial-state-hero",
+      "implementation_kind": "shared-designed",
+      "implementation_owner": "src/components/pages/insights-article/editorial-state-hero.tsx",
+      "shared_basis": "All twelve insights article manifests in revision-2026-09-15-image-first share the editorial-content-gate archetype and the identical five-frame grammar (01-editorial-state-hero, 02-verified-teaser, 03-manuscript-gate, 04-source-and-review-gate, 05-related-reading); the approved insights-article family component src/components/pages/insights-article/editorial-state-hero.tsx renders this frame with the per-article content module src/components/pages/insights-article/content/cash-balance-defined-benefit-decision-guide.ts.",
+      "content_source": "section_manifest.json#01-editorial-state-hero",
+      "asset_roles": [
+        "editorial article photograph for Practice Owner Strategy: How advanced qualified plans fit into a practice owner's larger picture."
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "Approved manifest fields (eyebrow, headline, body, visibility_note) render as live HTML text, led by \"Cash Balance and Defined Benefit Plans: A Decision Guide for Medical Practice Owners\"."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "Dedicated asset renders the declared subject \"editorial article photograph for Practice Owner Strategy: How advanced qualified plans fit into a practice owner's larger picture.\" with the approved \"cinematic crop with no people or generic charts\" crop and treatment."
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "Frame composition preserved: Navy image-first masthead: Practice Owner Strategy eyebrow, H1, teaser body left; navy-journal desk scene right blended by the family veils; the manifest visibility note renders as the shared customer-facing held line…."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved navy/gold/ivory language retained on the #0B1F3A band per the manifest edge contract; Cormorant Garamond display over Inter body."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "390x844 recomposition per manifest: Preserve the headline and primary action before the image; use a 4:5 or 3:2 crop centered on the declared subject/focal point, never a blurred filler panel; stack overlays into live blocks, keep at least 70% of the…"
+        }
+      },
+      "ref": "design_refs/revision-2026-09-15-image-first/pages/insights--cash-balance-defined-benefit-decision-guide/refs/01-editorial-state-hero.png",
+      "owners": [
+        "src/app/(site)/insights/cash-balance-defined-benefit-decision-guide/page.tsx",
+        "src/components/pages/insights-article/editorial-state-hero.tsx",
+        "src/components/pages/insights-article/content/cash-balance-defined-benefit-decision-guide.ts"
+      ],
+      "notes": "Navy image-first masthead: Practice Owner Strategy eyebrow, H1, teaser body left; navy-journal desk scene right blended by the family veils; the manifest visibility note renders as the shared customer-facing held line; no author, date, or reviewer; 'All insights' links to /insights."
+    },
+    {
+      "frame": "02-verified-teaser",
+      "implementation_kind": "shared-designed",
+      "implementation_owner": "src/components/pages/insights-article/verified-teaser.tsx",
+      "shared_basis": "All twelve insights article manifests in revision-2026-09-15-image-first share the editorial-content-gate archetype and the identical five-frame grammar (01-editorial-state-hero, 02-verified-teaser, 03-manuscript-gate, 04-source-and-review-gate, 05-related-reading); the approved insights-article family component src/components/pages/insights-article/verified-teaser.tsx renders this frame with the per-article content module src/components/pages/insights-article/content/cash-balance-defined-benefit-decision-guide.ts.",
+      "content_source": "section_manifest.json#02-verified-teaser",
+      "asset_roles": [
+        "quiet editorial abstract ledger"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "Approved manifest fields (headline, body, items) render as live HTML text, led by \"What is verified now.\"."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "PASS with documented deliberate adaptation preserving the approved semantic gate: the ref's right-edge collage pairs the tabbed paper stack with a navy notebook-cover accent; the family grammar carries a single teaser frame, so only the primary paper-stack ledger is placed (bottom-left baked gold fragment cropped by the cbdb-teaser recipe) and 02-verified-teaser-notebook-cover.png is unplaced"
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "Frame composition preserved: Ivory ledger: verified headline/body left with ringed-check rows, tall tabbed paper-stack crop on the right per the ref; only the truthful teaser items are rendered."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved navy/gold/ivory language retained on the #F6F2E8 band per the manifest edge contract; Cormorant Garamond display over Inter body."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "390x844 recomposition per manifest: Stack the primary content group in narrative order while preserving asymmetric emphasis through offset margins and varied spacing; crop imagery around its declared focal point, keep all live text and links, and simplify…"
+        }
+      },
+      "ref": "design_refs/revision-2026-09-15-image-first/pages/insights--cash-balance-defined-benefit-decision-guide/refs/02-verified-teaser.png",
+      "owners": [
+        "src/components/pages/insights-article/verified-teaser.tsx",
+        "src/components/pages/insights-article/content/cash-balance-defined-benefit-decision-guide.ts",
+        "src/components/pages/insights-article/content/cash-balance-defined-benefit-decision-guide.css"
+      ],
+      "notes": "Ivory ledger: verified headline/body left with ringed-check rows, tall tabbed paper-stack crop on the right per the ref; only the truthful teaser items are rendered."
+    },
+    {
+      "frame": "03-manuscript-gate",
+      "implementation_kind": "shared-designed",
+      "implementation_owner": "src/components/pages/insights-article/manuscript-gate.tsx",
+      "shared_basis": "All twelve insights article manifests in revision-2026-09-15-image-first share the editorial-content-gate archetype and the identical five-frame grammar (01-editorial-state-hero, 02-verified-teaser, 03-manuscript-gate, 04-source-and-review-gate, 05-related-reading); the approved insights-article family component src/components/pages/insights-article/manuscript-gate.tsx renders this frame with the per-article content module src/components/pages/insights-article/content/cash-balance-defined-benefit-decision-guide.ts.",
+      "content_source": "section_manifest.json#03-manuscript-gate",
+      "asset_roles": [
+        "editorial desk with sealed manuscript sleeve and source tabs"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "Approved manifest fields (headline, items) render as live HTML text, led by \"Required before this article can go live.\"."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "Dedicated asset renders the declared subject \"editorial desk with sealed manuscript sleeve and source tabs\" with the approved \"white field, document sleeve, no readable fake article text\" crop and treatment."
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "Frame composition preserved: White gate spread: 'Required before this article can go live.' with the four requirements on the gold spine at left, envelope-and-clipboard folio still life right (cbdb-gate recipe crops the baked gold outline entering…."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved navy/gold/ivory language retained on the #FFFFFF band per the manifest edge contract; Cormorant Garamond display over Inter body."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "390x844 recomposition per manifest: Stack the primary content group in narrative order while preserving asymmetric emphasis through offset margins and varied spacing; crop imagery around its declared focal point, keep all live text and links, and simplify…"
+        }
+      },
+      "ref": "design_refs/revision-2026-09-15-image-first/pages/insights--cash-balance-defined-benefit-decision-guide/refs/03-manuscript-gate.png",
+      "owners": [
+        "src/components/pages/insights-article/manuscript-gate.tsx",
+        "src/components/pages/insights-article/content/cash-balance-defined-benefit-decision-guide.ts",
+        "src/components/pages/insights-article/content/cash-balance-defined-benefit-decision-guide.css"
+      ],
+      "notes": "White gate spread: 'Required before this article can go live.' with the four requirements on the gold spine at left, envelope-and-clipboard folio still life right (cbdb-gate recipe crops the baked gold outline entering bottom-left)."
+    },
+    {
+      "frame": "04-source-and-review-gate",
+      "implementation_kind": "shared-designed",
+      "implementation_owner": "src/components/pages/insights-article/source-and-review-gate.tsx",
+      "shared_basis": "All twelve insights article manifests in revision-2026-09-15-image-first share the editorial-content-gate archetype and the identical five-frame grammar (01-editorial-state-hero, 02-verified-teaser, 03-manuscript-gate, 04-source-and-review-gate, 05-related-reading); the approved insights-article family component src/components/pages/insights-article/source-and-review-gate.tsx renders this frame with the per-article content module src/components/pages/insights-article/content/cash-balance-defined-benefit-decision-guide.ts.",
+      "content_source": "section_manifest.json#04-source-and-review-gate",
+      "asset_roles": [
+        "code-only live semantic content"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "Approved manifest fields (headline, items) render as live HTML text, led by \"Source and review requirements.\"."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "PASS with documented deliberate adaptation preserving the approved semantic gate: the extraction carries a photographed file tab printed with internal production wording and a baked annotation card along its bottom; the cbdb-review recipe crops both out deterministically, keeping less of the source photograph than the manifest's minimum-visible fraction (notebook + white-coat field only)"
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "Frame composition preserved: Mist strip: three rule-separated live requirement panels with family icons, documentary crop on the right edge; no internal review vocabulary reaches the page."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved navy/gold/ivory language retained on the #DCE8F2 band per the manifest edge contract; Cormorant Garamond display over Inter body."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "390x844 recomposition per manifest: Stack the primary content group in narrative order while preserving asymmetric emphasis through offset margins and varied spacing; crop imagery around its declared focal point, keep all live text and links, and simplify…"
+        }
+      },
+      "ref": "design_refs/revision-2026-09-15-image-first/pages/insights--cash-balance-defined-benefit-decision-guide/refs/04-source-and-review-gate.png",
+      "owners": [
+        "src/components/pages/insights-article/source-and-review-gate.tsx",
+        "src/components/pages/insights-article/content/cash-balance-defined-benefit-decision-guide.ts",
+        "src/components/pages/insights-article/content/cash-balance-defined-benefit-decision-guide.css"
+      ],
+      "notes": "Mist strip: three rule-separated live requirement panels with family icons, documentary crop on the right edge; no internal review vocabulary reaches the page."
+    },
+    {
+      "frame": "05-related-reading",
+      "implementation_kind": "shared-designed",
+      "implementation_owner": "src/components/pages/insights-article/related-reading.tsx",
+      "shared_basis": "All twelve insights article manifests in revision-2026-09-15-image-first share the editorial-content-gate archetype and the identical five-frame grammar (01-editorial-state-hero, 02-verified-teaser, 03-manuscript-gate, 04-source-and-review-gate, 05-related-reading); the approved insights-article family component src/components/pages/insights-article/related-reading.tsx renders this frame with the per-article content module src/components/pages/insights-article/content/cash-balance-defined-benefit-decision-guide.ts.",
+      "content_source": "section_manifest.json#05-related-reading",
+      "asset_roles": [
+        "related-reading ledger for Practice Owner Strategy"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "Approved manifest fields (headline, body, links) render as live HTML text, led by \"Related planning paths for this topic.\"."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "Dedicated asset renders the declared subject \"related-reading ledger for Practice Owner Strategy\" with the approved \"ivory/white editorial index with small topic crop\" crop and treatment."
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "PASS with documented deliberate adaptation preserving the approved semantic gate: the ref bleeds the navy folder from the left edge with the link ledger right; the family grammar fixes related-reading copy left and media right, so the section is mirrored relative to the ref"
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved navy/gold/ivory language retained on the #F6F2E8 band per the manifest edge contract; Cormorant Garamond display over Inter body."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "390x844 recomposition per manifest: Stack the primary content group in narrative order while preserving asymmetric emphasis through offset margins and varied spacing; crop imagery around its declared focal point, keep all live text and links, and simplify…"
+        }
+      },
+      "ref": "design_refs/revision-2026-09-15-image-first/pages/insights--cash-balance-defined-benefit-decision-guide/refs/05-related-reading.png",
+      "owners": [
+        "src/components/pages/insights-article/related-reading.tsx",
+        "src/components/pages/insights-article/content/cash-balance-defined-benefit-decision-guide.ts",
+        "src/components/pages/insights-article/content/cash-balance-defined-benefit-decision-guide.css"
+      ],
+      "notes": "Ivory close: /practice-owner-planning, /retirement-planning-for-physicians, /insights as live route links on the gold ledger, shared held note, boundary line, and the page-local gold line ending on a node."
+    }
+  ]
+}

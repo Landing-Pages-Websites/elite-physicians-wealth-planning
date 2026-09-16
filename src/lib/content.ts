@@ -14,44 +14,16 @@ export const BRAND = {
 } as const;
 
 /**
- * Homepage-only stage: interior pages do not exist yet, so CTAs point at
- * the currently available experiences on the live site, and the guide is
- * requested by email because the final guide file is not yet supplied.
- *
- * Domain note (intentional split, do not "fix"): the LIVE site today is
- * elitephysicianwealthplanning.com (singular), which these stage links
- * target; the intended LAUNCH domain used for metadata/sitemap is
- * elitephysicianswealthplanning.com (plural) per the manifest hard rules.
+ * Internal destinations for the approved homepage CTAs. Every target is a
+ * built route on this site; the guide CTA lands on the gated guide page,
+ * which owns the truthful availability state.
  */
 export const LINKS = {
-  schedule: "https://elitephysicianwealthplanning.com/schedule",
-  process: "https://elitephysicianwealthplanning.com/our-process",
-  planningPath: "https://elitephysicianwealthplanning.com/",
-  meetMichael: "https://elitephysicianwealthplanning.com/",
-  guideRequest:
-    "mailto:info@fiscalvisionfinancial.com?subject=Physician%20Tax%20%26%20Retirement%20Planning%20Guide%20request",
-
-  /**
-   * On-site destinations, used by every in-content CTA.
-   *
-   * The five links above point at the LEGACY SINGULAR domain, which the
-   * manifest marks reference-only and which sitemap.ts refuses to emit. Every
-   * in-content CTA therefore used to send the visitor off the site, past the
-   * strategy-call form, onto the old build. These anchors keep them here.
-   *
-   * They are stand-ins for the paths section_manifest functional_elements
-   * actually contracts — /our-process, /who-we-serve, /meet-michael-epps, and
-   * the Google Calendar scheduling experience. Swap each one to its contracted
-   * route as that page ships; the scheduling link needs the client's Calendar
-   * embed first (build/CLIENT-GAPS.md 1.3).
-   */
-  scheduleOnsite: "/#form",
-  processOnsite: "/#blueprint-rounds",
-  /** Frame annotation: what the primary action does. Rendered in the OUTCOME
-      chip the approved frame draws under the strategy-call card. */
-  scheduleOutcome: "Navigate to the Google Calendar scheduling experience.",
-  planningPathOnsite: "/#white-coat-paths",
-  meetMichaelOnsite: "/#accountable-planner",
+  scheduleOnsite: "/schedule",
+  processOnsite: "/our-process",
+  planningPathOnsite: "/who-we-serve",
+  meetMichaelOnsite: "/meet-michael-epps",
+  guideRequest: "/physician-tax-retirement-guide",
 } as const;
 
 /** One phone href for the whole site. Strips every non-digit, so it survives
@@ -235,8 +207,6 @@ export const NEXT_DECISION = {
     summary:
       "A lower-commitment way to start organizing the questions that connect tax and retirement planning.",
     cta: "Request the guide",
-    availability:
-      "CUSTOMER INPUT REQUIRED: the final guide file and approved delivery workflow must be supplied before delivery is represented as available.",
     requestNote:
       "Requests are answered personally by email once the approved guide is available — no instant download.",
   },

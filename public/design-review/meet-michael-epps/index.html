@@ -1,0 +1,507 @@
+<!doctype html><meta charset='utf-8'>
+<title>Elite Physicians — meet-michael-epps</title><style>
+body{margin:0;padding:24px;background:#111;color:#eee;
+     font:14px/1.5 -apple-system,'Segoe UI',sans-serif}
+a{color:#8bd} .muted{color:#999} h1{font-size:20px}
+.proto{background:#1b1b1b;border:1px solid #333;border-radius:8px;
+       padding:12px 16px;max-width:900px;margin-bottom:24px}
+.proto code{background:#000;padding:1px 5px;border-radius:4px}
+.card{background:#1b1b1b;border:1px solid #333;border-radius:8px;
+      padding:16px;margin-bottom:20px;max-width:1200px}
+.card.missing{border-color:#a33}
+.pair{display:flex;gap:16px;flex-wrap:wrap}
+.pair figure{margin:0;flex:1;min-width:280px}
+.pair img{max-width:100%;border:1px solid #444}
+.asset-preview{display:grid;place-items:center;min-height:180px;
+  background-color:#fff;background-image:linear-gradient(45deg,#ddd 25%,transparent 25%),
+  linear-gradient(-45deg,#ddd 25%,transparent 25%),linear-gradient(45deg,transparent 75%,#ddd 75%),
+  linear-gradient(-45deg,transparent 75%,#ddd 75%);background-size:24px 24px;
+  background-position:0 0,0 12px,12px -12px,-12px 0}
+.asset-preview img,.intended-preview img{display:block;max-height:520px}
+.intended-preview{display:grid;place-items:center;min-height:180px;border:1px solid #444}
+figcaption{font-size:12px;color:#999;margin-top:4px}
+.chip{display:inline-block;font-size:11px;padding:2px 8px;border-radius:10px;
+      background:#333;margin-left:8px;text-transform:uppercase}
+.chip.extract{background:#264} .chip.inpaint{background:#452}
+.chip.code{background:#345}
+.chip.plate{background:#246} .chip.generated{background:#525}
+.chip.unmapped{background:#630} .chip.client-copy{background:#444}
+.chip.composite{background:#536}
+</style>
+<h1>Elite Physicians — meet-michael-epps</h1>
+<p class='muted'>44 CODE regions and 8 raster assets to review: 8 extract, 0 inpaint.</p>
+<div class='proto'><b>How to review:</b> judge every planned treatment against its design reference on the left. For CODE cards, verify the build note can preserve the region's silhouette, materiality, and compositing—not merely approximate its geometry. To swap a raster, replace the file directly in git — same path, push to main. Replaced files are authoritative — the pipeline never overwrites them. This page updates on every push. Complete the review subtask to approve; the build does not start until then.</div>
+<div class='card' id='01-portrait-dossier-r1'>
+<b>01-portrait-dossier-r1</b><span class='chip extract'>extract</span>
+<div class='muted'>authoritative supplied portrait of Michael A. Epps</div>
+<div class='muted'>Use the exact supplied Michael A. Epps portrait without generation, inpainting, retouching, extension, or likeness alteration.</div>
+<div class='muted'>presentation: {&quot;alpha_required&quot;: false, &quot;crop_contract&quot;: &quot;Michael Epps face, shoulders, folded arms, and suit remain fully visible; no likeness crop or alteration.&quot;, &quot;intended_background&quot;: &quot;#F8F4EB&quot;, &quot;minimum_visible_fraction&quot;: &quot;Michael Epps face, shoulders, folded arms, and suit remain fully visible; no likeness crop or alteration.&quot;, &quot;mode&quot;: &quot;framed-panel&quot;}</div>
+<div class='pair'>
+<figure><a href='crops/01-portrait-dossier-context.png'><img src='crops/01-portrait-dossier-r1-ref.png' alt=''></a><figcaption>design reference — 01-portrait-dossier (click for full frame)</figcaption></figure>
+<figure><div class='asset-preview'><img src='../images/design/elements/michael-epps-approved.png' alt=''></div><figcaption>shipped asset on transparency checkerboard — <code>elements/michael-epps-approved.png</code> (replace in git)</figcaption></figure>
+<figure><div class='intended-preview' style='background:#F8F4EB'><img src='../images/design/elements/michael-epps-approved.png' alt=''></div><figcaption>asset on intended background — #F8F4EB</figcaption></figure>
+</div></div>
+<div class='card' id='01-portrait-dossier-r1-asset-2'>
+<b>01-portrait-dossier-r1-asset-2</b><span class='chip extract'>extract</span>
+<div class='muted'>dark office desk with pen cup and navy notebook</div>
+<div class='muted'>Extract the clean approved-frame crop; preserve dark office desk with pen cup and navy notebook material texture, natural lighting, and photographic depth.</div>
+<div class='muted'>presentation: {&quot;alpha_required&quot;: false, &quot;crop_contract&quot;: &quot;Pen cup, navy notebook, and desktop remain visible; &gt;=65% of detail.&quot;, &quot;intended_background&quot;: &quot;#061A34&quot;, &quot;minimum_visible_fraction&quot;: &quot;Pen cup, navy notebook, and desktop remain visible; &gt;=65% of detail.&quot;, &quot;mode&quot;: &quot;framed-panel&quot;}</div>
+<div class='pair'>
+<figure><a href='crops/01-portrait-dossier-context.png'><img src='crops/01-portrait-dossier-r1-asset-2-ref.png' alt=''></a><figcaption>design reference — 01-portrait-dossier (click for full frame)</figcaption></figure>
+<figure><div class='asset-preview'><img src='../images/design/elements/portrait-office-detail.jpg' alt=''></div><figcaption>shipped asset on transparency checkerboard — <code>elements/portrait-office-detail.jpg</code> (replace in git)</figcaption></figure>
+<figure><div class='intended-preview' style='background:#061A34'><img src='../images/design/elements/portrait-office-detail.jpg' alt=''></div><figcaption>asset on intended background — #061A34</figcaption></figure>
+</div></div>
+<div class='card' id='01-portrait-dossier-r1-live-overlay'>
+<b>01-portrait-dossier-r1-live-overlay</b><span class='chip code'>code</span>
+<div class='muted'>Live website copy, controls, lines, and responsive section layout over or beside the photographic crop</div>
+<div class='muted'>Build with semantic HTML in a responsive CSS grid; use live typography, #061A34 navy, #C79A3B hairlines, accessible spacing, and inline SVG only for simple geometric accents.</div>
+<div class='pair'>
+<figure><a href='crops/01-portrait-dossier-context.png'><img src='crops/01-portrait-dossier-r1-live-overlay-ref.png' alt=''></a><figcaption>design reference — 01-portrait-dossier (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Build with semantic HTML in a responsive CSS grid; use live typography, #061A34 navy, #C79A3B hairlines, accessible spacing, and inline SVG only for simple geometric accents.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='01-portrait-dossier-r2'>
+<b>01-portrait-dossier-r2</b><span class='chip code'>code</span>
+<div class='muted'>Live typography, semantic content, and simple geometric section accents</div>
+<div class='muted'>Build with semantic HTML in a responsive CSS grid; use live typography, #061A34 navy, #C79A3B hairlines, accessible spacing, and inline SVG only for simple geometric accents.</div>
+<div class='pair'>
+<figure><a href='crops/01-portrait-dossier-context.png'><img src='crops/01-portrait-dossier-r2-ref.png' alt=''></a><figcaption>design reference — 01-portrait-dossier (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Build with semantic HTML in a responsive CSS grid; use live typography, #061A34 navy, #C79A3B hairlines, accessible spacing, and inline SVG only for simple geometric accents.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='02-planning-philosophy-r1'>
+<b>02-planning-philosophy-r1</b><span class='chip extract'>extract</span>
+<div class='muted'>open daily plan, brass pen, navy strategy ledger, and marble desk</div>
+<div class='muted'>Extract the clean approved-frame crop; preserve open daily plan, brass pen, navy strategy ledger, and marble desk material texture, natural lighting, and photographic depth.</div>
+<div class='muted'>presentation: {&quot;alpha_required&quot;: false, &quot;crop_contract&quot;: &quot;Open plan, pen, navy ledger, and marble surface remain visible; &gt;=75% of scene.&quot;, &quot;intended_background&quot;: &quot;#F8F4EB&quot;, &quot;minimum_visible_fraction&quot;: &quot;Open plan, pen, navy ledger, and marble surface remain visible; &gt;=75% of scene.&quot;, &quot;mode&quot;: &quot;framed-panel&quot;}</div>
+<div class='pair'>
+<figure><a href='crops/02-planning-philosophy-context.png'><img src='crops/02-planning-philosophy-r1-ref.png' alt=''></a><figcaption>design reference — 02-planning-philosophy (click for full frame)</figcaption></figure>
+<figure><div class='asset-preview'><img src='../images/design/elements/shared-strategy-desk.jpg' alt=''></div><figcaption>shipped asset on transparency checkerboard — <code>elements/shared-strategy-desk.jpg</code> (replace in git)</figcaption></figure>
+<figure><div class='intended-preview' style='background:#F8F4EB'><img src='../images/design/elements/shared-strategy-desk.jpg' alt=''></div><figcaption>asset on intended background — #F8F4EB</figcaption></figure>
+</div></div>
+<div class='card' id='02-planning-philosophy-r1-live-overlay'>
+<b>02-planning-philosophy-r1-live-overlay</b><span class='chip code'>code</span>
+<div class='muted'>Live website copy, controls, lines, and responsive section layout over or beside the photographic crop</div>
+<div class='muted'>Build with semantic HTML in a responsive CSS grid; use live typography, #061A34 navy, #C79A3B hairlines, accessible spacing, and inline SVG only for simple geometric accents.</div>
+<div class='pair'>
+<figure><a href='crops/02-planning-philosophy-context.png'><img src='crops/02-planning-philosophy-r1-live-overlay-ref.png' alt=''></a><figcaption>design reference — 02-planning-philosophy (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Build with semantic HTML in a responsive CSS grid; use live typography, #061A34 navy, #C79A3B hairlines, accessible spacing, and inline SVG only for simple geometric accents.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='02-planning-philosophy-r2'>
+<b>02-planning-philosophy-r2</b><span class='chip code'>code</span>
+<div class='muted'>Live typography, semantic content, and simple geometric section accents</div>
+<div class='muted'>Build with semantic HTML in a responsive CSS grid; use live typography, #061A34 navy, #C79A3B hairlines, accessible spacing, and inline SVG only for simple geometric accents.</div>
+<div class='pair'>
+<figure><a href='crops/02-planning-philosophy-context.png'><img src='crops/02-planning-philosophy-r2-ref.png' alt=''></a><figcaption>design reference — 02-planning-philosophy (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Build with semantic HTML in a responsive CSS grid; use live typography, #061A34 navy, #C79A3B hairlines, accessible spacing, and inline SVG only for simple geometric accents.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='02-planning-philosophy-r3'>
+<b>02-planning-philosophy-r3</b><span class='chip code'>code</span>
+<div class='muted'>Live typography, semantic content, and simple geometric section accents</div>
+<div class='muted'>Build with semantic HTML in a responsive CSS grid; use live typography, #061A34 navy, #C79A3B hairlines, accessible spacing, and inline SVG only for simple geometric accents.</div>
+<div class='pair'>
+<figure><a href='crops/02-planning-philosophy-context.png'><img src='crops/02-planning-philosophy-r3-ref.png' alt=''></a><figcaption>design reference — 02-planning-philosophy (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Build with semantic HTML in a responsive CSS grid; use live typography, #061A34 navy, #C79A3B hairlines, accessible spacing, and inline SVG only for simple geometric accents.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='02-planning-philosophy-r4'>
+<b>02-planning-philosophy-r4</b><span class='chip code'>code</span>
+<div class='muted'>Live typography, semantic content, and simple geometric section accents</div>
+<div class='muted'>Build with semantic HTML in a responsive CSS grid; use live typography, #061A34 navy, #C79A3B hairlines, accessible spacing, and inline SVG only for simple geometric accents.</div>
+<div class='pair'>
+<figure><a href='crops/02-planning-philosophy-context.png'><img src='crops/02-planning-philosophy-r4-ref.png' alt=''></a><figcaption>design reference — 02-planning-philosophy (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Build with semantic HTML in a responsive CSS grid; use live typography, #061A34 navy, #C79A3B hairlines, accessible spacing, and inline SVG only for simple geometric accents.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='02-planning-philosophy-r5'>
+<b>02-planning-philosophy-r5</b><span class='chip code'>code</span>
+<div class='muted'>Live typography, semantic content, and simple geometric section accents</div>
+<div class='muted'>Build with semantic HTML in a responsive CSS grid; use live typography, #061A34 navy, #C79A3B hairlines, accessible spacing, and inline SVG only for simple geometric accents.</div>
+<div class='pair'>
+<figure><a href='crops/02-planning-philosophy-context.png'><img src='crops/02-planning-philosophy-r5-ref.png' alt=''></a><figcaption>design reference — 02-planning-philosophy (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Build with semantic HTML in a responsive CSS grid; use live typography, #061A34 navy, #C79A3B hairlines, accessible spacing, and inline SVG only for simple geometric accents.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='02-planning-philosophy-r6'>
+<b>02-planning-philosophy-r6</b><span class='chip code'>code</span>
+<div class='muted'>Live typography, semantic content, and simple geometric section accents</div>
+<div class='muted'>Build with semantic HTML in a responsive CSS grid; use live typography, #061A34 navy, #C79A3B hairlines, accessible spacing, and inline SVG only for simple geometric accents.</div>
+<div class='pair'>
+<figure><a href='crops/02-planning-philosophy-context.png'><img src='crops/02-planning-philosophy-r6-ref.png' alt=''></a><figcaption>design reference — 02-planning-philosophy (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Build with semantic HTML in a responsive CSS grid; use live typography, #061A34 navy, #C79A3B hairlines, accessible spacing, and inline SVG only for simple geometric accents.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='02-planning-philosophy-r7'>
+<b>02-planning-philosophy-r7</b><span class='chip code'>code</span>
+<div class='muted'>Live typography, semantic content, and simple geometric section accents</div>
+<div class='muted'>Build with semantic HTML in a responsive CSS grid; use live typography, #061A34 navy, #C79A3B hairlines, accessible spacing, and inline SVG only for simple geometric accents.</div>
+<div class='pair'>
+<figure><a href='crops/02-planning-philosophy-context.png'><img src='crops/02-planning-philosophy-r7-ref.png' alt=''></a><figcaption>design reference — 02-planning-philosophy (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Build with semantic HTML in a responsive CSS grid; use live typography, #061A34 navy, #C79A3B hairlines, accessible spacing, and inline SVG only for simple geometric accents.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='03-verified-credentials-r1'>
+<b>03-verified-credentials-r1</b><span class='chip code'>code</span>
+<div class='muted'>Live typography, semantic content, and simple geometric section accents</div>
+<div class='muted'>Build with semantic HTML in a responsive CSS grid; use live typography, #061A34 navy, #C79A3B hairlines, accessible spacing, and inline SVG only for simple geometric accents.</div>
+<div class='pair'>
+<figure><a href='crops/03-verified-credentials-context.png'><img src='crops/03-verified-credentials-r1-ref.png' alt=''></a><figcaption>design reference — 03-verified-credentials (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Build with semantic HTML in a responsive CSS grid; use live typography, #061A34 navy, #C79A3B hairlines, accessible spacing, and inline SVG only for simple geometric accents.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='03-verified-credentials-r2'>
+<b>03-verified-credentials-r2</b><span class='chip code'>code</span>
+<div class='muted'>Live typography, semantic content, and simple geometric section accents</div>
+<div class='muted'>Build with semantic HTML in a responsive CSS grid; use live typography, #061A34 navy, #C79A3B hairlines, accessible spacing, and inline SVG only for simple geometric accents.</div>
+<div class='pair'>
+<figure><a href='crops/03-verified-credentials-context.png'><img src='crops/03-verified-credentials-r2-ref.png' alt=''></a><figcaption>design reference — 03-verified-credentials (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Build with semantic HTML in a responsive CSS grid; use live typography, #061A34 navy, #C79A3B hairlines, accessible spacing, and inline SVG only for simple geometric accents.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='03-verified-credentials-r3'>
+<b>03-verified-credentials-r3</b><span class='chip code'>code</span>
+<div class='muted'>Live typography, semantic content, and simple geometric section accents</div>
+<div class='muted'>Build with semantic HTML in a responsive CSS grid; use live typography, #061A34 navy, #C79A3B hairlines, accessible spacing, and inline SVG only for simple geometric accents.</div>
+<div class='pair'>
+<figure><a href='crops/03-verified-credentials-context.png'><img src='crops/03-verified-credentials-r3-ref.png' alt=''></a><figcaption>design reference — 03-verified-credentials (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Build with semantic HTML in a responsive CSS grid; use live typography, #061A34 navy, #C79A3B hairlines, accessible spacing, and inline SVG only for simple geometric accents.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='03-verified-credentials-r4'>
+<b>03-verified-credentials-r4</b><span class='chip code'>code</span>
+<div class='muted'>Live typography, semantic content, and simple geometric section accents</div>
+<div class='muted'>Build with semantic HTML in a responsive CSS grid; use live typography, #061A34 navy, #C79A3B hairlines, accessible spacing, and inline SVG only for simple geometric accents.</div>
+<div class='pair'>
+<figure><a href='crops/03-verified-credentials-context.png'><img src='crops/03-verified-credentials-r4-ref.png' alt=''></a><figcaption>design reference — 03-verified-credentials (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Build with semantic HTML in a responsive CSS grid; use live typography, #061A34 navy, #C79A3B hairlines, accessible spacing, and inline SVG only for simple geometric accents.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='03-verified-credentials-r5'>
+<b>03-verified-credentials-r5</b><span class='chip code'>code</span>
+<div class='muted'>Live typography, semantic content, and simple geometric section accents</div>
+<div class='muted'>Build with semantic HTML in a responsive CSS grid; use live typography, #061A34 navy, #C79A3B hairlines, accessible spacing, and inline SVG only for simple geometric accents.</div>
+<div class='pair'>
+<figure><a href='crops/03-verified-credentials-context.png'><img src='crops/03-verified-credentials-r5-ref.png' alt=''></a><figcaption>design reference — 03-verified-credentials (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Build with semantic HTML in a responsive CSS grid; use live typography, #061A34 navy, #C79A3B hairlines, accessible spacing, and inline SVG only for simple geometric accents.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='03-verified-credentials-r6'>
+<b>03-verified-credentials-r6</b><span class='chip code'>code</span>
+<div class='muted'>Live typography, semantic content, and simple geometric section accents</div>
+<div class='muted'>Build with semantic HTML in a responsive CSS grid; use live typography, #061A34 navy, #C79A3B hairlines, accessible spacing, and inline SVG only for simple geometric accents.</div>
+<div class='pair'>
+<figure><a href='crops/03-verified-credentials-context.png'><img src='crops/03-verified-credentials-r6-ref.png' alt=''></a><figcaption>design reference — 03-verified-credentials (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Build with semantic HTML in a responsive CSS grid; use live typography, #061A34 navy, #C79A3B hairlines, accessible spacing, and inline SVG only for simple geometric accents.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='03-verified-credentials-r7'>
+<b>03-verified-credentials-r7</b><span class='chip code'>code</span>
+<div class='muted'>Live typography, semantic content, and simple geometric section accents</div>
+<div class='muted'>Build with semantic HTML in a responsive CSS grid; use live typography, #061A34 navy, #C79A3B hairlines, accessible spacing, and inline SVG only for simple geometric accents.</div>
+<div class='pair'>
+<figure><a href='crops/03-verified-credentials-context.png'><img src='crops/03-verified-credentials-r7-ref.png' alt=''></a><figcaption>design reference — 03-verified-credentials (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Build with semantic HTML in a responsive CSS grid; use live typography, #061A34 navy, #C79A3B hairlines, accessible spacing, and inline SVG only for simple geometric accents.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='03-verified-credentials-r8'>
+<b>03-verified-credentials-r8</b><span class='chip code'>code</span>
+<div class='muted'>Live typography, semantic content, and simple geometric section accents</div>
+<div class='muted'>Build with semantic HTML in a responsive CSS grid; use live typography, #061A34 navy, #C79A3B hairlines, accessible spacing, and inline SVG only for simple geometric accents.</div>
+<div class='pair'>
+<figure><a href='crops/03-verified-credentials-context.png'><img src='crops/03-verified-credentials-r8-ref.png' alt=''></a><figcaption>design reference — 03-verified-credentials (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Build with semantic HTML in a responsive CSS grid; use live typography, #061A34 navy, #C79A3B hairlines, accessible spacing, and inline SVG only for simple geometric accents.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='03-verified-credentials-r9'>
+<b>03-verified-credentials-r9</b><span class='chip code'>code</span>
+<div class='muted'>Live typography, semantic content, and simple geometric section accents</div>
+<div class='muted'>Build with semantic HTML in a responsive CSS grid; use live typography, #061A34 navy, #C79A3B hairlines, accessible spacing, and inline SVG only for simple geometric accents.</div>
+<div class='pair'>
+<figure><a href='crops/03-verified-credentials-context.png'><img src='crops/03-verified-credentials-r9-ref.png' alt=''></a><figcaption>design reference — 03-verified-credentials (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Build with semantic HTML in a responsive CSS grid; use live typography, #061A34 navy, #C79A3B hairlines, accessible spacing, and inline SVG only for simple geometric accents.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='03-verified-credentials-r10'>
+<b>03-verified-credentials-r10</b><span class='chip code'>code</span>
+<div class='muted'>Live typography, semantic content, and simple geometric section accents</div>
+<div class='muted'>Build with semantic HTML in a responsive CSS grid; use live typography, #061A34 navy, #C79A3B hairlines, accessible spacing, and inline SVG only for simple geometric accents.</div>
+<div class='pair'>
+<figure><a href='crops/03-verified-credentials-context.png'><img src='crops/03-verified-credentials-r10-ref.png' alt=''></a><figcaption>design reference — 03-verified-credentials (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Build with semantic HTML in a responsive CSS grid; use live typography, #061A34 navy, #C79A3B hairlines, accessible spacing, and inline SVG only for simple geometric accents.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='04-why-physicians-r1'>
+<b>04-why-physicians-r1</b><span class='chip extract'>extract</span>
+<div class='muted'>anonymous physician in white coat within a clinical setting</div>
+<div class='muted'>Extract the clean approved-frame crop; preserve anonymous physician in white coat within a clinical setting material texture, natural lighting, and photographic depth.</div>
+<div class='muted'>presentation: {&quot;alpha_required&quot;: false, &quot;crop_contract&quot;: &quot;Anonymous physician torso and clinical context remain visible; &gt;=70% of anchor.&quot;, &quot;intended_background&quot;: &quot;#DCEAF4&quot;, &quot;minimum_visible_fraction&quot;: &quot;Anonymous physician torso and clinical context remain visible; &gt;=70% of anchor.&quot;, &quot;mode&quot;: &quot;framed-panel&quot;}</div>
+<div class='pair'>
+<figure><a href='crops/04-why-physicians-context.png'><img src='crops/04-why-physicians-r1-ref.png' alt=''></a><figcaption>design reference — 04-why-physicians (click for full frame)</figcaption></figure>
+<figure><div class='asset-preview'><img src='../images/design/elements/physician-audience-anchor.jpg' alt=''></div><figcaption>shipped asset on transparency checkerboard — <code>elements/physician-audience-anchor.jpg</code> (replace in git)</figcaption></figure>
+<figure><div class='intended-preview' style='background:#DCEAF4'><img src='../images/design/elements/physician-audience-anchor.jpg' alt=''></div><figcaption>asset on intended background — #DCEAF4</figcaption></figure>
+</div></div>
+<div class='card' id='04-why-physicians-r1-asset-2'>
+<b>04-why-physicians-r1-asset-2</b><span class='chip extract'>extract</span>
+<div class='muted'>stethoscope and documents on a bright medical desk</div>
+<div class='muted'>Extract the clean approved-frame crop; preserve stethoscope and documents on a bright medical desk material texture, natural lighting, and photographic depth.</div>
+<div class='muted'>presentation: {&quot;alpha_required&quot;: false, &quot;crop_contract&quot;: &quot;Stethoscope and document surface remain visible; &gt;=80% of inset.&quot;, &quot;intended_background&quot;: &quot;#DCEAF4&quot;, &quot;minimum_visible_fraction&quot;: &quot;Stethoscope and document surface remain visible; &gt;=80% of inset.&quot;, &quot;mode&quot;: &quot;framed-panel&quot;}</div>
+<div class='pair'>
+<figure><a href='crops/04-why-physicians-context.png'><img src='crops/04-why-physicians-r1-asset-2-ref.png' alt=''></a><figcaption>design reference — 04-why-physicians (click for full frame)</figcaption></figure>
+<figure><div class='asset-preview'><img src='../images/design/elements/physician-desk-inset.jpg' alt=''></div><figcaption>shipped asset on transparency checkerboard — <code>elements/physician-desk-inset.jpg</code> (replace in git)</figcaption></figure>
+<figure><div class='intended-preview' style='background:#DCEAF4'><img src='../images/design/elements/physician-desk-inset.jpg' alt=''></div><figcaption>asset on intended background — #DCEAF4</figcaption></figure>
+</div></div>
+<div class='card' id='04-why-physicians-r1-asset-3'>
+<b>04-why-physicians-r1-asset-3</b><span class='chip extract'>extract</span>
+<div class='muted'>anonymous physician walking down a bright hospital corridor</div>
+<div class='muted'>Extract the clean approved-frame crop; preserve anonymous physician walking down a bright hospital corridor material texture, natural lighting, and photographic depth.</div>
+<div class='muted'>presentation: {&quot;alpha_required&quot;: false, &quot;crop_contract&quot;: &quot;Walking physician and corridor vanishing point remain visible; &gt;=80% of inset.&quot;, &quot;intended_background&quot;: &quot;#DCEAF4&quot;, &quot;minimum_visible_fraction&quot;: &quot;Walking physician and corridor vanishing point remain visible; &gt;=80% of inset.&quot;, &quot;mode&quot;: &quot;framed-panel&quot;}</div>
+<div class='pair'>
+<figure><a href='crops/04-why-physicians-context.png'><img src='crops/04-why-physicians-r1-asset-3-ref.png' alt=''></a><figcaption>design reference — 04-why-physicians (click for full frame)</figcaption></figure>
+<figure><div class='asset-preview'><img src='../images/design/elements/physician-hallway-inset.jpg' alt=''></div><figcaption>shipped asset on transparency checkerboard — <code>elements/physician-hallway-inset.jpg</code> (replace in git)</figcaption></figure>
+<figure><div class='intended-preview' style='background:#DCEAF4'><img src='../images/design/elements/physician-hallway-inset.jpg' alt=''></div><figcaption>asset on intended background — #DCEAF4</figcaption></figure>
+</div></div>
+<div class='card' id='04-why-physicians-r1-live-overlay'>
+<b>04-why-physicians-r1-live-overlay</b><span class='chip code'>code</span>
+<div class='muted'>Live website copy, controls, lines, and responsive section layout over or beside the photographic crop</div>
+<div class='muted'>Build with semantic HTML in a responsive CSS grid; use live typography, #061A34 navy, #C79A3B hairlines, accessible spacing, and inline SVG only for simple geometric accents.</div>
+<div class='pair'>
+<figure><a href='crops/04-why-physicians-context.png'><img src='crops/04-why-physicians-r1-live-overlay-ref.png' alt=''></a><figcaption>design reference — 04-why-physicians (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Build with semantic HTML in a responsive CSS grid; use live typography, #061A34 navy, #C79A3B hairlines, accessible spacing, and inline SVG only for simple geometric accents.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='04-why-physicians-r2'>
+<b>04-why-physicians-r2</b><span class='chip code'>code</span>
+<div class='muted'>Live typography, semantic content, and simple geometric section accents</div>
+<div class='muted'>Build with semantic HTML in a responsive CSS grid; use live typography, #061A34 navy, #C79A3B hairlines, accessible spacing, and inline SVG only for simple geometric accents.</div>
+<div class='pair'>
+<figure><a href='crops/04-why-physicians-context.png'><img src='crops/04-why-physicians-r2-ref.png' alt=''></a><figcaption>design reference — 04-why-physicians (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Build with semantic HTML in a responsive CSS grid; use live typography, #061A34 navy, #C79A3B hairlines, accessible spacing, and inline SVG only for simple geometric accents.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='04-why-physicians-r3'>
+<b>04-why-physicians-r3</b><span class='chip code'>code</span>
+<div class='muted'>Live typography, semantic content, and simple geometric section accents</div>
+<div class='muted'>Build with semantic HTML in a responsive CSS grid; use live typography, #061A34 navy, #C79A3B hairlines, accessible spacing, and inline SVG only for simple geometric accents.</div>
+<div class='pair'>
+<figure><a href='crops/04-why-physicians-context.png'><img src='crops/04-why-physicians-r3-ref.png' alt=''></a><figcaption>design reference — 04-why-physicians (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Build with semantic HTML in a responsive CSS grid; use live typography, #061A34 navy, #C79A3B hairlines, accessible spacing, and inline SVG only for simple geometric accents.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='04-why-physicians-r4'>
+<b>04-why-physicians-r4</b><span class='chip code'>code</span>
+<div class='muted'>Live typography, semantic content, and simple geometric section accents</div>
+<div class='muted'>Build with semantic HTML in a responsive CSS grid; use live typography, #061A34 navy, #C79A3B hairlines, accessible spacing, and inline SVG only for simple geometric accents.</div>
+<div class='pair'>
+<figure><a href='crops/04-why-physicians-context.png'><img src='crops/04-why-physicians-r4-ref.png' alt=''></a><figcaption>design reference — 04-why-physicians (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Build with semantic HTML in a responsive CSS grid; use live typography, #061A34 navy, #C79A3B hairlines, accessible spacing, and inline SVG only for simple geometric accents.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='04-why-physicians-r5'>
+<b>04-why-physicians-r5</b><span class='chip code'>code</span>
+<div class='muted'>Live typography, semantic content, and simple geometric section accents</div>
+<div class='muted'>Build with semantic HTML in a responsive CSS grid; use live typography, #061A34 navy, #C79A3B hairlines, accessible spacing, and inline SVG only for simple geometric accents.</div>
+<div class='pair'>
+<figure><a href='crops/04-why-physicians-context.png'><img src='crops/04-why-physicians-r5-ref.png' alt=''></a><figcaption>design reference — 04-why-physicians (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Build with semantic HTML in a responsive CSS grid; use live typography, #061A34 navy, #C79A3B hairlines, accessible spacing, and inline SVG only for simple geometric accents.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='04-why-physicians-r6'>
+<b>04-why-physicians-r6</b><span class='chip code'>code</span>
+<div class='muted'>Live typography, semantic content, and simple geometric section accents</div>
+<div class='muted'>Build with semantic HTML in a responsive CSS grid; use live typography, #061A34 navy, #C79A3B hairlines, accessible spacing, and inline SVG only for simple geometric accents.</div>
+<div class='pair'>
+<figure><a href='crops/04-why-physicians-context.png'><img src='crops/04-why-physicians-r6-ref.png' alt=''></a><figcaption>design reference — 04-why-physicians (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Build with semantic HTML in a responsive CSS grid; use live typography, #061A34 navy, #C79A3B hairlines, accessible spacing, and inline SVG only for simple geometric accents.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='05-first-conversation-r1'>
+<b>05-first-conversation-r1</b><span class='chip extract'>extract</span>
+<div class='muted'>cream round consultation table with chairs, notebook, water, and pen</div>
+<div class='muted'>Extract the clean approved-frame crop; preserve cream round consultation table with chairs, notebook, water, and pen material texture, natural lighting, and photographic depth.</div>
+<div class='muted'>presentation: {&quot;alpha_required&quot;: false, &quot;crop_contract&quot;: &quot;Both chairs, notebook, water glass, and pen remain visible; &gt;=70% of table scene.&quot;, &quot;intended_background&quot;: &quot;#F8F4EB&quot;, &quot;minimum_visible_fraction&quot;: &quot;Both chairs, notebook, water glass, and pen remain visible; &gt;=70% of table scene.&quot;, &quot;mode&quot;: &quot;framed-panel&quot;}</div>
+<div class='pair'>
+<figure><a href='crops/05-first-conversation-context.png'><img src='crops/05-first-conversation-r1-ref.png' alt=''></a><figcaption>design reference — 05-first-conversation (click for full frame)</figcaption></figure>
+<figure><div class='asset-preview'><img src='../images/design/elements/first-conversation-table.jpg' alt=''></div><figcaption>shipped asset on transparency checkerboard — <code>elements/first-conversation-table.jpg</code> (replace in git)</figcaption></figure>
+<figure><div class='intended-preview' style='background:#F8F4EB'><img src='../images/design/elements/first-conversation-table.jpg' alt=''></div><figcaption>asset on intended background — #F8F4EB</figcaption></figure>
+</div></div>
+<div class='card' id='05-first-conversation-r1-live-overlay'>
+<b>05-first-conversation-r1-live-overlay</b><span class='chip code'>code</span>
+<div class='muted'>Live website copy, controls, lines, and responsive section layout over or beside the photographic crop</div>
+<div class='muted'>Build with semantic HTML in a responsive CSS grid; use live typography, #061A34 navy, #C79A3B hairlines, accessible spacing, and inline SVG only for simple geometric accents.</div>
+<div class='pair'>
+<figure><a href='crops/05-first-conversation-context.png'><img src='crops/05-first-conversation-r1-live-overlay-ref.png' alt=''></a><figcaption>design reference — 05-first-conversation (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Build with semantic HTML in a responsive CSS grid; use live typography, #061A34 navy, #C79A3B hairlines, accessible spacing, and inline SVG only for simple geometric accents.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='05-first-conversation-r2'>
+<b>05-first-conversation-r2</b><span class='chip code'>code</span>
+<div class='muted'>Live typography, semantic content, and simple geometric section accents</div>
+<div class='muted'>Build with semantic HTML in a responsive CSS grid; use live typography, #061A34 navy, #C79A3B hairlines, accessible spacing, and inline SVG only for simple geometric accents.</div>
+<div class='pair'>
+<figure><a href='crops/05-first-conversation-context.png'><img src='crops/05-first-conversation-r2-ref.png' alt=''></a><figcaption>design reference — 05-first-conversation (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Build with semantic HTML in a responsive CSS grid; use live typography, #061A34 navy, #C79A3B hairlines, accessible spacing, and inline SVG only for simple geometric accents.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='05-first-conversation-r3'>
+<b>05-first-conversation-r3</b><span class='chip code'>code</span>
+<div class='muted'>Live typography, semantic content, and simple geometric section accents</div>
+<div class='muted'>Build with semantic HTML in a responsive CSS grid; use live typography, #061A34 navy, #C79A3B hairlines, accessible spacing, and inline SVG only for simple geometric accents.</div>
+<div class='pair'>
+<figure><a href='crops/05-first-conversation-context.png'><img src='crops/05-first-conversation-r3-ref.png' alt=''></a><figcaption>design reference — 05-first-conversation (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Build with semantic HTML in a responsive CSS grid; use live typography, #061A34 navy, #C79A3B hairlines, accessible spacing, and inline SVG only for simple geometric accents.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='05-first-conversation-r4'>
+<b>05-first-conversation-r4</b><span class='chip code'>code</span>
+<div class='muted'>Live typography, semantic content, and simple geometric section accents</div>
+<div class='muted'>Build with semantic HTML in a responsive CSS grid; use live typography, #061A34 navy, #C79A3B hairlines, accessible spacing, and inline SVG only for simple geometric accents.</div>
+<div class='pair'>
+<figure><a href='crops/05-first-conversation-context.png'><img src='crops/05-first-conversation-r4-ref.png' alt=''></a><figcaption>design reference — 05-first-conversation (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Build with semantic HTML in a responsive CSS grid; use live typography, #061A34 navy, #C79A3B hairlines, accessible spacing, and inline SVG only for simple geometric accents.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='05-first-conversation-r5'>
+<b>05-first-conversation-r5</b><span class='chip code'>code</span>
+<div class='muted'>Live typography, semantic content, and simple geometric section accents</div>
+<div class='muted'>Build with semantic HTML in a responsive CSS grid; use live typography, #061A34 navy, #C79A3B hairlines, accessible spacing, and inline SVG only for simple geometric accents.</div>
+<div class='pair'>
+<figure><a href='crops/05-first-conversation-context.png'><img src='crops/05-first-conversation-r5-ref.png' alt=''></a><figcaption>design reference — 05-first-conversation (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Build with semantic HTML in a responsive CSS grid; use live typography, #061A34 navy, #C79A3B hairlines, accessible spacing, and inline SVG only for simple geometric accents.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='06-related-trust-paths-r1'>
+<b>06-related-trust-paths-r1</b><span class='chip extract'>extract</span>
+<div class='muted'>dark planning office with botanical art, notebook, pen, and book stack</div>
+<div class='muted'>Extract the clean approved-frame crop; preserve dark planning office with botanical art, notebook, pen, and book stack material texture, natural lighting, and photographic depth.</div>
+<div class='muted'>presentation: {&quot;alpha_required&quot;: false, &quot;crop_contract&quot;: &quot;Framed botanical art, notebook, pen, and books remain visible; &gt;=65% of scene.&quot;, &quot;intended_background&quot;: &quot;#061A34&quot;, &quot;minimum_visible_fraction&quot;: &quot;Framed botanical art, notebook, pen, and books remain visible; &gt;=65% of scene.&quot;, &quot;mode&quot;: &quot;framed-panel&quot;}</div>
+<div class='pair'>
+<figure><a href='crops/06-related-trust-paths-context.png'><img src='crops/06-related-trust-paths-r1-ref.png' alt=''></a><figcaption>design reference — 06-related-trust-paths (click for full frame)</figcaption></figure>
+<figure><div class='asset-preview'><img src='../images/design/elements/related-paths-office.jpg' alt=''></div><figcaption>shipped asset on transparency checkerboard — <code>elements/related-paths-office.jpg</code> (replace in git)</figcaption></figure>
+<figure><div class='intended-preview' style='background:#061A34'><img src='../images/design/elements/related-paths-office.jpg' alt=''></div><figcaption>asset on intended background — #061A34</figcaption></figure>
+</div></div>
+<div class='card' id='06-related-trust-paths-r2'>
+<b>06-related-trust-paths-r2</b><span class='chip code'>code</span>
+<div class='muted'>Live typography, semantic content, and simple geometric section accents</div>
+<div class='muted'>Build with semantic HTML in a responsive CSS grid; use live typography, #061A34 navy, #C79A3B hairlines, accessible spacing, and inline SVG only for simple geometric accents.</div>
+<div class='pair'>
+<figure><a href='crops/06-related-trust-paths-context.png'><img src='crops/06-related-trust-paths-r2-ref.png' alt=''></a><figcaption>design reference — 06-related-trust-paths (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Build with semantic HTML in a responsive CSS grid; use live typography, #061A34 navy, #C79A3B hairlines, accessible spacing, and inline SVG only for simple geometric accents.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='06-related-trust-paths-r3'>
+<b>06-related-trust-paths-r3</b><span class='chip code'>code</span>
+<div class='muted'>Live typography, semantic content, and simple geometric section accents</div>
+<div class='muted'>Build with semantic HTML in a responsive CSS grid; use live typography, #061A34 navy, #C79A3B hairlines, accessible spacing, and inline SVG only for simple geometric accents.</div>
+<div class='pair'>
+<figure><a href='crops/06-related-trust-paths-context.png'><img src='crops/06-related-trust-paths-r3-ref.png' alt=''></a><figcaption>design reference — 06-related-trust-paths (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Build with semantic HTML in a responsive CSS grid; use live typography, #061A34 navy, #C79A3B hairlines, accessible spacing, and inline SVG only for simple geometric accents.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='06-related-trust-paths-r4'>
+<b>06-related-trust-paths-r4</b><span class='chip code'>code</span>
+<div class='muted'>Live typography, semantic content, and simple geometric section accents</div>
+<div class='muted'>Build with semantic HTML in a responsive CSS grid; use live typography, #061A34 navy, #C79A3B hairlines, accessible spacing, and inline SVG only for simple geometric accents.</div>
+<div class='pair'>
+<figure><a href='crops/06-related-trust-paths-context.png'><img src='crops/06-related-trust-paths-r4-ref.png' alt=''></a><figcaption>design reference — 06-related-trust-paths (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Build with semantic HTML in a responsive CSS grid; use live typography, #061A34 navy, #C79A3B hairlines, accessible spacing, and inline SVG only for simple geometric accents.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='06-related-trust-paths-r5'>
+<b>06-related-trust-paths-r5</b><span class='chip code'>code</span>
+<div class='muted'>Live typography, semantic content, and simple geometric section accents</div>
+<div class='muted'>Build with semantic HTML in a responsive CSS grid; use live typography, #061A34 navy, #C79A3B hairlines, accessible spacing, and inline SVG only for simple geometric accents.</div>
+<div class='pair'>
+<figure><a href='crops/06-related-trust-paths-context.png'><img src='crops/06-related-trust-paths-r5-ref.png' alt=''></a><figcaption>design reference — 06-related-trust-paths (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Build with semantic HTML in a responsive CSS grid; use live typography, #061A34 navy, #C79A3B hairlines, accessible spacing, and inline SVG only for simple geometric accents.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='06-related-trust-paths-r6'>
+<b>06-related-trust-paths-r6</b><span class='chip code'>code</span>
+<div class='muted'>Live typography, semantic content, and simple geometric section accents</div>
+<div class='muted'>Build with semantic HTML in a responsive CSS grid; use live typography, #061A34 navy, #C79A3B hairlines, accessible spacing, and inline SVG only for simple geometric accents.</div>
+<div class='pair'>
+<figure><a href='crops/06-related-trust-paths-context.png'><img src='crops/06-related-trust-paths-r6-ref.png' alt=''></a><figcaption>design reference — 06-related-trust-paths (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Build with semantic HTML in a responsive CSS grid; use live typography, #061A34 navy, #C79A3B hairlines, accessible spacing, and inline SVG only for simple geometric accents.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='06-related-trust-paths-r7'>
+<b>06-related-trust-paths-r7</b><span class='chip code'>code</span>
+<div class='muted'>Live typography, semantic content, and simple geometric section accents</div>
+<div class='muted'>Build with semantic HTML in a responsive CSS grid; use live typography, #061A34 navy, #C79A3B hairlines, accessible spacing, and inline SVG only for simple geometric accents.</div>
+<div class='pair'>
+<figure><a href='crops/06-related-trust-paths-context.png'><img src='crops/06-related-trust-paths-r7-ref.png' alt=''></a><figcaption>design reference — 06-related-trust-paths (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Build with semantic HTML in a responsive CSS grid; use live typography, #061A34 navy, #C79A3B hairlines, accessible spacing, and inline SVG only for simple geometric accents.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='06-related-trust-paths-r8'>
+<b>06-related-trust-paths-r8</b><span class='chip code'>code</span>
+<div class='muted'>Live typography, semantic content, and simple geometric section accents</div>
+<div class='muted'>Build with semantic HTML in a responsive CSS grid; use live typography, #061A34 navy, #C79A3B hairlines, accessible spacing, and inline SVG only for simple geometric accents.</div>
+<div class='pair'>
+<figure><a href='crops/06-related-trust-paths-context.png'><img src='crops/06-related-trust-paths-r8-ref.png' alt=''></a><figcaption>design reference — 06-related-trust-paths (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Build with semantic HTML in a responsive CSS grid; use live typography, #061A34 navy, #C79A3B hairlines, accessible spacing, and inline SVG only for simple geometric accents.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='06-related-trust-paths-r9'>
+<b>06-related-trust-paths-r9</b><span class='chip code'>code</span>
+<div class='muted'>Live typography, semantic content, and simple geometric section accents</div>
+<div class='muted'>Build with semantic HTML in a responsive CSS grid; use live typography, #061A34 navy, #C79A3B hairlines, accessible spacing, and inline SVG only for simple geometric accents.</div>
+<div class='pair'>
+<figure><a href='crops/06-related-trust-paths-context.png'><img src='crops/06-related-trust-paths-r9-ref.png' alt=''></a><figcaption>design reference — 06-related-trust-paths (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Build with semantic HTML in a responsive CSS grid; use live typography, #061A34 navy, #C79A3B hairlines, accessible spacing, and inline SVG only for simple geometric accents.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='06-related-trust-paths-r10'>
+<b>06-related-trust-paths-r10</b><span class='chip code'>code</span>
+<div class='muted'>Live typography, semantic content, and simple geometric section accents</div>
+<div class='muted'>Build with semantic HTML in a responsive CSS grid; use live typography, #061A34 navy, #C79A3B hairlines, accessible spacing, and inline SVG only for simple geometric accents.</div>
+<div class='pair'>
+<figure><a href='crops/06-related-trust-paths-context.png'><img src='crops/06-related-trust-paths-r10-ref.png' alt=''></a><figcaption>design reference — 06-related-trust-paths (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Build with semantic HTML in a responsive CSS grid; use live typography, #061A34 navy, #C79A3B hairlines, accessible spacing, and inline SVG only for simple geometric accents.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='06-related-trust-paths-r11'>
+<b>06-related-trust-paths-r11</b><span class='chip code'>code</span>
+<div class='muted'>Live typography, semantic content, and simple geometric section accents</div>
+<div class='muted'>Build with semantic HTML in a responsive CSS grid; use live typography, #061A34 navy, #C79A3B hairlines, accessible spacing, and inline SVG only for simple geometric accents.</div>
+<div class='pair'>
+<figure><a href='crops/06-related-trust-paths-context.png'><img src='crops/06-related-trust-paths-r11-ref.png' alt=''></a><figcaption>design reference — 06-related-trust-paths (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Build with semantic HTML in a responsive CSS grid; use live typography, #061A34 navy, #C79A3B hairlines, accessible spacing, and inline SVG only for simple geometric accents.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='06-related-trust-paths-r12'>
+<b>06-related-trust-paths-r12</b><span class='chip code'>code</span>
+<div class='muted'>Live typography, semantic content, and simple geometric section accents</div>
+<div class='muted'>Build with semantic HTML in a responsive CSS grid; use live typography, #061A34 navy, #C79A3B hairlines, accessible spacing, and inline SVG only for simple geometric accents.</div>
+<div class='pair'>
+<figure><a href='crops/06-related-trust-paths-context.png'><img src='crops/06-related-trust-paths-r12-ref.png' alt=''></a><figcaption>design reference — 06-related-trust-paths (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Build with semantic HTML in a responsive CSS grid; use live typography, #061A34 navy, #C79A3B hairlines, accessible spacing, and inline SVG only for simple geometric accents.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='06-related-trust-paths-r13'>
+<b>06-related-trust-paths-r13</b><span class='chip code'>code</span>
+<div class='muted'>Live typography, semantic content, and simple geometric section accents</div>
+<div class='muted'>Build with semantic HTML in a responsive CSS grid; use live typography, #061A34 navy, #C79A3B hairlines, accessible spacing, and inline SVG only for simple geometric accents.</div>
+<div class='pair'>
+<figure><a href='crops/06-related-trust-paths-context.png'><img src='crops/06-related-trust-paths-r13-ref.png' alt=''></a><figcaption>design reference — 06-related-trust-paths (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Build with semantic HTML in a responsive CSS grid; use live typography, #061A34 navy, #C79A3B hairlines, accessible spacing, and inline SVG only for simple geometric accents.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='06-related-trust-paths-r14'>
+<b>06-related-trust-paths-r14</b><span class='chip code'>code</span>
+<div class='muted'>Live typography, semantic content, and simple geometric section accents</div>
+<div class='muted'>Build with semantic HTML in a responsive CSS grid; use live typography, #061A34 navy, #C79A3B hairlines, accessible spacing, and inline SVG only for simple geometric accents.</div>
+<div class='pair'>
+<figure><a href='crops/06-related-trust-paths-context.png'><img src='crops/06-related-trust-paths-r14-ref.png' alt=''></a><figcaption>design reference — 06-related-trust-paths (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Build with semantic HTML in a responsive CSS grid; use live typography, #061A34 navy, #C79A3B hairlines, accessible spacing, and inline SVG only for simple geometric accents.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='06-related-trust-paths-r15'>
+<b>06-related-trust-paths-r15</b><span class='chip code'>code</span>
+<div class='muted'>Live typography, semantic content, and simple geometric section accents</div>
+<div class='muted'>Build with semantic HTML in a responsive CSS grid; use live typography, #061A34 navy, #C79A3B hairlines, accessible spacing, and inline SVG only for simple geometric accents.</div>
+<div class='pair'>
+<figure><a href='crops/06-related-trust-paths-context.png'><img src='crops/06-related-trust-paths-r15-ref.png' alt=''></a><figcaption>design reference — 06-related-trust-paths (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Build with semantic HTML in a responsive CSS grid; use live typography, #061A34 navy, #C79A3B hairlines, accessible spacing, and inline SVG only for simple geometric accents.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<details><summary>NOTES.md — CSS/SVG techniques the build uses instead of images</summary><pre># meet-michael-epps decomposition notes
+
+Approved section frames: `/var/lib/megaclaw/workspace/worktrees/elite-site-build/_design_inputs/pages/meet-michael-epps/refs/`. Shipped rasters: `public/images/design/meet-michael-epps/elements/`.
+
+Verdicts: 44 CODE, 8 EXTRACT, 0 INPAINT. All website copy remains live HTML; no full section is baked.
+
+## 01-portrait-dossier
+
+- **Tier 2 raster:** `elements/michael-epps-approved.png`. authoritative supplied portrait of Michael A. Epps Owner `meet-michael-epps/01-portrait-dossier`; Michael Epps face, shoulders, folded arms, and suit remain fully visible; no likeness crop or alteration.
+- **Tier 2 raster:** `elements/portrait-office-detail.jpg`. dark office desk with pen cup and navy notebook Owner `meet-michael-epps/01-portrait-dossier`; Pen cup, navy notebook, and desktop remain visible; &gt;=65% of detail.
+- **CODE:** All headings, body copy, links, cards, checkmarks, dividers, connector lines, and surface colors use semantic HTML/CSS or concise inline SVG. Intrinsic media dimensions never control section height.
+
+## 02-planning-philosophy
+
+- **Tier 2 raster:** `elements/shared-strategy-desk.jpg`. open daily plan, brass pen, navy strategy ledger, and marble desk Owner `meet-michael-epps/02-planning-philosophy`; Open plan, pen, navy ledger, and marble surface remain visible; &gt;=75% of scene.
+- **CODE:** All headings, body copy, links, cards, checkmarks, dividers, connector lines, and surface colors use semantic HTML/CSS or concise inline SVG. Intrinsic media dimensions never control section height.
+
+## 03-verified-credentials
+
+- **Tier 3 CODE:** Entire frame uses semantic HTML, responsive CSS grid/flex layout, live type, bordered panels, and concise inline SVG accents. No raster ships for this section.
+
+## 04-why-physicians
+
+- **Tier 2 raster:** `elements/physician-audience-anchor.jpg`. anonymous physician in white coat within a clinical setting Owner `meet-michael-epps/04-why-physicians`; Anonymous physician torso and clinical context remain visible; &gt;=70% of anchor.
+- **Tier 2 raster:** `elements/physician-desk-inset.jpg`. stethoscope and documents on a bright medical desk Owner `meet-michael-epps/04-why-physicians`; Stethoscope and document surface remain visible; &gt;=80% of inset.
+- **Tier 2 raster:** `elements/physician-hallway-inset.jpg`. anonymous physician walking down a bright hospital corridor Owner `meet-michael-epps/04-why-physicians`; Walking physician and corridor vanishing point remain visible; &gt;=80% of inset.
+- **CODE:** All headings, body copy, links, cards, checkmarks, dividers, connector lines, and surface colors use semantic HTML/CSS or concise inline SVG. Intrinsic media dimensions never control section height.
+
+## 05-first-conversation
+
+- **Tier 2 raster:** `elements/first-conversation-table.jpg`. cream round consultation table with chairs, notebook, water, and pen Owner `meet-michael-epps/05-first-conversation`; Both chairs, notebook, water glass, and pen remain visible; &gt;=70% of table scene.
+- **CODE:** All headings, body copy, links, cards, checkmarks, dividers, connector lines, and surface colors use semantic HTML/CSS or concise inline SVG. Intrinsic media dimensions never control section height.
+
+## 06-related-trust-paths
+
+- **Tier 2 raster:** `elements/related-paths-office.jpg`. dark planning office with botanical art, notebook, pen, and book stack Owner `meet-michael-epps/06-related-trust-paths`; Framed botanical art, notebook, pen, and books remain visible; &gt;=65% of scene.
+- **CODE:** All headings, body copy, links, cards, checkmarks, dividers, connector lines, and surface colors use semantic HTML/CSS or concise inline SVG. Intrinsic media dimensions never control section height.
+
+## Named-person contract
+
+- Michael A. Epps uses the exact supplied `public/images/design/shared/hero-founder.png` bytes copied to an owner-specific path. No generation, inpainting, retouching, extension, or likeness alteration is permitted.
+</pre></details>

@@ -1,0 +1,45 @@
+/*
+ * Page-owned frame crops for /insights/preparing-for-practice-sale. Same
+ * recipe system as the family insights-article.css: the class sets the slot
+ * aspect-ratio to the raster's clean visible rect and places the img by
+ * percentages so baked artifacts are excluded deterministically at every
+ * viewport. Family CSS is not modified. Prefix: art-frame--ps-.
+ */
+
+.art-frame--ps-teaser {
+  /* 416x864 minus the baked gold corner stub on the left edge (x 0–10,
+     y 630–780) and the gold seam rule across the bottom (y 775–800):
+     visible rect (14,0,416,770). */
+  aspect-ratio: 402 / 770;
+}
+.art-frame--ps-teaser > img {
+  width: 103.483%;
+  left: -3.483%;
+}
+
+.art-frame--ps-gate {
+  /* 798x815 minus the baked gold line + endpoint node entering top-left
+     (x 0–135, y 150–235) and the gold rule on the mist band at the bottom
+     (y 770–800): visible rect (140,0,798,755). */
+  aspect-ratio: 658 / 755;
+}
+.art-frame--ps-gate > img {
+  width: 121.277%;
+  left: -21.277%;
+}
+
+.art-frame--ps-review {
+  /* 436x512 minus the baked gold card corner on the left edge (x 0–22,
+     y 235–350) and the flat ivory band along the bottom (y 444–512):
+     visible rect (24,0,436,444). */
+  aspect-ratio: 412 / 444;
+}
+.art-frame--ps-review > img {
+  width: 105.825%;
+  left: -5.825%;
+}
+
+.art-frame--ps-related {
+  /* Clean 760x364 extraction; pin the slot to its intrinsic ratio. */
+  aspect-ratio: 760 / 364;
+}

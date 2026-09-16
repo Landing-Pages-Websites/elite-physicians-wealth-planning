@@ -1,31 +1,16 @@
 import Link from "next/link";
+import { DesktopNav } from "@/components/site/desktop-nav";
+import { MobileNav } from "@/components/site/mobile-nav";
+import { SCHEDULE_CTA } from "@/lib/nav";
 import { BRAND } from "@/lib/content";
 
 /**
- * NEW UNAPPROVED SURFACE. The approved mockup has no navigation — its scroll
- * starts at the hero and ends at the closing section. A multi-page site needs
- * one, so this is derived from the approved design language rather than
- * imported from a generic template.
- *
- * The wordmark here is LIFTED from the hero, not duplicated: one-plan.tsx used
- * to render this exact lockup as its first child, and hoisting it while leaving
- * the original in place would stack two wordmarks. The header is `fixed` rather
- * than `sticky` on purpose — sticky occupies flow and would push the hero down,
+ * Sitewide fixed header. The header is `fixed` rather than `sticky` on
+ * purpose — sticky occupies flow and would push the homepage hero down,
  * breaking the composition_map fold requirement that brand, headline, actions,
- * portrait card and proof row stay visible together within 1536x864.
- *
- * Nav targets are on-page anchors because those are the destinations that exist
- * today. They become /our-process, /who-we-serve and /meet-michael-epps — the
- * paths contracted in section_manifest functional_elements — when those pages
- * ship. Never point navigation at a route that 404s.
+ * portrait card and proof row stay visible together within 1536x864. Interior
+ * pages compensate with `--header-h` top padding on their first section.
  */
-const NAV = [
-  { href: "/consult-ledger#separate-rooms", label: "The coordination gap" },
-  { href: "/consult-ledger#blueprint-rounds", label: "The Blueprint" },
-  { href: "/consult-ledger#white-coat-paths", label: "Who we serve" },
-  { href: "/consult-ledger#accountable-planner", label: "Meet Michael" },
-] as const;
-
 function Wordmark(): React.JSX.Element {
   return (
     <Link
@@ -33,16 +18,14 @@ function Wordmark(): React.JSX.Element {
       className="flex shrink-0 flex-col gap-0.5 rounded-sm transition-opacity duration-200 hover:opacity-90"
     >
       {/* 22px here pushed the Menu button off the right edge of a 390 viewport:
-          the wordmark cannot wrap or shrink, so 24px padding + 32 characters +
-          the gap + a 56px button came to 448px in a 390px window. 17px is the
-          largest size that leaves the button its own padding at 390.
-          `align-super` floated the trademark above the cap line as a detached
-          glyph; an explicit vertical-align sits it on the cap. */}
-      <span className="font-display text-[17px] font-medium whitespace-nowrap text-white sm:text-[27px] lg:text-[34px]">
+          the wordmark cannot wrap or shrink, so 17px is the largest size that
+          leaves the button its own padding at 390. An explicit vertical-align
+          sits the trademark on the cap line rather than floating above it. */}
+      <span className="font-display text-[17px] font-medium whitespace-nowrap text-white sm:text-[24px] lg:text-[28px]">
         {BRAND.name}
         <span className="align-[0.42em] text-[0.45em]">™</span>
       </span>
-      <span className="hidden font-body text-[11px] font-semibold tracking-[0.24em] whitespace-nowrap text-gold uppercase sm:block">
+      <span className="hidden font-body text-[10px] font-semibold tracking-[0.24em] whitespace-nowrap text-gold uppercase sm:block">
         {BRAND.poweredBy}
       </span>
     </Link>
@@ -60,64 +43,15 @@ export function SiteHeader(): React.JSX.Element {
       </a>
       <div className="mx-auto flex w-full max-w-[1400px] items-center justify-between gap-3 px-6 py-2 sm:gap-6 sm:px-10 lg:px-14">
         <Wordmark />
-
-        <nav aria-label="Primary" className="hidden items-center gap-7 xl:flex">
-          {NAV.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              className="font-body text-[13px] text-mist/80 underline-offset-8 transition-colors duration-200 hover:text-gold hover:underline"
-            >
-              {item.label}
-            </Link>
-          ))}
-        </nav>
-
+        <DesktopNav />
         <div className="flex items-center gap-3">
           <Link
-            href="/consult-ledger#form"
+            href={SCHEDULE_CTA.path}
             className="hidden min-h-11 items-center rounded-sm bg-gold px-5 font-body text-[13px] font-semibold text-ink transition-colors duration-200 hover:bg-gold/90 sm:inline-flex"
           >
-            Schedule a strategy call
+            {SCHEDULE_CTA.label}
           </Link>
-
-          {/* Popover API, not <details>. This header lives in the persistent
-              layout, so a <details open> attribute survives same-page hash
-              navigation and the panel stays sitting over the destination.
-              A popover light-dismisses on outside click and on Escape, and
-              closes on navigation — still zero client JS. */}
-          <button
-            type="button"
-            popoverTarget="site-menu"
-            className="flex min-h-11 min-w-11 cursor-pointer items-center justify-center rounded-sm border border-mist/45 px-3 font-body text-[12px] text-mist xl:hidden"
-          >
-            Menu
-          </button>
-          {/* `flex` must NOT be unconditional here: display:flex overrides the
-              UA rule [popover]:not(:popover-open){display:none}, which left this
-              panel permanently open over the page at every viewport. Hidden by
-              default; flex only while the popover is genuinely open. */}
-          <div
-            id="site-menu"
-            popover="auto"
-            className="hidden w-64 flex-col gap-1 rounded-sm border border-mist/15 bg-ink p-3 text-mist shadow-xl backdrop:bg-ink/40 [inset-block-start:var(--header-h)] [inset-inline-end:1rem] [inset-inline-start:auto] [margin:0] [position:fixed] [&:popover-open]:flex"
-          >
-            {NAV.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className="rounded-sm px-3 py-3 font-body text-sm text-mist/85 transition-colors duration-200 hover:bg-white/5 hover:text-gold"
-              >
-                {item.label}
-              </Link>
-            ))}
-            <Link
-              href="/consult-ledger#form"
-              className="mt-1 rounded-sm bg-gold px-3 py-3 text-center font-body text-sm font-semibold text-ink"
-            >
-              Schedule a strategy call
-            </Link>
-          </div>
+          <MobileNav />
         </div>
       </div>
     </header>

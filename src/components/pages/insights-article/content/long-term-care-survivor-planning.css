@@ -1,0 +1,71 @@
+/*
+ * Page-owned frame recipes for /insights/long-term-care-survivor-planning.
+ * Extends the family .art-frame system (insights-article.css) without touching
+ * it: each class pins the slot aspect ratio to the raster's visible rect and,
+ * where the extraction carries baked artifacts, applies the exact overflow
+ * crop. Percentages: width = fullW/visW, left = -x0/visW, top = -y0/visH.
+ */
+
+/* ---------- 01 hero plate overrides (art-hero--ltc) ----------
+   The hero raster (hero-survivor-planning-desk.jpg, 856x660) bakes headline
+   glyph fragments ("and" / "g for" / "es") along its left edge out to x=191
+   (22.3% of width), so the family's 24%-opaque run must stay wherever the full
+   raster width shows (mobile 3:2 and wide lg plates). The raster's own
+   exposure already matches the ref (mean L 42.8 vs 41.0); the build read
+   murky only because the family veil held 0.55 alpha at mid-plate and the
+   floor fade swallowed the cream envelope. Release both faster instead. */
+.art-hero--ltc .art-hero-veil {
+  background: linear-gradient(
+    90deg,
+    var(--color-ink-deep) 0%,
+    var(--color-ink-deep) 24%,
+    rgba(6, 21, 39, 0.32) 32%,
+    rgba(6, 21, 39, 0.1) 46%,
+    rgba(6, 21, 39, 0) 66%
+  );
+}
+.art-hero--ltc .art-hero-floor {
+  /* The raster's bright bottom seam remnant is only ~4 rows (0.6% of height);
+     a short fade still buries it while freeing the lamplit envelope. */
+  background: linear-gradient(
+    0deg,
+    var(--color-ink-deep) 0%,
+    rgba(6, 21, 39, 0.85) 5%,
+    rgba(6, 21, 39, 0) 15%
+  );
+}
+
+.art-frame--ltc-teaser {
+  /* 386x864 minus the ledger's lower face (a baked internal-status prop line
+     sits under the Source Gate title) and the bottom seam band:
+     visible rect (0,0,386,446). */
+  aspect-ratio: 386 / 446;
+}
+
+.art-frame--ltc-gate {
+  /* 650x710 minus the baked gold hairline (rows 640-642) and the pale blue
+     strip band at the foot: visible rect (0,0,650,637). */
+  aspect-ratio: 650 / 637;
+}
+
+.art-frame--ltc-review {
+  /* 636x408 carries the ref's baked live overlay (headline and item text,
+     gold curve, label chip) across its left and lower regions; crop to the
+     clean navy file-box quadrant: visible rect (372,12,636,244). */
+  aspect-ratio: 264 / 232;
+}
+.art-frame--ltc-review > img {
+  width: 240.909%;
+  left: -140.909%;
+  top: -5.172%;
+}
+
+.art-frame--ltc-related {
+  /* 505x620 minus the baked ivory mat border: visible rect (12,14,495,609). */
+  aspect-ratio: 483 / 595;
+}
+.art-frame--ltc-related > img {
+  width: 104.555%;
+  left: -2.484%;
+  top: -2.353%;
+}

@@ -1,0 +1,220 @@
+/*
+ * /resources — Physician Resource Center hub.
+ * Page-scoped surfaces in the recipe style of site.css: index hero canvas,
+ * mist taxonomy rail, featured spread, route-ledger tab slices and the navy
+ * choice band. Every class carries the res- prefix.
+ */
+
+/* ---------- 01 editorial-hero: dark planning-room index canvas ---------- */
+
+.res-hero {
+  background: var(--color-ink-deep);
+}
+
+.res-hero > img {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  /* The lamp-lit desk sits in the source's right half; the left half falls
+     away dark for the live copy. */
+  object-position: 72% center;
+}
+
+.res-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(
+      94deg,
+      rgba(4, 14, 27, 0.92) 0%,
+      rgba(4, 14, 27, 0.78) 40%,
+      rgba(4, 14, 27, 0.35) 72%,
+      rgba(4, 14, 27, 0.2) 100%
+    ),
+    linear-gradient(180deg, rgba(4, 14, 27, 0.5) 0%, rgba(4, 14, 27, 0) 30%);
+}
+
+/* The ref closes the hero on a mist glow that hands into the taxonomy rail. */
+.res-hero-fade {
+  position: absolute;
+  inset-inline: 0;
+  bottom: 0;
+  height: 4.5rem;
+  pointer-events: none;
+  background: linear-gradient(
+    180deg,
+    rgba(220, 232, 242, 0) 0%,
+    rgba(220, 232, 242, 0.55) 100%
+  );
+}
+
+/* ---------- 02 topic-taxonomy: mist index rail ---------- */
+
+.res-taxonomy {
+  background: linear-gradient(
+    180deg,
+    var(--color-mist) 0%,
+    var(--color-mist-deep) 100%
+  );
+}
+
+/* Corner document accent, tilted and cropped at the right edge as drawn. */
+.res-taxonomy-corner {
+  position: absolute;
+  top: -1.5rem;
+  right: -3rem;
+  width: clamp(13rem, 18vw, 17rem);
+  transform: rotate(-6deg);
+  box-shadow: 0 20px 40px -24px rgba(11, 31, 58, 0.45);
+  mask-image: linear-gradient(210deg, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0) 95%);
+}
+
+/* ---------- 03 featured-index: ivory editorial spread ---------- */
+
+.res-featured {
+  background: var(--color-ivory);
+}
+
+.res-featured::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(
+    110% 90% at 30% 20%,
+    rgba(255, 255, 255, 0.55) 0%,
+    rgba(255, 255, 255, 0) 55%
+  );
+}
+
+.res-featured-photo {
+  border: 1px solid rgba(200, 166, 90, 0.45);
+  box-shadow: 0 28px 60px -34px rgba(11, 31, 58, 0.5);
+}
+
+/* ---------- 04 content-state-ledger: white route ledger ---------- */
+
+/* Each row's editorial tab is a slice of the extracted rail
+   (218x520: five stacked crops separated by white gaps). The container
+   clips; the inner image is width-fit, offset per band. top% is relative to
+   the container height, i.e. -(band_start / band_height). */
+.res-tab {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(56, 55, 62, 0.14);
+  border-radius: 3px;
+  background: var(--color-ledger-warm);
+}
+
+.res-tab > img {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: auto;
+}
+
+.res-tab-1 { aspect-ratio: 218 / 48; }
+.res-tab-1 > img { top: 0; }
+.res-tab-2 { aspect-ratio: 218 / 69; }
+.res-tab-2 > img { top: -69.57%; }
+.res-tab-3 { aspect-ratio: 218 / 81; }
+.res-tab-3 > img { top: -145.68%; }
+.res-tab-4 { aspect-ratio: 218 / 76; }
+.res-tab-4 > img { top: -263.16%; }
+.res-tab-5 { aspect-ratio: 218 / 81; }
+.res-tab-5 > img { top: -341.98%; }
+
+.res-ledger-row {
+  transition: background-color 0.18s var(--ease-out);
+}
+
+.res-ledger-row:hover {
+  background: var(--color-ledger-cool);
+}
+
+/* Dot leader between the route and its action, as the frame rules it. */
+.res-leader {
+  border-bottom: 1px dotted rgba(56, 55, 62, 0.35);
+}
+
+/* ---------- 05 subscribe-or-schedule: navy choice band ---------- */
+
+.res-close {
+  background: var(--color-ink-deeper);
+}
+
+.res-close > img {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: 24% center;
+}
+
+.res-close::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(
+      95% 85% at 50% 48%,
+      rgba(4, 16, 31, 0.6) 0%,
+      rgba(4, 16, 31, 0.38) 55%,
+      rgba(4, 16, 31, 0.6) 100%
+    ),
+    linear-gradient(180deg, rgba(4, 16, 31, 0.5) 0%, rgba(4, 16, 31, 0.16) 32%);
+}
+
+.res-choice-card {
+  border: 1px solid rgba(200, 166, 90, 0.45);
+  background: rgba(11, 31, 58, 0.55);
+  backdrop-filter: blur(2px);
+}
+
+/* Ghost action over the photograph: gold edge, gold fill on hover. */
+.res-ghost-btn {
+  border: 1px solid var(--color-gold);
+  color: var(--color-ivory-bright);
+  background: rgba(11, 31, 58, 0.55);
+  transition:
+    background-color 0.2s var(--ease-out),
+    color 0.2s var(--ease-out);
+}
+
+.res-ghost-btn:hover {
+  background: var(--color-gold);
+  color: var(--color-ink);
+}
+
+/* ---------- Shared: scroll reveal (page-local copy of the site recipe) ---------- */
+
+@supports (animation-timeline: view()) {
+  .res-reveal {
+    animation: res-rise 0.7s ease-out both;
+    animation-timeline: view();
+    animation-range: entry 0% entry 38%;
+  }
+}
+
+@keyframes res-rise {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .res-reveal {
+    animation: none;
+  }
+}

@@ -1,0 +1,332 @@
+/*
+ * /about/team — held-state team page (slug: about--team).
+ * Page-scoped surfaces only; every class carries the tem- prefix.
+ * The page renders the polished customer-facing held state: no invented
+ * staff, no fake directory, model photography presented as workplace
+ * scenes only.
+ */
+
+/* ---------- shared page-local coordination line ---------- */
+
+.tem-seam {
+  position: absolute;
+  left: 1.5rem;
+  width: 1px;
+  background: var(--color-gold);
+  opacity: 0.85;
+}
+.tem-seam-top {
+  top: 0;
+  height: 3rem;
+}
+.tem-seam-bottom {
+  bottom: 0;
+  height: 3rem;
+}
+.tem-seam-close {
+  top: 0;
+  height: 5.5rem;
+}
+.tem-seam-close::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -9px;
+  transform: translateX(-50%);
+  width: 8px;
+  height: 8px;
+  border-radius: 9999px;
+  background: var(--color-gold);
+}
+
+/* ---------- 01 team-state-hero: navy team-room canvas ---------- */
+
+.tem-hero {
+  background: var(--color-ink-deep);
+}
+.tem-hero-media {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 3 / 2;
+}
+.tem-hero-media img {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.tem-hero-media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    90deg,
+    var(--color-ink-deep) 0%,
+    rgba(6, 21, 39, 0.4) 26%,
+    rgba(6, 21, 39, 0.08) 60%,
+    rgba(6, 21, 39, 0.28) 100%
+  );
+}
+@media (min-width: 1024px) {
+  .tem-hero-media {
+    position: absolute;
+    inset-block: 0;
+    right: 0;
+    width: 56%;
+    aspect-ratio: auto;
+  }
+}
+
+/* ---------- 02 verified-leadership: ivory portrait reserve ---------- */
+
+.tem-leadership {
+  background: var(--color-ivory);
+}
+.tem-leadership-plate {
+  background: var(--color-ivory-warm);
+  border: 1px solid var(--color-gold);
+  box-shadow: 0 22px 50px -30px rgba(11, 31, 58, 0.45);
+}
+
+/* ---------- 03 bio-input-gate: white checklist ledger ---------- */
+
+.tem-gate {
+  background: #ffffff;
+}
+.tem-gate-list {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+.tem-gate-list::before {
+  content: "";
+  position: absolute;
+  top: 0.7rem;
+  bottom: 0.7rem;
+  left: 6px;
+  width: 1px;
+  background: var(--color-gold);
+  opacity: 0.9;
+}
+.tem-gate-node {
+  position: relative;
+  margin-top: 0.35rem;
+  height: 13px;
+  width: 13px;
+  flex: none;
+  border-radius: 9999px;
+  border: 1px solid var(--color-gold);
+  background: #ffffff;
+}
+
+/* ---------- 04 team-model: mist diagram field ---------- */
+
+.tem-model {
+  background: var(--color-mist);
+}
+.tem-model::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.4;
+  background-image: radial-gradient(rgba(11, 31, 58, 0.22) 1px, transparent 1px);
+  background-size: 16px 16px;
+}
+.tem-diagram {
+  position: relative;
+  aspect-ratio: 10 / 9;
+  max-width: 620px;
+}
+.tem-diagram-center {
+  display: flex;
+  height: 9.5rem;
+  width: 9.5rem;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 9999px;
+  background: var(--color-ink);
+  box-shadow:
+    0 0 0 2px var(--color-mist),
+    0 0 0 3.5px var(--color-gold),
+    0 18px 40px -20px rgba(11, 31, 58, 0.6);
+}
+.tem-diagram .tem-diagram-center {
+  position: absolute;
+  left: 41%;
+  top: 44%;
+  z-index: 2;
+  transform: translate(-50%, -50%);
+}
+.tem-orbit {
+  overflow: hidden;
+  border-radius: 9999px;
+  border: 4px solid #ffffff;
+  box-shadow: 0 14px 32px -18px rgba(11, 31, 58, 0.55);
+}
+.tem-diagram .tem-orbit {
+  position: absolute;
+  z-index: 1;
+  transform: translate(-50%, -50%);
+}
+.tem-orbit img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* Mobile rail: the diagram converts to a single vertical reading rail.
+   Display is set here (not via a Tailwind utility) because this unlayered
+   rule would outrank the layered `lg:hidden`. */
+.tem-model-rail {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5rem;
+  padding-left: 2.25rem;
+}
+@media (min-width: 1024px) {
+  .tem-model-rail {
+    display: none;
+  }
+}
+.tem-model-rail::before {
+  content: "";
+  position: absolute;
+  top: 1rem;
+  bottom: 1rem;
+  left: 0.75rem;
+  width: 1px;
+  background: var(--color-gold);
+  opacity: 0.9;
+}
+
+/* ---------- 05 next-step: navy route close ---------- */
+
+.tem-next {
+  background: var(--color-ink-deeper);
+}
+.tem-next-media,
+.tem-next-shelf {
+  display: none;
+}
+@media (min-width: 1024px) {
+  .tem-next-media {
+    display: block;
+    position: absolute;
+    inset-block: 0;
+    right: 0;
+    width: 24%;
+    overflow: hidden;
+  }
+  .tem-next-media img {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  .tem-next-media::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: linear-gradient(
+      90deg,
+      var(--color-ink-deeper) 0%,
+      rgba(4, 16, 31, 0.5) 35%,
+      rgba(4, 16, 31, 0.2) 100%
+    );
+  }
+  /* Shelf rail on the left edge, stacked crops blended into the field. */
+  .tem-next-shelf {
+    display: flex;
+    position: absolute;
+    inset-block: 0;
+    left: 0;
+    width: 13%;
+    flex-direction: column;
+  }
+  .tem-next-shelf img {
+    height: 33.4%;
+    width: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+  }
+  .tem-next-shelf::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: linear-gradient(270deg, var(--color-ink-deeper), rgba(4, 16, 31, 0.3) 60%);
+  }
+}
+
+/* Verified-route path: one continuous gold line through check nodes. */
+.tem-path {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.tem-path::before {
+  content: "";
+  position: absolute;
+  top: 1.375rem;
+  bottom: 1.375rem;
+  left: 1.375rem;
+  width: 1px;
+  background: var(--color-gold);
+  opacity: 0.9;
+}
+@media (min-width: 768px) {
+  .tem-path {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 4.5rem;
+  }
+  .tem-path::before {
+    top: 1.375rem;
+    bottom: auto;
+    left: 1.375rem;
+    right: 0;
+    width: auto;
+    height: 1px;
+  }
+}
+.tem-node {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+@media (min-width: 768px) {
+  .tem-node {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.875rem;
+  }
+}
+.tem-node-ring {
+  display: flex;
+  height: 2.75rem;
+  width: 2.75rem;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  border: 1px solid var(--color-gold);
+  background: var(--color-ink-deeper);
+  color: var(--color-gold);
+  transition: background-color 0.2s var(--ease-out);
+}
+.tem-node:hover .tem-node-ring {
+  background: var(--color-ink-hover);
+}

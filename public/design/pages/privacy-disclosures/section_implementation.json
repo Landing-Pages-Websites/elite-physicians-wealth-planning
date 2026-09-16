@@ -1,0 +1,193 @@
+{
+  "version": 1,
+  "slug": "privacy-disclosures",
+  "route": "/privacy-disclosures",
+  "sections": [
+    {
+      "frame": "01-utility-title",
+      "implementation_kind": "bespoke",
+      "implementation_owner": "src/components/pages/privacy-disclosures/utility-title.tsx",
+      "content_source": "section_manifest.json#01-utility-title",
+      "asset_roles": [
+        "none"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "Approved manifest fields (headline, body) render as live HTML text, led by \"Privacy & Website Disclosures.\"."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "Code-native section per the manifest image_treatment (\"no photo; pure utility layout\"); live text and drawn elements only, no raster asset required."
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "Frame composition preserved: Restrained white opener: the h1 and powered-by line verbatim, closed by a short gold rule."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved navy/gold/ivory language retained on the #FFFFFF band per the manifest edge contract; Cormorant Garamond display over Inter body."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "390x844 recomposition per manifest: Preserve the headline and primary action before the image; use a 4:5 or 3:2 crop centered on the declared subject/focal point, never a blurred filler panel; stack overlays into live blocks, keep at least 70% of the…"
+        }
+      },
+      "ref": "_design_inputs/pages/privacy-disclosures/refs/01-utility-title.png",
+      "owners": [
+        "src/app/(site)/privacy-disclosures/page.tsx",
+        "src/app/(site)/privacy-disclosures/privacy-disclosures.css",
+        "src/components/pages/privacy-disclosures/utility-title.tsx"
+      ],
+      "notes": "Restrained white opener: the h1 and powered-by line verbatim, closed by a short gold rule. The ref's decorative eyebrow is not manifest content and is omitted; no photography, per the manifest."
+    },
+    {
+      "frame": "02-educational-use",
+      "implementation_kind": "bespoke",
+      "implementation_owner": "src/components/pages/privacy-disclosures/educational-use.tsx",
+      "content_source": "section_manifest.json#02-educational-use",
+      "asset_roles": [
+        "none"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "Approved manifest fields (headline, body) render as live HTML text, led by \"Educational use.\"."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "Code-native section per the manifest image_treatment (\"no photo\"); live text and drawn elements only, no raster asset required."
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "Frame composition preserved: Ivory band: display heading with the disclosure flowing in two columns at left; the faded consultation plate at right, its top-left corner (baked fragments of the ref's own headline) cropped by a 1.14…."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved navy/gold/ivory language retained on the #F6F2E8 band per the manifest edge contract; Cormorant Garamond display over Inter body."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "390x844 recomposition per manifest: Stack the primary content group in narrative order while preserving asymmetric emphasis through offset margins and varied spacing; crop imagery around its declared focal point, keep all live text and links, and simplify…"
+        }
+      },
+      "ref": "_design_inputs/pages/privacy-disclosures/refs/02-educational-use.png",
+      "owners": [
+        "src/app/(site)/privacy-disclosures/page.tsx",
+        "src/components/pages/privacy-disclosures/educational-use.tsx"
+      ],
+      "notes": "Ivory band: display heading with the disclosure flowing in two columns at left; the faded consultation plate at right, its top-left corner (baked fragments of the ref's own headline) cropped by a 1.14 bottom-right-anchored scale while hands, pen, and paper stay whole."
+    },
+    {
+      "frame": "03-relationship-boundaries",
+      "implementation_kind": "bespoke",
+      "implementation_owner": "src/components/pages/privacy-disclosures/relationship-boundaries.tsx",
+      "content_source": "section_manifest.json#03-relationship-boundaries",
+      "asset_roles": [
+        "code-only live semantic content"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "Approved manifest fields (headline, items) render as live HTML text, led by \"Relationship and professional boundaries.\"."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "Code-native section per the manifest image_treatment (\"no photo\"); live text and drawn elements only, no raster asset required."
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "Frame composition preserved: Three verbatim boundary rows as a rule-separated ledger, each opened by a short gold dash, the middle row on a mist surface — all live, selectable text; rows collapse cleanly at 390px."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved navy/gold/ivory language retained on the #FFFFFF band per the manifest edge contract; Cormorant Garamond display over Inter body."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "390x844 recomposition per manifest: Stack the primary content group in narrative order while preserving asymmetric emphasis through offset margins and varied spacing; crop imagery around its declared focal point, keep all live text and links, and simplify…"
+        }
+      },
+      "ref": "_design_inputs/pages/privacy-disclosures/refs/03-relationship-boundaries.png",
+      "owners": [
+        "src/app/(site)/privacy-disclosures/page.tsx",
+        "src/components/pages/privacy-disclosures/relationship-boundaries.tsx"
+      ],
+      "notes": "Three verbatim boundary rows as a rule-separated ledger, each opened by a short gold dash, the middle row on a mist surface — all live, selectable text; rows collapse cleanly at 390px."
+    },
+    {
+      "frame": "04-communications-privacy",
+      "implementation_kind": "bespoke",
+      "implementation_owner": "src/components/pages/privacy-disclosures/communications-privacy.tsx",
+      "content_source": "section_manifest.json#04-communications-privacy",
+      "asset_roles": [
+        "none"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "Approved manifest fields (headline, body) render as live HTML text, led by \"Email, text, and phone communications.\"."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "Code-native section per the manifest image_treatment (\"no photo\"); live text and drawn elements only, no raster asset required."
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "Frame composition preserved: Verbatim disclosure in a white panel with the ref's gold emphasis on 'Email is not a secure channel'; the navy email/text/phone channel bar is live HTML above the still-life band, whose CSS slot (130% height…."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved navy/gold/ivory language retained on the #F6F2E8 band per the manifest edge contract; Cormorant Garamond display over Inter body."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "390x844 recomposition per manifest: Stack the primary content group in narrative order while preserving asymmetric emphasis through offset margins and varied spacing; crop imagery around its declared focal point, keep all live text and links, and simplify…"
+        }
+      },
+      "ref": "_design_inputs/pages/privacy-disclosures/refs/04-communications-privacy.png",
+      "owners": [
+        "src/app/(site)/privacy-disclosures/page.tsx",
+        "src/components/pages/privacy-disclosures/communications-privacy.tsx"
+      ],
+      "notes": "Verbatim disclosure in a white panel with the ref's gold emphasis on 'Email is not a secure channel'; the navy email/text/phone channel bar is live HTML above the still-life band, whose CSS slot (130% height, bottom-anchored) permanently clips the source's baked copy of that bar."
+    },
+    {
+      "frame": "05-contact-for-questions",
+      "implementation_kind": "bespoke",
+      "implementation_owner": "src/components/pages/privacy-disclosures/contact-for-questions.tsx",
+      "content_source": "section_manifest.json#05-contact-for-questions",
+      "asset_roles": [
+        "code-only live semantic content"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "Approved manifest fields (headline, phone, email) render as live HTML text, led by \"Questions about privacy or disclosures.\"."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "Code-native section per the manifest image_treatment (\"1536x512 navy utility strip\"); live text and drawn elements only, no raster asset required."
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "Frame composition preserved: Navy utility strip: heading left, live tel:/mailto: routes with gold icons right, the legal-desk texture as a veiled bottom band (bottom-anchored crop removes the source's baked gold rule)."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved navy/gold/ivory language retained on the #0B1F3A band per the manifest edge contract; Cormorant Garamond display over Inter body."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "390x844 recomposition per manifest: Convert multi-column ledgers or tables into full-width rule-separated rows in source order; preserve all decision labels and contextual links, move any documentary crop between logical groups, and use only one slim gold…"
+        }
+      },
+      "ref": "_design_inputs/pages/privacy-disclosures/refs/05-contact-for-questions.png",
+      "owners": [
+        "src/app/(site)/privacy-disclosures/page.tsx",
+        "src/components/pages/privacy-disclosures/contact-for-questions.tsx"
+      ],
+      "notes": "Navy utility strip: heading left, live tel:/mailto: routes with gold icons right, the legal-desk texture as a veiled bottom band (bottom-anchored crop removes the source's baked gold rule). The page's minimal gold seam marks end here and do not continue into the footer."
+    }
+  ]
+}

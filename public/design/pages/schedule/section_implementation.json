@@ -1,0 +1,193 @@
+{
+  "version": 1,
+  "slug": "schedule",
+  "route": "/schedule",
+  "sections": [
+    {
+      "frame": "01-schedule-hero",
+      "implementation_kind": "bespoke",
+      "implementation_owner": "src/components/pages/schedule/schedule-hero.tsx",
+      "content_source": "section_manifest.json#01-schedule-hero",
+      "asset_roles": [
+        "private scheduling office with calendar notebook"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "Approved manifest fields (eyebrow, headline, body, primary_cta) render as live HTML text, led by \"Schedule a private strategy call.\"."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "Dedicated asset renders the declared subject \"private scheduling office with calendar notebook\" with the approved \"navy image-as-canvas, no people\" crop and treatment."
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "Frame composition preserved: Navy image-as-canvas: copy left, extracted still life owns the right with a veil; the CTA anchors to #calendar-embed-state (the built id for the manifest's #calendar-embed target)."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved navy/gold/ivory language retained on the #0B1F3A band per the manifest edge contract; Cormorant Garamond display over Inter body."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "390x844 recomposition per manifest: Preserve the headline and primary action before the image; use a 4:5 or 3:2 crop centered on the declared subject/focal point, never a blurred filler panel; stack overlays into live blocks, keep at least 70% of the…"
+        }
+      },
+      "ref": "_design_inputs/pages/schedule/refs/01-schedule-hero.png",
+      "owners": [
+        "src/app/(site)/schedule/page.tsx",
+        "src/app/(site)/schedule/schedule.css",
+        "src/components/pages/schedule/schedule-hero.tsx"
+      ],
+      "notes": "Navy image-as-canvas: copy left, extracted still life owns the right with a veil; the CTA anchors to #calendar-embed-state (the built id for the manifest's #calendar-embed target). The source's top band is cropped by the CSS slot because two prop spines carry fabricated, misspelled titles; the photo's own gold thread reaches the section foot at 59%, where all later seam stubs continue."
+    },
+    {
+      "frame": "02-call-expectations",
+      "implementation_kind": "bespoke",
+      "implementation_owner": "src/components/pages/schedule/call-expectations.tsx",
+      "content_source": "section_manifest.json#02-call-expectations",
+      "asset_roles": [
+        "call expectation ledger"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "Approved manifest fields (headline, items, not_list) render as live HTML text, led by \"What to expect.\"."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "Dedicated asset renders the declared subject \"call expectation ledger\" with the approved \"ivory ledger with phone/calendar details\" crop and treatment."
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "Frame composition preserved: Warm paper ledger card rebuilt fully in code (0 contracted rasters): three expectation rows on a gold icon spine at left, the ruled 'What this is not' rail at right, single column on mobile."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved navy/gold/ivory language retained on the #F6F2E8 band per the manifest edge contract; Cormorant Garamond display over Inter body."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "390x844 recomposition per manifest: Stack the primary content group in narrative order while preserving asymmetric emphasis through offset margins and varied spacing; crop imagery around its declared focal point, keep all live text and links, and simplify…"
+        }
+      },
+      "ref": "_design_inputs/pages/schedule/refs/02-call-expectations.png",
+      "owners": [
+        "src/app/(site)/schedule/page.tsx",
+        "src/components/pages/schedule/call-expectations.tsx"
+      ],
+      "notes": "Warm paper ledger card rebuilt fully in code (0 contracted rasters): three expectation rows on a gold icon spine at left, the ruled 'What this is not' rail at right, single column on mobile."
+    },
+    {
+      "frame": "03-calendar-embed-state",
+      "implementation_kind": "bespoke",
+      "implementation_owner": "src/components/pages/schedule/calendar-embed-state.tsx",
+      "content_source": "section_manifest.json#03-calendar-embed-state",
+      "asset_roles": [
+        "quiet appointment desk with a closed calendar book and verified phone and email contact card"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "PASS with documented deliberate adaptation preserving the approved semantic gate: manifest gate-state fallback line ('Until calendar access is active…') and internal publication_note superseded — the client-supplied Google Calendar scheduler is now live, so the copy states the truthful live-state fallback with the same verified phone/email"
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "Dedicated asset renders the declared subject \"quiet appointment desk with a closed calendar book and verified phone and email contact card\" with the approved \"mist-blue editorial booking panel with no dates, time slots, radios, disabled controls, or system-status badges\" crop and treatment."
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "Frame composition preserved: The publication gate resolves exactly as the manifest's treatment prescribes: the real Google Calendar appointment iframe (descriptive title, CSS-sized 620/680px slot) replaces the reserved held-state panel."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved navy/gold/ivory language retained on the #DCE8F2 band per the manifest edge contract; Cormorant Garamond display over Inter body."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "390x844 recomposition per manifest: Stack fields and controls in one column at 390px, preserve labels above inputs, make all targets at least 44px high and CTAs full-width, keep validation/results immediately after the relevant control, and move…"
+        }
+      },
+      "ref": "_design_inputs/pages/schedule/refs/03-calendar-embed-state.png",
+      "owners": [
+        "src/app/(site)/schedule/page.tsx",
+        "src/components/pages/schedule/calendar-embed-state.tsx"
+      ],
+      "notes": "The publication gate resolves exactly as the manifest's treatment prescribes: the real Google Calendar appointment iframe (descriptive title, CSS-sized 620/680px slot) replaces the reserved held-state panel. Eyebrow, headline, and body are manifest-verbatim; the extracted notebook remains as the supporting left crop with the frame's ref-corner artifact cropped by the slot; phone/email fallback controls sit beside/below the embed. Design-review fix: the phone/email fallback card now renders above the embed at mobile widths (actionable path always visible); the scheduler slot is taller (760px mobile / 780px desktop) so the full month grid and time list are reachable, and the white card is capped at 34rem on desktop so no dead white field surrounds the calendar."
+    },
+    {
+      "frame": "04-fallback-contact",
+      "implementation_kind": "bespoke",
+      "implementation_owner": "src/components/pages/schedule/fallback-contact.tsx",
+      "content_source": "section_manifest.json#04-fallback-contact",
+      "asset_roles": [
+        "contact fallback panel"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "Approved manifest fields (headline, body, phone, email) render as live HTML text, led by \"If the calendar cannot load.\"."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "Code-native section per the manifest image_treatment (\"white contact ledger with phone/mail icons, no map pin address\"); live text and drawn elements only, no raster asset required."
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "Frame composition preserved: White decision field with manifest-verbatim heading/body and the two live routes (tel:+13012423929 'Call the office', mailto 'Email the firm') as icon→value→label rows; the extracted ledger plate is framed at right with…."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved navy/gold/ivory language retained on the #FFFFFF band per the manifest edge contract; Cormorant Garamond display over Inter body."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "390x844 recomposition per manifest: Stack the primary content group in narrative order while preserving asymmetric emphasis through offset margins and varied spacing; crop imagery around its declared focal point, keep all live text and links, and simplify…"
+        }
+      },
+      "ref": "_design_inputs/pages/schedule/refs/04-fallback-contact.png",
+      "owners": [
+        "src/app/(site)/schedule/page.tsx",
+        "src/components/pages/schedule/fallback-contact.tsx"
+      ],
+      "notes": "White decision field with manifest-verbatim heading/body and the two live routes (tel:+13012423929 'Call the office', mailto 'Email the firm') as icon→value→label rows; the extracted ledger plate is framed at right with a 1.16 scale crop that removes the source's baked ref margins and a stray glyph."
+    },
+    {
+      "frame": "05-privacy-boundary",
+      "implementation_kind": "bespoke",
+      "implementation_owner": "src/components/pages/schedule/privacy-boundary.tsx",
+      "content_source": "section_manifest.json#05-privacy-boundary",
+      "asset_roles": [
+        "code-only live semantic content"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "Approved manifest fields (headline, body) render as live HTML text, led by \"Keep sensitive information out of the scheduler.\"."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "Code-native section per the manifest image_treatment (\"1536x512 ivory strip, lock/calendar icon\"); live text and drawn elements only, no raster asset required."
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "Frame composition preserved: Ivory strip: code-native ringed calendar-lock icon opens the reading line; the page's gold line enters at the contracted seam, sweeps to the content edge and ends at a dot — it does not continue into the footer."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved navy/gold/ivory language retained on the #F6F2E8 band per the manifest edge contract; Cormorant Garamond display over Inter body."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "390x844 recomposition per manifest: Stack the primary content group in narrative order while preserving asymmetric emphasis through offset margins and varied spacing; crop imagery around its declared focal point, keep all live text and links, and simplify…"
+        }
+      },
+      "ref": "_design_inputs/pages/schedule/refs/05-privacy-boundary.png",
+      "owners": [
+        "src/app/(site)/schedule/page.tsx",
+        "src/components/pages/schedule/privacy-boundary.tsx"
+      ],
+      "notes": "Ivory strip: code-native ringed calendar-lock icon opens the reading line; the page's gold line enters at the contracted seam, sweeps to the content edge and ends at a dot — it does not continue into the footer. Design-review fix: the orphaned leftward gold run and detached dot are removed; the page line now enters on the contracted 59% seam stub and terminates deliberately on a dot at its end, with ≥32px clearance above the copy."
+    }
+  ]
+}

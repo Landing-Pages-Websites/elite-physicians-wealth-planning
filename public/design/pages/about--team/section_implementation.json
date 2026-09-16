@@ -1,0 +1,197 @@
+{
+  "version": 1,
+  "slug": "about--team",
+  "route": "/about/team",
+  "sections": [
+    {
+      "frame": "01-team-state-hero",
+      "implementation_kind": "bespoke",
+      "implementation_owner": "src/components/pages/about-team/team-state-hero.tsx",
+      "content_source": "section_manifest.json#01-team-state-hero",
+      "asset_roles": [
+        "private advisory team-room without faces"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "PASS with documented deliberate adaptation preserving the approved semantic gate: manifest hero copy ('needs confirmed bios before publication', 'require customer approval before the page can go live') is internal production language; rendered the same held state in customer voice — nothing published before it is reviewed and approved"
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "Dedicated asset renders the declared subject \"private advisory team-room without faces\" with the approved \"wide office environment, backs or empty chairs only\" crop and treatment."
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "Frame composition preserved: Faceless team-room photograph as the right canvas (empty chairs, draped coat, stethoscope), live copy on the quiet left, gold eyebrow underline, no CTA (manifest keeps this section static)."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved navy/gold/ivory language retained on the #0B1F3A band per the manifest edge contract; Cormorant Garamond display over Inter body."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "390x844 recomposition per manifest: Preserve the headline and primary action before the image; use a 4:5 or 3:2 crop centered on the declared subject/focal point, never a blurred filler panel; stack overlays into live blocks, keep at least 70% of the…"
+        }
+      },
+      "ref": "_design_inputs/pages/about--team/refs/01-team-state-hero.png",
+      "owners": [
+        "src/app/(site)/about/team/page.tsx",
+        "src/app/(site)/about/team/about--team.css",
+        "src/components/pages/about-team/team-state-hero.tsx"
+      ],
+      "notes": "Faceless team-room photograph as the right canvas (empty chairs, draped coat, stethoscope), live copy on the quiet left, gold eyebrow underline, no CTA (manifest keeps this section static)."
+    },
+    {
+      "frame": "02-verified-leadership",
+      "implementation_kind": "bespoke",
+      "implementation_owner": "src/components/pages/about-team/verified-leadership.tsx",
+      "content_source": "section_manifest.json#02-verified-leadership",
+      "asset_roles": [
+        "Michael portrait reserve"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "PASS with documented deliberate adaptation preserving the approved semantic gate: manifest body ends 'available for this reset' (production phrasing); rendered as 'the verified planner profile published today' — same verified-only boundary"
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "Dedicated asset renders the declared subject \"Michael portrait reserve\" with the approved \"neutral no-face portrait reserve; no generated staff likenesses\" crop and treatment."
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "Frame composition preserved: The ref reserves a neutral no-face slot for build time; the approved supplied portrait (shared hero-founder.png, the only permitted likeness) fills it in a gold-edged plate."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved navy/gold/ivory language retained on the #F6F2E8 band per the manifest edge contract; Cormorant Garamond display over Inter body."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "390x844 recomposition per manifest: Stack the primary content group in narrative order while preserving asymmetric emphasis through offset margins and varied spacing; crop imagery around its declared focal point, keep all live text and links, and simplify…"
+        }
+      },
+      "ref": "_design_inputs/pages/about--team/refs/02-verified-leadership.png",
+      "owners": [
+        "src/app/(site)/about/team/page.tsx",
+        "src/app/(site)/about/team/about--team.css",
+        "src/components/pages/about-team/verified-leadership.tsx"
+      ],
+      "notes": "The ref reserves a neutral no-face slot for build time; the approved supplied portrait (shared hero-founder.png, the only permitted likeness) fills it in a gold-edged plate. Verbatim headline, ChFC/RICP only, live link to /meet-michael-epps with the path string beneath, as drawn."
+    },
+    {
+      "frame": "03-bio-input-gate",
+      "implementation_kind": "bespoke",
+      "implementation_owner": "src/components/pages/about-team/bio-input-gate.tsx",
+      "content_source": "section_manifest.json#03-bio-input-gate",
+      "asset_roles": [
+        "bio intake checklist"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "PASS with documented deliberate adaptation preserving the approved semantic gate: manifest heading/items are the internal input checklist ('Needed before the directory goes live', 'Customer approval for...'); rendered as the customer-facing publication standard — same four requirements, public voice, no fake staff copy"
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "Code-native section per the manifest image_treatment (\"white ledger with no portraits\"); live text and drawn elements only, no raster asset required."
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "Frame composition preserved: White ledger: heading right-of-center, four requirements on a vertical gold rail with ring nodes, desk photograph anchored lower-left per the frame."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved navy/gold/ivory language retained on the #FFFFFF band per the manifest edge contract; Cormorant Garamond display over Inter body."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "390x844 recomposition per manifest: Stack the primary content group in narrative order while preserving asymmetric emphasis through offset margins and varied spacing; crop imagery around its declared focal point, keep all live text and links, and simplify…"
+        }
+      },
+      "ref": "_design_inputs/pages/about--team/refs/03-bio-input-gate.png",
+      "owners": [
+        "src/app/(site)/about/team/page.tsx",
+        "src/app/(site)/about/team/about--team.css",
+        "src/components/pages/about-team/bio-input-gate.tsx"
+      ],
+      "notes": "White ledger: heading right-of-center, four requirements on a vertical gold rail with ring nodes, desk photograph anchored lower-left per the frame."
+    },
+    {
+      "frame": "04-team-model",
+      "implementation_kind": "bespoke",
+      "implementation_owner": "src/components/pages/about-team/team-model.tsx",
+      "content_source": "section_manifest.json#04-team-model",
+      "asset_roles": [
+        "team coordination room map with no faces"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "PASS with documented deliberate adaptation preserving the approved semantic gate: manifest body ('The future page should show...without inventing roles, credentials, or biographies') is production guidance; rendered a customer-facing equivalent stating continuity and confirmed-only introductions"
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "Code-native section per the manifest image_treatment (\"mist-blue diagram\"); live text and drawn elements only, no raster asset required."
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "Frame composition preserved: Live-text central node ('One point of contact', navy circle with gold ring) linked by an SVG gold path to five circular workplace scenes (conference, files, hallway, notebook, tablet) on a dotted mist field — presented…."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved navy/gold/ivory language retained on the #DCE8F2 band per the manifest edge contract; Cormorant Garamond display over Inter body."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "390x844 recomposition per manifest: Stack the primary content group in narrative order while preserving asymmetric emphasis through offset margins and varied spacing; crop imagery around its declared focal point, keep all live text and links, and simplify…"
+        }
+      },
+      "ref": "_design_inputs/pages/about--team/refs/04-team-model.png",
+      "owners": [
+        "src/app/(site)/about/team/page.tsx",
+        "src/app/(site)/about/team/about--team.css",
+        "src/components/pages/about-team/team-model.tsx"
+      ],
+      "notes": "Live-text central node ('One point of contact', navy circle with gold ring) linked by an SVG gold path to five circular workplace scenes (conference, files, hallway, notebook, tablet) on a dotted mist field — presented exactly as faceless workplace photography, never as named staff, with no invented role labels. Mobile converts to a single vertical rail in source order."
+    },
+    {
+      "frame": "05-next-step",
+      "implementation_kind": "bespoke",
+      "implementation_owner": "src/components/pages/about-team/next-step.tsx",
+      "content_source": "section_manifest.json#05-next-step",
+      "asset_roles": [
+        "navy close with process/contact links"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "PASS with documented deliberate adaptation preserving the approved semantic gate: manifest body ('The team page should remain out of public release until the roster and bios are approved') is production guidance; rendered as customer-facing routing copy pointing to the verified detail"
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "Dedicated asset renders the declared subject \"navy close with process/contact links\" with the approved \"wide navy band, no people\" crop and treatment."
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "Frame composition preserved: Verbatim headline; continuous gold line through three check-nodes (Meet Michael /meet-michael-epps, Our Process /our-process, Contact the firm /contact — all live links with literal paths beneath); shelf-crop rail left…."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved navy/gold/ivory language retained on the #0B1F3A band per the manifest edge contract; Cormorant Garamond display over Inter body."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "390x844 recomposition per manifest: Stack the primary content group in narrative order while preserving asymmetric emphasis through offset margins and varied spacing; crop imagery around its declared focal point, keep all live text and links, and simplify…"
+        }
+      },
+      "ref": "_design_inputs/pages/about--team/refs/05-next-step.png",
+      "owners": [
+        "src/app/(site)/about/team/page.tsx",
+        "src/app/(site)/about/team/about--team.css",
+        "src/components/pages/about-team/next-step.tsx"
+      ],
+      "notes": "Verbatim headline; continuous gold line through three check-nodes (Meet Michael /meet-michael-epps, Our Process /our-process, Contact the firm /contact — all live links with literal paths beneath); shelf-crop rail left and lamp-desk photograph right on desktop; page-local line ends at a dot. Design-review fix: body copy corrected to \"While introductions are being completed, these pages carry the verified detail…\"; the decorative shelf rail is now desktop-only (hidden below 1024px) so mobile shows a clean navy field with no misaligned tiles or seams."
+    }
+  ]
+}

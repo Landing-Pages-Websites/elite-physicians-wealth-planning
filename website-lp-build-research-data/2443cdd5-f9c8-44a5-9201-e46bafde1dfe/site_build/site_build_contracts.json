@@ -1,0 +1,1978 @@
+{
+  "routes": {
+    "/services": {
+      "design_refs_approved": true,
+      "decomposition_complete": true,
+      "review_sheet_published": true,
+      "build_complete": true,
+      "viewport_normalized": true,
+      "primary_laptop_capture": true,
+      "section_edge_clearance_audited": true,
+      "desktop_section_captures": true,
+      "mobile_section_captures": true,
+      "qa_verdict": "PENDING",
+      "assets": [
+        {
+          "path": "public/images/design/services/elements/01-index-hero-consultation-worktable.jpg",
+          "section_owner": "services",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/services/elements/02-taxonomy-rail-clinic-corridor.jpg",
+          "section_owner": "services",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/services/elements/02-taxonomy-rail-physician-coat.jpg",
+          "section_owner": "services",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/services/elements/03-featured-path-physician-planning.jpg",
+          "section_owner": "services",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/services/elements/03-featured-path-tax-folder-detail.jpg",
+          "section_owner": "services",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/services/elements/04-topic-ledger-legacy-thumbnail.jpg",
+          "section_owner": "services",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/services/elements/04-topic-ledger-practice-thumbnail.jpg",
+          "section_owner": "services",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/services/elements/04-topic-ledger-retirement-thumbnail.jpg",
+          "section_owner": "services",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/services/elements/04-topic-ledger-tax-thumbnail.jpg",
+          "section_owner": "services",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/services/elements/04-topic-ledger-wealth-thumbnail.jpg",
+          "section_owner": "services",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/services/elements/05-next-best-step-lamp-and-chair.jpg",
+          "section_owner": "services",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/services/elements/05-next-best-step-shelf-ambience.jpg",
+          "section_owner": "services",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        }
+      ]
+    },
+    "/tax-planning-for-physicians": {
+      "design_refs_approved": true,
+      "decomposition_complete": true,
+      "review_sheet_published": true,
+      "build_complete": true,
+      "viewport_normalized": true,
+      "primary_laptop_capture": true,
+      "section_edge_clearance_audited": true,
+      "desktop_section_captures": true,
+      "mobile_section_captures": true,
+      "qa_verdict": "PENDING",
+      "assets": [
+        {
+          "path": "public/images/design/tax-planning-for-physicians/elements/01-opening-docket-tax-worktable.jpg",
+          "section_owner": "tax-planning-for-physicians",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/tax-planning-for-physicians/elements/02-demand-situations-tax-review-still-life.jpg",
+          "section_owner": "tax-planning-for-physicians",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/tax-planning-for-physicians/elements/03-documents-needed-document-strip.jpg",
+          "section_owner": "tax-planning-for-physicians",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/tax-planning-for-physicians/elements/04-coordination-boundary-attorney-room-detail.jpg",
+          "section_owner": "tax-planning-for-physicians",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/tax-planning-for-physicians/elements/04-coordination-boundary-cpa-room-detail.jpg",
+          "section_owner": "tax-planning-for-physicians",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/tax-planning-for-physicians/elements/04-coordination-boundary-elite-room-detail.jpg",
+          "section_owner": "tax-planning-for-physicians",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/tax-planning-for-physicians/elements/04-coordination-boundary-tpa-room-detail.jpg",
+          "section_owner": "tax-planning-for-physicians",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/tax-planning-for-physicians/elements/05-adjacent-planning-legacy-route.jpg",
+          "section_owner": "tax-planning-for-physicians",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/tax-planning-for-physicians/elements/05-adjacent-planning-practice-route.jpg",
+          "section_owner": "tax-planning-for-physicians",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/tax-planning-for-physicians/elements/05-adjacent-planning-retirement-route.jpg",
+          "section_owner": "tax-planning-for-physicians",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/tax-planning-for-physicians/elements/05-adjacent-planning-wealth-route.jpg",
+          "section_owner": "tax-planning-for-physicians",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/tax-planning-for-physicians/elements/06-next-step-closing-office.jpg",
+          "section_owner": "tax-planning-for-physicians",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        }
+      ]
+    },
+    "/wealth-management-for-physicians": {
+      "design_refs_approved": true,
+      "decomposition_complete": true,
+      "review_sheet_published": true,
+      "build_complete": true,
+      "viewport_normalized": true,
+      "primary_laptop_capture": true,
+      "section_edge_clearance_audited": true,
+      "desktop_section_captures": true,
+      "mobile_section_captures": true,
+      "qa_verdict": "PENDING",
+      "assets": [
+        {
+          "path": "public/images/design/wealth-management-for-physicians/elements/01-opening-docket-portfolio-policy-desk.jpg",
+          "section_owner": "wealth-management-for-physicians",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/wealth-management-for-physicians/elements/02-demand-situations-portfolio-review-still-life.jpg",
+          "section_owner": "wealth-management-for-physicians",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/wealth-management-for-physicians/elements/03-documents-needed-portfolio-document-strip.jpg",
+          "section_owner": "wealth-management-for-physicians",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/wealth-management-for-physicians/elements/05-adjacent-planning-checkup-route.jpg",
+          "section_owner": "wealth-management-for-physicians",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/wealth-management-for-physicians/elements/05-adjacent-planning-legacy-route.jpg",
+          "section_owner": "wealth-management-for-physicians",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/wealth-management-for-physicians/elements/05-adjacent-planning-office-edge.jpg",
+          "section_owner": "wealth-management-for-physicians",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/wealth-management-for-physicians/elements/05-adjacent-planning-retirement-route.jpg",
+          "section_owner": "wealth-management-for-physicians",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/wealth-management-for-physicians/elements/05-adjacent-planning-tax-route.jpg",
+          "section_owner": "wealth-management-for-physicians",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/wealth-management-for-physicians/elements/06-next-step-closing-consultation-desk.jpg",
+          "section_owner": "wealth-management-for-physicians",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        }
+      ]
+    },
+    "/retirement-planning-for-physicians": {
+      "design_refs_approved": true,
+      "decomposition_complete": true,
+      "review_sheet_published": true,
+      "build_complete": true,
+      "viewport_normalized": true,
+      "primary_laptop_capture": true,
+      "section_edge_clearance_audited": true,
+      "desktop_section_captures": true,
+      "mobile_section_captures": true,
+      "qa_verdict": "PENDING",
+      "assets": [
+        {
+          "path": "public/images/design/retirement-planning-for-physicians/elements/01-opening-docket-retirement-dossier.jpg",
+          "section_owner": "retirement-planning-for-physicians",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/retirement-planning-for-physicians/elements/02-demand-situations-retirement-book-and-glasses.jpg",
+          "section_owner": "retirement-planning-for-physicians",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/retirement-planning-for-physicians/elements/03-documents-needed-practice-documents.jpg",
+          "section_owner": "retirement-planning-for-physicians",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/retirement-planning-for-physicians/elements/03-documents-needed-retirement-documents.jpg",
+          "section_owner": "retirement-planning-for-physicians",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/retirement-planning-for-physicians/elements/05-adjacent-planning-checklist-route.jpg",
+          "section_owner": "retirement-planning-for-physicians",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/retirement-planning-for-physicians/elements/05-adjacent-planning-legacy-route.jpg",
+          "section_owner": "retirement-planning-for-physicians",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/retirement-planning-for-physicians/elements/05-adjacent-planning-tax-route.jpg",
+          "section_owner": "retirement-planning-for-physicians",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/retirement-planning-for-physicians/elements/05-adjacent-planning-wealth-route.jpg",
+          "section_owner": "retirement-planning-for-physicians",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/retirement-planning-for-physicians/elements/06-next-step-lamp-lit-retirement-desk.jpg",
+          "section_owner": "retirement-planning-for-physicians",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        }
+      ]
+    },
+    "/practice-owner-planning": {
+      "design_refs_approved": true,
+      "decomposition_complete": true,
+      "review_sheet_published": true,
+      "build_complete": true,
+      "viewport_normalized": true,
+      "primary_laptop_capture": true,
+      "section_edge_clearance_audited": true,
+      "desktop_section_captures": true,
+      "mobile_section_captures": true,
+      "qa_verdict": "PENDING",
+      "assets": [
+        {
+          "path": "public/images/design/practice-owner-planning/elements/01-opening-docket-practice-owner-worktable.jpg",
+          "section_owner": "practice-owner-planning",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/practice-owner-planning/elements/02-demand-situations-practice-review-still-life.jpg",
+          "section_owner": "practice-owner-planning",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/practice-owner-planning/elements/03-documents-needed-practice-document-fan.jpg",
+          "section_owner": "practice-owner-planning",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/practice-owner-planning/elements/04-coordination-boundary-attorney-niche.jpg",
+          "section_owner": "practice-owner-planning",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/practice-owner-planning/elements/04-coordination-boundary-cpa-niche.jpg",
+          "section_owner": "practice-owner-planning",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/practice-owner-planning/elements/04-coordination-boundary-elite-niche.jpg",
+          "section_owner": "practice-owner-planning",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/practice-owner-planning/elements/04-coordination-boundary-tpa-niche.jpg",
+          "section_owner": "practice-owner-planning",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/practice-owner-planning/elements/05-adjacent-planning-cash-balance-route.jpg",
+          "section_owner": "practice-owner-planning",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/practice-owner-planning/elements/05-adjacent-planning-retirement-route.jpg",
+          "section_owner": "practice-owner-planning",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/practice-owner-planning/elements/05-adjacent-planning-sale-route.jpg",
+          "section_owner": "practice-owner-planning",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/practice-owner-planning/elements/05-adjacent-planning-tax-route.jpg",
+          "section_owner": "practice-owner-planning",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/practice-owner-planning/elements/06-next-step-practice-closing-office.jpg",
+          "section_owner": "practice-owner-planning",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        }
+      ]
+    },
+    "/legacy-estate-planning": {
+      "design_refs_approved": true,
+      "decomposition_complete": true,
+      "review_sheet_published": true,
+      "build_complete": true,
+      "viewport_normalized": true,
+      "primary_laptop_capture": true,
+      "section_edge_clearance_audited": true,
+      "desktop_section_captures": true,
+      "mobile_section_captures": true,
+      "qa_verdict": "PENDING",
+      "assets": [
+        {
+          "path": "public/images/design/legacy-estate-planning/elements/01-opening-docket-estate-coordination-ledger.jpg",
+          "section_owner": "legacy-estate-planning",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/legacy-estate-planning/elements/02-demand-situations-estate-review-still-life.jpg",
+          "section_owner": "legacy-estate-planning",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/legacy-estate-planning/elements/03-documents-needed-estate-summary-strip.jpg",
+          "section_owner": "legacy-estate-planning",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/legacy-estate-planning/elements/05-adjacent-planning-ownership-route.jpg",
+          "section_owner": "legacy-estate-planning",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/legacy-estate-planning/elements/05-adjacent-planning-retirement-route.jpg",
+          "section_owner": "legacy-estate-planning",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/legacy-estate-planning/elements/05-adjacent-planning-survivor-route.jpg",
+          "section_owner": "legacy-estate-planning",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/legacy-estate-planning/elements/05-adjacent-planning-wealth-route.jpg",
+          "section_owner": "legacy-estate-planning",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/legacy-estate-planning/elements/06-next-step-legacy-closing-office.jpg",
+          "section_owner": "legacy-estate-planning",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        }
+      ]
+    },
+    "/who-we-serve": {
+      "design_refs_approved": true,
+      "decomposition_complete": true,
+      "review_sheet_published": true,
+      "build_complete": true,
+      "viewport_normalized": true,
+      "primary_laptop_capture": true,
+      "section_edge_clearance_audited": true,
+      "desktop_section_captures": true,
+      "mobile_section_captures": true,
+      "qa_verdict": "PENDING",
+      "assets": [
+        {
+          "path": "public/images/design/who-we-serve/elements/featured-dentist-photo.jpg",
+          "section_owner": "who-we-serve",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/who-we-serve/elements/featured-main-photo.jpg",
+          "section_owner": "who-we-serve",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/who-we-serve/elements/featured-surgeon-photo.jpg",
+          "section_owner": "who-we-serve",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/who-we-serve/elements/index-hero-background.jpg",
+          "section_owner": "who-we-serve",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/who-we-serve/elements/office-strip.jpg",
+          "section_owner": "who-we-serve",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/who-we-serve/elements/taxonomy-executive-photo.jpg",
+          "section_owner": "who-we-serve",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/who-we-serve/elements/taxonomy-planner-photo.jpg",
+          "section_owner": "who-we-serve",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/who-we-serve/elements/taxonomy-surgeons-photo.jpg",
+          "section_owner": "who-we-serve",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/who-we-serve/elements/topic-ledger-material-swatches.jpg",
+          "section_owner": "who-we-serve",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        }
+      ]
+    },
+    "/physicians-specialists": {
+      "design_refs_approved": true,
+      "decomposition_complete": true,
+      "review_sheet_published": true,
+      "build_complete": true,
+      "viewport_normalized": true,
+      "primary_laptop_capture": true,
+      "section_edge_clearance_audited": true,
+      "desktop_section_captures": true,
+      "mobile_section_captures": true,
+      "qa_verdict": "PENDING",
+      "assets": [
+        {
+          "path": "public/images/design/physicians-specialists/elements/career-scenario-scene.jpg",
+          "section_owner": "physicians-specialists",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/physicians-specialists/elements/decision-patterns-photo.jpg",
+          "section_owner": "physicians-specialists",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/physicians-specialists/elements/related-paths-background.jpg",
+          "section_owner": "physicians-specialists",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/physicians-specialists/elements/review-questions-still-life.jpg",
+          "section_owner": "physicians-specialists",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/physicians-specialists/elements/role-context-scene.jpg",
+          "section_owner": "physicians-specialists",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/physicians-specialists/elements/room-legacy.jpg",
+          "section_owner": "physicians-specialists",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/physicians-specialists/elements/room-practice.jpg",
+          "section_owner": "physicians-specialists",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/physicians-specialists/elements/room-retirement.jpg",
+          "section_owner": "physicians-specialists",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/physicians-specialists/elements/room-tax.jpg",
+          "section_owner": "physicians-specialists",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/physicians-specialists/elements/room-wealth.jpg",
+          "section_owner": "physicians-specialists",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        }
+      ]
+    },
+    "/financial-planning-for-surgeons": {
+      "design_refs_approved": true,
+      "decomposition_complete": true,
+      "review_sheet_published": true,
+      "build_complete": true,
+      "viewport_normalized": true,
+      "primary_laptop_capture": true,
+      "section_edge_clearance_audited": true,
+      "desktop_section_captures": true,
+      "mobile_section_captures": true,
+      "qa_verdict": "PENDING",
+      "assets": [
+        {
+          "path": "public/images/design/financial-planning-for-surgeons/elements/career-scenario-scene.jpg",
+          "section_owner": "financial-planning-for-surgeons",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/financial-planning-for-surgeons/elements/coordination-still-life.jpg",
+          "section_owner": "financial-planning-for-surgeons",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/financial-planning-for-surgeons/elements/decision-patterns-photo.jpg",
+          "section_owner": "financial-planning-for-surgeons",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/financial-planning-for-surgeons/elements/operating-room-strip.jpg",
+          "section_owner": "financial-planning-for-surgeons",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/financial-planning-for-surgeons/elements/related-paths-background.jpg",
+          "section_owner": "financial-planning-for-surgeons",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/financial-planning-for-surgeons/elements/review-questions-still-life.jpg",
+          "section_owner": "financial-planning-for-surgeons",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/financial-planning-for-surgeons/elements/role-context-scene.jpg",
+          "section_owner": "financial-planning-for-surgeons",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        }
+      ]
+    },
+    "/financial-planning-for-dentists": {
+      "design_refs_approved": true,
+      "decomposition_complete": true,
+      "review_sheet_published": true,
+      "build_complete": true,
+      "viewport_normalized": true,
+      "primary_laptop_capture": true,
+      "section_edge_clearance_audited": true,
+      "desktop_section_captures": true,
+      "mobile_section_captures": true,
+      "qa_verdict": "PENDING",
+      "assets": [
+        {
+          "path": "public/images/design/financial-planning-for-dentists/elements/career-scenario-scene.jpg",
+          "section_owner": "financial-planning-for-dentists",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/financial-planning-for-dentists/elements/decision-patterns-scene.jpg",
+          "section_owner": "financial-planning-for-dentists",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/financial-planning-for-dentists/elements/related-paths-background.jpg",
+          "section_owner": "financial-planning-for-dentists",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/financial-planning-for-dentists/elements/review-questions-still-life.jpg",
+          "section_owner": "financial-planning-for-dentists",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/financial-planning-for-dentists/elements/role-context-scene.jpg",
+          "section_owner": "financial-planning-for-dentists",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/financial-planning-for-dentists/elements/room-legacy.jpg",
+          "section_owner": "financial-planning-for-dentists",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/financial-planning-for-dentists/elements/room-practice.jpg",
+          "section_owner": "financial-planning-for-dentists",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/financial-planning-for-dentists/elements/room-retirement.jpg",
+          "section_owner": "financial-planning-for-dentists",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/financial-planning-for-dentists/elements/room-tax.jpg",
+          "section_owner": "financial-planning-for-dentists",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/financial-planning-for-dentists/elements/room-wealth.jpg",
+          "section_owner": "financial-planning-for-dentists",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        }
+      ]
+    },
+    "/financial-planning-for-crnas-nps-pas": {
+      "design_refs_approved": true,
+      "decomposition_complete": true,
+      "review_sheet_published": true,
+      "build_complete": true,
+      "viewport_normalized": true,
+      "primary_laptop_capture": true,
+      "section_edge_clearance_audited": true,
+      "desktop_section_captures": true,
+      "mobile_section_captures": true,
+      "qa_verdict": "PENDING",
+      "assets": [
+        {
+          "path": "public/images/design/financial-planning-for-crnas-nps-pas/elements/career-scenario-scene.jpg",
+          "section_owner": "financial-planning-for-crnas-nps-pas",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/financial-planning-for-crnas-nps-pas/elements/coordination-office-edge-left.jpg",
+          "section_owner": "financial-planning-for-crnas-nps-pas",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/financial-planning-for-crnas-nps-pas/elements/coordination-office-edge-right.jpg",
+          "section_owner": "financial-planning-for-crnas-nps-pas",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/financial-planning-for-crnas-nps-pas/elements/decision-patterns-photo.jpg",
+          "section_owner": "financial-planning-for-crnas-nps-pas",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/financial-planning-for-crnas-nps-pas/elements/related-paths-background.jpg",
+          "section_owner": "financial-planning-for-crnas-nps-pas",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/financial-planning-for-crnas-nps-pas/elements/review-questions-still-life.jpg",
+          "section_owner": "financial-planning-for-crnas-nps-pas",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/financial-planning-for-crnas-nps-pas/elements/role-context-scene.jpg",
+          "section_owner": "financial-planning-for-crnas-nps-pas",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/financial-planning-for-crnas-nps-pas/elements/window-still-life-strip.jpg",
+          "section_owner": "financial-planning-for-crnas-nps-pas",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        }
+      ]
+    },
+    "/financial-planning-for-healthcare-executives": {
+      "design_refs_approved": true,
+      "decomposition_complete": true,
+      "review_sheet_published": true,
+      "build_complete": true,
+      "viewport_normalized": true,
+      "primary_laptop_capture": true,
+      "section_edge_clearance_audited": true,
+      "desktop_section_captures": true,
+      "mobile_section_captures": true,
+      "qa_verdict": "PENDING",
+      "assets": [
+        {
+          "path": "public/images/design/financial-planning-for-healthcare-executives/elements/career-scenario-scene.jpg",
+          "section_owner": "financial-planning-for-healthcare-executives",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/financial-planning-for-healthcare-executives/elements/coordination-office-edge-left.jpg",
+          "section_owner": "financial-planning-for-healthcare-executives",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/financial-planning-for-healthcare-executives/elements/coordination-office-edge-right.jpg",
+          "section_owner": "financial-planning-for-healthcare-executives",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/financial-planning-for-healthcare-executives/elements/decision-patterns-photo.jpg",
+          "section_owner": "financial-planning-for-healthcare-executives",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/financial-planning-for-healthcare-executives/elements/related-paths-background.jpg",
+          "section_owner": "financial-planning-for-healthcare-executives",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/financial-planning-for-healthcare-executives/elements/review-questions-still-life.jpg",
+          "section_owner": "financial-planning-for-healthcare-executives",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/financial-planning-for-healthcare-executives/elements/role-context-scene.jpg",
+          "section_owner": "financial-planning-for-healthcare-executives",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        }
+      ]
+    },
+    "/physicians": {
+      "design_refs_approved": true,
+      "decomposition_complete": true,
+      "review_sheet_published": true,
+      "build_complete": true,
+      "viewport_normalized": true,
+      "primary_laptop_capture": true,
+      "section_edge_clearance_audited": true,
+      "desktop_section_captures": true,
+      "mobile_section_captures": true,
+      "qa_verdict": "PENDING",
+      "assets": [
+        {
+          "path": "public/images/design/physicians/elements/01-index-hero-canvas.jpg",
+          "section_owner": "physicians",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/physicians/elements/02-taxonomy-rail-photo.jpg",
+          "section_owner": "physicians",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/physicians/elements/03-featured-path-photo.jpg",
+          "section_owner": "physicians",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/physicians/elements/04-topic-ledger-photo.jpg",
+          "section_owner": "physicians",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/physicians/elements/05-next-best-step-canvas.jpg",
+          "section_owner": "physicians",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        }
+      ]
+    },
+    "/our-process": {
+      "design_refs_approved": true,
+      "decomposition_complete": true,
+      "review_sheet_published": true,
+      "build_complete": true,
+      "viewport_normalized": true,
+      "primary_laptop_capture": true,
+      "section_edge_clearance_audited": true,
+      "desktop_section_captures": true,
+      "mobile_section_captures": true,
+      "qa_verdict": "PENDING",
+      "assets": [
+        {
+          "path": "public/images/design/our-process/elements/01-blueprint-origin-canvas.jpg",
+          "section_owner": "our-process",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/our-process/elements/02-six-phase-route-photo.jpg",
+          "section_owner": "our-process",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/our-process/elements/03-first-meeting-inputs-photo.jpg",
+          "section_owner": "our-process",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/our-process/elements/04-professional-coordination-attorney.png",
+          "section_owner": "our-process",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/our-process/elements/04-professional-coordination-cpa.png",
+          "section_owner": "our-process",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/our-process/elements/04-professional-coordination-financial-planner.png",
+          "section_owner": "our-process",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/our-process/elements/04-professional-coordination-insurance-professional.png",
+          "section_owner": "our-process",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/our-process/elements/04-professional-coordination-tpa-payroll.png",
+          "section_owner": "our-process",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/our-process/elements/05-ongoing-review-photo.jpg",
+          "section_owner": "our-process",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/our-process/elements/06-start-blueprint-canvas.jpg",
+          "section_owner": "our-process",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        }
+      ]
+    },
+    "/resources": {
+      "design_refs_approved": true,
+      "decomposition_complete": true,
+      "review_sheet_published": true,
+      "build_complete": true,
+      "viewport_normalized": true,
+      "primary_laptop_capture": true,
+      "section_edge_clearance_audited": true,
+      "desktop_section_captures": true,
+      "mobile_section_captures": true,
+      "qa_verdict": "PENDING",
+      "assets": [
+        {
+          "path": "public/images/design/resources/elements/01-editorial-hero-canvas.jpg",
+          "section_owner": "resources",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/resources/elements/02-topic-taxonomy-photo.jpg",
+          "section_owner": "resources",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/resources/elements/03-featured-index-photo.jpg",
+          "section_owner": "resources",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/resources/elements/04-content-state-ledger-photo.jpg",
+          "section_owner": "resources",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/resources/elements/05-subscribe-or-schedule-canvas.jpg",
+          "section_owner": "resources",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        }
+      ]
+    },
+    "/insights": {
+      "design_refs_approved": true,
+      "decomposition_complete": true,
+      "review_sheet_published": true,
+      "build_complete": true,
+      "viewport_normalized": true,
+      "primary_laptop_capture": true,
+      "section_edge_clearance_audited": true,
+      "desktop_section_captures": true,
+      "mobile_section_captures": true,
+      "qa_verdict": "PENDING",
+      "assets": [
+        {
+          "path": "public/images/design/insights/elements/01-editorial-hero-canvas.jpg",
+          "section_owner": "insights",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/insights/elements/02-topic-taxonomy-photo.jpg",
+          "section_owner": "insights",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/insights/elements/03-featured-index-photo.jpg",
+          "section_owner": "insights",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/insights/elements/05-subscribe-or-schedule-canvas.jpg",
+          "section_owner": "insights",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        }
+      ]
+    },
+    "/insights/physician-financial-checkup-seven-areas": {
+      "design_refs_approved": true,
+      "decomposition_complete": true,
+      "review_sheet_published": true,
+      "build_complete": true,
+      "viewport_normalized": true,
+      "primary_laptop_capture": true,
+      "section_edge_clearance_audited": true,
+      "desktop_section_captures": true,
+      "mobile_section_captures": true,
+      "qa_verdict": "PENDING",
+      "assets": [
+        {
+          "path": "public/images/design/insights--physician-financial-checkup-seven-areas/elements/01-editorial-state-hero-photo.jpg",
+          "section_owner": "insights--physician-financial-checkup-seven-areas",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/insights--physician-financial-checkup-seven-areas/elements/02-verified-teaser-photo.jpg",
+          "section_owner": "insights--physician-financial-checkup-seven-areas",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/insights--physician-financial-checkup-seven-areas/elements/03-manuscript-gate-photo.jpg",
+          "section_owner": "insights--physician-financial-checkup-seven-areas",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/insights--physician-financial-checkup-seven-areas/elements/04-source-and-review-gate-photo.jpg",
+          "section_owner": "insights--physician-financial-checkup-seven-areas",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/insights--physician-financial-checkup-seven-areas/elements/05-related-reading-photo.jpg",
+          "section_owner": "insights--physician-financial-checkup-seven-areas",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        }
+      ]
+    },
+    "/insights/first-five-years-financial-moves": {
+      "design_refs_approved": true,
+      "decomposition_complete": true,
+      "review_sheet_published": true,
+      "build_complete": true,
+      "viewport_normalized": true,
+      "primary_laptop_capture": true,
+      "section_edge_clearance_audited": true,
+      "desktop_section_captures": true,
+      "mobile_section_captures": true,
+      "qa_verdict": "PENDING",
+      "assets": [
+        {
+          "path": "public/images/design/insights--first-five-years-financial-moves/elements/01-editorial-state-hero-photo.jpg",
+          "section_owner": "insights--first-five-years-financial-moves",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/insights--first-five-years-financial-moves/elements/02-verified-teaser-photo.jpg",
+          "section_owner": "insights--first-five-years-financial-moves",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/insights--first-five-years-financial-moves/elements/03-manuscript-gate-photo.jpg",
+          "section_owner": "insights--first-five-years-financial-moves",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/insights--first-five-years-financial-moves/elements/04-source-and-review-gate-photo.jpg",
+          "section_owner": "insights--first-five-years-financial-moves",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/insights--first-five-years-financial-moves/elements/05-related-reading-photo.jpg",
+          "section_owner": "insights--first-five-years-financial-moves",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        }
+      ]
+    },
+    "/insights/w2-1099-practice-income-questions": {
+      "design_refs_approved": true,
+      "decomposition_complete": true,
+      "review_sheet_published": true,
+      "build_complete": true,
+      "viewport_normalized": true,
+      "primary_laptop_capture": true,
+      "section_edge_clearance_audited": true,
+      "desktop_section_captures": true,
+      "mobile_section_captures": true,
+      "qa_verdict": "PENDING",
+      "assets": [
+        {
+          "path": "public/images/design/insights--w2-1099-practice-income-questions/elements/01-editorial-state-hero-desk-scene.png",
+          "section_owner": "insights--w2-1099-practice-income-questions",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/insights--w2-1099-practice-income-questions/elements/02-verified-teaser-pen-paper-composition.png",
+          "section_owner": "insights--w2-1099-practice-income-questions",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/insights--w2-1099-practice-income-questions/elements/03-manuscript-gate-envelope-wax-seal.png",
+          "section_owner": "insights--w2-1099-practice-income-questions",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/insights--w2-1099-practice-income-questions/elements/04-source-and-review-gate-filing-stacks.png",
+          "section_owner": "insights--w2-1099-practice-income-questions",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/insights--w2-1099-practice-income-questions/elements/05-related-reading-medical-books-stethoscope.png",
+          "section_owner": "insights--w2-1099-practice-income-questions",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        }
+      ]
+    },
+    "/insights/cash-balance-defined-benefit-decision-guide": {
+      "design_refs_approved": true,
+      "decomposition_complete": true,
+      "review_sheet_published": true,
+      "build_complete": true,
+      "viewport_normalized": true,
+      "primary_laptop_capture": true,
+      "section_edge_clearance_audited": true,
+      "desktop_section_captures": true,
+      "mobile_section_captures": true,
+      "qa_verdict": "PENDING",
+      "assets": [
+        {
+          "path": "public/images/design/insights--cash-balance-defined-benefit-decision-guide/elements/01-editorial-state-hero-desk-scene.png",
+          "section_owner": "insights--cash-balance-defined-benefit-decision-guide",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/insights--cash-balance-defined-benefit-decision-guide/elements/02-verified-teaser-notebook-cover.png",
+          "section_owner": "insights--cash-balance-defined-benefit-decision-guide",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/insights--cash-balance-defined-benefit-decision-guide/elements/02-verified-teaser-papers-pen.png",
+          "section_owner": "insights--cash-balance-defined-benefit-decision-guide",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/insights--cash-balance-defined-benefit-decision-guide/elements/03-manuscript-gate-envelope-clipboard.png",
+          "section_owner": "insights--cash-balance-defined-benefit-decision-guide",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/insights--cash-balance-defined-benefit-decision-guide/elements/04-source-and-review-gate-hands-documents.png",
+          "section_owner": "insights--cash-balance-defined-benefit-decision-guide",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/insights--cash-balance-defined-benefit-decision-guide/elements/05-related-reading-navy-folder.png",
+          "section_owner": "insights--cash-balance-defined-benefit-decision-guide",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        }
+      ]
+    },
+    "/insights/coordinating-cpa-attorney-tpa-advisor": {
+      "design_refs_approved": true,
+      "decomposition_complete": true,
+      "review_sheet_published": true,
+      "build_complete": true,
+      "viewport_normalized": true,
+      "primary_laptop_capture": true,
+      "section_edge_clearance_audited": true,
+      "desktop_section_captures": true,
+      "mobile_section_captures": true,
+      "qa_verdict": "PENDING",
+      "assets": [
+        {
+          "path": "public/images/design/insights--coordinating-cpa-attorney-tpa-advisor/elements/01-editorial-state-hero-kraft-envelope-portfolio.png",
+          "section_owner": "insights--coordinating-cpa-attorney-tpa-advisor",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/insights--coordinating-cpa-attorney-tpa-advisor/elements/03-manuscript-gate-kraft-envelope-folder.png",
+          "section_owner": "insights--coordinating-cpa-attorney-tpa-advisor",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/insights--coordinating-cpa-attorney-tpa-advisor/elements/04-source-and-review-gate-advisor-reviewing-documents.png",
+          "section_owner": "insights--coordinating-cpa-attorney-tpa-advisor",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/insights--coordinating-cpa-attorney-tpa-advisor/elements/05-related-reading-documents-books-surface.png",
+          "section_owner": "insights--coordinating-cpa-attorney-tpa-advisor",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        }
+      ]
+    },
+    "/insights/five-years-from-retirement-checklist": {
+      "design_refs_approved": true,
+      "decomposition_complete": true,
+      "review_sheet_published": true,
+      "build_complete": true,
+      "viewport_normalized": true,
+      "primary_laptop_capture": true,
+      "section_edge_clearance_audited": true,
+      "desktop_section_captures": true,
+      "mobile_section_captures": true,
+      "qa_verdict": "PENDING",
+      "assets": [
+        {
+          "path": "public/images/design/insights--five-years-from-retirement-checklist/elements/01-editorial-state-hero-desk-hero.png",
+          "section_owner": "insights--five-years-from-retirement-checklist",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/insights--five-years-from-retirement-checklist/elements/02-verified-teaser-pen-notebook.png",
+          "section_owner": "insights--five-years-from-retirement-checklist",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/insights--five-years-from-retirement-checklist/elements/03-manuscript-gate-envelope.png",
+          "section_owner": "insights--five-years-from-retirement-checklist",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/insights--five-years-from-retirement-checklist/elements/04-source-and-review-gate-documents.png",
+          "section_owner": "insights--five-years-from-retirement-checklist",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/insights--five-years-from-retirement-checklist/elements/05-related-reading-retirement-notebook.png",
+          "section_owner": "insights--five-years-from-retirement-checklist",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        }
+      ]
+    },
+    "/insights/disability-insurance-review-overlooked": {
+      "design_refs_approved": true,
+      "decomposition_complete": true,
+      "review_sheet_published": true,
+      "build_complete": true,
+      "viewport_normalized": true,
+      "primary_laptop_capture": true,
+      "section_edge_clearance_audited": true,
+      "desktop_section_captures": true,
+      "mobile_section_captures": true,
+      "qa_verdict": "PENDING",
+      "assets": [
+        {
+          "path": "public/images/design/insights--disability-insurance-review-overlooked/elements/01-editorial-state-hero-policy-documents.png",
+          "section_owner": "insights--disability-insurance-review-overlooked",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/insights--disability-insurance-review-overlooked/elements/02-verified-teaser-folder-files.png",
+          "section_owner": "insights--disability-insurance-review-overlooked",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/insights--disability-insurance-review-overlooked/elements/02-verified-teaser-gates-illustration.png",
+          "section_owner": "insights--disability-insurance-review-overlooked",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/insights--disability-insurance-review-overlooked/elements/03-manuscript-gate-folder.png",
+          "section_owner": "insights--disability-insurance-review-overlooked",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/insights--disability-insurance-review-overlooked/elements/04-source-review-gate-filing-cabinet.png",
+          "section_owner": "insights--disability-insurance-review-overlooked",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/insights--disability-insurance-review-overlooked/elements/05-related-reading-notebook-stethoscope.png",
+          "section_owner": "insights--disability-insurance-review-overlooked",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        }
+      ]
+    },
+    "/insights/roth-conversion-timing": {
+      "design_refs_approved": true,
+      "decomposition_complete": true,
+      "review_sheet_published": true,
+      "build_complete": true,
+      "viewport_normalized": true,
+      "primary_laptop_capture": true,
+      "section_edge_clearance_audited": true,
+      "desktop_section_captures": true,
+      "mobile_section_captures": true,
+      "qa_verdict": "PENDING",
+      "assets": [
+        {
+          "path": "public/images/design/insights--roth-conversion-timing/elements/01-editorial-state-hero-hero-photography.png",
+          "section_owner": "insights--roth-conversion-timing",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/insights--roth-conversion-timing/elements/02-verified-teaser-right-col-photography.png",
+          "section_owner": "insights--roth-conversion-timing",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/insights--roth-conversion-timing/elements/04-source-and-review-gate-books-photography.png",
+          "section_owner": "insights--roth-conversion-timing",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/insights--roth-conversion-timing/elements/05-related-reading-stethoscope-photography.png",
+          "section_owner": "insights--roth-conversion-timing",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        }
+      ]
+    },
+    "/insights/preparing-for-practice-sale": {
+      "design_refs_approved": true,
+      "decomposition_complete": true,
+      "review_sheet_published": true,
+      "build_complete": true,
+      "viewport_normalized": true,
+      "primary_laptop_capture": true,
+      "section_edge_clearance_audited": true,
+      "desktop_section_captures": true,
+      "mobile_section_captures": true,
+      "qa_verdict": "PENDING",
+      "assets": [
+        {
+          "path": "public/images/design/insights--preparing-for-practice-sale/elements/hero-practice-portfolio.jpg",
+          "section_owner": "insights--preparing-for-practice-sale",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/insights--preparing-for-practice-sale/elements/manuscript-gate-folder.jpg",
+          "section_owner": "insights--preparing-for-practice-sale",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/insights--preparing-for-practice-sale/elements/related-path-files.jpg",
+          "section_owner": "insights--preparing-for-practice-sale",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/insights--preparing-for-practice-sale/elements/source-review-files.jpg",
+          "section_owner": "insights--preparing-for-practice-sale",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/insights--preparing-for-practice-sale/elements/verified-source-files.jpg",
+          "section_owner": "insights--preparing-for-practice-sale",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        }
+      ]
+    },
+    "/insights/beneficiaries-trusts-ownership-checklist": {
+      "design_refs_approved": true,
+      "decomposition_complete": true,
+      "review_sheet_published": true,
+      "build_complete": true,
+      "viewport_normalized": true,
+      "primary_laptop_capture": true,
+      "section_edge_clearance_audited": true,
+      "desktop_section_captures": true,
+      "mobile_section_captures": true,
+      "qa_verdict": "PENDING",
+      "assets": [
+        {
+          "path": "public/images/design/insights--beneficiaries-trusts-ownership-checklist/elements/estate-manuscript-files.jpg",
+          "section_owner": "insights--beneficiaries-trusts-ownership-checklist",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/insights--beneficiaries-trusts-ownership-checklist/elements/estate-related-still-life.jpg",
+          "section_owner": "insights--beneficiaries-trusts-ownership-checklist",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/insights--beneficiaries-trusts-ownership-checklist/elements/estate-source-review-desk.jpg",
+          "section_owner": "insights--beneficiaries-trusts-ownership-checklist",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/insights--beneficiaries-trusts-ownership-checklist/elements/hero-estate-plan-ledgers.jpg",
+          "section_owner": "insights--beneficiaries-trusts-ownership-checklist",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/insights--beneficiaries-trusts-ownership-checklist/elements/verified-estate-binder.jpg",
+          "section_owner": "insights--beneficiaries-trusts-ownership-checklist",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        }
+      ]
+    },
+    "/insights/charitable-giving-strategies": {
+      "design_refs_approved": true,
+      "decomposition_complete": true,
+      "review_sheet_published": true,
+      "build_complete": true,
+      "viewport_normalized": true,
+      "primary_laptop_capture": true,
+      "section_edge_clearance_audited": true,
+      "desktop_section_captures": true,
+      "mobile_section_captures": true,
+      "qa_verdict": "PENDING",
+      "assets": [
+        {
+          "path": "public/images/design/insights--charitable-giving-strategies/elements/charitable-manuscript-envelope.jpg",
+          "section_owner": "insights--charitable-giving-strategies",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/insights--charitable-giving-strategies/elements/charitable-related-ledgers.jpg",
+          "section_owner": "insights--charitable-giving-strategies",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/insights--charitable-giving-strategies/elements/charitable-source-files.jpg",
+          "section_owner": "insights--charitable-giving-strategies",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/insights--charitable-giving-strategies/elements/hero-donor-intent.jpg",
+          "section_owner": "insights--charitable-giving-strategies",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/insights--charitable-giving-strategies/elements/verified-charitable-files.jpg",
+          "section_owner": "insights--charitable-giving-strategies",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        }
+      ]
+    },
+    "/insights/long-term-care-survivor-planning": {
+      "design_refs_approved": true,
+      "decomposition_complete": true,
+      "review_sheet_published": true,
+      "build_complete": true,
+      "viewport_normalized": true,
+      "primary_laptop_capture": true,
+      "section_edge_clearance_audited": true,
+      "desktop_section_captures": true,
+      "mobile_section_captures": true,
+      "qa_verdict": "PENDING",
+      "assets": [
+        {
+          "path": "public/images/design/insights--long-term-care-survivor-planning/elements/hero-survivor-planning-desk.jpg",
+          "section_owner": "insights--long-term-care-survivor-planning",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/insights--long-term-care-survivor-planning/elements/survivor-manuscript-envelope.jpg",
+          "section_owner": "insights--long-term-care-survivor-planning",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/insights--long-term-care-survivor-planning/elements/survivor-related-notebook.jpg",
+          "section_owner": "insights--long-term-care-survivor-planning",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/insights--long-term-care-survivor-planning/elements/survivor-source-review-desk.jpg",
+          "section_owner": "insights--long-term-care-survivor-planning",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/insights--long-term-care-survivor-planning/elements/verified-source-gate-ledger.jpg",
+          "section_owner": "insights--long-term-care-survivor-planning",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        }
+      ]
+    },
+    "/about": {
+      "design_refs_approved": true,
+      "decomposition_complete": true,
+      "review_sheet_published": true,
+      "build_complete": true,
+      "viewport_normalized": true,
+      "primary_laptop_capture": true,
+      "section_edge_clearance_audited": true,
+      "desktop_section_captures": true,
+      "mobile_section_captures": true,
+      "qa_verdict": "PENDING",
+      "assets": [
+        {
+          "path": "public/images/design/about/elements/coordination-ledger-detail.jpg",
+          "section_owner": "about",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/about/elements/fiscal-vision-columns.jpg",
+          "section_owner": "about",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/about/elements/michael-epps-approved.png",
+          "section_owner": "about",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/about/elements/next-step-office.jpg",
+          "section_owner": "about",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/about/elements/origin-office-still-life.jpg",
+          "section_owner": "about",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/about/elements/planning-scope-books.jpg",
+          "section_owner": "about",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        }
+      ]
+    },
+    "/meet-michael-epps": {
+      "design_refs_approved": true,
+      "decomposition_complete": true,
+      "review_sheet_published": true,
+      "build_complete": true,
+      "viewport_normalized": true,
+      "primary_laptop_capture": true,
+      "section_edge_clearance_audited": true,
+      "desktop_section_captures": true,
+      "mobile_section_captures": true,
+      "qa_verdict": "PENDING",
+      "assets": [
+        {
+          "path": "public/images/design/meet-michael-epps/elements/first-conversation-table.jpg",
+          "section_owner": "meet-michael-epps",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/meet-michael-epps/elements/michael-epps-approved.png",
+          "section_owner": "meet-michael-epps",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/meet-michael-epps/elements/physician-audience-anchor.jpg",
+          "section_owner": "meet-michael-epps",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/meet-michael-epps/elements/physician-desk-inset.jpg",
+          "section_owner": "meet-michael-epps",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/meet-michael-epps/elements/physician-hallway-inset.jpg",
+          "section_owner": "meet-michael-epps",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/meet-michael-epps/elements/portrait-office-detail.jpg",
+          "section_owner": "meet-michael-epps",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/meet-michael-epps/elements/related-paths-office.jpg",
+          "section_owner": "meet-michael-epps",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/meet-michael-epps/elements/shared-strategy-desk.jpg",
+          "section_owner": "meet-michael-epps",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        }
+      ]
+    },
+    "/about/team": {
+      "design_refs_approved": true,
+      "decomposition_complete": true,
+      "review_sheet_published": true,
+      "build_complete": true,
+      "viewport_normalized": true,
+      "primary_laptop_capture": true,
+      "section_edge_clearance_audited": true,
+      "desktop_section_captures": true,
+      "mobile_section_captures": true,
+      "qa_verdict": "PENDING",
+      "assets": [
+        {
+          "path": "public/images/design/about--team/media/bio-gate-desk.jpg",
+          "section_owner": "about--team",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/about--team/media/next-step-books.jpg",
+          "section_owner": "about--team",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/about--team/media/next-step-office-right.jpg",
+          "section_owner": "about--team",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/about--team/media/next-step-shelf-lower.jpg",
+          "section_owner": "about--team",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/about--team/media/next-step-shelf-upper.jpg",
+          "section_owner": "about--team",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/about--team/media/team-hero-office-right.jpg",
+          "section_owner": "about--team",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/about--team/media/team-model-conference.png",
+          "section_owner": "about--team",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/about--team/media/team-model-files.png",
+          "section_owner": "about--team",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/about--team/media/team-model-hallway.png",
+          "section_owner": "about--team",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/about--team/media/team-model-notebook.png",
+          "section_owner": "about--team",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/about--team/media/team-model-tablet.png",
+          "section_owner": "about--team",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        }
+      ]
+    },
+    "/checkup": {
+      "design_refs_approved": true,
+      "decomposition_complete": true,
+      "review_sheet_published": true,
+      "build_complete": true,
+      "viewport_normalized": true,
+      "primary_laptop_capture": true,
+      "section_edge_clearance_audited": true,
+      "desktop_section_captures": true,
+      "mobile_section_captures": true,
+      "qa_verdict": "PENDING",
+      "assets": [
+        {
+          "path": "public/images/design/checkup/media/checkup-hero-desk-right.jpg",
+          "section_owner": "checkup",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/checkup/media/checkup-next-step-office-right.jpg",
+          "section_owner": "checkup",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/checkup/media/checkup-review-hands.jpg",
+          "section_owner": "checkup",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/checkup/media/results-watercolor-ledgers.jpg",
+          "section_owner": "checkup",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        }
+      ]
+    },
+    "/physician-tax-retirement-guide": {
+      "design_refs_approved": true,
+      "decomposition_complete": true,
+      "review_sheet_published": true,
+      "build_complete": true,
+      "viewport_normalized": true,
+      "primary_laptop_capture": true,
+      "section_edge_clearance_audited": true,
+      "desktop_section_captures": true,
+      "mobile_section_captures": true,
+      "qa_verdict": "PENDING",
+      "assets": [
+        {
+          "path": "public/images/design/physician-tax-retirement-guide/media/audience-dentist.jpg",
+          "section_owner": "physician-tax-retirement-guide",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/physician-tax-retirement-guide/media/audience-executive.jpg",
+          "section_owner": "physician-tax-retirement-guide",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/physician-tax-retirement-guide/media/audience-physician.jpg",
+          "section_owner": "physician-tax-retirement-guide",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/physician-tax-retirement-guide/media/audience-practice-owner.jpg",
+          "section_owner": "physician-tax-retirement-guide",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/physician-tax-retirement-guide/media/audience-surgeon.jpg",
+          "section_owner": "physician-tax-retirement-guide",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/physician-tax-retirement-guide/media/guide-form-ink-pen.jpg",
+          "section_owner": "physician-tax-retirement-guide",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/physician-tax-retirement-guide/media/learning-outcomes-notebook.jpg",
+          "section_owner": "physician-tax-retirement-guide",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/physician-tax-retirement-guide/media/related-paths-left-books.jpg",
+          "section_owner": "physician-tax-retirement-guide",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/physician-tax-retirement-guide/media/related-paths-right-books.jpg",
+          "section_owner": "physician-tax-retirement-guide",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        }
+      ]
+    },
+    "/schedule": {
+      "design_refs_approved": true,
+      "decomposition_complete": true,
+      "review_sheet_published": true,
+      "build_complete": true,
+      "viewport_normalized": true,
+      "primary_laptop_capture": true,
+      "section_edge_clearance_audited": true,
+      "desktop_section_captures": true,
+      "mobile_section_captures": true,
+      "qa_verdict": "PENDING",
+      "assets": [
+        {
+          "path": "public/images/design/schedule/media/schedule-fallback-ledger.jpg",
+          "section_owner": "schedule",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/schedule/media/schedule-hero-desk-right.jpg",
+          "section_owner": "schedule",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/schedule/media/scheduler-state-notebook.jpg",
+          "section_owner": "schedule",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        }
+      ]
+    },
+    "/contact": {
+      "design_refs_approved": true,
+      "decomposition_complete": true,
+      "review_sheet_published": true,
+      "build_complete": true,
+      "viewport_normalized": true,
+      "primary_laptop_capture": true,
+      "section_edge_clearance_audited": true,
+      "desktop_section_captures": true,
+      "mobile_section_captures": true,
+      "qa_verdict": "PENDING",
+      "assets": [
+        {
+          "path": "public/images/design/contact/media/booking-alternative-desk-right.jpg",
+          "section_owner": "contact",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/contact/media/contact-form-left-desk.jpg",
+          "section_owner": "contact",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/contact/media/contact-hero-office-right.jpg",
+          "section_owner": "contact",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/contact/media/referral-notepad.jpg",
+          "section_owner": "contact",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        }
+      ]
+    },
+    "/privacy-disclosures": {
+      "design_refs_approved": true,
+      "decomposition_complete": true,
+      "review_sheet_published": true,
+      "build_complete": true,
+      "viewport_normalized": true,
+      "primary_laptop_capture": true,
+      "section_edge_clearance_audited": true,
+      "desktop_section_captures": true,
+      "mobile_section_captures": true,
+      "qa_verdict": "PENDING",
+      "assets": [
+        {
+          "path": "public/images/design/privacy-disclosures/media/disclosure-education-consultation.jpg",
+          "section_owner": "privacy-disclosures",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/privacy-disclosures/media/privacy-communications-still-life.jpg",
+          "section_owner": "privacy-disclosures",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        },
+        {
+          "path": "public/images/design/privacy-disclosures/media/privacy-contact-legal-desk.jpg",
+          "section_owner": "privacy-disclosures",
+          "narrative_job": "route-specific visual supporting the approved section composition",
+          "reuse_intent": null
+        }
+      ]
+    }
+  }
+}

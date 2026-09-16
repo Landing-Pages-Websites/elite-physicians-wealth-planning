@@ -1,0 +1,202 @@
+{
+  "version": 1,
+  "slug": "insights--disability-insurance-review-overlooked",
+  "route": "/insights/disability-insurance-review-overlooked",
+  "sections": [
+    {
+      "frame": "01-editorial-state-hero",
+      "implementation_kind": "shared-designed",
+      "implementation_owner": "src/components/pages/insights-article/editorial-state-hero.tsx",
+      "shared_basis": "All twelve insights article manifests in revision-2026-09-15-image-first share the editorial-content-gate archetype and the identical five-frame grammar (01-editorial-state-hero, 02-verified-teaser, 03-manuscript-gate, 04-source-and-review-gate, 05-related-reading); the approved insights-article family component src/components/pages/insights-article/editorial-state-hero.tsx renders this frame with the per-article content module src/components/pages/insights-article/content/disability-insurance-review-overlooked.ts.",
+      "content_source": "section_manifest.json#01-editorial-state-hero",
+      "asset_roles": [
+        "editorial article photograph for Wealth & Risk: Own-occupation, portability, and definition questions worth revisiting."
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "Approved manifest fields (eyebrow, headline, body, visibility_note) render as live HTML text, led by \"Disability Insurance Review: Questions Physicians Often Overlook\"."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "Dedicated asset renders the declared subject \"editorial article photograph for Wealth & Risk: Own-occupation, portability, and definition questions worth revisiting.\" with the approved \"cinematic crop with no people or generic charts\" crop and treatment."
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "Frame composition preserved: Navy image-first masthead: 'Wealth & Risk' eyebrow, H1, teaser body left over the policy-binder still life (pen, rider cards, brass lamp); customer-facing held line; no author, date, or reviewer; 'All insights' link to…."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved navy/gold/ivory language retained on the #0B1F3A band per the manifest edge contract; Cormorant Garamond display over Inter body."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "390x844 recomposition per manifest: Preserve the headline and primary action before the image; use a 4:5 or 3:2 crop centered on the declared subject/focal point, never a blurred filler panel; stack overlays into live blocks, keep at least 70% of the…"
+        }
+      },
+      "ref": "design_refs/revision-2026-09-15-image-first/pages/insights--disability-insurance-review-overlooked/refs/01-editorial-state-hero.png",
+      "owners": [
+        "src/app/(site)/insights/disability-insurance-review-overlooked/page.tsx",
+        "src/components/pages/insights-article/editorial-state-hero.tsx",
+        "src/components/pages/insights-article/content/disability-insurance-review-overlooked.ts"
+      ],
+      "notes": "Navy image-first masthead: 'Wealth & Risk' eyebrow, H1, teaser body left over the policy-binder still life (pen, rider cards, brass lamp); customer-facing held line; no author, date, or reviewer; 'All insights' link to /insights."
+    },
+    {
+      "frame": "02-verified-teaser",
+      "implementation_kind": "shared-designed",
+      "implementation_owner": "src/components/pages/insights-article/verified-teaser.tsx",
+      "shared_basis": "All twelve insights article manifests in revision-2026-09-15-image-first share the editorial-content-gate archetype and the identical five-frame grammar (01-editorial-state-hero, 02-verified-teaser, 03-manuscript-gate, 04-source-and-review-gate, 05-related-reading); the approved insights-article family component src/components/pages/insights-article/verified-teaser.tsx renders this frame with the per-article content module src/components/pages/insights-article/content/disability-insurance-review-overlooked.ts.",
+      "content_source": "section_manifest.json#02-verified-teaser",
+      "asset_roles": [
+        "quiet editorial abstract ledger"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "Approved manifest fields (headline, body, items) render as live HTML text, led by \"What is verified now.\"."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "PASS with documented deliberate adaptation preserving the approved semantic gate: the folder extraction carries two baked navy rule stubs on its left edge (art-frame--dis-teaser crops to visible rect 50,0,474,489); the ref's small bottom-center gate engraving is not placed because its extraction carries baked gold registration marks on all four edges and the family teaser carries one media frame"
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "Frame composition preserved: Ivory ledger: tabbed-folder still life right (mediaSide matches ref), ringed-check verified rows left; the ref's internal 'Verified teaser' label is not reproduced as chrome."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved navy/gold/ivory language retained on the #F6F2E8 band per the manifest edge contract; Cormorant Garamond display over Inter body."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "390x844 recomposition per manifest: Stack the primary content group in narrative order while preserving asymmetric emphasis through offset margins and varied spacing; crop imagery around its declared focal point, keep all live text and links, and simplify…"
+        }
+      },
+      "ref": "design_refs/revision-2026-09-15-image-first/pages/insights--disability-insurance-review-overlooked/refs/02-verified-teaser.png",
+      "owners": [
+        "src/components/pages/insights-article/verified-teaser.tsx",
+        "src/components/pages/insights-article/content/disability-insurance-review-overlooked.ts",
+        "src/components/pages/insights-article/content/disability-insurance-review-overlooked.css"
+      ],
+      "notes": "Ivory ledger: tabbed-folder still life right (mediaSide matches ref), ringed-check verified rows left; the ref's internal 'Verified teaser' label is not reproduced as chrome."
+    },
+    {
+      "frame": "03-manuscript-gate",
+      "implementation_kind": "shared-designed",
+      "implementation_owner": "src/components/pages/insights-article/manuscript-gate.tsx",
+      "shared_basis": "All twelve insights article manifests in revision-2026-09-15-image-first share the editorial-content-gate archetype and the identical five-frame grammar (01-editorial-state-hero, 02-verified-teaser, 03-manuscript-gate, 04-source-and-review-gate, 05-related-reading); the approved insights-article family component src/components/pages/insights-article/manuscript-gate.tsx renders this frame with the per-article content module src/components/pages/insights-article/content/disability-insurance-review-overlooked.ts.",
+      "content_source": "section_manifest.json#03-manuscript-gate",
+      "asset_roles": [
+        "editorial desk with sealed manuscript sleeve and source tabs"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "Approved manifest fields (headline, items) render as live HTML text, led by \"Required before this article can go live.\"."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "PASS with documented deliberate adaptation preserving the approved semantic gate: the envelope extraction carries a baked gold seam line and corner at its top-right; art-frame--dis-gate crops to the clean rect (0,0,565,611), trimming the right tab stack behind the envelope"
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "Frame composition preserved: White spread: string-tie envelope left (mediaSide matches ref), four manifest requirement items as the live gold-spine rail right; the ref's 'MANUSCRIPT GATE' internal badge is not reproduced."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved navy/gold/ivory language retained on the #FFFFFF band per the manifest edge contract; Cormorant Garamond display over Inter body."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "390x844 recomposition per manifest: Stack the primary content group in narrative order while preserving asymmetric emphasis through offset margins and varied spacing; crop imagery around its declared focal point, keep all live text and links, and simplify…"
+        }
+      },
+      "ref": "design_refs/revision-2026-09-15-image-first/pages/insights--disability-insurance-review-overlooked/refs/03-manuscript-gate.png",
+      "owners": [
+        "src/components/pages/insights-article/manuscript-gate.tsx",
+        "src/components/pages/insights-article/content/disability-insurance-review-overlooked.ts",
+        "src/components/pages/insights-article/content/disability-insurance-review-overlooked.css"
+      ],
+      "notes": "White spread: string-tie envelope left (mediaSide matches ref), four manifest requirement items as the live gold-spine rail right; the ref's 'MANUSCRIPT GATE' internal badge is not reproduced."
+    },
+    {
+      "frame": "04-source-and-review-gate",
+      "implementation_kind": "shared-designed",
+      "implementation_owner": "src/components/pages/insights-article/source-and-review-gate.tsx",
+      "shared_basis": "All twelve insights article manifests in revision-2026-09-15-image-first share the editorial-content-gate archetype and the identical five-frame grammar (01-editorial-state-hero, 02-verified-teaser, 03-manuscript-gate, 04-source-and-review-gate, 05-related-reading); the approved insights-article family component src/components/pages/insights-article/source-and-review-gate.tsx renders this frame with the per-article content module src/components/pages/insights-article/content/disability-insurance-review-overlooked.ts.",
+      "content_source": "section_manifest.json#04-source-and-review-gate",
+      "asset_roles": [
+        "code-only live semantic content"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "Approved manifest fields (headline, items) render as live HTML text, led by \"Source and review requirements.\"."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "PASS with documented deliberate adaptation preserving the approved semantic gate: the filing-box extraction carries baked copy fragments and a gold dash on its left edge; art-frame--dis-review crops to visible rect (62,0,674,339)"
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "Frame composition preserved: Mist strip: headline and three live rule-separated requirement panels, filing-box crop right; the ref's 'SOURCE/REVIEW GATE' internal label strip is intentionally not reproduced."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved navy/gold/ivory language retained on the #DCE8F2 band per the manifest edge contract; Cormorant Garamond display over Inter body."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "390x844 recomposition per manifest: Stack the primary content group in narrative order while preserving asymmetric emphasis through offset margins and varied spacing; crop imagery around its declared focal point, keep all live text and links, and simplify…"
+        }
+      },
+      "ref": "design_refs/revision-2026-09-15-image-first/pages/insights--disability-insurance-review-overlooked/refs/04-source-and-review-gate.png",
+      "owners": [
+        "src/components/pages/insights-article/source-and-review-gate.tsx",
+        "src/components/pages/insights-article/content/disability-insurance-review-overlooked.ts",
+        "src/components/pages/insights-article/content/disability-insurance-review-overlooked.css"
+      ],
+      "notes": "Mist strip: headline and three live rule-separated requirement panels, filing-box crop right; the ref's 'SOURCE/REVIEW GATE' internal label strip is intentionally not reproduced."
+    },
+    {
+      "frame": "05-related-reading",
+      "implementation_kind": "shared-designed",
+      "implementation_owner": "src/components/pages/insights-article/related-reading.tsx",
+      "shared_basis": "All twelve insights article manifests in revision-2026-09-15-image-first share the editorial-content-gate archetype and the identical five-frame grammar (01-editorial-state-hero, 02-verified-teaser, 03-manuscript-gate, 04-source-and-review-gate, 05-related-reading); the approved insights-article family component src/components/pages/insights-article/related-reading.tsx renders this frame with the per-article content module src/components/pages/insights-article/content/disability-insurance-review-overlooked.ts.",
+      "content_source": "section_manifest.json#05-related-reading",
+      "asset_roles": [
+        "related-reading ledger for Wealth & Risk"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "Approved manifest fields (headline, body, links) render as live HTML text, led by \"Related planning paths for this topic.\"."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "Dedicated asset renders the declared subject \"related-reading ledger for Wealth & Risk\" with the approved \"ivory/white editorial index with small topic crop\" crop and treatment."
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "Frame composition preserved: Ivory close: the manifest's three routes (/wealth-management-for-physicians, /physicians-specialists, /insights) as the gold-spine path ledger, shared held note, boundary line, 'Return to insights', closing node…."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved navy/gold/ivory language retained on the #F6F2E8 band per the manifest edge contract; Cormorant Garamond display over Inter body."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "390x844 recomposition per manifest: Stack the primary content group in narrative order while preserving asymmetric emphasis through offset margins and varied spacing; crop imagery around its declared focal point, keep all live text and links, and simplify…"
+        }
+      },
+      "ref": "design_refs/revision-2026-09-15-image-first/pages/insights--disability-insurance-review-overlooked/refs/05-related-reading.png",
+      "owners": [
+        "src/components/pages/insights-article/related-reading.tsx",
+        "src/components/pages/insights-article/content/disability-insurance-review-overlooked.ts",
+        "src/components/pages/insights-article/content/disability-insurance-review-overlooked.css"
+      ],
+      "notes": "Ivory close: the manifest's three routes (/wealth-management-for-physicians, /physicians-specialists, /insights) as the gold-spine path ledger, shared held note, boundary line, 'Return to insights', closing node; notebook-and-stethoscope crop right."
+    }
+  ]
+}

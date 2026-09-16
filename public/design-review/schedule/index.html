@@ -1,0 +1,309 @@
+<!doctype html><meta charset='utf-8'>
+<title>Image asset review</title><style>
+body{margin:0;padding:24px;background:#111;color:#eee;
+     font:14px/1.5 -apple-system,'Segoe UI',sans-serif}
+a{color:#8bd} .muted{color:#999} h1{font-size:20px}
+.proto{background:#1b1b1b;border:1px solid #333;border-radius:8px;
+       padding:12px 16px;max-width:900px;margin-bottom:24px}
+.proto code{background:#000;padding:1px 5px;border-radius:4px}
+.card{background:#1b1b1b;border:1px solid #333;border-radius:8px;
+      padding:16px;margin-bottom:20px;max-width:1200px}
+.card.missing{border-color:#a33}
+.pair{display:flex;gap:16px;flex-wrap:wrap}
+.pair figure{margin:0;flex:1;min-width:280px}
+.pair img{max-width:100%;border:1px solid #444}
+.asset-preview{display:grid;place-items:center;min-height:180px;
+  background-color:#fff;background-image:linear-gradient(45deg,#ddd 25%,transparent 25%),
+  linear-gradient(-45deg,#ddd 25%,transparent 25%),linear-gradient(45deg,transparent 75%,#ddd 75%),
+  linear-gradient(-45deg,transparent 75%,#ddd 75%);background-size:24px 24px;
+  background-position:0 0,0 12px,12px -12px,-12px 0}
+.asset-preview img,.intended-preview img{display:block;max-height:520px}
+.intended-preview{display:grid;place-items:center;min-height:180px;border:1px solid #444}
+figcaption{font-size:12px;color:#999;margin-top:4px}
+.chip{display:inline-block;font-size:11px;padding:2px 8px;border-radius:10px;
+      background:#333;margin-left:8px;text-transform:uppercase}
+.chip.extract{background:#264} .chip.inpaint{background:#452}
+.chip.code{background:#345}
+.chip.plate{background:#246} .chip.generated{background:#525}
+.chip.unmapped{background:#630} .chip.client-copy{background:#444}
+.chip.composite{background:#536}
+</style>
+<h1>Image asset review</h1>
+<p class='muted'>26 CODE regions and 3 raster assets to review: 3 extract, 0 inpaint.</p>
+<div class='proto'><b>How to review:</b> judge every planned treatment against its design reference on the left. For CODE cards, verify the build note can preserve the region's silhouette, materiality, and compositing—not merely approximate its geometry. To swap a raster, replace the file directly in git — same path, push to main (<a href='https://github.com/Landing-Pages-Websites/elite-physicians-wealth-planning/tree/main/public/images/design'>assets folder in the repo</a>; each card links to its file). Replaced files are authoritative — the pipeline never overwrites them. This page updates on every push. Complete the review subtask to approve; the build does not start until then.</div>
+<div class='card' id='01-schedule-hero-r1'>
+<b>01-schedule-hero-r1</b><span class='chip extract'>extract</span>
+<div class='muted'>Clean section-owned photographic material for 01-schedule-hero, with all website text and controls kept live</div>
+<div class='muted'>Use semantic live headings and body copy over a CSS navy field, with the contracted photo in a responsive media slot, a thin gold SVG route, and an accessible CTA.</div>
+<div class='muted'>presentation: {&quot;alpha_required&quot;: false, &quot;crop_contract&quot;: &quot;Preserve the notebook, pen, lamp base, books, and priority card as a non-functional still life; no availability UI is included.&quot;, &quot;edge_treatment&quot;: {&quot;protected_crisp_regions&quot;: [&quot;focal photographic subject&quot;], &quot;style&quot;: &quot;crisp editorial crop with no synthetic fade or halo&quot;, &quot;zones&quot;: [&quot;outer crop boundary&quot;]}, &quot;intended_background&quot;: &quot;#0B1F3A&quot;, &quot;minimum_visible_fraction&quot;: &quot;Notebook and pen remain visible together; the priority card may crop first.&quot;, &quot;mode&quot;: &quot;framed-panel&quot;}</div>
+<div class='pair'>
+<figure><a href='crops/01-schedule-hero-context.png'><img src='crops/01-schedule-hero-r1-ref.png' alt=''></a><figcaption>design reference — 01-schedule-hero (click for full frame)</figcaption></figure>
+<figure><div class='asset-preview'><img src='../images/design/media/schedule-hero-desk-right.jpg' alt=''></div><figcaption>shipped asset on transparency checkerboard — <a href='https://github.com/Landing-Pages-Websites/elite-physicians-wealth-planning/blob/main/public/images/design/media/schedule-hero-desk-right.jpg'><code>media/schedule-hero-desk-right.jpg</code></a> (replace in git)</figcaption></figure>
+<figure><div class='intended-preview' style='background:#0B1F3A'><img src='../images/design/media/schedule-hero-desk-right.jpg' alt=''></div><figcaption>asset on intended background — #0B1F3A</figcaption></figure>
+</div></div>
+<div class='card' id='02-call-expectations-r1'>
+<b>02-call-expectations-r1</b><span class='chip code'>code</span>
+<div class='muted'>ledger region 1 from the approved 02-call-expectations frame</div>
+<div class='muted'>Rebuild the ledger with semantic lists and CSS grid rows, thin navy and gold rules, warm paper surfaces, and responsive single-column ordering; keep every label live.</div>
+<div class='pair'>
+<figure><a href='crops/02-call-expectations-context.png'><img src='crops/02-call-expectations-r1-ref.png' alt=''></a><figcaption>design reference — 02-call-expectations (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Rebuild the ledger with semantic lists and CSS grid rows, thin navy and gold rules, warm paper surfaces, and responsive single-column ordering; keep every label live.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='02-call-expectations-r2'>
+<b>02-call-expectations-r2</b><span class='chip code'>code</span>
+<div class='muted'>ledger region 2 from the approved 02-call-expectations frame</div>
+<div class='muted'>Rebuild the ledger with semantic lists and CSS grid rows, thin navy and gold rules, warm paper surfaces, and responsive single-column ordering; keep every label live.</div>
+<div class='pair'>
+<figure><a href='crops/02-call-expectations-context.png'><img src='crops/02-call-expectations-r2-ref.png' alt=''></a><figcaption>design reference — 02-call-expectations (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Rebuild the ledger with semantic lists and CSS grid rows, thin navy and gold rules, warm paper surfaces, and responsive single-column ordering; keep every label live.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='02-call-expectations-r3'>
+<b>02-call-expectations-r3</b><span class='chip code'>code</span>
+<div class='muted'>ledger region 3 from the approved 02-call-expectations frame</div>
+<div class='muted'>Rebuild the ledger with semantic lists and CSS grid rows, thin navy and gold rules, warm paper surfaces, and responsive single-column ordering; keep every label live.</div>
+<div class='pair'>
+<figure><a href='crops/02-call-expectations-context.png'><img src='crops/02-call-expectations-r3-ref.png' alt=''></a><figcaption>design reference — 02-call-expectations (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Rebuild the ledger with semantic lists and CSS grid rows, thin navy and gold rules, warm paper surfaces, and responsive single-column ordering; keep every label live.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='02-call-expectations-r4'>
+<b>02-call-expectations-r4</b><span class='chip code'>code</span>
+<div class='muted'>ledger region 4 from the approved 02-call-expectations frame</div>
+<div class='muted'>Rebuild the ledger with semantic lists and CSS grid rows, thin navy and gold rules, warm paper surfaces, and responsive single-column ordering; keep every label live.</div>
+<div class='pair'>
+<figure><a href='crops/02-call-expectations-context.png'><img src='crops/02-call-expectations-r4-ref.png' alt=''></a><figcaption>design reference — 02-call-expectations (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Rebuild the ledger with semantic lists and CSS grid rows, thin navy and gold rules, warm paper surfaces, and responsive single-column ordering; keep every label live.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='02-call-expectations-r5'>
+<b>02-call-expectations-r5</b><span class='chip code'>code</span>
+<div class='muted'>ledger region 5 from the approved 02-call-expectations frame</div>
+<div class='muted'>Rebuild the ledger with semantic lists and CSS grid rows, thin navy and gold rules, warm paper surfaces, and responsive single-column ordering; keep every label live.</div>
+<div class='pair'>
+<figure><a href='crops/02-call-expectations-context.png'><img src='crops/02-call-expectations-r5-ref.png' alt=''></a><figcaption>design reference — 02-call-expectations (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Rebuild the ledger with semantic lists and CSS grid rows, thin navy and gold rules, warm paper surfaces, and responsive single-column ordering; keep every label live.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='02-call-expectations-r6'>
+<b>02-call-expectations-r6</b><span class='chip code'>code</span>
+<div class='muted'>ledger region 6 from the approved 02-call-expectations frame</div>
+<div class='muted'>Rebuild the ledger with semantic lists and CSS grid rows, thin navy and gold rules, warm paper surfaces, and responsive single-column ordering; keep every label live.</div>
+<div class='pair'>
+<figure><a href='crops/02-call-expectations-context.png'><img src='crops/02-call-expectations-r6-ref.png' alt=''></a><figcaption>design reference — 02-call-expectations (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Rebuild the ledger with semantic lists and CSS grid rows, thin navy and gold rules, warm paper surfaces, and responsive single-column ordering; keep every label live.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='02-call-expectations-r7'>
+<b>02-call-expectations-r7</b><span class='chip code'>code</span>
+<div class='muted'>ledger region 7 from the approved 02-call-expectations frame</div>
+<div class='muted'>Rebuild the ledger with semantic lists and CSS grid rows, thin navy and gold rules, warm paper surfaces, and responsive single-column ordering; keep every label live.</div>
+<div class='pair'>
+<figure><a href='crops/02-call-expectations-context.png'><img src='crops/02-call-expectations-r7-ref.png' alt=''></a><figcaption>design reference — 02-call-expectations (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Rebuild the ledger with semantic lists and CSS grid rows, thin navy and gold rules, warm paper surfaces, and responsive single-column ordering; keep every label live.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='02-call-expectations-r8'>
+<b>02-call-expectations-r8</b><span class='chip code'>code</span>
+<div class='muted'>ledger region 8 from the approved 02-call-expectations frame</div>
+<div class='muted'>Rebuild the ledger with semantic lists and CSS grid rows, thin navy and gold rules, warm paper surfaces, and responsive single-column ordering; keep every label live.</div>
+<div class='pair'>
+<figure><a href='crops/02-call-expectations-context.png'><img src='crops/02-call-expectations-r8-ref.png' alt=''></a><figcaption>design reference — 02-call-expectations (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Rebuild the ledger with semantic lists and CSS grid rows, thin navy and gold rules, warm paper surfaces, and responsive single-column ordering; keep every label live.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='02-call-expectations-r9'>
+<b>02-call-expectations-r9</b><span class='chip code'>code</span>
+<div class='muted'>ledger region 9 from the approved 02-call-expectations frame</div>
+<div class='muted'>Rebuild the ledger with semantic lists and CSS grid rows, thin navy and gold rules, warm paper surfaces, and responsive single-column ordering; keep every label live.</div>
+<div class='pair'>
+<figure><a href='crops/02-call-expectations-context.png'><img src='crops/02-call-expectations-r9-ref.png' alt=''></a><figcaption>design reference — 02-call-expectations (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Rebuild the ledger with semantic lists and CSS grid rows, thin navy and gold rules, warm paper surfaces, and responsive single-column ordering; keep every label live.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='02-call-expectations-r10'>
+<b>02-call-expectations-r10</b><span class='chip code'>code</span>
+<div class='muted'>ledger region 10 from the approved 02-call-expectations frame</div>
+<div class='muted'>Rebuild the ledger with semantic lists and CSS grid rows, thin navy and gold rules, warm paper surfaces, and responsive single-column ordering; keep every label live.</div>
+<div class='pair'>
+<figure><a href='crops/02-call-expectations-context.png'><img src='crops/02-call-expectations-r10-ref.png' alt=''></a><figcaption>design reference — 02-call-expectations (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Rebuild the ledger with semantic lists and CSS grid rows, thin navy and gold rules, warm paper surfaces, and responsive single-column ordering; keep every label live.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='02-call-expectations-r11'>
+<b>02-call-expectations-r11</b><span class='chip code'>code</span>
+<div class='muted'>ledger region 11 from the approved 02-call-expectations frame</div>
+<div class='muted'>Rebuild the ledger with semantic lists and CSS grid rows, thin navy and gold rules, warm paper surfaces, and responsive single-column ordering; keep every label live.</div>
+<div class='pair'>
+<figure><a href='crops/02-call-expectations-context.png'><img src='crops/02-call-expectations-r11-ref.png' alt=''></a><figcaption>design reference — 02-call-expectations (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Rebuild the ledger with semantic lists and CSS grid rows, thin navy and gold rules, warm paper surfaces, and responsive single-column ordering; keep every label live.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='02-call-expectations-r12'>
+<b>02-call-expectations-r12</b><span class='chip code'>code</span>
+<div class='muted'>ledger region 12 from the approved 02-call-expectations frame</div>
+<div class='muted'>Rebuild the ledger with semantic lists and CSS grid rows, thin navy and gold rules, warm paper surfaces, and responsive single-column ordering; keep every label live.</div>
+<div class='pair'>
+<figure><a href='crops/02-call-expectations-context.png'><img src='crops/02-call-expectations-r12-ref.png' alt=''></a><figcaption>design reference — 02-call-expectations (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Rebuild the ledger with semantic lists and CSS grid rows, thin navy and gold rules, warm paper surfaces, and responsive single-column ordering; keep every label live.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='03-calendar-embed-state-r1'>
+<b>03-calendar-embed-state-r1</b><span class='chip extract'>extract</span>
+<div class='muted'>Clean section-owned photographic material for 03-calendar-embed-state, with all website text and controls kept live</div>
+<div class='muted'>Build the complete form as semantic labels, inputs, fieldsets, helper text, and disabled held-state controls; use CSS grid, one-pixel navy rules, and tokenized focus styling.</div>
+<div class='muted'>presentation: {&quot;alpha_required&quot;: false, &quot;crop_contract&quot;: &quot;Preserve the navy notebook and pen as a held-state media object; exclude phone/email card and all scheduler status copy.&quot;, &quot;edge_treatment&quot;: {&quot;protected_crisp_regions&quot;: [&quot;focal photographic subject&quot;], &quot;style&quot;: &quot;crisp editorial crop with no synthetic fade or halo&quot;, &quot;zones&quot;: [&quot;outer crop boundary&quot;]}, &quot;intended_background&quot;: &quot;#DCE8F2&quot;, &quot;minimum_visible_fraction&quot;: &quot;Complete notebook and pen remain visible.&quot;, &quot;mode&quot;: &quot;framed-panel&quot;}</div>
+<div class='pair'>
+<figure><a href='crops/03-calendar-embed-state-context.png'><img src='crops/03-calendar-embed-state-r1-ref.png' alt=''></a><figcaption>design reference — 03-calendar-embed-state (click for full frame)</figcaption></figure>
+<figure><div class='asset-preview'><img src='../images/design/media/scheduler-state-notebook.jpg' alt=''></div><figcaption>shipped asset on transparency checkerboard — <a href='https://github.com/Landing-Pages-Websites/elite-physicians-wealth-planning/blob/main/public/images/design/media/scheduler-state-notebook.jpg'><code>media/scheduler-state-notebook.jpg</code></a> (replace in git)</figcaption></figure>
+<figure><div class='intended-preview' style='background:#DCE8F2'><img src='../images/design/media/scheduler-state-notebook.jpg' alt=''></div><figcaption>asset on intended background — #DCE8F2</figcaption></figure>
+</div></div>
+<div class='card' id='03-calendar-embed-state-r2'>
+<b>03-calendar-embed-state-r2</b><span class='chip code'>code</span>
+<div class='muted'>form region 2 from the approved 03-calendar-embed-state frame</div>
+<div class='muted'>Build the complete form as semantic labels, inputs, fieldsets, helper text, and disabled held-state controls; use CSS grid, one-pixel navy rules, and tokenized focus styling.</div>
+<div class='pair'>
+<figure><a href='crops/03-calendar-embed-state-context.png'><img src='crops/03-calendar-embed-state-r2-ref.png' alt=''></a><figcaption>design reference — 03-calendar-embed-state (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Build the complete form as semantic labels, inputs, fieldsets, helper text, and disabled held-state controls; use CSS grid, one-pixel navy rules, and tokenized focus styling.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='03-calendar-embed-state-r3'>
+<b>03-calendar-embed-state-r3</b><span class='chip code'>code</span>
+<div class='muted'>form region 3 from the approved 03-calendar-embed-state frame</div>
+<div class='muted'>Build the complete form as semantic labels, inputs, fieldsets, helper text, and disabled held-state controls; use CSS grid, one-pixel navy rules, and tokenized focus styling.</div>
+<div class='pair'>
+<figure><a href='crops/03-calendar-embed-state-context.png'><img src='crops/03-calendar-embed-state-r3-ref.png' alt=''></a><figcaption>design reference — 03-calendar-embed-state (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Build the complete form as semantic labels, inputs, fieldsets, helper text, and disabled held-state controls; use CSS grid, one-pixel navy rules, and tokenized focus styling.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='03-calendar-embed-state-r4'>
+<b>03-calendar-embed-state-r4</b><span class='chip code'>code</span>
+<div class='muted'>form region 4 from the approved 03-calendar-embed-state frame</div>
+<div class='muted'>Build the complete form as semantic labels, inputs, fieldsets, helper text, and disabled held-state controls; use CSS grid, one-pixel navy rules, and tokenized focus styling.</div>
+<div class='pair'>
+<figure><a href='crops/03-calendar-embed-state-context.png'><img src='crops/03-calendar-embed-state-r4-ref.png' alt=''></a><figcaption>design reference — 03-calendar-embed-state (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Build the complete form as semantic labels, inputs, fieldsets, helper text, and disabled held-state controls; use CSS grid, one-pixel navy rules, and tokenized focus styling.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='03-calendar-embed-state-r5'>
+<b>03-calendar-embed-state-r5</b><span class='chip code'>code</span>
+<div class='muted'>form region 5 from the approved 03-calendar-embed-state frame</div>
+<div class='muted'>Build the complete form as semantic labels, inputs, fieldsets, helper text, and disabled held-state controls; use CSS grid, one-pixel navy rules, and tokenized focus styling.</div>
+<div class='pair'>
+<figure><a href='crops/03-calendar-embed-state-context.png'><img src='crops/03-calendar-embed-state-r5-ref.png' alt=''></a><figcaption>design reference — 03-calendar-embed-state (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Build the complete form as semantic labels, inputs, fieldsets, helper text, and disabled held-state controls; use CSS grid, one-pixel navy rules, and tokenized focus styling.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='04-fallback-contact-r1'>
+<b>04-fallback-contact-r1</b><span class='chip extract'>extract</span>
+<div class='muted'>Clean section-owned photographic material for 04-fallback-contact, with all website text and controls kept live</div>
+<div class='muted'>Use live heading, body, and links on a CSS field with thin gold connector geometry; position the contracted photo as a supporting edge rail rather than a section bitmap.</div>
+<div class='muted'>presentation: {&quot;alpha_required&quot;: false, &quot;crop_contract&quot;: &quot;Preserve the dark ledger, pen, stacked books, and framed-office context; exclude phone/email live copy.&quot;, &quot;edge_treatment&quot;: {&quot;protected_crisp_regions&quot;: [&quot;focal photographic subject&quot;], &quot;style&quot;: &quot;crisp editorial crop with no synthetic fade or halo&quot;, &quot;zones&quot;: [&quot;outer crop boundary&quot;]}, &quot;intended_background&quot;: &quot;#FFFFFF&quot;, &quot;minimum_visible_fraction&quot;: &quot;Ledger, pen, and at least one stacked book remain visible.&quot;, &quot;mode&quot;: &quot;framed-panel&quot;}</div>
+<div class='pair'>
+<figure><a href='crops/04-fallback-contact-context.png'><img src='crops/04-fallback-contact-r1-ref.png' alt=''></a><figcaption>design reference — 04-fallback-contact (click for full frame)</figcaption></figure>
+<figure><div class='asset-preview'><img src='../images/design/media/schedule-fallback-ledger.jpg' alt=''></div><figcaption>shipped asset on transparency checkerboard — <a href='https://github.com/Landing-Pages-Websites/elite-physicians-wealth-planning/blob/main/public/images/design/media/schedule-fallback-ledger.jpg'><code>media/schedule-fallback-ledger.jpg</code></a> (replace in git)</figcaption></figure>
+<figure><div class='intended-preview' style='background:#FFFFFF'><img src='../images/design/media/schedule-fallback-ledger.jpg' alt=''></div><figcaption>asset on intended background — #FFFFFF</figcaption></figure>
+</div></div>
+<div class='card' id='04-fallback-contact-r2'>
+<b>04-fallback-contact-r2</b><span class='chip code'>code</span>
+<div class='muted'>cta region 2 from the approved 04-fallback-contact frame</div>
+<div class='muted'>Use live heading, body, and links on a CSS field with thin gold connector geometry; position the contracted photo as a supporting edge rail rather than a section bitmap.</div>
+<div class='pair'>
+<figure><a href='crops/04-fallback-contact-context.png'><img src='crops/04-fallback-contact-r2-ref.png' alt=''></a><figcaption>design reference — 04-fallback-contact (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Use live heading, body, and links on a CSS field with thin gold connector geometry; position the contracted photo as a supporting edge rail rather than a section bitmap.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='04-fallback-contact-r3'>
+<b>04-fallback-contact-r3</b><span class='chip code'>code</span>
+<div class='muted'>cta region 3 from the approved 04-fallback-contact frame</div>
+<div class='muted'>Use live heading, body, and links on a CSS field with thin gold connector geometry; position the contracted photo as a supporting edge rail rather than a section bitmap.</div>
+<div class='pair'>
+<figure><a href='crops/04-fallback-contact-context.png'><img src='crops/04-fallback-contact-r3-ref.png' alt=''></a><figcaption>design reference — 04-fallback-contact (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Use live heading, body, and links on a CSS field with thin gold connector geometry; position the contracted photo as a supporting edge rail rather than a section bitmap.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='04-fallback-contact-r4'>
+<b>04-fallback-contact-r4</b><span class='chip code'>code</span>
+<div class='muted'>cta region 4 from the approved 04-fallback-contact frame</div>
+<div class='muted'>Use live heading, body, and links on a CSS field with thin gold connector geometry; position the contracted photo as a supporting edge rail rather than a section bitmap.</div>
+<div class='pair'>
+<figure><a href='crops/04-fallback-contact-context.png'><img src='crops/04-fallback-contact-r4-ref.png' alt=''></a><figcaption>design reference — 04-fallback-contact (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Use live heading, body, and links on a CSS field with thin gold connector geometry; position the contracted photo as a supporting edge rail rather than a section bitmap.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='04-fallback-contact-r5'>
+<b>04-fallback-contact-r5</b><span class='chip code'>code</span>
+<div class='muted'>cta region 5 from the approved 04-fallback-contact frame</div>
+<div class='muted'>Use live heading, body, and links on a CSS field with thin gold connector geometry; position the contracted photo as a supporting edge rail rather than a section bitmap.</div>
+<div class='pair'>
+<figure><a href='crops/04-fallback-contact-context.png'><img src='crops/04-fallback-contact-r5-ref.png' alt=''></a><figcaption>design reference — 04-fallback-contact (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Use live heading, body, and links on a CSS field with thin gold connector geometry; position the contracted photo as a supporting edge rail rather than a section bitmap.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='04-fallback-contact-r6'>
+<b>04-fallback-contact-r6</b><span class='chip code'>code</span>
+<div class='muted'>cta region 6 from the approved 04-fallback-contact frame</div>
+<div class='muted'>Use live heading, body, and links on a CSS field with thin gold connector geometry; position the contracted photo as a supporting edge rail rather than a section bitmap.</div>
+<div class='pair'>
+<figure><a href='crops/04-fallback-contact-context.png'><img src='crops/04-fallback-contact-r6-ref.png' alt=''></a><figcaption>design reference — 04-fallback-contact (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Use live heading, body, and links on a CSS field with thin gold connector geometry; position the contracted photo as a supporting edge rail rather than a section bitmap.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='04-fallback-contact-r7'>
+<b>04-fallback-contact-r7</b><span class='chip code'>code</span>
+<div class='muted'>cta region 7 from the approved 04-fallback-contact frame</div>
+<div class='muted'>Use live heading, body, and links on a CSS field with thin gold connector geometry; position the contracted photo as a supporting edge rail rather than a section bitmap.</div>
+<div class='pair'>
+<figure><a href='crops/04-fallback-contact-context.png'><img src='crops/04-fallback-contact-r7-ref.png' alt=''></a><figcaption>design reference — 04-fallback-contact (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Use live heading, body, and links on a CSS field with thin gold connector geometry; position the contracted photo as a supporting edge rail rather than a section bitmap.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='04-fallback-contact-r8'>
+<b>04-fallback-contact-r8</b><span class='chip code'>code</span>
+<div class='muted'>cta region 8 from the approved 04-fallback-contact frame</div>
+<div class='muted'>Use live heading, body, and links on a CSS field with thin gold connector geometry; position the contracted photo as a supporting edge rail rather than a section bitmap.</div>
+<div class='pair'>
+<figure><a href='crops/04-fallback-contact-context.png'><img src='crops/04-fallback-contact-r8-ref.png' alt=''></a><figcaption>design reference — 04-fallback-contact (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Use live heading, body, and links on a CSS field with thin gold connector geometry; position the contracted photo as a supporting edge rail rather than a section bitmap.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='05-privacy-boundary-r1'>
+<b>05-privacy-boundary-r1</b><span class='chip code'>code</span>
+<div class='muted'>strip region 1 from the approved 05-privacy-boundary frame</div>
+<div class='muted'>Use a restrained semantic content band with live typography, thin gold rules, and simple inline SVG icons; preserve generous horizontal quiet space and stack cleanly on mobile.</div>
+<div class='pair'>
+<figure><a href='crops/05-privacy-boundary-context.png'><img src='crops/05-privacy-boundary-r1-ref.png' alt=''></a><figcaption>design reference — 05-privacy-boundary (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Use a restrained semantic content band with live typography, thin gold rules, and simple inline SVG icons; preserve generous horizontal quiet space and stack cleanly on mobile.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='05-privacy-boundary-r2'>
+<b>05-privacy-boundary-r2</b><span class='chip code'>code</span>
+<div class='muted'>strip region 2 from the approved 05-privacy-boundary frame</div>
+<div class='muted'>Use a restrained semantic content band with live typography, thin gold rules, and simple inline SVG icons; preserve generous horizontal quiet space and stack cleanly on mobile.</div>
+<div class='pair'>
+<figure><a href='crops/05-privacy-boundary-context.png'><img src='crops/05-privacy-boundary-r2-ref.png' alt=''></a><figcaption>design reference — 05-privacy-boundary (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Use a restrained semantic content band with live typography, thin gold rules, and simple inline SVG icons; preserve generous horizontal quiet space and stack cleanly on mobile.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='05-privacy-boundary-r3'>
+<b>05-privacy-boundary-r3</b><span class='chip code'>code</span>
+<div class='muted'>strip region 3 from the approved 05-privacy-boundary frame</div>
+<div class='muted'>Use a restrained semantic content band with live typography, thin gold rules, and simple inline SVG icons; preserve generous horizontal quiet space and stack cleanly on mobile.</div>
+<div class='pair'>
+<figure><a href='crops/05-privacy-boundary-context.png'><img src='crops/05-privacy-boundary-r3-ref.png' alt=''></a><figcaption>design reference — 05-privacy-boundary (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Use a restrained semantic content band with live typography, thin gold rules, and simple inline SVG icons; preserve generous horizontal quiet space and stack cleanly on mobile.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<details><summary>NOTES.md — CSS/SVG techniques the build uses instead of images</summary><pre># schedule decomposition notes
+
+## Page content gate
+
+The verified scheduler embed is not supplied. Do not render fake appointment availability or claim the calendar is operational; keep fallback contact details live HTML.
+
+All typography uses Cormorant Garamond for display roles and Inter for body/UI roles. Use approved navy, gold, mist, ivory, white, and charcoal tokens. Website text, form controls, diagrams, connectors, rules, paper fields, and geometric icons stay live HTML/CSS/SVG. Extracted files are clean section-owned media crops only; no full section is baked and no pixels are invented.
+
+## 01-schedule-hero — Tier 2
+
+Use semantic live headings and body copy over a CSS navy field, with the contracted photo in a responsive media slot, a thin gold SVG route, and an accessible CTA.
+
+Raster roles: 1 contracted region(s). Intrinsic media geometry must not control section height. The verified scheduler embed is not supplied. Do not render fake appointment availability or claim the calendar is operational; keep fallback contact details live HTML.
+
+## 02-call-expectations — Tier 3
+
+Rebuild the ledger with semantic lists and CSS grid rows, thin navy and gold rules, warm paper surfaces, and responsive single-column ordering; keep every label live.
+
+Raster roles: 0 contracted region(s). Intrinsic media geometry must not control section height. The verified scheduler embed is not supplied. Do not render fake appointment availability or claim the calendar is operational; keep fallback contact details live HTML.
+
+## 03-calendar-embed-state — Tier 2
+
+Build the complete form as semantic labels, inputs, fieldsets, helper text, and disabled held-state controls; use CSS grid, one-pixel navy rules, and tokenized focus styling.
+
+Raster roles: 1 contracted region(s). Intrinsic media geometry must not control section height. The verified scheduler embed is not supplied. Do not render fake appointment availability or claim the calendar is operational; keep fallback contact details live HTML.
+
+## 04-fallback-contact — Tier 2
+
+Use live heading, body, and links on a CSS field with thin gold connector geometry; position the contracted photo as a supporting edge rail rather than a section bitmap.
+
+Raster roles: 1 contracted region(s). Intrinsic media geometry must not control section height. The verified scheduler embed is not supplied. Do not render fake appointment availability or claim the calendar is operational; keep fallback contact details live HTML.
+
+## 05-privacy-boundary — Tier 3
+
+Use a restrained semantic content band with live typography, thin gold rules, and simple inline SVG icons; preserve generous horizontal quiet space and stack cleanly on mobile.
+
+Raster roles: 0 contracted region(s). Intrinsic media geometry must not control section height. The verified scheduler embed is not supplied. Do not render fake appointment availability or claim the calendar is operational; keep fallback contact details live HTML.
+</pre></details>

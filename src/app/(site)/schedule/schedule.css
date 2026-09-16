@@ -1,0 +1,204 @@
+/*
+ * /schedule — "sch-" page surfaces.
+ * Recipe style follows src/app/(site)/site.css: token-only colours,
+ * photo plates cropped by the CSS slot, veils as gradients, one sparse
+ * gold coordination line whose seam crossings sit at a fixed 59% — the
+ * x where the hero photograph's own foiled gold thread reaches the
+ * section foot, so every later seam reads as the same line continuing.
+ */
+
+/* ---------- 01 schedule-hero: navy image-as-canvas ---------- */
+
+.sch-hero {
+  background: linear-gradient(
+    168deg,
+    var(--color-ink) 0%,
+    var(--color-ink-deep) 55%,
+    var(--color-ink-deeper) 100%
+  );
+}
+
+/* Desktop media field: the extracted still life owns the right side.
+   object-position bottom crops the top ~140px of the source, which is
+   where two prop book spines carry fabricated (and misspelled) titles —
+   lettering this build must never ship. The notebook, pen and priority
+   card all sit below that band and stay complete. */
+.sch-hero-media {
+  position: absolute;
+  inset-block: 0;
+  inset-inline-end: 0;
+  width: 58%;
+}
+
+.sch-hero-media img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center bottom;
+}
+
+/* Navy veil: solid behind the left copy column, open over the still
+   life, plus a top wash that seats the fixed header and shades the
+   photograph's upper edge. */
+.sch-hero-veil {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(
+      90deg,
+      var(--color-ink-deep) 40%,
+      rgba(6, 21, 39, 0.82) 56%,
+      rgba(6, 21, 39, 0.16) 74%,
+      rgba(6, 21, 39, 0.38) 100%
+    ),
+    linear-gradient(180deg, rgba(4, 16, 31, 0.88) 0%, rgba(4, 16, 31, 0) 30%);
+}
+
+/* Mobile media block (stacked after the copy): same source, 3:2 crop
+   anchored bottom for the same fabricated-spine reason. */
+.sch-hero-media-mobile {
+  aspect-ratio: 3 / 2;
+  overflow: hidden;
+}
+
+.sch-hero-media-mobile img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center bottom;
+}
+
+/* ---------- Page-local coordination line: seam stubs ---------- */
+
+/* Desktop-only: the hero's gold thread reaches the section foot at 59%
+   of the viewport; each crossing continues at that x. Mobile simplifies
+   the motif away rather than restarting it decoratively. */
+.sch-seam-in::before,
+.sch-seam-out::after {
+  content: "";
+  position: absolute;
+  left: 59%;
+  width: 1.5px;
+  height: 44px;
+  background: var(--color-gold);
+  opacity: 0.85;
+  display: none;
+}
+
+.sch-seam-in::before {
+  top: 0;
+}
+
+.sch-seam-out::after {
+  bottom: 0;
+}
+
+@media (min-width: 1024px) {
+  .sch-seam-in::before,
+  .sch-seam-out::after {
+    display: block;
+  }
+}
+
+/* ---------- 02 call-expectations: warm paper ledger ---------- */
+
+.sch-expect {
+  background: var(--color-ivory);
+}
+
+.sch-expect-card {
+  background: var(--color-ivory-warm);
+  border: 1px solid rgba(11, 31, 58, 0.14);
+  box-shadow: 0 24px 48px -32px rgba(11, 31, 58, 0.35);
+}
+
+/* ---------- 03 calendar-embed-state: mist scheduler surface ---------- */
+
+.sch-embed {
+  background: linear-gradient(
+    180deg,
+    var(--color-mist) 0%,
+    var(--color-mist-deep) 100%
+  );
+}
+
+.sch-embed-frame {
+  background: #ffffff;
+  border: 1px solid rgba(11, 31, 58, 0.16);
+  box-shadow: 0 28px 56px -36px rgba(11, 31, 58, 0.45);
+}
+
+/* The scheduler slot: CSS owns the height; the iframe fills it. Tall
+   enough on every viewport that the full month grid and the selectable
+   time list are reachable without the frame clipping the last week row. */
+.sch-embed-slot {
+  height: 760px;
+}
+
+@media (min-width: 1024px) {
+  .sch-embed-slot {
+    height: 780px;
+  }
+}
+
+/* Supporting notebook crop: 6:5 slot anchored top, which trims the
+   source's lower band where a gold ref-frame corner is baked in. */
+.sch-embed-still {
+  aspect-ratio: 6 / 5;
+  overflow: hidden;
+}
+
+.sch-embed-still img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+/* ---------- 04 fallback-contact: white contact ledger ---------- */
+
+/* Framed plate. The 1.16 scale crops the source's own baked margins —
+   a cream strip with a ref gold rule top and bottom and a stray glyph
+   on the left edge — while keeping ledger, pen and books whole. */
+.sch-fallback-plate {
+  aspect-ratio: 6 / 5;
+  overflow: hidden;
+  border: 1px solid rgba(11, 31, 58, 0.12);
+  box-shadow: 0 24px 48px -32px rgba(11, 31, 58, 0.4);
+}
+
+.sch-fallback-plate img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transform: scale(1.16);
+  transform-origin: 62% 50%;
+}
+
+/* ---------- 05 privacy-boundary: ivory strip, line terminus ---------- */
+
+.sch-privacy {
+  background: var(--color-ivory);
+}
+
+/* The page line's terminus: the 59% seam stub drops in from the section
+   above and ends here on a terminal dot, clear of the copy below — no
+   further run, no continuation into the footer. */
+.sch-privacy-dot {
+  position: absolute;
+  top: 44px;
+  left: calc(59% + 0.75px);
+  height: 7px;
+  width: 7px;
+  transform: translate(-50%, -50%);
+  border-radius: 9999px;
+  background: var(--color-gold);
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .sch-privacy-dot {
+    display: block;
+  }
+}

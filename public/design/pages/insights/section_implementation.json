@@ -1,0 +1,193 @@
+{
+  "version": 1,
+  "slug": "insights",
+  "route": "/insights",
+  "sections": [
+    {
+      "frame": "01-editorial-hero",
+      "implementation_kind": "bespoke",
+      "implementation_owner": "src/components/pages/insights/editorial-hero.tsx",
+      "content_source": "section_manifest.json#01-editorial-hero",
+      "asset_roles": [
+        "Insights editorial index image"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "Approved manifest fields (eyebrow, headline, body, primary_cta) render as live HTML text, led by \"Scan the article library by planning topic while clearly separating ready pages from held manuscripts.\"."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "Dedicated asset renders the declared subject \"Insights editorial index image\" with the approved \"wide cinematic planning-room composition\" crop and treatment."
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "Frame composition preserved: Dark editorial panel left over the approved study canvas (01-editorial-hero-canvas.jpg full-bleed, lit desk right); eyebrow/headline/body/gold CTA live; the ref's right-edge ready-vs-held device is realized as a stack…."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved navy/gold/ivory language retained on the #0B1F3A band per the manifest edge contract; Cormorant Garamond display over Inter body."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "390x844 recomposition per manifest: Preserve the headline and primary action before the image; use a 4:5 or 3:2 crop centered on the declared subject/focal point, never a blurred filler panel; stack overlays into live blocks, keep at least 70% of the…"
+        }
+      },
+      "ref": "_design_inputs/pages/insights/refs/01-editorial-hero.png",
+      "owners": [
+        "src/app/(site)/insights/page.tsx",
+        "src/app/(site)/insights/insights.css",
+        "src/components/pages/insights/editorial-hero.tsx"
+      ],
+      "notes": "Dark editorial panel left over the approved study canvas (01-editorial-hero-canvas.jpg full-bleed, lit desk right); eyebrow/headline/body/gold CTA live; the ref's right-edge ready-vs-held device is realized as a stack of three dark gold-bordered cards (desktop only), each a live link to a real article route with its registry navLabel and the shared 'Overview open · full article held' state marker matching the ledger's attested publication state; gold line exits the bottom seam into the taxonomy rail."
+    },
+    {
+      "frame": "02-topic-taxonomy",
+      "implementation_kind": "bespoke",
+      "implementation_owner": "src/components/pages/insights/topic-taxonomy.tsx",
+      "content_source": "section_manifest.json#02-topic-taxonomy",
+      "asset_roles": [
+        "code-only live semantic content"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "Approved manifest fields (headline, items) render as live HTML text, led by \"Browse by decision type.\"."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "Code-native section per the manifest image_treatment (\"1536x512 strip with live topic labels\"); live text and drawn elements only, no raster asset required."
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "Frame composition preserved: Mist strip with the five static decision-type labels on one gold-dotted line (manifest declares static content, so no links); the section-owned stethoscope crop sits on the top-right edge; labels stack into…."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved navy/gold/ivory language retained on the #DCE8F2 band per the manifest edge contract; Cormorant Garamond display over Inter body."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "390x844 recomposition per manifest: Convert multi-column ledgers or tables into full-width rule-separated rows in source order; preserve all decision labels and contextual links, move any documentary crop between logical groups, and use only one slim gold…"
+        }
+      },
+      "ref": "_design_inputs/pages/insights/refs/02-topic-taxonomy.png",
+      "owners": [
+        "src/components/pages/insights/topic-taxonomy.tsx",
+        "src/app/(site)/insights/insights.css"
+      ],
+      "notes": "Mist strip with the five static decision-type labels on one gold-dotted line (manifest declares static content, so no links); the section-owned stethoscope crop sits on the top-right edge; labels stack into rule-separated rows on mobile."
+    },
+    {
+      "frame": "03-featured-index",
+      "implementation_kind": "bespoke",
+      "implementation_owner": "src/components/pages/insights/featured-index.tsx",
+      "content_source": "section_manifest.json#03-featured-index",
+      "asset_roles": [
+        "Insights featured route spread"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "Approved manifest fields (headline, body, links) render as live HTML text, led by \"Start where the pressure is clearest.\"."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "PASS with documented deliberate adaptation preserving the approved semantic gate: the extraction (03-featured-index-photo.jpg) carries the frame's route pills baked into its left edge, so the frame recipe shows only the clean right region (visible rect 360,0,904,748) — the physician hand with pen is cropped; prop lettering on the folio and two book spines from the approved frame remains visible"
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "Frame composition preserved: Asymmetric spread: headline/body left (body rewritten from the manifest's spec phrasing into visitor-facing orientation copy), three live featured-route pills on a gold spine overlapping the framed photo edge at…."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved navy/gold/ivory language retained on the #F6F2E8 band per the manifest edge contract; Cormorant Garamond display over Inter body."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "390x844 recomposition per manifest: Stack the primary content group in narrative order while preserving asymmetric emphasis through offset margins and varied spacing; crop imagery around its declared focal point, keep all live text and links, and simplify…"
+        }
+      },
+      "ref": "_design_inputs/pages/insights/refs/03-featured-index.png",
+      "owners": [
+        "src/components/pages/insights/featured-index.tsx",
+        "src/app/(site)/insights/insights.css"
+      ],
+      "notes": "Asymmetric spread: headline/body left (body rewritten from the manifest's spec phrasing into visitor-facing orientation copy), three live featured-route pills on a gold spine overlapping the framed photo edge at desktop; first pill carries the manifest's 'Open featured path' affordance to the checkup article; below sm the pills show the article navLabel instead of the route path so slugs never break mid-token."
+    },
+    {
+      "frame": "04-content-state-ledger",
+      "implementation_kind": "bespoke",
+      "implementation_owner": "src/components/pages/insights/content-state-ledger.tsx",
+      "content_source": "section_manifest.json#04-content-state-ledger",
+      "asset_roles": [
+        "Insights route ledger"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "Approved manifest fields (headline, body, links) render as live HTML text, led by \"Compare the paths before you choose.\"."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "Code-native section per the manifest image_treatment (\"mostly live-text ledger with small editorial tabs\"); live text and drawn elements only, no raster asset required."
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "Frame composition preserved: Quiet white ledger (code-first per extraction plan, no card grid): headline/body left, rule-separated rows on one gold spine right."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved navy/gold/ivory language retained on the #FFFFFF band per the manifest edge contract; Cormorant Garamond display over Inter body."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "390x844 recomposition per manifest: Convert multi-column ledgers or tables into full-width rule-separated rows in source order; preserve all decision labels and contextual links, move any documentary crop between logical groups, and use only one slim gold…"
+        }
+      },
+      "ref": "_design_inputs/pages/insights/refs/04-content-state-ledger.png",
+      "owners": [
+        "src/components/pages/insights/content-state-ledger.tsx",
+        "src/app/(site)/insights/insights.css"
+      ],
+      "notes": "Quiet white ledger (code-first per extraction plan, no card grid): headline/body left, rule-separated rows on one gold spine right. Extended from the manifest's six illustrative links to all twelve /insights/* routes per the build assignment; labels are route-registry navLabels, topics are each article manifest's own category, and the shared held-manuscript state is stated once in customer-facing terms. First row carries the manifest's 'Open first related page' affordance; at mobile widths that chip stacks below the row title (col-span-full) so the title never sets one word per line."
+    },
+    {
+      "frame": "05-subscribe-or-schedule",
+      "implementation_kind": "bespoke",
+      "implementation_owner": "src/components/pages/insights/subscribe-or-schedule.tsx",
+      "content_source": "section_manifest.json#05-subscribe-or-schedule",
+      "asset_roles": [
+        "private advisory office closing field"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "Approved manifest fields (headline, body, primary_cta, secondary_cta, boundary) render as live HTML text, led by \"Choose the next step that matches your readiness.\"."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "Dedicated asset renders the declared subject \"private advisory office closing field\" with the approved \"wide navy close, no faces\" crop and treatment."
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "Frame composition preserved: Navy close over the approved closing-office canvas (lamp left, quiet centre): gold 'Schedule a Strategy Call' to /schedule, outlined 'Browse held article topics' to /resources per the manifest's resource-path outcome…."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved navy/gold/ivory language retained on the #0B1F3A band per the manifest edge contract; Cormorant Garamond display over Inter body."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "390x844 recomposition per manifest: Stack the primary content group in narrative order while preserving asymmetric emphasis through offset margins and varied spacing; crop imagery around its declared focal point, keep all live text and links, and simplify…"
+        }
+      },
+      "ref": "_design_inputs/pages/insights/refs/05-subscribe-or-schedule.png",
+      "owners": [
+        "src/components/pages/insights/subscribe-or-schedule.tsx",
+        "src/app/(site)/insights/insights.css"
+      ],
+      "notes": "Navy close over the approved closing-office canvas (lamp left, quiet centre): gold 'Schedule a Strategy Call' to /schedule, outlined 'Browse held article topics' to /resources per the manifest's resource-path outcome, boundary line, and the page-local gold line ending on a node."
+    }
+  ]
+}

@@ -1,0 +1,325 @@
+<!doctype html><meta charset='utf-8'>
+<title>Image asset review</title><style>
+body{margin:0;padding:24px;background:#111;color:#eee;
+     font:14px/1.5 -apple-system,'Segoe UI',sans-serif}
+a{color:#8bd} .muted{color:#999} h1{font-size:20px}
+.proto{background:#1b1b1b;border:1px solid #333;border-radius:8px;
+       padding:12px 16px;max-width:900px;margin-bottom:24px}
+.proto code{background:#000;padding:1px 5px;border-radius:4px}
+.card{background:#1b1b1b;border:1px solid #333;border-radius:8px;
+      padding:16px;margin-bottom:20px;max-width:1200px}
+.card.missing{border-color:#a33}
+.pair{display:flex;gap:16px;flex-wrap:wrap}
+.pair figure{margin:0;flex:1;min-width:280px}
+.pair img{max-width:100%;border:1px solid #444}
+.asset-preview{display:grid;place-items:center;min-height:180px;
+  background-color:#fff;background-image:linear-gradient(45deg,#ddd 25%,transparent 25%),
+  linear-gradient(-45deg,#ddd 25%,transparent 25%),linear-gradient(45deg,transparent 75%,#ddd 75%),
+  linear-gradient(-45deg,transparent 75%,#ddd 75%);background-size:24px 24px;
+  background-position:0 0,0 12px,12px -12px,-12px 0}
+.asset-preview img,.intended-preview img{display:block;max-height:520px}
+.intended-preview{display:grid;place-items:center;min-height:180px;border:1px solid #444}
+figcaption{font-size:12px;color:#999;margin-top:4px}
+.chip{display:inline-block;font-size:11px;padding:2px 8px;border-radius:10px;
+      background:#333;margin-left:8px;text-transform:uppercase}
+.chip.extract{background:#264} .chip.inpaint{background:#452}
+.chip.code{background:#345}
+.chip.plate{background:#246} .chip.generated{background:#525}
+.chip.unmapped{background:#630} .chip.client-copy{background:#444}
+.chip.composite{background:#536}
+</style>
+<h1>Image asset review</h1>
+<p class='muted'>28 CODE regions and 3 raster assets to review: 3 extract, 0 inpaint.</p>
+<div class='proto'><b>How to review:</b> judge every planned treatment against its design reference on the left. For CODE cards, verify the build note can preserve the region's silhouette, materiality, and compositing—not merely approximate its geometry. To swap a raster, replace the file directly in git — same path, push to main (<a href='https://github.com/Landing-Pages-Websites/elite-physicians-wealth-planning/tree/main/public/images/design'>assets folder in the repo</a>; each card links to its file). Replaced files are authoritative — the pipeline never overwrites them. This page updates on every push. Complete the review subtask to approve; the build does not start until then.</div>
+<div class='card' id='01-utility-title-r1'>
+<b>01-utility-title-r1</b><span class='chip code'>code</span>
+<div class='muted'>utility region 1 from the approved 01-utility-title frame</div>
+<div class='muted'>Use semantic article typography, restrained max-widths, CSS borders and alternating token surfaces; keep every disclosure sentence live and selectable.</div>
+<div class='pair'>
+<figure><a href='crops/01-utility-title-context.png'><img src='crops/01-utility-title-r1-ref.png' alt=''></a><figcaption>design reference — 01-utility-title (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Use semantic article typography, restrained max-widths, CSS borders and alternating token surfaces; keep every disclosure sentence live and selectable.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='01-utility-title-r2'>
+<b>01-utility-title-r2</b><span class='chip code'>code</span>
+<div class='muted'>utility region 2 from the approved 01-utility-title frame</div>
+<div class='muted'>Use semantic article typography, restrained max-widths, CSS borders and alternating token surfaces; keep every disclosure sentence live and selectable.</div>
+<div class='pair'>
+<figure><a href='crops/01-utility-title-context.png'><img src='crops/01-utility-title-r2-ref.png' alt=''></a><figcaption>design reference — 01-utility-title (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Use semantic article typography, restrained max-widths, CSS borders and alternating token surfaces; keep every disclosure sentence live and selectable.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='01-utility-title-r3'>
+<b>01-utility-title-r3</b><span class='chip code'>code</span>
+<div class='muted'>utility region 3 from the approved 01-utility-title frame</div>
+<div class='muted'>Use semantic article typography, restrained max-widths, CSS borders and alternating token surfaces; keep every disclosure sentence live and selectable.</div>
+<div class='pair'>
+<figure><a href='crops/01-utility-title-context.png'><img src='crops/01-utility-title-r3-ref.png' alt=''></a><figcaption>design reference — 01-utility-title (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Use semantic article typography, restrained max-widths, CSS borders and alternating token surfaces; keep every disclosure sentence live and selectable.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='01-utility-title-r4'>
+<b>01-utility-title-r4</b><span class='chip code'>code</span>
+<div class='muted'>utility region 4 from the approved 01-utility-title frame</div>
+<div class='muted'>Use semantic article typography, restrained max-widths, CSS borders and alternating token surfaces; keep every disclosure sentence live and selectable.</div>
+<div class='pair'>
+<figure><a href='crops/01-utility-title-context.png'><img src='crops/01-utility-title-r4-ref.png' alt=''></a><figcaption>design reference — 01-utility-title (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Use semantic article typography, restrained max-widths, CSS borders and alternating token surfaces; keep every disclosure sentence live and selectable.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='01-utility-title-r5'>
+<b>01-utility-title-r5</b><span class='chip code'>code</span>
+<div class='muted'>utility region 5 from the approved 01-utility-title frame</div>
+<div class='muted'>Use semantic article typography, restrained max-widths, CSS borders and alternating token surfaces; keep every disclosure sentence live and selectable.</div>
+<div class='pair'>
+<figure><a href='crops/01-utility-title-context.png'><img src='crops/01-utility-title-r5-ref.png' alt=''></a><figcaption>design reference — 01-utility-title (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Use semantic article typography, restrained max-widths, CSS borders and alternating token surfaces; keep every disclosure sentence live and selectable.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='01-utility-title-r6'>
+<b>01-utility-title-r6</b><span class='chip code'>code</span>
+<div class='muted'>utility region 6 from the approved 01-utility-title frame</div>
+<div class='muted'>Use semantic article typography, restrained max-widths, CSS borders and alternating token surfaces; keep every disclosure sentence live and selectable.</div>
+<div class='pair'>
+<figure><a href='crops/01-utility-title-context.png'><img src='crops/01-utility-title-r6-ref.png' alt=''></a><figcaption>design reference — 01-utility-title (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Use semantic article typography, restrained max-widths, CSS borders and alternating token surfaces; keep every disclosure sentence live and selectable.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='01-utility-title-r7'>
+<b>01-utility-title-r7</b><span class='chip code'>code</span>
+<div class='muted'>utility region 7 from the approved 01-utility-title frame</div>
+<div class='muted'>Use semantic article typography, restrained max-widths, CSS borders and alternating token surfaces; keep every disclosure sentence live and selectable.</div>
+<div class='pair'>
+<figure><a href='crops/01-utility-title-context.png'><img src='crops/01-utility-title-r7-ref.png' alt=''></a><figcaption>design reference — 01-utility-title (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Use semantic article typography, restrained max-widths, CSS borders and alternating token surfaces; keep every disclosure sentence live and selectable.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='02-educational-use-r1'>
+<b>02-educational-use-r1</b><span class='chip extract'>extract</span>
+<div class='muted'>Clean section-owned photographic material for 02-educational-use, with all website text and controls kept live</div>
+<div class='muted'>Rebuild the ledger with semantic lists and CSS grid rows, thin navy and gold rules, warm paper surfaces, and responsive single-column ordering; keep every label live.</div>
+<div class='muted'>presentation: {&quot;alpha_required&quot;: false, &quot;crop_contract&quot;: &quot;Preserve anonymous consultation hands, pen, paper, and quiet vase/books; exclude disclosure copy.&quot;, &quot;edge_treatment&quot;: {&quot;protected_crisp_regions&quot;: [&quot;focal photographic subject&quot;], &quot;style&quot;: &quot;crisp editorial crop with no synthetic fade or halo&quot;, &quot;zones&quot;: [&quot;outer crop boundary&quot;]}, &quot;intended_background&quot;: &quot;#F6F2E8&quot;, &quot;minimum_visible_fraction&quot;: &quot;Both participants hands, pen, and paper remain visible.&quot;, &quot;mode&quot;: &quot;framed-panel&quot;}</div>
+<div class='pair'>
+<figure><a href='crops/02-educational-use-context.png'><img src='crops/02-educational-use-r1-ref.png' alt=''></a><figcaption>design reference — 02-educational-use (click for full frame)</figcaption></figure>
+<figure><div class='asset-preview'><img src='../images/design/media/disclosure-education-consultation.jpg' alt=''></div><figcaption>shipped asset on transparency checkerboard — <a href='https://github.com/Landing-Pages-Websites/elite-physicians-wealth-planning/blob/main/public/images/design/media/disclosure-education-consultation.jpg'><code>media/disclosure-education-consultation.jpg</code></a> (replace in git)</figcaption></figure>
+<figure><div class='intended-preview' style='background:#F6F2E8'><img src='../images/design/media/disclosure-education-consultation.jpg' alt=''></div><figcaption>asset on intended background — #F6F2E8</figcaption></figure>
+</div></div>
+<div class='card' id='02-educational-use-r2'>
+<b>02-educational-use-r2</b><span class='chip code'>code</span>
+<div class='muted'>ledger region 2 from the approved 02-educational-use frame</div>
+<div class='muted'>Rebuild the ledger with semantic lists and CSS grid rows, thin navy and gold rules, warm paper surfaces, and responsive single-column ordering; keep every label live.</div>
+<div class='pair'>
+<figure><a href='crops/02-educational-use-context.png'><img src='crops/02-educational-use-r2-ref.png' alt=''></a><figcaption>design reference — 02-educational-use (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Rebuild the ledger with semantic lists and CSS grid rows, thin navy and gold rules, warm paper surfaces, and responsive single-column ordering; keep every label live.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='02-educational-use-r3'>
+<b>02-educational-use-r3</b><span class='chip code'>code</span>
+<div class='muted'>ledger region 3 from the approved 02-educational-use frame</div>
+<div class='muted'>Rebuild the ledger with semantic lists and CSS grid rows, thin navy and gold rules, warm paper surfaces, and responsive single-column ordering; keep every label live.</div>
+<div class='pair'>
+<figure><a href='crops/02-educational-use-context.png'><img src='crops/02-educational-use-r3-ref.png' alt=''></a><figcaption>design reference — 02-educational-use (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Rebuild the ledger with semantic lists and CSS grid rows, thin navy and gold rules, warm paper surfaces, and responsive single-column ordering; keep every label live.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='02-educational-use-r4'>
+<b>02-educational-use-r4</b><span class='chip code'>code</span>
+<div class='muted'>ledger region 4 from the approved 02-educational-use frame</div>
+<div class='muted'>Rebuild the ledger with semantic lists and CSS grid rows, thin navy and gold rules, warm paper surfaces, and responsive single-column ordering; keep every label live.</div>
+<div class='pair'>
+<figure><a href='crops/02-educational-use-context.png'><img src='crops/02-educational-use-r4-ref.png' alt=''></a><figcaption>design reference — 02-educational-use (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Rebuild the ledger with semantic lists and CSS grid rows, thin navy and gold rules, warm paper surfaces, and responsive single-column ordering; keep every label live.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='02-educational-use-r5'>
+<b>02-educational-use-r5</b><span class='chip code'>code</span>
+<div class='muted'>ledger region 5 from the approved 02-educational-use frame</div>
+<div class='muted'>Rebuild the ledger with semantic lists and CSS grid rows, thin navy and gold rules, warm paper surfaces, and responsive single-column ordering; keep every label live.</div>
+<div class='pair'>
+<figure><a href='crops/02-educational-use-context.png'><img src='crops/02-educational-use-r5-ref.png' alt=''></a><figcaption>design reference — 02-educational-use (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Rebuild the ledger with semantic lists and CSS grid rows, thin navy and gold rules, warm paper surfaces, and responsive single-column ordering; keep every label live.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='03-relationship-boundaries-r1'>
+<b>03-relationship-boundaries-r1</b><span class='chip code'>code</span>
+<div class='muted'>ledger region 1 from the approved 03-relationship-boundaries frame</div>
+<div class='muted'>Rebuild the ledger with semantic lists and CSS grid rows, thin navy and gold rules, warm paper surfaces, and responsive single-column ordering; keep every label live.</div>
+<div class='pair'>
+<figure><a href='crops/03-relationship-boundaries-context.png'><img src='crops/03-relationship-boundaries-r1-ref.png' alt=''></a><figcaption>design reference — 03-relationship-boundaries (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Rebuild the ledger with semantic lists and CSS grid rows, thin navy and gold rules, warm paper surfaces, and responsive single-column ordering; keep every label live.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='03-relationship-boundaries-r2'>
+<b>03-relationship-boundaries-r2</b><span class='chip code'>code</span>
+<div class='muted'>ledger region 2 from the approved 03-relationship-boundaries frame</div>
+<div class='muted'>Rebuild the ledger with semantic lists and CSS grid rows, thin navy and gold rules, warm paper surfaces, and responsive single-column ordering; keep every label live.</div>
+<div class='pair'>
+<figure><a href='crops/03-relationship-boundaries-context.png'><img src='crops/03-relationship-boundaries-r2-ref.png' alt=''></a><figcaption>design reference — 03-relationship-boundaries (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Rebuild the ledger with semantic lists and CSS grid rows, thin navy and gold rules, warm paper surfaces, and responsive single-column ordering; keep every label live.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='03-relationship-boundaries-r3'>
+<b>03-relationship-boundaries-r3</b><span class='chip code'>code</span>
+<div class='muted'>ledger region 3 from the approved 03-relationship-boundaries frame</div>
+<div class='muted'>Rebuild the ledger with semantic lists and CSS grid rows, thin navy and gold rules, warm paper surfaces, and responsive single-column ordering; keep every label live.</div>
+<div class='pair'>
+<figure><a href='crops/03-relationship-boundaries-context.png'><img src='crops/03-relationship-boundaries-r3-ref.png' alt=''></a><figcaption>design reference — 03-relationship-boundaries (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Rebuild the ledger with semantic lists and CSS grid rows, thin navy and gold rules, warm paper surfaces, and responsive single-column ordering; keep every label live.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='03-relationship-boundaries-r4'>
+<b>03-relationship-boundaries-r4</b><span class='chip code'>code</span>
+<div class='muted'>ledger region 4 from the approved 03-relationship-boundaries frame</div>
+<div class='muted'>Rebuild the ledger with semantic lists and CSS grid rows, thin navy and gold rules, warm paper surfaces, and responsive single-column ordering; keep every label live.</div>
+<div class='pair'>
+<figure><a href='crops/03-relationship-boundaries-context.png'><img src='crops/03-relationship-boundaries-r4-ref.png' alt=''></a><figcaption>design reference — 03-relationship-boundaries (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Rebuild the ledger with semantic lists and CSS grid rows, thin navy and gold rules, warm paper surfaces, and responsive single-column ordering; keep every label live.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='03-relationship-boundaries-r5'>
+<b>03-relationship-boundaries-r5</b><span class='chip code'>code</span>
+<div class='muted'>ledger region 5 from the approved 03-relationship-boundaries frame</div>
+<div class='muted'>Rebuild the ledger with semantic lists and CSS grid rows, thin navy and gold rules, warm paper surfaces, and responsive single-column ordering; keep every label live.</div>
+<div class='pair'>
+<figure><a href='crops/03-relationship-boundaries-context.png'><img src='crops/03-relationship-boundaries-r5-ref.png' alt=''></a><figcaption>design reference — 03-relationship-boundaries (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Rebuild the ledger with semantic lists and CSS grid rows, thin navy and gold rules, warm paper surfaces, and responsive single-column ordering; keep every label live.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='03-relationship-boundaries-r6'>
+<b>03-relationship-boundaries-r6</b><span class='chip code'>code</span>
+<div class='muted'>ledger region 6 from the approved 03-relationship-boundaries frame</div>
+<div class='muted'>Rebuild the ledger with semantic lists and CSS grid rows, thin navy and gold rules, warm paper surfaces, and responsive single-column ordering; keep every label live.</div>
+<div class='pair'>
+<figure><a href='crops/03-relationship-boundaries-context.png'><img src='crops/03-relationship-boundaries-r6-ref.png' alt=''></a><figcaption>design reference — 03-relationship-boundaries (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Rebuild the ledger with semantic lists and CSS grid rows, thin navy and gold rules, warm paper surfaces, and responsive single-column ordering; keep every label live.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='04-communications-privacy-r1'>
+<b>04-communications-privacy-r1</b><span class='chip extract'>extract</span>
+<div class='muted'>Clean section-owned photographic material for 04-communications-privacy, with all website text and controls kept live</div>
+<div class='muted'>Rebuild the ledger with semantic lists and CSS grid rows, thin navy and gold rules, warm paper surfaces, and responsive single-column ordering; keep every label live.</div>
+<div class='muted'>presentation: {&quot;alpha_required&quot;: false, &quot;crop_contract&quot;: &quot;Preserve telephone, blank envelope, notebook, pen, and stethoscope; exclude the channel-label bar and disclosure text.&quot;, &quot;edge_treatment&quot;: {&quot;protected_crisp_regions&quot;: [&quot;focal photographic subject&quot;], &quot;style&quot;: &quot;crisp editorial crop with no synthetic fade or halo&quot;, &quot;zones&quot;: [&quot;outer crop boundary&quot;]}, &quot;intended_background&quot;: &quot;#F6F2E8&quot;, &quot;minimum_visible_fraction&quot;: &quot;Telephone, envelope, and stethoscope remain visible together.&quot;, &quot;mode&quot;: &quot;framed-panel&quot;}</div>
+<div class='pair'>
+<figure><a href='crops/04-communications-privacy-context.png'><img src='crops/04-communications-privacy-r1-ref.png' alt=''></a><figcaption>design reference — 04-communications-privacy (click for full frame)</figcaption></figure>
+<figure><div class='asset-preview'><img src='../images/design/media/privacy-communications-still-life.jpg' alt=''></div><figcaption>shipped asset on transparency checkerboard — <a href='https://github.com/Landing-Pages-Websites/elite-physicians-wealth-planning/blob/main/public/images/design/media/privacy-communications-still-life.jpg'><code>media/privacy-communications-still-life.jpg</code></a> (replace in git)</figcaption></figure>
+<figure><div class='intended-preview' style='background:#F6F2E8'><img src='../images/design/media/privacy-communications-still-life.jpg' alt=''></div><figcaption>asset on intended background — #F6F2E8</figcaption></figure>
+</div></div>
+<div class='card' id='04-communications-privacy-r2'>
+<b>04-communications-privacy-r2</b><span class='chip code'>code</span>
+<div class='muted'>ledger region 2 from the approved 04-communications-privacy frame</div>
+<div class='muted'>Rebuild the ledger with semantic lists and CSS grid rows, thin navy and gold rules, warm paper surfaces, and responsive single-column ordering; keep every label live.</div>
+<div class='pair'>
+<figure><a href='crops/04-communications-privacy-context.png'><img src='crops/04-communications-privacy-r2-ref.png' alt=''></a><figcaption>design reference — 04-communications-privacy (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Rebuild the ledger with semantic lists and CSS grid rows, thin navy and gold rules, warm paper surfaces, and responsive single-column ordering; keep every label live.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='04-communications-privacy-r3'>
+<b>04-communications-privacy-r3</b><span class='chip code'>code</span>
+<div class='muted'>ledger region 3 from the approved 04-communications-privacy frame</div>
+<div class='muted'>Rebuild the ledger with semantic lists and CSS grid rows, thin navy and gold rules, warm paper surfaces, and responsive single-column ordering; keep every label live.</div>
+<div class='pair'>
+<figure><a href='crops/04-communications-privacy-context.png'><img src='crops/04-communications-privacy-r3-ref.png' alt=''></a><figcaption>design reference — 04-communications-privacy (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Rebuild the ledger with semantic lists and CSS grid rows, thin navy and gold rules, warm paper surfaces, and responsive single-column ordering; keep every label live.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='04-communications-privacy-r4'>
+<b>04-communications-privacy-r4</b><span class='chip code'>code</span>
+<div class='muted'>ledger region 4 from the approved 04-communications-privacy frame</div>
+<div class='muted'>Rebuild the ledger with semantic lists and CSS grid rows, thin navy and gold rules, warm paper surfaces, and responsive single-column ordering; keep every label live.</div>
+<div class='pair'>
+<figure><a href='crops/04-communications-privacy-context.png'><img src='crops/04-communications-privacy-r4-ref.png' alt=''></a><figcaption>design reference — 04-communications-privacy (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Rebuild the ledger with semantic lists and CSS grid rows, thin navy and gold rules, warm paper surfaces, and responsive single-column ordering; keep every label live.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='04-communications-privacy-r5'>
+<b>04-communications-privacy-r5</b><span class='chip code'>code</span>
+<div class='muted'>ledger region 5 from the approved 04-communications-privacy frame</div>
+<div class='muted'>Rebuild the ledger with semantic lists and CSS grid rows, thin navy and gold rules, warm paper surfaces, and responsive single-column ordering; keep every label live.</div>
+<div class='pair'>
+<figure><a href='crops/04-communications-privacy-context.png'><img src='crops/04-communications-privacy-r5-ref.png' alt=''></a><figcaption>design reference — 04-communications-privacy (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Rebuild the ledger with semantic lists and CSS grid rows, thin navy and gold rules, warm paper surfaces, and responsive single-column ordering; keep every label live.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='04-communications-privacy-r6'>
+<b>04-communications-privacy-r6</b><span class='chip code'>code</span>
+<div class='muted'>ledger region 6 from the approved 04-communications-privacy frame</div>
+<div class='muted'>Rebuild the ledger with semantic lists and CSS grid rows, thin navy and gold rules, warm paper surfaces, and responsive single-column ordering; keep every label live.</div>
+<div class='pair'>
+<figure><a href='crops/04-communications-privacy-context.png'><img src='crops/04-communications-privacy-r6-ref.png' alt=''></a><figcaption>design reference — 04-communications-privacy (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Rebuild the ledger with semantic lists and CSS grid rows, thin navy and gold rules, warm paper surfaces, and responsive single-column ordering; keep every label live.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='05-contact-for-questions-r1'>
+<b>05-contact-for-questions-r1</b><span class='chip extract'>extract</span>
+<div class='muted'>Clean section-owned photographic material for 05-contact-for-questions, with all website text and controls kept live</div>
+<div class='muted'>Use a restrained semantic content band with live typography, thin gold rules, and simple inline SVG icons; preserve generous horizontal quiet space and stack cleanly on mobile.</div>
+<div class='muted'>presentation: {&quot;alpha_required&quot;: false, &quot;crop_contract&quot;: &quot;Preserve the dark legal desk, blank paper, and book texture as a shallow support band; exclude phone, email, and heading copy.&quot;, &quot;edge_treatment&quot;: {&quot;protected_crisp_regions&quot;: [&quot;focal photographic subject&quot;], &quot;style&quot;: &quot;crisp editorial crop with no synthetic fade or halo&quot;, &quot;zones&quot;: [&quot;outer crop boundary&quot;]}, &quot;intended_background&quot;: &quot;#0B1F3A&quot;, &quot;minimum_visible_fraction&quot;: &quot;Paper and book texture remain legible across the band.&quot;, &quot;mode&quot;: &quot;framed-panel&quot;}</div>
+<div class='pair'>
+<figure><a href='crops/05-contact-for-questions-context.png'><img src='crops/05-contact-for-questions-r1-ref.png' alt=''></a><figcaption>design reference — 05-contact-for-questions (click for full frame)</figcaption></figure>
+<figure><div class='asset-preview'><img src='../images/design/media/privacy-contact-legal-desk.jpg' alt=''></div><figcaption>shipped asset on transparency checkerboard — <a href='https://github.com/Landing-Pages-Websites/elite-physicians-wealth-planning/blob/main/public/images/design/media/privacy-contact-legal-desk.jpg'><code>media/privacy-contact-legal-desk.jpg</code></a> (replace in git)</figcaption></figure>
+<figure><div class='intended-preview' style='background:#0B1F3A'><img src='../images/design/media/privacy-contact-legal-desk.jpg' alt=''></div><figcaption>asset on intended background — #0B1F3A</figcaption></figure>
+</div></div>
+<div class='card' id='05-contact-for-questions-r2'>
+<b>05-contact-for-questions-r2</b><span class='chip code'>code</span>
+<div class='muted'>strip region 2 from the approved 05-contact-for-questions frame</div>
+<div class='muted'>Use a restrained semantic content band with live typography, thin gold rules, and simple inline SVG icons; preserve generous horizontal quiet space and stack cleanly on mobile.</div>
+<div class='pair'>
+<figure><a href='crops/05-contact-for-questions-context.png'><img src='crops/05-contact-for-questions-r2-ref.png' alt=''></a><figcaption>design reference — 05-contact-for-questions (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Use a restrained semantic content band with live typography, thin gold rules, and simple inline SVG icons; preserve generous horizontal quiet space and stack cleanly on mobile.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='05-contact-for-questions-r3'>
+<b>05-contact-for-questions-r3</b><span class='chip code'>code</span>
+<div class='muted'>strip region 3 from the approved 05-contact-for-questions frame</div>
+<div class='muted'>Use a restrained semantic content band with live typography, thin gold rules, and simple inline SVG icons; preserve generous horizontal quiet space and stack cleanly on mobile.</div>
+<div class='pair'>
+<figure><a href='crops/05-contact-for-questions-context.png'><img src='crops/05-contact-for-questions-r3-ref.png' alt=''></a><figcaption>design reference — 05-contact-for-questions (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Use a restrained semantic content band with live typography, thin gold rules, and simple inline SVG icons; preserve generous horizontal quiet space and stack cleanly on mobile.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='05-contact-for-questions-r4'>
+<b>05-contact-for-questions-r4</b><span class='chip code'>code</span>
+<div class='muted'>strip region 4 from the approved 05-contact-for-questions frame</div>
+<div class='muted'>Use a restrained semantic content band with live typography, thin gold rules, and simple inline SVG icons; preserve generous horizontal quiet space and stack cleanly on mobile.</div>
+<div class='pair'>
+<figure><a href='crops/05-contact-for-questions-context.png'><img src='crops/05-contact-for-questions-r4-ref.png' alt=''></a><figcaption>design reference — 05-contact-for-questions (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Use a restrained semantic content band with live typography, thin gold rules, and simple inline SVG icons; preserve generous horizontal quiet space and stack cleanly on mobile.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='05-contact-for-questions-r5'>
+<b>05-contact-for-questions-r5</b><span class='chip code'>code</span>
+<div class='muted'>strip region 5 from the approved 05-contact-for-questions frame</div>
+<div class='muted'>Use a restrained semantic content band with live typography, thin gold rules, and simple inline SVG icons; preserve generous horizontal quiet space and stack cleanly on mobile.</div>
+<div class='pair'>
+<figure><a href='crops/05-contact-for-questions-context.png'><img src='crops/05-contact-for-questions-r5-ref.png' alt=''></a><figcaption>design reference — 05-contact-for-questions (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Use a restrained semantic content band with live typography, thin gold rules, and simple inline SVG icons; preserve generous horizontal quiet space and stack cleanly on mobile.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='05-contact-for-questions-r6'>
+<b>05-contact-for-questions-r6</b><span class='chip code'>code</span>
+<div class='muted'>strip region 6 from the approved 05-contact-for-questions frame</div>
+<div class='muted'>Use a restrained semantic content band with live typography, thin gold rules, and simple inline SVG icons; preserve generous horizontal quiet space and stack cleanly on mobile.</div>
+<div class='pair'>
+<figure><a href='crops/05-contact-for-questions-context.png'><img src='crops/05-contact-for-questions-r6-ref.png' alt=''></a><figcaption>design reference — 05-contact-for-questions (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Use a restrained semantic content band with live typography, thin gold rules, and simple inline SVG icons; preserve generous horizontal quiet space and stack cleanly on mobile.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='05-contact-for-questions-r7'>
+<b>05-contact-for-questions-r7</b><span class='chip code'>code</span>
+<div class='muted'>strip region 7 from the approved 05-contact-for-questions frame</div>
+<div class='muted'>Use a restrained semantic content band with live typography, thin gold rules, and simple inline SVG icons; preserve generous horizontal quiet space and stack cleanly on mobile.</div>
+<div class='pair'>
+<figure><a href='crops/05-contact-for-questions-context.png'><img src='crops/05-contact-for-questions-r7-ref.png' alt=''></a><figcaption>design reference — 05-contact-for-questions (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Use a restrained semantic content band with live typography, thin gold rules, and simple inline SVG icons; preserve generous horizontal quiet space and stack cleanly on mobile.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<details><summary>NOTES.md — CSS/SVG techniques the build uses instead of images</summary><pre># privacy-disclosures decomposition notes
+
+## Page content gate
+
+Keep all disclosure copy live and subject to legal review. Do not add operational, regulatory, security, or relationship claims not present in approved content.
+
+All typography uses Cormorant Garamond for display roles and Inter for body/UI roles. Use approved navy, gold, mist, ivory, white, and charcoal tokens. Website text, form controls, diagrams, connectors, rules, paper fields, and geometric icons stay live HTML/CSS/SVG. Extracted files are clean section-owned media crops only; no full section is baked and no pixels are invented.
+
+## 01-utility-title — Tier 3
+
+Use semantic article typography, restrained max-widths, CSS borders and alternating token surfaces; keep every disclosure sentence live and selectable.
+
+Raster roles: 0 contracted region(s). Intrinsic media geometry must not control section height. Keep all disclosure copy live and subject to legal review. Do not add operational, regulatory, security, or relationship claims not present in approved content.
+
+## 02-educational-use — Tier 2
+
+Rebuild the ledger with semantic lists and CSS grid rows, thin navy and gold rules, warm paper surfaces, and responsive single-column ordering; keep every label live.
+
+Raster roles: 1 contracted region(s). Intrinsic media geometry must not control section height. Keep all disclosure copy live and subject to legal review. Do not add operational, regulatory, security, or relationship claims not present in approved content.
+
+## 03-relationship-boundaries — Tier 3
+
+Rebuild the ledger with semantic lists and CSS grid rows, thin navy and gold rules, warm paper surfaces, and responsive single-column ordering; keep every label live.
+
+Raster roles: 0 contracted region(s). Intrinsic media geometry must not control section height. Keep all disclosure copy live and subject to legal review. Do not add operational, regulatory, security, or relationship claims not present in approved content.
+
+## 04-communications-privacy — Tier 2
+
+Rebuild the ledger with semantic lists and CSS grid rows, thin navy and gold rules, warm paper surfaces, and responsive single-column ordering; keep every label live.
+
+Raster roles: 1 contracted region(s). Intrinsic media geometry must not control section height. Keep all disclosure copy live and subject to legal review. Do not add operational, regulatory, security, or relationship claims not present in approved content.
+
+## 05-contact-for-questions — Tier 2
+
+Use a restrained semantic content band with live typography, thin gold rules, and simple inline SVG icons; preserve generous horizontal quiet space and stack cleanly on mobile.
+
+Raster roles: 1 contracted region(s). Intrinsic media geometry must not control section height. Keep all disclosure copy live and subject to legal review. Do not add operational, regulatory, security, or relationship claims not present in approved content.
+</pre></details>

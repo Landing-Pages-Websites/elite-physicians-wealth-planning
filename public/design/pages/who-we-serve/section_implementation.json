@@ -1,0 +1,194 @@
+{
+  "version": 1,
+  "slug": "who-we-serve",
+  "route": "/who-we-serve",
+  "sections": [
+    {
+      "frame": "01-index-hero",
+      "implementation_kind": "bespoke",
+      "implementation_owner": "src/components/pages/who-we-serve/index-hero.tsx",
+      "content_source": "section_manifest.json#01-index-hero",
+      "asset_roles": [
+        "Who We Serve editorial index image"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "Approved manifest fields (eyebrow, headline, body, primary_cta) render as live HTML text, led by \"Find the professional path closest to your career, compensation, and ownership structure.\"."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "Dedicated asset renders the declared subject \"Who We Serve editorial index image\" with the approved \"wide cinematic planning-room composition\" crop and treatment."
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "Frame composition preserved: Dark consult-room canvas (section-owned full-bleed background with veil), live eyebrow/headline/body/gold CTA on the left; the frame's right rail of ivory audience markers is realized as five live links to the audience…."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved navy/gold/ivory language retained on the #0B1F3A band per the manifest edge contract; Cormorant Garamond display over Inter body."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "390x844 recomposition per manifest: Preserve the headline and primary action before the image; use a 4:5 or 3:2 crop centered on the declared subject/focal point, never a blurred filler panel; stack overlays into live blocks, keep at least 70% of the…"
+        }
+      },
+      "ref": "_design_inputs/pages/who-we-serve/refs/01-index-hero.png",
+      "owners": [
+        "src/app/(site)/who-we-serve/page.tsx",
+        "src/app/(site)/who-we-serve/who-we-serve.css",
+        "src/components/pages/who-we-serve/index-hero.tsx",
+        "src/components/pages/who-we-serve/audience-routes.ts"
+      ],
+      "notes": "Dark consult-room canvas (section-owned full-bleed background with veil), live eyebrow/headline/body/gold CTA on the left; the frame's right rail of ivory audience markers is realized as five live links to the audience routes hung from one gold spine; mobile orders copy, CTA, then the rail."
+    },
+    {
+      "frame": "02-taxonomy-rail",
+      "implementation_kind": "bespoke",
+      "implementation_owner": "src/components/pages/who-we-serve/taxonomy-rail.tsx",
+      "content_source": "section_manifest.json#02-taxonomy-rail",
+      "asset_roles": [
+        "Who We Serve taxonomy strip"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "Approved manifest fields (headline, items) render as live HTML text, led by \"Browse by decision type.\"."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "Code-native section per the manifest image_treatment (\"1536x512 strip with live topic labels\"); live text and drawn elements only, no raster asset required."
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "Frame composition preserved: Mist strip: left-anchored heading, five decision-type labels hanging by gold ticks from one gold rail (live links to the audience routes), with the surgeons strip top-right, planner crop bottom-left and executive crop…."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved navy/gold/ivory language retained on the #DCE8F2 band per the manifest edge contract; Cormorant Garamond display over Inter body."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "390x844 recomposition per manifest: Convert multi-column ledgers or tables into full-width rule-separated rows in source order; preserve all decision labels and contextual links, move any documentary crop between logical groups, and use only one slim gold…"
+        }
+      },
+      "ref": "_design_inputs/pages/who-we-serve/refs/02-taxonomy-rail.png",
+      "owners": [
+        "src/app/(site)/who-we-serve/who-we-serve.css",
+        "src/components/pages/who-we-serve/taxonomy-rail.tsx"
+      ],
+      "notes": "Mist strip: left-anchored heading, five decision-type labels hanging by gold ticks from one gold rail (live links to the audience routes), with the surgeons strip top-right, planner crop bottom-left and executive crop bottom-right as subordinate edge photography; mobile converts to rule-separated rows."
+    },
+    {
+      "frame": "03-featured-path",
+      "implementation_kind": "bespoke",
+      "implementation_owner": "src/components/pages/who-we-serve/featured-path.tsx",
+      "content_source": "section_manifest.json#03-featured-path",
+      "asset_roles": [
+        "Who We Serve featured route spread"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "Approved manifest fields (headline, body, links) render as live HTML text, led by \"Start where the pressure is clearest.\"."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "Dedicated asset renders the declared subject \"Who We Serve featured route spread\" with the approved \"asymmetric editorial spread with one large photo and live route labels\" crop and treatment."
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "Frame composition preserved: Ivory spread: left headline/gold rule/body (body rewritten from the manifest's spec phrasing into visitor-facing orientation copy pointing at the featured physicians path and the two inset routes) confront the dominant…."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved navy/gold/ivory language retained on the #F6F2E8 band per the manifest edge contract; Cormorant Garamond display over Inter body."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "390x844 recomposition per manifest: Convert the desktop diagram into a vertical reading rail in source order; keep every label and connector endpoint, place supporting imagery after the decisive step, avoid horizontal scrolling, and redraw the gold…"
+        }
+      },
+      "ref": "_design_inputs/pages/who-we-serve/refs/03-featured-path.png",
+      "owners": [
+        "src/app/(site)/who-we-serve/who-we-serve.css",
+        "src/components/pages/who-we-serve/featured-path.tsx"
+      ],
+      "notes": "Ivory spread: left headline/gold rule/body (body rewritten from the manifest's spec phrasing into visitor-facing orientation copy pointing at the featured physicians path and the two inset routes) confront the dominant main consultation photograph carrying the navy /physicians-specialists route chip; surgeon and dentist insets keep their own gold-bordered route chips (/financial-planning-for-surgeons, /financial-planning-for-dentists); all route labels are live text outside the rasters; mobile stacks main photo first then the two insets in reading order."
+    },
+    {
+      "frame": "04-topic-ledger",
+      "implementation_kind": "bespoke",
+      "implementation_owner": "src/components/pages/who-we-serve/topic-ledger.tsx",
+      "content_source": "section_manifest.json#04-topic-ledger",
+      "asset_roles": [
+        "code-only live semantic content"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "Approved manifest fields (headline, body, links) render as live HTML text, led by \"Compare the paths before you choose.\"."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "Code-native section per the manifest image_treatment (\"mostly live-text ledger with small editorial tabs\"); live text and drawn elements only, no raster asset required."
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "Frame composition preserved: Quiet white ledger: heading/body, the tactile material-swatch rail as the left counterweight, five alternating white/mist rows each a live link showing the route path plus its audience label, and a navy exit band…."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved navy/gold/ivory language retained on the #FFFFFF band per the manifest edge contract; Cormorant Garamond display over Inter body."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "390x844 recomposition per manifest: Convert multi-column ledgers or tables into full-width rule-separated rows in source order; preserve all decision labels and contextual links, move any documentary crop between logical groups, and use only one slim gold…"
+        }
+      },
+      "ref": "_design_inputs/pages/who-we-serve/refs/04-topic-ledger.png",
+      "owners": [
+        "src/app/(site)/who-we-serve/who-we-serve.css",
+        "src/components/pages/who-we-serve/topic-ledger.tsx"
+      ],
+      "notes": "Quiet white ledger: heading/body, the tactile material-swatch rail as the left counterweight, five alternating white/mist rows each a live link showing the route path plus its audience label, and a navy exit band; mobile keeps full-width rule-separated rows in source order."
+    },
+    {
+      "frame": "05-next-best-step",
+      "implementation_kind": "bespoke",
+      "implementation_owner": "src/components/pages/who-we-serve/next-best-step.tsx",
+      "content_source": "section_manifest.json#05-next-best-step",
+      "asset_roles": [
+        "private advisory office closing field"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "Approved manifest fields (headline, body, primary_cta, secondary_cta, boundary) render as live HTML text, led by \"Choose the next step that matches your readiness.\"."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "Dedicated asset renders the declared subject \"private advisory office closing field\" with the approved \"wide navy close, no faces\" crop and treatment."
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "Frame composition preserved: Navy close: the quiet office strip sits above the centered decision group; primary gold button to /schedule, gold-bordered guide request to /physician-tax-retirement-guide, and the manifest's 'Open resource path'…."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved navy/gold/ivory language retained on the #0B1F3A band per the manifest edge contract; Cormorant Garamond display over Inter body."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "390x844 recomposition per manifest: Stack the primary content group in narrative order while preserving asymmetric emphasis through offset margins and varied spacing; crop imagery around its declared focal point, keep all live text and links, and simplify…"
+        }
+      },
+      "ref": "_design_inputs/pages/who-we-serve/refs/05-next-best-step.png",
+      "owners": [
+        "src/app/(site)/who-we-serve/who-we-serve.css",
+        "src/components/pages/who-we-serve/next-best-step.tsx"
+      ],
+      "notes": "Navy close: the quiet office strip sits above the centered decision group; primary gold button to /schedule, gold-bordered guide request to /physician-tax-retirement-guide, and the manifest's 'Open resource path' outcome honored by linking the body's 'resource path' phrase to /resources; boundary line closes the field and the page-local line ends on a node."
+    }
+  ]
+}

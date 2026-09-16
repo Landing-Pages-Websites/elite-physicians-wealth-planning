@@ -1,0 +1,258 @@
+/*
+ * /meet-michael-epps — planner profile dossier (slug: meet-michael-epps).
+ * Page-scoped surfaces only; every class carries the mme- prefix.
+ * Crop offsets window out baked type and baked gold-motif pixels left at the
+ * extract edges — no text-bearing raster may ship as content.
+ */
+
+/* ---------- shared page-local coordination line ---------- */
+
+.mme-seam {
+  position: absolute;
+  left: 1.5rem;
+  width: 1px;
+  background: var(--color-gold);
+  opacity: 0.85;
+}
+.mme-seam-top {
+  top: 0;
+  height: 3rem;
+}
+.mme-seam-bottom {
+  bottom: 0;
+  height: 3rem;
+}
+.mme-seam-close {
+  top: 0;
+  height: 5.5rem;
+}
+.mme-seam-close::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -9px;
+  transform: translateX(-50%);
+  width: 8px;
+  height: 8px;
+  border-radius: 9999px;
+  background: var(--color-gold);
+}
+
+/* ---------- 01 portrait-dossier: navy split with ivory portrait card ---------- */
+
+.mme-hero {
+  background: var(--color-ink-deep);
+}
+.mme-hero-card {
+  background: var(--color-ivory-warm);
+  border: 1px solid rgba(200, 166, 90, 0.55);
+  box-shadow: 0 26px 60px -30px rgba(2, 10, 22, 0.65);
+}
+/* Ambient desk-detail strip on the far right, desktop only. */
+.mme-hero-detail {
+  display: none;
+}
+@media (min-width: 1200px) {
+  .mme-hero-detail {
+    display: block;
+    position: absolute;
+    inset-block: 0;
+    right: 0;
+    width: 13%;
+    overflow: hidden;
+  }
+  .mme-hero-detail img {
+    position: absolute;
+    inset-block: 0;
+    left: -4%;
+    height: 100%;
+    width: 104%;
+    max-width: none;
+    object-fit: cover;
+    object-position: center;
+  }
+  .mme-hero-detail::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: linear-gradient(90deg, var(--color-ink-deep), rgba(6, 21, 39, 0.25) 45%);
+  }
+}
+
+/* ---------- 02 planning-philosophy: ivory essay over full-width desk strip ---------- */
+
+.mme-philosophy {
+  background: var(--color-ivory);
+}
+/* The strip extract keeps a baked gold elbow on its left ~13%, prop spine
+   lettering on its right ~17%, and the source frame's white bands across its
+   lower 27%. The oversize window shows only the clean plan-and-pen band. */
+.mme-strategy-strip {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 4.05 / 1;
+  min-height: 180px;
+}
+.mme-strategy-strip img {
+  position: absolute;
+  top: 0;
+  left: -18.6%;
+  width: 142.9%;
+  max-width: none;
+  height: auto;
+}
+@media (max-width: 639px) {
+  .mme-strategy-strip {
+    aspect-ratio: 2.4 / 1;
+  }
+  .mme-strategy-strip img {
+    top: 0;
+    left: -30%;
+    width: 175%;
+  }
+}
+
+/* ---------- 03 verified-credentials: typographic ledger ---------- */
+
+.mme-credentials {
+  background: #ffffff;
+}
+
+/* ---------- 04 why-physicians: mist band with clinical collage ---------- */
+
+.mme-audience {
+  background: var(--color-mist);
+}
+/* The collage extract carries the frame's baked eyebrow and gold arc across
+   its top ~15%; the window starts below them and the eyebrow is live text. */
+.mme-collage {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 430 / 732;
+  max-height: 620px;
+}
+.mme-collage img {
+  position: absolute;
+  top: -18%;
+  left: 0;
+  width: 100%;
+  max-width: none;
+  height: auto;
+}
+/* White-framed inset overlapping the collage's right edge, desktop only.
+   Left 19% of the inset extract holds a stray gold curl — windowed out. */
+.mme-collage-inset {
+  position: absolute;
+  right: -3.5rem;
+  top: 30%;
+  width: 12rem;
+  overflow: hidden;
+  aspect-ratio: 260 / 225;
+  border: 6px solid #ffffff;
+  box-shadow: 0 18px 40px -22px rgba(11, 31, 58, 0.55);
+}
+.mme-collage-inset img {
+  position: absolute;
+  inset-block: 0;
+  left: -23%;
+  height: 100%;
+  width: 123%;
+  max-width: none;
+  object-fit: cover;
+}
+
+/* ---------- 05 first-conversation: consultation table column ---------- */
+
+.mme-conversation {
+  background: var(--color-ivory);
+}
+/* Window: skips the baked gold hairline at the extract's top 5% and the
+   source frame's navy band + prop folio lettering below its 74.4% line. */
+.mme-table {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 5 / 6;
+  max-height: 640px;
+}
+.mme-table img {
+  position: absolute;
+  top: -7.2%;
+  left: -14%;
+  width: 128%;
+  max-width: none;
+  height: auto;
+}
+
+/* ---------- 06 related-trust-paths: navy close with reading rail ---------- */
+
+.mme-paths {
+  background: var(--color-ink-deeper);
+}
+.mme-paths-media {
+  display: none;
+}
+@media (min-width: 1024px) {
+  .mme-paths-media {
+    display: block;
+    position: absolute;
+    inset-block: 0;
+    right: 0;
+    width: 38%;
+    overflow: hidden;
+  }
+  /* Left ~32% of the extract holds baked display type from the frame. */
+  .mme-paths-media img {
+    position: absolute;
+    inset-block: 0;
+    right: 0;
+    height: 100%;
+    width: 147%;
+    max-width: none;
+    object-fit: cover;
+    object-position: right center;
+  }
+  .mme-paths-media::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: linear-gradient(
+      90deg,
+      var(--color-ink-deeper) 0%,
+      rgba(4, 16, 31, 0.6) 35%,
+      rgba(4, 16, 31, 0.3) 100%
+    );
+  }
+}
+
+/* Vertical trust-path rail: one gold line through three dot nodes. */
+.mme-rail {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 2.25rem;
+}
+.mme-rail::before {
+  content: "";
+  position: absolute;
+  top: 0.6rem;
+  bottom: 0.6rem;
+  left: 5px;
+  width: 1px;
+  background: var(--color-gold);
+  opacity: 0.9;
+}
+.mme-rail-dot {
+  position: relative;
+  margin-top: 0.45rem;
+  height: 11px;
+  width: 11px;
+  flex: none;
+  border-radius: 9999px;
+  border: 1px solid var(--color-gold);
+  background: var(--color-ink-deeper);
+}
+.mme-rail li:hover .mme-rail-dot {
+  background: var(--color-gold);
+}

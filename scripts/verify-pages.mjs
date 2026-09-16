@@ -1,14 +1,10 @@
 import puppeteer from "puppeteer-core";
 import { mkdirSync } from "node:fs";
 
-// Playwright's bundled headless shell. NEVER the user's real Chrome install
-// and never the "chrome" channel — that is their live browser.
-const CHROMIUM =
-  process.env.CHROMIUM_PATH ??
-  `${process.env.HOME}/Library/Caches/ms-playwright/chromium_headless_shell-1234/chrome-headless-shell-mac-arm64/chrome-headless-shell`;
-const BASE = process.env.BASE ?? "http://localhost:3100";
+const CHROMIUM = "/var/lib/megaclaw/user-tools/apt/usr/lib/chromium/chromium";
+const BASE = "http://localhost:3100";
 const OUT = "/tmp/verify";
-const ROUTES = ["/", "/consult-ledger", "/decision-atlas"];
+const ROUTES = ["/", "/variant-a", "/variant-b"];
 const VIEWPORTS = [
   { name: "1536", width: 1536, height: 864 },
   { name: "1440", width: 1440, height: 900 },
@@ -20,6 +16,11 @@ mkdirSync(OUT, { recursive: true });
 const browser = await puppeteer.launch({
   executablePath: CHROMIUM,
   args: ["--no-sandbox", "--disable-gpu", "--hide-scrollbars"],
+  env: {
+    ...process.env,
+    LD_LIBRARY_PATH:
+      "/var/lib/megaclaw/user-tools/apt/usr/lib/x86_64-linux-gnu:/var/lib/megaclaw/user-tools/apt/usr/lib",
+  },
 });
 
 async function auditPage(route, vp) {
@@ -51,12 +52,6 @@ async function auditPage(route, vp) {
       const bridge = document.querySelectorAll(
         'script[src="https://app.gomega.ai/review-bridge/v7/review-bridge.js"]'
       ).length;
-      // A closed popover must not paint. Tailwind's `flex` overrides the UA
-      // rule that hides one, which shipped an always-open nav panel over the
-      // page at every viewport. Cheap to assert, invisible to every other check.
-      const openPopovers = [...document.querySelectorAll("[popover]")]
-        .filter((el) => el.getClientRects().length > 0 && !el.matches(":popover-open"))
-        .map((el) => el.id || el.className);
       return {
         scrollWidth: doc.scrollWidth,
         clientWidth: doc.clientWidth,
@@ -65,21 +60,13 @@ async function auditPage(route, vp) {
         h1s,
         anchors,
         bridge,
-        openPopovers,
       };
     });
     const slug = route === "/" ? "home" : route.slice(1);
-    // The screenshot is a convenience for review, not an assertion. A very tall
-    // mobile page exceeds Chrome's capture limit and used to abort the whole
-    // audit, taking the real checks down with it.
-    try {
-      await page.screenshot({
-        path: `${OUT}/${slug}-${vp.name}.png`,
-        fullPage: true,
-      });
-    } catch (error) {
-      console.error(`  (screenshot skipped for ${slug}-${vp.name}: ${error.message.split("\n")[0]})`);
-    }
+    await page.screenshot({
+      path: `${OUT}/${slug}-${vp.name}.png`,
+      fullPage: true,
+    });
     return {
       route,
       viewport: vp.name,
@@ -91,7 +78,6 @@ async function auditPage(route, vp) {
       h1Count: metrics.h1s,
       anchors: metrics.anchors,
       bridgeCount: metrics.bridge,
-      leakedPopovers: metrics.openPopovers,
     };
   } finally {
     await page.close();

@@ -1,0 +1,44 @@
+/*
+ * Page-owned frame crops for /insights/roth-conversion-timing. Same recipe
+ * system as the family insights-article.css: the class sets the slot
+ * aspect-ratio to the raster's clean visible rect and places the img by
+ * percentages so baked artifacts are excluded deterministically at every
+ * viewport. Family CSS is not modified. Prefix: art-frame--roth-.
+ */
+
+.art-frame--roth-teaser {
+  /* Clean 473x666 extraction; pin the slot to its intrinsic ratio. */
+  aspect-ratio: 473 / 666;
+}
+
+.art-frame--roth-gate {
+  /* No dedicated gate raster exists for this page: the hero still life
+     (574x686) is recropped to its sealed-envelope subject, rows 318–686:
+     visible rect (0,318,574,686). */
+  aspect-ratio: 574 / 368;
+}
+.art-frame--roth-gate > img {
+  top: -86.413%;
+}
+
+.art-frame--roth-review {
+  /* 524x389 minus the baked copy fragment and gold card outline on the left
+     (x 0–119, y 60–389) and the flat ivory band along the bottom (y 375–389):
+     visible rect (122,0,524,372). */
+  aspect-ratio: 402 / 372;
+}
+.art-frame--roth-review > img {
+  width: 130.348%;
+  left: -30.348%;
+}
+
+.art-frame--roth-related {
+  /* 474x489 minus the baked serif copy fragment (x 0–120, y 360–400) and
+     gold rule (x 0–250, y 402–412) at bottom-left: visible rect
+     (130,0,474,400). */
+  aspect-ratio: 344 / 400;
+}
+.art-frame--roth-related > img {
+  width: 137.791%;
+  left: -37.791%;
+}

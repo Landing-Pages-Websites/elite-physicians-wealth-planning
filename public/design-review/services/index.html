@@ -1,0 +1,580 @@
+<!doctype html><meta charset='utf-8'>
+<title>Image asset review</title><style>
+body{margin:0;padding:24px;background:#111;color:#eee;
+     font:14px/1.5 -apple-system,'Segoe UI',sans-serif}
+a{color:#8bd} .muted{color:#999} h1{font-size:20px}
+.proto{background:#1b1b1b;border:1px solid #333;border-radius:8px;
+       padding:12px 16px;max-width:900px;margin-bottom:24px}
+.proto code{background:#000;padding:1px 5px;border-radius:4px}
+.card{background:#1b1b1b;border:1px solid #333;border-radius:8px;
+      padding:16px;margin-bottom:20px;max-width:1200px}
+.card.missing{border-color:#a33}
+.pair{display:flex;gap:16px;flex-wrap:wrap}
+.pair figure{margin:0;flex:1;min-width:280px}
+.pair img{max-width:100%;border:1px solid #444}
+.asset-preview{display:grid;place-items:center;min-height:180px;
+  background-color:#fff;background-image:linear-gradient(45deg,#ddd 25%,transparent 25%),
+  linear-gradient(-45deg,#ddd 25%,transparent 25%),linear-gradient(45deg,transparent 75%,#ddd 75%),
+  linear-gradient(-45deg,transparent 75%,#ddd 75%);background-size:24px 24px;
+  background-position:0 0,0 12px,12px -12px,-12px 0}
+.asset-preview img,.intended-preview img{display:block;max-height:520px}
+.intended-preview{display:grid;place-items:center;min-height:180px;border:1px solid #444}
+figcaption{font-size:12px;color:#999;margin-top:4px}
+.chip{display:inline-block;font-size:11px;padding:2px 8px;border-radius:10px;
+      background:#333;margin-left:8px;text-transform:uppercase}
+.chip.extract{background:#264} .chip.inpaint{background:#452}
+.chip.code{background:#345}
+.chip.plate{background:#246} .chip.generated{background:#525}
+.chip.unmapped{background:#630} .chip.client-copy{background:#444}
+.chip.composite{background:#536}
+</style>
+<h1>Image asset review</h1>
+<p class='muted'>42 CODE regions and 12 raster assets to review: 12 extract, 0 inpaint.</p>
+<div class='proto'><b>How to review:</b> judge every planned treatment against its design reference on the left. For CODE cards, verify the build note can preserve the region's silhouette, materiality, and compositing—not merely approximate its geometry. To swap a raster, replace the file directly in git — same path, push to main. Replaced files are authoritative — the pipeline never overwrites them. This page updates on every push. Complete the review subtask to approve; the build does not start until then.</div>
+<div class='card' id='01-index-hero-r1'>
+<b>01-index-hero-r1</b><span class='chip code'>code</span>
+<div class='muted'>detected live typography, control, rule, panel, or structural surface cluster; photographic material is split into owner-specific asset records where needed</div>
+<div class='muted'>Use a two-field CSS grid over the navy token: live Cormorant Garamond headline and Inter copy on the left, owner-specific worktable photography on the right, a restrained linear-gradient veil for contrast, and one 1px gold coordination path drawn with pseudo-elements.</div>
+<div class='pair'>
+<figure><a href='crops/01-index-hero-context.png'><img src='crops/01-index-hero-r1-ref.png' alt=''></a><figcaption>design reference — 01-index-hero (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Use a two-field CSS grid over the navy token: live Cormorant Garamond headline and Inter copy on the left, owner-specific worktable photography on the right, a restrained linear-gradient veil for contrast, and one 1px gold coordination path drawn with pseudo-elements.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='01-index-hero-r2'>
+<b>01-index-hero-r2</b><span class='chip code'>code</span>
+<div class='muted'>detected live typography, control, rule, panel, or structural surface cluster; photographic material is split into owner-specific asset records where needed</div>
+<div class='muted'>Use a two-field CSS grid over the navy token: live Cormorant Garamond headline and Inter copy on the left, owner-specific worktable photography on the right, a restrained linear-gradient veil for contrast, and one 1px gold coordination path drawn with pseudo-elements.</div>
+<div class='pair'>
+<figure><a href='crops/01-index-hero-context.png'><img src='crops/01-index-hero-r2-ref.png' alt=''></a><figcaption>design reference — 01-index-hero (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Use a two-field CSS grid over the navy token: live Cormorant Garamond headline and Inter copy on the left, owner-specific worktable photography on the right, a restrained linear-gradient veil for contrast, and one 1px gold coordination path drawn with pseudo-elements.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='01-index-hero-r3'>
+<b>01-index-hero-r3</b><span class='chip code'>code</span>
+<div class='muted'>detected live typography, control, rule, panel, or structural surface cluster; photographic material is split into owner-specific asset records where needed</div>
+<div class='muted'>Use a two-field CSS grid over the navy token: live Cormorant Garamond headline and Inter copy on the left, owner-specific worktable photography on the right, a restrained linear-gradient veil for contrast, and one 1px gold coordination path drawn with pseudo-elements.</div>
+<div class='pair'>
+<figure><a href='crops/01-index-hero-context.png'><img src='crops/01-index-hero-r3-ref.png' alt=''></a><figcaption>design reference — 01-index-hero (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Use a two-field CSS grid over the navy token: live Cormorant Garamond headline and Inter copy on the left, owner-specific worktable photography on the right, a restrained linear-gradient veil for contrast, and one 1px gold coordination path drawn with pseudo-elements.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='01-index-hero-r4'>
+<b>01-index-hero-r4</b><span class='chip code'>code</span>
+<div class='muted'>detected live typography, control, rule, panel, or structural surface cluster; photographic material is split into owner-specific asset records where needed</div>
+<div class='muted'>Use a two-field CSS grid over the navy token: live Cormorant Garamond headline and Inter copy on the left, owner-specific worktable photography on the right, a restrained linear-gradient veil for contrast, and one 1px gold coordination path drawn with pseudo-elements.</div>
+<div class='pair'>
+<figure><a href='crops/01-index-hero-context.png'><img src='crops/01-index-hero-r4-ref.png' alt=''></a><figcaption>design reference — 01-index-hero (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Use a two-field CSS grid over the navy token: live Cormorant Garamond headline and Inter copy on the left, owner-specific worktable photography on the right, a restrained linear-gradient veil for contrast, and one 1px gold coordination path drawn with pseudo-elements.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='01-index-hero-r5'>
+<b>01-index-hero-r5</b><span class='chip code'>code</span>
+<div class='muted'>detected live typography, control, rule, panel, or structural surface cluster; photographic material is split into owner-specific asset records where needed</div>
+<div class='muted'>Use a two-field CSS grid over the navy token: live Cormorant Garamond headline and Inter copy on the left, owner-specific worktable photography on the right, a restrained linear-gradient veil for contrast, and one 1px gold coordination path drawn with pseudo-elements.</div>
+<div class='pair'>
+<figure><a href='crops/01-index-hero-context.png'><img src='crops/01-index-hero-r5-ref.png' alt=''></a><figcaption>design reference — 01-index-hero (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Use a two-field CSS grid over the navy token: live Cormorant Garamond headline and Inter copy on the left, owner-specific worktable photography on the right, a restrained linear-gradient veil for contrast, and one 1px gold coordination path drawn with pseudo-elements.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='01-index-hero-r6'>
+<b>01-index-hero-r6</b><span class='chip code'>code</span>
+<div class='muted'>detected live typography, control, rule, panel, or structural surface cluster; photographic material is split into owner-specific asset records where needed</div>
+<div class='muted'>Use a two-field CSS grid over the navy token: live Cormorant Garamond headline and Inter copy on the left, owner-specific worktable photography on the right, a restrained linear-gradient veil for contrast, and one 1px gold coordination path drawn with pseudo-elements.</div>
+<div class='pair'>
+<figure><a href='crops/01-index-hero-context.png'><img src='crops/01-index-hero-r6-ref.png' alt=''></a><figcaption>design reference — 01-index-hero (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Use a two-field CSS grid over the navy token: live Cormorant Garamond headline and Inter copy on the left, owner-specific worktable photography on the right, a restrained linear-gradient veil for contrast, and one 1px gold coordination path drawn with pseudo-elements.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='01-index-hero-r7'>
+<b>01-index-hero-r7</b><span class='chip code'>code</span>
+<div class='muted'>detected live typography, control, rule, panel, or structural surface cluster; photographic material is split into owner-specific asset records where needed</div>
+<div class='muted'>Use a two-field CSS grid over the navy token: live Cormorant Garamond headline and Inter copy on the left, owner-specific worktable photography on the right, a restrained linear-gradient veil for contrast, and one 1px gold coordination path drawn with pseudo-elements.</div>
+<div class='pair'>
+<figure><a href='crops/01-index-hero-context.png'><img src='crops/01-index-hero-r7-ref.png' alt=''></a><figcaption>design reference — 01-index-hero (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Use a two-field CSS grid over the navy token: live Cormorant Garamond headline and Inter copy on the left, owner-specific worktable photography on the right, a restrained linear-gradient veil for contrast, and one 1px gold coordination path drawn with pseudo-elements.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='01-index-hero-rasset-01'>
+<b>01-index-hero-rasset-01</b><span class='chip extract'>extract</span>
+<div class='muted'>consultation worktable, leather chair, task lamp, books and clinical tools</div>
+<div class='muted'>Place the owner-specific consultation worktable crop in the declared full-bleed slot with object-fit: cover; use CSS for every surrounding field, line, label, and responsive relationship.</div>
+<div class='muted'>presentation: {&quot;alpha_required&quot;: false, &quot;crop_contract&quot;: &quot;Use this exact clean source crop as the starting asset; &gt;=85% of the worktable and complete lamp remain visible. Do not recrop around intrinsic dimensions or include neighboring website text.&quot;, &quot;edge_treatment&quot;: {&quot;protected_crisp_regions&quot;: [&quot;consultation worktable, leather chair, task lamp, books and clinical tools&quot;], &quot;style&quot;: &quot;clean rectangular photographic edge; no synthetic fade or matte&quot;, &quot;zones&quot;: []}, &quot;intended_background&quot;: &quot;#041424&quot;, &quot;minimum_visible_fraction&quot;: &quot;&gt;=85% of the worktable and complete lamp remain visible&quot;, &quot;mode&quot;: &quot;full-bleed&quot;}</div>
+<div class='pair'>
+<figure><a href='crops/01-index-hero-context.png'><img src='crops/01-index-hero-rasset-01-ref.png' alt=''></a><figcaption>design reference — 01-index-hero (click for full frame)</figcaption></figure>
+<figure><div class='asset-preview'><img src='../images/design/elements/01-index-hero-consultation-worktable.jpg' alt=''></div><figcaption>shipped asset on transparency checkerboard — <code>elements/01-index-hero-consultation-worktable.jpg</code> (replace in git)</figcaption></figure>
+<figure><div class='intended-preview' style='background:#041424'><img src='../images/design/elements/01-index-hero-consultation-worktable.jpg' alt=''></div><figcaption>asset on intended background — #041424</figcaption></figure>
+</div></div>
+<div class='card' id='02-taxonomy-rail-r1'>
+<b>02-taxonomy-rail-r1</b><span class='chip code'>code</span>
+<div class='muted'>detected live typography, control, rule, panel, or structural surface cluster; photographic material is split into owner-specific asset records where needed</div>
+<div class='muted'>Build the mist-blue strip with CSS grid and live anchor labels; position the two owner-specific photographic edge crops with object-fit: cover, keep the center quiet, and draw the thin gold seam as an inline SVG path.</div>
+<div class='pair'>
+<figure><a href='crops/02-taxonomy-rail-context.png'><img src='crops/02-taxonomy-rail-r1-ref.png' alt=''></a><figcaption>design reference — 02-taxonomy-rail (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Build the mist-blue strip with CSS grid and live anchor labels; position the two owner-specific photographic edge crops with object-fit: cover, keep the center quiet, and draw the thin gold seam as an inline SVG path.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='02-taxonomy-rail-r2'>
+<b>02-taxonomy-rail-r2</b><span class='chip code'>code</span>
+<div class='muted'>detected live typography, control, rule, panel, or structural surface cluster; photographic material is split into owner-specific asset records where needed</div>
+<div class='muted'>Build the mist-blue strip with CSS grid and live anchor labels; position the two owner-specific photographic edge crops with object-fit: cover, keep the center quiet, and draw the thin gold seam as an inline SVG path.</div>
+<div class='pair'>
+<figure><a href='crops/02-taxonomy-rail-context.png'><img src='crops/02-taxonomy-rail-r2-ref.png' alt=''></a><figcaption>design reference — 02-taxonomy-rail (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Build the mist-blue strip with CSS grid and live anchor labels; position the two owner-specific photographic edge crops with object-fit: cover, keep the center quiet, and draw the thin gold seam as an inline SVG path.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='02-taxonomy-rail-r3'>
+<b>02-taxonomy-rail-r3</b><span class='chip code'>code</span>
+<div class='muted'>detected live typography, control, rule, panel, or structural surface cluster; photographic material is split into owner-specific asset records where needed</div>
+<div class='muted'>Build the mist-blue strip with CSS grid and live anchor labels; position the two owner-specific photographic edge crops with object-fit: cover, keep the center quiet, and draw the thin gold seam as an inline SVG path.</div>
+<div class='pair'>
+<figure><a href='crops/02-taxonomy-rail-context.png'><img src='crops/02-taxonomy-rail-r3-ref.png' alt=''></a><figcaption>design reference — 02-taxonomy-rail (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Build the mist-blue strip with CSS grid and live anchor labels; position the two owner-specific photographic edge crops with object-fit: cover, keep the center quiet, and draw the thin gold seam as an inline SVG path.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='02-taxonomy-rail-r4'>
+<b>02-taxonomy-rail-r4</b><span class='chip code'>code</span>
+<div class='muted'>detected live typography, control, rule, panel, or structural surface cluster; photographic material is split into owner-specific asset records where needed</div>
+<div class='muted'>Build the mist-blue strip with CSS grid and live anchor labels; position the two owner-specific photographic edge crops with object-fit: cover, keep the center quiet, and draw the thin gold seam as an inline SVG path.</div>
+<div class='pair'>
+<figure><a href='crops/02-taxonomy-rail-context.png'><img src='crops/02-taxonomy-rail-r4-ref.png' alt=''></a><figcaption>design reference — 02-taxonomy-rail (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Build the mist-blue strip with CSS grid and live anchor labels; position the two owner-specific photographic edge crops with object-fit: cover, keep the center quiet, and draw the thin gold seam as an inline SVG path.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='02-taxonomy-rail-r5'>
+<b>02-taxonomy-rail-r5</b><span class='chip code'>code</span>
+<div class='muted'>detected live typography, control, rule, panel, or structural surface cluster; photographic material is split into owner-specific asset records where needed</div>
+<div class='muted'>Build the mist-blue strip with CSS grid and live anchor labels; position the two owner-specific photographic edge crops with object-fit: cover, keep the center quiet, and draw the thin gold seam as an inline SVG path.</div>
+<div class='pair'>
+<figure><a href='crops/02-taxonomy-rail-context.png'><img src='crops/02-taxonomy-rail-r5-ref.png' alt=''></a><figcaption>design reference — 02-taxonomy-rail (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Build the mist-blue strip with CSS grid and live anchor labels; position the two owner-specific photographic edge crops with object-fit: cover, keep the center quiet, and draw the thin gold seam as an inline SVG path.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='02-taxonomy-rail-r6'>
+<b>02-taxonomy-rail-r6</b><span class='chip code'>code</span>
+<div class='muted'>detected live typography, control, rule, panel, or structural surface cluster; photographic material is split into owner-specific asset records where needed</div>
+<div class='muted'>Build the mist-blue strip with CSS grid and live anchor labels; position the two owner-specific photographic edge crops with object-fit: cover, keep the center quiet, and draw the thin gold seam as an inline SVG path.</div>
+<div class='pair'>
+<figure><a href='crops/02-taxonomy-rail-context.png'><img src='crops/02-taxonomy-rail-r6-ref.png' alt=''></a><figcaption>design reference — 02-taxonomy-rail (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Build the mist-blue strip with CSS grid and live anchor labels; position the two owner-specific photographic edge crops with object-fit: cover, keep the center quiet, and draw the thin gold seam as an inline SVG path.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='02-taxonomy-rail-rasset-01'>
+<b>02-taxonomy-rail-rasset-01</b><span class='chip extract'>extract</span>
+<div class='muted'>folded physician coat and desk edge</div>
+<div class='muted'>Place the owner-specific physician coat crop in the declared framed-panel slot with object-fit: cover; use CSS for every surrounding field, line, label, and responsive relationship.</div>
+<div class='muted'>presentation: {&quot;alpha_required&quot;: false, &quot;crop_contract&quot;: &quot;Use this exact clean source crop as the starting asset; &gt;=80% of the coat sleeve remains visible. Do not recrop around intrinsic dimensions or include neighboring website text.&quot;, &quot;edge_treatment&quot;: {&quot;protected_crisp_regions&quot;: [&quot;folded physician coat and desk edge&quot;], &quot;style&quot;: &quot;clean rectangular photographic edge; no synthetic fade or matte&quot;, &quot;zones&quot;: []}, &quot;intended_background&quot;: &quot;#F4F4EC&quot;, &quot;minimum_visible_fraction&quot;: &quot;&gt;=80% of the coat sleeve remains visible&quot;, &quot;mode&quot;: &quot;framed-panel&quot;}</div>
+<div class='pair'>
+<figure><a href='crops/02-taxonomy-rail-context.png'><img src='crops/02-taxonomy-rail-rasset-01-ref.png' alt=''></a><figcaption>design reference — 02-taxonomy-rail (click for full frame)</figcaption></figure>
+<figure><div class='asset-preview'><img src='../images/design/elements/02-taxonomy-rail-physician-coat.jpg' alt=''></div><figcaption>shipped asset on transparency checkerboard — <code>elements/02-taxonomy-rail-physician-coat.jpg</code> (replace in git)</figcaption></figure>
+<figure><div class='intended-preview' style='background:#F4F4EC'><img src='../images/design/elements/02-taxonomy-rail-physician-coat.jpg' alt=''></div><figcaption>asset on intended background — #F4F4EC</figcaption></figure>
+</div></div>
+<div class='card' id='02-taxonomy-rail-rasset-02'>
+<b>02-taxonomy-rail-rasset-02</b><span class='chip extract'>extract</span>
+<div class='muted'>soft-focus clinic corridor at the opposite rail edge</div>
+<div class='muted'>Place the owner-specific clinic corridor crop in the declared framed-panel slot with object-fit: cover; use CSS for every surrounding field, line, label, and responsive relationship.</div>
+<div class='muted'>presentation: {&quot;alpha_required&quot;: false, &quot;crop_contract&quot;: &quot;Use this exact clean source crop as the starting asset; &gt;=75% of the vertical corridor rhythm remains visible. Do not recrop around intrinsic dimensions or include neighboring website text.&quot;, &quot;edge_treatment&quot;: {&quot;protected_crisp_regions&quot;: [&quot;soft-focus clinic corridor at the opposite rail edge&quot;], &quot;style&quot;: &quot;clean rectangular photographic edge; no synthetic fade or matte&quot;, &quot;zones&quot;: []}, &quot;intended_background&quot;: &quot;#F4F4EC&quot;, &quot;minimum_visible_fraction&quot;: &quot;&gt;=75% of the vertical corridor rhythm remains visible&quot;, &quot;mode&quot;: &quot;framed-panel&quot;}</div>
+<div class='pair'>
+<figure><a href='crops/02-taxonomy-rail-context.png'><img src='crops/02-taxonomy-rail-rasset-02-ref.png' alt=''></a><figcaption>design reference — 02-taxonomy-rail (click for full frame)</figcaption></figure>
+<figure><div class='asset-preview'><img src='../images/design/elements/02-taxonomy-rail-clinic-corridor.jpg' alt=''></div><figcaption>shipped asset on transparency checkerboard — <code>elements/02-taxonomy-rail-clinic-corridor.jpg</code> (replace in git)</figcaption></figure>
+<figure><div class='intended-preview' style='background:#F4F4EC'><img src='../images/design/elements/02-taxonomy-rail-clinic-corridor.jpg' alt=''></div><figcaption>asset on intended background — #F4F4EC</figcaption></figure>
+</div></div>
+<div class='card' id='03-featured-path-r1'>
+<b>03-featured-path-r1</b><span class='chip code'>code</span>
+<div class='muted'>detected live typography, control, rule, panel, or structural surface cluster; photographic material is split into owner-specific asset records where needed</div>
+<div class='muted'>Use an asymmetric twelve-column CSS grid: live copy and CTA occupy the narrow left field, the physician photograph dominates the upper right, the folder detail nests below the copy, and an independent inline SVG route connects the three live planning labels.</div>
+<div class='pair'>
+<figure><a href='crops/03-featured-path-context.png'><img src='crops/03-featured-path-r1-ref.png' alt=''></a><figcaption>design reference — 03-featured-path (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Use an asymmetric twelve-column CSS grid: live copy and CTA occupy the narrow left field, the physician photograph dominates the upper right, the folder detail nests below the copy, and an independent inline SVG route connects the three live planning labels.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='03-featured-path-r2'>
+<b>03-featured-path-r2</b><span class='chip code'>code</span>
+<div class='muted'>detected live typography, control, rule, panel, or structural surface cluster; photographic material is split into owner-specific asset records where needed</div>
+<div class='muted'>Use an asymmetric twelve-column CSS grid: live copy and CTA occupy the narrow left field, the physician photograph dominates the upper right, the folder detail nests below the copy, and an independent inline SVG route connects the three live planning labels.</div>
+<div class='pair'>
+<figure><a href='crops/03-featured-path-context.png'><img src='crops/03-featured-path-r2-ref.png' alt=''></a><figcaption>design reference — 03-featured-path (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Use an asymmetric twelve-column CSS grid: live copy and CTA occupy the narrow left field, the physician photograph dominates the upper right, the folder detail nests below the copy, and an independent inline SVG route connects the three live planning labels.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='03-featured-path-r3'>
+<b>03-featured-path-r3</b><span class='chip code'>code</span>
+<div class='muted'>detected live typography, control, rule, panel, or structural surface cluster; photographic material is split into owner-specific asset records where needed</div>
+<div class='muted'>Use an asymmetric twelve-column CSS grid: live copy and CTA occupy the narrow left field, the physician photograph dominates the upper right, the folder detail nests below the copy, and an independent inline SVG route connects the three live planning labels.</div>
+<div class='pair'>
+<figure><a href='crops/03-featured-path-context.png'><img src='crops/03-featured-path-r3-ref.png' alt=''></a><figcaption>design reference — 03-featured-path (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Use an asymmetric twelve-column CSS grid: live copy and CTA occupy the narrow left field, the physician photograph dominates the upper right, the folder detail nests below the copy, and an independent inline SVG route connects the three live planning labels.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='03-featured-path-r4'>
+<b>03-featured-path-r4</b><span class='chip code'>code</span>
+<div class='muted'>detected live typography, control, rule, panel, or structural surface cluster; photographic material is split into owner-specific asset records where needed</div>
+<div class='muted'>Use an asymmetric twelve-column CSS grid: live copy and CTA occupy the narrow left field, the physician photograph dominates the upper right, the folder detail nests below the copy, and an independent inline SVG route connects the three live planning labels.</div>
+<div class='pair'>
+<figure><a href='crops/03-featured-path-context.png'><img src='crops/03-featured-path-r4-ref.png' alt=''></a><figcaption>design reference — 03-featured-path (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Use an asymmetric twelve-column CSS grid: live copy and CTA occupy the narrow left field, the physician photograph dominates the upper right, the folder detail nests below the copy, and an independent inline SVG route connects the three live planning labels.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='03-featured-path-r5'>
+<b>03-featured-path-r5</b><span class='chip code'>code</span>
+<div class='muted'>detected live typography, control, rule, panel, or structural surface cluster; photographic material is split into owner-specific asset records where needed</div>
+<div class='muted'>Use an asymmetric twelve-column CSS grid: live copy and CTA occupy the narrow left field, the physician photograph dominates the upper right, the folder detail nests below the copy, and an independent inline SVG route connects the three live planning labels.</div>
+<div class='pair'>
+<figure><a href='crops/03-featured-path-context.png'><img src='crops/03-featured-path-r5-ref.png' alt=''></a><figcaption>design reference — 03-featured-path (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Use an asymmetric twelve-column CSS grid: live copy and CTA occupy the narrow left field, the physician photograph dominates the upper right, the folder detail nests below the copy, and an independent inline SVG route connects the three live planning labels.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='03-featured-path-r6'>
+<b>03-featured-path-r6</b><span class='chip code'>code</span>
+<div class='muted'>detected live typography, control, rule, panel, or structural surface cluster; photographic material is split into owner-specific asset records where needed</div>
+<div class='muted'>Use an asymmetric twelve-column CSS grid: live copy and CTA occupy the narrow left field, the physician photograph dominates the upper right, the folder detail nests below the copy, and an independent inline SVG route connects the three live planning labels.</div>
+<div class='pair'>
+<figure><a href='crops/03-featured-path-context.png'><img src='crops/03-featured-path-r6-ref.png' alt=''></a><figcaption>design reference — 03-featured-path (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Use an asymmetric twelve-column CSS grid: live copy and CTA occupy the narrow left field, the physician photograph dominates the upper right, the folder detail nests below the copy, and an independent inline SVG route connects the three live planning labels.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='03-featured-path-r7'>
+<b>03-featured-path-r7</b><span class='chip code'>code</span>
+<div class='muted'>detected live typography, control, rule, panel, or structural surface cluster; photographic material is split into owner-specific asset records where needed</div>
+<div class='muted'>Use an asymmetric twelve-column CSS grid: live copy and CTA occupy the narrow left field, the physician photograph dominates the upper right, the folder detail nests below the copy, and an independent inline SVG route connects the three live planning labels.</div>
+<div class='pair'>
+<figure><a href='crops/03-featured-path-context.png'><img src='crops/03-featured-path-r7-ref.png' alt=''></a><figcaption>design reference — 03-featured-path (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Use an asymmetric twelve-column CSS grid: live copy and CTA occupy the narrow left field, the physician photograph dominates the upper right, the folder detail nests below the copy, and an independent inline SVG route connects the three live planning labels.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='03-featured-path-r8'>
+<b>03-featured-path-r8</b><span class='chip code'>code</span>
+<div class='muted'>detected live typography, control, rule, panel, or structural surface cluster; photographic material is split into owner-specific asset records where needed</div>
+<div class='muted'>Use an asymmetric twelve-column CSS grid: live copy and CTA occupy the narrow left field, the physician photograph dominates the upper right, the folder detail nests below the copy, and an independent inline SVG route connects the three live planning labels.</div>
+<div class='pair'>
+<figure><a href='crops/03-featured-path-context.png'><img src='crops/03-featured-path-r8-ref.png' alt=''></a><figcaption>design reference — 03-featured-path (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Use an asymmetric twelve-column CSS grid: live copy and CTA occupy the narrow left field, the physician photograph dominates the upper right, the folder detail nests below the copy, and an independent inline SVG route connects the three live planning labels.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='03-featured-path-rasset-01'>
+<b>03-featured-path-rasset-01</b><span class='chip extract'>extract</span>
+<div class='muted'>physician reviewing a planning file at a quiet office desk</div>
+<div class='muted'>Place the owner-specific physician planning crop in the declared framed-panel slot with object-fit: cover; use CSS for every surrounding field, line, label, and responsive relationship.</div>
+<div class='muted'>presentation: {&quot;alpha_required&quot;: false, &quot;crop_contract&quot;: &quot;Use this exact clean source crop as the starting asset; complete physician, writing hand, and principal folder remain visible. Do not recrop around intrinsic dimensions or include neighboring website text.&quot;, &quot;edge_treatment&quot;: {&quot;protected_crisp_regions&quot;: [&quot;physician reviewing a planning file at a quiet office desk&quot;], &quot;style&quot;: &quot;clean rectangular photographic edge; no synthetic fade or matte&quot;, &quot;zones&quot;: []}, &quot;intended_background&quot;: &quot;#F4F4EC&quot;, &quot;minimum_visible_fraction&quot;: &quot;complete physician, writing hand, and principal folder remain visible&quot;, &quot;mode&quot;: &quot;framed-panel&quot;}</div>
+<div class='pair'>
+<figure><a href='crops/03-featured-path-context.png'><img src='crops/03-featured-path-rasset-01-ref.png' alt=''></a><figcaption>design reference — 03-featured-path (click for full frame)</figcaption></figure>
+<figure><div class='asset-preview'><img src='../images/design/elements/03-featured-path-physician-planning.jpg' alt=''></div><figcaption>shipped asset on transparency checkerboard — <code>elements/03-featured-path-physician-planning.jpg</code> (replace in git)</figcaption></figure>
+<figure><div class='intended-preview' style='background:#F4F4EC'><img src='../images/design/elements/03-featured-path-physician-planning.jpg' alt=''></div><figcaption>asset on intended background — #F4F4EC</figcaption></figure>
+</div></div>
+<div class='card' id='03-featured-path-rasset-02'>
+<b>03-featured-path-rasset-02</b><span class='chip extract'>extract</span>
+<div class='muted'>close editorial detail of the tax-planning folder</div>
+<div class='muted'>Place the owner-specific tax folder detail crop in the declared framed-panel slot with object-fit: cover; use CSS for every surrounding field, line, label, and responsive relationship.</div>
+<div class='muted'>presentation: {&quot;alpha_required&quot;: false, &quot;crop_contract&quot;: &quot;Use this exact clean source crop as the starting asset; &gt;=85% of the folder and clip remain visible. Do not recrop around intrinsic dimensions or include neighboring website text.&quot;, &quot;edge_treatment&quot;: {&quot;protected_crisp_regions&quot;: [&quot;close editorial detail of the tax-planning folder&quot;], &quot;style&quot;: &quot;clean rectangular photographic edge; no synthetic fade or matte&quot;, &quot;zones&quot;: []}, &quot;intended_background&quot;: &quot;#F4F4EC&quot;, &quot;minimum_visible_fraction&quot;: &quot;&gt;=85% of the folder and clip remain visible&quot;, &quot;mode&quot;: &quot;framed-panel&quot;}</div>
+<div class='pair'>
+<figure><a href='crops/03-featured-path-context.png'><img src='crops/03-featured-path-rasset-02-ref.png' alt=''></a><figcaption>design reference — 03-featured-path (click for full frame)</figcaption></figure>
+<figure><div class='asset-preview'><img src='../images/design/elements/03-featured-path-tax-folder-detail.jpg' alt=''></div><figcaption>shipped asset on transparency checkerboard — <code>elements/03-featured-path-tax-folder-detail.jpg</code> (replace in git)</figcaption></figure>
+<figure><div class='intended-preview' style='background:#F4F4EC'><img src='../images/design/elements/03-featured-path-tax-folder-detail.jpg' alt=''></div><figcaption>asset on intended background — #F4F4EC</figcaption></figure>
+</div></div>
+<div class='card' id='04-topic-ledger-r1'>
+<b>04-topic-ledger-r1</b><span class='chip code'>code</span>
+<div class='muted'>detected live typography, control, rule, panel, or structural surface cluster; photographic material is split into owner-specific asset records where needed</div>
+<div class='muted'>Render the service ledger as semantic links in a CSS grid with rule-separated rows, live Cormorant headings, five owner-specific image thumbnails, one restrained active-state button, and a single responsive SVG coordination spine.</div>
+<div class='pair'>
+<figure><a href='crops/04-topic-ledger-context.png'><img src='crops/04-topic-ledger-r1-ref.png' alt=''></a><figcaption>design reference — 04-topic-ledger (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Render the service ledger as semantic links in a CSS grid with rule-separated rows, live Cormorant headings, five owner-specific image thumbnails, one restrained active-state button, and a single responsive SVG coordination spine.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='04-topic-ledger-r2'>
+<b>04-topic-ledger-r2</b><span class='chip code'>code</span>
+<div class='muted'>detected live typography, control, rule, panel, or structural surface cluster; photographic material is split into owner-specific asset records where needed</div>
+<div class='muted'>Render the service ledger as semantic links in a CSS grid with rule-separated rows, live Cormorant headings, five owner-specific image thumbnails, one restrained active-state button, and a single responsive SVG coordination spine.</div>
+<div class='pair'>
+<figure><a href='crops/04-topic-ledger-context.png'><img src='crops/04-topic-ledger-r2-ref.png' alt=''></a><figcaption>design reference — 04-topic-ledger (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Render the service ledger as semantic links in a CSS grid with rule-separated rows, live Cormorant headings, five owner-specific image thumbnails, one restrained active-state button, and a single responsive SVG coordination spine.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='04-topic-ledger-r3'>
+<b>04-topic-ledger-r3</b><span class='chip code'>code</span>
+<div class='muted'>detected live typography, control, rule, panel, or structural surface cluster; photographic material is split into owner-specific asset records where needed</div>
+<div class='muted'>Render the service ledger as semantic links in a CSS grid with rule-separated rows, live Cormorant headings, five owner-specific image thumbnails, one restrained active-state button, and a single responsive SVG coordination spine.</div>
+<div class='pair'>
+<figure><a href='crops/04-topic-ledger-context.png'><img src='crops/04-topic-ledger-r3-ref.png' alt=''></a><figcaption>design reference — 04-topic-ledger (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Render the service ledger as semantic links in a CSS grid with rule-separated rows, live Cormorant headings, five owner-specific image thumbnails, one restrained active-state button, and a single responsive SVG coordination spine.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='04-topic-ledger-r4'>
+<b>04-topic-ledger-r4</b><span class='chip code'>code</span>
+<div class='muted'>detected live typography, control, rule, panel, or structural surface cluster; photographic material is split into owner-specific asset records where needed</div>
+<div class='muted'>Render the service ledger as semantic links in a CSS grid with rule-separated rows, live Cormorant headings, five owner-specific image thumbnails, one restrained active-state button, and a single responsive SVG coordination spine.</div>
+<div class='pair'>
+<figure><a href='crops/04-topic-ledger-context.png'><img src='crops/04-topic-ledger-r4-ref.png' alt=''></a><figcaption>design reference — 04-topic-ledger (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Render the service ledger as semantic links in a CSS grid with rule-separated rows, live Cormorant headings, five owner-specific image thumbnails, one restrained active-state button, and a single responsive SVG coordination spine.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='04-topic-ledger-r5'>
+<b>04-topic-ledger-r5</b><span class='chip code'>code</span>
+<div class='muted'>detected live typography, control, rule, panel, or structural surface cluster; photographic material is split into owner-specific asset records where needed</div>
+<div class='muted'>Render the service ledger as semantic links in a CSS grid with rule-separated rows, live Cormorant headings, five owner-specific image thumbnails, one restrained active-state button, and a single responsive SVG coordination spine.</div>
+<div class='pair'>
+<figure><a href='crops/04-topic-ledger-context.png'><img src='crops/04-topic-ledger-r5-ref.png' alt=''></a><figcaption>design reference — 04-topic-ledger (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Render the service ledger as semantic links in a CSS grid with rule-separated rows, live Cormorant headings, five owner-specific image thumbnails, one restrained active-state button, and a single responsive SVG coordination spine.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='04-topic-ledger-r6'>
+<b>04-topic-ledger-r6</b><span class='chip code'>code</span>
+<div class='muted'>detected live typography, control, rule, panel, or structural surface cluster; photographic material is split into owner-specific asset records where needed</div>
+<div class='muted'>Render the service ledger as semantic links in a CSS grid with rule-separated rows, live Cormorant headings, five owner-specific image thumbnails, one restrained active-state button, and a single responsive SVG coordination spine.</div>
+<div class='pair'>
+<figure><a href='crops/04-topic-ledger-context.png'><img src='crops/04-topic-ledger-r6-ref.png' alt=''></a><figcaption>design reference — 04-topic-ledger (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Render the service ledger as semantic links in a CSS grid with rule-separated rows, live Cormorant headings, five owner-specific image thumbnails, one restrained active-state button, and a single responsive SVG coordination spine.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='04-topic-ledger-r7'>
+<b>04-topic-ledger-r7</b><span class='chip code'>code</span>
+<div class='muted'>detected live typography, control, rule, panel, or structural surface cluster; photographic material is split into owner-specific asset records where needed</div>
+<div class='muted'>Render the service ledger as semantic links in a CSS grid with rule-separated rows, live Cormorant headings, five owner-specific image thumbnails, one restrained active-state button, and a single responsive SVG coordination spine.</div>
+<div class='pair'>
+<figure><a href='crops/04-topic-ledger-context.png'><img src='crops/04-topic-ledger-r7-ref.png' alt=''></a><figcaption>design reference — 04-topic-ledger (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Render the service ledger as semantic links in a CSS grid with rule-separated rows, live Cormorant headings, five owner-specific image thumbnails, one restrained active-state button, and a single responsive SVG coordination spine.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='04-topic-ledger-r8'>
+<b>04-topic-ledger-r8</b><span class='chip code'>code</span>
+<div class='muted'>detected live typography, control, rule, panel, or structural surface cluster; photographic material is split into owner-specific asset records where needed</div>
+<div class='muted'>Render the service ledger as semantic links in a CSS grid with rule-separated rows, live Cormorant headings, five owner-specific image thumbnails, one restrained active-state button, and a single responsive SVG coordination spine.</div>
+<div class='pair'>
+<figure><a href='crops/04-topic-ledger-context.png'><img src='crops/04-topic-ledger-r8-ref.png' alt=''></a><figcaption>design reference — 04-topic-ledger (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Render the service ledger as semantic links in a CSS grid with rule-separated rows, live Cormorant headings, five owner-specific image thumbnails, one restrained active-state button, and a single responsive SVG coordination spine.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='04-topic-ledger-rasset-01'>
+<b>04-topic-ledger-rasset-01</b><span class='chip extract'>extract</span>
+<div class='muted'>stethoscope and documents for the tax row</div>
+<div class='muted'>Place the owner-specific tax thumbnail crop in the declared framed-panel slot with object-fit: cover; use CSS for every surrounding field, line, label, and responsive relationship.</div>
+<div class='muted'>presentation: {&quot;alpha_required&quot;: false, &quot;crop_contract&quot;: &quot;Use this exact clean source crop as the starting asset; entire thumbnail composition remains visible. Do not recrop around intrinsic dimensions or include neighboring website text.&quot;, &quot;edge_treatment&quot;: {&quot;protected_crisp_regions&quot;: [&quot;stethoscope and documents for the tax row&quot;], &quot;style&quot;: &quot;clean rectangular photographic edge; no synthetic fade or matte&quot;, &quot;zones&quot;: []}, &quot;intended_background&quot;: &quot;#FCFCFC&quot;, &quot;minimum_visible_fraction&quot;: &quot;entire thumbnail composition remains visible&quot;, &quot;mode&quot;: &quot;framed-panel&quot;}</div>
+<div class='pair'>
+<figure><a href='crops/04-topic-ledger-context.png'><img src='crops/04-topic-ledger-rasset-01-ref.png' alt=''></a><figcaption>design reference — 04-topic-ledger (click for full frame)</figcaption></figure>
+<figure><div class='asset-preview'><img src='../images/design/elements/04-topic-ledger-tax-thumbnail.jpg' alt=''></div><figcaption>shipped asset on transparency checkerboard — <code>elements/04-topic-ledger-tax-thumbnail.jpg</code> (replace in git)</figcaption></figure>
+<figure><div class='intended-preview' style='background:#FCFCFC'><img src='../images/design/elements/04-topic-ledger-tax-thumbnail.jpg' alt=''></div><figcaption>asset on intended background — #FCFCFC</figcaption></figure>
+</div></div>
+<div class='card' id='04-topic-ledger-rasset-02'>
+<b>04-topic-ledger-rasset-02</b><span class='chip extract'>extract</span>
+<div class='muted'>pen and dark portfolio folder for the wealth row</div>
+<div class='muted'>Place the owner-specific wealth thumbnail crop in the declared framed-panel slot with object-fit: cover; use CSS for every surrounding field, line, label, and responsive relationship.</div>
+<div class='muted'>presentation: {&quot;alpha_required&quot;: false, &quot;crop_contract&quot;: &quot;Use this exact clean source crop as the starting asset; entire thumbnail composition remains visible. Do not recrop around intrinsic dimensions or include neighboring website text.&quot;, &quot;edge_treatment&quot;: {&quot;protected_crisp_regions&quot;: [&quot;pen and dark portfolio folder for the wealth row&quot;], &quot;style&quot;: &quot;clean rectangular photographic edge; no synthetic fade or matte&quot;, &quot;zones&quot;: []}, &quot;intended_background&quot;: &quot;#FCFCFC&quot;, &quot;minimum_visible_fraction&quot;: &quot;entire thumbnail composition remains visible&quot;, &quot;mode&quot;: &quot;framed-panel&quot;}</div>
+<div class='pair'>
+<figure><a href='crops/04-topic-ledger-context.png'><img src='crops/04-topic-ledger-rasset-02-ref.png' alt=''></a><figcaption>design reference — 04-topic-ledger (click for full frame)</figcaption></figure>
+<figure><div class='asset-preview'><img src='../images/design/elements/04-topic-ledger-wealth-thumbnail.jpg' alt=''></div><figcaption>shipped asset on transparency checkerboard — <code>elements/04-topic-ledger-wealth-thumbnail.jpg</code> (replace in git)</figcaption></figure>
+<figure><div class='intended-preview' style='background:#FCFCFC'><img src='../images/design/elements/04-topic-ledger-wealth-thumbnail.jpg' alt=''></div><figcaption>asset on intended background — #FCFCFC</figcaption></figure>
+</div></div>
+<div class='card' id='04-topic-ledger-rasset-03'>
+<b>04-topic-ledger-rasset-03</b><span class='chip extract'>extract</span>
+<div class='muted'>quiet consultation chair for the retirement row</div>
+<div class='muted'>Place the owner-specific retirement thumbnail crop in the declared framed-panel slot with object-fit: cover; use CSS for every surrounding field, line, label, and responsive relationship.</div>
+<div class='muted'>presentation: {&quot;alpha_required&quot;: false, &quot;crop_contract&quot;: &quot;Use this exact clean source crop as the starting asset; entire thumbnail composition remains visible. Do not recrop around intrinsic dimensions or include neighboring website text.&quot;, &quot;edge_treatment&quot;: {&quot;protected_crisp_regions&quot;: [&quot;quiet consultation chair for the retirement row&quot;], &quot;style&quot;: &quot;clean rectangular photographic edge; no synthetic fade or matte&quot;, &quot;zones&quot;: []}, &quot;intended_background&quot;: &quot;#FCFCFC&quot;, &quot;minimum_visible_fraction&quot;: &quot;entire thumbnail composition remains visible&quot;, &quot;mode&quot;: &quot;framed-panel&quot;}</div>
+<div class='pair'>
+<figure><a href='crops/04-topic-ledger-context.png'><img src='crops/04-topic-ledger-rasset-03-ref.png' alt=''></a><figcaption>design reference — 04-topic-ledger (click for full frame)</figcaption></figure>
+<figure><div class='asset-preview'><img src='../images/design/elements/04-topic-ledger-retirement-thumbnail.jpg' alt=''></div><figcaption>shipped asset on transparency checkerboard — <code>elements/04-topic-ledger-retirement-thumbnail.jpg</code> (replace in git)</figcaption></figure>
+<figure><div class='intended-preview' style='background:#FCFCFC'><img src='../images/design/elements/04-topic-ledger-retirement-thumbnail.jpg' alt=''></div><figcaption>asset on intended background — #FCFCFC</figcaption></figure>
+</div></div>
+<div class='card' id='04-topic-ledger-rasset-04'>
+<b>04-topic-ledger-rasset-04</b><span class='chip extract'>extract</span>
+<div class='muted'>clinical desktop for the practice-owner row</div>
+<div class='muted'>Place the owner-specific practice thumbnail crop in the declared framed-panel slot with object-fit: cover; use CSS for every surrounding field, line, label, and responsive relationship.</div>
+<div class='muted'>presentation: {&quot;alpha_required&quot;: false, &quot;crop_contract&quot;: &quot;Use this exact clean source crop as the starting asset; entire thumbnail composition remains visible. Do not recrop around intrinsic dimensions or include neighboring website text.&quot;, &quot;edge_treatment&quot;: {&quot;protected_crisp_regions&quot;: [&quot;clinical desktop for the practice-owner row&quot;], &quot;style&quot;: &quot;clean rectangular photographic edge; no synthetic fade or matte&quot;, &quot;zones&quot;: []}, &quot;intended_background&quot;: &quot;#FCFCFC&quot;, &quot;minimum_visible_fraction&quot;: &quot;entire thumbnail composition remains visible&quot;, &quot;mode&quot;: &quot;framed-panel&quot;}</div>
+<div class='pair'>
+<figure><a href='crops/04-topic-ledger-context.png'><img src='crops/04-topic-ledger-rasset-04-ref.png' alt=''></a><figcaption>design reference — 04-topic-ledger (click for full frame)</figcaption></figure>
+<figure><div class='asset-preview'><img src='../images/design/elements/04-topic-ledger-practice-thumbnail.jpg' alt=''></div><figcaption>shipped asset on transparency checkerboard — <code>elements/04-topic-ledger-practice-thumbnail.jpg</code> (replace in git)</figcaption></figure>
+<figure><div class='intended-preview' style='background:#FCFCFC'><img src='../images/design/elements/04-topic-ledger-practice-thumbnail.jpg' alt=''></div><figcaption>asset on intended background — #FCFCFC</figcaption></figure>
+</div></div>
+<div class='card' id='04-topic-ledger-rasset-05'>
+<b>04-topic-ledger-rasset-05</b><span class='chip extract'>extract</span>
+<div class='muted'>estate-document folder for the legacy row</div>
+<div class='muted'>Place the owner-specific legacy thumbnail crop in the declared framed-panel slot with object-fit: cover; use CSS for every surrounding field, line, label, and responsive relationship.</div>
+<div class='muted'>presentation: {&quot;alpha_required&quot;: false, &quot;crop_contract&quot;: &quot;Use this exact clean source crop as the starting asset; entire thumbnail composition remains visible. Do not recrop around intrinsic dimensions or include neighboring website text.&quot;, &quot;edge_treatment&quot;: {&quot;protected_crisp_regions&quot;: [&quot;estate-document folder for the legacy row&quot;], &quot;style&quot;: &quot;clean rectangular photographic edge; no synthetic fade or matte&quot;, &quot;zones&quot;: []}, &quot;intended_background&quot;: &quot;#FCFCFC&quot;, &quot;minimum_visible_fraction&quot;: &quot;entire thumbnail composition remains visible&quot;, &quot;mode&quot;: &quot;framed-panel&quot;}</div>
+<div class='pair'>
+<figure><a href='crops/04-topic-ledger-context.png'><img src='crops/04-topic-ledger-rasset-05-ref.png' alt=''></a><figcaption>design reference — 04-topic-ledger (click for full frame)</figcaption></figure>
+<figure><div class='asset-preview'><img src='../images/design/elements/04-topic-ledger-legacy-thumbnail.jpg' alt=''></div><figcaption>shipped asset on transparency checkerboard — <code>elements/04-topic-ledger-legacy-thumbnail.jpg</code> (replace in git)</figcaption></figure>
+<figure><div class='intended-preview' style='background:#FCFCFC'><img src='../images/design/elements/04-topic-ledger-legacy-thumbnail.jpg' alt=''></div><figcaption>asset on intended background — #FCFCFC</figcaption></figure>
+</div></div>
+<div class='card' id='05-next-best-step-r1'>
+<b>05-next-best-step-r1</b><span class='chip code'>code</span>
+<div class='muted'>detected live typography, control, rule, panel, or structural surface cluster; photographic material is split into owner-specific asset records where needed</div>
+<div class='muted'>Compose a centered live decision group on the navy surface, flank it with the two office ambience crops, use CSS borders and pseudo-elements for the gold branching line, and preserve the quiet dark field around both actionable cards.</div>
+<div class='pair'>
+<figure><a href='crops/05-next-best-step-context.png'><img src='crops/05-next-best-step-r1-ref.png' alt=''></a><figcaption>design reference — 05-next-best-step (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Compose a centered live decision group on the navy surface, flank it with the two office ambience crops, use CSS borders and pseudo-elements for the gold branching line, and preserve the quiet dark field around both actionable cards.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='05-next-best-step-r2'>
+<b>05-next-best-step-r2</b><span class='chip code'>code</span>
+<div class='muted'>detected live typography, control, rule, panel, or structural surface cluster; photographic material is split into owner-specific asset records where needed</div>
+<div class='muted'>Compose a centered live decision group on the navy surface, flank it with the two office ambience crops, use CSS borders and pseudo-elements for the gold branching line, and preserve the quiet dark field around both actionable cards.</div>
+<div class='pair'>
+<figure><a href='crops/05-next-best-step-context.png'><img src='crops/05-next-best-step-r2-ref.png' alt=''></a><figcaption>design reference — 05-next-best-step (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Compose a centered live decision group on the navy surface, flank it with the two office ambience crops, use CSS borders and pseudo-elements for the gold branching line, and preserve the quiet dark field around both actionable cards.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='05-next-best-step-r3'>
+<b>05-next-best-step-r3</b><span class='chip code'>code</span>
+<div class='muted'>detected live typography, control, rule, panel, or structural surface cluster; photographic material is split into owner-specific asset records where needed</div>
+<div class='muted'>Compose a centered live decision group on the navy surface, flank it with the two office ambience crops, use CSS borders and pseudo-elements for the gold branching line, and preserve the quiet dark field around both actionable cards.</div>
+<div class='pair'>
+<figure><a href='crops/05-next-best-step-context.png'><img src='crops/05-next-best-step-r3-ref.png' alt=''></a><figcaption>design reference — 05-next-best-step (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Compose a centered live decision group on the navy surface, flank it with the two office ambience crops, use CSS borders and pseudo-elements for the gold branching line, and preserve the quiet dark field around both actionable cards.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='05-next-best-step-r4'>
+<b>05-next-best-step-r4</b><span class='chip code'>code</span>
+<div class='muted'>detected live typography, control, rule, panel, or structural surface cluster; photographic material is split into owner-specific asset records where needed</div>
+<div class='muted'>Compose a centered live decision group on the navy surface, flank it with the two office ambience crops, use CSS borders and pseudo-elements for the gold branching line, and preserve the quiet dark field around both actionable cards.</div>
+<div class='pair'>
+<figure><a href='crops/05-next-best-step-context.png'><img src='crops/05-next-best-step-r4-ref.png' alt=''></a><figcaption>design reference — 05-next-best-step (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Compose a centered live decision group on the navy surface, flank it with the two office ambience crops, use CSS borders and pseudo-elements for the gold branching line, and preserve the quiet dark field around both actionable cards.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='05-next-best-step-r5'>
+<b>05-next-best-step-r5</b><span class='chip code'>code</span>
+<div class='muted'>detected live typography, control, rule, panel, or structural surface cluster; photographic material is split into owner-specific asset records where needed</div>
+<div class='muted'>Compose a centered live decision group on the navy surface, flank it with the two office ambience crops, use CSS borders and pseudo-elements for the gold branching line, and preserve the quiet dark field around both actionable cards.</div>
+<div class='pair'>
+<figure><a href='crops/05-next-best-step-context.png'><img src='crops/05-next-best-step-r5-ref.png' alt=''></a><figcaption>design reference — 05-next-best-step (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Compose a centered live decision group on the navy surface, flank it with the two office ambience crops, use CSS borders and pseudo-elements for the gold branching line, and preserve the quiet dark field around both actionable cards.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='05-next-best-step-r6'>
+<b>05-next-best-step-r6</b><span class='chip code'>code</span>
+<div class='muted'>detected live typography, control, rule, panel, or structural surface cluster; photographic material is split into owner-specific asset records where needed</div>
+<div class='muted'>Compose a centered live decision group on the navy surface, flank it with the two office ambience crops, use CSS borders and pseudo-elements for the gold branching line, and preserve the quiet dark field around both actionable cards.</div>
+<div class='pair'>
+<figure><a href='crops/05-next-best-step-context.png'><img src='crops/05-next-best-step-r6-ref.png' alt=''></a><figcaption>design reference — 05-next-best-step (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Compose a centered live decision group on the navy surface, flank it with the two office ambience crops, use CSS borders and pseudo-elements for the gold branching line, and preserve the quiet dark field around both actionable cards.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='05-next-best-step-r7'>
+<b>05-next-best-step-r7</b><span class='chip code'>code</span>
+<div class='muted'>detected live typography, control, rule, panel, or structural surface cluster; photographic material is split into owner-specific asset records where needed</div>
+<div class='muted'>Compose a centered live decision group on the navy surface, flank it with the two office ambience crops, use CSS borders and pseudo-elements for the gold branching line, and preserve the quiet dark field around both actionable cards.</div>
+<div class='pair'>
+<figure><a href='crops/05-next-best-step-context.png'><img src='crops/05-next-best-step-r7-ref.png' alt=''></a><figcaption>design reference — 05-next-best-step (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Compose a centered live decision group on the navy surface, flank it with the two office ambience crops, use CSS borders and pseudo-elements for the gold branching line, and preserve the quiet dark field around both actionable cards.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='05-next-best-step-r8'>
+<b>05-next-best-step-r8</b><span class='chip code'>code</span>
+<div class='muted'>detected live typography, control, rule, panel, or structural surface cluster; photographic material is split into owner-specific asset records where needed</div>
+<div class='muted'>Compose a centered live decision group on the navy surface, flank it with the two office ambience crops, use CSS borders and pseudo-elements for the gold branching line, and preserve the quiet dark field around both actionable cards.</div>
+<div class='pair'>
+<figure><a href='crops/05-next-best-step-context.png'><img src='crops/05-next-best-step-r8-ref.png' alt=''></a><figcaption>design reference — 05-next-best-step (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Compose a centered live decision group on the navy surface, flank it with the two office ambience crops, use CSS borders and pseudo-elements for the gold branching line, and preserve the quiet dark field around both actionable cards.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='05-next-best-step-r9'>
+<b>05-next-best-step-r9</b><span class='chip code'>code</span>
+<div class='muted'>detected live typography, control, rule, panel, or structural surface cluster; photographic material is split into owner-specific asset records where needed</div>
+<div class='muted'>Compose a centered live decision group on the navy surface, flank it with the two office ambience crops, use CSS borders and pseudo-elements for the gold branching line, and preserve the quiet dark field around both actionable cards.</div>
+<div class='pair'>
+<figure><a href='crops/05-next-best-step-context.png'><img src='crops/05-next-best-step-r9-ref.png' alt=''></a><figcaption>design reference — 05-next-best-step (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Compose a centered live decision group on the navy surface, flank it with the two office ambience crops, use CSS borders and pseudo-elements for the gold branching line, and preserve the quiet dark field around both actionable cards.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='05-next-best-step-r10'>
+<b>05-next-best-step-r10</b><span class='chip code'>code</span>
+<div class='muted'>detected live typography, control, rule, panel, or structural surface cluster; photographic material is split into owner-specific asset records where needed</div>
+<div class='muted'>Compose a centered live decision group on the navy surface, flank it with the two office ambience crops, use CSS borders and pseudo-elements for the gold branching line, and preserve the quiet dark field around both actionable cards.</div>
+<div class='pair'>
+<figure><a href='crops/05-next-best-step-context.png'><img src='crops/05-next-best-step-r10-ref.png' alt=''></a><figcaption>design reference — 05-next-best-step (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Compose a centered live decision group on the navy surface, flank it with the two office ambience crops, use CSS borders and pseudo-elements for the gold branching line, and preserve the quiet dark field around both actionable cards.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='05-next-best-step-r11'>
+<b>05-next-best-step-r11</b><span class='chip code'>code</span>
+<div class='muted'>detected live typography, control, rule, panel, or structural surface cluster; photographic material is split into owner-specific asset records where needed</div>
+<div class='muted'>Compose a centered live decision group on the navy surface, flank it with the two office ambience crops, use CSS borders and pseudo-elements for the gold branching line, and preserve the quiet dark field around both actionable cards.</div>
+<div class='pair'>
+<figure><a href='crops/05-next-best-step-context.png'><img src='crops/05-next-best-step-r11-ref.png' alt=''></a><figcaption>design reference — 05-next-best-step (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Compose a centered live decision group on the navy surface, flank it with the two office ambience crops, use CSS borders and pseudo-elements for the gold branching line, and preserve the quiet dark field around both actionable cards.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='05-next-best-step-r12'>
+<b>05-next-best-step-r12</b><span class='chip code'>code</span>
+<div class='muted'>detected live typography, control, rule, panel, or structural surface cluster; photographic material is split into owner-specific asset records where needed</div>
+<div class='muted'>Compose a centered live decision group on the navy surface, flank it with the two office ambience crops, use CSS borders and pseudo-elements for the gold branching line, and preserve the quiet dark field around both actionable cards.</div>
+<div class='pair'>
+<figure><a href='crops/05-next-best-step-context.png'><img src='crops/05-next-best-step-r12-ref.png' alt=''></a><figcaption>design reference — 05-next-best-step (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Compose a centered live decision group on the navy surface, flank it with the two office ambience crops, use CSS borders and pseudo-elements for the gold branching line, and preserve the quiet dark field around both actionable cards.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='05-next-best-step-r13'>
+<b>05-next-best-step-r13</b><span class='chip code'>code</span>
+<div class='muted'>detected live typography, control, rule, panel, or structural surface cluster; photographic material is split into owner-specific asset records where needed</div>
+<div class='muted'>Compose a centered live decision group on the navy surface, flank it with the two office ambience crops, use CSS borders and pseudo-elements for the gold branching line, and preserve the quiet dark field around both actionable cards.</div>
+<div class='pair'>
+<figure><a href='crops/05-next-best-step-context.png'><img src='crops/05-next-best-step-r13-ref.png' alt=''></a><figcaption>design reference — 05-next-best-step (click for full frame)</figcaption></figure>
+<figure><div class='proto'><b>Planned code treatment</b><p>Compose a centered live decision group on the navy surface, flank it with the two office ambience crops, use CSS borders and pseudo-elements for the gold branching line, and preserve the quiet dark field around both actionable cards.</p></div><figcaption>No raster file. Reject this verdict if simple CSS/SVG cannot preserve the reference-specific visual identity.</figcaption></figure>
+</div></div>
+<div class='card' id='05-next-best-step-rasset-01'>
+<b>05-next-best-step-rasset-01</b><span class='chip extract'>extract</span>
+<div class='muted'>warm brass lamp and leather-chair office ambience</div>
+<div class='muted'>Place the owner-specific lamp and chair crop in the declared framed-panel slot with object-fit: cover; use CSS for every surrounding field, line, label, and responsive relationship.</div>
+<div class='muted'>presentation: {&quot;alpha_required&quot;: false, &quot;crop_contract&quot;: &quot;Use this exact clean source crop as the starting asset; lamp and chair remain legible; crop the outer desk edge first. Do not recrop around intrinsic dimensions or include neighboring website text.&quot;, &quot;edge_treatment&quot;: {&quot;protected_crisp_regions&quot;: [&quot;warm brass lamp and leather-chair office ambience&quot;], &quot;style&quot;: &quot;clean rectangular photographic edge; no synthetic fade or matte&quot;, &quot;zones&quot;: []}, &quot;intended_background&quot;: &quot;#041C2C&quot;, &quot;minimum_visible_fraction&quot;: &quot;lamp and chair remain legible; crop the outer desk edge first&quot;, &quot;mode&quot;: &quot;framed-panel&quot;}</div>
+<div class='pair'>
+<figure><a href='crops/05-next-best-step-context.png'><img src='crops/05-next-best-step-rasset-01-ref.png' alt=''></a><figcaption>design reference — 05-next-best-step (click for full frame)</figcaption></figure>
+<figure><div class='asset-preview'><img src='../images/design/elements/05-next-best-step-lamp-and-chair.jpg' alt=''></div><figcaption>shipped asset on transparency checkerboard — <code>elements/05-next-best-step-lamp-and-chair.jpg</code> (replace in git)</figcaption></figure>
+<figure><div class='intended-preview' style='background:#041C2C'><img src='../images/design/elements/05-next-best-step-lamp-and-chair.jpg' alt=''></div><figcaption>asset on intended background — #041C2C</figcaption></figure>
+</div></div>
+<div class='card' id='05-next-best-step-rasset-02'>
+<b>05-next-best-step-rasset-02</b><span class='chip extract'>extract</span>
+<div class='muted'>dark bookcase and brass object at the closing edge</div>
+<div class='muted'>Place the owner-specific shelf ambience crop in the declared framed-panel slot with object-fit: cover; use CSS for every surrounding field, line, label, and responsive relationship.</div>
+<div class='muted'>presentation: {&quot;alpha_required&quot;: false, &quot;crop_contract&quot;: &quot;Use this exact clean source crop as the starting asset; &gt;=70% of the shelf-height rhythm remains visible. Do not recrop around intrinsic dimensions or include neighboring website text.&quot;, &quot;edge_treatment&quot;: {&quot;protected_crisp_regions&quot;: [&quot;dark bookcase and brass object at the closing edge&quot;], &quot;style&quot;: &quot;clean rectangular photographic edge; no synthetic fade or matte&quot;, &quot;zones&quot;: []}, &quot;intended_background&quot;: &quot;#041C2C&quot;, &quot;minimum_visible_fraction&quot;: &quot;&gt;=70% of the shelf-height rhythm remains visible&quot;, &quot;mode&quot;: &quot;framed-panel&quot;}</div>
+<div class='pair'>
+<figure><a href='crops/05-next-best-step-context.png'><img src='crops/05-next-best-step-rasset-02-ref.png' alt=''></a><figcaption>design reference — 05-next-best-step (click for full frame)</figcaption></figure>
+<figure><div class='asset-preview'><img src='../images/design/elements/05-next-best-step-shelf-ambience.jpg' alt=''></div><figcaption>shipped asset on transparency checkerboard — <code>elements/05-next-best-step-shelf-ambience.jpg</code> (replace in git)</figcaption></figure>
+<figure><div class='intended-preview' style='background:#041C2C'><img src='../images/design/elements/05-next-best-step-shelf-ambience.jpg' alt=''></div><figcaption>asset on intended background — #041C2C</figcaption></figure>
+</div></div>
+<details><summary>NOTES.md — CSS/SVG techniques the build uses instead of images</summary><pre># services design-frame decomposition
+
+All website copy, controls, labels, disclosures, lines, cards, and backgrounds remain live HTML/CSS/SVG. Only the owner-specific raster files named below may be used for the corresponding section. Intrinsic image dimensions never control section height.
+
+## 01-index-hero — Tier 2
+
+Use a two-field CSS grid over the navy token: live Cormorant Garamond headline and Inter copy on the left, owner-specific worktable photography on the right, a restrained linear-gradient veil for contrast, and one 1px gold coordination path drawn with pseudo-elements.
+
+**Assembly order:** CSS section surface; owner-specific raster crop(s) at the declared slot; optional contrast veil; live semantic content; page-local gold SVG/CSS connector.
+
+**Raster ownership and crop use:**
+- `elements/01-index-hero-consultation-worktable.jpg` belongs only to `01-index-hero`. Place as `full-bleed` and preserve: &gt;=85% of the worktable and complete lamp remain visible. Keep all surrounding labels and controls live.
+
+**Composition recipe:**
+- Focal relationship: the illuminated consultation worktable in the right two-thirds.
+- Dominance: photography leads; the headline forms a strong left counterweight.
+- Eye path: eyebrow → headline → open book and stethoscope → CTA → disclosure.
+- Preserve: worktable remains dominant rather than becoming a polite side card; headline and complete focal desk are visible together; lower mist transition stays quiet.
+- Responsive: recompose the content and media slots; preserve the focal relationship rather than proportionally shrinking desktop coordinates.
+
+## 02-taxonomy-rail — Tier 2
+
+Build the mist-blue strip with CSS grid and live anchor labels; position the two owner-specific photographic edge crops with object-fit: cover, keep the center quiet, and draw the thin gold seam as an inline SVG path.
+
+**Assembly order:** CSS section surface; owner-specific raster crop(s) at the declared slot; optional contrast veil; live semantic content; page-local gold SVG/CSS connector.
+
+**Raster ownership and crop use:**
+- `elements/02-taxonomy-rail-physician-coat.jpg` belongs only to `02-taxonomy-rail`. Place as `framed-panel` and preserve: &gt;=80% of the coat sleeve remains visible. Keep all surrounding labels and controls live.
+- `elements/02-taxonomy-rail-clinic-corridor.jpg` belongs only to `02-taxonomy-rail`. Place as `framed-panel` and preserve: &gt;=75% of the vertical corridor rhythm remains visible. Keep all surrounding labels and controls live.
+
+**Composition recipe:**
+- Focal relationship: the quiet live taxonomy line in the center band between photographic edge cues.
+- Dominance: typography strip.
+- Eye path: strip heading → five discipline labels → coat edge → corridor edge.
+- Preserve: center remains spacious; all five labels scan in one sequence; edge imagery remains subordinate.
+- Responsive: recompose the content and media slots; preserve the focal relationship rather than proportionally shrinking desktop coordinates.
+
+## 03-featured-path — Tier 2
+
+Use an asymmetric twelve-column CSS grid: live copy and CTA occupy the narrow left field, the physician photograph dominates the upper right, the folder detail nests below the copy, and an independent inline SVG route connects the three live planning labels.
+
+**Assembly order:** CSS section surface; owner-specific raster crop(s) at the declared slot; optional contrast veil; live semantic content; page-local gold SVG/CSS connector.
+
+**Raster ownership and crop use:**
+- `elements/03-featured-path-physician-planning.jpg` belongs only to `03-featured-path`. Place as `framed-panel` and preserve: complete physician, writing hand, and principal folder remain visible. Keep all surrounding labels and controls live.
+- `elements/03-featured-path-tax-folder-detail.jpg` belongs only to `03-featured-path`. Place as `framed-panel` and preserve: &gt;=85% of the folder and clip remain visible. Keep all surrounding labels and controls live.
+
+**Composition recipe:**
+- Focal relationship: the physician writing at the desk in the dominant upper-right field.
+- Dominance: photography leads, balanced by the large left headline.
+- Eye path: headline → physician photograph → folder detail → CTA → connected planning labels.
+- Preserve: physician crop dominates the spread; folder detail remains a distinct secondary role; route line visually resolves into the live labels.
+- Responsive: recompose the content and media slots; preserve the focal relationship rather than proportionally shrinking desktop coordinates.
+
+## 04-topic-ledger — Tier 2
+
+Render the service ledger as semantic links in a CSS grid with rule-separated rows, live Cormorant headings, five owner-specific image thumbnails, one restrained active-state button, and a single responsive SVG coordination spine.
+
+**Assembly order:** CSS section surface; owner-specific raster crop(s) at the declared slot; optional contrast veil; live semantic content; page-local gold SVG/CSS connector.
+
+**Raster ownership and crop use:**
+- `elements/04-topic-ledger-tax-thumbnail.jpg` belongs only to `04-topic-ledger`. Place as `framed-panel` and preserve: entire thumbnail composition remains visible. Keep all surrounding labels and controls live.
+- `elements/04-topic-ledger-wealth-thumbnail.jpg` belongs only to `04-topic-ledger`. Place as `framed-panel` and preserve: entire thumbnail composition remains visible. Keep all surrounding labels and controls live.
+- `elements/04-topic-ledger-retirement-thumbnail.jpg` belongs only to `04-topic-ledger`. Place as `framed-panel` and preserve: entire thumbnail composition remains visible. Keep all surrounding labels and controls live.
+- `elements/04-topic-ledger-practice-thumbnail.jpg` belongs only to `04-topic-ledger`. Place as `framed-panel` and preserve: entire thumbnail composition remains visible. Keep all surrounding labels and controls live.
+- `elements/04-topic-ledger-legacy-thumbnail.jpg` belongs only to `04-topic-ledger`. Place as `framed-panel` and preserve: entire thumbnail composition remains visible. Keep all surrounding labels and controls live.
+
+**Composition recipe:**
+- Focal relationship: the five-row connected service index in the right two-thirds.
+- Dominance: live ledger dominates; thumbnails establish narrative specificity.
+- Eye path: headline → service spine → row labels → five thumbnails → active route.
+- Preserve: five rows read as one ledger; each thumbnail stays paired with its own route; white space at left remains conspicuous.
+- Responsive: recompose the content and media slots; preserve the focal relationship rather than proportionally shrinking desktop coordinates.
+
+## 05-next-best-step — Tier 2
+
+Compose a centered live decision group on the navy surface, flank it with the two office ambience crops, use CSS borders and pseudo-elements for the gold branching line, and preserve the quiet dark field around both actionable cards.
+
+**Assembly order:** CSS section surface; owner-specific raster crop(s) at the declared slot; optional contrast veil; live semantic content; page-local gold SVG/CSS connector.
+
+**Raster ownership and crop use:**
+- `elements/05-next-best-step-lamp-and-chair.jpg` belongs only to `05-next-best-step`. Place as `framed-panel` and preserve: lamp and chair remain legible; crop the outer desk edge first. Keep all surrounding labels and controls live.
+- `elements/05-next-best-step-shelf-ambience.jpg` belongs only to `05-next-best-step`. Place as `framed-panel` and preserve: &gt;=70% of the shelf-height rhythm remains visible. Keep all surrounding labels and controls live.
+
+**Composition recipe:**
+- Focal relationship: the paired next-step choices in the center of the navy field.
+- Dominance: headline and paired actions dominate; office crops provide atmosphere.
+- Eye path: headline → support copy → strategy-call choice → guide choice → disclosure.
+- Preserve: both choices remain simultaneously visible; dark center remains quiet around the choice group; office edges frame without swallowing the CTA hierarchy.
+- Responsive: recompose the content and media slots; preserve the focal relationship rather than proportionally shrinking desktop coordinates.
+</pre></details>

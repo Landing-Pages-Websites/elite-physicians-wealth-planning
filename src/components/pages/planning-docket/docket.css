@@ -1,0 +1,479 @@
+/*
+ * Planning-docket family — shared surfaces for the five service dockets.
+ * Every class carries the dkt- prefix. Composition mechanics only; copy and
+ * image paths live in the per-page content objects. Recipes follow the
+ * conventions of src/app/(site)/site.css (photo plates, veils, one sparse
+ * gold coordination line per section, seams per the page_flow contract).
+ * Declarations are grouped per line to keep this family file under the
+ * 500-line ceiling without splitting the sheet.
+ */
+
+/* ---------- shared atoms ---------- */
+
+/* Boxed eyebrow tab, as the opening-docket refs draw it. */
+.dkt-eyebrow {
+  display: inline-block;
+  border: 1px solid rgba(200, 166, 90, 0.55);
+  padding: 0.4rem 0.85rem;
+  font-size: 0.75rem; font-weight: 600; letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+}
+
+/* Gold L-corner rule that opens a light-ground heading (03, 05 refs). */
+.dkt-corner { position: relative; padding-top: 1.25rem; }
+.dkt-corner::before {
+  content: "";
+  position: absolute; top: 0; left: 0;
+  width: 3.25rem; height: 1.5rem;
+  border-top: 1.5px solid var(--color-gold);
+  border-left: 1.5px solid var(--color-gold);
+}
+
+/* Educational-boundary line. Subordinate by contract. */
+.dkt-boundary { font-size: var(--text-body-s); line-height: 1.5; max-width: 46ch; }
+
+/* Scroll reveal — same recipe as the approved homepage, family-scoped. */
+@supports (animation-timeline: view()) {
+  .dkt-reveal {
+    animation: dkt-rise 0.7s ease-out both;
+    animation-timeline: view();
+    animation-range: entry 0% entry 38%;
+  }
+}
+@keyframes dkt-rise {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .dkt-reveal { animation: none; }
+}
+
+/* ---------- 01 opening-docket ---------- */
+
+.dkt-open {
+  position: relative;
+  display: flex; flex-direction: column;
+  overflow: hidden;
+  background: linear-gradient(172deg, var(--color-ink) 0%, var(--color-ink-deep) 64%, var(--color-ink-deeper) 100%);
+}
+
+/* Photo pane. Mobile: an in-flow editorial crop AFTER the decision group
+   (flex order — the DOM keeps the image first so lg can layer it); lg: the
+   right field of the split, stopping above the navy boundary band. */
+.dkt-open-media { position: relative; order: 2; aspect-ratio: 4 / 3; width: 100%; }
+.dkt-open-media img {
+  position: absolute; inset: 0;
+  height: 100%; width: 100%; object-fit: cover;
+}
+@media (min-width: 1024px) {
+  .dkt-open-media {
+    position: absolute; top: 0; right: 0; bottom: 6.25rem;
+    width: 55%; aspect-ratio: auto;
+  }
+  /* The canvas photograph runs wider and further behind the copy field. */
+  .dkt-open--canvas .dkt-open-media { width: 62%; }
+}
+
+/* Veil: the split variant keeps a hard editorial pane with a narrow navy
+   seam; the canvas variant dissolves the photograph into the text field. */
+.dkt-open-media::after { content: ""; position: absolute; inset: 0; pointer-events: none; }
+.dkt-open--split .dkt-open-media::after {
+  background: linear-gradient(90deg, rgba(6, 21, 39, 0.55) 0%, rgba(6, 21, 39, 0.12) 22%, rgba(6, 21, 39, 0) 46%);
+}
+.dkt-open--canvas .dkt-open-media::after {
+  background: linear-gradient(94deg, rgba(6, 21, 39, 0.92) 0%, rgba(6, 21, 39, 0.42) 34%, rgba(6, 21, 39, 0.06) 62%, rgba(6, 21, 39, 0.18) 100%);
+}
+
+/* Bottom navy band holding the disclosure, with a hairline seam above. */
+.dkt-open-band {
+  order: 3;
+  position: relative;
+  border-top: 1px solid rgba(220, 232, 242, 0.14);
+  padding-block: 1.75rem;
+}
+
+/* Section-local gold line: exits lower-right into 02, per the seam contract. */
+.dkt-open-exit {
+  position: absolute; right: clamp(2rem, 8vw, 8rem); bottom: 0;
+  width: 1.5px; height: 3.25rem;
+  background: var(--color-gold); opacity: 0.85;
+}
+.dkt-open-exit::before {
+  content: "";
+  position: absolute; right: 0; top: -1.5px;
+  width: clamp(3rem, 7vw, 7rem); height: 1.5px;
+  background: var(--color-gold);
+}
+
+/* ---------- 02 demand-situations ---------- */
+
+.dkt-demand { position: relative; overflow: hidden; background: var(--color-ivory); }
+.dkt-demand-intro { position: relative; }
+
+/* The columns variant grounds on white with an ivory intro field and one
+   hairline seam, both painted in the section gradient so no stacking-context
+   games are needed. Mobile stays a single ivory ground. */
+@media (min-width: 1024px) {
+  .dkt-demand--columns {
+    background: linear-gradient(
+      90deg,
+      var(--color-ivory) 0, var(--color-ivory) 41%,
+      rgba(11, 31, 58, 0.16) 41%, rgba(11, 31, 58, 0.16) calc(41% + 1px),
+      #fcfcfc calc(41% + 1px)
+    );
+  }
+  .dkt-demand--columns .dkt-ledger li::before { background: #fcfcfc; }
+}
+
+/* The vertical decision ledger: one gold spine, a node per trigger, and a
+   hairline rule between entries. All text stays live. */
+.dkt-ledger { position: relative; border-left: 1.5px solid rgba(200, 166, 90, 0.8); }
+.dkt-ledger li { position: relative; padding: 1.05rem 0 1.05rem 1.9rem; }
+.dkt-ledger li + li { border-top: 1px solid rgba(11, 31, 58, 0.1); }
+.dkt-ledger li::before {
+  content: "";
+  position: absolute; left: -5.5px; top: 1.55rem;
+  width: 10px; height: 10px; border-radius: 50%;
+  border: 1.5px solid var(--color-gold);
+  background: var(--color-ivory);
+}
+
+/* Framed editorial panel for the still life. */
+.dkt-demand-panel {
+  position: relative; overflow: hidden;
+  box-shadow: 0 26px 60px -34px rgba(11, 31, 58, 0.55);
+}
+.dkt-demand-panel img { display: block; height: 100%; width: 100%; object-fit: cover; }
+
+/* The ledger's line drops out of the section into the document strip. */
+.dkt-seam-drop {
+  position: absolute; bottom: 0;
+  width: 1.5px; height: 3rem;
+  background: var(--color-gold); opacity: 0.85;
+}
+
+/* ---------- 03 documents-needed ---------- */
+
+.dkt-docs { position: relative; background: #ffffff; }
+.dkt-docs-strip { position: relative; width: 100%; height: clamp(150px, 18vw, 220px); }
+.dkt-docs-strip img {
+  position: absolute; inset: 0;
+  height: 100%; width: 100%; object-fit: cover;
+}
+/* Top-media variant: the strip anchors right beside the heading at lg. */
+@media (min-width: 1024px) {
+  .dkt-docs--top .dkt-docs-strip {
+    position: absolute; top: 0; right: 0;
+    width: 56%; height: clamp(200px, 19vw, 288px);
+  }
+}
+/* Ratio strip: the slot takes its height from the declared clean-crop
+   rectangle (--dkt-strip-ar) so only the intended photographic band is ever
+   in frame — no baked canvas, rendered text, or frame lines can enter. */
+.dkt-docs-strip--ratio { height: auto; aspect-ratio: var(--dkt-strip-ar); min-height: 96px; max-height: 288px; }
+@media (min-width: 1024px) {
+  .dkt-docs--top .dkt-docs-strip--ratio { height: auto; aspect-ratio: var(--dkt-strip-ar); max-height: 288px; }
+}
+/* Mist exit band into the boundary diagram, with the gold line entering
+   from lower-left per the seam contract. */
+.dkt-docs-exit { position: relative; height: 0.875rem; background: var(--color-mist); }
+.dkt-docs-exit::before {
+  content: "";
+  position: absolute; left: clamp(2rem, 9vw, 9rem); bottom: 0;
+  width: 1.5px; height: 2.25rem;
+  background: var(--color-gold);
+}
+
+.dkt-docs-item { display: flex; gap: 0.8rem; align-items: flex-start; }
+@media (min-width: 1024px) {
+  .dkt-docs-item + .dkt-docs-item {
+    border-left: 1px solid rgba(11, 31, 58, 0.12);
+    padding-left: 1.75rem;
+  }
+}
+
+/* ---------- 04 coordination-boundary ---------- */
+
+.dkt-map {
+  position: relative; overflow: hidden;
+  background: linear-gradient(168deg, #e4eef6 0%, var(--color-mist) 46%, var(--color-mist-deep) 100%);
+}
+
+/* Framed photographic room panel (rooms layout — assets ship). The crop's
+   intentional rectangle arrives as --dkt-room-ar from the content object. */
+.dkt-room {
+  background: #ffffff; padding: 0.5rem;
+  box-shadow: 0 1px 2px rgba(11, 31, 58, 0.1), 0 22px 44px -26px rgba(11, 31, 58, 0.45);
+}
+.dkt-room img { display: block; width: 100%; object-fit: cover; aspect-ratio: var(--dkt-room-ar, auto); }
+/* Mobile: portrait crops (the TPA room) join the landscape set's aspect so
+   one panel never towers over its siblings on the stacked rail. */
+@media (max-width: 1023px) {
+  .dkt-room--portrait img { aspect-ratio: 340 / 155; }
+}
+
+/* Code-native abstract room panel (hub layout — no raster ships). A white-
+   matted tonal room impression; the SVG draws the wall/floor geometry and
+   stroke furniture (see abstract-rooms.tsx). Deliberately NOT a fake photo. */
+.dkt-room-abstract {
+  position: relative; aspect-ratio: 5 / 4; overflow: hidden;
+  border: 6px solid #ffffff;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.95) 0%, rgba(238, 245, 250, 0.9) 55%, rgba(210, 224, 236, 0.95) 100%),
+    var(--color-mist);
+  box-shadow: 0 1px 2px rgba(11, 31, 58, 0.1), 0 22px 44px -26px rgba(11, 31, 58, 0.45);
+}
+.dkt-room-abstract svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+
+/* Role label cards. The hub is the only navy node. */
+.dkt-map-label {
+  display: block;
+  background: #ffffff; padding: 0.7rem 0.9rem;
+  font-size: var(--text-body-s); font-weight: 500; line-height: 1.4;
+  color: var(--color-ink);
+  box-shadow: 0 10px 24px -14px rgba(11, 31, 58, 0.4);
+}
+.dkt-map-label--hub { background: var(--color-ink); color: var(--color-ivory); font-weight: 600; }
+
+/* Room figure: panel with its label plate overlapping the lower edge. */
+.dkt-map-fig { display: flex; flex-direction: column; }
+.dkt-map-fig .dkt-map-label { position: relative; margin: -1.1rem 1.1rem 0; }
+/* Portrait crops (e.g. the TPA room) seat the label beside the panel, as the
+   ref draws it — a stacked label would wrap one word per line. */
+@media (min-width: 1024px) {
+  .dkt-map-fig--side { flex-direction: row; align-items: flex-end; }
+  .dkt-map-fig--side .dkt-room { order: 2; width: 48%; flex-shrink: 0; }
+  .dkt-map-fig--side .dkt-map-label { order: 1; margin: 0 -1.1rem 1.1rem 0; flex: 1; }
+}
+
+/* Navy hub node for the code-native (hub) layout. */
+.dkt-map-hubnode {
+  display: block;
+  background: var(--color-ink); color: var(--color-ivory);
+  padding: 1.6rem 1.5rem; min-width: 13rem;
+  text-align: center; font-weight: 600; line-height: 1.4;
+  box-shadow: 0 24px 44px -24px rgba(4, 16, 31, 0.7);
+}
+
+/* Mobile: one gold spine binds the stacked roles; desktop replaces it with
+   element-anchored connectors so lines always meet their panels. */
+@media (max-width: 1023px) {
+  .dkt-map-rail {
+    border-left: 1.5px solid rgba(200, 166, 90, 0.8);
+    padding-left: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  /* rooms layout: hub column + partner trunk. The 3rem column gap plus the
+     partners' 2.5rem lead-in are the exact connector lengths below. */
+  .dkt-map-diagram--rooms {
+    display: grid;
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    column-gap: 3rem;
+    align-items: center;
+  }
+  .dkt-map-hubcol { position: relative; }
+  .dkt-map-hubcol::after {
+    content: "";
+    position: absolute; top: 50%; right: -3rem;
+    width: 3rem; height: 1.5px;
+    background: var(--color-gold); opacity: 0.85;
+  }
+  .dkt-map-partners { position: relative; padding-left: 2.5rem; }
+  .dkt-map-partners::before {
+    content: "";
+    position: absolute; left: 0; top: 7%; bottom: 7%; width: 1.5px;
+    background: var(--color-gold); opacity: 0.85;
+  }
+  .dkt-map-partner { position: relative; }
+  .dkt-map-partner::before {
+    content: "";
+    position: absolute; left: -2.5rem; top: 50%;
+    width: 2.5rem; height: 1.5px;
+    background: var(--color-gold); opacity: 0.85;
+  }
+
+  /* hub layout: partners around the navy node. */
+  .dkt-map-diagram--hub {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+    grid-template-areas: ". top ." "left hub right";
+    column-gap: 3rem; row-gap: 3rem;
+    align-items: center;
+  }
+  .dkt-map-cell--hub { grid-area: hub; position: relative; }
+  .dkt-map-cell--top {
+    grid-area: top;
+    position: relative; justify-self: center;
+    width: min(100%, 15rem);
+  }
+  .dkt-map-cell--left { grid-area: left; }
+  .dkt-map-cell--right { grid-area: right; }
+  .dkt-map-cell--hub::before,
+  .dkt-map-cell--hub::after {
+    content: "";
+    position: absolute; top: 50%;
+    width: 3rem; height: 1.5px;
+    background: var(--color-gold); opacity: 0.85;
+  }
+  .dkt-map-cell--hub::before { left: -3rem; }
+  .dkt-map-cell--hub::after { right: -3rem; }
+  .dkt-map-cell--top::after {
+    content: "";
+    position: absolute; left: 50%; bottom: -3rem;
+    width: 1.5px; height: 3rem;
+    background: var(--color-gold); opacity: 0.85;
+  }
+}
+
+/* Exit: the line leaves the role map toward the adjacent-service shelf. */
+.dkt-map-exit {
+  position: absolute; left: clamp(2rem, 9vw, 9rem); bottom: 0;
+  width: 1.5px; height: 3rem;
+  background: var(--color-gold); opacity: 0.85;
+}
+
+/* ---------- 05 adjacent-planning ---------- */
+
+.dkt-adj { position: relative; overflow: hidden; background: var(--color-ivory); }
+
+/* Route thumbnails are owner-specific editorial crops, framed. */
+.dkt-adj-thumb { display: block; width: 100%; height: 100%; object-fit: cover; }
+
+/* The visible label IS the route path, as the refs draw it. */
+.dkt-adj-route {
+  font-size: var(--text-body-m); font-weight: 500;
+  color: var(--color-ink); text-decoration: none;
+  transition: color 0.16s var(--ease-out);
+}
+.dkt-adj-route:hover { color: var(--color-gold-text); }
+
+/* Stair layout: rows step down-right; each tread is a gold rule. */
+.dkt-adj-row {
+  display: flex; align-items: flex-end; gap: 1.25rem;
+  border-bottom: 1.5px solid rgba(200, 166, 90, 0.75);
+  padding-bottom: 0.7rem;
+}
+@media (min-width: 1024px) {
+  .dkt-adj--stair .dkt-adj-row {
+    width: 62%;
+    margin-left: calc(var(--dkt-step) * 11%);
+  }
+}
+
+/* Navy exit band: the line descends into the closing consultation band and
+   pauses at the sealed node the ref draws at the seam. */
+.dkt-adj-exit { position: relative; margin-top: 3.5rem; height: 7rem; background: var(--color-ink); }
+.dkt-adj-exit::before {
+  content: "";
+  position: absolute; left: 50%; top: -3.5rem;
+  width: 1.5px; height: 4.6rem;
+  background: var(--color-gold);
+}
+.dkt-adj-node {
+  position: absolute; left: 50%; top: 1.9rem; transform: translateX(-50%);
+  width: 2.9rem; height: 2.9rem;
+  border: 1px solid var(--color-gold); border-radius: 50%;
+  color: var(--color-gold);
+  display: grid; place-items: center;
+}
+
+/* Shelf layout: ivory field settling into navy; plates carry a shelf lip. */
+.dkt-adj--shelf {
+  background: linear-gradient(180deg, var(--color-ivory) 0%, var(--color-ivory) 58%, #b8b39e 72%, #274264 86%, var(--color-ink) 100%);
+}
+/* Mobile: a full-width ambience band above the heading; lg: the declared
+   edge-touching column flush with the viewport's left edge. */
+.dkt-adj-edge { position: relative; width: 100%; aspect-ratio: 1; }
+.dkt-adj-edge img {
+  position: absolute; inset: 0;
+  height: 100%; width: 100%; object-fit: cover;
+}
+@media (min-width: 1024px) {
+  .dkt-adj-edge {
+    position: absolute; left: 0; top: 0;
+    height: 72%; width: clamp(140px, 15vw, 250px);
+    aspect-ratio: auto;
+  }
+  .dkt-adj-edge::after {
+    content: "";
+    position: absolute; inset: 0;
+    background: linear-gradient(90deg, rgba(6, 21, 39, 0) 55%, rgba(246, 242, 232, 0.9) 100%);
+  }
+}
+.dkt-adj-plate {
+  display: grid;
+  grid-template-columns: minmax(5.5rem, 8.5rem) minmax(0, 1fr);
+  align-items: center; gap: 1.25rem;
+  background: #fbf9f3;
+  padding: 0.65rem 1.25rem 0.65rem 0.65rem;
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.8) inset,
+    0 14px 18px -12px rgba(11, 31, 58, 0.5),
+    0 26px 34px -26px rgba(11, 31, 58, 0.55);
+}
+@media (min-width: 1024px) {
+  .dkt-adj--shelf .dkt-adj-plate { transform: translateX(calc(var(--dkt-step) * -1.4rem)); }
+}
+/* The line descends from the last shelf into the navy close, ending on a dot. */
+.dkt-adj-shelf-drop {
+  position: relative; margin: 0 auto;
+  width: 1.5px; height: 6rem;
+  background: var(--color-gold); opacity: 0.9;
+}
+.dkt-adj-shelf-drop::after {
+  content: "";
+  position: absolute; bottom: -4px; left: 50%; transform: translateX(-50%);
+  width: 8px; height: 8px; border-radius: 50%;
+  background: var(--color-gold);
+}
+
+/* ---------- 06 next-step ---------- */
+
+.dkt-close {
+  position: relative;
+  display: flex; flex-direction: column;
+  overflow: hidden;
+  background: linear-gradient(188deg, var(--color-ink) 0%, var(--color-ink-deep) 55%, var(--color-ink-deeper) 100%);
+}
+.dkt-close-media { position: relative; aspect-ratio: 4 / 3; width: 100%; }
+/* Mobile narrative order: media-left refs read image-first; media-right refs
+   keep the decision group first and close on the photograph. */
+.dkt-close--right .dkt-close-media { order: 2; }
+.dkt-close-media img {
+  position: absolute; inset: 0;
+  height: 100%; width: 100%; object-fit: cover;
+}
+.dkt-close-media::after { content: ""; position: absolute; inset: 0; pointer-events: none; }
+@media (min-width: 1024px) {
+  .dkt-close-media { position: absolute; top: 0; bottom: 0; width: 54%; aspect-ratio: auto; }
+  .dkt-close--right .dkt-close-media { right: 0; }
+  .dkt-close--left .dkt-close-media { left: 0; }
+  .dkt-close--right .dkt-close-media::after {
+    background: linear-gradient(90deg, rgba(6, 21, 39, 0.82) 0%, rgba(6, 21, 39, 0) 38%);
+  }
+  .dkt-close--left .dkt-close-media::after {
+    background: linear-gradient(270deg, rgba(6, 21, 39, 0.82) 0%, rgba(6, 21, 39, 0) 38%);
+  }
+}
+
+/* Short gold corner path beside the decision group; the page-local line
+   ends here and never continues into the footer. */
+.dkt-close-copy { position: relative; padding-top: 1.75rem; }
+.dkt-close-copy::before {
+  content: "";
+  position: absolute; top: 0; left: 0;
+  width: 4.5rem; height: 1.75rem;
+  border-top: 1.5px solid var(--color-gold);
+  border-left: 1.5px solid var(--color-gold);
+  opacity: 0.9;
+}
+
+/* Framed disclosure, as the closing refs draw it. */
+.dkt-close-boundary {
+  display: inline-flex; align-items: flex-start; gap: 0.7rem;
+  border: 1px solid rgba(220, 232, 242, 0.22);
+  padding: 0.8rem 1rem;
+}

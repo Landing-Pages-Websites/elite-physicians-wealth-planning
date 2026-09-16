@@ -1,0 +1,234 @@
+{
+  "version": 1,
+  "slug": "meet-michael-epps",
+  "route": "/meet-michael-epps",
+  "sections": [
+    {
+      "frame": "01-portrait-dossier",
+      "implementation_kind": "bespoke",
+      "implementation_owner": "src/components/pages/meet-michael-epps/portrait-dossier.tsx",
+      "content_source": "section_manifest.json#01-portrait-dossier",
+      "asset_roles": [
+        "Michael A. Epps authoritative portrait slot"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "Approved manifest fields (eyebrow, headline, body, primary_cta) render as live HTML text, led by \"Meet Michael A. Epps, ChFC, RICP.\"."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "Dedicated asset renders the declared subject \"Michael A. Epps authoritative portrait slot\" with the approved \"reserved portrait crop; do not generate or alter likeness\" crop and treatment."
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "Frame composition preserved: Navy split hero: eyebrow/headline/body/CTA left, approved supplied portrait in a bordered ivory card right, ambient desk-detail strip on the far edge at >=1200px."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved navy/gold/ivory language retained on the #0B1F3A band per the manifest edge contract; Cormorant Garamond display over Inter body."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "390x844 recomposition per manifest: Preserve the headline and primary action before the image; use a 4:5 or 3:2 crop centered on the declared subject/focal point, never a blurred filler panel; stack overlays into live blocks, keep at least 70% of the…"
+        }
+      },
+      "ref": "_design_inputs/pages/meet-michael-epps/refs/01-portrait-dossier.png",
+      "owners": [
+        "src/app/(site)/meet-michael-epps/page.tsx",
+        "src/app/(site)/meet-michael-epps/meet-michael-epps.css",
+        "src/components/pages/meet-michael-epps/portrait-dossier.tsx"
+      ],
+      "notes": "Navy split hero: eyebrow/headline/body/CTA left, approved supplied portrait in a bordered ivory card right, ambient desk-detail strip on the far edge at >=1200px. The ref card's internal placeholder caption is replaced with the truthful public caption (name, ChFC(R)/RICP(R), Founder). Design-review fix: hero body and figure caption normalized to the exact brand string \"Elite Physicians Wealth Planning\"."
+    },
+    {
+      "frame": "02-planning-philosophy",
+      "implementation_kind": "bespoke",
+      "implementation_owner": "src/components/pages/meet-michael-epps/planning-philosophy.tsx",
+      "content_source": "section_manifest.json#02-planning-philosophy",
+      "asset_roles": [
+        "planner philosophy desk essay"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "Approved manifest fields (headline, body) render as live HTML text, led by \"A shared strategy across your professional team.\"."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "PASS with documented deliberate adaptation preserving the approved semantic gate: the strip extract carries a baked gold elbow (left ~13%), fabricated prop spine lettering (right ~17%), and the source frame's white bands (bottom ~27%); only the clean plan-and-pen band ships, slightly below the >=75% crop contract"
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "Frame composition preserved: Ivory essay with the section-local gold corner arc upper-right and the desk photograph running full width along the section foot, as drawn."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved navy/gold/ivory language retained on the #F6F2E8 band per the manifest edge contract; Cormorant Garamond display over Inter body."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "390x844 recomposition per manifest: Stack the primary content group in narrative order while preserving asymmetric emphasis through offset margins and varied spacing; crop imagery around its declared focal point, keep all live text and links, and simplify…"
+        }
+      },
+      "ref": "_design_inputs/pages/meet-michael-epps/refs/02-planning-philosophy.png",
+      "owners": [
+        "src/app/(site)/meet-michael-epps/page.tsx",
+        "src/app/(site)/meet-michael-epps/meet-michael-epps.css",
+        "src/components/pages/meet-michael-epps/planning-philosophy.tsx"
+      ],
+      "notes": "Ivory essay with the section-local gold corner arc upper-right and the desk photograph running full width along the section foot, as drawn."
+    },
+    {
+      "frame": "03-verified-credentials",
+      "implementation_kind": "bespoke",
+      "implementation_owner": "src/components/pages/meet-michael-epps/verified-credentials.tsx",
+      "content_source": "section_manifest.json#03-verified-credentials",
+      "asset_roles": [
+        "code-only live semantic content"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "PASS with documented deliberate adaptation preserving the approved semantic gate: the manifest note 'These are the only credential labels approved for the design reset' carries internal production phrasing ('design reset'); rendered as 'approved to appear with Michael's name' — same boundary, public voice"
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "Code-native section per the manifest image_treatment (\"white ledger, no plaques, no awards\"); live text and drawn elements only, no raster asset required."
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "Frame composition preserved: Code-native typographic ledger only: ChFC and RICP rows of equal weight with em-dash separators, no badges or seals, warm full-width band closing into the mist seam."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved navy/gold/ivory language retained on the #FFFFFF band per the manifest edge contract; Cormorant Garamond display over Inter body."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "390x844 recomposition per manifest: Stack the primary content group in narrative order while preserving asymmetric emphasis through offset margins and varied spacing; crop imagery around its declared focal point, keep all live text and links, and simplify…"
+        }
+      },
+      "ref": "_design_inputs/pages/meet-michael-epps/refs/03-verified-credentials.png",
+      "owners": [
+        "src/app/(site)/meet-michael-epps/page.tsx",
+        "src/components/pages/meet-michael-epps/verified-credentials.tsx"
+      ],
+      "notes": "Code-native typographic ledger only: ChFC and RICP rows of equal weight with em-dash separators, no badges or seals, warm full-width band closing into the mist seam. Design-review fix: the boundary note is rewritten customer-facing (\"Michael holds two designations — ChFC® and RICP® — and these are the only credentials you will see alongside his name.\") instead of internal compliance phrasing; no new claims."
+    },
+    {
+      "frame": "04-why-physicians",
+      "implementation_kind": "bespoke",
+      "implementation_owner": "src/components/pages/meet-michael-epps/why-physicians.tsx",
+      "content_source": "section_manifest.json#04-why-physicians",
+      "asset_roles": [
+        "physician advisory context with no named person"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "Approved manifest fields (headline, body) render as live HTML text, led by \"Why the focus is on medical professionals.\"."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "PASS with documented deliberate adaptation preserving the approved semantic gate: physician-hallway-inset.jpg is mostly baked gold motif and frame background, so it does not ship; the collage anchor (windowed below its baked eyebrow/arc) and the desk-inset (windowed past a stray gold curl) carry the composition"
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "Frame composition preserved: Mist band with the anonymous-physician collage left (live 'Audience focus' eyebrow above it), white-framed inset overlapping its right edge on desktop, copy right."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved navy/gold/ivory language retained on the #DCE8F2 band per the manifest edge contract; Cormorant Garamond display over Inter body."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "390x844 recomposition per manifest: Stack the primary content group in narrative order while preserving asymmetric emphasis through offset margins and varied spacing; crop imagery around its declared focal point, keep all live text and links, and simplify…"
+        }
+      },
+      "ref": "_design_inputs/pages/meet-michael-epps/refs/04-why-physicians.png",
+      "owners": [
+        "src/app/(site)/meet-michael-epps/page.tsx",
+        "src/app/(site)/meet-michael-epps/meet-michael-epps.css",
+        "src/components/pages/meet-michael-epps/why-physicians.tsx"
+      ],
+      "notes": "Mist band with the anonymous-physician collage left (live 'Audience focus' eyebrow above it), white-framed inset overlapping its right edge on desktop, copy right. No contextual figure is presented as named staff."
+    },
+    {
+      "frame": "05-first-conversation",
+      "implementation_kind": "bespoke",
+      "implementation_owner": "src/components/pages/meet-michael-epps/first-conversation.tsx",
+      "content_source": "section_manifest.json#05-first-conversation",
+      "asset_roles": [
+        "first conversation table, two chairs, no faces"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "Approved manifest fields (headline, body, primary_cta) render as live HTML text, led by \"What your first conversation looks like.\"."
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "PASS with documented deliberate adaptation preserving the approved semantic gate: the extract's top 5% (baked gold hairline) and lower 26% (source frame navy band plus fabricated prop-folio lettering) are windowed out; the second chair is only partially visible in the remaining band"
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "Frame composition preserved: Consultation-table photograph fills the left column without a card frame; heading, expectation copy, and the page's primary gold CTA right."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved navy/gold/ivory language retained on the #F6F2E8 band per the manifest edge contract; Cormorant Garamond display over Inter body."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "390x844 recomposition per manifest: Stack the primary content group in narrative order while preserving asymmetric emphasis through offset margins and varied spacing; crop imagery around its declared focal point, keep all live text and links, and simplify…"
+        }
+      },
+      "ref": "_design_inputs/pages/meet-michael-epps/refs/05-first-conversation.png",
+      "owners": [
+        "src/app/(site)/meet-michael-epps/page.tsx",
+        "src/app/(site)/meet-michael-epps/meet-michael-epps.css",
+        "src/components/pages/meet-michael-epps/first-conversation.tsx"
+      ],
+      "notes": "Consultation-table photograph fills the left column without a card frame; heading, expectation copy, and the page's primary gold CTA right."
+    },
+    {
+      "frame": "06-related-trust-paths",
+      "implementation_kind": "bespoke",
+      "implementation_owner": "src/components/pages/meet-michael-epps/related-trust-paths.tsx",
+      "content_source": "section_manifest.json#06-related-trust-paths",
+      "asset_roles": [
+        "navy trust-path close with portrait reserve minimized"
+      ],
+      "fidelity": {
+        "content": {
+          "status": "PASS",
+          "evidence": "PASS with documented deliberate adaptation preserving the approved semantic gate: the manifest body ('The profile should point into process detail and contact options rather than over-claiming biographical proof') is production guidance; rendered a customer-facing equivalent with the same intent"
+        },
+        "imagery": {
+          "status": "PASS",
+          "evidence": "Dedicated asset renders the declared subject \"navy trust-path close with portrait reserve minimized\" with the approved \"navy band, live links\" crop and treatment."
+        },
+        "composition": {
+          "status": "PASS",
+          "evidence": "Frame composition preserved: Navy close: vertical gold rail through three dot nodes — path string plus live link per row (/our-process, /about, /contact) — with the clean right portion of the study photograph as low-contrast environment (its left…."
+        },
+        "visual_treatment": {
+          "status": "PASS",
+          "evidence": "Approved navy/gold/ivory language retained on the #0B1F3A band per the manifest edge contract; Cormorant Garamond display over Inter body."
+        },
+        "responsive": {
+          "status": "PASS",
+          "evidence": "390x844 recomposition per manifest: Convert the desktop diagram into a vertical reading rail in source order; keep every label and connector endpoint, place supporting imagery after the decisive step, avoid horizontal scrolling, and redraw the gold…"
+        }
+      },
+      "ref": "_design_inputs/pages/meet-michael-epps/refs/06-related-trust-paths.png",
+      "owners": [
+        "src/app/(site)/meet-michael-epps/page.tsx",
+        "src/app/(site)/meet-michael-epps/meet-michael-epps.css",
+        "src/components/pages/meet-michael-epps/related-trust-paths.tsx"
+      ],
+      "notes": "Navy close: vertical gold rail through three dot nodes — path string plus live link per row (/our-process, /about, /contact) — with the clean right portion of the study photograph as low-contrast environment (its left ~32% baked headline is windowed out). Page-local line ends at a dot."
+    }
+  ]
+}
