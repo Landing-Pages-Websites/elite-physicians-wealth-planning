@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   alternates: { canonical: '/landing' },
   icons: {
     icon: [{ url: '/landing-icon.svg', type: 'image/svg+xml' }],
-    apple: [{ url: '/landing-apple-icon.png', sizes: '180x180' }],
+    apple: [{ url: '/landing-apple-icon.png', sizes: '512x512' }],
   },
   other: { 'mega-site-id': SITE_ID },
   openGraph: {

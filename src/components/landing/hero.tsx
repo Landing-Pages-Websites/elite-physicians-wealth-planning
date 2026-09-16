@@ -35,13 +35,20 @@ export function Hero(): React.ReactElement {
             ))}
           </div>
 
-          <p className="lp-muted-light" style={{ marginTop: '1.5rem', display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}>
-            <PhoneIcon aria-hidden="true" style={{ color: 'var(--lp-gold)' }} />
-            Prefer to talk now?{' '}
-            <a href="tel:3012591636" style={{ color: 'var(--lp-ivory)', fontWeight: 600 }}>
-              (301) 259-1636
+          <div
+            className="lp-hero-actions"
+            style={{ marginTop: '1.75rem', display: 'flex', alignItems: 'center', gap: '0.85rem', flexWrap: 'wrap' }}
+          >
+            <span className="lp-muted-light">Prefer to talk now?</span>
+            <a
+              href="tel:3012591636"
+              className="btn btn-secondary btn-secondary--dark"
+              aria-label="Call Elite Physician Wealth Planning at (301) 259-1636"
+            >
+              <PhoneIcon />
+              Call (301) 259-1636
             </a>
-          </p>
+          </div>
         </div>
 
         <div className="lp-hero-grid">

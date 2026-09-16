@@ -565,6 +565,29 @@
   padding: 0.75rem 1rem calc(0.75rem + env(safe-area-inset-bottom));
 }
 
+/*
+ * Hidden by default (and on first paint, before the observer resolves) so it
+ * never covers the hero form. `visibility: hidden` also drops it from the tab
+ * order while off-screen. The reduced-motion block below zeroes the transition.
+ */
+.lp-wrap .lp-sticky--mobile {
+  transform: translateY(120%);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: transform 220ms var(--lp-ease), opacity 220ms var(--lp-ease),
+    visibility 0s linear 220ms;
+}
+
+.lp-wrap .lp-sticky--mobile[data-visible='true'] {
+  transform: none;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transition: transform 220ms var(--lp-ease), opacity 220ms var(--lp-ease),
+    visibility 0s linear 0s;
+}
+
 /* ---------- image treatments ---------- */
 
 .lp-wrap .lp-figure {
@@ -618,6 +641,9 @@
     animation-duration: 0.001ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.001ms !important;
+    /* Also zero delays so state changes (e.g. the sticky CTA's deferred
+     * visibility) apply instantly instead of lingering. */
+    transition-delay: 0s !important;
     scroll-behavior: auto !important;
   }
 }

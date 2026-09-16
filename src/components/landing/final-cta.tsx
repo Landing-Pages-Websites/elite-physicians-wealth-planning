@@ -1,5 +1,6 @@
+import { CtaGroup } from './cta-group';
 import { LeadForm } from './lead-form';
-import { CompassIcon, PhoneIcon, ScaleIcon, ShieldIcon } from './icons';
+import { CompassIcon, ScaleIcon, ShieldIcon } from './icons';
 
 const REASSURANCE = [
   { icon: ScaleIcon, label: 'A calm, one-to-one conversation' },
@@ -30,15 +31,6 @@ export function FinalCta(): React.ReactElement {
               ))}
             </ul>
 
-            <a
-              href="tel:3012591636"
-              className="btn btn-secondary btn-secondary--dark"
-              style={{ marginTop: '1.75rem' }}
-            >
-              <PhoneIcon />
-              Call (301) 259-1636
-            </a>
-
             <p className="lp-muted-light" style={{ marginTop: '2rem', fontSize: '0.8125rem', maxWidth: '52ch' }}>
               Educational information only, not individualized investment, tax, or legal advice. Elite Physician
               Wealth Planning coordinates alongside your own CPA, TPA, attorney, and insurance
@@ -53,6 +45,10 @@ export function FinalCta(): React.ReactElement {
               subtitle="Physician tax and retirement planning, coordinated under a fiduciary duty."
             />
           </div>
+        </div>
+
+        <div className="lp-reveal" style={{ marginTop: '2.75rem' }}>
+          <CtaGroup primaryLabel="Book a consultation" onDark align="center" />
         </div>
       </div>
     </section>
