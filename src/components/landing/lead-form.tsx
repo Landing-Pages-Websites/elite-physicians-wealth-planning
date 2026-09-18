@@ -18,6 +18,16 @@ interface LeadFormProps {
   subtitle?: string;
 }
 
+const LP_PRIVACY_URL = 'https://book.elitephysicianswealthplanning.com/privacy';
+const LP_TERMS_URL = 'https://book.elitephysicianswealthplanning.com/terms';
+const SMS_CONSENT_TEXT =
+  'By checking this box, you agree to receive SMS customer-care messages from Elite Physician Wealth Planning, including consultation follow-up, appointment confirmations, reminders, scheduling updates, and service-related communications. Message frequency may vary. Message and data rates may apply. Reply STOP to opt out. Reply HELP for help. Consent is not a condition of purchase. Your mobile information will not be sold or shared with third parties for promotional or marketing purposes.';
+
+type SubmitPayload = LeadFormData & {
+  smsConsent: boolean;
+  smsConsentText: string;
+};
+
 const INITIAL: LeadFormData = {
   firstName: '',
   lastName: '',
@@ -48,6 +58,7 @@ export function LeadForm({
   const formRef = useRef<HTMLFormElement>(null);
   const inFlightRef = useRef(false);
   const [data, setData] = useState<LeadFormData>(INITIAL);
+  const [smsConsent, setSmsConsent] = useState(false);
   const [fieldErrors, setFieldErrors] = useState<Partial<Record<keyof LeadFormData, string>>>({});
   const [submitted, setSubmitted] = useState(false);
   const { submit, isSubmitting, error, setError } = useMegaLeadForm();
@@ -79,7 +90,15 @@ export function LeadForm({
     if (!validate()) return;
     inFlightRef.current = true;
 
-    const result = await submit(data);
+    const payload: SubmitPayload = {
+      ...data,
+      smsConsent,
+      smsConsentText: smsConsent
+        ? `${SMS_CONSENT_TEXT} Privacy Policy: ${LP_PRIVACY_URL} | Terms & Conditions: ${LP_TERMS_URL}`
+        : 'Not provided',
+    };
+    // Hook typings may omit smsConsent until useMegaLeadForm.sms-patch is merged.
+    const result = await submit(payload as LeadFormData);
     if (result.ok) {
       setSubmitted(true); // leave the guard set - never resubmit a success
       return;
@@ -264,6 +283,54 @@ export function LeadForm({
         </div>
       ) : null}
 
+      <div style={{ marginTop: '0.75rem', marginBottom: '0.25rem' }}>
+        <label
+          htmlFor={`${uid}-smsConsent`}
+          className="lp-hint"
+          style={{
+            display: 'flex',
+            alignItems: 'flex-start',
+            gap: '0.625rem',
+            cursor: 'pointer',
+            textAlign: 'left',
+            lineHeight: 1.45,
+          }}
+        >
+          <input
+            id={`${uid}-smsConsent`}
+            name="smsConsent"
+            type="checkbox"
+            checked={smsConsent}
+            onChange={(e) => setSmsConsent(e.target.checked)}
+            disabled={isSubmitting}
+            style={{ marginTop: '0.2rem', flexShrink: 0 }}
+          />
+          <span>
+            {SMS_CONSENT_TEXT}{' '}
+            <a
+              href={LP_PRIVACY_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ fontWeight: 600, textDecoration: 'underline' }}
+            >
+              Privacy Policy
+            </a>
+            {' | '}
+            <a
+              href={LP_TERMS_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ fontWeight: 600, textDecoration: 'underline' }}
+            >
+              Terms &amp; Conditions
+            </a>
+          </span>
+        </label>
+        <p className="lp-hint" style={{ marginTop: '0.4rem', paddingLeft: '1.625rem', textAlign: 'left' }}>
+          Optional. You can submit this form without opting in to text messages.
+        </p>
+      </div>
+
       <button
         type="button"
         onClick={handleClick}
@@ -276,7 +343,15 @@ export function LeadForm({
 
       <p className="lp-hint" style={{ textAlign: 'center' }}>
         We respect your privacy. Your details are used only to arrange your consultation and are
-        never sold.
+        never sold. See our{' '}
+        <a href={LP_PRIVACY_URL} target="_blank" rel="noopener noreferrer" style={{ fontWeight: 600, textDecoration: 'underline' }}>
+          Privacy Policy
+        </a>
+        {' '}and{' '}
+        <a href={LP_TERMS_URL} target="_blank" rel="noopener noreferrer" style={{ fontWeight: 600, textDecoration: 'underline' }}>
+          Terms &amp; Conditions
+        </a>
+        .
       </p>
     </form>
   );
