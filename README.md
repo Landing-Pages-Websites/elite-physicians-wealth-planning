@@ -1,25 +1,13 @@
-# elite-physicians-wealth-planning
+# Elite Physician Wealth Planning landing pages
 
-## Homepage directions
+This repository owns the paid ads landing page at
+`book.elitephysicianswealthplanning.com`. The homepage rewrites to `/landing`.
+The `/privacy` and `/terms` routes support the landing page's lead and SMS
+consent flow.
 
-Two approved directions for the client to choose between:
+The primary website is developed separately in
+[`elite-physicians-wealth-planning-website`](https://github.com/Landing-Pages-Websites/elite-physicians-wealth-planning-website).
 
-| Route | Direction |
-|---|---|
-| `/` | Review chooser |
-| `/variant-a` | **The Consult Ledger** — deep navy and ivory, Cormorant display, one continuous gold coordination route |
-| `/variant-b` | **The Decision Atlas** — bright clinical surfaces, Inter declarations, navy rails and calibration ticks |
-
-Both close on a `#form` strategy-call section sharing one implementation
-(`src/components/shared/strategy-call-form.tsx`), styled per direction via a
-`tone` prop so the two cannot drift apart.
-
-## Environment
-
-`NEXT_PUBLIC_LEAD_ENDPOINT` — POST target for the strategy-call form.
-
-While it is unset the form still validates, then hands the request off to the
-practice's inbox via `mailto:` and says so. It never reports a success that did
-not happen. Set the variable in Vercel to capture leads directly; on success the
-form pushes `{ event: 'form_submission' }` to `window.dataLayer`.
-
+Do not add primary website routes, design reviews, or site build artifacts here.
+Landing page changes must preserve the lead form, tracking configuration, and
+the Git-linked deployment for the ads domain.
